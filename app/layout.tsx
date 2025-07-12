@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang='en'>
-            <body className='dark font-sans antialiased'>
+            <body className='dark font-sans antialiased overflow-x-hidden'>
                 <Header />
                 <PageWrapper>{children}</PageWrapper>
             </body>

@@ -7,10 +7,12 @@ export const tampermonkeyLinks = {
     default: 'https://tampermonkey.net',
 };
 
+export const sigmallyLink = 'https://one.sigmally.com/';
 export const sigmodLink =
     'https://update.greasyfork.org/scripts/454648/SigMod%20Client%20%28Macros%29.user.js';
 export const sigfixLink =
     'https://update.greasyfork.org/scripts/483587/Sigmally%20Fixes%20V2.user.js';
+export const discordLink = 'https://discord.gg/QyUhvUC8AD';
 
 export function detectBrowser(): keyof typeof tampermonkeyLinks {
     const ua = typeof navigator !== 'undefined' ? navigator.userAgent : '';
