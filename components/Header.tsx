@@ -1,3 +1,5 @@
+'use client';
+
 import {
     NavigationMenu,
     NavigationMenuItem,
@@ -7,30 +9,36 @@ import {
     NavigationMenuContent,
 } from '@/components/ui/navigation-menu';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Search } from 'lucide-react';
 import { Input } from './ui/input';
 import { Button } from './ui/button';
 
 export default function Header() {
     return (
-        <header className='flex justify-between p-3'>
+        <header className='sticky top-0 z-50 bg-background/70 backdrop-blur-sm flex justify-between p-3 shadow-sm'>
             <div className='flex gap-2'>
-                <h1 className='text-2xl font-bold'>
-                    <Image
-                        src='/sigmodz.svg'
-                        width={40}
-                        height={40}
-                        alt='Logo'
-                        className='rounded-lg'
-                    />
-                </h1>
+                <Button
+                    className='text-2xl font-bold p-0 cursor-pointer'
+                    variant={'ghost'}
+                >
+                    <Link href='/'>
+                        <Image
+                            src='/sigmodz.svg'
+                            width={40}
+                            height={40}
+                            alt='Logo'
+                            className='rounded-lg'
+                        />
+                    </Link>
+                </Button>
                 <NavigationMenu>
                     <NavigationMenuList>
                         <NavigationMenuItem>
                             <NavigationMenuTrigger>
                                 Get started
                             </NavigationMenuTrigger>
-                            <NavigationMenuContent>
+                            <NavigationMenuContent className=''>
                                 <NavigationMenuLink href='/guide'>
                                     Full Guide
                                 </NavigationMenuLink>
@@ -43,8 +51,14 @@ export default function Header() {
                             </NavigationMenuContent>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
+                            <NavigationMenuLink href='/faq'>
+                                FAQ
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
+                        <NavigationMenuItem asChild>
                             <NavigationMenuLink
                                 href='https://one.sigmally.com/'
+                                rel='noopener noreferrer'
                                 target='_blank'
                             >
                                 Play Sigmally
