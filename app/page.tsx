@@ -188,7 +188,7 @@ function MainPart() {
                     <h2 className='text-3xl font-semibold mb-4'>SigFixes</h2>
                     <p className='text-base leading-relaxed text-muted-foreground'>
                         SigFixes rewrites major parts of the Sigmally client,
-                        improving performance, responsiveness and precision. It
+                        improving performance, stability and precision. It
                         eliminates lag spikes, allows multiboxing and adds
                         options like draw delay, custom opacity, name scaling
                         and much more.
