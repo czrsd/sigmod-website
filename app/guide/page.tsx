@@ -16,12 +16,16 @@ export default function GuideOverview() {
                 and more. All in just a few simple steps.
             </p>
 
-            <div className='mt-10'>
+            <div className='space-x-3 mt-10'>
                 <Button asChild>
                     <Link href='/guide/userscript-manager'>
                         Start Installation
                         <ArrowRight />
                     </Link>
+                </Button>
+
+                <Button variant={'outline'} asChild>
+                    <Link href='/quick-guide'>Quick guide</Link>
                 </Button>
             </div>
         </section>

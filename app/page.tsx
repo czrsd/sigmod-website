@@ -340,17 +340,18 @@ function GlowItems() {
                 opacity={0.175}
                 blur='100px'
             />
+
             <Glow
-                top='180%'
-                right='-20%'
+                top='128%'
+                left='-20%'
                 width='600px'
                 height='600px'
                 opacity={0.175}
                 blur='100px'
             />
             <Glow
-                top='230%'
-                left='-20%'
+                top='200%'
+                right='-20%'
                 width='600px'
                 height='600px'
                 opacity={0.175}
