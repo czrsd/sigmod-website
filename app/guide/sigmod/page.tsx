@@ -28,7 +28,7 @@ export default function SigModPage() {
                     After installing, SigMod will automatically run on Sigmally.
                     You can customize it anytime in the in-game settings. If you
                     want to find out more about SigMod, you can check it out{' '}
-                    <Link className='text-highlight' href={'/download/sigmod'}>
+                    <Link className='underline' href={'/sigmod'}>
                         Here
                     </Link>
                     .

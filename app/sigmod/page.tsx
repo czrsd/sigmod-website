@@ -36,17 +36,14 @@ export default function SigModPage() {
 function Hero() {
     return (
         <section className='text-center max-w-3xl mx-auto space-y-6'>
-            <h1 className='text-5xl font-extrabold tracking-tight bg-gradient-to-r from-purple-600 to-pink-500 text-transparent bg-clip-text'>
-                SigMod — Customize Sigmally Your Way
+            <h1 className='text-7xl font-extrabold tracking-tight bg-gradient-to-r from-purple-600 to-pink-500 text-transparent bg-clip-text pb-3'>
+                SigMod
             </h1>
             <p className='text-lg text-muted-foreground'>
-                Macros, tags, and full control — tailor your gameplay like never
-                before.
+                SigMod upgrades your Sigmally experience with useful tools and
+                clean UI changes.
             </p>
-            <Button
-                variant='outline'
-                className='mx-auto mt-4 text-lg font-semibold'
-            >
+            <Button className='mx-auto mt-4 text-base font-semibold' asChild>
                 <Link href='/guide/sigmod'>Install SigMod</Link>
             </Button>
             <p className='text-sm text-muted-foreground mt-2'>
