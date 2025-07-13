@@ -32,7 +32,7 @@ export function Glow({
         <div
             aria-hidden
             className={clsx(
-                'pointer-events-none fixed z-[-1] rounded-full opacity-70',
+                'pointer-events-none absolute z-[-1] rounded-full opacity-70',
                 className
             )}
             style={{
