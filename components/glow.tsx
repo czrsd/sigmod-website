@@ -16,6 +16,17 @@ type GlowProps = {
     className?: string;
 };
 
+function convertPercentToViewport(value?: string, isHorizontal = true) {
+    if (!value) return undefined;
+    if (value.endsWith('%')) {
+        const num = parseFloat(value);
+        return isHorizontal
+            ? `${(num / 100) * 100}vw`
+            : `${(num / 100) * 100}vh`;
+    }
+    return value;
+}
+
 export function Glow({
     glowColorVar = '--glow',
     blur = '100px',
@@ -41,8 +52,8 @@ export function Glow({
                 opacity,
                 width,
                 height,
-                top,
-                left,
+                top: convertPercentToViewport(top, false),
+                left: convertPercentToViewport(left, true),
                 right,
                 bottom,
             }}
