@@ -5,8 +5,6 @@ import {
     Carousel,
     CarouselContent,
     CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
@@ -44,7 +42,7 @@ function HeroSection() {
                         Sigmally Modz
                     </span>
                 </h1>
-                <p className='mt-4 max-w-xl text-base sm:text-lg md:text-xl text-muted-foreground'>
+                <p className='mt-4 max-w-lg text-base sm:text-lg md:text-xl text-muted-foreground'>
                     Take Sigmally to the next level — faster gameplay, smarter
                     tools, and full control at your fingertips.
                 </p>
@@ -96,8 +94,6 @@ function HeroSection() {
                             />
                         </CarouselItem>
                     </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
                 </Carousel>
             </div>
         </section>

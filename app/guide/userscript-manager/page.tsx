@@ -29,7 +29,6 @@ export default function UserscriptManagerPage() {
                 <ul className='list-disc pl-5'>
                     <li>Tampermonkey</li>
                     <li>Violentmonkey</li>
-                    <li>Greasemonkey</li>
                 </ul>
                 <p>
                     In this guide, we'll use Tampermonkey. Click below to go to
