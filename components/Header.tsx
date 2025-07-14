@@ -38,15 +38,57 @@ export default function Header() {
                                 <NavigationMenuTrigger>
                                     Mods
                                 </NavigationMenuTrigger>
-                                <NavigationMenuContent>
+                                <NavigationMenuContent className='p-4'>
                                     <NavigationMenuLink asChild>
-                                        <Link href='/sigmod'>SigMod</Link>
+                                        <Link
+                                            href='/sigmod'
+                                            className='flex flex-row items-center gap-4 w-[260px]'
+                                        >
+                                            <div className='flex-1'>
+                                                <span className='font-medium text-sm'>
+                                                    SigMod Client
+                                                </span>
+                                                <p className='text-muted-foreground text-xs'>
+                                                    Custom mod menu, automation,
+                                                    UI tweaks
+                                                </p>
+                                            </div>
+                                            <Image
+                                                src='/screenshots/sigmod_menu.png'
+                                                alt='SigMod Menu'
+                                                width={92}
+                                                height={92}
+                                                className='rounded object-cover'
+                                            />
+                                        </Link>
                                     </NavigationMenuLink>
+
                                     <NavigationMenuLink asChild>
-                                        <Link href='/sigfixes'>SigFixes</Link>
+                                        <Link
+                                            href='/sigfixes'
+                                            className='flex flex-row items-center gap-4 w-[260px]'
+                                        >
+                                            <div className='flex-1'>
+                                                <span className='font-medium text-sm'>
+                                                    SigFixes
+                                                </span>
+                                                <p className='text-muted-foreground text-xs'>
+                                                    Enable Multiboxing, Boost
+                                                    FPS
+                                                </p>
+                                            </div>
+                                            <Image
+                                                src='/SigFixes_icon.png'
+                                                alt='SigMod Menu'
+                                                width={42}
+                                                height={42}
+                                                className='rounded object-cover'
+                                            />
+                                        </Link>
                                     </NavigationMenuLink>
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
+
                             <NavigationMenuItem>
                                 <NavigationMenuLink asChild>
                                     <Link href='/guide'>Guide</Link>
