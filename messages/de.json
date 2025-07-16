@@ -1,4 +1,8 @@
 {
+    "NotFound": {
+    "title": "404 – Seite nicht gefunden",
+    "message": "Diese Seite existiert nicht oder wurde verschoben."
+  },
   "Header": {
     "home": "Startseite",
     "mods": {
