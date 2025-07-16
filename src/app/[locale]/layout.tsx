@@ -6,6 +6,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Footer from '@/components/Footer';
+import Preload from '@/components/Preload';
 
 export const metadata: Metadata = {
     title: 'SigModz',
@@ -24,6 +25,9 @@ export default async function RootLayout({
 
     return (
         <html lang={locale}>
+            <head>
+                <Preload />
+            </head>
             <body className='dark overflow-x-hidden'>
                 <NextIntlClientProvider>
                     <Header />
