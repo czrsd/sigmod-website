@@ -201,10 +201,38 @@
 			]
 		},
 		"Community": {
-			"join": "Join the Community",
+			"title": "Join the Community",
 			"text": "Need help, found a bug, or want to share your custom macros? Join the Discord and connect with other SigMod users.",
 			"discord": "Join Discord",
 			"explore": "Or explore the code on"
 		}
-	}
+	},
+    "QuickGuide": {
+        "title": "Quick Guide",
+        "note": "Note that this page isn't as detailed as the full guide.",
+        "tampermonkey": {
+            "title": "Install Tampermonkey",
+            "desc": "Install the userscript manager required to run SigMod and SigFixes.",
+            "button": "Get Tampermonkey"
+        },
+        "developermode": {
+            "title": "Enable Developer Mode",
+            "desc": "Follow the steps in the pictures below. Restart your browser enabling the developer mode."
+        },
+        "sigmod": {
+            "title": "Install SigMod",
+            "desc": "Adds macros, customization, party tags, and more."
+        },
+        "sigfixes": {
+            "title": "Install SigFixes",
+            "desc": "Boost FPS, reduce lag, enable multiboxing."
+        },
+        "play": {
+            "title": "Play Sigmally",
+            "desc": "Everything is ready now. Time to play.",
+            "button": "Play Now"
+        },
+        "discord": "Join the Discord",
+        "fullGuide": "View Full Guide"
+    }
 }

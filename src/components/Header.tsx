@@ -1,5 +1,14 @@
 'use client';
 
+import { useTranslations, useLocale } from 'next-intl';
+import { usePathname, useRouter } from 'next/navigation';
+import { routing } from '@/i18n/routing';
+import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Menu } from 'lucide-react';
+import { sigmallyLink } from '@/utils/getLink';
+import { Button } from './ui/button';
 import {
     NavigationMenu,
     NavigationMenuItem,
@@ -8,17 +17,30 @@ import {
     NavigationMenuTrigger,
     NavigationMenuContent,
 } from '@/components/ui/navigation-menu';
-import { Button } from './ui/button';
-import { sigmallyLink } from '@/utils/getLink';
-import { Menu } from 'lucide-react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useState } from 'react';
-import { useTranslations } from 'next-intl';
+import {
+    DropdownMenu,
+    DropdownMenuContent,
+    DropdownMenuItem,
+    DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
+
+const languageMap: Record<string, string> = {
+    en: 'English',
+    de: 'Deutsch',
+};
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const t = useTranslations('Header');
+    const locale = useLocale();
+    const pathname = usePathname();
+    const router = useRouter();
+
+    const changeLanguage = (newLocale: string) => {
+        const segments = pathname.split('/');
+        segments[1] = newLocale;
+        router.replace(segments.join('/') || '/');
+    };
 
     return (
         <header className='sticky top-0 z-50 bg-background/70 backdrop-blur-sm border-b'>
@@ -109,6 +131,42 @@ export default function Header() {
                 </div>
 
                 <div className='flex items-center gap-4'>
+                    <DropdownMenu>
+                        <DropdownMenuTrigger className='flex items-center gap-1'>
+                            <Image
+                                src={`/flags/${locale}.svg`}
+                                alt={locale}
+                                width={18}
+                                height={18}
+                            />
+                            {languageMap[locale] ?? locale.toUpperCase()}
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent>
+                            {[
+                                locale,
+                                ...routing.locales.filter((l) => l !== locale),
+                            ].map((lng) => (
+                                <DropdownMenuItem
+                                    key={lng}
+                                    onClick={() => changeLanguage(lng)}
+                                    className={`flex items-center gap-2 ${
+                                        lng === locale
+                                            ? 'opacity-50 pointer-events-none'
+                                            : ''
+                                    }`}
+                                >
+                                    <Image
+                                        src={`/flags/${lng}.svg`}
+                                        alt={lng}
+                                        width={18}
+                                        height={18}
+                                        className='rounded-sm'
+                                    />
+                                    {languageMap[lng] ?? lng.toUpperCase()}
+                                </DropdownMenuItem>
+                            ))}
+                        </DropdownMenuContent>
+                    </DropdownMenu>
                     <Button
                         variant='ghost'
                         asChild

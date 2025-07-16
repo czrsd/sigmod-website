@@ -26,6 +26,8 @@ import {
     DialogTitle,
 } from '@/components/ui/dialog';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
+import { useTranslations } from 'next-intl';
+import { Glow } from '@/components/Glow';
 
 function detectBrowser(): 'firefox' | 'other' {
     if (typeof navigator === 'undefined') return 'other';
@@ -34,6 +36,7 @@ function detectBrowser(): 'firefox' | 'other' {
 
 export default function QuickGuidePage() {
     const [browser, setBrowser] = useState<'firefox' | 'other' | null>(null);
+    const t = useTranslations('QuickGuide');
 
     useEffect(() => {
         setBrowser(detectBrowser());
@@ -43,11 +46,10 @@ export default function QuickGuidePage() {
 
     const baseSteps = [
         {
-            title: 'Install Tampermonkey',
-            description:
-                'Install the userscript manager required to run SigMod and SigFixes.',
+            title: t('tampermonkey.title'),
+            description: t('tampermonkey.desc'),
             button: {
-                text: 'Get Tampermonkey',
+                text: t('tampermonkey.button'),
                 href: getTampermonkeyLink(),
                 variant: 'outline' as const,
                 external: true,
@@ -57,9 +59,8 @@ export default function QuickGuidePage() {
             ? []
             : [
                   {
-                      title: 'Enable Developer Mode',
-                      description:
-                          'Follow the steps in the pictures below. Restart your browser enabling the developer mode.',
+                      title: t('developermode.title'),
+                      description: t('developermode.desc'),
                       images: [
                           '/screenshots/guide/manage_extensions.png',
                           '/screenshots/guide/devmode_1.png',
@@ -68,30 +69,30 @@ export default function QuickGuidePage() {
                   },
               ]),
         {
-            title: 'Install SigMod',
-            description: 'Adds macros, customization, party tags, and more.',
+            title: t('sigmod.title'),
+            description: t('sigmod.desc'),
             button: {
-                text: 'Install SigMod',
+                text: t('sigmod.title'),
                 href: sigmodLink,
                 variant: 'outline' as const,
                 external: true,
             },
         },
         {
-            title: 'Install SigFixes',
-            description: 'Boost FPS, reduce lag, enable multiboxing.',
+            title: t('sigfixes.title'),
+            description: t('sigfixes.desc'),
             button: {
-                text: 'Install SigFixes',
+                text: t('sigfixes.title'),
                 href: sigfixLink,
                 variant: 'outline' as const,
                 external: true,
             },
         },
         {
-            title: 'Play Sigmally',
-            description: 'Everything is ready now. Time to play.',
+            title: t('play.title'),
+            description: t('play.desc'),
             button: {
-                text: 'Play Now',
+                text: t('play.button'),
                 href: sigmallyLink,
                 variant: 'default' as const,
                 external: true,
@@ -101,14 +102,15 @@ export default function QuickGuidePage() {
 
     return (
         <section className='max-w-3xl mx-auto px-6 md:px-16 py-24'>
-            <h1 className='text-4xl font-bold text-center'>Quick Guide</h1>
+            <GlowItems />
+            <h1 className='text-4xl font-bold text-center'>{t('title')}</h1>
             <p className='text-muted-foreground text-center text-xs mt-2 mb-10'>
-                Note that this page isn't as detailed as the full guide.
+                {t('note')}
             </p>
 
             <div className='space-y-10'>
                 {baseSteps.map((step, i) => (
-                    <Card key={i}>
+                    <Card key={i} className='bg-black/30 backdrop-blur-sm'>
                         <CardHeader>
                             <CardTitle className='flex items-center gap-2'>
                                 <span className='text-xl text-muted-foreground'>
@@ -226,13 +228,41 @@ export default function QuickGuidePage() {
                         target='_blank'
                         rel='noopener noreferrer'
                     >
-                        Join the Discord
+                        {t('discord')}
                     </Link>
                 </Button>
                 <Button variant='secondary' asChild>
-                    <Link href='/guide'>View Full Guide</Link>
+                    <Link href='/guide'>{t('fullGuide')}</Link>
                 </Button>
             </div>
         </section>
+    );
+}
+
+function GlowItems() {
+    return (
+        <>
+            <Glow
+                top='-30%'
+                left='-20%'
+                width='600px'
+                height='600px'
+                opacity={0.4}
+            />
+            <Glow
+                top='15%'
+                left='40%'
+                width='400px'
+                height='400px'
+                opacity={0.18}
+            />
+            <Glow
+                top='60%'
+                right='-16%'
+                width='400px'
+                height='400px'
+                opacity={0.3}
+            />
+        </>
     );
 }
