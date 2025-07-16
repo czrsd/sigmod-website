@@ -18,8 +18,7 @@
 		},
 		"guide": "Anleitung",
 		"faq": "FAQ",
-		"about": "Über",
-		"play": "Sigmally spielen"
+		"about": "Über"
 	},
 	"Footer": {
 		"text": "© 2025 Sigmally Modz. Nicht mit Sigmally verbunden."
@@ -324,5 +323,92 @@
 			"play": "Sigmally spielen",
 			"explore": "Funktionen erkunden"
 		}
+	},
+	"FAQPage": {
+		"title": "Häufig gestellte Fragen",
+		"general": {
+			"title": "Allgemein",
+			"installMods": {
+				"question": "Wie installiere ich die Mods?",
+				"answer": "Der Einstieg ist einfach! Folge unserer ausführlichen oder schnellen <link>Installationsanleitung</link>, und du bist in kürzester Zeit startklar."
+			},
+			"modsNotWorking": {
+				"question": "Ich habe die Mods installiert, aber sie funktionieren nicht. Was soll ich tun?",
+				"answer": "Wenn deine Mods trotz Installation nicht funktionieren, liegt das meist daran, dass der Entwicklermodus in deinem Userscript-Manager nicht aktiviert ist. Siehe die <link>Installationsanleitung</link> für eine ausführliche Schritt-für-Schritt-Anleitung. Kurz gesagt: Klicke auf das Puzzle-Symbol in der oberen Leiste deines Browsers, wähle „Erweiterungen verwalten“ und aktiviere den Entwicklermodus oben rechts. Danach musst du den Browser neu starten. Dies behebt das Problem meist sofort. Wenn nicht, erstelle bitte ein Ticket auf unserem Discord-Server, wir helfen dir gerne weiter."
+			},
+			"safe": {
+				"question": "Sind Tampermonkey und die Userscripts sicher?",
+				"answer": "Absolut, denn wer würde nicht vertrauensvoll irgendwelche Skripte aus dem Internet installieren, um sein Spiel zu verbessern? Aber im Ernst – Tampermonkey ist ein etabliertes Tool, das von Millionen verwendet wird. Unsere Userscripts verändern dein Spielerlebnis nur minimal und enthalten keinen Schadcode. Es gibt auch Bewertungen auf den Skript-Seiten. Also ja, sie sind sicher. Verwende sie mit gutem Gefühl."
+			},
+			"sigmodAndSigfixes": {
+				"question": "Brauche ich sowohl SigMod als auch SigFixes?",
+				"answer": "Nein, aber die Kombination liefert beste Performance und Anpassungsmöglichkeiten. Sie sind so konzipiert, dass sie zusammenarbeiten."
+			},
+			"multibox": {
+				"question": "Wie funktioniert Multiboxing?",
+				"answer": "Installiere <strong>SigFixes</strong>. Damit kannst du mehrere Spielinstanzen reibungslos in einem Browser-Tab ausführen und gleichzeitig steuern. Für eine detaillierte Anleitung folge dem Guide <link>hier</link>."
+			},
+			"uninstallMods": {
+				"question": "Kann ich die Mods jederzeit deinstallieren?",
+				"answer": "Ja, deaktiviere oder entferne sie einfach in deinem Userscript-Manager."
+			}
+		},
+		"sigmod": {
+			"title": "SigMod Spezifisch",
+			"coreFeatures": {
+				"question": "Was sind die Hauptfunktionen von SigMod?",
+				"answer": "SigMod fokussiert sich auf Anpassungen, Makros, Automatisierung und ein fortgeschrittenes Tag-System zur Verbesserung deines Sigmally-Spielerlebnisses."
+			},
+			"customization": {
+				"question": "Welche Anpassungsmöglichkeiten bietet SigMod?",
+				"answer": "Ändere Hotkeys, UI-Themes, Spiel-Farben, Spieltimer, benutzerdefinierte Schriftarten und Namenseinstellungen."
+			},
+			"tagSystem": {
+				"question": "Was ist das Tag-System?",
+				"answer": "Ein fortschrittliches System zur Organisation und Verwaltung von Party-Tags, das dir hilft, Freunde und Teamkollegen einfach zu verfolgen. Es integriert sich in die Minikarte und den Chat, enthält ein Party-Panel zur Überwachung der Team-Punkte und zeigt Teamkollegen-Infos für bessere Ingame-Koordination."
+			},
+			"friendSystem": {
+				"question": "Wie funktioniert das Freundessystem?",
+				"answer": "Füge einfach Freunde hinzu, verwalte sie und behalte sie im Spiel im Blick, um verbunden zu bleiben."
+			},
+			"openMenu": {
+				"question": "Wie öffne ich das SigMod-Menü?",
+				"answer": "Öffne das Mod-Menü, indem du auf das Zahnrad-Symbol in der Spiel-Oberfläche klickst oder die Taste „V“ auf deiner Tastatur drückst."
+			},
+			"customHotkeys": {
+				"question": "Kann ich Hotkeys und Makros anpassen?",
+				"answer": "Ja! SigMod ermöglicht dir, Hotkeys und Mauskombinationen vollständig anzupassen, um deinen Spielstil zu verbessern."
+			},
+			"performance": {
+				"question": "Beeinflusst SigMod die Spielleistung?",
+				"answer": "SigMod ist leichtgewichtig und konzentriert sich auf Anpassungen, nicht auf Performance-Verbesserungen. Für Performance-Boosts verwende SigFixes."
+			}
+		},
+		"sigfixes": {
+			"title": "SigFixes Spezifisch",
+			"note": "Alle Optionen haben ein <strong>?</strong>-Symbol daneben – klicke darauf, um detaillierte Erklärungen zu erhalten.",
+			"improvements": {
+				"question": "Was verbessert SigFixes?",
+				"answer": "SigFixes verbessert Bildraten, reduziert Lag-Spikes, ermöglicht Multiboxing und bietet Anpassungen wie Draw-Delay, benutzerdefinierte Transparenz und Namensskalierung."
+			},
+			"multibox": {
+				"question": "Wie hilft SigFixes beim Multiboxing?",
+				"answer": "SigFixes erlaubt es dir, mehrere Spielinstanzen in einem Browser-Tab auszuführen, was Multiboxing flüssiger und einfacher macht."
+			},
+			"fps": {
+				"question": "Beeinflusst SigFixes meine FPS?",
+				"answer": "Ja, es steigert die FPS deutlich, indem es das Rendering optimiert und Lag-Spikes reduziert."
+			},
+			"compatibility": {
+				"question": "Ist SigFixes kompatibel mit SigMod?",
+				"answer": "Ja, sie sind voll kompatibel und für das beste Spielerlebnis zusammen entwickelt."
+			},
+			"config": {
+				"question": "Wie konfiguriere ich Draw-Delay und andere Optionen?",
+				"answer": "Diese Einstellungen kannst du im SigFixes-Mod-Menü anpassen. Jede Option hat ein hilfreiches \"?\"-Symbol mit weiteren Infos."
+			}
+		},
+		"needHelp": "Noch Fragen? Trete unserem Discord bei und öffne ein Support-Ticket – wir helfen dir gerne.",
+		"joinDiscord": "Discord beitreten"
 	}
 }

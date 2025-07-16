@@ -6,7 +6,7 @@ import { routing } from '@/i18n/routing';
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Menu } from 'lucide-react';
+import { Menu, ChevronDown } from 'lucide-react';
 import { sigmallyLink } from '@/utils/getLink';
 import { Button } from './ui/button';
 import {
@@ -132,7 +132,13 @@ export default function Header() {
 
                 <div className='flex items-center gap-4'>
                     <DropdownMenu>
-                        <DropdownMenuTrigger className='flex items-center gap-1'>
+                        <DropdownMenuTrigger
+                            className='flex items-center gap-1'
+                            aria-label={`Current language: ${
+                                languageMap[locale] ?? locale.toUpperCase()
+                            }`}
+                            title={languageMap[locale] ?? locale.toUpperCase()}
+                        >
                             <Image
                                 src={`/flags/${locale}.svg`}
                                 alt={locale}
@@ -140,6 +146,10 @@ export default function Header() {
                                 height={18}
                             />
                             {languageMap[locale] ?? locale.toUpperCase()}
+                            <ChevronDown
+                                className='text-muted-foreground'
+                                size={18}
+                            />
                         </DropdownMenuTrigger>
                         <DropdownMenuContent>
                             {[
@@ -167,19 +177,6 @@ export default function Header() {
                             ))}
                         </DropdownMenuContent>
                     </DropdownMenu>
-                    <Button
-                        variant='ghost'
-                        asChild
-                        className='hidden sm:inline-flex'
-                    >
-                        <Link
-                            href={sigmallyLink}
-                            target='_blank'
-                            rel='noopener noreferrer'
-                        >
-                            {t('play')}
-                        </Link>
-                    </Button>
 
                     <Button
                         variant='ghost'
