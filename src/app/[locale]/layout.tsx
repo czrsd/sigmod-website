@@ -1,4 +1,4 @@
-import './globals.css';
+import '../globals.css';
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import { PageWrapper } from '@/components/PageWrapper';
@@ -8,14 +8,14 @@ export const metadata: Metadata = {
     description: 'Download mods for Sigmally',
 };
 
-export default function RootLayout({
+export default async function RootLayout({
     children,
 }: {
     children: React.ReactNode;
 }) {
     return (
         <html lang='en'>
-            <body className='dark font-sans antialiased overflow-x-hidden'>
+            <body className='dark overflow-x-hidden'>
                 <Header />
                 <PageWrapper>{children}</PageWrapper>
             </body>
