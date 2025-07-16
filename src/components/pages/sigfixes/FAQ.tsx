@@ -1,3 +1,5 @@
+'use client';
+
 import {
     Accordion,
     AccordionContent,
@@ -7,7 +9,7 @@ import {
 import { useTranslations } from 'next-intl';
 
 export function FAQ() {
-    const t = useTranslations('SigModPage.FAQ');
+    const t = useTranslations('SigFixesPage.FAQ');
 
     const faqData = t.raw('list') as {
         question: string;

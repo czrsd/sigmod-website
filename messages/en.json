@@ -206,6 +206,132 @@
 			"explore": "Or explore the code on"
 		}
 	},
+	"SigFixesPage": {
+		"Hero": {
+			"title": "SigFixes",
+			"sub": "Enhance Sigmally's core with ultra-smooth performance, precise input, and advanced multibox control.",
+			"install": "Install SigFixes",
+			"explore": "Explore features",
+			"require": "Requires",
+			"or": "or"
+		},
+		"CoreFeatures": {
+			"performance": {
+				"title": "Boosted Performance",
+				"desc": "Replaces the rendering engine with WebGL, removing lag spikes and improving FPS for ultra-smooth gameplay."
+			},
+			"multiboxing": {
+				"title": "Flawless Multiboxing",
+				"desc": "Advanced multibox tools with One-tab mode, respawn blocking, vision merging, and customizable outlines."
+			},
+			"input": {
+				"title": "Precision Input",
+				"desc": "Reduces input delay and improves control accuracy—especially powerful when using macros or split strategies."
+			}
+		},
+		"WhySigFixes": {
+			"title": "Why Choose SigFixes?",
+			"desc1": "SigFixes replaces the default rendering engine with a custom WebGL canvas for buttery-smooth visuals and minimal input delay. Lag spikes? Gone. Performance drops? Fixed.",
+			"desc2": "It’s built for competitive play, especially when multiboxing. Enjoy responsive controls, optimized merging, and smart camera behavior that gives you the edge.",
+			"worksWith": "Already using",
+			"combo": "? Pair both for the ultimate experience.",
+			"getStarted": "Get Started with SigFixes"
+		},
+		"Features": {
+			"title": "SigFixes Features",
+			"viewMore": "View More",
+			"list": [
+				{
+					"title": "WebGL Performance",
+					"summary": "Replaces the canvas with high-speed WebGL rendering",
+					"details": "SigFixes eliminates lag spikes by replacing the game's canvas with a fully optimized WebGL renderer. This allows smoother gameplay, better framerates, and consistent performance across all devices—even when multiboxing or recording."
+				},
+				{
+					"title": "Accurate Input",
+					"summary": "Less delay between your input and movement",
+					"details": "Experience real-time response when moving, feeding, or splitting. SigFixes reduces latency and improves precision for all mouse and keyboard actions. Every move feels sharper and more controlled, especially in high-speed fights."
+				},
+				{
+					"title": "Advanced Multiboxing",
+					"summary": "One-tab control, vision merging, respawn handling",
+					"details": "Control multiple instances from a single tab. Choose your vision merge method, customize outlines, colors, and respawn logic. Enable flawless merging, block cluster respawns, and optimize the setup for 2+ tabs with ease."
+				},
+				{
+					"title": "Draw Settings",
+					"summary": "Tweak draw delay, cell outlines, camera & zoom",
+					"details": "Set custom draw delay to balance visuals vs performance. Toggle cell outlines, set your skin URL, choose camera behavior (Natural, Instant), and fine-tune zoom speed and auto-zoom toggle for a responsive experience."
+				},
+				{
+					"title": "Visual Tools",
+					"summary": "Opacity, glow, skins, jelly physics and grid lines",
+					"details": "Adjust the visibility and behavior of your cells, skins, pellets, or glow. Enable/disable jelly physics and overlays like lines between cells and cursor. Highlight unsplittable cells with custom colors and opacity."
+				},
+				{
+					"title": "Theme Customization",
+					"summary": "Pick your theme color and control UI visuals",
+					"details": "Select your own theme color and apply it across the mod. Make the UI match your personal style, from color accents to visual effects like rainbow borders and map backgrounds."
+				},
+				{
+					"title": "Game Behavior Tweaks",
+					"summary": "Pushsplit delay, XP score split, aftersplit movement",
+					"details": "Configure how the game behaves after splits, including when movement starts, how pushsplits behave, and how XP and score are shown. These fine-tuned options make competitive movement easier to master."
+				},
+				{
+					"title": "Camera Control",
+					"summary": "Smoothness, speed, spawn camera logic",
+					"details": "Adjust the way your camera moves: instantly, naturally, or smoothly. Control the spawn camera's behavior, zoom interpolation, and speed to match your preference or setup."
+				},
+				{
+					"title": "Text Rendering",
+					"summary": "Font size, weight, outline and clan display",
+					"details": "Edit the name/mass scale, toggle bold text, apply outlines, and hide or show clans. Perfect for minimal setups or high visibility during chaotic moments."
+				}
+			]
+		},
+		"FAQ": {
+			"title": "FAQ",
+			"list": [
+				{
+					"question": "What is SigFixes?",
+					"answer": "SigFixes is a performance patch for the Sigmally client. It replaces the rendering engine with a WebGL canvas, making the game faster, smoother, and more responsive—especially during multiboxing or competitive play."
+				},
+				{
+					"question": "Does SigFixes affect visuals?",
+					"answer": "By default, SigFixes looks identical to the base client. However, it includes many new settings for advanced players—such as skin overrides, cell opacity, text scaling, glow toggles, and unsplittable cell outlines."
+				},
+				{
+					"question": "Is SigFixes compatible with SigMod?",
+					"answer": "Yes. SigFixes is fully compatible with SigMod. You can use both together to get all the advanced features of SigMod and the smoother, low-lag performance from SigFixes."
+				},
+				{
+					"question": "Can I multibox better with SigFixes?",
+					"answer": "Yes. SigFixes is built for multiboxing. It supports One-tab control, vision merging (Flawless, Latest, None), spawn blocking, tab outlining, and more—all with reduced input delay and better tab sync."
+				},
+				{
+					"question": "How do I install SigFixes?",
+					"answer": "Install the Tampermonkey or Violentmonkey extension (only one). Then go to chrome://extensions or edge://extensions and enable Developer Mode. After restarting your browser, install the SigFixes userscript from its official source."
+				},
+				{
+					"question": "What camera settings can I change?",
+					"answer": "You can toggle between Default or Natural camera style, set movement to Instant or Smooth, control zoom speed, and enable Auto-zoom and camera tracking when spawning."
+				},
+				{
+					"question": "What does the 'draw delay' setting do?",
+					"answer": "Draw delay controls how frequently the game canvas updates. Higher values look smoother but can cost performance. Lower values boost performance but reduce visual fluidity. It’s fully customizable."
+				},
+				{
+					"question": "Can I adjust text and name display?",
+					"answer": "Yes. SigFixes allows you to change name and mass scale, toggle bold fonts, control opacity, show/hide clans, and modify outline thickness for improved readability or minimal UIs."
+				}
+			]
+		},
+		"Community": {
+			"title": "Join the Community",
+			"text": "Need help, found a bug, or want to share your custom macros? Join the Discord and connect with other SigFix users.",
+			"discord": "Join Discord",
+			"explore": "Or explore the code on"
+		}
+	},
     "QuickGuide": {
         "title": "Quick Guide",
         "note": "Note that this page isn't as detailed as the full guide.",
