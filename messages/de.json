@@ -234,5 +234,95 @@
 		},
 		"discord": "Dem Discord beitreten",
 		"fullGuide": "Vollständigen Guide ansehen"
+	},
+	"Guide": {
+    	"Sidebar": {
+			"title": "Anleitung",
+			"overview": "Übersicht",
+			"usm": "Userscript-Manager",
+			"devmode": "Entwicklermodus",
+			"sigmod": "SigMod",
+			"sigfixes": "SigFixes",
+			"end": "Fazit"
+    	},
+		"Overview": {
+			"title": "Erste Schritte",
+			"desc": "Willkommen bei SigMod. Diese Anleitung hilft dir, alles zu installieren, was du für das beste Sigmally-Erlebnis brauchst – schnell, flüssig und vollständig anpassbar.",
+			"access": "Du erhältst Zugriff auf Funktionen wie Makros, Themes, FPS-Boosts und mehr. Alles in nur wenigen einfachen Schritten.",
+			"start": "Installation starten",
+			"quickGuide": "Schnellanleitung"
+		},
+		"UserscriptManager": {
+			"title": "Einen Userscript-Manager installieren",
+			"desc": "Um Skripte auf Webseiten zu installieren und zu verwenden, benötigst du einen Userscript-Manager.",
+			"recommend": "Wir empfehlen:",
+			"instruction": "In dieser Anleitung verwenden wir Tampermonkey. Klicke unten, um zur Download-Seite für deinen Browser zu gelangen.",
+			"button": "Tampermonkey installieren",
+			"installed": "Nach der Installation kannst du im nächsten Schritt Userscripts wie <SigMod>SigMod</SigMod> und <SigFixes>SigFixes</SigFixes> hinzufügen.",
+			"back": "Zurück",
+			"next": "Weiter"
+		},
+		"DevMode": {
+			"title": "Entwicklermodus aktivieren",
+			"desc": "Tampermonkey benötigt den Entwicklermodus, um korrekt zu funktionieren und Benutzerskripte wie SigMod und SigFixes zu installieren.",
+			"chrome": {
+				"title": "Für Chrome, Edge & Opera",
+				"steps": [
+					"Klicke auf das Puzzle-Symbol in der Symbolleiste des Browsers.",
+					"Wähle Erweiterungen verwalten.",
+					"Aktiviere den Entwicklermodus oben rechts.",
+					"Oder öffne direkt: chrome://extensions / edge://extensions / opera://extensions"
+				]
+			},
+			"firefox": {
+				"title": "Für Firefox",
+				"steps": [
+					"Öffne about:addons oder mozilla://extensions.",
+					"Aktiviere den Entwicklermodus in den Einstellungen oder im Menü."
+				]
+			},
+			"safari": {
+				"title": "Für Safari",
+				"steps": [
+					"Bitte sieh in der Safari-Dokumentation nach, wie du den Entwicklermodus aktivierst."
+				]
+			},
+			"default": {
+				"title": "Browser-Anleitung",
+				"steps": [
+					"Bitte sieh in der Dokumentation deines Browsers nach, wie du den Entwicklermodus für Erweiterungen aktivierst."
+				]
+			},
+			"note": {
+				"label": "Hinweis:",
+				"text": "Starte deinen Browser neu, nachdem du den Entwicklermodus aktiviert hast, um sicherzustellen, dass Tampermonkey korrekt funktioniert."
+			},
+			"back": "Zurück",
+			"next": "Weiter"
+		},
+		"SigMod": {
+			"title": "SigMod installieren",
+			"desc": "Nachdem du einen Userscript-Manager installiert hast, ist es Zeit, SigMod zu installieren. SigMod bringt wichtige Funktionen ins Spiel: Makros, eigene Themes, erweiterte Einstellungen und mehr.",
+			"popup": "Klicke unten, um SigMod zu installieren. Im Popup musst du auf den <i>Installieren</i>-Button klicken.",
+			"button": "SigMod installieren",
+			"after": "Nach der Installation läuft SigMod automatisch auf Sigmally. Du kannst es jederzeit in den In-Game-Einstellungen anpassen. Wenn du mehr über SigMod erfahren möchtest, kannst du es <link>hier</link> ansehen.",
+			"back": "Zurück",
+			"next": "Weiter"
+		},
+		"SigFixes": {
+			"title": "SigFixes installieren",
+			"desc": "Sigmally Fixes schreibt große Teile des Clients um und macht ihn deutlich schneller und flüssiger. Erstellt von yx.",
+			"prompt": "Klicke unten, um SigFixes zu installieren",
+			"button": "SigFixes installieren",
+			"features": "SigFixes bietet viele Einstellungen für fortgeschrittene Spieler wie One-Tab-Multiboxing, Umrandung unsplittbarer Zellen, benutzerdefinierte Zeichnungsverzögerung, Textgröße, Skins und Transparenz.",
+			"back": "Zurück",
+			"end": "Fertig"
+		},
+		"End": {
+			"title": "Glückwunsch! 🎉",
+			"desc": "Du hast SigMod und SigFixes erfolgreich installiert und bist bereit, Sigmally zu spielen. Erkunde alle Funktionen der Mods, um das Beste aus deinem Erlebnis herauszuholen.",
+			"play": "Sigmally spielen",
+			"explore": "Funktionen erkunden"
+		}
 	}
 }

@@ -234,5 +234,95 @@
         },
         "discord": "Join the Discord",
         "fullGuide": "View Full Guide"
+    },
+    "Guide": {
+        "Sidebar": {
+            "title": "Guide",
+            "overview": "Overview",
+            "usm": "Userscript manager",
+            "devmode": "Developer mode",
+            "sigmod": "SigMod",
+            "sigfixes": "SigFixes",
+            "end": "Conclusion"
+        },
+		"Overview": {
+			"title": "Getting Started",
+			"desc": "Welcome to SigMod. This guide will help you install everything needed for the best Sigmally experience — fast, smooth, and fully customized.",
+			"access": "You'll get access to features like macros, themes, FPS boosts, and more. All in just a few simple steps.",
+			"start": "Start Installation",
+            "quickGuide": "Quick Guide"
+		},
+        "UserscriptManager": {
+			"title": "Install a userscript manager",
+			"desc": "To install and use scripts on websites, you need a userscript manager.",
+			"recommend": "We recommend:",
+			"instruction": "In this guide, we'll use Tampermonkey. Click below to go to the download page for your browser.",
+			"button": "Install Tampermonkey",
+			"installed": "Once installed, you’ll be ready to add userscripts like <SigMod>SigMod</SigMod> and <SigFixes>SigFixes</SigFixes> in the next step.",
+			"back": "Back",
+			"next": "Next"
+		},
+        "DevMode": {
+            "title": "Enable Developer Mode",
+            "desc": "Tampermonkey requires Developer Mode enabled to function properly and allow installation of userscripts like SigMod and SigFixes.",
+            "chrome": {
+                "title": "For Chrome, Edge & Opera",
+                "steps": [
+                    "Click the puzzle icon in your browser’s toolbar.",
+                    "Select Manage extensions.",
+                    "Toggle Developer Mode on (top-right).",
+                    "Or open directly: chrome://extensions / edge://extensions / opera://extensions"
+                ]
+            },
+            "firefox": {
+                "title": "For Firefox",
+                "steps": [
+                    "Open about:addons or mozilla://extensions.",
+                    "Enable Developer Mode in the settings or options menu."
+                ]
+            },
+            "safari": {
+                "title": "For Safari",
+                "steps": [
+                    "Please refer to your browser’s documentation to enable Developer Mode for extensions."
+                ]
+            },
+            "default": {
+                "title": "Browser Instructions",
+                "steps": [
+                    "Please refer to your browser’s documentation to enable Developer Mode for extensions."
+                ]
+            },
+            "note": {
+                "label": "Note:",
+                "text": "After enabling Developer Mode, restart your browser to ensure Tampermonkey works correctly."
+            },
+            "back": "Back",
+            "next": "Next"
+        },
+		"SigMod": {
+			"title": "Install SigMod",
+			"desc": "Now that you have installed a userscript manager, it's time to install SigMod. SigMod adds core features to your game: macros, custom themes, advanced settings and more.",
+			"popup": "Click below to install SigMod. In the popup you have to click the <i>Install</i> button.",
+			"button": "Install SigMod",
+			"after": "After installing, SigMod will automatically run on Sigmally. You can customize it anytime in the in-game settings. If you want to find out more about SigMod, you can check it out <link>here</link>.",
+			"back": "Back",
+			"next": "Next"
+		},
+        "SigFixes": {
+            "title": "Install SigFixes",
+            "desc": "Sigmally Fixes rewrites a large portion of Sigmally's client, making it much faster and smoother. Made by yx.",
+            "prompt": "Click below to install SigFixes",
+            "button": "Install SigFixes",
+            "features": "SigFixes includes plenty of settings for advanced players like one-tab multiboxing, outlining unsplittable cells, custom draw delay, text size, skins, and opacity.",
+            "back": "Back",
+            "end": "End"
+        },
+		"End": {
+			"title": "Congrats! 🎉",
+			"desc": "You now have SigMod and SigFixes installed and are ready to play Sigmally. Feel free to explore all features of each mod to get the most out of your experience.",
+			"play": "Play Sigmally",
+			"explore": "Explore features"
+		}
     }
 }

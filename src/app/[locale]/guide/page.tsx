@@ -1,31 +1,29 @@
+'use client';
+
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function GuideOverview() {
+    const t = useTranslations('Guide.Overview');
+
     return (
         <section className='max-w-3xl px-4'>
-            <h1 className='text-4xl font-extrabold mb-4'>Getting Started</h1>
-            <p className='text-md mb-4'>
-                Welcome to SigMod. This guide will help you install everything
-                needed for the best Sigmally experience — fast, smooth, and
-                fully customized.
-            </p>
-            <p className='text-md mb-8'>
-                You'll get access to features like macros, themes, FPS boosts,
-                and more. All in just a few simple steps.
-            </p>
+            <h1 className='text-4xl font-extrabold mb-4'>{t('title')}</h1>
+            <p className='text-md mb-4'>{t('desc')}</p>
+            <p className='text-md mb-8'>{t('access')}</p>
 
             <div className='space-x-3 mt-10'>
                 <Button asChild>
                     <Link href='/guide/userscript-manager'>
-                        Start Installation
+                        {t('start')}
                         <ArrowRight />
                     </Link>
                 </Button>
 
                 <Button variant={'outline'} asChild>
-                    <Link href='/quick-guide'>Quick guide</Link>
+                    <Link href='/quick-guide'>{t('quickGuide')}</Link>
                 </Button>
             </div>
         </section>
