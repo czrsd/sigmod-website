@@ -6,8 +6,7 @@ import { routing } from '@/i18n/routing';
 import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Menu, ChevronDown } from 'lucide-react';
-import { sigmallyLink } from '@/utils/getLink';
+import { Menu, ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from './ui/button';
 import {
     NavigationMenu,
@@ -29,8 +28,34 @@ const languageMap: Record<string, string> = {
     de: 'Deutsch',
 };
 
+const mods = [
+    {
+        href: '/sigmod',
+        titleKey: 'mods.sigmod.title',
+        descKey: 'mods.sigmod.desc',
+        imgSrc: '/screenshots/sigmod_menu.png',
+        imgAlt: 'SigMod Menu',
+        imgSize: 92,
+    },
+    {
+        href: '/sigfixes',
+        titleKey: 'mods.sigfixes.title',
+        descKey: 'mods.sigfixes.desc',
+        imgSrc: '/SigFixes_icon.png',
+        imgAlt: 'SigFixes',
+        imgSize: 42,
+    },
+];
+
+const navLinks = [
+    { href: '/guide', labelKey: 'guide' },
+    { href: '/faq', labelKey: 'faq' },
+    { href: '/about', labelKey: 'about' },
+];
+
 export default function Header() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [langOpen, setLangOpen] = useState(false);
     const t = useTranslations('Header');
     const locale = useLocale();
     const pathname = usePathname();
@@ -63,75 +88,59 @@ export default function Header() {
                                     {t('mods.title')}
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent className='p-4'>
-                                    <NavigationMenuLink asChild>
-                                        <Link
-                                            href='/sigmod'
-                                            className='flex flex-row items-center gap-4 w-[260px]'
-                                        >
-                                            <div className='flex-1'>
-                                                <span className='font-medium text-sm'>
-                                                    {t('mods.sigmod.title')}
-                                                </span>
-                                                <p className='text-muted-foreground text-xs'>
-                                                    {t('mods.sigmod.desc')}
-                                                </p>
-                                            </div>
-                                            <Image
-                                                src='/screenshots/sigmod_menu.png'
-                                                alt='SigMod Menu'
-                                                width={92}
-                                                height={92}
-                                                className='rounded object-cover'
-                                            />
-                                        </Link>
-                                    </NavigationMenuLink>
-
-                                    <NavigationMenuLink asChild>
-                                        <Link
-                                            href='/sigfixes'
-                                            className='flex flex-row items-center gap-4 w-[260px]'
-                                        >
-                                            <div className='flex-1'>
-                                                <span className='font-medium text-sm'>
-                                                    {t('mods.sigfixes.title')}
-                                                </span>
-                                                <p className='text-muted-foreground text-xs'>
-                                                    {t('mods.sigfixes.desc')}
-                                                </p>
-                                            </div>
-                                            <Image
-                                                src='/SigFixes_icon.png'
-                                                alt='SigFixes'
-                                                width={42}
-                                                height={42}
-                                                className='rounded object-cover'
-                                            />
-                                        </Link>
-                                    </NavigationMenuLink>
+                                    {mods.map(
+                                        ({
+                                            href,
+                                            titleKey,
+                                            descKey,
+                                            imgSrc,
+                                            imgAlt,
+                                            imgSize,
+                                        }) => (
+                                            <NavigationMenuLink
+                                                asChild
+                                                key={href}
+                                                className='flex flex-row'
+                                            >
+                                                <Link
+                                                    href={href}
+                                                    className='flex items-center gap-4 w-[260px]'
+                                                >
+                                                    <div className='flex-1'>
+                                                        <span className='font-medium text-sm'>
+                                                            {t(titleKey)}
+                                                        </span>
+                                                        <p className='text-muted-foreground text-xs'>
+                                                            {t(descKey)}
+                                                        </p>
+                                                    </div>
+                                                    <Image
+                                                        src={imgSrc}
+                                                        alt={imgAlt}
+                                                        width={imgSize}
+                                                        height={imgSize}
+                                                        className='rounded object-cover'
+                                                    />
+                                                </Link>
+                                            </NavigationMenuLink>
+                                        )
+                                    )}
                                 </NavigationMenuContent>
                             </NavigationMenuItem>
 
-                            <NavigationMenuItem>
-                                <NavigationMenuLink asChild>
-                                    <Link href='/guide'>{t('guide')}</Link>
-                                </NavigationMenuLink>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuLink asChild>
-                                    <Link href='/faq'>{t('faq')}</Link>
-                                </NavigationMenuLink>
-                            </NavigationMenuItem>
-                            <NavigationMenuItem>
-                                <NavigationMenuLink asChild>
-                                    <Link href='/about'>{t('about')}</Link>
-                                </NavigationMenuLink>
-                            </NavigationMenuItem>
+                            {navLinks.map(({ href, labelKey }) => (
+                                <NavigationMenuItem key={href}>
+                                    <NavigationMenuLink asChild>
+                                        <Link href={href}>{t(labelKey)}</Link>
+                                    </NavigationMenuLink>
+                                </NavigationMenuItem>
+                            ))}
                         </NavigationMenuList>
                     </NavigationMenu>
                 </div>
 
                 <div className='flex items-center gap-4'>
-                    <DropdownMenu>
+                    <DropdownMenu open={langOpen} onOpenChange={setLangOpen}>
                         <DropdownMenuTrigger
                             className='flex items-center gap-1'
                             aria-label={`Current language: ${
@@ -144,13 +153,22 @@ export default function Header() {
                                 alt={locale}
                                 width={18}
                                 height={18}
+                                className='mt-px'
                             />
                             {languageMap[locale] ?? locale.toUpperCase()}
-                            <ChevronDown
-                                className='text-muted-foreground'
-                                size={18}
-                            />
+                            {langOpen ? (
+                                <ChevronUp
+                                    className='text-muted-foreground mt-px'
+                                    size={18}
+                                />
+                            ) : (
+                                <ChevronDown
+                                    className='text-muted-foreground mt-px'
+                                    size={18}
+                                />
+                            )}
                         </DropdownMenuTrigger>
+
                         <DropdownMenuContent>
                             {[
                                 locale,
@@ -182,42 +200,30 @@ export default function Header() {
                         variant='ghost'
                         size='icon'
                         className='md:hidden'
-                        onClick={() => setIsOpen(!isOpen)}
+                        onClick={() => setMenuOpen(!menuOpen)}
+                        aria-label='Toggle menu'
                     >
                         <Menu className='w-5 h-5' />
                     </Button>
                 </div>
             </div>
 
-            {isOpen && (
-                <div className='md:hidden border-t px-4 py-4 space-y-3'>
+            {menuOpen && (
+                <nav className='md:hidden border-t px-4 py-4 space-y-3'>
                     <Link href='/' className='block'>
                         {t('home')}
                     </Link>
-                    <Link href='/guide/sigmod' className='block'>
-                        {t('mods.sigmod.title')}
-                    </Link>
-                    <Link href='/guide/sigfixes' className='block'>
-                        {t('mods.sigfixes.title')}
-                    </Link>
-                    <Link href='/guide' className='block'>
-                        {t('guide')}
-                    </Link>
-                    <Link href='/faq' className='block'>
-                        {t('faq')}
-                    </Link>
-                    <Link href='/about' className='block'>
-                        {t('about')}
-                    </Link>
-                    <Link
-                        href={sigmallyLink}
-                        className='block'
-                        target='_blank'
-                        rel='noopener noreferrer'
-                    >
-                        {t('play')}
-                    </Link>
-                </div>
+                    {mods.map(({ href, titleKey }) => (
+                        <Link key={href} href={href} className='block'>
+                            {t(titleKey)}
+                        </Link>
+                    ))}
+                    {navLinks.map(({ href, labelKey }) => (
+                        <Link key={href} href={href} className='block'>
+                            {t(labelKey)}
+                        </Link>
+                    ))}
+                </nav>
             )}
         </header>
     );
