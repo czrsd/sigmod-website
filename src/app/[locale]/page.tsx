@@ -25,7 +25,7 @@ export default function Home() {
         <div>
             <HeroSection />
             <IntroductionSection />
-            <MainPart />
+            <ModsSections />
             <FAQSection />
             <CommunitySection />
             <FooterSection />
@@ -102,7 +102,7 @@ function HeroSection() {
 }
 
 function IntroductionSection() {
-    const t = useTranslations('HomePage.Introduction');
+    const t = useTranslations('HomePage.introduction');
 
     return (
         <section className='max-w-screen-lg mx-auto px-6 md:px-16 py-14'>
@@ -130,7 +130,8 @@ function IntroductionSection() {
     );
 }
 
-function MainPart() {
+function ModsSections() {
+    const t = useTranslations('HomePage.mods');
     return (
         <section className='flex flex-col gap-24 px-6 md:px-16 py-32 max-w-screen-xl mx-auto'>
             <article className='flex flex-col md:flex-row items-center md:items-start gap-12'>
@@ -145,19 +146,15 @@ function MainPart() {
                     />
                 </div>
                 <div className='md:w-1/2 flex flex-col justify-center'>
-                    <h2 className='text-3xl font-semibold mb-4'>SigMod</h2>
+                    <h2 className='text-3xl font-semibold mb-4'>
+                        {t('sigmod.title')}
+                    </h2>
                     <p className='text-base leading-relaxed text-muted-foreground'>
-                        SigMod enhances your overall Sigmally experience with
-                        powerful features like macros, custom themes, advanced
-                        settings and more. Designed for smoother gameplay and
-                        smarter control, it gives you the tools to play your
-                        best.
+                        {t('sigmod.desc')}
                     </p>
                     <div className='mt-6'>
                         <Button asChild>
-                            <Link href='/guide/sigmod'>
-                                Learn more & install
-                            </Link>
+                            <Link href='/guide/sigmod'>{t('learnMore')}</Link>
                         </Button>
                     </div>
                 </div>
@@ -175,19 +172,15 @@ function MainPart() {
                     />
                 </div>
                 <div className='md:w-1/2 flex flex-col justify-center'>
-                    <h2 className='text-3xl font-semibold mb-4'>SigFixes</h2>
+                    <h2 className='text-3xl font-semibold mb-4'>
+                        {t('sigfixes.title')}
+                    </h2>
                     <p className='text-base leading-relaxed text-muted-foreground'>
-                        SigFixes rewrites major parts of the Sigmally client,
-                        improving performance, stability and precision. It
-                        eliminates lag spikes, allows multiboxing and adds
-                        options like draw delay, custom opacity, name scaling
-                        and much more.
+                        {t('sigfixes.desc')}
                     </p>
                     <div className='mt-6'>
                         <Button asChild>
-                            <Link href='/guide/sigfixes'>
-                                Learn more & install
-                            </Link>
+                            <Link href='/guide/sigfixes'>{t('learnMore')}</Link>
                         </Button>
                     </div>
                 </div>
@@ -196,84 +189,42 @@ function MainPart() {
     );
 }
 
-function FAQSection() {
+export function FAQSection() {
+    const t = useTranslations('HomePage.faq');
+    const questions = t.raw('questions') as {
+        question: string;
+        answer: string;
+    }[];
+
     return (
         <section className='px-6 md:px-16 py-32 max-w-4xl mx-auto'>
             <h3 className='text-4xl font-bold text-center mb-12'>FAQ</h3>
             <Accordion type='single' collapsible className='space-y-4'>
-                <AccordionItem value='item-1'>
-                    <AccordionTrigger>
-                        Are tampermonkey and the userscripts safe?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                        Absolutely, because who wouldn’t trust installing random
-                        scripts from the internet to improve their game, right?
-                        But seriously — Tampermonkey is a well-established tool
-                        used by millions, and our userscripts only tweak your
-                        game experience without any funny business. There are
-                        also reviews on the script pages. So yeah, it’s safe.
-                        Use with confidence.
-                    </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value='item-2'>
-                    <AccordionTrigger>
-                        Do I need both SigMod and SigFixes?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                        No, but using both gives the best performance and
-                        customization. They're designed to work together.
-                    </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value='item-3'>
-                    <AccordionTrigger>
-                        Is SigMod and SigFixes allowed in Sigmally?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                        Yes. SigMod is approved by the owner of Sigmally and
-                        widely embraced by the community. Both mods are fully
-                        accepted.
-                    </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value='item-4'>
-                    <AccordionTrigger>
-                        Can I uninstall the mods anytime?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                        Yes, just disable or remove them from your userscript
-                        manager.
-                    </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value='item-99'>
-                    <AccordionTrigger>
-                        Will SigMod make me a pro gamer overnight?
-                    </AccordionTrigger>
-                    <AccordionContent>
-                        If only! SigMod can make gameplay smoother and easier,
-                        but it won't do your skills or reflexes for you.
-                        Practice still required.
-                    </AccordionContent>
-                </AccordionItem>
+                {questions.map((item, i) => (
+                    <AccordionItem key={i} value={`item-${i}`}>
+                        <AccordionTrigger>{item.question}</AccordionTrigger>
+                        <AccordionContent>{item.answer}</AccordionContent>
+                    </AccordionItem>
+                ))}
             </Accordion>
         </section>
     );
 }
 
 function CommunitySection() {
+    const t = useTranslations('HomePage.community');
     return (
         <section className='px-6 md:px-16 py-24 max-w-4xl mx-auto flex flex-col items-center text-center space-y-8'>
-            <h3 className='text-4xl font-bold'>Community</h3>
+            <h3 className='text-4xl font-bold'>{t('title')}</h3>
             <p className='text-base text-muted-foreground max-w-prose'>
-                Sigmally Modz has a Discord server — not the most lively place,
-                but perfect if you’ve found a bug, need help, or just want to
-                ask “why is this broken?” at 3AM. Support lives there
-                (sometimes).
+                {t('desc')}
             </p>
             <Button
                 className='bg-blue-700 hover:bg-blue-800 text-foreground px-6 py-4 text-base font-medium'
                 asChild
             >
                 <Link href={discordLink} target='_blank'>
-                    Join Discord
+                    {t('join')}
                 </Link>
             </Button>
         </section>
@@ -281,13 +232,11 @@ function CommunitySection() {
 }
 
 function FooterSection() {
+    const t = useTranslations('Footer');
     return (
         <footer className='w-full bg-black/60 px-6 md:px-16 py-10 border-t'>
             <div className='max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-muted-foreground'>
-                <div className='text-center md:text-left'>
-                    © 2025 Sigmally Modz. Not affiliated with Sigmally. Built
-                    with ♥.
-                </div>
+                <div className='text-center md:text-left'>{t('text')}</div>
                 <div className='flex gap-4'>
                     <Link
                         href='https://github.com/czrsd/sigmod'

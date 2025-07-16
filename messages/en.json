@@ -1,6 +1,24 @@
 {
-    "common": {
-        "Install": "install"
+    "Header": {
+            "home": "Home",
+            "mods": {
+                "title": "Mods",
+                "sigmod": {
+                    "title": "SigMod Client",
+                    "desc": "Custom mod menu, automation, UI tweaks"
+                },
+                "sigfixes": {
+                    "title": "SigFixes",
+                    "desc": "Enable Multiboxing, Boost FPS"
+                }
+            },
+            "guide": "Guide",
+            "faq": "FAQ",
+            "about": "About",
+            "play": "Play Sigmally"
+    },
+    "Footer": {
+        "text": "© 2025 Sigmally Modz. Not affiliated with Sigmally."
     },
     "HomePage": {
         "hero": {
@@ -8,7 +26,7 @@
             "sub": "Take Sigmally to the next level — faster gameplay, smarter tools, and full control at your fingertips.",
             "start": "Get Started"
         },
-        "Introduction": {
+        "introduction": {
             "what": {
                 "title": "What’s Sigmally?",
                 "desc": "Sigmally is a private server-based agar.io-style game. Fast-paced, competitive, and accessible in-browser, it’s built for players who want simplicity and enjoyable physics. Eat pellets, grow by consuming other players and dominate the leaderboard."
@@ -17,6 +35,46 @@
                 "title": "Why",
                 "desc": "Sigmally Modz gives you deeper control over the game. Whether you’re a casual or competitive player, the mods help with macros, multibox tools, smoother visuals and customization. Everything is designed to boost performance and gameplay comfort."
             }
+        },
+        "mods": {
+            "sigmod": {
+                "title": "SigMod",
+                "desc": "SigMod enhances your overall Sigmally experience with powerful features like macros, custom themes, advanced settings and more. Designed for smoother gameplay and smarter control, it gives you the tools to play your best."
+            },
+            "sigfixes": {
+                "title": "SigFixes",
+                "desc": "SigFixes rewrites major parts of the Sigmally client, improving performance, stability and precision. It eliminates lag spikes, allows multiboxing and adds options like draw delay, custom opacity, name scaling and much more."
+            },
+            "learnMore": "Learn more & install"
+        },
+        "faq": {
+            "questions": [
+                {
+                    "question": "Are tampermonkey and the userscripts safe?",
+                    "answer": "Absolutely, because who wouldn’t trust installing random scripts from the internet to improve their game, right? But seriously — Tampermonkey is a well-established tool used by millions, and our userscripts only tweak your game experience without any funny business. There are also reviews on the script pages. So yeah, it’s safe. Use with confidence."
+                },
+                {
+                    "question": "Do I need both SigMod and SigFixes?",
+                    "answer": "No, but using both gives the best performance and customization. They're designed to work together."
+                },
+                {
+                    "question": "Is SigMod and SigFixes allowed in Sigmally?",
+                    "answer": "Yes. SigMod is approved by the owner of Sigmally and widely embraced by the community. Both mods are fully accepted."
+                },
+                {
+                    "question": "Can I uninstall the mods anytime?",
+                    "answer": "Yes, just disable or remove them from your userscript manager."
+                },
+                {
+                    "question": "Will SigMod make me a pro gamer overnight?",
+                    "answer": "If only! SigMod can make gameplay smoother and easier, but it won't do your skills or reflexes for you. Practice still required."
+                }
+            ]
+        },
+        "community": {
+            "title": "Community",
+            "desc": "Sigmally Modz has a Discord server — not the most lively place, but perfect if you’ve found a bug, need help, or just want to ask “why is this broken?” at 3AM. Support lives there (sometimes).",
+            "join": "Join Discord"
         }
     }
 }

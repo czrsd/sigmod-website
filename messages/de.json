@@ -1,22 +1,80 @@
 {
-    "common": {
-        "Install": "Installieren"
+  "Header": {
+    "home": "Startseite",
+    "mods": {
+      "title": "Mods",
+      "sigmod": {
+        "title": "SigMod Client",
+        "desc": "Benutzerdefiniertes Mod-Menü, Automatisierung, UI-Anpassungen"
+      },
+      "sigfixes": {
+        "title": "SigFixes",
+        "desc": "Multiboxing aktivieren, FPS verbessern"
+      }
     },
-    "HomePage": {
-        "hero": {
-            "title": "Sigmally Modz",
-            "sub": "Bring Sigmally auf das nächste Level – schnelleres Gameplay, intelligentere Tools und volle Kontrolle direkt zur Hand.",
-            "start": "Loslegen"
+    "guide": "Anleitung",
+    "faq": "FAQ",
+    "about": "Über",
+    "play": "Sigmally spielen"
+  },
+  "Footer": {
+    "text": "© 2025 Sigmally Modz. Nicht mit Sigmally verbunden."
+  },
+  "HomePage": {
+    "hero": {
+      "title": "Sigmally Modz",
+      "sub": "Bring Sigmally auf das nächste Level – schnelleres Gameplay, intelligentere Tools und volle Kontrolle direkt zur Hand.",
+      "start": "Loslegen"
+    },
+    "introduction": {
+      "what": {
+        "title": "Was ist Sigmally?",
+        "desc": "Sigmally ist ein Agar.io-ähnliches Spiel auf privaten Servern. Schnell, kompetitiv und direkt im Browser spielbar – ideal für Spieler, die einfache Regeln und unterhaltsame Physik suchen. Sammle Pellets, wachse durch das Fressen anderer Spieler und dominiere die Rangliste."
+      },
+      "why": {
+        "title": "Warum",
+        "desc": "Sigmally Modz gibt dir mehr Kontrolle über das Spiel. Egal ob Gelegenheitsspieler oder Wettkampfspieler – die Mods bieten Makros, Multiboxing-Tools, flüssigere Grafik und viele Anpassungsmöglichkeiten. Alles ist auf Leistung und Spielkomfort ausgelegt."
+      }
+    },
+    "mods": {
+      "sigmod": {
+        "title": "SigMod",
+        "desc": "SigMod verbessert dein gesamtes Sigmally-Erlebnis mit Funktionen wie Makros, benutzerdefinierten Themes, erweiterten Einstellungen und mehr. Für flüssigeres Gameplay und smartere Steuerung – spiele auf deinem besten Niveau."
+      },
+      "sigfixes": {
+        "title": "SigFixes",
+        "desc": "SigFixes überarbeitet zentrale Teile des Sigmally-Clients, verbessert Leistung, Stabilität und Präzision. Es entfernt Lags, ermöglicht Multiboxing und bringt Features wie Zeichnungsverzögerung, transparente Namen, Skalierung und mehr."
+      },
+      "learnMore": "Mehr erfahren & installieren"
+    },
+    "faq": {
+      "questions": [
+        {
+          "question": "Sind Tampermonkey und die Userscripts sicher?",
+          "answer": "Auf jeden Fall – denn wer würde schon nicht vertrauensvoll zufällige Scripts aus dem Internet installieren, oder? Im Ernst: Tampermonkey ist ein bewährtes Tool mit Millionen Nutzern, und unsere Scripts verändern nur dein Spielerlebnis – ohne komische Nebenwirkungen. Es gibt auch Bewertungen auf den Script-Seiten. Also ja: sicher. Nutze es mit Vertrauen."
         },
-        "Introduction": {
-            "what": {
-                "title": "Was ist Sigmally?",
-                "desc": "Sigmally ist ein Agar.io-ähnliches Spiel auf Basis privater Server. Rasantes Tempo, kompetitives Gameplay und direkt im Browser spielbar – gemacht für alle, die einfache Regeln und spaßige Physik mögen. Sammle Pellets, wachse durch das Fressen anderer Spieler und dominiere die Rangliste."
-            },
-            "why": {
-                "title": "Warum",
-                "desc": "Sigmally Modz gibt dir mehr Kontrolle über das Spiel. Egal ob Gelegenheitsspieler oder im Wettkampf – die Mods bieten Makros, Multibox-Tools, flüssigere Grafik und Anpassungsmöglichkeiten. Alles ist darauf ausgelegt, Leistung und Spielkomfort zu verbessern."
-            }
+        {
+          "question": "Brauche ich sowohl SigMod als auch SigFixes?",
+          "answer": "Nein, aber beides zusammen bietet die beste Leistung und Anpassbarkeit. Sie sind darauf ausgelegt, zusammen zu funktionieren."
+        },
+        {
+          "question": "Sind SigMod und SigFixes in Sigmally erlaubt?",
+          "answer": "Ja. SigMod ist vom Sigmally-Betreiber genehmigt und wird von der Community akzeptiert. Beide Mods sind vollständig erlaubt."
+        },
+        {
+          "question": "Kann ich die Mods jederzeit entfernen?",
+          "answer": "Ja. Du kannst sie jederzeit in deinem Userscript-Manager deaktivieren oder löschen."
+        },
+        {
+          "question": "Macht mich SigMod über Nacht zum Pro-Gamer?",
+          "answer": "Schön wär’s! SigMod macht das Gameplay angenehmer und flüssiger, aber deine Skills musst du trotzdem selbst mitbringen. Übung bleibt wichtig."
         }
+      ]
+    },
+    "community": {
+      "title": "Community",
+      "desc": "Sigmally Modz hat einen Discord-Server – nicht der lebendigste Ort, aber perfekt, wenn du einen Bug gefunden hast, Hilfe brauchst oder um 3 Uhr nachts fragen willst: „Warum ist das kaputt?“ Der Support ist dort (manchmal).",
+      "join": "Discord beitreten"
     }
+  }
 }

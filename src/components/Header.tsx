@@ -14,9 +14,11 @@ import { Menu } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const t = useTranslations('Header');
 
     return (
         <header className='sticky top-0 z-50 bg-background/70 backdrop-blur-sm border-b'>
@@ -36,7 +38,7 @@ export default function Header() {
                         <NavigationMenuList>
                             <NavigationMenuItem>
                                 <NavigationMenuTrigger>
-                                    Mods
+                                    {t('mods.title')}
                                 </NavigationMenuTrigger>
                                 <NavigationMenuContent className='p-4'>
                                     <NavigationMenuLink asChild>
@@ -46,11 +48,10 @@ export default function Header() {
                                         >
                                             <div className='flex-1'>
                                                 <span className='font-medium text-sm'>
-                                                    SigMod Client
+                                                    {t('mods.sigmod.title')}
                                                 </span>
                                                 <p className='text-muted-foreground text-xs'>
-                                                    Custom mod menu, automation,
-                                                    UI tweaks
+                                                    {t('mods.sigmod.desc')}
                                                 </p>
                                             </div>
                                             <Image
@@ -70,16 +71,15 @@ export default function Header() {
                                         >
                                             <div className='flex-1'>
                                                 <span className='font-medium text-sm'>
-                                                    SigFixes
+                                                    {t('mods.sigfixes.title')}
                                                 </span>
                                                 <p className='text-muted-foreground text-xs'>
-                                                    Enable Multiboxing, Boost
-                                                    FPS
+                                                    {t('mods.sigfixes.desc')}
                                                 </p>
                                             </div>
                                             <Image
                                                 src='/SigFixes_icon.png'
-                                                alt='SigMod Menu'
+                                                alt='SigFixes'
                                                 width={42}
                                                 height={42}
                                                 className='rounded object-cover'
@@ -91,17 +91,17 @@ export default function Header() {
 
                             <NavigationMenuItem>
                                 <NavigationMenuLink asChild>
-                                    <Link href='/guide'>Guide</Link>
+                                    <Link href='/guide'>{t('guide')}</Link>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuLink asChild>
-                                    <Link href='/faq'>FAQ</Link>
+                                    <Link href='/faq'>{t('faq')}</Link>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                             <NavigationMenuItem>
                                 <NavigationMenuLink asChild>
-                                    <Link href='/about'>About</Link>
+                                    <Link href='/about'>{t('about')}</Link>
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                         </NavigationMenuList>
@@ -119,7 +119,7 @@ export default function Header() {
                             target='_blank'
                             rel='noopener noreferrer'
                         >
-                            Play Sigmally
+                            {t('play')}
                         </Link>
                     </Button>
 
@@ -137,22 +137,22 @@ export default function Header() {
             {isOpen && (
                 <div className='md:hidden border-t px-4 py-4 space-y-3'>
                     <Link href='/' className='block'>
-                        Home
+                        {t('home')}
                     </Link>
                     <Link href='/guide/sigmod' className='block'>
-                        SigMod
+                        {t('mods.sigmod.title')}
                     </Link>
                     <Link href='/guide/sigfixes' className='block'>
-                        SigFixes
+                        {t('mods.sigfixes.title')}
                     </Link>
                     <Link href='/guide' className='block'>
-                        Guide
+                        {t('guide')}
                     </Link>
                     <Link href='/faq' className='block'>
-                        FAQ
+                        {t('faq')}
                     </Link>
                     <Link href='/about' className='block'>
-                        About
+                        {t('about')}
                     </Link>
                     <Link
                         href={sigmallyLink}
@@ -160,7 +160,7 @@ export default function Header() {
                         target='_blank'
                         rel='noopener noreferrer'
                     >
-                        Play Sigmally
+                        {t('play')}
                     </Link>
                 </div>
             )}
