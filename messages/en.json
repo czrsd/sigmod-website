@@ -410,5 +410,22 @@
         },
         "needHelp": "Still need help? Join our Discord and open a support ticket — we’ll help you out.",
         "joinDiscord": "Join Discord"
+    },
+    "AboutPage": {
+        "title": "About SigMod",
+        "tldr": {
+            "title": "TL;DR",
+            "text": "I'm Cursed from Germany. I started coding around 2021, got hooked on Sigmally in 2022 and created SigMod as a userscript mod based on RingZero’s original. With support from people like RingZero and yx, both SigMod and Sigmally kept growing."
+        },
+        "story": {
+            "title": "The Story",
+            "intro": "Hey, I’m Cursed — the person behind SigMod and this site. Funny enough, Sigmally is what pulled me deeper into programming, even though I had some experience before.",
+            "sigmodStart": "In 2022, I came across Sigmally, joined a top clan, and got hooked immediately. I wanted to improve the game — so I started building my own mod.",
+            "firstMod": "Back then, there was already a solid userscript by RingZero — one of the coolest people in the community. I developed it further, customized it, and uploaded it to Greasyfork. That’s how SigMod came to be.",
+            "community": "It blew up fast. Sure, there was some drama (shoutout to PFMacro) and even a takedown — but most players stood behind me. Without the community, SigMod wouldn’t have come this far.",
+            "thanks": "SigMod isn’t perfect, but I’m proud of it. Thanks to everyone who gave feedback, shared it, or just used it — you’re the reason it keeps going.",
+            "sigfixes": "Huge respect to yx — his mod has made Sigmally way better for everyone."
+        },
+        "joinDiscord": "Join the Discord"
     }
 }
