@@ -1,0 +1,22 @@
+{
+    "common": {
+        "Install": "Installieren"
+    },
+    "HomePage": {
+        "hero": {
+            "title": "Sigmally Modz",
+            "sub": "Bring Sigmally auf das nächste Level – schnelleres Gameplay, intelligentere Tools und volle Kontrolle direkt zur Hand.",
+            "start": "Loslegen"
+        },
+        "Introduction": {
+            "what": {
+                "title": "Was ist Sigmally?",
+                "desc": "Sigmally ist ein Agar.io-ähnliches Spiel auf Basis privater Server. Rasantes Tempo, kompetitives Gameplay und direkt im Browser spielbar – gemacht für alle, die einfache Regeln und spaßige Physik mögen. Sammle Pellets, wachse durch das Fressen anderer Spieler und dominiere die Rangliste."
+            },
+            "why": {
+                "title": "Warum",
+                "desc": "Sigmally Modz gibt dir mehr Kontrolle über das Spiel. Egal ob Gelegenheitsspieler oder im Wettkampf – die Mods bieten Makros, Multibox-Tools, flüssigere Grafik und Anpassungsmöglichkeiten. Alles ist darauf ausgelegt, Leistung und Spielkomfort zu verbessern."
+            }
+        }
+    }
+}

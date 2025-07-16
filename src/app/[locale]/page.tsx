@@ -18,6 +18,7 @@ import {
 } from '@/components/ui/accordion';
 import { ArrowRight } from 'lucide-react';
 import { discordLink } from '@/utils/getLink';
+import { useTranslations } from 'next-intl';
 
 export default function Home() {
     return (
@@ -34,17 +35,17 @@ export default function Home() {
 }
 
 function HeroSection() {
+    const t = useTranslations('HomePage.hero');
     return (
         <section className='flex flex-col md:flex-row md:flex-grow px-6 md:px-16 py-24 gap-12'>
             <div className='md:w-1/2 text-center md:text-left mt-10'>
                 <h1 className='text-4xl sm:text-6xl md:text-7xl font-extrabold leading-tight tracking-tight'>
                     <span className='bg-gradient-to-r from-[var(--glow)] to-purple-500 text-transparent bg-clip-text [text-wrap:balance]'>
-                        Sigmally Modz
+                        {t('title')}
                     </span>
                 </h1>
                 <p className='mt-4 max-w-lg text-base sm:text-lg md:text-xl text-muted-foreground'>
-                    Take Sigmally to the next level — faster gameplay, smarter
-                    tools, and full control at your fingertips.
+                    {t('sub')}
                 </p>
 
                 <div className='mt-6 flex gap-4 justify-center md:justify-start'>
@@ -54,7 +55,7 @@ function HeroSection() {
                         asChild
                     >
                         <Link href='/guide'>
-                            Get Started <ArrowRight />
+                            {t('start')} <ArrowRight />
                         </Link>
                     </Button>
                 </div>
@@ -101,34 +102,27 @@ function HeroSection() {
 }
 
 function IntroductionSection() {
+    const t = useTranslations('HomePage.Introduction');
+
     return (
         <section className='max-w-screen-lg mx-auto px-6 md:px-16 py-14'>
             <div className='flex flex-col md:flex-row gap-12 md:gap-24'>
                 <div className='md:w-1/2 text-center md:text-left space-y-4'>
-                    <h3 className='text-2xl font-semibold'>What’s Sigmally?</h3>
+                    <h3 className='text-2xl font-semibold'>
+                        {t('what.title')}
+                    </h3>
                     <p className='text-muted-foreground text-base leading-relaxed'>
-                        Sigmally is a private server-based agar.io-style game.
-                        Fast-paced, competitive, and accessible in-browser, it’s
-                        built for players who want simplicity and enjoyable
-                        physics.
-                        <br />
-                        Eat pellets, grow by consuming other players and
-                        dominate the leaderboard.
+                        {t('what.desc')}
                     </p>
                 </div>
                 <div className='md:w-1/2 text-center md:text-left space-y-4'>
                     <h3 className='text-2xl font-semibold'>
-                        Why{' '}
-                        <span className='text-highlight'>Sigmally Modz</span>?
+                        <span>{t('why.title')} </span>
+                        <span className='text-highlight'>Sigmally Modz</span>
+                        <span>?</span>
                     </h3>
                     <p className='text-muted-foreground text-base leading-relaxed'>
-                        Sigmally Modz gives you deeper control over the game.
-                        Whether you’re a casual or competitive player, the mods
-                        help with macros, multibox tools, smoother visuals and
-                        customization.
-                        <br />
-                        Everything is designed to boost performance and gameplay
-                        comfort.
+                        {t('why.desc')}
                     </p>
                 </div>
             </div>

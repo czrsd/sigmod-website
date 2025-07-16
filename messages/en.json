@@ -1,0 +1,22 @@
+{
+    "common": {
+        "Install": "install"
+    },
+    "HomePage": {
+        "hero": {
+            "title": "Sigmally Modz",
+            "sub": "Take Sigmally to the next level — faster gameplay, smarter tools, and full control at your fingertips.",
+            "start": "Get Started"
+        },
+        "Introduction": {
+            "what": {
+                "title": "What’s Sigmally?",
+                "desc": "Sigmally is a private server-based agar.io-style game. Fast-paced, competitive, and accessible in-browser, it’s built for players who want simplicity and enjoyable physics. Eat pellets, grow by consuming other players and dominate the leaderboard."
+            },
+            "why": {
+                "title": "Why",
+                "desc": "Sigmally Modz gives you deeper control over the game. Whether you’re a casual or competitive player, the mods help with macros, multibox tools, smoother visuals and customization. Everything is designed to boost performance and gameplay comfort."
+            }
+        }
+    }
+}
