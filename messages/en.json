@@ -1,84 +1,210 @@
 {
-    "NotFound": {
-        "title": "404 – Page not found",
-        "message": "This page doesn't exist or has been moved."
-    },
-    "Header": {
-            "home": "Home",
-            "mods": {
-                "title": "Mods",
-                "sigmod": {
-                    "title": "SigMod Client",
-                    "desc": "Custom mod menu, automation, UI tweaks"
-                },
-                "sigfixes": {
-                    "title": "SigFixes",
-                    "desc": "Enable Multiboxing, Boost FPS"
-                }
-            },
-            "guide": "Guide",
-            "faq": "FAQ",
-            "about": "About",
-            "play": "Play Sigmally"
-    },
-    "Footer": {
-        "text": "© 2025 Sigmally Modz. Not affiliated with Sigmally."
-    },
-    "HomePage": {
-        "hero": {
-            "title": "Sigmally Modz",
-            "sub": "Take Sigmally to the next level — faster gameplay, smarter tools, and full control at your fingertips.",
-            "start": "Get Started"
-        },
-        "introduction": {
-            "what": {
-                "title": "What’s Sigmally?",
-                "desc": "Sigmally is a private server-based agar.io-style game. Fast-paced, competitive, and accessible in-browser, it’s built for players who want simplicity and enjoyable physics. Eat pellets, grow by consuming other players and dominate the leaderboard."
-            },
-            "why": {
-                "title": "Why",
-                "desc": "Sigmally Modz gives you deeper control over the game. Whether you’re a casual or competitive player, the mods help with macros, multibox tools, smoother visuals and customization. Everything is designed to boost performance and gameplay comfort."
-            }
-        },
-        "mods": {
-            "sigmod": {
-                "title": "SigMod",
-                "desc": "SigMod enhances your overall Sigmally experience with powerful features like macros, custom themes, advanced settings and more. Designed for smoother gameplay and smarter control, it gives you the tools to play your best."
-            },
-            "sigfixes": {
-                "title": "SigFixes",
-                "desc": "SigFixes rewrites major parts of the Sigmally client, improving performance, stability and precision. It eliminates lag spikes, allows multiboxing and adds options like draw delay, custom opacity, name scaling and much more."
-            },
-            "learnMore": "Learn more & install"
-        },
-        "faq": {
-            "questions": [
-                {
-                    "question": "Are tampermonkey and the userscripts safe?",
-                    "answer": "Absolutely, because who wouldn’t trust installing random scripts from the internet to improve their game, right? But seriously — Tampermonkey is a well-established tool used by millions, and our userscripts only tweak your game experience without any funny business. There are also reviews on the script pages. So yeah, it’s safe. Use with confidence."
-                },
-                {
-                    "question": "Do I need both SigMod and SigFixes?",
-                    "answer": "No, but using both gives the best performance and customization. They're designed to work together."
-                },
-                {
-                    "question": "Is SigMod and SigFixes allowed in Sigmally?",
-                    "answer": "Yes. SigMod is approved by the owner of Sigmally and widely embraced by the community. Both mods are fully accepted."
-                },
-                {
-                    "question": "Can I uninstall the mods anytime?",
-                    "answer": "Yes, just disable or remove them from your userscript manager."
-                },
-                {
-                    "question": "Will SigMod make me a pro gamer overnight?",
-                    "answer": "If only! SigMod can make gameplay smoother and easier, but it won't do your skills or reflexes for you. Practice still required."
-                }
-            ]
-        },
-        "community": {
-            "title": "Community",
-            "desc": "Sigmally Modz has a Discord server — not the most lively place, but perfect if you’ve found a bug, need help, or just want to ask “why is this broken?” at 3AM. Support lives there (sometimes).",
-            "join": "Join Discord"
-        }
-    }
+	"NotFound": {
+		"title": "404 – Page not found",
+		"message": "This page doesn't exist or has been moved."
+	},
+	"Header": {
+		"home": "Home",
+		"mods": {
+			"title": "Mods",
+			"sigmod": {
+				"title": "SigMod Client",
+				"desc": "Custom mod menu, automation, UI tweaks"
+			},
+			"sigfixes": {
+				"title": "SigFixes",
+				"desc": "Enable Multiboxing, Boost FPS"
+			}
+		},
+		"guide": "Guide",
+		"faq": "FAQ",
+		"about": "About",
+		"play": "Play Sigmally"
+	},
+	"Footer": {
+		"text": "© 2025 Sigmally Modz. Not affiliated with Sigmally."
+	},
+	"HomePage": {
+		"hero": {
+			"title": "Sigmally Modz",
+			"sub": "Take Sigmally to the next level — faster gameplay, smarter tools, and full control at your fingertips.",
+			"start": "Get Started"
+		},
+		"introduction": {
+			"what": {
+				"title": "What’s Sigmally?",
+				"desc": "Sigmally is a private server-based agar.io-style game. Fast-paced, competitive, and accessible in-browser, it’s built for players who want simplicity and enjoyable physics. Eat pellets, grow by consuming other players and dominate the leaderboard."
+			},
+			"why": {
+				"title": "Why",
+				"desc": "Sigmally Modz gives you deeper control over the game. Whether you’re a casual or competitive player, the mods help with macros, multibox tools, smoother visuals and customization. Everything is designed to boost performance and gameplay comfort."
+			}
+		},
+		"mods": {
+			"sigmod": {
+				"title": "SigMod",
+				"desc": "SigMod enhances your overall Sigmally experience with powerful features like macros, custom themes, advanced settings and more. Designed for smoother gameplay and smarter control, it gives you the tools to play your best."
+			},
+			"sigfixes": {
+				"title": "SigFixes",
+				"desc": "SigFixes rewrites major parts of the Sigmally client, improving performance, stability and precision. It eliminates lag spikes, allows multiboxing and adds options like draw delay, custom opacity, name scaling and much more."
+			},
+			"learnMore": "Learn more & install"
+		},
+		"faq": {
+			"questions": [
+				{
+					"question": "Are tampermonkey and the userscripts safe?",
+					"answer": "Absolutely, because who wouldn’t trust installing random scripts from the internet to improve their game, right? But seriously — Tampermonkey is a well-established tool used by millions, and our userscripts only tweak your game experience without any funny business. There are also reviews on the script pages. So yeah, it’s safe. Use with confidence."
+				},
+				{
+					"question": "Do I need both SigMod and SigFixes?",
+					"answer": "No, but using both gives the best performance and customization. They're designed to work together."
+				},
+				{
+					"question": "Is SigMod and SigFixes allowed in Sigmally?",
+					"answer": "Yes. SigMod is approved by the owner of Sigmally and widely embraced by the community. Both mods are fully accepted."
+				},
+				{
+					"question": "Can I uninstall the mods anytime?",
+					"answer": "Yes, just disable or remove them from your userscript manager."
+				},
+				{
+					"question": "Will SigMod make me a pro gamer overnight?",
+					"answer": "If only! SigMod can make gameplay smoother and easier, but it won't do your skills or reflexes for you. Practice still required."
+				}
+			]
+		},
+		"community": {
+			"title": "Community",
+			"desc": "Sigmally Modz has a Discord server — not the most lively place, but perfect if you’ve found a bug, need help, or just want to ask “why is this broken?” at 3AM. Support lives there (sometimes).",
+			"join": "Join Discord"
+		}
+	},
+	"SigModPage": {
+		"Hero": {
+			"title": "SigMod Client",
+			"sub": "Upgrade your Sigmally experience with advanced macros, tag-based teams, UI control, and full in-game customization.",
+			"install": "Install SigMod",
+			"explore": "Explore features",
+			"require": "Requires",
+			"or": "or"
+		},
+		"CoreFeatures": {
+			"macros": {
+				"title": "Macros & Automation",
+				"desc": "Streamline gameplay with programmable hotkeys, customizable mouse macros, auto‑respawn, and automated daily‑coin collection."
+			},
+			"party": {
+				"title": "Party & Tag System",
+				"desc": "Assign 3‑letter tags to teammates with real‑time minimap tracking, private chat channels, and precision pings."
+			},
+			"customization": {
+				"title": "Full Customization",
+				"desc": "Personalize every aspect—modify UI themes, fonts, layouts, and keybindings in a unified in‑game mod menu."
+			}
+		},
+		"WhySigMod": {
+			"title": "Why Choose SigMod?",
+			"desc1": "SigMod upgrades the Sigmally client with smart automation, visual customization, and full UI control. Set macros, adjust layouts, manage hotkeys, and tweak visuals—all inside a clean mod menu. Switch themes, save names, and take screenshots with ease.",
+			"desc2": "Stay in sync with teammates using a live tag system: chat privately, send pings, and track friends on the minimap. View real-time stats, manage your friend list, and fine-tune chat visibility, colors, and keybinds.",
+			"performance": "Want even better performance? Combine SigMod with",
+			"smooth": "for a smoother, lag‑free experience.",
+			"getStarted": "Get Started with SigMod"
+		},
+		"Features": {
+			"title": "SigMod Features",
+			"list": [
+				{
+					"title": "Macros & Automation",
+					"summary": "Automate every move — keybinds, tricksplits & mouse macros",
+					"details": "Bind keys for advanced actions like rapid feed, double/triple/quad splits, and tricksplits. Create mouse macros for left/right click behaviors. Configure split sequences with precise delay settings and feed speeds. Toggle settings like names, skins, or respawn with a key — all fully customizable."
+				},
+				{
+					"title": "Party & Tag System",
+					"summary": "3-letter tags, minimap tracking, pings & private party chat",
+					"details": "Assign yourself a tag (up to 3 characters) to form private teams. Members are tracked on the minimap, listed in a party panel with name and score, and can send precise pings. The party chat allows for secure communication, isolated from public chat. You’ll also see who sent which ping by tag index."
+				},
+				{
+					"title": "Menu Customization",
+					"summary": "Themes, fonts, layout, tabs, borders, and input styling",
+					"details": "Personalize your UI with themes, rounded corners, background images, and custom input borders. Hide unwanted elements like Discord or language buttons. Customize tab order, spacing, shadows, and switch between preset layouts for a fully personalized experience."
+				},
+				{
+					"title": "Visual Game Settings",
+					"summary": "Tweak map colors, opacity, cell styling and fonts",
+					"details": "Adjust color and transparency of key game elements like the map, border, food, and cells. Replace in-game images such as viruses or map backgrounds. Choose different fonts, show/hide player names and skins, apply text outlines, and toggle visual overlays like grid and border."
+				},
+				{
+					"title": "Gallery & Screenshots",
+					"summary": "Capture moments & manage your game gallery",
+					"details": "Assign a keybind to instantly take a screenshot in-game. Browse your image collection in the Gallery tab. Each image includes timestamp, delete, and download options. Easily manage or clean your gallery in one place."
+				},
+				{
+					"title": "Name Tools & Color Effects",
+					"summary": "Save names, use generators, gradients & symbols",
+					"details": "Access nickname generators from popular sites (NickFinder, Tell.wtf). Save your favorite names for one-click copying. Create stylish names with special characters and design vibrant name colors using gradients and two-tone effects. Quick delete or reuse features built in."
+				},
+				{
+					"title": "Friends & Mod Profile",
+					"summary": "Add users, chat privately & manage your mod identity",
+					"details": "Add and chat with friends using username or Discord login. See online status, tag, server, and more. Use filters and search to find users. Customize your mod profile with avatar, bio, status, and color highlights. Accept/decline requests and toggle public visibility options."
+				},
+				{
+					"title": "Stats & Quick Access Panel",
+					"summary": "Track gameplay and toggle key settings instantly",
+					"details": "The Home tab shows stats like time played, top mass, and total deaths. The quick access panel lets you toggle Mass, Grid, Border, Jelly Physics, Auto-Respawn, Coin Claim and more — right from the menu without digging through settings."
+				},
+				{
+					"title": "Chat System Overhaul",
+					"summary": "Custom mod chat with tabs, keybinds & full control",
+					"details": "Switch between Party and Main chat via tabs. Messages update live using websocket interception. Use keybinds to send your location, toggle blur, enable time tags, or enable compact mode. Customize text, background, and full theme color including transparency."
+				}
+			],
+			"viewMore": "View More"
+		},
+		"FAQ": {
+			"title": "FAQ",
+			"list": [
+				{
+					"question": "What are the core features of SigMod?",
+					"answer": "SigMod includes a fully customizable mod menu, powerful macros and automation tools, a party & tag system, live in-game stats, and a modern chat, name, and friend system — all integrated to enhance your Sigmally gameplay."
+				},
+				{
+					"question": "What customization options does SigMod offer?",
+					"answer": "You can change themes, fonts, layout spacing, border radius, name colors (including gradients), UI opacity, menu visuals, game colors, and toggle dozens of visual settings. It also supports deathscreen tweaks, skin overrides, and background presets."
+				},
+				{
+					"question": "What is the tag system?",
+					"answer": "The tag system lets you assign a 3-letter code to create a party with teammates. You can track each other on the minimap, chat in a private party channel, send pings, and view scores in a shared party panel with member names and tag indexes."
+				},
+				{
+					"question": "How does the friend system work?",
+					"answer": "You can log in to create a mod profile and add other players as friends. View profiles, roles, online status, server info, and chat with them directly. Friend requests, search, settings, and profile customization (avatar, bio, status) are all included."
+				},
+				{
+					"question": "How do I open the SigMod menu?",
+					"answer": "Press the V key or click the gear icon in the top-right corner of the game to open the mod menu. It includes tabs for Macros, Themes, Gallery, Friends, and more."
+				},
+				{
+					"question": "Can I customize hotkeys and macros?",
+					"answer": "Yes. SigMod includes advanced keybinding tools for feeding, splitting, tricksplits, and more. You can also assign mouse macros, configure linesplit behavior, set rapid feed speed, and bind UI toggles like menu, names, or autorespawn."
+				},
+				{
+					"question": "Does SigMod affect game performance?",
+					"answer": "SigMod adds many features but is optimized to stay lightweight. For better framerate or reduced lag, install SigFixes — which patches performance bottlenecks in the base Sigmally client."
+				},
+				{
+					"question": "Can I take and manage screenshots?",
+					"answer": "Yes. Use a custom keybind to capture in-game screenshots instantly. View them by date in the Gallery tab, and download or delete them with one click."
+				}
+			]
+		},
+		"Community": {
+			"join": "Join the Community",
+			"text": "Need help, found a bug, or want to share your custom macros? Join the Discord and connect with other SigMod users.",
+			"discord": "Join Discord",
+			"explore": "Or explore the code on"
+		}
+	}
 }
