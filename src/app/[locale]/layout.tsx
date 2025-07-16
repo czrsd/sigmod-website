@@ -5,6 +5,7 @@ import { PageWrapper } from '@/components/PageWrapper';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
     title: 'SigModz',
@@ -27,6 +28,7 @@ export default async function RootLayout({
                 <NextIntlClientProvider>
                     <Header />
                     <PageWrapper>{children}</PageWrapper>
+                    <Footer />
                 </NextIntlClientProvider>
             </body>
         </html>
