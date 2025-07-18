@@ -15,12 +15,6 @@ export default function Preload() {
                 type='font/ttf'
                 crossOrigin='anonymous'
             />
-            <link
-                rel='preload'
-                as='image'
-                href='/images/hero-banner.jpg'
-                type='image/jpeg'
-            />
         </>
     );
 }

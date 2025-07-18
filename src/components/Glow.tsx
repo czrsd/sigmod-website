@@ -16,17 +16,6 @@ type GlowProps = {
     className?: string;
 };
 
-function convertPercentToViewport(value?: string, isHorizontal = true) {
-    if (!value) return undefined;
-    if (value.endsWith('%')) {
-        const num = parseFloat(value);
-        return isHorizontal
-            ? `${(num / 100) * 100}vw`
-            : `${(num / 100) * 100}vh`;
-    }
-    return value;
-}
-
 export function Glow({
     glowColorVar = '--glow',
     blur = '100px',
@@ -43,7 +32,7 @@ export function Glow({
         <div
             aria-hidden
             className={clsx(
-                'pointer-events-none absolute z-[-1] rounded-full opacity-70',
+                'pointer-events-none absolute z-[-1] rounded-full opacity-70 -translate-x-1/2',
                 className
             )}
             style={{
@@ -52,8 +41,8 @@ export function Glow({
                 opacity,
                 width,
                 height,
-                top: convertPercentToViewport(top, false),
-                left: convertPercentToViewport(left, true),
+                top,
+                left,
                 right,
                 bottom,
             }}
