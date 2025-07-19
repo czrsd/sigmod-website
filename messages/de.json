@@ -366,6 +366,7 @@
 			"overview": "Übersicht",
 			"usm": "Userscript-Manager",
 			"devmode": "Entwicklermodus",
+			"aus_chrome": "Benutzerskripte erlauben",
 			"sigmod": "SigMod",
 			"sigfixes": "SigFixes",
 			"end": "Fazit"
@@ -389,38 +390,50 @@
 		},
 		"DevMode": {
 			"title": "Entwicklermodus aktivieren",
-			"desc": "Tampermonkey benötigt den Entwicklermodus, um korrekt zu funktionieren und Benutzerskripte wie SigMod und SigFixes zu installieren.",
+			"desc": "Tampermonkey benötigt den aktivierten Entwicklermodus, um korrekt zu funktionieren und Userscripts wie SigMod und SigFixes zu installieren.",
 			"chrome": {
-				"title": "Für Chrome, Edge & Opera",
+				"pageTitle": "Userscripts erlauben",
+				"title": "Anleitung",
+				"desc": "Um Tampermonkey mit Chrome zu verwenden, musst du in den Erweiterungseinstellungen 'Userscripts erlauben' aktivieren. Damit können benutzerdefinierte Skripte wie SigMod und SigFixes ausgeführt werden.",
 				"steps": [
-					"Klicke auf das Puzzle-Symbol in der Symbolleiste des Browsers.",
-					"Wähle Erweiterungen verwalten.",
-					"Aktiviere den Entwicklermodus oben rechts.",
-					"Oder öffne direkt: chrome://extensions / edge://extensions / opera://extensions"
+					"Klicke auf das Puzzle-Symbol in der Symbolleiste deines Browsers.",
+					"Klicke auf die drei Punkte neben der Tampermonkey-Erweiterung.",
+					"Wähle Erweiterung verwalten.",
+					"Aktiviere 'Userscripts erlauben'."
+				]
+			},
+			"opera": {
+				"title": "Für Opera",
+				"steps": [
+					"Klicke auf das Würfel-Symbol (Erweiterungen) in der Symbolleiste deines Browsers.",
+					"Klicke auf 'Erweiterungen verwalten'.",
+					"Aktiviere oben rechts den Entwicklermodus."
+				]
+			},
+			"edge": {
+				"title": "Für Edge",
+				"steps": [
+					"Klicke auf das Puzzle-Symbol (Erweiterungen) in der Symbolleiste deines Browsers.",
+					"Klicke auf 'Erweiterungen verwalten'.",
+					"Aktiviere im linken Seitenmenü den Entwicklermodus."
 				]
 			},
 			"firefox": {
 				"title": "Für Firefox",
 				"steps": [
-					"Öffne about:addons oder mozilla://extensions.",
-					"Aktiviere den Entwicklermodus in den Einstellungen oder im Menü."
-				]
-			},
-			"safari": {
-				"title": "Für Safari",
-				"steps": [
-					"Bitte sieh in der Safari-Dokumentation nach, wie du den Entwicklermodus aktivierst."
+					"Firefox benötigt keinen Entwicklermodus. Du kannst diesen Schritt überspringen."
 				]
 			},
 			"default": {
 				"title": "Browser-Anleitung",
 				"steps": [
-					"Bitte sieh in der Dokumentation deines Browsers nach, wie du den Entwicklermodus für Erweiterungen aktivierst."
+					"Sieh in der Dokumentation deines Browsers nach, wie du den Entwicklermodus aktivierst.",
+					"Wenn du einen Chromium-basierten Browser verwendest, folge den Anweisungen auf den Bildern."
 				]
 			},
 			"note": {
 				"label": "Hinweis:",
-				"text": "Starte deinen Browser neu, nachdem du den Entwicklermodus aktiviert hast, um sicherzustellen, dass Tampermonkey korrekt funktioniert."
+				"text": "Starte deinen Browser nach dem Aktivieren des Entwicklermodus neu, damit Tampermonkey korrekt funktioniert."
 			},
 			"back": "Zurück",
 			"next": "Weiter"

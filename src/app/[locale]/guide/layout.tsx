@@ -25,7 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         },
         {
             href: '/guide/developer-mode',
-            label: t('devmode'),
+            label: browser === 'chrome' ? t('aus_chrome') : t('devmode'),
             skipIfFirefox: true,
         },
         { href: '/guide/sigmod', label: t('sigmod') },

@@ -59,7 +59,7 @@ export default function UserscriptManagerPage() {
                 <Button asChild>
                     <Link
                         href={
-                            browser === 'firefox'
+                            browser === 'firefox' || browser === 'safari'
                                 ? '/guide/sigmod'
                                 : '/guide/developer-mode'
                         }

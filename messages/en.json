@@ -366,6 +366,7 @@
             "overview": "Overview",
             "usm": "Userscript manager",
             "devmode": "Developer mode",
+			"aus_chrome": "Allow User Scripts",
             "sigmod": "SigMod",
             "sigfixes": "SigFixes",
             "end": "Conclusion"
@@ -391,33 +392,45 @@
             "title": "Enable Developer Mode",
             "desc": "Tampermonkey requires Developer Mode enabled to function properly and allow installation of userscripts like SigMod and SigFixes.",
             "chrome": {
-                "title": "For Chrome, Edge & Opera",
+				"pageTitle": "Allow User Scripts",
+                "title": "Instructions",
+				"desc": "To use Tampermonkey with Chrome, you need to enable 'Allow User Scripts' in the extension settings. This lets it run custom scripts like SigMod and SigFixes.",
                 "steps": [
                     "Click the puzzle icon in your browser’s toolbar.",
-                    "Select Manage extensions.",
-                    "Toggle Developer Mode on (top-right).",
-                    "Or open directly: chrome://extensions / edge://extensions / opera://extensions"
+					"Click on the 3 dots next to the Tampermonkey extension.",
+                    "Select Manage extension.",
+					"Enable 'Allow User Scripts'"
                 ]
             },
+			"opera": {
+				"title": "For Opera",
+				"steps": [
+					"Click the cube icon (Extensions) in your browser’s toolbar.",
+					"Click on 'Manage extensions'.",
+					"At the top right, toggle 'Developer Mode' to ON."
+				]
+			},
+			"edge": {
+				"title": "For Edge",
+				"steps": [
+					"Click the puzzle icon (Extensions) in your browser’s toolbar.",
+					"Click on 'Manage extensions'.",
+					"In the left sidebar, enable 'Developer Mode'."
+				]
+			},
             "firefox": {
                 "title": "For Firefox",
                 "steps": [
-                    "Open about:addons or mozilla://extensions.",
-                    "Enable Developer Mode in the settings or options menu."
+                    "Firefox does not have a developer mode option. You can skip this step."
                 ]
             },
-            "safari": {
-                "title": "For Safari",
-                "steps": [
-                    "Please refer to your browser’s documentation to enable Developer Mode for extensions."
-                ]
-            },
-            "default": {
-                "title": "Browser Instructions",
-                "steps": [
-                    "Please refer to your browser’s documentation to enable Developer Mode for extensions."
-                ]
-            },
+			"default": {
+				"title": "Browser Instructions",
+				"steps": [
+					"Check your browser’s documentation for how to enable Developer Mode.",
+					"If you're using a Chromium-based browser, follow the steps shown in the images."
+				]
+			},
             "note": {
                 "label": "Note:",
                 "text": "After enabling Developer Mode, restart your browser to ensure Tampermonkey works correctly."
@@ -428,7 +441,7 @@
 		"SigMod": {
 			"title": "Install SigMod",
 			"desc": "Now that you have installed a userscript manager, it's time to install SigMod. SigMod adds core features to your game: macros, custom themes, advanced settings and more.",
-			"popup": "Click below to install SigMod. In the popup you have to click the <i>Install</i> button.",
+			"popup": "Click below to install SigMod. In the opened window you have to click the <i>Install</i> button.",
 			"button": "Install SigMod",
 			"after": "After installing, SigMod will automatically run on Sigmally. You can customize it anytime in the in-game settings. If you want to find out more about SigMod, you can check it out <link>here</link>.",
 			"back": "Back",

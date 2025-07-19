@@ -16,13 +16,12 @@ export const discordLink = 'https://discord.gg/QyUhvUC8AD';
 
 export function detectBrowser(): keyof typeof tampermonkeyLinks {
     const ua = typeof navigator !== 'undefined' ? navigator.userAgent : '';
-    if (ua.includes('Chrome') && !ua.includes('Edg') && !ua.includes('OPR'))
-        return 'chrome';
-    if (ua.includes('Firefox')) return 'firefox';
-    if (ua.includes('Edg')) return 'edge';
-    if (ua.includes('Safari') && !ua.includes('Chrome')) return 'safari';
-    if (ua.includes('OPR') || ua.includes('Opera')) return 'opera';
-    return 'default';
+    if (/Edg\//.test(ua)) return 'edge';
+    else if (/OPR\//.test(ua)) return 'opera';
+    else if (/Chrome\//.test(ua)) return 'chrome';
+    else if (/Firefox\//.test(ua)) return 'firefox';
+    else if (/Safari\//.test(ua) && !/Chrome\//.test(ua)) return 'safari';
+    else return 'default';
 }
 
 export function getTampermonkeyLink() {
