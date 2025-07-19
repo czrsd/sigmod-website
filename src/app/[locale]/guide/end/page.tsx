@@ -3,14 +3,22 @@
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import { ZoomableImage } from '@/components/ZoomableImage';
 
 export default function EndPage() {
     const t = useTranslations('Guide.End');
 
     return (
-        <div className='max-w-3xl px-4'>
+        <div className='max-w-3xl px-4 space-y-5'>
             <h1 className='text-4xl font-extrabold mb-4'>{t('title')}</h1>
             <p className='text-md mb-4'>{t('desc')}</p>
+            <ZoomableImage
+                src='/guide/main_menu.png'
+                width={330}
+                height={300}
+                alt='Sigmally main menu'
+                className='w-max'
+            />
             <div className='flex flex-col sm:flex-row gap-2'>
                 <Button variant='outline' asChild>
                     <Link href='https://one.sigmally.com/' target='_blank'>
