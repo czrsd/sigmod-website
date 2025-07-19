@@ -372,10 +372,10 @@
         },
 		"Overview": {
 			"title": "Getting Started",
-			"desc": "Welcome to SigMod. This guide will help you install everything needed for the best Sigmally experience — fast, smooth, and fully customized.",
-			"access": "You'll get access to features like macros, themes, FPS boosts, and more. All in just a few simple steps.",
+			"desc": "Welcome to SigModz. This guide walks you through installing both SigMod and SigFixes — the two core mods that take your Sigmally experience to the next level. Expect smoother performance, full control, and powerful tools.",
+			"access": "In just a few steps, you'll unlock access to smart macros, FPS boosts, visual tweaks, advanced settings, and more — all seamlessly integrated into your game.",
 			"start": "Start Installation",
-            "quickGuide": "Quick Guide"
+			"quickGuide": "Quick Guide"
 		},
         "UserscriptManager": {
 			"title": "Install a userscript manager",
@@ -444,10 +444,10 @@
             "end": "End"
         },
 		"End": {
-			"title": "Congrats! 🎉",
-			"desc": "You now have SigMod and SigFixes installed and are ready to play Sigmally. Feel free to explore all features of each mod to get the most out of your experience.",
+			"title": "You're All Set 🎉",
+			"desc": "SigMod and SigFixes are now installed — giving you the smoothest, most customizable Sigmally experience possible. Explore all features, fine-tune your setup, and enjoy playing at your highest level.",
 			"play": "Play Sigmally",
-			"explore": "Explore features"
+			"explore": "Explore Features"
 		}
     },
     "FAQPage": {

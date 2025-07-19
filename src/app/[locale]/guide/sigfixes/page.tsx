@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 import { sigfixLink } from '@/utils/getLink';
 import { useTranslations } from 'next-intl';
+import { ZoomableImage } from '@/components/ZoomableImage';
 
 export default function SigFixesPage() {
     const t = useTranslations('Guide.SigFixes');
@@ -20,6 +21,13 @@ export default function SigFixesPage() {
                         {t('button')}
                     </Link>
                 </Button>
+                <ZoomableImage
+                    src='/guide/install_sigfixes.png'
+                    width={300}
+                    height={100}
+                    alt='Install tampermonkey'
+                    className='w-max'
+                />
                 <p>{t('features')}</p>
             </div>
             <div className='flex justify-between'>

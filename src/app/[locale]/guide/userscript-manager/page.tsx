@@ -1,11 +1,13 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 import { getTampermonkeyLink, detectBrowser } from '@/utils/getLink';
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import { ZoomableImage } from '@/components/ZoomableImage';
 
 export default function UserscriptManagerPage() {
     const t = useTranslations('Guide.UserscriptManager');
@@ -33,6 +35,13 @@ export default function UserscriptManagerPage() {
                         {t('button')}
                     </Link>
                 </Button>
+                <ZoomableImage
+                    src='/guide/tampermonkey_chrome.png'
+                    width={300}
+                    height={100}
+                    alt='Install tampermonkey'
+                    className='w-max'
+                />
                 <p>
                     {t.rich('installed', {
                         SigMod: (children) => <strong>{children}</strong>,

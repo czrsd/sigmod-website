@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 import { sigmodLink } from '@/utils/getLink';
 import { useTranslations } from 'next-intl';
+import { ZoomableImage } from '@/components/ZoomableImage';
 
 export default function SigModPage() {
     const t = useTranslations('Guide.SigMod');
@@ -33,6 +34,13 @@ export default function SigModPage() {
                         ),
                     })}
                 </p>
+                <ZoomableImage
+                    src='/guide/install_sigmod.png'
+                    width={300}
+                    height={100}
+                    alt='Install tampermonkey'
+                    className='w-max'
+                />
             </div>
             <div className='flex justify-between'>
                 <Button asChild>

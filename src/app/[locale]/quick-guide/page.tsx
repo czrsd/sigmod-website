@@ -28,6 +28,7 @@ import {
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import { useTranslations } from 'next-intl';
 import { Glow } from '@/components/Glow';
+import { ZoomableImage } from '@/components/ZoomableImage';
 
 function detectBrowser(): 'firefox' | 'other' {
     if (typeof navigator === 'undefined') return 'other';
@@ -160,37 +161,13 @@ export default function QuickGuidePage() {
                                         {step.images
                                             .slice(1)
                                             .map((img, idx) => (
-                                                <Dialog key={idx}>
-                                                    <DialogTrigger asChild>
-                                                        <Image
-                                                            src={img}
-                                                            alt={`Step ${
-                                                                i + 1
-                                                            } image ${idx + 2}`}
-                                                            width={600}
-                                                            height={300}
-                                                            className='rounded-xl border shadow cursor-zoom-in hover:scale-105 transition w-full flex-1 object-cover h-full'
-                                                        />
-                                                    </DialogTrigger>
-                                                    <DialogContent className='max-w-4xl p-0 bg-transparent border-none shadow-none'>
-                                                        <VisuallyHidden>
-                                                            <DialogTitle>
-                                                                Zoomed Image
-                                                            </DialogTitle>
-                                                        </VisuallyHidden>
-                                                        <Image
-                                                            src={img}
-                                                            alt={`Step ${
-                                                                i + 1
-                                                            } zoomed image ${
-                                                                idx + 2
-                                                            }`}
-                                                            width={1200}
-                                                            height={800}
-                                                            className='mx-auto rounded-xl'
-                                                        />
-                                                    </DialogContent>
-                                                </Dialog>
+                                                <ZoomableImage
+                                                    key={idx}
+                                                    src={img}
+                                                    alt={`Step ${i + 1}`}
+                                                    width={600}
+                                                    height={300}
+                                                />
                                             ))}
                                     </div>
                                 </div>
