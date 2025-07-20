@@ -9,10 +9,36 @@ import { routing } from '@/i18n/routing';
 import Footer from '@/components/Footer';
 import Preload from '@/components/Preload';
 
-export const metadata: Metadata = {
-    title: 'SigModz',
-    description: 'Download mods for Sigmally',
-};
+async function getMetadata(locale: string): Promise<Metadata> {
+    const messages = await getMessages({ locale });
+    const description =
+        messages?.Metadata?.desc ?? 'Download mods for Sigmally';
+    const title = 'Sigmally Modz';
+    const image = '/sigmodz.png';
+
+    return {
+        title,
+        description,
+        openGraph: {
+            title,
+            description,
+            images: [
+                {
+                    url: image,
+                    width: 512,
+                    height: 512,
+                    alt: 'Sigmally Modz',
+                },
+            ],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title,
+            description,
+            images: [image],
+        },
+    };
+}
 
 export default async function RootLayout({
     children,
@@ -25,12 +51,40 @@ export default async function RootLayout({
     if (!hasLocale(routing.locales, locale)) notFound();
 
     const messages = await getMessages({ locale });
+    const metadata = await getMetadata(locale);
 
     return (
         <html lang={locale}>
             <head>
                 <meta name='apple-mobile-web-app-title' content='SigModz' />
                 <Preload />
+                <title>
+                    {metadata.title ? String(metadata.title) : 'Sigmally Modz'}
+                </title>
+                <meta
+                    name='description'
+                    content={
+                        metadata.description
+                            ? String(metadata.description)
+                            : 'Download mods for Sigmally'
+                    }
+                />
+                <meta
+                    property='og:title'
+                    content={
+                        metadata.openGraph?.title
+                            ? String(metadata.openGraph.title)
+                            : 'Sigmally Modz'
+                    }
+                />
+                <meta
+                    property='og:description'
+                    content={
+                        metadata.openGraph?.description
+                            ? String(metadata.openGraph.description)
+                            : ''
+                    }
+                />
             </head>
             <body className='dark overflow-x-hidden'>
                 <NextIntlClientProvider locale={locale} messages={messages}>

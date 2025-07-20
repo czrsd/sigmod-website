@@ -87,44 +87,65 @@ const faqData: Record<string, FAQItem[]> = {
     })),
 };
 
+const RenderSection = ({
+    titleKey,
+    items,
+    prefix,
+    t,
+}: {
+    titleKey: string;
+    items: FAQItem[];
+    prefix: string;
+    t: ReturnType<typeof useTranslations>;
+}) => (
+    <section>
+        <h2 className='text-2xl font-semibold mb-6'>
+            {t(`${titleKey}.title`)}
+        </h2>
+        {titleKey === 'sigfixes' && (
+            <p className='text-muted-foreground mb-4'>
+                {t.rich('sigfixes.note', {
+                    strong: (c) => <strong>{c}</strong>,
+                })}
+            </p>
+        )}
+        <Accordion type='single' collapsible className='space-y-4'>
+            {items.map(({ question, answer }, i) => (
+                <AccordionItem key={i} value={`${prefix}-${i}`}>
+                    <AccordionTrigger>{t(question)}</AccordionTrigger>
+                    <AccordionContent>{answer(t)}</AccordionContent>
+                </AccordionItem>
+            ))}
+        </Accordion>
+    </section>
+);
+
 export default function FAQPage() {
     const t = useTranslations('FAQPage');
-
-    const renderSection = (
-        titleKey: string,
-        items: FAQItem[],
-        prefix: string
-    ) => (
-        <section>
-            <h2 className='text-2xl font-semibold mb-6'>
-                {t(`${titleKey}.title`)}
-            </h2>
-            {titleKey === 'sigfixes' && (
-                <p className='text-muted-foreground mb-4'>
-                    {t.rich('sigfixes.note', {
-                        strong: (c) => <strong>{c}</strong>,
-                    })}
-                </p>
-            )}
-            <Accordion type='single' collapsible className='space-y-4'>
-                {items.map(({ question, answer }, i) => (
-                    <AccordionItem key={i} value={`${prefix}-${i}`}>
-                        <AccordionTrigger>{t(question)}</AccordionTrigger>
-                        <AccordionContent>{answer(t)}</AccordionContent>
-                    </AccordionItem>
-                ))}
-            </Accordion>
-        </section>
-    );
 
     return (
         <section className='max-w-4xl mx-auto px-6 md:px-16 py-24 space-y-16'>
             <h1 className='text-4xl font-bold text-center mb-12'>
                 {t('title')}
             </h1>
-            {renderSection('general', faqData.general, 'general')}
-            {renderSection('sigmod', faqData.sigmod, 'sigmod')}
-            {renderSection('sigfixes', faqData.sigfixes, 'sigfixes')}
+            <RenderSection
+                titleKey='general'
+                items={faqData.general}
+                prefix='general'
+                t={t}
+            />
+            <RenderSection
+                titleKey='sigmod'
+                items={faqData.sigmod}
+                prefix='sigmod'
+                t={t}
+            />
+            <RenderSection
+                titleKey='sigfixes'
+                items={faqData.sigfixes}
+                prefix='sigfixes'
+                t={t}
+            />
 
             <section className='flex flex-col items-center gap-3'>
                 <p className='text-sm'>{t('needHelp')}</p>

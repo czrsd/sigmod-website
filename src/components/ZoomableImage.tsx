@@ -16,6 +16,7 @@ export function ZoomableImage({
     zoomWidth = 1200,
     zoomHeight = 800,
     className,
+    alt,
     ...props
 }: ZoomableImageProps) {
     return (
@@ -26,6 +27,7 @@ export function ZoomableImage({
                     className={`rounded-xl border shadow cursor-zoom-in hover:scale-105 transition w-full h-full object-cover ${
                         className ?? ''
                     }`}
+                    alt={alt}
                 />
             </DialogTrigger>
             <DialogContent className='max-w-4xl p-0 bg-transparent border-none shadow-none'>
@@ -34,7 +36,7 @@ export function ZoomableImage({
                 </VisuallyHidden>
                 <Image
                     src={props.src}
-                    alt={`Zoomed ${props.alt}`}
+                    alt={`Zoomed ${alt}`}
                     width={zoomWidth}
                     height={zoomHeight}
                     className='mx-auto rounded-xl'
