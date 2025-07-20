@@ -29,6 +29,7 @@ export default async function RootLayout({
     return (
         <html lang={locale}>
             <head>
+                <meta name='apple-mobile-web-app-title' content='SigModz' />
                 <Preload />
             </head>
             <body className='dark overflow-x-hidden'>

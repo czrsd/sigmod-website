@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="1000" height="1000"><g clip-path="url(#SvgjsClipPath1382)"><rect width="1000" height="1000" fill="#000000"></rect><g transform="matrix(1.953125,0,0,1.953125,0,0)"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512"><svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="512" height="512" fill="black"></rect>
+<rect x="96.1228" y="296.09" width="225.489" height="225.489" rx="6" transform="rotate(-45 96.1228 296.09)" fill="url(#paint0_linear_415_14)"></rect>
+<rect x="74" y="238.932" width="257.291" height="257.291" transform="rotate(-45 74 238.932)" fill="black"></rect>
+<g filter="url(#filter0_d_415_14)">
+<rect x="99.9524" y="239.387" width="221.229" height="221.229" rx="5" transform="rotate(-45 99.9524 239.387)" fill="url(#paint1_linear_415_14)"></rect>
+</g>
+<rect x="152.891" y="238.821" width="145.565" height="145.565" rx="6" transform="rotate(-45 152.891 238.821)" fill="url(#paint2_linear_415_14)"></rect>
+<defs>
+<filter id="filter0_d_415_14" x="18.9234" y="5.92539" width="474.923" height="474.923" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"></feColorMatrix>
+<feOffset dy="4"></feOffset>
+<feGaussianBlur stdDeviation="41.55"></feGaussianBlur>
+<feComposite in2="hardAlpha" operator="out"></feComposite>
+<feColorMatrix type="matrix" values="0 0 0 0 0.784314 0 0 0 0 0.627451 0 0 0 0 0.219608 0 0 0 1 0"></feColorMatrix>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_415_14"></feBlend>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_415_14" result="shape"></feBlend>
+</filter>
+<linearGradient id="paint0_linear_415_14" x1="320.567" y1="295.215" x2="98.0624" y2="523.552" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFD772"></stop>
+<stop offset="1" stop-color="#806112"></stop>
+</linearGradient>
+<linearGradient id="paint1_linear_415_14" x1="320.157" y1="238.528" x2="101.855" y2="462.551" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FFD874"></stop>
+<stop offset="1" stop-color="#C8A038"></stop>
+</linearGradient>
+<linearGradient id="paint2_linear_415_14" x1="225.673" y1="238.821" x2="225.673" y2="384.386" gradientUnits="userSpaceOnUse">
+<stop></stop>
+<stop offset="1" stop-color="#181818"></stop>
+</linearGradient>
+<clipPath id="SvgjsClipPath1382"><rect width="1000" height="1000" x="0" y="0" rx="300" ry="300"></rect></clipPath></defs>
+</svg></svg></g></g></svg>
