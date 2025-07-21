@@ -1,7 +1,6 @@
 import '../globals.css';
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
-import { PageWrapper } from '@/components/PageWrapper';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
@@ -89,7 +88,7 @@ export default async function RootLayout({
             <body className='dark overflow-x-hidden'>
                 <NextIntlClientProvider locale={locale} messages={messages}>
                     <Header />
-                    <PageWrapper>{children}</PageWrapper>
+                    {children}
                     <Footer />
                 </NextIntlClientProvider>
             </body>
