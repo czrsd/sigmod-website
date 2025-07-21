@@ -25,6 +25,13 @@ export default function SigModPage() {
                         {t('button')}
                     </Link>
                 </Button>
+                <ZoomableImage
+                    src='/guide/install_sigmod.png'
+                    width={300}
+                    height={100}
+                    alt='Install tampermonkey'
+                    className='w-max'
+                />
                 <p>
                     {t.rich('after', {
                         link: (chunk) => (
@@ -34,13 +41,6 @@ export default function SigModPage() {
                         ),
                     })}
                 </p>
-                <ZoomableImage
-                    src='/guide/install_sigmod.png'
-                    width={300}
-                    height={100}
-                    alt='Install tampermonkey'
-                    className='w-max'
-                />
             </div>
             <div className='flex justify-between'>
                 <Button asChild>

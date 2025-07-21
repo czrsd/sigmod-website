@@ -20,13 +20,16 @@ export default function EndPage() {
                 className='w-max'
             />
             <div className='flex flex-col sm:flex-row gap-2'>
-                <Button variant='outline' asChild>
+                <Button asChild>
                     <Link href='https://one.sigmally.com/' target='_blank'>
                         {t('play')}
                     </Link>
                 </Button>
                 <Button variant='outline' asChild>
-                    <Link href='/sigmod'>{t('explore')}</Link>
+                    <Link href='/sigmod'>{t('explore')} SigMod</Link>
+                </Button>
+                <Button variant='outline' asChild>
+                    <Link href='/sigfixes'>{t('explore')} SigFixes</Link>
                 </Button>
             </div>
         </div>
