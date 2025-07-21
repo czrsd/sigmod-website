@@ -29,14 +29,10 @@ import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import { useTranslations } from 'next-intl';
 import { Glow } from '@/components/Glow';
 import { ZoomableImage } from '@/components/ZoomableImage';
-
-function detectBrowser(): 'firefox' | 'other' {
-    if (typeof navigator === 'undefined') return 'other';
-    return navigator.userAgent.includes('Firefox') ? 'firefox' : 'other';
-}
+import { detectBrowser } from '@/utils/getLink';
 
 export default function QuickGuidePage() {
-    const [browser, setBrowser] = useState<'firefox' | 'other' | null>(null);
+    const [browser, setBrowser] = useState<string | null>(null);
     const t = useTranslations('QuickGuide');
 
     useEffect(() => {
@@ -44,6 +40,48 @@ export default function QuickGuidePage() {
     }, []);
 
     if (!browser) return null;
+
+    let devModeStep = null;
+
+    if (browser === 'chrome') {
+        devModeStep = {
+            title: t('allow_userscripts.title'),
+            description: t('allow_userscripts.desc'),
+            images: [
+                '/guide/chrome/manage_extension.png',
+                '/guide/chrome/allow_userscripts.png',
+            ],
+        };
+    } else if (browser === 'firefox' || browser === 'safari') {
+        devModeStep = {
+            title: t('developermode.title'),
+            description: t('developermode.desc'),
+            images: [],
+            skip: true,
+        };
+    } else {
+        const imagesMap: Record<string, string[]> = {
+            edge: [
+                '/guide/edge/developermode.png',
+                '/guide/edge/developermode.png',
+            ],
+            opera: [
+                '/guide/opera/developermode.png',
+                '/guide/opera/developermode.png',
+            ],
+            other: [
+                '/screenshots/guide/manage_extensions.png',
+                '/screenshots/guide/devmode_1.png',
+                '/screenshots/guide/devmode_2.png',
+            ],
+        };
+        devModeStep = {
+            title: t('developermode.title'),
+            description: t('developermode.desc'),
+            images: imagesMap[browser] || imagesMap['other'],
+            skip: false,
+        };
+    }
 
     const baseSteps = [
         {
@@ -56,19 +94,7 @@ export default function QuickGuidePage() {
                 external: true,
             },
         },
-        ...(browser === 'firefox'
-            ? []
-            : [
-                  {
-                      title: t('developermode.title'),
-                      description: t('developermode.desc'),
-                      images: [
-                          '/screenshots/guide/manage_extensions.png',
-                          '/screenshots/guide/devmode_1.png',
-                          '/screenshots/guide/devmode_2.png',
-                      ],
-                  },
-              ]),
+        ...(devModeStep.skip ? [] : [devModeStep]),
         {
             title: t('sigmod.title'),
             description: t('sigmod.desc'),
@@ -116,7 +142,7 @@ export default function QuickGuidePage() {
                             <CardTitle className='flex items-center gap-2'>
                                 <span className='text-xl text-muted-foreground'>
                                     {i + 1}.
-                                </span>
+                                </span>{' '}
                                 {step.title}
                             </CardTitle>
                             <CardDescription>
@@ -124,7 +150,7 @@ export default function QuickGuidePage() {
                             </CardDescription>
                         </CardHeader>
                         <CardContent>
-                            {step.images && (
+                            {step.images && step.images.length > 0 && (
                                 <div className='flex flex-col sm:flex-row gap-4 mt-4'>
                                     <div className='sm:w-1/2'>
                                         <Dialog>
