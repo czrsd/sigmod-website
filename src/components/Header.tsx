@@ -26,6 +26,8 @@ import {
 const languageMap: Record<string, string> = {
     en: 'English',
     de: 'Deutsch',
+    tr: 'Türkçe',
+    es: 'Español',
 };
 
 const mods = [

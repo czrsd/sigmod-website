@@ -1,573 +1,577 @@
 {
-	"Metadata": {
-		"desc": "Lade und passe Sigmally-Mods bei SigModz an. Erhalte die neuesten SigMod- und SigFixes-Erweiterungen für verbessertes Gameplay, Performance-Optimierungen, Makros, Themes und mehr. Einfache Installation und regelmäßige Updates."
-	},
-	"NotFound": {
-		"title": "404 – Seite nicht gefunden",
-		"message": "Diese Seite existiert nicht oder wurde verschoben."
-	},
-	"Header": {
-		"home": "Startseite",
-		"mods": {
-			"title": "Mods",
-			"sigmod": {
-				"title": "SigMod Client",
-				"desc": "Benutzerdefiniertes Mod-Menü, Automatisierung, UI-Anpassungen"
-			},
-			"sigfixes": {
-				"title": "SigFixes",
-				"desc": "Multiboxing aktivieren, FPS verbessern"
-			}
-		},
-		"guide": "Anleitung",
-		"faq": "FAQ",
-		"about": "Über"
-	},
-	"Footer": {
-		"text": "© 2025 Sigmally Modz. Nicht mit Sigmally verbunden."
-	},
-	"HomePage": {
-		"hero": {
-			"title": "Sigmally Modz",
-			"sub": "Bring Sigmally auf das nächste Level – schnelleres Gameplay, intelligentere Tools und volle Kontrolle direkt zur Hand.",
-			"start": "Loslegen"
-		},
-		"introduction": {
-			"what": {
-				"title": "Was ist Sigmally?",
-				"desc": "Sigmally ist ein Agar.io-ähnliches Spiel auf privaten Servern. Schnell, kompetitiv und direkt im Browser spielbar – ideal für Spieler, die einfache Regeln und unterhaltsame Physik suchen. Sammle Pellets, wachse durch das Fressen anderer Spieler und dominiere die Rangliste."
-			},
-			"why": {
-				"title": "Warum",
-				"desc": "Sigmally Modz gibt dir mehr Kontrolle über das Spiel. Egal ob Gelegenheitsspieler oder Wettkampfspieler – die Mods bieten Makros, Multiboxing-Tools, flüssigere Grafik und viele Anpassungsmöglichkeiten. Alles ist auf Leistung und Spielkomfort ausgelegt."
-			}
-		},
-		"mods": {
-			"sigmod": {
-				"title": "SigMod",
-				"desc": "SigMod verbessert dein gesamtes Sigmally-Erlebnis mit Funktionen wie Makros, benutzerdefinierten Themes, erweiterten Einstellungen und mehr. Für flüssigeres Gameplay und smartere Steuerung – spiele auf deinem besten Niveau."
-			},
-			"sigfixes": {
-				"title": "SigFixes",
-				"desc": "SigFixes überarbeitet zentrale Teile des Sigmally-Clients, verbessert Leistung, Stabilität und Präzision. Es entfernt Lags, ermöglicht Multiboxing und bringt Features wie Zeichnungsverzögerung, transparente Namen, Skalierung und mehr."
-			},
-			"learnMore": "Mehr erfahren & installieren"
-		},
-		"faq": {
-			"questions": [
-				{
-					"question": "Sind Tampermonkey und die Userscripts sicher?",
-					"answer": "Auf jeden Fall – denn wer würde schon nicht vertrauensvoll zufällige Scripts aus dem Internet installieren, oder? Im Ernst: Tampermonkey ist ein bewährtes Tool mit Millionen Nutzern, und unsere Scripts verändern nur dein Spielerlebnis – ohne komische Nebenwirkungen. Es gibt auch Bewertungen auf den Script-Seiten. Also ja: sicher. Nutze es mit Vertrauen."
-				},
-				{
-					"question": "Brauche ich sowohl SigMod als auch SigFixes?",
-					"answer": "Nein, aber beides zusammen bietet die beste Leistung und Anpassbarkeit. Sie sind darauf ausgelegt, zusammen zu funktionieren."
-				},
-				{
-					"question": "Sind SigMod und SigFixes in Sigmally erlaubt?",
-					"answer": "Ja. SigMod ist vom Sigmally-Betreiber genehmigt und wird von der Community akzeptiert. Beide Mods sind vollständig erlaubt."
-				},
-				{
-					"question": "Kann ich die Mods jederzeit entfernen?",
-					"answer": "Ja. Du kannst sie jederzeit in deinem Userscript-Manager deaktivieren oder löschen."
-				},
-				{
-					"question": "Macht mich SigMod über Nacht zum Pro-Gamer?",
-					"answer": "Schön wär’s! SigMod macht das Gameplay angenehmer und flüssiger, aber deine Skills musst du trotzdem selbst mitbringen. Übung bleibt wichtig."
-				}
-			]
-		},
-		"community": {
-			"title": "Community",
-			"desc": "Sigmally Modz hat einen Discord-Server – nicht der lebendigste Ort, aber perfekt, wenn du einen Bug gefunden hast, Hilfe brauchst oder um 3 Uhr nachts fragen willst: „Warum ist das kaputt?“ Der Support ist dort (manchmal).",
-			"join": "Discord beitreten"
-		}
-	},
-	"SigModPage": {
-		"Hero": {
-			"title": "SigMod Client",
-			"sub": "Verbessere dein Sigmally-Erlebnis mit fortschrittlichen Makros, Tag-basierten Teams, UI-Steuerung und vollständiger Ingame-Anpassung.",
-			"install": "SigMod installieren",
-			"explore": "Funktionen entdecken",
-			"require": "Erfordert",
-			"or": "oder"
-		},
-		"CoreFeatures": {
-			"macros": {
-				"title": "Makros & Automatisierung",
-				"desc": "Spiele effizienter mit programmierbaren Hotkeys, anpassbaren Mausklick-Makros, Auto-Respawn und täglichem Münzsammeln."
-			},
-			"party": {
-				"title": "Party- & Tag-System",
-				"desc": "Weise 3‑Buchstaben-Tags zu für Echtzeit-Minimap-Tracking, privaten Chat und präzise Pings."
-			},
-			"customization": {
-				"title": "Volle Anpassung",
-				"desc": "Passe alles an — UI-Themes, Schriftarten, Layouts und Tastenkürzel im übersichtlichen Mod-Menü."
-			}
-		},
-		"WhySigMod": {
-			"title": "Warum SigMod?",
-			"desc1": "SigMod erweitert den Sigmally-Client um clevere Automatisierung, visuelle Anpassung und volle UI-Steuerung. Lege Makros fest, ändere Layouts, verwalte Hotkeys und optimiere die Darstellung – alles im übersichtlichen Mod-Menü. Wechsel Themes, speichere Namen und mache Screenshots mit nur einem Klick.",
-			"desc2": "Bleib mit deinem Team synchron über ein Live-Tag-System: Privat chatten, Pings senden und Freunde auf der Minimap verfolgen. Sieh Statistiken in Echtzeit, verwalte deine Freundesliste und passe Chat, Farben und Shortcuts genau an.",
-			"performance": "Noch mehr Leistung? Kombiniere SigMod mit",
-			"smooth": "für ein flüssigeres, lagfreies Erlebnis.",
-			"getStarted": "Starte mit SigMod"
-		},
-		"Features": {
-			"title": "SigMod Funktionen",
-			"viewMore": "Mehr anzeigen",
-			"list": [
-				{
-					"title": "Makros & Automatisierung",
-					"summary": "Automatisiere jede Aktion — Tastenkürzel, Mausmakros & mehr",
-					"details": "Belege Tasten für Aktionen wie Schnellfüttern, Doppel-/Dreifach-/Viersplits und Tricksplits. Erstelle Mausmakros für Links-/Rechtsklicks. Konfiguriere Splits mit präziser Verzögerung und Füttergeschwindigkeit. Schalte Skins, Namen oder Respawn mit einem Hotkey aus und an — alles anpassbar."
-				},
-				{
-					"title": "Party- & Tag-System",
-					"summary": "3‑Buchstaben-Tags, Minimap-Tracking, Pings & privater Chat",
-					"details": "Erstelle ein Team mit einem Tag (bis 3 Zeichen). Mitglieder erscheinen auf der Minimap, im Partypanel mit Name & Score, und können präzise Pings senden. Der Partychat ist privat & sicher. Du siehst auch, wer welchen Ping geschickt hat."
-				},
-				{
-					"title": "Menüanpassung",
-					"summary": "Themes, Schriftarten, Layout, Tabs, Rahmen & Inputs",
-					"details": "Gestalte deine UI mit Themes, abgerundeten Ecken, Hintergrundbildern und Eingabefeldern. Verstecke unnötige Elemente wie Discord-Buttons. Ändere Tabreihenfolge, Abstände, Schatten und Layouts — ganz nach deinem Stil."
-				},
-				{
-					"title": "Visuelle Spieleinstellungen",
-					"summary": "Farben, Transparenz, Zell-Stil & Schriftarten anpassen",
-					"details": "Ändere Farben und Transparenz von Karte, Rand, Nahrung und Zellen. Ersetze Spielbilder wie Viren oder Hintergründe. Wähle Schriftarten, zeige/verstecke Namen oder Skins, und nutze Overlays wie Gitter und Grenzen."
-				},
-				{
-					"title": "Galerie & Screenshots",
-					"summary": "Momente festhalten & Bilder verwalten",
-					"details": "Belege eine Taste für Screenshots im Spiel. Durchsuche deine Galerie im gleichnamigen Tab. Bilder haben Zeitstempel, Download- & Löschoptionen. Verwalte deine Sammlung bequem."
-				},
-				{
-					"title": "Name & Farbeffekte",
-					"summary": "Namen speichern, Generatoren nutzen, Farbverläufe & Symbole",
-					"details": "Verwende Generatoren (z. B. NickFinder, Tell.wtf), speichere Favoriten und gestalte Namen mit Zeichen, Verläufen und Effekten. Schnelllöschen und Wiederverwenden inklusive."
-				},
-				{
-					"title": "Freunde & Mod-Profil",
-					"summary": "Freunde hinzufügen, privat chatten & Profil anpassen",
-					"details": "Füge Nutzer über Name oder Discord hinzu, chatte, sieh Status, Server und mehr. Durchsuche Kontakte mit Filtern. Passe dein Profil an mit Avatar, Bio, Status & Farbeffekten. Akzeptiere Anfragen oder schalte Sichtbarkeit um."
-				},
-				{
-					"title": "Statistiken & Schnellzugriff",
-					"summary": "Gameplay verfolgen & wichtige Einstellungen schnell togglen",
-					"details": "Im Home-Tab siehst du Zeit, Top-Masse & Tode. Der Schnellzugriff erlaubt dir z. B. Masse, Gitter, Rand, Jelly-Physik, Auto-Respawn oder Münzsammeln sofort umzuschalten."
-				},
-				{
-					"title": "Chat-System neu gedacht",
-					"summary": "Neues Chatmenü mit Tabs, Hotkeys & voller Kontrolle",
-					"details": "Wechsle zwischen Party & Mainchat per Tab. Nachrichten aktualisieren live via Websocket. Hotkeys für Standort, Unschärfe, Zeitstempel & Kompaktmodus. Passe Farben, Transparenz & Layout im Chat komplett an."
-				}
-			]
-		},
-		"FAQ": {
-			"title": "FAQ",
-			"list": [
-				{
-					"question": "Was sind die Hauptfunktionen von SigMod?",
-					"answer": "SigMod bietet ein voll anpassbares Mod-Menü, Makros & Automatisierung, Party- & Tag-System, Live-Statistiken sowie moderne Chat-, Namens- & Freundesfunktionen — alles direkt im Sigmally-Client."
-				},
-				{
-					"question": "Welche Anpassungen sind möglich?",
-					"answer": "Ändere Themes, Schriftarten, Layout-Abstände, Rundungen, Namen (auch Farbverläufe), UI-Transparenz, Menüdesign, Spielfarben und viele weitere visuelle Optionen. Deathscreen- und Skin-Overrides sind ebenfalls enthalten."
-				},
-				{
-					"question": "Was ist das Tag-System?",
-					"answer": "Mit Tags (3‑Buchstaben) erstellst du ein Team. Siehst deine Freunde auf der Minimap, kannst privat chatten, pingen und alle Partymitglieder mit Score & Index im Panel sehen."
-				},
-				{
-					"question": "Wie funktioniert das Freundesystem?",
-					"answer": "Logge dich ein, erstelle ein Mod-Profil, füge andere hinzu. Sieh deren Status, Server, Rolle etc. und chatte direkt. Freundesanfragen, Suche, Filter und Anpassungen sind dabei."
-				},
-				{
-					"question": "Wie öffne ich das SigMod-Menü?",
-					"answer": "Drücke die V-Taste oder klicke auf das Zahnrad oben rechts im Spiel. Das Menü enthält Tabs wie Makros, Themes, Galerie, Freunde u. v. m."
-				},
-				{
-					"question": "Kann ich Hotkeys & Makros anpassen?",
-					"answer": "Ja. SigMod bietet Tools für Feed, Splits, Tricksplits, Mausmakros, Linesplit-Verhalten, Feed-Speed & UI-Toggles (z. B. Namen, Respawn)."
-				},
-				{
-					"question": "Beeinträchtigt SigMod die Leistung?",
-					"answer": "SigMod bringt viele Features, bleibt aber leichtgewichtig. Für noch bessere FPS nutze SigFixes – es verbessert die Performance im Basisspiel."
-				},
-				{
-					"question": "Kann ich Screenshots machen & verwalten?",
-					"answer": "Ja. Belege eine Taste für Screenshots im Spiel. Zeige sie nach Datum sortiert in der Galerie an, lösche oder lade sie direkt herunter."
-				}
-			]
-		},
-		"Community": {
-			"title": "Community beitreten",
-			"text": "Brauchst du Hilfe, hast du einen Bug gefunden oder willst du Makros teilen? Komm auf den Discord und vernetze dich mit anderen SigMod‑Nutzern.",
-			"discord": "Discord beitreten",
-			"explore": "Oder sieh dir den Code an auf"
-		}
-	},
-	"SigFixesPage": {
-		"Hero": {
-			"title": "SigFixes",
-			"sub": "Verbessere Sigmallys Kern mit ultra-flüssiger Performance, präziser Eingabe und fortschrittlicher Multibox-Steuerung.",
-			"install": "SigFixes installieren",
-			"explore": "Funktionen entdecken",
-			"require": "Benötigt",
-			"or": "oder"
-		},
-		"CoreFeatures": {
-			"performance": {
-				"title": "Bessere Performance",
-				"desc": "Ersetzt die Rendering-Engine durch WebGL, beseitigt Lag-Spikes und verbessert die FPS für ultra-flüssiges Gameplay."
-			},
-			"multiboxing": {
-				"title": "Perfektes Multiboxing",
-				"desc": "Fortgeschrittene Multibox-Tools mit One-Tab-Modus, Respawn-Blockierung, Vision-Merging und anpassbaren Umrissen."
-			},
-			"input": {
-				"title": "Präzise Eingabe",
-				"desc": "Reduziert Eingabelatenz und verbessert die Steuerungsgenauigkeit – besonders stark bei Makros oder Split-Strategien."
-			}
-		},
-		"WhySigFixes": {
-			"title": "Warum SigFixes?",
-			"desc1": "SigFixes ersetzt die Standard-Rendering-Engine durch eine benutzerdefinierte WebGL-Canvas für butterweiche Grafik und minimale Eingabelatenz. Lag-Spikes? Verschwunden. Performance-Probleme? Gelöst.",
-			"desc2": "Perfekt für kompetitives Spielen, besonders beim Multiboxing. Genieße reaktionsschnelle Steuerung, optimiertes Merging und eine smarte Kamera für den Vorteil im Spiel.",
-			"worksWith": "Du nutzt bereits",
-			"combo": "? Kombiniere beides für das beste Erlebnis.",
-			"getStarted": "Starte mit SigFixes"
-		},
-		"Features": {
-			"title": "SigFixes-Funktionen",
-			"viewMore": "Mehr anzeigen",
-			"list": [
-				{
-					"title": "WebGL-Performance",
-					"summary": "Ersetzt das Canvas durch schnelles WebGL-Rendering",
-					"details": "SigFixes beseitigt Lag-Spikes durch eine voll optimierte WebGL-Renderer. Flüssigeres Gameplay, bessere Framerates und konstante Leistung – auch bei Multiboxing oder Aufnahmen."
-				},
-				{
-					"title": "Genaue Eingabe",
-					"summary": "Weniger Verzögerung zwischen Eingabe und Bewegung",
-					"details": "Echtzeit-Reaktion beim Bewegen, Füttern oder Splitten. Reduzierte Latenz und mehr Präzision bei Maus und Tastatur – besonders hilfreich in schnellen Kämpfen."
-				},
-				{
-					"title": "Fortgeschrittenes Multiboxing",
-					"summary": "One-Tab-Steuerung, Vision-Merge, Respawn-Kontrolle",
-					"details": "Steuere mehrere Instanzen von einem Tab aus. Wähle Merge-Methoden, passe Umrisse, Farben und Respawn-Logik an. Perfektes Merging, blockierte Cluster-Spawns und optimierte Setups ab 2 Tabs."
-				},
-				{
-					"title": "Zeichen-Einstellungen",
-					"summary": "Anpassung von Delay, Umrissen, Kamera & Zoom",
-					"details": "Lege den Zeichen-Delay fest für bessere Balance. Schalte Umrisse an/aus, setze Skin-URLs, wähle Kamera-Verhalten (Natürlich, Sofort) und passe Zoom-Geschwindigkeit und Auto-Zoom an."
-				},
-				{
-					"title": "Visuelle Werkzeuge",
-					"summary": "Deckkraft, Glow, Skins, Jelly-Physik, Gitternetz",
-					"details": "Stelle Sichtbarkeit und Verhalten deiner Zellen, Skins, Pellets oder Glow ein. Aktiviere/deaktiviere Jelly-Physik und Overlays wie Zelllinien oder Cursor-Linien. Hebe unsplittbare Zellen farblich hervor."
-				},
-				{
-					"title": "Theme-Anpassung",
-					"summary": "Wähle Farben & kontrolliere UI-Design",
-					"details": "Wähle deine eigene Theme-Farbe und wende sie überall an. Passe die UI deinem Stil an – inklusive Farbeffekten, Regenbogen-Umrandungen oder Kartenhintergründen."
-				},
-				{
-					"title": "Gameplay-Verhalten",
-					"summary": "Pushsplit-Delay, XP-Anzeige, Aftersplit-Verhalten",
-					"details": "Stelle ein, wie sich das Spiel nach Splits verhält – wann Bewegung beginnt, wie Pushsplits reagieren und wie XP/Punkte angezeigt werden. Perfekt für präzise Kontrolle im Wettkampf."
-				},
-				{
-					"title": "Kamerasteuerung",
-					"summary": "Weichheit, Geschwindigkeit, Spawn-Kamera-Logik",
-					"details": "Steuere die Kamerabewegung: Sofort, natürlich oder sanft. Passe Verhalten der Spawn-Kamera, Zoom-Interpolation und -Geschwindigkeit an deinen Stil an."
-				},
-				{
-					"title": "Textdarstellung",
-					"summary": "Schriftgröße, Dicke, Umriss, Clan-Anzeige",
-					"details": "Skaliere Name/Masse, aktiviere Fettdruck, füge Umrisse hinzu und blende Clans ein/aus. Ideal für minimalistische oder übersichtliche Setups."
-				}
-			]
-		},
-		"FAQ": {
-			"title": "FAQ",
-			"list": [
-				{
-					"question": "Was ist SigFixes?",
-					"answer": "SigFixes ist ein Performance-Patch für den Sigmally-Client. Er ersetzt das Rendering durch eine WebGL-Canvas, wodurch das Spiel schneller, flüssiger und reaktiver wird – ideal beim Multiboxing oder für kompetitives Spielen."
-				},
-				{
-					"question": "Beeinflusst SigFixes die Grafik?",
-					"answer": "Standardmäßig sieht SigFixes genauso aus wie der Basis-Client. Für fortgeschrittene Nutzer gibt es jedoch viele neue Einstellungen – z. B. Skin-Overrides, Zellendeckkraft, Textskalierung, Glow-Schalter und Umrisse für unsplittbare Zellen."
-				},
-				{
-					"question": "Ist SigFixes mit SigMod kompatibel?",
-					"answer": "Ja. SigFixes ist vollständig mit SigMod kompatibel. Du kannst beides gemeinsam nutzen und bekommst alle Funktionen von SigMod mit der verbesserten Performance von SigFixes."
-				},
-				{
-					"question": "Kann ich besser Multiboxen mit SigFixes?",
-					"answer": "Ja. SigFixes ist für Multiboxing gebaut. One-Tab-Steuerung, Vision-Merging (Perfekt, Neueste, Aus), Spawn-Blockierung, Tab-Umrandung und mehr – alles mit geringerer Latenz und besserer Synchronisation."
-				},
-				{
-					"question": "Wie installiere ich SigFixes?",
-					"answer": "Installiere die Tampermonkey- oder Violentmonkey-Erweiterung (nur eine). Gehe zu chrome://extensions oder edge://extensions und aktiviere den Entwicklermodus. Starte den Browser neu und installiere das SigFixes-Userscript von der offiziellen Quelle."
-				},
-				{
-					"question": "Welche Kameraeinstellungen kann ich ändern?",
-					"answer": "Du kannst zwischen Standard- und natürlichem Kamerastil wechseln, Bewegung auf Sofort oder Weich stellen, Zoom-Geschwindigkeit anpassen sowie Auto-Zoom und Spawn-Tracking aktivieren."
-				},
-				{
-					"question": "Was macht die Einstellung 'Draw Delay'?",
-					"answer": "'Draw Delay' steuert, wie oft das Canvas aktualisiert wird. Höhere Werte sehen flüssiger aus, kosten aber Performance. Niedrigere Werte verbessern die Performance, aber wirken ruckeliger. Komplett anpassbar."
-				},
-				{
-					"question": "Kann ich Text und Namen anpassen?",
-					"answer": "Ja. Du kannst Name- und Massen-Skalierung ändern, fette Schrift aktivieren, Deckkraft kontrollieren, Clans anzeigen/verstecken und Umrissstärke anpassen – ideal für bessere Lesbarkeit oder minimalistisches UI."
-				}
-			]
-		},
-		"Community": {
-			"title": "Werde Teil der Community",
-			"text": "Brauchst du Hilfe, hast einen Bug gefunden oder willst eigene Makros teilen? Tritt dem Discord bei und tausche dich mit anderen SigFix-Nutzern aus.",
-			"discord": "Discord beitreten",
-			"explore": "Oder sieh dir den Code an auf"
-		}
-	},
-	"QuickGuide": {
-		"title": "Schnellstart",
-		"note": "Beachte, dass diese Seite nicht so ausführlich ist wie der vollständige Guide.",
-		"tampermonkey": {
-			"title": "Tampermonkey installieren",
-			"desc": "Installiere den Userscript-Manager, der benötigt wird, um SigMod und SigFixes auszuführen.",
-			"button": "Tampermonkey holen"
-		},
-		"developermode": {
-			"title": "Entwicklermodus aktivieren",
-			"desc": "Folge den Schritten auf den Bildern unten. Starte deinen Browser neu und aktiviere den Entwicklermodus."
-		},
-		"sigmod": {
-			"title": "SigMod installieren",
-			"desc": "Fügt Makros, Anpassungen, Party-Tags und mehr hinzu."
-		},
-		"sigfixes": {
-			"title": "SigFixes installieren",
-			"desc": "Verbessert FPS, reduziert Lag, ermöglicht Multiboxing."
-		},
-		"play": {
-			"title": "Sigmally spielen",
-			"desc": "Alles ist jetzt bereit. Zeit zu spielen.",
-			"button": "Jetzt spielen"
-		},
-		"discord": "Dem Discord beitreten",
-		"fullGuide": "Vollständigen Guide ansehen"
-	},
-	"Guide": {
-    	"Sidebar": {
-			"title": "Anleitung",
-			"overview": "Übersicht",
-			"usm": "Userscript-Manager",
-			"devmode": "Entwicklermodus",
-			"aus_chrome": "Benutzerskripte erlauben",
-			"sigmod": "SigMod",
-			"sigfixes": "SigFixes",
-			"end": "Fazit"
-    	},
-		"Overview": {
-			"title": "Los geht’s",
-			"desc": "Willkommen bei SigModz. Diese Anleitung zeigt dir Schritt für Schritt, wie du SigMod und SigFixes installierst – die zwei wichtigsten Mods für Sigmally. Hol dir maximale Performance, volle Kontrolle und ein einzigartiges Spielerlebnis.",
-			"access": "Nach wenigen Schritten hast du Zugriff auf leistungsstarke Makros, FPS-Boosts, Themes, visuelle Anpassungen und viele weitere Tools. Alles direkt im Spiel, ohne komplizierte Einrichtung.",
-			"start": "Installation starten",
-			"quickGuide": "Schnellübersicht"
-		},
-		"UserscriptManager": {
-			"title": "Einen Userscript-Manager installieren",
-			"desc": "Um Skripte auf Webseiten zu installieren und zu verwenden, benötigst du einen Userscript-Manager.",
-			"recommend": "Wir empfehlen:",
-			"instruction": "In dieser Anleitung verwenden wir Tampermonkey. Klicke unten, um zur Download-Seite für deinen Browser zu gelangen.",
-			"button": "Tampermonkey installieren",
-			"installed": "Nach der Installation kannst du im nächsten Schritt Userscripts wie <SigMod>SigMod</SigMod> und <SigFixes>SigFixes</SigFixes> hinzufügen.",
-			"back": "Zurück",
-			"next": "Weiter"
-		},
-		"DevMode": {
-			"title": "Entwicklermodus aktivieren",
-			"desc": "Tampermonkey benötigt den aktivierten Entwicklermodus, um korrekt zu funktionieren und Userscripts wie SigMod und SigFixes zu installieren.",
-			"chrome": {
-				"pageTitle": "Userscripts erlauben",
-				"title": "Anleitung",
-				"desc": "Um Tampermonkey mit Chrome zu verwenden, musst du in den Erweiterungseinstellungen 'Userscripts erlauben' aktivieren. Damit können benutzerdefinierte Skripte wie SigMod und SigFixes ausgeführt werden.",
-				"steps": [
-					"Klicke auf das Puzzle-Symbol in der Symbolleiste deines Browsers.",
-					"Klicke auf die drei Punkte neben der Tampermonkey-Erweiterung.",
-					"Wähle Erweiterung verwalten.",
-					"Aktiviere 'Userscripts erlauben'."
-				]
-			},
-			"opera": {
-				"title": "Für Opera",
-				"steps": [
-					"Klicke auf das Würfel-Symbol (Erweiterungen) in der Symbolleiste deines Browsers.",
-					"Klicke auf 'Erweiterungen verwalten'.",
-					"Aktiviere oben rechts den Entwicklermodus."
-				]
-			},
-			"edge": {
-				"title": "Für Edge",
-				"steps": [
-					"Klicke auf das Puzzle-Symbol (Erweiterungen) in der Symbolleiste deines Browsers.",
-					"Klicke auf 'Erweiterungen verwalten'.",
-					"Aktiviere im linken Seitenmenü den Entwicklermodus."
-				]
-			},
-			"firefox": {
-				"title": "Für Firefox",
-				"steps": [
-					"Firefox benötigt keinen Entwicklermodus. Du kannst diesen Schritt überspringen."
-				]
-			},
-			"default": {
-				"title": "Browser-Anleitung",
-				"steps": [
-					"Sieh in der Dokumentation deines Browsers nach, wie du den Entwicklermodus aktivierst.",
-					"Wenn du einen Chromium-basierten Browser verwendest, folge den Anweisungen auf den Bildern."
-				]
-			},
-			"note": {
-				"label": "Hinweis:",
-				"text": "Starte deinen Browser nach dem Aktivieren des Entwicklermodus neu, damit Tampermonkey korrekt funktioniert."
-			},
-			"back": "Zurück",
-			"next": "Weiter"
-		},
-		"SigMod": {
-			"title": "SigMod installieren",
-			"desc": "Nachdem du einen Userscript-Manager installiert hast, ist es Zeit, SigMod zu installieren. SigMod bringt wichtige Funktionen ins Spiel: Makros, eigene Themes, erweiterte Einstellungen und mehr.",
-			"popup": "Klicke unten, um SigMod zu installieren. Im Popup musst du auf den <i>Installieren</i>-Button klicken.",
-			"button": "SigMod installieren",
-			"after": "Nach der Installation läuft SigMod automatisch auf Sigmally. Du kannst es jederzeit in den In-Game-Einstellungen anpassen. Wenn du mehr über SigMod erfahren möchtest, kannst du es <link>hier</link> ansehen.",
-			"back": "Zurück",
-			"next": "Weiter"
-		},
-		"SigFixes": {
-			"title": "SigFixes installieren",
-			"desc": "Sigmally Fixes schreibt große Teile des Clients um und macht ihn deutlich schneller und flüssiger. Erstellt von yx.",
-			"prompt": "Klicke unten, um SigFixes zu installieren",
-			"button": "SigFixes installieren",
-			"features": "SigFixes bietet viele Einstellungen für fortgeschrittene Spieler wie One-Tab-Multiboxing, Umrandung unsplittbarer Zellen, benutzerdefinierte Zeichnungsverzögerung, Textgröße, Skins und Transparenz.",
-			"back": "Zurück",
-			"end": "Fertig"
-		},
-		"End": {
-			"title": "Installation abgeschlossen 🎉",
-			"desc": "Du hast jetzt SigMod und SigFixes installiert – das Beste, was Sigmally zu bieten hat. Genieße höhere FPS, neue Features, volle UI-Kontrolle und flüssiges Gameplay. Entdecke die Einstellungen und passe dein Setup perfekt an.",
-			"play": "Sigmally starten",
-			"explore": "Alle Features entdecken"
-		}
-	},
-	"FAQPage": {
-		"title": "Häufig gestellte Fragen",
-		"general": {
-			"title": "Allgemein",
-			"installMods": {
-				"question": "Wie installiere ich die Mods?",
-				"answer": "Der Einstieg ist einfach! Folge unserer ausführlichen oder schnellen <link>Installationsanleitung</link>, und du bist in kürzester Zeit startklar."
-			},
-			"modsNotWorking": {
-				"question": "Ich habe die Mods installiert, aber sie funktionieren nicht. Was soll ich tun?",
-				"answer": "Wenn deine Mods trotz Installation nicht funktionieren, liegt das meist daran, dass der Entwicklermodus in deinem Userscript-Manager nicht aktiviert ist. Siehe die <link>Installationsanleitung</link> für eine ausführliche Schritt-für-Schritt-Anleitung. Kurz gesagt: Klicke auf das Puzzle-Symbol in der oberen Leiste deines Browsers, wähle „Erweiterungen verwalten“ und aktiviere den Entwicklermodus oben rechts. Danach musst du den Browser neu starten. Dies behebt das Problem meist sofort. Wenn nicht, erstelle bitte ein Ticket auf unserem Discord-Server, wir helfen dir gerne weiter."
-			},
-			"safe": {
-				"question": "Sind Tampermonkey und die Userscripts sicher?",
-				"answer": "Absolut, denn wer würde nicht vertrauensvoll irgendwelche Skripte aus dem Internet installieren, um sein Spiel zu verbessern? Aber im Ernst – Tampermonkey ist ein etabliertes Tool, das von Millionen verwendet wird. Unsere Userscripts verändern dein Spielerlebnis nur minimal und enthalten keinen Schadcode. Es gibt auch Bewertungen auf den Skript-Seiten. Also ja, sie sind sicher. Verwende sie mit gutem Gefühl."
-			},
-			"sigmodAndSigfixes": {
-				"question": "Brauche ich sowohl SigMod als auch SigFixes?",
-				"answer": "Nein, aber die Kombination liefert beste Performance und Anpassungsmöglichkeiten. Sie sind so konzipiert, dass sie zusammenarbeiten."
-			},
-			"multibox": {
-				"question": "Wie funktioniert Multiboxing?",
-				"answer": "Installiere <strong>SigFixes</strong>. Damit kannst du mehrere Spielinstanzen reibungslos in einem Browser-Tab ausführen und gleichzeitig steuern. Für eine detaillierte Anleitung folge dem Guide <link>hier</link>."
-			},
-			"uninstallMods": {
-				"question": "Kann ich die Mods jederzeit deinstallieren?",
-				"answer": "Ja, deaktiviere oder entferne sie einfach in deinem Userscript-Manager."
-			}
-		},
-		"sigmod": {
-			"title": "SigMod Spezifisch",
-			"coreFeatures": {
-				"question": "Was sind die Hauptfunktionen von SigMod?",
-				"answer": "SigMod fokussiert sich auf Anpassungen, Makros, Automatisierung und ein fortgeschrittenes Tag-System zur Verbesserung deines Sigmally-Spielerlebnisses."
-			},
-			"customization": {
-				"question": "Welche Anpassungsmöglichkeiten bietet SigMod?",
-				"answer": "Ändere Hotkeys, UI-Themes, Spiel-Farben, Spieltimer, benutzerdefinierte Schriftarten und Namenseinstellungen."
-			},
-			"tagSystem": {
-				"question": "Was ist das Tag-System?",
-				"answer": "Ein fortschrittliches System zur Organisation und Verwaltung von Party-Tags, das dir hilft, Freunde und Teamkollegen einfach zu verfolgen. Es integriert sich in die Minikarte und den Chat, enthält ein Party-Panel zur Überwachung der Team-Punkte und zeigt Teamkollegen-Infos für bessere Ingame-Koordination."
-			},
-			"friendSystem": {
-				"question": "Wie funktioniert das Freundessystem?",
-				"answer": "Füge einfach Freunde hinzu, verwalte sie und behalte sie im Spiel im Blick, um verbunden zu bleiben."
-			},
-			"openMenu": {
-				"question": "Wie öffne ich das SigMod-Menü?",
-				"answer": "Öffne das Mod-Menü, indem du auf das Zahnrad-Symbol in der Spiel-Oberfläche klickst oder die Taste „V“ auf deiner Tastatur drückst."
-			},
-			"customHotkeys": {
-				"question": "Kann ich Hotkeys und Makros anpassen?",
-				"answer": "Ja! SigMod ermöglicht dir, Hotkeys und Mauskombinationen vollständig anzupassen, um deinen Spielstil zu verbessern."
-			},
-			"performance": {
-				"question": "Beeinflusst SigMod die Spielleistung?",
-				"answer": "SigMod ist leichtgewichtig und konzentriert sich auf Anpassungen, nicht auf Performance-Verbesserungen. Für Performance-Boosts verwende SigFixes."
-			}
-		},
-		"sigfixes": {
-			"title": "SigFixes Spezifisch",
-			"note": "Alle Optionen haben ein <strong>?</strong>-Symbol daneben – klicke darauf, um detaillierte Erklärungen zu erhalten.",
-			"improvements": {
-				"question": "Was verbessert SigFixes?",
-				"answer": "SigFixes verbessert Bildraten, reduziert Lag-Spikes, ermöglicht Multiboxing und bietet Anpassungen wie Draw-Delay, benutzerdefinierte Transparenz und Namensskalierung."
-			},
-			"multibox": {
-				"question": "Wie hilft SigFixes beim Multiboxing?",
-				"answer": "SigFixes erlaubt es dir, mehrere Spielinstanzen in einem Browser-Tab auszuführen, was Multiboxing flüssiger und einfacher macht."
-			},
-			"fps": {
-				"question": "Beeinflusst SigFixes meine FPS?",
-				"answer": "Ja, es steigert die FPS deutlich, indem es das Rendering optimiert und Lag-Spikes reduziert."
-			},
-			"compatibility": {
-				"question": "Ist SigFixes kompatibel mit SigMod?",
-				"answer": "Ja, sie sind voll kompatibel und für das beste Spielerlebnis zusammen entwickelt."
-			},
-			"config": {
-				"question": "Wie konfiguriere ich Draw-Delay und andere Optionen?",
-				"answer": "Diese Einstellungen kannst du im SigFixes-Mod-Menü anpassen. Jede Option hat ein hilfreiches \"?\"-Symbol mit weiteren Infos."
-			}
-		},
-		"needHelp": "Noch Fragen? Trete unserem Discord bei und öffne ein Support-Ticket – wir helfen dir gerne.",
-		"joinDiscord": "Discord beitreten"
-	},
-	"AboutPage": {
-		"title": "Über SigMod",
-		"tldr": {
-			"title": "Kurzfassung",
-			"text": "Ich bin Cursed aus Deutschland. Ich fing 2021 mit dem Programmieren an, entdeckte 2022 Sigmally und entwickelte SigMod basierend auf RingZeros Original-Mod. Mit Unterstützung von Leuten wie RingZero und yx wuchs SigMod zusammen mit Sigmally."
-		},
-		"story": {
-			"title": "Die Story",
-			"intro": "Hey, ich bin Cursed – der Kopf hinter SigMod und dieser Website. Lustigerweise war es Sigmally, das mich noch tiefer ins Programmieren gezogen hat, obwohl ich vorher schon ein bisschen drin war.",
-			"sigmodStart": "2022 bin ich auf Sigmally gestoßen, kam in einen Top-Clan und war sofort hooked. Ich wollte das Spiel verbessern – also fing ich an, meine eigene Mod zu bauen.",
-			"firstMod": "Damals gab’s schon ein starkes Userscript von RingZero – einer der coolsten Leute in der Community. Ich hab’s weiterentwickelt, angepasst und als Userscript auf Greasyfork hochgeladen. So entstand SigMod.",
-			"community": "Das Ding ging schnell durch die Decke. Klar gab’s Drama (Grüße an PFMacro) und sogar mal eine Sperrung – aber die meisten standen hinter mir. Ohne die Community hätte es SigMod nicht so weit geschafft.",
-			"thanks": "SigMod ist nicht perfekt, aber ich bin stolz drauf. Danke an alle, die Feedback gegeben, es geteilt oder einfach benutzt haben – ihr seid der Grund, warum’s weitergeht.",
-			"sigfixes": "Und riesigen Respekt an yx – seine SigFixes-Mod hat Sigmally für alle deutlich verbessert."
-		},
-		"joinDiscord": "Discord beitreten"
-	}
+    "Metadata": {
+        "desc": "Verbessere dein Sigmally-Erlebnis mit SigModz. Lade die neuesten SigMod- und SigFixes-Mods herunter, um erweiterte Funktionen, Performance-Optimierungen, Makros, Themes und mehr freizuschalten. Einfache Einrichtung, mächtige Tools, regelmäßige Updates."
+    },
+    "NotFound": {
+        "title": "404 – Seite nicht gefunden",
+        "message": "Sieht so aus, als gäbe es diese Seite nicht oder sie wurde verschoben."
+    },
+    "Header": {
+        "home": "Startseite",
+        "mods": {
+            "title": "Mods",
+            "sigmod": {
+                "title": "SigMod Client",
+                "desc": "Individuelle UI, Makros, Spielautomatisierung"
+            },
+            "sigfixes": {
+                "title": "SigFixes",
+                "desc": "Multibox-Unterstützung, FPS-Boost"
+            }
+        },
+        "guide": "Setup-Anleitung",
+        "faq": "FAQ",
+        "about": "Über uns"
+    },
+    "Footer": {
+        "text": "© 2025 SigModz. Nicht affiliiert mit Sigmally."
+    },
+    "HomePage": {
+        "hero": {
+            "title": "Sigmally Modz",
+            "sub": "Steigere dein Sigmally-Spiel mit schnellerer Leistung, cleveren Tools und voller Anpassung.",
+            "start": "Los geht’s"
+        },
+        "introduction": {
+            "what": {
+                "title": "Was ist Sigmally?",
+                "desc": "Sigmally ist ein temporeiches Browser‑Spiel im Agar‑io‑Stil auf privaten Servern für zuverlässigere Performance. Futter aufnehmen, Gegnern ausweichen und deine Zelle mit schöner Physik und reaktionsschnellen Steuerungen vergrößern. Solo spielen oder im Team antreten, globale Ranglisten erklimmen und regelmäßig an Community-Events teilnehmen."
+            },
+            "why": {
+                "title": "Warum SigModz?",
+                "desc": "SigModz bringt fortschrittliche Tools und Anpassungen direkt ins Spiel. Makros für schnelle Feeds und Respawns erstellen und optimieren, UI-Themes und Layouts nach deinem Stil anpassen und tägliche Aufgaben wie Münz-Sammeln automatisieren. Mit Performance-Tweaks, Multibox-Support und intuitiven In‑Game-Steuerungen spielst du sauberer, schneller und strategischer – egal ob Gelegenheitsspieler oder Wettkampf-Profi."
+            }
+        },
+        "mods": {
+            "sigmod": {
+                "title": "SigMod",
+                "desc": "SigMod verwandelt dein Sigmally-Erlebnis mit einem vollständigen In‑Game‑Mod‑Menü. Programmiere Makros für schnelle Feeds und Splits, passe jedes visuelle Element mit Themes und Layouts an und automatisiere Routineaufgaben wie tägliches Münz-Sammeln. Passe HUD, Tastenbelegung und Chat-Einstellungen an – alles ohne das Spiel zu verlassen."
+            },
+            "sigfixes": {
+                "title": "SigFixes",
+                "desc": "SigFixes erhöht die Performance für flüssige, konstante Frameraten und minimales Lag. Genieße schnellere Ladezeiten, klarere Eingabereaktionen und integrierten Multibox‑Support, um mehrere Accounts nahtlos zu steuern. Justiere Draw-Delay, Zell-Opazität, Kamera-Zoom und Namens-Skalierung für ruckelfreie, präzise Gameplay-Erlebnisse."
+            },
+            "learnMore": "Mehr erfahren & installieren"
+        },
+        "faq": {
+            "questions": [
+                {
+                    "question": "Sind diese Skripte sicher?",
+                    "answer": "Ja – unsere Mods sind vollständig Open‑Source und transparent, und Tampermonkey wird von Millionen genutzt. Kein versteckter Code, keine Überraschungen."
+                },
+                {
+                    "question": "Brauche ich beide Mods?",
+                    "answer": "Nicht zwingend, aber SigMod + SigFixes zusammen bieten die beste Kontrolle und Performance."
+                },
+                {
+                    "question": "Sind sie in Sigmally erlaubt?",
+                    "answer": "Absolut. SigMod ist Community‑geprüft und beide Mods sind offiziell akzeptiert."
+                },
+                {
+                    "question": "Kann ich sie jederzeit entfernen?",
+                    "answer": "Ja – einfach im Userscript‑Manager deaktivieren oder deinstallieren."
+                },
+                {
+                    "question": "Macht mich SigMod über Nacht zum Pro-Gamer?",
+                    "answer": "Ich wünschte! SigMod wirkt wie ein Turbo für dein Spiel – alles läuft flüssiger, aber am Steuer sitzt du immer noch. Reflexe, Strategie und Übung bleiben deine Aufgabe."
+                }
+            ]
+        },
+        "community": {
+            "title": "Community",
+            "desc": "Tritt unserem Discord bei für Support, Bug-Reports und nächtliches Troubleshooting mit anderen Spielern.",
+            "join": "Discord beitreten"
+        }
+    },
+    "SigModPage": {
+        "Hero": {
+            "title": "SigMod Client",
+            "sub": "Steigere dein Sigmally-Spiel mit Makros, Team‑Tags, UI‑Tweaks und kompletter In‑Game‑Personalisierung.",
+            "install": "SigMod installieren",
+            "explore": "Funktionen entdecken",
+            "require": "Erfordert",
+            "or": "oder"
+        },
+        "CoreFeatures": {
+            "macros": {
+                "title": "Makros & Automatisierung",
+                "desc": "Optimiere dein Spiel mit Shortcuts, Klick‑Sequenz‑Makros, Sofort‑Respawns und automatischem Münzsammeln."
+            },
+            "party": {
+                "title": "Party‑ & Tag‑System",
+                "desc": "Erstelle 3‑Buchstaben‑Tags für Teamkollegen, verfolge sie live auf der Minikarte, chatte privat und sende präzise Pings."
+            },
+            "customization": {
+                "title": "Volle Personalisierung",
+                "desc": "Schalte jedes Detail um – Themes, Schriftarten, Layouts, Tasten neu belegen im einheitlichen Menü."
+            }
+        },
+        "WhySigMod": {
+            "title": "Warum SigMod?",
+            "desc1": "SigMod erweitert den Sigmally‑Client mit intelligenter Automatisierung, Interface‑Personalisierung und vollständiger UI‑Kontrolle. Makros anwenden, Panels verschieben, Tasten neu belegen und visuelle Feinabstimmung – alles innerhalb eines schicken In‑Game-Dashboards. Themes wechseln, Namen bookmarken und Screenshots mit einem Klick machen.",
+            "desc2": "Koordiniere dich mit deinem Squad über dynamische Tags: privater Chat, taktische Pings und Minimap‑Marker. Verfolge Match‑Stats, verwalte Freunde und passe Chat‑Schrift, Farben und Tastenbindung on the fly an.",
+            "performance": "Willst du maximale Performance? Kombiniere SigMod mit",
+            "smooth": "für ultraschnelles Gameplay.",
+            "getStarted": "Leg los mit SigMod"
+        },
+        "Features": {
+            "title": "SigMod‑Features",
+            "list": [
+                {
+                    "title": "Makros & Automatisierung",
+                    "summary": "Automatisiere jede Aktion – Hotkeys, Tricksplits & Klick‑Makros",
+                    "details": "Belege Tasten für schnelle Aktionen wie Feed, Double/Triple/Quad‑Split und Tricksplits. Erstelle Klick‑Makros für links/rechts Klicks. Konfiguriere Split‑Sequenzen mit exakten Verzögerungen. Toggle-Optionen für Name, Skin oder Respawn – alles vollständig anpassbar."
+                },
+                {
+                    "title": "Party‑ & Tag‑System",
+                    "summary": "3‑Buchstaben‑Tags, Minimap‑Tracking, Pings & privater Chat",
+                    "details": "Vergib ein Tag (bis zu 3 Zeichen) für private Teams. Teammitglieder erscheinen auf der Minikarte, im Party‑Panel mit Name & Score und können präzise Pings senden. Der Party‑Chat erlaubt sicheren Austausch – getrennt vom öffentlichen Chat. Du siehst, wer welchen Ping gesendet hat."
+                },
+                {
+                    "title": "Menü‑Anpassung",
+                    "summary": "Themes, Schrift, Layout, Tabs, Rahmen & Eingabestil",
+                    "details": "Passe deine UI an mit Themes, abgerundeten Ecken, Hintergrundbildern und individuellen Eingaberahmen. Blende störende Elemente wie Discord‑ oder Sprachbuttons aus. Ordne Tabs, Abstände und Schatten und wechsle zwischen Layout‑Presets."
+                },
+                {
+                    "title": "Visuelle Spieleinstellungen",
+                    "summary": "Kartenfarben, Opazität, Zell‑Style & Schrift",
+                    "details": "Regle Farbe und Transparenz von Karte, Rand, Nahrung und Zellen. Ersetze In‑Game‑Bilder wie Viren oder Hintergründe. Wähle Schriftarten, zeige/verborgene Namen und Skins, wende Text-Outlines an und aktiviere Overlays wie Grid oder Border."
+                },
+                {
+                    "title": "Galerie & Screenshots",
+                    "summary": "Momente festhalten & deine Galerie verwalten",
+                    "details": "Belege eine Taste für Sofort‑Screenshots im Spiel. Durchsuche deine Bilder in der Galerie‑Sektion. Jedes Bild mit Zeitstempel, löschen und herunterladen. Galerie einfach verwalten."
+                },
+                {
+                    "title": "Namens‑Tools & Farbeffekte",
+                    "summary": "Namen speichern, Generator, Verläufe & Symbole",
+                    "details": "Nutze Nick‑Generatoren (NickFinder, Tell.wtf). Speichere Favoriten für schnellen Kopier‑Zugriff. Erstelle stylische Namen mit Sonderzeichen und Farbverläufen. Schnell löschen oder wiederverwenden integriert."
+                },
+                {
+                    "title": "Freunde & Mod‑Profil",
+                    "summary": "Nutzer hinzufügen, privat chatten & Mod‑Identität verwalten",
+                    "details": "Füge Freunde per Nutzername oder Discord‑Login hinzu. Sieh Online‑Status, Tag, Server etc. Filter und Suche helfen dir. Passe Mod‑Profil an mit Avatar, Bio, Status und Farben. Anfragen annehmen/ablehnen und Sichtbarkeit einstellen."
+                },
+                {
+                    "title": "Stats & Schnellzugriffs‑Panel",
+                    "summary": "Verfolge Spielstatistiken, toggle Settings sofort",
+                    "details": "Im Home‑Tab: Zeit gespielt, Top‑Mass, Tode. Im Schnellzugriffs‑Panel kannst du Mass, Grid, Border, Jelly‑Physik, Auto‑Respawn, Coin‑Claim und mehr toggeln – ohne Einstellungen‑Menü zu durchforsten."
+                },
+                {
+                    "title": "Chat‑System‑Überarbeitung",
+                    "summary": "Eigenes Chat‑Modul mit Tabs, Hotkeys & Kontrolle",
+                    "details": "Wechsle zwischen Party‑ und Haupt‑Chat per Tabs. Nachrichten in Echtzeit via Websocket‑Interception. Hotkeys senden deinen Standort, toggle Blur, Zeit‑Tags oder Kompakt‑Mode. Passe Text, Hintergrund und Theme‑Farben inkl. Transparenz an."
+                }
+            ],
+            "viewMore": "Mehr anzeigen"
+        },
+        "FAQ": {
+            "title": "FAQ",
+            "list": [
+                {
+                    "question": "Was sind die Kernfeatures von SigMod?",
+                    "answer": "SigMod bietet ein vollständig anpassbares Mod‑Menü, mächtige Makros und Automatisierung, Party‑ & Tag‑System, Live‑Stats und modernes Chat‑, Namens‑ und Freundes‑System – alles integriert, um dein Sigmally‑Erlebnis zu verbessern."
+                },
+                {
+                    "question": "Welche Anpassungen bietet SigMod?",
+                    "answer": "Du kannst Themes, Schriftarten, Layout‑Abstände, Rahmenradius, Namensfarben (inkl. Verläufe), UI‑Opazität, Visuals, Spiel‑Farben ändern und Dutzende optische Einstellungen toggeln. Auch Deathscreen‑Tweaks, Skin‑Overrides und Hintergrund‑Presets sind möglich."
+                },
+                {
+                    "question": "Was ist das Tag‑System?",
+                    "answer": "Mit dem Tag‑System vergibst du einen 3‑Buchstaben‑Code, um ein Team zu bilden. Ihr werdet auf der Minikarte getrackt, chattet privat, sendet Pings und seht Punkte im gemeinsamen Panel."
+                },
+                {
+                    "question": "Wie funktioniert das Freundes-System?",
+                    "answer": "Du kannst dich einloggen, ein Mod‑Profil erstellen und Freunde hinzufügen. Profile, Rollen, Online‑Status, Server‑Info einsehen und direkt chatten. Freundesanfragen, Suche, Einstellungen und Profil‑Anpassung (Avatar, Bio, Status) inklusive."
+                },
+                {
+                    "question": "Wie öffne ich das SigMod‑Menü?",
+                    "answer": "Drücke die Taste V oder klicke auf das Zahnrad‑Icon oben rechts im Spiel, um das Mod‑Menü zu öffnen. Dort findest du Tabs wie Makros, Themes, Galerie, Freunde u. v. m."
+                },
+                {
+                    "question": "Kann ich Hotkeys und Makros anpassen?",
+                    "answer": "Ja. SigMod bietet fortschrittliche Tastenbelegung für Feed, Splits, Tricksplits u. a. Du kannst Maus‑Makros festlegen, Linesplit‑Verhalten einstellen, Feed‑Geschwindigkeit anpassen und UI‑Toggles belegen wie Menü, Namen oder Auto‑Respawn."
+                },
+                {
+                    "question": "Beeinflusst SigMod die Spielperformance?",
+                    "answer": "SigMod fügt viele Features hinzu, ist jedoch leichtgewichtig optimiert. Für bessere FPS oder weniger Lag installiere SigFixes – das Performance‑Bottlenecks im Bas-Client ausmerzt."
+                },
+                {
+                    "question": "Kann ich Screenshots erstellen und verwalten?",
+                    "answer": "Ja. Nutze eine angelegte Taste, um Sofort‑Screenshots im Spiel zu machen. Im Galerie‑Tab kannst du sie nach Datum ansehen, herunterladen oder löschen."
+                }
+            ]
+        },
+        "Community": {
+            "title": "Community beitreten",
+            "text": "Brauchst du Hilfe, hast einen Bug gefunden oder willst eigene Makros teilen? Tritt unserem Discord bei und vernetze dich mit anderen SigMod‑Nutzern.",
+            "discord": "Discord beitreten",
+            "explore": "Oder den Code ansehen auf"
+        }
+    },
+    "SigFixesPage": {
+        "Hero": {
+            "title": "SigFixes",
+            "sub": "Verbessere Sigmallys Kern mit ultrasanfter Performance, präziser Steuerung und fortschrittlicher Multibox-Kontrolle.",
+            "install": "SigFixes installieren",
+            "explore": "Funktionen entdecken",
+            "require": "Erfordert",
+            "or": "oder"
+        },
+        "CoreFeatures": {
+            "performance": {
+                "title": "Verbesserte Performance",
+                "desc": "Wechselt die Rendering-Engine für schnellere, flüssigere Grafiken, weniger Aussetzer und stabilere Leistung."
+            },
+            "multiboxing": {
+                "title": "Perfektes Multiboxing",
+                "desc": "Ein-Tab-Steuerung, Umriss-Anpassungen, Merge-Hilfen und smarte Respawn-Tools – optimiert für nahtlose Multibox-Setups."
+            },
+            "input": {
+                "title": "Präzise Steuerung",
+                "desc": "Verringert Eingabeverzögerungen und verbessert die Kontrolle – besonders effektiv bei Makros und Split-Strategien."
+            }
+        },
+        "WhySigFixes": {
+            "title": "Warum SigFixes?",
+            "desc1": "SigFixes überarbeitet Sigmallys Rendering für flüssigere Frames und schärfere Eingaben. Es beseitigt Aussetzer, senkt Verzögerungen und sorgt für konstantes Gameplay – selbst unter Druck.",
+            "desc2": "Speziell für ernsthafte Spieler gemacht, glänzt es beim Multiboxing. Mit schnelleren Eingaben, synchroner Kamera und visuellen Hilfen für Merge hast du volle Kontrolle.",
+            "worksWith": "Schon SigMod im Einsatz?",
+            "combo": "? Kombiniere beide für das ultimative Erlebnis.",
+            "getStarted": "Starte mit SigFixes"
+        },
+        "Features": {
+            "title": "SigFixes Features",
+            "viewMore": "Mehr anzeigen",
+            "list": [
+                {
+                    "title": "Performance",
+                    "summary": "Ersetzt das Canvas durch ultraschnelles WebGL-Rendering",
+                    "details": "SigFixes eliminiert Lag-Spikes, indem das Spiel-Canvas durch einen voll optimierten WebGL-Renderer ersetzt wird. Das sorgt für flüssigeres Gameplay, bessere FPS und konstante Leistung auf allen Geräten – auch beim Multiboxing oder Aufnahmen."
+                },
+                {
+                    "title": "Präzise Steuerung",
+                    "summary": "Weniger Verzögerung zwischen Eingabe und Bewegung",
+                    "details": "Erlebe Echtzeit-Reaktion beim Bewegen, Füttern oder Splitten. SigFixes reduziert Latenz und steigert die Präzision bei Maus- und Tastatureingaben. Jede Bewegung fühlt sich schärfer und kontrollierter an – besonders in schnellen Gefechten."
+                },
+                {
+                    "title": "Fortschrittliches Multiboxing",
+                    "summary": "Ein-Tab-Steuerung, Sicht-Merge, Respawn-Handling",
+                    "details": "Steuere mehrere Instanzen aus einem Tab. Wähle deine Merge-Methode, passe Umrisse, Farben und Respawn-Logik an. Aktiviere fehlerfreies Mergen, blockiere Cluster-Respawns und optimiere das Setup für 2+ Tabs mühelos."
+                },
+                {
+                    "title": "Zeichen-Einstellungen",
+                    "summary": "Draw-Delay, Zell-Umrisse, Kamera & Zoom anpassen",
+                    "details": "Stelle den Draw-Delay ein, um Balance zwischen Grafik und Performance zu finden. Schalte Zell-Umrisse ein oder aus, setze deine Skin-URL, wähle Kamera-Verhalten (Natürlich, Instant) und justiere Zoom-Geschwindigkeit und Auto-Zoom für reaktionsschnelles Spiel."
+                },
+                {
+                    "title": "Visuelle Werkzeuge",
+                    "summary": "Deckkraft, Glow, Skins, Jelly-Physik und Gitternetzlinien",
+                    "details": "Passe Sichtbarkeit und Verhalten von Zellen, Skins, Pellets und Glow an. Aktiviere/deaktiviere Jelly-Physik und Overlays wie Linien zwischen Zellen und Cursor. Hebe nicht teilbare Zellen mit eigenen Farben und Transparenz hervor."
+                },
+                {
+                    "title": "Theme-Anpassung",
+                    "summary": "Wähle deine Theme-Farbe und steuere UI-Optik",
+                    "details": "Wähle deine Theme-Farbe und setze sie im Mod durch. Passe die UI deinem Stil an – von Farb-Akzenten bis zu visuellen Effekten wie Regenbogen-Rahmen und Karten-Hintergründen."
+                },
+                {
+                    "title": "Spielverhalten anpassen",
+                    "summary": "Pushsplit-Delay, XP-/Score-Split, Aftersplit-Bewegung",
+                    "details": "Konfiguriere das Verhalten nach Splits: Wann beginnt Bewegung, wie funktionieren Pushsplits, wie werden XP und Score angezeigt. Diese Feinjustierungen erleichtern kompetitives Movement."
+                },
+                {
+                    "title": "Kamera-Steuerung",
+                    "summary": "Sanftheit, Geschwindigkeit, Spawn-Kamera-Logik",
+                    "details": "Passe Kamerabewegung an: sofort, natürlich oder sanft. Steuere Spawn-Kamera-Verhalten, Zoom-Interpolation und Geschwindigkeit passend zu deinen Vorlieben."
+                },
+                {
+                    "title": "Textdarstellung",
+                    "summary": "Schriftgröße, Stärke, Umriss und Clan-Anzeige",
+                    "details": "Bearbeite Namen-/Massen-Skalierung, schalte fette Schrift ein/aus, setze Umrisse, blende Clans ein oder aus. Perfekt für Minimal-Setups oder hohe Sichtbarkeit in chaotischen Situationen."
+                }
+            ]
+        },
+        "FAQ": {
+            "title": "FAQ",
+            "list": [
+                {
+                    "question": "Was ist SigFixes?",
+                    "answer": "SigFixes ist ein Performance-Patch für den Sigmally-Client. Es ersetzt die Rendering-Engine durch ein WebGL-Canvas und sorgt so für flüssigeres, schnelleres und reaktionsschnelleres Gameplay – besonders hilfreich für Multiboxing und Wettkampf."
+                },
+                {
+                    "question": "Verändert SigFixes das Aussehen des Spiels?",
+                    "answer": "Standardmäßig sieht es aus wie der Original-Client. Für Fortgeschrittene gibt es aber Optionen wie Skin-Overrides, Zell-Deckkraft, Textskalierung, Glow-Effekte und Umrisse für nicht teilbare Zellen."
+                },
+                {
+                    "question": "Kann ich SigFixes zusammen mit SigMod nutzen?",
+                    "answer": "Ja, SigFixes funktioniert nahtlos mit SigMod zusammen und kombiniert fortgeschrittene Features mit verbesserter Performance und weniger Lag."
+                },
+                {
+                    "question": "Hilft SigFixes beim Multiboxing?",
+                    "answer": "Ja. Es bietet Ein-Tab-Steuerung, Sicht-Merge-Optionen, Spawn-Blockierung und Tab-Umrisse – alles für geringere Eingabeverzögerung und bessere Synchronisation zwischen Tabs."
+                },
+                {
+                    "question": "Wie installiere ich SigFixes?",
+                    "answer": "Installiere zuerst Tampermonkey oder Violentmonkey (nur eins). Aktiviere den Entwicklermodus in deinem Browser. Dann installiere das SigFixes-Userscript von der offiziellen Quelle und starte den Browser neu."
+                },
+                {
+                    "question": "Welche Kameraeinstellungen kann ich anpassen?",
+                    "answer": "Du kannst zwischen Standard- und Natürlicher Kamera wechseln, Bewegung auf Instant oder Smooth stellen, Zoom-Geschwindigkeit steuern und Auto-Zoom sowie Kamera-Tracking beim Spawn aktivieren."
+                },
+                {
+                    "question": "Was ist die Draw-Delay-Einstellung?",
+                    "answer": "Draw-Delay steuert, wie oft das Spiel-Canvas aktualisiert wird. Höhere Werte machen Animationen flüssiger, können aber Leistung senken. Niedrigere Werte erhöhen FPS, machen die Grafik aber weniger glatt. Du kannst es nach Belieben anpassen."
+                },
+                {
+                    "question": "Kann ich Text- und Namensanzeige anpassen?",
+                    "answer": "Ja. Du kannst Name- und Massen-Skalierung anpassen, fette Schrift toggeln, Deckkraft einstellen, Clan-Tags zeigen oder verstecken und Umrissstärken verändern für bessere Sichtbarkeit oder ein saubereres UI."
+                }
+            ]
+        },
+        "Community": {
+            "title": "Community beitreten",
+            "text": "Brauchst du Hilfe, hast einen Bug gefunden oder willst eigene Makros teilen? Tritt unserem Discord bei und vernetze dich mit anderen SigFix-Nutzern.",
+            "discord": "Discord beitreten",
+            "explore": "Oder den Code ansehen auf"
+        }
+    },
+    "QuickGuide": {
+        "title": "Kurzanleitung",
+        "note": "Diese Seite ist nicht so detailliert wie die komplette Anleitung.",
+        "tampermonkey": {
+            "title": "Tampermonkey installieren",
+            "desc": "Installiere den Userscript-Manager, der für SigMod und SigFixes nötig ist.",
+            "button": "Tampermonkey holen"
+        },
+        "developermode": {
+            "title": "Entwicklermodus aktivieren",
+            "desc": "Folge den Schritten auf den Bildern unten. Starte den Browser mit aktiviertem Entwicklermodus neu."
+        },
+        "allow_userscripts": {
+            "title": "User Scripts erlauben",
+            "desc": "Folge den Schritten auf den Bildern unten."
+        },
+        "sigmod": {
+            "title": "SigMod installieren",
+            "desc": "Fügt Makros, Anpassungen, Party-Tags und mehr hinzu."
+        },
+        "sigfixes": {
+            "title": "SigFixes installieren",
+            "desc": "Verbessert FPS, reduziert Lag, aktiviert Multiboxing."
+        },
+        "play": {
+            "title": "Sigmally spielen",
+            "desc": "Alles ist bereit. Zeit zu spielen.",
+            "button": "Jetzt spielen"
+        },
+        "discord": "Discord beitreten",
+        "fullGuide": "Komplette Anleitung ansehen"
+    },
+    "Guide": {
+        "Sidebar": {
+            "title": "Anleitung",
+            "overview": "Überblick",
+            "usm": "Userscript Manager",
+            "devmode": "Entwicklermodus",
+            "aus_chrome": "User Scripts erlauben",
+            "sigmod": "SigMod",
+            "sigfixes": "SigFixes",
+            "end": "Abschluss"
+        },
+        "Overview": {
+            "title": "Loslegen",
+            "desc": "Willkommen bei SigModz! Diese Anleitung zeigt dir, wie du SigMod und SigFixes installierst – die zwei Kernmods, die dein Sigmally-Gameplay mit flüssigerer Performance, voller Kontrolle und mächtigen Tools aufwerten.",
+            "access": "In nur wenigen Schritten schaltest du clevere Makros, FPS-Boosts, UI-Anpassungen, erweiterte Einstellungen und mehr frei – alles nahtlos ins Spiel integriert.",
+            "start": "Installation starten",
+            "quickGuide": "Kurzanleitung"
+        },
+        "UserscriptManager": {
+            "title": "Userscript Manager installieren",
+            "desc": "Um diese Mods zu nutzen, brauchst du eine Userscript-Manager-Erweiterung.",
+            "recommend": "Wir empfehlen:",
+            "instruction": "Diese Anleitung verwendet Tampermonkey. Klicke unten, um es für deinen Browser zu installieren.",
+            "button": "Tampermonkey installieren",
+            "installed": "Nach der Installation kannst du Userscripts wie <SigMod>SigMod</SigMod> und <SigFixes>SigFixes</SigFixes> hinzufügen.",
+            "back": "Zurück",
+            "next": "Weiter"
+        },
+        "DevMode": {
+            "title": "Entwicklermodus aktivieren",
+            "desc": "Tampermonkey benötigt den Entwicklermodus, um Skripte wie SigMod und SigFixes korrekt auszuführen.",
+            "chrome": {
+                "pageTitle": "User Scripts erlauben",
+                "title": "So aktivierst du es",
+                "desc": "Für Chrome aktiviere 'User Scripts erlauben' in den Tampermonkey-Erweiterungseinstellungen.",
+                "steps": [
+                    "Klicke auf das Puzzle-Symbol in der Browser-Leiste.",
+                    "Klicke die drei Punkte neben Tampermonkey an.",
+                    "Wähle 'Erweiterung verwalten'.",
+                    "Schalte 'User Scripts erlauben' ein."
+                ]
+            },
+            "opera": {
+                "title": "Für Opera",
+                "steps": [
+                    "Klicke auf das Würfel-Symbol (Erweiterungen) in der Leiste.",
+                    "Wähle 'Erweiterungen verwalten'.",
+                    "Aktiviere oben rechts den Entwicklermodus."
+                ]
+            },
+            "edge": {
+                "title": "Für Edge",
+                "steps": [
+                    "Klicke auf das Puzzle-Symbol (Erweiterungen) in der Leiste.",
+                    "Wähle 'Erweiterungen verwalten'.",
+                    "Aktiviere im Sidebar den Entwicklermodus."
+                ]
+            },
+            "firefox": {
+                "title": "Für Firefox",
+                "steps": [
+                    "Firefox benötigt keinen Entwicklermodus. Diesen Schritt kannst du überspringen."
+                ]
+            },
+            "default": {
+                "title": "Browser-Anleitung",
+                "steps": [
+                    "Prüfe die Dokumentation deines Browsers zum Entwicklermodus.",
+                    "Bei Chromium-basierten Browsern folge den obigen Schritten."
+                ]
+            },
+            "note": {
+                "label": "Hinweis:",
+                "text": "Starte deinen Browser nach dem Aktivieren des Entwicklermodus neu, damit Tampermonkey richtig funktioniert."
+            },
+            "back": "Zurück",
+            "next": "Weiter"
+        },
+        "SigMod": {
+            "title": "SigMod installieren",
+            "desc": "Jetzt, da dein Userscript Manager bereit ist, installiere SigMod. Es fügt Makros, Themes und erweiterte Einstellungen hinzu.",
+            "popup": "Klicke unten zum Installieren. Im Popup bestätige mit <i>Installieren</i>.",
+            "button": "SigMod installieren",
+            "after": "Nach der Installation läuft SigMod automatisch in Sigmally. Passe es jederzeit im Ingame-Menü an. Mehr zu SigMod <link>hier</link>.",
+            "back": "Zurück",
+            "next": "Weiter"
+        },
+        "SigFixes": {
+            "title": "SigFixes installieren",
+            "desc": "SigFixes schreibt große Teile von Sigmallys Client um für mehr Geschwindigkeit und Sanftheit. Von yx entwickelt.",
+            "prompt": "Klicke unten zum Installieren von SigFixes.",
+            "button": "SigFixes installieren",
+            "features": "Enthält Features wie Ein-Tab-Multiboxing, Umrisse für nicht teilbare Zellen, Draw-Delay, Textgröße, Skins und Deckkraft.",
+            "back": "Zurück",
+            "end": "Ende"
+        },
+        "End": {
+            "title": "Alles bereit 🎉",
+            "desc": "SigMod und SigFixes sind installiert! Genieße das flüssigste und anpassbarste Sigmally-Erlebnis. Leg los, justiere und spiel dein bestes Spiel.",
+            "play": "Sigmally spielen",
+            "explore": "Entdecken"
+        }
+    },
+    "FAQPage": {
+        "title": "Häufig gestellte Fragen",
+        "general": {
+            "title": "Allgemein",
+            "installMods": {
+                "question": "Wie installiere ich die Mods?",
+                "answer": "Starte einfach! Folge unserer detaillierten oder schnellen <link>Installationsanleitung</link> und spiele mit Mods in kürzester Zeit."
+            },
+            "modsNotWorking": {
+                "question": "Mods installiert, funktionieren aber nicht. Was tun?",
+                "answer": "Meist fehlt die Aktivierung von 'User Scripts erlauben' in Tampermonkey (Chrome/Brave) oder Entwicklermodus (Edge/Opera). Schau in die <link>Installationsanleitung</link>. Hilfe im Discord."
+            },
+            "safe": {
+                "question": "Sind Tampermonkey und diese Userscripts sicher?",
+                "answer": "Ja. Tampermonkey wird von Millionen genutzt. Unsere Scripts verbessern nur dein Spiel, ohne versteckte Tricks. Bewertungen findest du auf den Script-Seiten."
+            },
+            "sigmodAndSigfixes": {
+                "question": "Brauche ich SigMod und SigFixes?",
+                "answer": "Nicht zwingend, aber zusammen bieten sie beste Performance und Anpassung. Sie ergänzen sich perfekt."
+            },
+            "multibox": {
+                "question": "Wie multiboxe ich?",
+                "answer": "Installiere <strong>SigFixes</strong>, um mehrere Instanzen in einem Tab flüssig zu steuern. Schritt-für-Schritt im Guide <link>hier</link>."
+            },
+            "uninstallMods": {
+                "question": "Kann ich Mods jederzeit deinstallieren?",
+                "answer": "Ja, einfach im Userscript Manager deaktivieren oder entfernen."
+            }
+        },
+        "sigmod": {
+            "title": "SigMod Spezifisch",
+            "coreFeatures": {
+                "question": "Was sind die Kernfeatures von SigMod?",
+                "answer": "SigMod bietet mächtige Anpassungen, Makros, Automatisierung und ein Tag-System zur Verbesserung deines Sigmally-Spiels."
+            },
+            "customization": {
+                "question": "Welche Anpassungen bietet SigMod?",
+                "answer": "Hotkeys, UI-Themes, Spiel-Farben, Spielzeiten, Schriftarten und Namenseinstellungen sind frei wählbar."
+            },
+            "tagSystem": {
+                "question": "Was ist das Tag-System?",
+                "answer": "Es verwaltet Party-Tags und erleichtert das Verfolgen von Teammitgliedern. Integration in Minikarte und Chat, zeigt Team-Punkte und Infos für bessere Koordination."
+            },
+            "friendSystem": {
+                "question": "Wie funktioniert das Freundes-System?",
+                "answer": "Füge Freunde hinzu, verwalte sie und bleibe in Kontakt im Spiel."
+            },
+            "openMenu": {
+                "question": "Wie öffne ich das SigMod-Menü?",
+                "answer": "Klicke auf das Zahnrad-Icon oder drücke die Taste V im Spiel."
+            },
+            "customHotkeys": {
+                "question": "Kann ich Hotkeys und Makros anpassen?",
+                "answer": "Ja, SigMod erlaubt volle Anpassung von Hotkeys und Mausmakros für deinen Stil."
+            },
+            "performance": {
+                "question": "Beeinflusst SigMod die Spiel-Performance?",
+                "answer": "SigMod ist leichtgewichtig und fokussiert auf Anpassung, nicht Performance-Boost. Für FPS und flüssiges Gameplay nutze SigFixes."
+            }
+        },
+        "sigfixes": {
+            "title": "SigFixes Spezifisch",
+            "note": "Jede Einstellung hat ein <strong>?</strong> Icon für Details – anklicken!",
+            "improvements": {
+                "question": "Was verbessert SigFixes?",
+                "answer": "Verbessert FPS, reduziert Lag-Spikes, ermöglicht sanftes Multiboxing und bietet Anpassungen wie Draw-Delay, Deckkraft und Namensskalierung."
+            },
+            "multibox": {
+                "question": "Wie hilft SigFixes beim Multiboxing?",
+                "answer": "Es erlaubt mehrere Spielinstanzen in einem Browser-Tab für einfacheres Multiboxing."
+            },
+            "fps": {
+                "question": "Verbessert SigFixes meine FPS?",
+                "answer": "Ja, es boostet FPS stark durch optimiertes Rendering und weniger Lag."
+            },
+            "compatibility": {
+                "question": "Ist SigFixes mit SigMod kompatibel?",
+                "answer": "Ja, beide sind voll kompatibel und ergänzen sich optimal."
+            },
+            "config": {
+                "question": "Wie konfiguriere ich Draw-Delay und andere Einstellungen?",
+                "answer": "Das geht im SigFixes-Menü. Klick die ' ? ' Icons für Details zu jeder Option."
+            }
+        },
+        "needHelp": "Noch Fragen? Tritt unserem Discord bei und erstelle ein Support-Ticket – wir helfen dir.",
+        "joinDiscord": "Discord beitreten"
+    },
+    "AboutPage": {
+        "title": "Über SigMod",
+        "tldr": {
+            "title": "Kurzfassung",
+            "text": "Ich bin Cursed aus Deutschland. Ich begann 2021 mit Programmieren, entdeckte Sigmally 2022 und entwickelte SigMod als Userscript-Mod auf Basis von RingZeros Original. Mit Unterstützung von RingZero und yx wuchsen SigMod und Sigmally weiter."
+        },
+        "story": {
+            "title": "Die Geschichte",
+            "intro": "Hi, ich bin Cursed – der Kopf hinter SigMod und dieser Seite. Sigmally hat mich tiefer ins Programmieren gezogen, obwohl ich schon Erfahrung hatte.",
+            "sigmodStart": "2022 stieß ich auf Sigmally, trat einem Top-Clan bei und war sofort begeistert. Ich wollte das Spiel verbessern und begann, meinen eigenen Mod zu bauen.",
+            "firstMod": "Damals gab es schon ein starkes Userscript von RingZero – einem der coolsten Community-Leute. Ich entwickelte es weiter, passte es an und lud es auf Greasyfork hoch. So entstand SigMod.",
+            "community": "Es wurde schnell groß. Klar gab es Drama (Shoutout an PFMacro) und sogar einen Take-Down, aber die Community stand hinter mir. Ohne sie wäre SigMod nicht so weit gekommen.",
+            "thanks": "SigMod ist nicht perfekt, aber ich bin stolz drauf. Danke an alle, die Feedback gaben, es teilten oder einfach nutzten – ihr haltet es am Leben.",
+            "sigfixes": "Großer Respekt an yx – sein Mod macht Sigmally für alle viel besser."
+        },
+        "joinDiscord": "Discord beitreten"
+    }
 }
