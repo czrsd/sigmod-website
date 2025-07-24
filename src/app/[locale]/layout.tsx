@@ -7,6 +7,8 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Footer from '@/components/Footer';
 import Preload from '@/components/Preload';
+import { LayoutTransition } from '@/components/layout-transition';
+import { animate } from 'framer-motion';
 
 async function getMetadata(locale: string): Promise<Metadata> {
     const messages = await getMessages({ locale });
@@ -88,7 +90,13 @@ export default async function RootLayout({
             <body className='dark overflow-x-hidden'>
                 <NextIntlClientProvider locale={locale} messages={messages}>
                     <Header />
-                    {children}
+                    <LayoutTransition
+                        initial={{ opacity: 0, y: 0 }}
+                        animate={{ opacity: 1, y: -10 }}
+                        exit={{ opacity: 0, y: 0 }}
+                    >
+                        {children}
+                    </LayoutTransition>
                     <Footer />
                 </NextIntlClientProvider>
             </body>
