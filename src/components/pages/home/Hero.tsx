@@ -10,10 +10,19 @@ import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+const images = [
+    'menu.png',
+    'before_after.png',
+    'customization-comparison.png',
+    'game_menu.png',
+    'party_system.png',
+    'multibox.png',
+];
+
 export function HeroSection() {
     const t = useTranslations('HomePage.hero');
     return (
-        <section className='flex flex-col md:flex-row md:flex-grow px-6 md:px-16 py-24 gap-12'>
+        <section className='flex flex-col md:flex-row md:flex-grow px-6 md:px-16 pt-24 pb-32 md:pt-32 md:pb-64 gap-12'>
             <div className='md:w-1/2 text-center md:text-left mt-10'>
                 <h1 className='text-4xl sm:text-6xl md:text-7xl font-extrabold leading-tight tracking-tight'>
                     <span className='bg-gradient-to-r from-[var(--glow)] to-purple-500 text-transparent bg-clip-text [text-wrap:balance]'>
@@ -40,36 +49,28 @@ export function HeroSection() {
                 <Carousel
                     opts={{ loop: true }}
                     plugins={[Autoplay({ delay: 3000 })]}
-                    className='w-full mx-w-md md:max-w-2xl'
+                    className='w-full mx-w-md md:max-w-3xl'
                 >
-                    <CarouselContent className='-ml-4'>
-                        <CarouselItem className='pl-4'>
-                            <Image
-                                src='/screenshots/sigmod_menu.png'
-                                alt='SigMod Menu'
-                                width={800}
-                                height={600}
-                                className='rounded-xl shadow-md'
-                            />
-                        </CarouselItem>
-                        <CarouselItem className='pl-4'>
-                            <Image
-                                src='/screenshots/macros.png'
-                                alt='Macros preview'
-                                width={800}
-                                height={600}
-                                className='rounded-xl shadow-md'
-                            />
-                        </CarouselItem>
-                        <CarouselItem className='pl-4'>
-                            <Image
-                                src='/screenshots/customization.png'
-                                alt='Game customization'
-                                width={800}
-                                height={400}
-                                className='rounded-xl shadow-md'
-                            />
-                        </CarouselItem>
+                    <CarouselContent>
+                        {images.map((img, idx) => {
+                            const imgSrc = '/preview/' + img;
+                            const imgAlt = img
+                                .replace('_', ' ')
+                                .replace('.png', '')
+                                .replace(/^./, (c) => c.toUpperCase());
+
+                            return (
+                                <CarouselItem key={idx}>
+                                    <Image
+                                        src={imgSrc}
+                                        alt={imgAlt}
+                                        width={1600}
+                                        height={900}
+                                        className='rounded-xl shadow-md'
+                                    />
+                                </CarouselItem>
+                            );
+                        })}
                     </CarouselContent>
                 </Carousel>
             </div>

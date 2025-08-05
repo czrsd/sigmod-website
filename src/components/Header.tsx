@@ -35,7 +35,7 @@ const mods = [
         href: '/sigmod',
         titleKey: 'mods.sigmod.title',
         descKey: 'mods.sigmod.desc',
-        imgSrc: '/screenshots/sigmod_menu.png',
+        imgSrc: '/preview/sigmod_menu.png',
         imgAlt: 'SigMod Menu',
         imgSize: 92,
     },

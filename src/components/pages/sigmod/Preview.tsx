@@ -8,6 +8,17 @@ import {
     CarouselPrevious,
 } from '@/components/ui/carousel';
 
+const images: string[] = [
+    'menu.png',
+    'party_system.png',
+    'sigmod/macro_tab.png',
+    'sigmod/game_tab.png',
+    'sigmod/name_tab.png',
+    'sigmod/themes_tab.png',
+    'sigmod/gallery_tab.png',
+    'sigmod/friends_tab.png',
+];
+
 export function Preview() {
     return (
         <section className='max-w-4xl mx-auto'>
@@ -17,36 +28,27 @@ export function Preview() {
                 className='rounded-lg shadow-lg'
             >
                 <CarouselContent>
-                    <CarouselItem>
-                        <Image
-                            src='/screenshots/sigmod_menu.png'
-                            alt='SigMod Menu'
-                            width={700}
-                            height={450}
-                            className='rounded-lg'
-                            priority
-                        />
-                    </CarouselItem>
-                    <CarouselItem>
-                        <Image
-                            src='/screenshots/macros.png'
-                            alt='Macros UI'
-                            width={700}
-                            height={450}
-                            className='rounded-lg'
-                            priority
-                        />
-                    </CarouselItem>
-                    <CarouselItem>
-                        <Image
-                            src='/screenshots/tag_system.png'
-                            alt='Tag system preview'
-                            width={700}
-                            height={450}
-                            className='rounded-lg'
-                            priority
-                        />
-                    </CarouselItem>
+                    {images.map((img, idx) => {
+                        const src = '/preview/' + img;
+                        const altText = img
+                            .replace('_', ' ')
+                            .replace('.png', '')
+                            .replace(/^./, (c) => c.toUpperCase());
+                        return (
+                            <CarouselItem
+                                key={idx}
+                                className='relative w-full h-full'
+                            >
+                                <Image
+                                    src={src}
+                                    alt={altText}
+                                    width={1600}
+                                    height={900}
+                                    className='object-contain aspect-16/9'
+                                />
+                            </CarouselItem>
+                        );
+                    })}
                 </CarouselContent>
                 <CarouselPrevious />
                 <CarouselNext />
