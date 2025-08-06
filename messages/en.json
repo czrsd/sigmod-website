@@ -558,19 +558,19 @@
         "joinDiscord": "Join Discord"
     },
     "AboutPage": {
-        "title": "About SigMod",
+        "title": "About SigModz",
         "tldr": {
-            "title": "TL;DR",
-            "text": "I'm Cursed from Germany. I started coding around 2021, got hooked on Sigmally in 2022 and created SigMod as a userscript mod based on RingZero’s original. With support from people like RingZero and yx, both SigMod and Sigmally kept growing."
+            "title": "What is SigModz?",
+            "text": "SigModz is a community-driven project focused on enhancing the Sigmally experience through powerful mods like SigMod and SigFixes."
         },
         "story": {
-            "title": "The Story",
-            "intro": "Hey, I’m Cursed — the person behind SigMod and this site. Funny enough, Sigmally is what pulled me deeper into programming, even though I had some experience before.",
-            "sigmodStart": "In 2022, I came across Sigmally, joined a top clan, and got hooked immediately. I wanted to improve the game — so I started building my own mod.",
-            "firstMod": "Back then, there was already a solid userscript by RingZero — one of the coolest people in the community. I developed it further, customized it, and uploaded it to Greasyfork. That’s how SigMod came to be.",
-            "community": "It blew up fast. Sure, there was some drama (shoutout to PFMacro) and even a takedown — but most players stood behind me. Without the community, SigMod wouldn’t have come this far.",
-            "thanks": "SigMod isn’t perfect, but I’m proud of it. Thanks to everyone who gave feedback, shared it, or just used it — you’re the reason it keeps going.",
-            "sigfixes": "Huge respect to yx — his mod has made Sigmally way better for everyone."
+            "title": "Background",
+            "intro": "SigModz brings together players and developers who aim to improve Sigmally with advanced features and high-quality tools.",
+            "sigmodStart": "It started with SigMod — a userscript mod originally based on RingZer0’s open-source version. His work laid the groundwork for modern modding in Sigmally.",
+            "sigmod": "SigMod introduced further customization, UI improvements, macros, and community-requested features — making it one of the most popular client-side mods for Sigmally.",
+            "sigfixes": "Later, SigFixes by yx pushed the limits further: a complete WebGL renderer, multiboxing support, improved input handling, and performance upgrades — all optimized for serious players.",
+            "community": "Both mods are widely accepted by the Sigmally community and supported by the game’s owner. SigModz continues to evolve with input from players and developers alike.",
+            "thanks": "Special thanks to RingZer0 for the original base, and to yx for pushing the technical boundaries. The community’s support is what keeps SigModz alive and growing."
         },
         "joinDiscord": "Join the Discord"
     }

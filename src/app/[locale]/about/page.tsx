@@ -8,7 +8,7 @@ export default function AboutPage() {
     const t = useTranslations('AboutPage');
 
     return (
-        <section className='max-w-3xl mx-auto px-6 md:px-16 py-40 space-y-6'>
+        <section className='max-w-3xl mx-auto px-6 md:px-16 py-30 space-y-6'>
             <h1 className='text-4xl font-bold mb-6'>{t('title')}</h1>
 
             <h3 className='text-2xl font-semibold'>{t('tldr.title')}</h3>
@@ -20,10 +20,10 @@ export default function AboutPage() {
 
             <p>{t('story.intro')}</p>
             <p>{t('story.sigmodStart')}</p>
-            <p>{t('story.firstMod')}</p>
+            <p>{t('story.sigmod')}</p>
+            <p>{t('story.sigfixes')}</p>
             <p>{t('story.community')}</p>
             <p>{t('story.thanks')}</p>
-            <p>{t('story.sigfixes')}</p>
 
             <div className='pt-6'>
                 <Button variant='outline' asChild>

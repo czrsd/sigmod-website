@@ -558,20 +558,20 @@
         "joinDiscord": "Discord'a Katıl"
     },
     "AboutPage": {
-        "title": "SigMod Hakkında",
+        "title": "SigModz Hakkında",
         "tldr": {
-            "title": "Kısa Özet",
-            "text": "Ben Almanya'dan Cursed. 2021 civarı kodlamaya başladım, 2022'de Sigmally'ye takıldım ve RingZero'nun orijinaline dayanarak SigMod adlı userscript modunu yarattım. RingZero ve yx gibi destekçilerle SigMod ve Sigmally büyümeye devam etti."
+            "title": "SigModz Nedir?",
+            "text": "SigModz, SigMod ve SigFixes gibi güçlü modlarla Sigmally deneyimini geliştirmeye odaklanan topluluk destekli bir projedir."
         },
         "story": {
-            "title": "Hikaye",
-            "intro": "Merhaba, ben Cursed—SigMod ve bu sitenin arkasındaki kişi. İlginçtir ki Sigmally beni programlamaya daha çok bağladı, önceden biraz deneyimim vardı ama bu oyunla daha da derinleştim.",
-            "sigmodStart": "2022'de Sigmally ile tanıştım, en iyi klanlardan birine katıldım ve hemen bağlandım. Oyunu geliştirmek istedim—böylece kendi modumu yapmaya başladım.",
-            "firstMod": "O zamanlar RingZero'nun zaten sağlam bir userscripti vardı—topluluğun en havalı kişilerinden biri. Onu geliştirdim, kişiselleştirdim ve Greasyfork'a yükledim. İşte böyle SigMod doğdu.",
-            "community": "Hızla popüler oldu. Elbette biraz drama (selamlar PFMacro) ve kaldırma oldu—ama çoğu oyuncu beni destekledi. Topluluk olmasa SigMod bu kadar yol alamazdı.",
-            "thanks": "SigMod mükemmel değil ama gurur duyuyorum. Geri bildirim veren, paylaşan veya sadece kullanan herkese teşekkürler—sizin sayenizde devam ediyor.",
-            "sigfixes": "Büyük saygılar yx'e—modu Sigmally'yi herkes için çok daha iyi hale getirdi."
+            "title": "Arka Plan",
+            "intro": "SigModz, Sigmally’yi gelişmiş özellikler ve kaliteli araçlarla daha iyi hâle getirmek isteyen oyuncu ve geliştiricileri bir araya getirir.",
+            "sigmodStart": "Her şey, RingZer0’nun açık kaynaklı sürümüne dayanan bir userscript modu olan SigMod ile başladı. Onun çalışması, Sigmally’de modern modding’in temelini attı.",
+            "sigmod": "SigMod; özelleştirme seçenekleri, arayüz iyileştirmeleri, makrolar ve topluluğun talep ettiği birçok özellik ekleyerek Sigmally için en popüler istemci modlarından biri hâline geldi.",
+            "sigfixes": "Daha sonra yx tarafından geliştirilen SigFixes, her şeyi bir adım ileri taşıdı: tam bir WebGL render motoru, multiboxing desteği, gelişmiş giriş hassasiyeti ve performans iyileştirmeleri — hepsi ciddi oyuncular için optimize edildi.",
+            "community": "Her iki mod da Sigmally topluluğu tarafından yaygın şekilde kabul görmekte ve oyunun sahibi tarafından da desteklenmektedir. SigModz, oyuncular ve geliştiricilerden gelen geri bildirimlerle gelişmeye devam ediyor.",
+            "thanks": "Orijinal tabanı sağlayan RingZer0’a ve teknik sınırları zorlayan yx’e özel teşekkürler. SigModz’un gelişmeye devam etmesini sağlayan şey, topluluğun desteğidir."
         },
-        "joinDiscord": "Discord'a Katıl"
+        "joinDiscord": "Discord’a Katıl"
     }
 }
