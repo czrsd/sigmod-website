@@ -3,7 +3,15 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const ModItem = ({ img, alt, title, desc, link }: any) => (
+type ModItemProps = {
+    img: string;
+    alt: string;
+    title: string;
+    desc: string;
+    link: string;
+};
+
+const ModItem = ({ img, alt, title, desc, link }: ModItemProps) => (
     <article className='flex flex-col md:flex-row items-center md:items-start gap-12 md:[&:nth-child(2)]:flex-row-reverse'>
         <div className='md:w-1/2 flex justify-center md:justify-end'>
             <Image

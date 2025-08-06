@@ -67,6 +67,10 @@ export function HeroSection() {
                                         width={1600}
                                         height={900}
                                         className='rounded-xl shadow-md'
+                                        loading={idx === 0 ? 'eager' : 'lazy'}
+                                        fetchPriority={
+                                            idx === 0 ? 'high' : 'auto'
+                                        }
                                     />
                                 </CarouselItem>
                             );

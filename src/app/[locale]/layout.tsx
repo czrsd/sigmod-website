@@ -8,7 +8,6 @@ import { routing } from '@/i18n/routing';
 import Footer from '@/components/Footer';
 import Preload from '@/components/Preload';
 import { LayoutTransition } from '@/components/layout-transition';
-import { animate } from 'framer-motion';
 
 async function getMetadata(locale: string): Promise<Metadata> {
     const messages = await getMessages({ locale });
