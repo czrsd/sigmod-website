@@ -73,9 +73,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                                     isActive ? 'bg-muted font-semibold' : ''
                                 }`}
                             >
-                                <Link href={step.href}>
-                                    {`${i + 1}. ${step.label}`}
-                                </Link>
+                                <Link href={step.href}>{`${i + 1}. ${
+                                    step.label
+                                }`}</Link>
                             </Button>
                         );
                     })}

@@ -382,6 +382,12 @@
             "title": "Başlarken",
             "desc": "SigModz'e hoş geldiniz! Bu kılavuz, Sigmally oyun deneyiminizi daha akıcı performans, tam kontrol ve güçlü araçlarla geliştiren SigMod ve SigFixes modlarını kurmanızı adım adım anlatır.",
             "access": "Birkaç kolay adımda akıllı makrolar, FPS artışları, UI ayarları, gelişmiş seçenekler ve daha fazlasının kilidini açacaksınız—hepsi oyununuza sorunsuzca entegre edilir.",
+            "video": {
+                "title": "Video eğitimi",
+                "desc": "Bu videoyu, görsel talimatları tercih ediyorsanız veya konu okumak için çok karmaşıksa izleyin.",
+                "credit": "Fake tarafından oluşturuldu",
+                "creditTitle": "Discord: fa_keo"
+            },
             "start": "Kuruluma Başla",
             "quickGuide": "Hızlı Kılavuz"
         },

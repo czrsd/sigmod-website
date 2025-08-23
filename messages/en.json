@@ -382,6 +382,12 @@
             "title": "Getting Started",
             "desc": "Welcome to SigModz! This guide walks you through installing SigMod and SigFixes—the two core mods that supercharge your Sigmally gameplay with smoother performance, total control, and powerful tools.",
             "access": "In just a few easy steps, you’ll unlock smart macros, FPS boosts, UI tweaks, advanced settings, and more—all seamlessly built right into your game.",
+            "video": {
+                "title": "Video tutorial",
+                "desc": "Watch this video if you prefer visual instructions or if the topic seems too complicated to read.",
+                "credit": "Created by Fake",
+                "creditTitle": "Discord: fa_keo"
+            },
             "start": "Start Installation",
             "quickGuide": "Quick Guide"
         },

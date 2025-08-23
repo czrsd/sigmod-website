@@ -382,6 +382,12 @@
             "title": "Loslegen",
             "desc": "Willkommen bei SigModz! Diese Anleitung zeigt dir, wie du SigMod und SigFixes installierst – die zwei Kernmods, die dein Sigmally-Gameplay mit flüssigerer Performance, voller Kontrolle und mächtigen Tools aufwerten.",
             "access": "In nur wenigen Schritten schaltest du clevere Makros, FPS-Boosts, UI-Anpassungen, erweiterte Einstellungen und mehr frei – alles nahtlos ins Spiel integriert.",
+            "video": {
+                "title": "Videoanleitung",
+                "desc": "Schau dir dieses Video an, wenn du visuelle Anweisungen bevorzugst oder das Thema zu kompliziert zum Lesen ist.",
+                "credit": "Erstellt von Fake",
+                "creditTitle": "Discord: fa_keo"
+            },
             "start": "Installation starten",
             "quickGuide": "Kurzanleitung"
         },

@@ -382,6 +382,12 @@
             "title": "Primeros Pasos",
             "desc": "¡Bienvenido a SigModz! Esta guía te lleva paso a paso para instalar SigMod y SigFixes, los dos mods principales que mejoran tu experiencia en Sigmally con rendimiento más fluido, control total y herramientas potentes.",
             "access": "En solo unos pasos fáciles, desbloquearás macros inteligentes, mejoras de FPS, ajustes de UI, configuraciones avanzadas y más, todo integrado sin problemas en tu juego.",
+            "video": {
+                "title": "Tutorial en video",
+                "desc": "Mira este video si prefieres instrucciones visuales o si el tema parece demasiado complicado para leer.",
+                "credit": "Creado por Fake",
+                "creditTitle": "Discord: fa_keo"
+            },
             "start": "Comenzar Instalación",
             "quickGuide": "Guía Rápida"
         },
