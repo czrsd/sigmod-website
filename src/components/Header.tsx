@@ -28,6 +28,7 @@ const languageMap: Record<string, string> = {
     de: 'Deutsch',
     tr: 'Türkçe',
     es: 'Español',
+    ru: 'Русский',
 };
 
 const mods = [
