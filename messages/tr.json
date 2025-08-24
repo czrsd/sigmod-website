@@ -579,5 +579,53 @@
             "thanks": "Orijinal tabanı sağlayan RingZer0’a ve teknik sınırları zorlayan yx’e özel teşekkürler. SigModz’un gelişmeye devam etmesini sağlayan şey, topluluğun desteğidir."
         },
         "joinDiscord": "Discord’a Katıl"
+    },
+    "TOSPage": {
+        "title": "SigMod - Hizmet Şartları",
+        "lastUpdated": "Son güncelleme: 03/02/2025",
+        "sections": {
+            "introduction": {
+                "heading": "1. Giriş",
+                "text": "SigMod, {sigmallyLink} için bir modifikasyondur. Bunu kullanarak bu şartları kabul etmiş olursunuz. Kabul etmiyorsanız SigMod’u kullanmamalısınız.",
+                "sigmallyLinkText": "Sigmally",
+                "sigmallyLinkUrl": "https://one.sigmally.com"
+            },
+            "fairUse": {
+                "heading": "2. Adil Kullanım",
+                "text": "SigMod, oyunu daha eğlenceli hale getirmek için vardır, bozmaya değil. Haksız avantaj sağlamak için modifikasyon yapmayın veya başkalarının deneyimini bozacak otomasyon araçları kullanmayın."
+            },
+            "noGuarantees": {
+                "heading": "3. Garanti Yok",
+                "text": "SigMod \"olduğu gibi\" sunulmaktadır. Bir şey ters giderse — oyun yasağı, veri kaybı veya diğer sorunlar — sorumluluk kabul etmiyoruz."
+            },
+            "dataCollection": {
+                "heading": "4. Veri Toplama",
+                "intro": "SigMod düzgün çalışabilmek için bazı verileri otomatik olarak toplar:",
+                "items": [
+                    "Google hesap verileri (kimlik doğrulama için kullanılıyorsa)",
+                    "Oyuncu istatistikleri (Altın, Seviye vb., ama kişisel veri yok)",
+                    "IP adresi",
+                    "Tarayıcı/Cihaz bilgisi"
+                ],
+                "accountText": "\"Arkadaşlar\" özelliğini kullanıyorsanız, bir kullanıcı adı ve şifre ile hesap oluşturmanız gerekir. Şifreler güvenli bir şekilde hashlenip saklanır. Şifrenizin güvenliğini nasıl sağladığımızı ve backend kaynak kodunu {githubLink} üzerinde görebilirsiniz.",
+                "githubLinkText": "GitHub",
+                "githubLinkUrl": "https://github.com/czrsd/sigmod"
+            },
+            "changes": {
+                "heading": "5. Bu Şartlarda Değişiklikler",
+                "text": "Bu şartlar zamanla değişebilir. SigMod’u değişikliklerden sonra kullanmaya devam ederseniz, bunları kabul etmiş sayılırsınız."
+            },
+            "enforcement": {
+                "heading": "6. Uygulama",
+                "text": "Kuralları ihlal ederseniz, IP engeli de dahil olmak üzere önlemler alabiliriz. İhlallerden dolayı ciddi finansal kayıplar meydana gelirse, yasal adımlar değerlendirilebilir."
+            },
+            "contact": {
+                "heading": "7. İletişim",
+                "intro": "Sorularınız veya endişeleriniz varsa, bizimle iletişime geçin:",
+                "items": ["Discord: czrsd", "E-posta: {emailLink}"],
+                "emailLinkText": "admin@czrsd.com",
+                "emailLinkUrl": "mailto:admin@czrsd.com"
+            }
+        }
     }
 }

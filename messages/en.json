@@ -579,5 +579,53 @@
             "thanks": "Special thanks to RingZer0 for the original base, and to yx for pushing the technical boundaries. The community’s support is what keeps SigModz alive and growing."
         },
         "joinDiscord": "Join the Discord"
+    },
+    "TOSPage": {
+        "title": "SigMod - Terms of Service",
+        "lastUpdated": "Last updated: 03/02/2025",
+        "sections": {
+            "introduction": {
+                "heading": "1. Introduction",
+                "text": "SigMod is a modification for {sigmallyLink}. By using it, you agree to these terms. If you don't agree, you shouldn't use SigMod.",
+                "sigmallyLinkText": "Sigmally",
+                "sigmallyLinkUrl": "https://one.sigmally.com"
+            },
+            "fairUse": {
+                "heading": "2. Fair Use",
+                "text": "SigMod is here to make the game more fun, not to break it. Please don't modify it to gain unfair advantages or use automation tools that ruin the experience for others."
+            },
+            "noGuarantees": {
+                "heading": "3. No Guarantees",
+                "text": "SigMod is provided \"as is\". If something goes wrong; whether it's a game ban, data loss, or other issues; we're not responsible."
+            },
+            "dataCollection": {
+                "heading": "4. Data Collection",
+                "intro": "SigMod automatically collects some data to function properly:",
+                "items": [
+                    "Google account data (if used for authentication)",
+                    "Player stats (Gold, Level, etc., but nothing personal)",
+                    "IP address",
+                    "Browser info"
+                ],
+                "accountText": "If you use the \"Friends\" feature, you'll need to create an account with a username and password. Passwords are securely hashed and stored. You can view the source code of the backend, including how we ensure your password's security, on {githubLink}.",
+                "githubLinkText": "GitHub",
+                "githubLinkUrl": "https://github.com/czrsd/sigmod"
+            },
+            "changes": {
+                "heading": "5. Changes to These Terms",
+                "text": "These terms might change over time. If you keep using SigMod after changes, that means you accept them."
+            },
+            "enforcement": {
+                "heading": "6. Enforcement",
+                "text": "If you break the rules, we may take action, including IP bans. If serious financial loss occurs due to violations, legal steps may be considered."
+            },
+            "contact": {
+                "heading": "7. Contact",
+                "intro": "If you have questions or concerns, reach out:",
+                "items": ["Discord: czrsd", "Email: {emailLink}"],
+                "emailLinkText": "admin@czrsd.com",
+                "emailLinkUrl": "mailto:admin@czrsd.com"
+            }
+        }
     }
 }

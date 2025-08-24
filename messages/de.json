@@ -579,5 +579,53 @@
             "thanks": "Großer Dank an RingZer0 für die ursprüngliche Basis und an yx für die technischen Durchbrüche. Die Unterstützung der Community hält SigModz am Leben."
         },
         "joinDiscord": "Tritt dem Discord bei"
+    },
+    "TOSPage": {
+        "title": "SigMod - Nutzungsbedingungen",
+        "lastUpdated": "Zuletzt aktualisiert: 03.02.2025",
+        "sections": {
+            "introduction": {
+                "heading": "1. Einführung",
+                "text": "SigMod ist eine Modifikation für {sigmallyLink}. Durch die Nutzung stimmen Sie diesen Bedingungen zu. Wenn Sie nicht zustimmen, sollten Sie SigMod nicht verwenden.",
+                "sigmallyLinkText": "Sigmally",
+                "sigmallyLinkUrl": "https://one.sigmally.com"
+            },
+            "fairUse": {
+                "heading": "2. Fair Use",
+                "text": "SigMod soll das Spiel spaßiger machen, nicht kaputt. Bitte modifizieren Sie es nicht, um unfaire Vorteile zu erhalten, oder verwenden Sie Automatisierungstools, die das Erlebnis für andere ruinieren."
+            },
+            "noGuarantees": {
+                "heading": "3. Keine Garantien",
+                "text": "SigMod wird \"wie es ist\" bereitgestellt. Wenn etwas schiefläuft – sei es ein Spielbann, Datenverlust oder andere Probleme – übernehmen wir keine Verantwortung."
+            },
+            "dataCollection": {
+                "heading": "4. Datenerhebung",
+                "intro": "SigMod sammelt automatisch einige Daten, um korrekt zu funktionieren:",
+                "items": [
+                    "Google-Konto-Daten (falls zur Authentifizierung verwendet)",
+                    "Spielerstatistiken (Gold, Level, etc., aber keine persönlichen Daten)",
+                    "IP-Adresse",
+                    "Browser-/Geräteinformationen"
+                ],
+                "accountText": "Wenn Sie die Funktion \"Freunde\" verwenden, müssen Sie ein Konto mit Benutzernamen und Passwort erstellen. Passwörter werden sicher gehasht und gespeichert. Sie können den Quellcode des Backends einsehen, einschließlich wie wir die Sicherheit Ihres Passworts gewährleisten, auf {githubLink}.",
+                "githubLinkText": "GitHub",
+                "githubLinkUrl": "https://github.com/czrsd/sigmod"
+            },
+            "changes": {
+                "heading": "5. Änderungen dieser Bedingungen",
+                "text": "Diese Bedingungen können sich im Laufe der Zeit ändern. Wenn Sie SigMod nach Änderungen weiterhin verwenden, stimmen Sie ihnen zu."
+            },
+            "enforcement": {
+                "heading": "6. Durchsetzung",
+                "text": "Wenn Sie die Regeln verletzen, können wir Maßnahmen ergreifen, einschließlich IP-Sperren. Wenn erheblicher finanzieller Schaden durch Verstöße entsteht, können rechtliche Schritte erwogen werden."
+            },
+            "contact": {
+                "heading": "7. Kontakt",
+                "intro": "Wenn Sie Fragen oder Bedenken haben, kontaktieren Sie uns:",
+                "items": ["Discord: czrsd", "E-Mail: {emailLink}"],
+                "emailLinkText": "admin@czrsd.com",
+                "emailLinkUrl": "mailto:admin@czrsd.com"
+            }
+        }
     }
 }
