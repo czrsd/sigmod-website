@@ -45,11 +45,13 @@
         "mods": {
             "sigmod": {
                 "title": "SigMod",
-                "desc": "SigMod, güçlü araçları parmaklarınızın ucuna getiren tam oyun içi mod menüsü ile Sigmally deneyiminizi dönüştürür. Hızlı beslemeler ve bölünmeler için programlanabilir makrolar kurun, temalar ve düzenlerle her görsel öğeyi özelleştirin ve günlük coin toplama gibi rutin görevleri otomatikleştirin. Oyun tarzınıza uygun HUD, tuş atamaları ve sohbet ayarlarını tümüyle oyundan çıkmadan ayarlayın."
+                "desc": "SigMod, güçlü araçları parmaklarınızın ucuna getiren tam oyun içi mod menüsü ile Sigmally deneyiminizi dönüştürür. Hızlı beslemeler ve bölünmeler için programlanabilir makrolar kurun, temalar ve düzenlerle her görsel öğeyi özelleştirin ve günlük coin toplama gibi rutin görevleri otomatikleştirin. Oyun tarzınıza uygun HUD, tuş atamaları ve sohbet ayarlarını tümüyle oyundan çıkmadan ayarlayın.",
+                "learnMore": "SigMod hakkında daha fazla bilgi edinin"
             },
             "sigfixes": {
                 "title": "SigFixes",
-                "desc": "SigFixes, akıcı ve tutarlı kare hızları ve minimum gecikme için performansı süper şarj eder. Daha hızlı yükleme sürelerinin, daha net giriş tepkisinin ve yerleşik multibox kontrollerinin tadını çıkarın; böylece birden fazla hesabı sorunsuz yönetin. Titreme ve gecikmeyi ortadan kaldırmak için çizim gecikmesi, hücre saydamlığı, kamera yakınlaştırması ve isim ölçeklendirmesini ayarlayın."
+                "desc": "SigFixes, akıcı ve tutarlı kare hızları ve minimum gecikme için performansı süper şarj eder. Daha hızlı yükleme sürelerinin, daha net giriş tepkisinin ve yerleşik multibox kontrollerinin tadını çıkarın; böylece birden fazla hesabı sorunsuz yönetin. Titreme ve gecikmeyi ortadan kaldırmak için çizim gecikmesi, hücre saydamlığı, kamera yakınlaştırması ve isim ölçeklendirmesini ayarlayın.",
+                "learnMore": "SigFixes hakkında daha fazla bilgi edinin"
             },
             "learnMore": "Öğren & Kur"
         },

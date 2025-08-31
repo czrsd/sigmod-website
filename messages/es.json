@@ -45,11 +45,13 @@
         "mods": {
             "sigmod": {
                 "title": "SigMod",
-                "desc": "SigMod transforma tu experiencia en Sigmally con un menú completo dentro del juego que pone herramientas poderosas al alcance de tu mano. Configura macros programables para alimentación y divisiones rápidas, personaliza cada elemento visual con temas y diseños, y automatiza tareas rutinarias como la recolección diaria de monedas. Ajusta tu HUD, asignaciones de teclas y configuración del chat para adaptar el juego a tu estilo, todo sin salir de la partida."
+                "desc": "SigMod transforma tu experiencia en Sigmally con un menú completo dentro del juego que pone herramientas poderosas al alcance de tu mano. Configura macros programables para alimentación y divisiones rápidas, personaliza cada elemento visual con temas y diseños, y automatiza tareas rutinarias como la recolección diaria de monedas. Ajusta tu HUD, asignaciones de teclas y configuración del chat para adaptar el juego a tu estilo, todo sin salir de la partida.",
+                "learnMore": "Más información sobre SigMod"
             },
             "sigfixes": {
                 "title": "SigFixes",
-                "desc": "SigFixes potencia el rendimiento para ofrecer tasas de frames suaves y constantes con mínimo lag. Disfruta tiempos de carga más rápidos, respuesta de entrada más precisa y controles multibox integrados para gestionar varias cuentas sin problemas. Ajusta el retardo de dibujo, la opacidad de células, el zoom de cámara y la escala de nombres para eliminar tirones y mantener tu juego afilado."
+                "desc": "SigFixes potencia el rendimiento para ofrecer tasas de frames suaves y constantes con mínimo lag. Disfruta tiempos de carga más rápidos, respuesta de entrada más precisa y controles multibox integrados para gestionar varias cuentas sin problemas. Ajusta el retardo de dibujo, la opacidad de células, el zoom de cámara y la escala de nombres para eliminar tirones y mantener tu juego afilado.",
+                "learnMore": "Más información sobre SigFixes"
             },
             "learnMore": "Aprender e Instalar"
         },

@@ -8,10 +8,11 @@ type ModItemProps = {
     alt: string;
     title: string;
     desc: string;
+    learnMore: string;
     link: string;
 };
 
-const ModItem = ({ img, alt, title, desc, link }: ModItemProps) => (
+const ModItem = ({ img, alt, title, desc, learnMore, link }: ModItemProps) => (
     <article className='flex flex-col md:flex-row items-center md:items-start gap-12 md:[&:nth-child(2)]:flex-row-reverse'>
         <div className='md:w-1/2 flex justify-center md:justify-end'>
             <Image
@@ -30,7 +31,7 @@ const ModItem = ({ img, alt, title, desc, link }: ModItemProps) => (
             </p>
             <div className='mt-6'>
                 <Button asChild>
-                    <Link href={link}>Learn More</Link>
+                    <Link href={link}>{learnMore}</Link>
                 </Button>
             </div>
         </div>
@@ -47,6 +48,7 @@ export function ModsSection() {
                 alt='SigMod preview'
                 title={t('sigmod.title')}
                 desc={t('sigmod.desc')}
+                learnMore={t('sigmod.learnMore')}
                 link='/sigmod'
             />
             <ModItem
@@ -54,6 +56,7 @@ export function ModsSection() {
                 alt='SigFixes preview'
                 title={t('sigfixes.title')}
                 desc={t('sigfixes.desc')}
+                learnMore={t('sigfixes.learnMore')}
                 link='/sigfixes'
             />
         </section>

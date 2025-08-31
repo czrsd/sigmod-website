@@ -45,11 +45,13 @@
         "mods": {
             "sigmod": {
                 "title": "SigMod",
-                "desc": "SigMod transforms your Sigmally experience with a full in‑game mod menu that puts powerful tools at your fingertips. Set up programmable macros for rapid feeds and splits, customize every visual element with themes and layouts, and automate routine tasks like daily‑coin collection. Fine‑tune your HUD, keybindings, and chat settings to match your playstyle, all without leaving the game."
+                "desc": "SigMod transforms your Sigmally experience with a full in‑game mod menu that puts powerful tools at your fingertips. Set up programmable macros for rapid feeds and splits, customize every visual element with themes and layouts, and automate routine tasks like daily‑coin collection. Fine‑tune your HUD, keybindings, and chat settings to match your playstyle, all without leaving the game.",
+                "learnMore": "Learn more about SigMod"
             },
             "sigfixes": {
                 "title": "SigFixes",
-                "desc": "SigFixes supercharges performance for smooth, consistent frame rates and minimal lag. Enjoy faster load times, crisper input response, and built‑in multibox controls so you can manage multiple accounts seamlessly. Tweak draw delay, cell opacity, camera zoom, and name scaling to eliminate stutter and keep your gameplay razor‑sharp."
+                "desc": "SigFixes supercharges performance for smooth, consistent frame rates and minimal lag. Enjoy faster load times, crisper input response, and built‑in multibox controls so you can manage multiple accounts seamlessly. Tweak draw delay, cell opacity, camera zoom, and name scaling to eliminate stutter and keep your gameplay razor‑sharp.",
+                "learnMore": "Learn more about SigFixes"
             },
             "learnMore": "Learn & Install"
         },
