@@ -474,6 +474,7 @@
         "End": {
             "title": "Her Şey Hazır 🎉",
             "desc": "SigMod ve SigFixes yüklendi! Şimdi en akıcı ve kişiselleştirilebilir Sigmally deneyiminin tadını çıkarın. Ayarlarınızı yapın ve en iyisi olun.",
+            "notice": "Oyuna katılmadan önce tarayıcınızı yeniden başlatın.",
             "play": "Sigmally Oyna",
             "explore": "Keşfet"
         }

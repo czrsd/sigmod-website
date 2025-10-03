@@ -12,6 +12,11 @@ export default function EndPage() {
         <div className='max-w-3xl px-4 space-y-5'>
             <h1 className='text-4xl font-extrabold mb-4'>{t('title')}</h1>
             <p className='text-md mb-4'>{t('desc')}</p>
+            <ul>
+                <li className='list-disc ml-5'>
+                    <strong className='text-md mb-4'>{t('notice')}</strong>
+                </li>
+            </ul>
             <ZoomableImage
                 src='/guide/main_menu.png'
                 width={330}

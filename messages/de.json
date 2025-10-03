@@ -474,6 +474,7 @@
         "End": {
             "title": "Alles bereit 🎉",
             "desc": "SigMod und SigFixes sind installiert! Genieße das flüssigste und anpassbarste Sigmally-Erlebnis. Leg los, justiere und spiel dein bestes Spiel.",
+            "notice": "Starten Sie Ihren Browser neu, bevor Sie dem Spiel beitreten",
             "play": "Sigmally spielen",
             "explore": "Entdecken"
         }

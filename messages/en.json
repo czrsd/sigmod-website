@@ -474,6 +474,7 @@
         "End": {
             "title": "You're All Set 🎉",
             "desc": "SigMod and SigFixes are installed! Enjoy the smoothest, most customizable Sigmally experience yet. Dive in, tweak your setup, and play at your best.",
+            "notice": "Make sure to restart your browser before joining the game",
             "play": "Play Sigmally",
             "explore": "Explore"
         }
