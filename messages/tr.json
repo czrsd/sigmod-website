@@ -631,5 +631,168 @@
                 "emailLinkUrl": "mailto:admin@czrsd.com"
             }
         }
+    },
+    "Shop": {
+        "MainPage": {
+            "failed": "Mağaza verileri yüklenemedi. Lütfen daha sonra tekrar deneyin.",
+            "Hero": {
+                "title": "<gold>Altın</gold> & <subscriptions>Abonelikleri</subscriptions> Daha Ucuz Alın",
+                "description": "Oyun içi fiyatlar yüksek. Burada, süresi sınırlı özel fırsatları bulabilirsiniz.",
+                "limitedOffersTitle": "Sınırlı Teklifler",
+                "limitedOffersSubtitle": "Tükenmeden kapın!",
+                "endsIn": "Sona eriyor"
+            },
+            "SpecialBundles": {
+                "coins": "Altın",
+                "subscription": "Abonelik",
+                "month": "ay",
+                "months": "ay",
+                "save": "%{percent} Tasarruf",
+                "buyNow": "Şimdi Satın Al"
+            },
+            "Products": {
+                "title": "Ürünler",
+                "coins": {
+                    "name": "Altın",
+                    "description": "5.000’den 1.000.000’e kadar bireysel altın paketleri"
+                },
+                "subscriptions": {
+                    "name": "Abonelikler",
+                    "description": "Premium özelliklere erişim kazanın"
+                },
+                "bundles": {
+                    "name": "Paketler",
+                    "description": "Altın ve abonelikleri daha uygun fiyata birleştiren teklifler"
+                }
+            },
+            "WhyBuyHere": {
+                "title": "Neden Buradan Almalısınız",
+                "reasons": [
+                    {
+                        "title": "Hızlı Teslimat",
+                        "description": "Ödeme yaptıktan hemen sonra ürünlerinizi anında alın, bekleme yok."
+                    },
+                    {
+                        "title": "Güvenli Ödeme",
+                        "description": "Tüm ödemeler şifrelenmiş ve PayPal gibi güvenilir sağlayıcılar aracılığıyla işlenir."
+                    },
+                    {
+                        "title": "Güven",
+                        "description": "Sigmally doğrulanmış bir moderatör ve 28.000’den fazla kurulumlu SigMod’un yaratıcısı tarafından yapılmıştır."
+                    },
+                    {
+                        "title": "En İyi Değer",
+                        "description": "Gizli ücretler olmadan adil fiyatlar ve harika değer elde edin."
+                    }
+                ]
+            },
+            "FAQ": {
+                "title": "SSS",
+                "items": [
+                    {
+                        "question": "Altın veya abonelik satın aldım ama hesabımda görünmüyor. Ne yapmalıyım?",
+                        "answer": "Tarayıcınızda sayfayı yenileyin. Görüntülenen altınlar güncel olmayabilir. Yenilemeden sonra hâlâ görünmüyorsa, destek ile iletişime geçin."
+                    },
+                    {
+                        "question": "PayPal ödememi tamamladıktan sonra ne olur?",
+                        "answer": "Sitemize geri yönlendirileceksiniz. Siparişiniz onaylanacak ve ürünler hesabınıza anında eklenecek."
+                    },
+                    {
+                        "question": "PayPal sekmesini yönlendirilmeden önce kapatırsam ne olur?",
+                        "answer": "Sorun değil. Siteyi yeniden açabilir ve sipariş durumunuzu kontrol edebilirsiniz — ödeme geçtiyse teslimat yine de işlenecektir."
+                    },
+                    {
+                        "question": "Satın alımımı birden fazla hesapta kullanabilir miyim?",
+                        "answer": "Hayır, satın alımlar, ödeme sırasında kullandığınız hesaba bağlanır. Bu her şeyi güvenli ve adil tutar."
+                    },
+                    {
+                        "question": "Yanlış paketi yanlışlıkla aldıysam ne yapmalıyım?",
+                        "answer": "Hemen destek ile iletişime geçin. Sipariş henüz onaylanmadıysa, değiştirebilir veya iade edebiliriz."
+                    }
+                ]
+            },
+            "Contact": {
+                "title": "İletişim",
+                "supportEmail": "Destek e-postası",
+                "or": "veya",
+                "createTicket": "Discord’da destek bileti oluştur"
+            }
+        },
+        "Purchase": {
+            "Complete": {
+                "loading": "Satın alma işlemi tamamlanıyor...",
+                "failedCapture": "Sipariş alınamadı.",
+                "failedPurchase": "Satın alma başarısız oldu. Lütfen Discord üzerinden destek ile iletişime geçin.",
+                "purchaseComplete": "Satın Alma Tamamlandı!",
+                "thanks": "Siparişiniz için teşekkürler!",
+                "orderId": "Sipariş ID: {id}",
+                "coinsLabel": "Altın",
+                "subscriptionLabel": "Abonelik",
+                "subscriptionValidUntil": "Abonelik geçerli: {date}",
+                "goToGame": "Oyuna Git",
+                "shopMore": "Daha fazla al"
+            },
+            "Canceled": {
+                "loading": "Yükleniyor...",
+                "title": "Satın Alma İptal Edildi",
+                "orderId": "Sipariş ID: {id}",
+                "noPayment": "Herhangi bir ödeme yapılmadı.",
+                "supportText": "Bu bir hata ise veya satın alma sırasında sorun yaşadıysanız, lütfen destek ile iletişime geçin.",
+                "returnToShop": "Mağazaya Dön",
+                "backToGame": "Oyuna Dön",
+                "needHelp": "Yardıma mı ihtiyacınız var?",
+                "contactSupport": "Destek ile İletişime Geçin"
+            }
+        },
+        "Products": {
+            "back": "Geri",
+            "CoinPackages": {
+                "loading": "Yükleniyor...",
+                "notFound": "Ürün bulunamadı",
+                "title": "Altın Paketleri",
+                "saveMore": "Daha fazla tasarruf etmek ister misiniz? Paketlerimizi inceleyin.",
+                "buyNow": "Şimdi Satın Al",
+                "viewBundles": "Paketleri Görüntüle",
+                "coinsLabel": "{amount} Altın",
+                "price": "€{price}",
+                "originalPrice": "€{original}"
+            },
+            "SubscriptionPackages": {
+                "loading": "Yükleniyor...",
+                "notFound": "Ürün bulunamadı",
+                "title": "Abonelik Paketleri",
+                "saveMore": "Daha fazla tasarruf etmek ister misiniz? Paketlerimizi inceleyin.",
+                "buyNow": "Şimdi Satın Al",
+                "viewBundles": "Paketleri Görüntüle",
+                "monthLabel": "{duration} ay",
+                "monthsLabel": "{duration} ay",
+                "price": "€{price}",
+                "originalPrice": "€{original}"
+            },
+            "BundlesPage": {
+                "loading": "Yükleniyor...",
+                "notFound": "Ürün bulunamadı",
+                "title": "Paketler",
+                "buyNow": "Şimdi Satın Al",
+                "monthLabel": "{duration} aylık Abonelik",
+                "monthsLabel": "{duration} aylık Abonelik",
+                "coinsLabel": "{amount} Altın",
+                "price": "€{price}",
+                "originalPrice": "€{original}"
+            },
+            "Checkout": {
+                "title": "Ödeme",
+                "emailLabel": "E-posta",
+                "emailPlaceholder": "Sigmally e-postanızı girin",
+                "emailDescription": "Bu e-posta, Sigmally hesabınıza bağlı olan adresle eşleşmelidir!",
+                "emailValid": "E-posta geçerli",
+                "emailInvalid": "Geçersiz e-posta",
+                "paymentMethod": "Ödeme yöntemi",
+                "selectPaymentPlaceholder": "Ödeme yöntemi seçin",
+                "paypal": "PayPal",
+                "buyWithPaypal": "PayPal ile Satın Al",
+                "processing": "İşleniyor..."
+            }
+        }
     }
 }

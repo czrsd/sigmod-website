@@ -631,5 +631,168 @@
                 "emailLinkUrl": "mailto:admin@czrsd.com"
             }
         }
+    },
+    "Shop": {
+        "MainPage": {
+            "failed": "Failed to load shop data. Please try again later.",
+            "Hero": {
+                "title": "Get Your <gold>Gold</gold> & <subscriptions>Subscriptions</subscriptions> Cheaper",
+                "description": "Prices in-game are high, here you’ll find exclusive deals that won’t last forever.",
+                "limitedOffersTitle": "Limited Offers",
+                "limitedOffersSubtitle": "Grab them before they’re gone!",
+                "endsIn": "Ends in"
+            },
+            "SpecialBundles": {
+                "coins": "Coins",
+                "subscription": "Subscription",
+                "month": "month",
+                "months": "months",
+                "save": "Save {percent}%",
+                "buyNow": "Buy now"
+            },
+            "Products": {
+                "title": "Products",
+                "coins": {
+                    "name": "Coins",
+                    "description": "Individual coin amounts from 5,000 up to 1,000,000"
+                },
+                "subscriptions": {
+                    "name": "Subscriptions",
+                    "description": "Get access to premium features"
+                },
+                "bundles": {
+                    "name": "Bundles",
+                    "description": "Combination of coins and subscription in one offer for a cheaper price"
+                }
+            },
+            "WhyBuyHere": {
+                "title": "Why Buy Here",
+                "reasons": [
+                    {
+                        "title": "Fast Delivery",
+                        "description": "Get your items instantly after payment with no waiting time."
+                    },
+                    {
+                        "title": "Secure Checkout",
+                        "description": "All payments are encrypted and processed through trusted providers like PayPal."
+                    },
+                    {
+                        "title": "Trust",
+                        "description": "Made by a verified Sigmally moderator and the creator of SigMod with over 28,000 installs."
+                    },
+                    {
+                        "title": "Best Value",
+                        "description": "Enjoy fair pricing and great value without any hidden costs."
+                    }
+                ]
+            },
+            "FAQ": {
+                "title": "FAQ",
+                "items": [
+                    {
+                        "question": "I bought coins or a subscription and they do not appear on my account. What should I do?",
+                        "answer": "Refresh the page in your browser. Your displayed coins might not be up to date. If they still don’t appear after refreshing, please contact support."
+                    },
+                    {
+                        "question": "What happens after I complete my PayPal payment?",
+                        "answer": "You’ll be redirected back to our site. There your order is confirmed, and the items are instantly added to your account."
+                    },
+                    {
+                        "question": "What if I close the PayPal tab before it redirects back?",
+                        "answer": "No problem. You can reopen the site and check your order status — if the payment went through, your delivery will still be processed."
+                    },
+                    {
+                        "question": "Can I use my purchase on multiple accounts?",
+                        "answer": "No, purchases are linked to the account you used during checkout. This keeps everything secure and fair."
+                    },
+                    {
+                        "question": "What if I accidentally bought the wrong package?",
+                        "answer": "Contact support immediately. If the order hasn’t been confirmed yet, we can adjust or refund it."
+                    }
+                ]
+            },
+            "Contact": {
+                "title": "Contact",
+                "supportEmail": "Support email",
+                "or": "or",
+                "createTicket": "Create ticket on Discord"
+            }
+        },
+        "Purchase": {
+            "Complete": {
+                "loading": "Completing your purchase...",
+                "failedCapture": "Failed to capture order.",
+                "failedPurchase": "Purchase failed. Please contact the support on Discord.",
+                "purchaseComplete": "Purchase Complete!",
+                "thanks": "Thanks for your order!",
+                "orderId": "Order id: {id}",
+                "coinsLabel": "Coins",
+                "subscriptionLabel": "Subscription",
+                "subscriptionValidUntil": "Subscription valid until {date}",
+                "goToGame": "Go to Game",
+                "shopMore": "Shop more"
+            },
+            "Canceled": {
+                "loading": "Loading...",
+                "title": "Purchase Canceled",
+                "orderId": "Order ID: {id}",
+                "noPayment": "No payment was processed.",
+                "supportText": "If this was a mistake or you had trouble completing your purchase, please contact our support.",
+                "returnToShop": "Return to Shop",
+                "backToGame": "Back to Game",
+                "needHelp": "Need help?",
+                "contactSupport": "Contact Support"
+            }
+        },
+        "Products": {
+            "back": "Back",
+            "CoinPackages": {
+                "loading": "Loading...",
+                "notFound": "Product not found",
+                "title": "Coin Packages",
+                "saveMore": "Want to save even more? Check out our bundles.",
+                "buyNow": "Buy now",
+                "viewBundles": "View Bundles",
+                "coinsLabel": "{amount} Coins",
+                "price": "€{price}",
+                "originalPrice": "€{original}"
+            },
+            "SubscriptionPackages": {
+                "loading": "Loading...",
+                "notFound": "Product not found",
+                "title": "Subscription Packages",
+                "saveMore": "Want to save even more? Check out our bundles.",
+                "buyNow": "Buy now",
+                "viewBundles": "View Bundles",
+                "monthLabel": "{duration} month",
+                "monthsLabel": "{duration} months",
+                "price": "€{price}",
+                "originalPrice": "€{original}"
+            },
+            "BundlesPage": {
+                "loading": "Loading...",
+                "notFound": "Product not found",
+                "title": "Bundles",
+                "buyNow": "Buy now",
+                "monthLabel": "{duration} month Subscription",
+                "monthsLabel": "{duration} months Subscription",
+                "coinsLabel": "{amount} Coins",
+                "price": "€{price}",
+                "originalPrice": "€{original}"
+            },
+            "Checkout": {
+                "title": "Checkout",
+                "emailLabel": "Email",
+                "emailPlaceholder": "Enter your Sigmally email",
+                "emailDescription": "This email must match the email address associated with your Sigmally account!",
+                "emailValid": "Email is valid",
+                "emailInvalid": "Invalid email",
+                "paymentMethod": "Payment method",
+                "selectPaymentPlaceholder": "Select payment method",
+                "paypal": "PayPal",
+                "buyWithPaypal": "Buy with PayPal",
+                "processing": "Processing..."
+            }
+        }
     }
 }

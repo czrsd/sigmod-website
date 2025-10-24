@@ -631,5 +631,168 @@
                 "emailLinkUrl": "mailto:admin@czrsd.com"
             }
         }
+    },
+    "Shop": {
+        "MainPage": {
+            "failed": "Fehler beim Laden der Shop-Daten. Bitte versuche es später erneut.",
+            "Hero": {
+                "title": "Hole dir <gold>Gold</gold> & <subscriptions>Abonnements</subscriptions> günstiger",
+                "description": "Die Preise im Spiel sind hoch. Hier findest du exklusive Angebote, die nicht ewig verfügbar sind.",
+                "limitedOffersTitle": "Limitierte Angebote",
+                "limitedOffersSubtitle": "Schnapp sie dir, bevor sie weg sind!",
+                "endsIn": "Endet in"
+            },
+            "SpecialBundles": {
+                "coins": "Coins",
+                "subscription": "Abonnement",
+                "month": "Monat",
+                "months": "Monate",
+                "save": "Spare {percent}%",
+                "buyNow": "Jetzt kaufen"
+            },
+            "Products": {
+                "title": "Produkte",
+                "coins": {
+                    "name": "Coins",
+                    "description": "Individuelle Coin-Mengen von 5.000 bis 1.000.000"
+                },
+                "subscriptions": {
+                    "name": "Abonnements",
+                    "description": "Erhalte Zugang zu Premium-Funktionen"
+                },
+                "bundles": {
+                    "name": "Bundles",
+                    "description": "Kombination aus Coins und Abonnement in einem Angebot zu einem günstigeren Preis"
+                }
+            },
+            "WhyBuyHere": {
+                "title": "Warum hier kaufen",
+                "reasons": [
+                    {
+                        "title": "Schnelle Lieferung",
+                        "description": "Erhalte deine Items sofort nach der Zahlung ohne Wartezeit."
+                    },
+                    {
+                        "title": "Sicherer Checkout",
+                        "description": "Alle Zahlungen sind verschlüsselt und werden über vertrauenswürdige Anbieter wie PayPal abgewickelt."
+                    },
+                    {
+                        "title": "Vertrauen",
+                        "description": "Erstellt von einem verifizierten Sigmally-Moderator und dem Schöpfer von SigMod mit über 28.000 Installationen."
+                    },
+                    {
+                        "title": "Beste Preis-Leistung",
+                        "description": "Genieße faire Preise und großen Wert ohne versteckte Kosten."
+                    }
+                ]
+            },
+            "FAQ": {
+                "title": "FAQ",
+                "items": [
+                    {
+                        "question": "Ich habe Coins oder ein Abonnement gekauft, sie erscheinen aber nicht auf meinem Konto. Was soll ich tun?",
+                        "answer": "Aktualisiere die Seite in deinem Browser. Deine angezeigten Coins sind möglicherweise nicht aktuell. Wenn sie nach dem Aktualisieren immer noch nicht erscheinen, kontaktiere bitte den Support."
+                    },
+                    {
+                        "question": "Was passiert, nachdem ich meine PayPal-Zahlung abgeschlossen habe?",
+                        "answer": "Du wirst zurück auf unsere Seite weitergeleitet. Dort wird deine Bestellung bestätigt und die Items werden sofort deinem Konto hinzugefügt."
+                    },
+                    {
+                        "question": "Was passiert, wenn ich den PayPal-Tab schließe, bevor die Rückleitung erfolgt?",
+                        "answer": "Kein Problem. Du kannst die Seite erneut öffnen und deinen Bestellstatus prüfen – wenn die Zahlung erfolgt ist, wird deine Lieferung trotzdem bearbeitet."
+                    },
+                    {
+                        "question": "Kann ich meinen Kauf auf mehreren Konten verwenden?",
+                        "answer": "Nein, Käufe sind an das Konto gebunden, das du beim Checkout verwendet hast. So bleibt alles sicher und fair."
+                    },
+                    {
+                        "question": "Was, wenn ich versehentlich das falsche Paket gekauft habe?",
+                        "answer": "Kontaktiere sofort den Support. Wenn die Bestellung noch nicht bestätigt wurde, können wir sie anpassen oder erstatten."
+                    }
+                ]
+            },
+            "Contact": {
+                "title": "Kontakt",
+                "supportEmail": "Support-E-Mail",
+                "or": "oder",
+                "createTicket": "Ticket auf Discord erstellen"
+            }
+        },
+        "Purchase": {
+            "Complete": {
+                "loading": "Abschluss des Kaufs...",
+                "failedCapture": "Fehler beim Erfassen der Bestellung.",
+                "failedPurchase": "Kauf fehlgeschlagen. Bitte kontaktiere den Support auf Discord.",
+                "purchaseComplete": "Kauf abgeschlossen!",
+                "thanks": "Danke für deine Bestellung!",
+                "orderId": "Bestell-ID: {id}",
+                "coinsLabel": "Coins",
+                "subscriptionLabel": "Abonnement",
+                "subscriptionValidUntil": "Abonnement gültig bis {date}",
+                "goToGame": "Zum Spiel",
+                "shopMore": "Mehr einkaufen"
+            },
+            "Canceled": {
+                "loading": "Lade...",
+                "title": "Kauf abgebrochen",
+                "orderId": "Bestell-ID: {id}",
+                "noPayment": "Es wurde keine Zahlung verarbeitet.",
+                "supportText": "Wenn dies ein Versehen war oder du Probleme hattest, den Kauf abzuschließen, kontaktiere bitte unseren Support.",
+                "returnToShop": "Zurück zum Shop",
+                "backToGame": "Zurück zum Spiel",
+                "needHelp": "Brauchst du Hilfe?",
+                "contactSupport": "Support kontaktieren"
+            }
+        },
+        "Products": {
+            "back": "Zurück",
+            "CoinPackages": {
+                "loading": "Lade...",
+                "notFound": "Produkt nicht gefunden",
+                "title": "Coin-Pakete",
+                "saveMore": "Willst du noch mehr sparen? Schau dir unsere Bundles an.",
+                "buyNow": "Jetzt kaufen",
+                "viewBundles": "Bundles anzeigen",
+                "coinsLabel": "{amount} Coins",
+                "price": "€{price}",
+                "originalPrice": "€{original}"
+            },
+            "SubscriptionPackages": {
+                "loading": "Lade...",
+                "notFound": "Produkt nicht gefunden",
+                "title": "Abonnement-Pakete",
+                "saveMore": "Willst du noch mehr sparen? Schau dir unsere Bundles an.",
+                "buyNow": "Jetzt kaufen",
+                "viewBundles": "Bundles anzeigen",
+                "monthLabel": "{duration} Monat",
+                "monthsLabel": "{duration} Monate",
+                "price": "€{price}",
+                "originalPrice": "€{original}"
+            },
+            "BundlesPage": {
+                "loading": "Lade...",
+                "notFound": "Produkt nicht gefunden",
+                "title": "Bundles",
+                "buyNow": "Jetzt kaufen",
+                "monthLabel": "{duration} Monat-Abonnement",
+                "monthsLabel": "{duration} Monate-Abonnement",
+                "coinsLabel": "{amount} Coins",
+                "price": "€{price}",
+                "originalPrice": "€{original}"
+            },
+            "Checkout": {
+                "title": "Checkout",
+                "emailLabel": "E-Mail",
+                "emailPlaceholder": "Gib deine Sigmally-E-Mail ein",
+                "emailDescription": "Diese E-Mail muss mit der E-Mail-Adresse deines Sigmally-Kontos übereinstimmen!",
+                "emailValid": "E-Mail ist gültig",
+                "emailInvalid": "Ungültige E-Mail",
+                "paymentMethod": "Zahlungsmethode",
+                "selectPaymentPlaceholder": "Wähle eine Zahlungsmethode",
+                "paypal": "PayPal",
+                "buyWithPaypal": "Mit PayPal kaufen",
+                "processing": "Verarbeite..."
+            }
+        }
     }
 }

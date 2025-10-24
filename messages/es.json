@@ -631,5 +631,168 @@
                 "emailLinkUrl": "mailto:admin@czrsd.com"
             }
         }
+    },
+    "Shop": {
+        "MainPage": {
+            "failed": "Error al cargar los datos de la tienda. Por favor, inténtalo de nuevo más tarde.",
+            "Hero": {
+                "title": "Obtén <gold>Oro</gold> & <subscriptions>Suscripciones</subscriptions> más barato",
+                "description": "Los precios en el juego son altos. Aquí encontrarás ofertas exclusivas que no durarán para siempre.",
+                "limitedOffersTitle": "Ofertas Limitadas",
+                "limitedOffersSubtitle": "¡Consíguelas antes de que se agoten!",
+                "endsIn": "Termina en"
+            },
+            "SpecialBundles": {
+                "coins": "Monedas",
+                "subscription": "Suscripción",
+                "month": "mes",
+                "months": "meses",
+                "save": "Ahorra {percent}%",
+                "buyNow": "Comprar ahora"
+            },
+            "Products": {
+                "title": "Productos",
+                "coins": {
+                    "name": "Monedas",
+                    "description": "Cantidades individuales de monedas de 5.000 a 1.000.000"
+                },
+                "subscriptions": {
+                    "name": "Suscripciones",
+                    "description": "Obtén acceso a funciones premium"
+                },
+                "bundles": {
+                    "name": "Paquetes",
+                    "description": "Combinación de monedas y suscripción en una sola oferta a un precio más económico"
+                }
+            },
+            "WhyBuyHere": {
+                "title": "Por qué comprar aquí",
+                "reasons": [
+                    {
+                        "title": "Entrega rápida",
+                        "description": "Recibe tus artículos al instante después del pago, sin tiempos de espera."
+                    },
+                    {
+                        "title": "Compra segura",
+                        "description": "Todos los pagos están cifrados y se procesan a través de proveedores confiables como PayPal."
+                    },
+                    {
+                        "title": "Confianza",
+                        "description": "Creado por un moderador verificado de Sigmally y el creador de SigMod con más de 28,000 instalaciones."
+                    },
+                    {
+                        "title": "Mejor valor",
+                        "description": "Disfruta de precios justos y gran valor sin costos ocultos."
+                    }
+                ]
+            },
+            "FAQ": {
+                "title": "Preguntas frecuentes",
+                "items": [
+                    {
+                        "question": "Compré monedas o una suscripción y no aparecen en mi cuenta. ¿Qué debo hacer?",
+                        "answer": "Actualiza la página en tu navegador. Tus monedas mostradas podrían no estar actualizadas. Si aún no aparecen después de actualizar, contacta con soporte."
+                    },
+                    {
+                        "question": "¿Qué sucede después de completar mi pago en PayPal?",
+                        "answer": "Serás redirigido de vuelta a nuestro sitio. Allí se confirmará tu pedido y los artículos se agregarán instantáneamente a tu cuenta."
+                    },
+                    {
+                        "question": "¿Qué pasa si cierro la pestaña de PayPal antes de que se redirija de vuelta?",
+                        "answer": "No hay problema. Puedes volver a abrir el sitio y verificar el estado de tu pedido; si el pago se realizó, la entrega aún se procesará."
+                    },
+                    {
+                        "question": "¿Puedo usar mi compra en varias cuentas?",
+                        "answer": "No, las compras están vinculadas a la cuenta que usaste durante el checkout. Esto mantiene todo seguro y justo."
+                    },
+                    {
+                        "question": "¿Qué pasa si accidentalmente compré el paquete equivocado?",
+                        "answer": "Contacta al soporte inmediatamente. Si el pedido aún no ha sido confirmado, podemos ajustarlo o reembolsarlo."
+                    }
+                ]
+            },
+            "Contact": {
+                "title": "Contacto",
+                "supportEmail": "Correo de soporte",
+                "or": "o",
+                "createTicket": "Crear ticket en Discord"
+            }
+        },
+        "Purchase": {
+            "Complete": {
+                "loading": "Completando tu compra...",
+                "failedCapture": "Error al capturar el pedido.",
+                "failedPurchase": "Compra fallida. Por favor contacta al soporte en Discord.",
+                "purchaseComplete": "¡Compra completada!",
+                "thanks": "¡Gracias por tu pedido!",
+                "orderId": "ID del pedido: {id}",
+                "coinsLabel": "Monedas",
+                "subscriptionLabel": "Suscripción",
+                "subscriptionValidUntil": "Suscripción válida hasta {date}",
+                "goToGame": "Ir al juego",
+                "shopMore": "Comprar más"
+            },
+            "Canceled": {
+                "loading": "Cargando...",
+                "title": "Compra cancelada",
+                "orderId": "ID del pedido: {id}",
+                "noPayment": "No se procesó ningún pago.",
+                "supportText": "Si esto fue un error o tuviste problemas para completar la compra, contacta a nuestro soporte.",
+                "returnToShop": "Volver a la tienda",
+                "backToGame": "Volver al juego",
+                "needHelp": "¿Necesitas ayuda?",
+                "contactSupport": "Contactar soporte"
+            }
+        },
+        "Products": {
+            "back": "Atrás",
+            "CoinPackages": {
+                "loading": "Cargando...",
+                "notFound": "Producto no encontrado",
+                "title": "Paquetes de Monedas",
+                "saveMore": "¿Quieres ahorrar aún más? Revisa nuestros paquetes combinados.",
+                "buyNow": "Comprar ahora",
+                "viewBundles": "Ver paquetes combinados",
+                "coinsLabel": "{amount} Monedas",
+                "price": "€{price}",
+                "originalPrice": "€{original}"
+            },
+            "SubscriptionPackages": {
+                "loading": "Cargando...",
+                "notFound": "Producto no encontrado",
+                "title": "Paquetes de Suscripción",
+                "saveMore": "¿Quieres ahorrar aún más? Revisa nuestros paquetes combinados.",
+                "buyNow": "Comprar ahora",
+                "viewBundles": "Ver paquetes combinados",
+                "monthLabel": "{duration} mes",
+                "monthsLabel": "{duration} meses",
+                "price": "€{price}",
+                "originalPrice": "€{original}"
+            },
+            "BundlesPage": {
+                "loading": "Cargando...",
+                "notFound": "Producto no encontrado",
+                "title": "Paquetes Combinados",
+                "buyNow": "Comprar ahora",
+                "monthLabel": "{duration} mes de suscripción",
+                "monthsLabel": "{duration} meses de suscripción",
+                "coinsLabel": "{amount} Monedas",
+                "price": "€{price}",
+                "originalPrice": "€{original}"
+            },
+            "Checkout": {
+                "title": "Checkout",
+                "emailLabel": "Correo electrónico",
+                "emailPlaceholder": "Ingresa tu correo de Sigmally",
+                "emailDescription": "¡Este correo debe coincidir con la dirección asociada a tu cuenta de Sigmally!",
+                "emailValid": "Correo válido",
+                "emailInvalid": "Correo inválido",
+                "paymentMethod": "Método de pago",
+                "selectPaymentPlaceholder": "Selecciona un método de pago",
+                "paypal": "PayPal",
+                "buyWithPaypal": "Comprar con PayPal",
+                "processing": "Procesando..."
+            }
+        }
     }
 }
