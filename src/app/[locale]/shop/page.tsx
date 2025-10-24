@@ -11,8 +11,10 @@ import {
     getSale,
 } from '@/services/shop';
 import { FullBundle, Bundle } from '@/types/shopTypes';
+import { getTranslations } from 'next-intl/server';
 
 export default async function ShopPage() {
+    const t = await getTranslations('Shop.MainPage');
     try {
         const bundlesRes = await getSpecialBundles();
         const limitedEndsAt = bundlesRes?.limitedEndsAt || 0;
@@ -59,9 +61,7 @@ export default async function ShopPage() {
     } catch {
         return (
             <main className='flex flex-col items-center justify-center py-20'>
-                <p className='text-neutral-400'>
-                    Failed to load shop data. Please try again later.
-                </p>
+                <p className='text-neutral-400'>{t('failed')}</p>
             </main>
         );
     }

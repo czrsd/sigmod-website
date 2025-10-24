@@ -1,27 +1,29 @@
 'use client';
 
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
 export default function ProductList() {
+    const t = useTranslations('Shop.MainPage.Products');
     return (
         <div className='flex flex-col items-center space-y-10'>
-            <h2 className='text-4xl font-bold'>Products</h2>
+            <h2 className='text-4xl font-bold'>{t('title')}</h2>
             <div className='flex justify-center flex-wrap gap-6'>
                 <ProductCard
-                    name='Coins'
-                    description='Individual coin amounts from 5,000 up to 1,000,000'
+                    name={t('coins.name')}
+                    description={t('coins.description')}
                     img='/shop/coins.png'
                     link='/shop/products/coins'
                 />
                 <ProductCard
-                    name='Subscriptions'
-                    description='Get access to premium features'
+                    name={t('subscriptions.name')}
+                    description={t('subscriptions.description')}
                     img='/shop/subs.png'
                     link='/shop/products/subscriptions'
                 />
                 <ProductCard
-                    name='Bundles'
-                    description='Combination of coins and subscription in one offer for a cheaper price'
+                    name={t('bundles.name')}
+                    description={t('bundles.description')}
                     img='/shop/bundles.png'
                     link='/shop/products/bundles'
                 />

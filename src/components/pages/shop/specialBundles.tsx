@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { FullBundle } from '@/types/shopTypes';
 import { formatNumber } from '@/utils/format';
 import { Plus } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 
 const colorSchemes = [
@@ -17,6 +18,8 @@ export default function SpecialBundles({
     bundles: FullBundle[];
     sale: number;
 }) {
+    const t = useTranslations('Shop.MainPage.SpecialBundles');
+
     return (
         <div className='flex justify-center items-center gap-6 flex-wrap'>
             {bundles.map((bundle, i) => {
@@ -56,7 +59,8 @@ export default function SpecialBundles({
                                         width={60}
                                     />
                                     <span className='text-sm'>
-                                        {formatNumber(bundle.coins)} Coins
+                                        {formatNumber(bundle.coins)}{' '}
+                                        {t('coins')}
                                     </span>
                                 </div>
                                 <Plus size={20} />
@@ -68,9 +72,9 @@ export default function SpecialBundles({
                                     <span className='max-w-[80px] text-sm'>
                                         {bundle.subscription}{' '}
                                         {bundle.subscription === 1
-                                            ? 'month'
-                                            : 'months'}{' '}
-                                        subcription
+                                            ? t('month')
+                                            : t('months')}{' '}
+                                        {t('subscription')}
                                     </span>
                                 </div>
                             </div>
@@ -95,7 +99,7 @@ export default function SpecialBundles({
                                     </span>
                                 </div>
                                 <span className='text-xs text-neutral-400'>
-                                    save {savings}%
+                                    {t('save', { percent: savings })}
                                 </span>
                             </div>
                             <Button
@@ -105,7 +109,7 @@ export default function SpecialBundles({
                                 <Link
                                     href={`/shop/products/bundles/${bundle._id}`}
                                 >
-                                    Buy now
+                                    {t('buyNow')}
                                 </Link>
                             </Button>
                         </div>

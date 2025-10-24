@@ -2,12 +2,14 @@
 
 import { useEffect, useState } from 'react';
 import { Flame } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function Hero({
     limitedEndsAt,
 }: {
     limitedEndsAt: number | null;
 }) {
+    const t = useTranslations('Shop.MainPage.Hero');
     const [timeLeft, setTimeLeft] = useState<string | null>(null);
 
     useEffect(() => {
@@ -43,13 +45,18 @@ export default function Hero({
     return (
         <div className='flex flex-col items-center space-y-6'>
             <h1 className='text-3xl md:text-4xl font-bold tracking-tight'>
-                Get Your <span className='text-blue-500'>Gold</span> &{' '}
-                <span className='text-blue-500'>Subscriptions</span> Cheaper
+                {t.rich('title', {
+                    gold: (chunks) => (
+                        <span className='text-yellow-500'>{chunks}</span>
+                    ),
+                    subscriptions: (chunks) => (
+                        <span className='text-yellow-500'>{chunks}</span>
+                    ),
+                })}
             </h1>
 
             <p className='text-neutral-400 max-w-xl text-center'>
-                Prices in-game are high, here you’ll find exclusive deals that
-                won’t last forever.
+                {t('description')}
             </p>
 
             {offerActive && (
@@ -58,15 +65,17 @@ export default function Hero({
                         <h2 className='text-3xl font-bold uppercase flex items-center justify-center my-3 text-orange-400'>
                             <Flame size={30} />
                             <span className='bg-gradient-to-b from-orange-500 to-orange-400 text-transparent bg-clip-text'>
-                                Limited Offers
+                                {t('limitedOffersTitle')}
                             </span>
                         </h2>
                         <p className='text-sm opacity-90'>
-                            Grab them before they’re gone!
+                            {t('limitedOffersSubtitle')}
                         </p>
                     </div>
                     <div className='flex items-center justify-center gap-3'>
-                        <span className='text-sm opacity-80'>Ends in</span>
+                        <span className='text-sm opacity-80'>
+                            {t('endsIn')}
+                        </span>
                         <span className='text-2xl font-semibold tracking-widest'>
                             {timeLeft}
                         </span>

@@ -1,31 +1,32 @@
-import { JSX } from 'react';
-import { Zap, Lock, Handshake, HandCoins } from 'lucide-react';
+'use client';
 
-export default function WhyBuyHere(): JSX.Element {
+import React from 'react';
+import { Zap, Lock, Handshake, HandCoins } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+
+export default function WhyBuyHere(): React.ReactNode {
+    const t = useTranslations('Shop.MainPage.WhyBuyHere');
+
+    const reasons = t.raw('reasons');
+    const icons = [Zap, Lock, Handshake, HandCoins];
+
     return (
         <div className='flex flex-col items-center space-y-10'>
-            <h2 className='text-4xl font-bold'>Why Buy Here</h2>
+            <h2 className='text-4xl font-bold'>{t('title')}</h2>
             <div className='grid md:grid-cols-2 gap-5'>
-                <ReasonCard
-                    title='Fast Delivery'
-                    description='Get your items instantly after payment with no waiting time.'
-                    Icon={Zap}
-                />
-                <ReasonCard
-                    title='Secure Checkout'
-                    description='All payments are encrypted and processed through trusted providers like PayPal.'
-                    Icon={Lock}
-                />
-                <ReasonCard
-                    title='Trust'
-                    description='Made by a verified Sigmally moderator and the creator of SigMod with over 28,000 installs.'
-                    Icon={Handshake}
-                />
-                <ReasonCard
-                    title='Cheap'
-                    description='Enjoy fair pricing and great value without any hidden costs.'
-                    Icon={HandCoins}
-                />
+                {reasons.map(
+                    (
+                        reason: { title: string; description: string },
+                        index: number
+                    ) => (
+                        <ReasonCard
+                            key={index}
+                            title={reason.title}
+                            description={reason.description}
+                            Icon={icons[index]}
+                        />
+                    )
+                )}
             </div>
         </div>
     );
@@ -42,7 +43,7 @@ function ReasonCard({
         className?: string;
         style?: React.CSSProperties;
     }>;
-}): JSX.Element {
+}): React.ReactNode {
     return (
         <div className='flex flex-col items-center justify-center gap-4 min-w-[250px] max-w-[300px] bg-neutral-900 rounded-lg p-10 border hover:-rotate-2 hover:scale-101 transition-all duration-100'>
             <div className='relative flex justify-center items-center py-2'>
