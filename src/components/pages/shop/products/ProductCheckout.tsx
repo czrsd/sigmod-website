@@ -14,6 +14,7 @@ import {
 import Image from 'next/image';
 import { CreditCard, Mail } from 'lucide-react';
 import { verifyUser, purchaseItem } from '@/services/shop';
+import { useTranslations } from 'next-intl';
 
 export default function ProductCheckout({
     productType,
@@ -22,6 +23,8 @@ export default function ProductCheckout({
     productType: 'coins' | 'subscription' | 'bundle';
     productId: string;
 }) {
+    const t = useTranslations('Shop.Products.Checkout');
+
     const [email, setEmail] = useState('');
     const [emailValid, setEmailValid] = useState<boolean | null>(null);
     const [loading, setLoading] = useState(false);
@@ -78,21 +81,20 @@ export default function ProductCheckout({
 
     return (
         <div className='flex flex-col gap-6 w-full lg:w-1/2 max-w-lg border-t lg:border-t-0 lg:border-l border-neutral-800 lg:pl-10 py-12'>
-            <h2 className='text-3xl font-bold mb-2'>Checkout</h2>
+            <h2 className='text-3xl font-bold mb-2'>{t('title')}</h2>
 
             <div className='w-full flex flex-col gap-2'>
                 <Label className='text-lg' htmlFor='email'>
                     <Mail size={24} />
-                    Email
+                    {t('emailLabel')}
                 </Label>
                 <p className='text-xs text-neutral-500'>
-                    This email must match the email address associated with your
-                    Sigmally account!
+                    {t('emailDescription')}
                 </p>
                 <Input
                     type='email'
                     id='email'
-                    placeholder='Enter your Sigmally email'
+                    placeholder={t('emailPlaceholder')}
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className={`w-full text-lg py-6 border ${
@@ -105,22 +107,26 @@ export default function ProductCheckout({
                 />
                 {emailValid === true && (
                     <span className='text-sm text-lime-500'>
-                        Email is valid
+                        {t('emailValid')}
                     </span>
                 )}
                 {emailValid === false && (
-                    <span className='text-sm text-red-500'>Invalid email</span>
+                    <span className='text-sm text-red-500'>
+                        {t('emailInvalid')}
+                    </span>
                 )}
             </div>
 
             <div className='flex flex-col gap-2 w-full'>
                 <Label className='text-lg'>
                     <CreditCard size={24} />
-                    Payment method
+                    {t('paymentMethod')}
                 </Label>
                 <Select defaultValue='paypal'>
                     <SelectTrigger className='w-full py-6 text-lg'>
-                        <SelectValue placeholder='Select payment method' />
+                        <SelectValue
+                            placeholder={t('selectPaymentPlaceholder')}
+                        />
                     </SelectTrigger>
                     <SelectContent>
                         <SelectItem value='paypal'>
@@ -131,7 +137,7 @@ export default function ProductCheckout({
                                     width={20}
                                     height={20}
                                 />
-                                <span>PayPal</span>
+                                <span>{t('paypal')}</span>
                             </div>
                         </SelectItem>
                     </SelectContent>
@@ -150,7 +156,7 @@ export default function ProductCheckout({
                     width={20}
                     height={20}
                 />
-                {loading ? 'Processing...' : 'Buy with PayPal'}
+                {loading ? t('processing') : t('buyWithPaypal')}
             </Button>
         </div>
     );

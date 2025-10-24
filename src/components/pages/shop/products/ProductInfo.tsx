@@ -1,10 +1,15 @@
+'use client';
+
 import Image from 'next/image';
 import { formatNumber } from '@/utils/format';
 import { CoinPackage, SubPackage, Bundle } from '@/types/shopTypes';
+import { useTranslations } from 'next-intl';
 
 type ProductItem = CoinPackage | SubPackage | Bundle;
 
 export default function ProductInfo({ item }: { item: ProductItem }) {
+    const t = useTranslations('Shop.MainPage.SpecialBundles');
+
     const isCoin = (i: ProductItem): i is CoinPackage => 'amount' in i;
     const isSub = (i: ProductItem): i is SubPackage =>
         'duration' in i && !('coins' in i);
@@ -12,10 +17,10 @@ export default function ProductInfo({ item }: { item: ProductItem }) {
         'coins' in i && 'subscription' in i;
 
     const title = isCoin(item)
-        ? `${formatNumber(item.amount)} Coins`
+        ? `${formatNumber(item.amount)} ${t('coins')}`
         : isSub(item)
         ? `${item.duration} ${
-              item.duration === 1 ? 'Month' : 'Months'
+              item.duration === 1 ? t('month') : t('months')
           } Subscription`
         : item.name;
 
@@ -36,12 +41,14 @@ export default function ProductInfo({ item }: { item: ProductItem }) {
                 className='rounded-xl'
             />
             <h1 className='text-3xl font-bold'>{title}</h1>
-            {isBundle(item) ? (
-                <p>{`${formatNumber(item.coins)} Coins + ${item.subscription} ${
-                    item.subscription === 1 ? 'Month' : 'Months'
-                } Subscription`}</p>
-            ) : (
-                <></>
+            {isBundle(item) && (
+                <p>
+                    {`${formatNumber(item.coins)} ${t('coins')} + ${
+                        item.subscription
+                    } ${
+                        item.subscription === 1 ? t('month') : t('months')
+                    } Subscription`}
+                </p>
             )}
             <div className='flex flex-col'>
                 <span className='text-4xl font-semibold text-primary'>

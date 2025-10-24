@@ -1,7 +1,7 @@
 'use client';
 
 import { captureOrder } from '@/services/shop';
-import { CaptureOrderResponse, Bundle, CoinPackage } from '@/types/shopTypes';
+import { CaptureOrderResponse, Bundle } from '@/types/shopTypes';
 import { CheckCircle, Coins, Crown } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -10,8 +10,10 @@ import Confetti from 'react-confetti';
 import useWindowSize from '@/hooks/useWindowSize';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 export default function PurchaseCompleted() {
+    const t = useTranslations('Shop.Purchase.Complete');
     const [order, setOrder] = useState<CaptureOrderResponse | null>(null);
     const [loading, setLoading] = useState(true);
     const searchParams = useSearchParams();
@@ -34,7 +36,6 @@ export default function PurchaseCompleted() {
                 .then((res) => {
                     if (res) {
                         setOrder(res);
-
                         if (res.success && res.userData) {
                             localStorage.setItem('email', res.userData.email);
                         }
@@ -54,9 +55,7 @@ export default function PurchaseCompleted() {
         return (
             <div className='flex flex-col items-center justify-center py-20'>
                 <div className='animate-spin mb-6 w-16 h-16 border-4 border-yellow-400 border-t-transparent rounded-full'></div>
-                <span className='text-xl font-semibold'>
-                    Completing your purchase...
-                </span>
+                <span className='text-xl font-semibold'>{t('loading')}</span>
             </div>
         );
 
@@ -64,7 +63,7 @@ export default function PurchaseCompleted() {
         return (
             <div className='flex flex-col items-center py-10'>
                 <span className='text-red-500 text-xl font-semibold'>
-                    Failed to capture order.
+                    {t('failedCapture')}
                 </span>
             </div>
         );
@@ -73,15 +72,15 @@ export default function PurchaseCompleted() {
         return (
             <div className='flex flex-col items-center py-10'>
                 <span className='text-red-500 text-xl font-semibold'>
-                    Purchase failed. Please contact the support on Discord.
+                    {t('failedPurchase')}
                 </span>
             </div>
         );
 
     const productLabels: Record<CaptureOrderResponse['productType'], string> = {
         bundle: (order.product as Bundle).name,
-        coins: 'Coins',
-        subscription: 'Subscription',
+        coins: t('coinsLabel'),
+        subscription: t('subscriptionLabel'),
     };
 
     return (
@@ -95,7 +94,7 @@ export default function PurchaseCompleted() {
             <div className='flex flex-col items-center animate-fade-in'>
                 <CheckCircle size={120} color='#5ace5aff' />
                 <span className='text-3xl font-bold uppercase mt-4 text-green-500 drop-shadow-lg'>
-                    Purchase Complete!
+                    {t('purchaseComplete')}
                 </span>
             </div>
 
@@ -103,10 +102,9 @@ export default function PurchaseCompleted() {
                 {productLabels[order.productType]}
             </span>
 
-            <p className='mt-6 text-xl text-center'>Thanks for your order!</p>
-
+            <p className='mt-6 text-xl text-center'>{t('thanks')}</p>
             <p className='mt-1 text-sm text-neutral-400 text-center'>
-                Order id: {order.orderId}
+                {t('orderId', { id: order.orderId })}
             </p>
 
             <div className='mt-6 flex flex-col items-center gap-4 dark:bg-neutral-900 rounded-xl border py-4 px-6 shadow-lg animate-fade-in-up'>
@@ -134,7 +132,7 @@ export default function PurchaseCompleted() {
                                     +
                                     {order.userData.gold -
                                         order.userData.previousGold}{' '}
-                                    Coins
+                                    {t('coinsLabel')}
                                 </span>
                             )}
                     </div>
@@ -146,17 +144,20 @@ export default function PurchaseCompleted() {
                         <div className='flex items-center gap-2 text-sm text-gray-300 mt-1'>
                             <Crown size={20} className='text-yellow-400' />
                             <span>
-                                Subscription valid until {subscriptionDate}
+                                {t('subscriptionValidUntil', {
+                                    date: subscriptionDate,
+                                })}
                             </span>
                         </div>
                     )}
             </div>
+
             <div className='mt-6 flex gap-4'>
                 <Button>
-                    <Link href={'/game'}>Go to Game</Link>
+                    <Link href={'/game'}>{t('goToGame')}</Link>
                 </Button>
                 <Button variant={'outline'}>
-                    <Link href={'/shop'}>Shop more</Link>
+                    <Link href={'/shop'}>{t('shopMore')}</Link>
                 </Button>
             </div>
         </div>

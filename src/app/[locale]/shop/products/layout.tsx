@@ -1,6 +1,8 @@
 'use client';
+
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import { useRouter, usePathname } from 'next/navigation';
 
 export default function ProductsLayout({
@@ -8,6 +10,7 @@ export default function ProductsLayout({
 }: {
     children: React.ReactNode;
 }) {
+    const t = useTranslations('Shop.Products');
     const router = useRouter();
     const pathname = usePathname();
 
@@ -39,7 +42,7 @@ export default function ProductsLayout({
                     onClick={handleBack}
                 >
                     <ArrowLeft size={16} />
-                    Back
+                    {t('back')}
                 </Button>
             </div>
 
