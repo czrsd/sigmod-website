@@ -54,6 +54,7 @@ const navLinks = [
     { href: '/guide', labelKey: 'guide' },
     { href: '/faq', labelKey: 'faq' },
     { href: '/about', labelKey: 'about' },
+    { href: '/shop', labelKey: 'shop' },
 ];
 
 export default function Header() {
