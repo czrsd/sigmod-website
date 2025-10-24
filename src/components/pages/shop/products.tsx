@@ -12,19 +12,19 @@ export default function ProductList() {
                 <ProductCard
                     name={t('coins.name')}
                     description={t('coins.description')}
-                    img='/shop/coins.png'
+                    img='/shop/products/coins.png'
                     link='/shop/products/coins'
                 />
                 <ProductCard
                     name={t('subscriptions.name')}
                     description={t('subscriptions.description')}
-                    img='/shop/subs.png'
+                    img='/shop/products/subs.png'
                     link='/shop/products/subscriptions'
                 />
                 <ProductCard
                     name={t('bundles.name')}
                     description={t('bundles.description')}
-                    img='/shop/bundles.png'
+                    img='/shop/products/bundles.png'
                     link='/shop/products/bundles'
                 />
             </div>

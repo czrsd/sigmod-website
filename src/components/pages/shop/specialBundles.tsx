@@ -55,7 +55,7 @@ export default function SpecialBundles({
                             <div className='flex justify-center items-center gap-5 py-10'>
                                 <div className='flex flex-col items-center'>
                                     <img
-                                        src={`/shop/coins/gold_${bundle.coins}.png`}
+                                        src={`/shop/coins/coins${bundle.coins}.svg`}
                                         width={60}
                                     />
                                     <span className='text-sm'>
@@ -63,10 +63,10 @@ export default function SpecialBundles({
                                         {t('coins')}
                                     </span>
                                 </div>
-                                <Plus size={20} />
+                                <Plus size={24} />
                                 <div className='flex flex-col items-center'>
                                     <img
-                                        src={`/shop/subscriptions/subscription.png`}
+                                        src={`/shop/subs/sub.svg`}
                                         width={40}
                                     />
                                     <span className='max-w-[80px] text-sm'>

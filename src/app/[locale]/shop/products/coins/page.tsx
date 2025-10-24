@@ -62,7 +62,7 @@ export default function CoinPackages() {
                         amount={coin.amount}
                         price={coin.price}
                         original={coin.original * sale}
-                        img='/shop/coins/gold_50000.png'
+                        img={`/shop/coins/coins${coin.amount}.svg`}
                         t={t}
                     />
                 ))}

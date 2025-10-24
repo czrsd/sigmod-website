@@ -25,9 +25,9 @@ export default function ProductInfo({ item }: { item: ProductItem }) {
         : item.name;
 
     const image = isCoin(item)
-        ? `/shop/coins/gold_50000.png`
+        ? `/shop/coins/coins${item.amount}.svg`
         : isSub(item)
-        ? '/shop/subscriptions/subscription.png'
+        ? '/shop/subs/sub.svg'
         : '/shop/bundles.png';
 
     return (
@@ -35,8 +35,8 @@ export default function ProductInfo({ item }: { item: ProductItem }) {
             <Image
                 src={image}
                 alt={item._id || 'Item'}
-                width={260}
-                height={260}
+                width={160}
+                height={160}
                 draggable={false}
                 className='rounded-xl'
             />

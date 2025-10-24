@@ -34,7 +34,6 @@ export default function SubscriptionPackages() {
                         price={sub.price}
                         original={sub.original * sale}
                         sale={sale}
-                        img='/shop/subscriptions/subscription.png'
                         t={t}
                     />
                 ))}
@@ -66,10 +65,10 @@ function ProductCard({ _id, duration, price, original, t }: any) {
             }
         >
             <img
-                src='/shop/subscriptions/subscription.png'
+                src='/shop/subs/sub.svg'
                 alt={_id}
-                width={100}
-                height={100}
+                width={80}
+                height={80}
                 draggable={false}
             />
             <div className='flex flex-col items-center'>
