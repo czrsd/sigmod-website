@@ -80,7 +80,7 @@ function ProductCard({ bundle, sale, t }: any) {
             onClick={() => (location.href = `/shop/products/bundles/${_id}`)}
         >
             <img
-                src='/shop/bundles.png'
+                src={`/shop/bundles/${bundle.name}.svg`}
                 alt={_id}
                 width={100}
                 height={100}

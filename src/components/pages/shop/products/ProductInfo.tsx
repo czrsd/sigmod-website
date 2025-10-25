@@ -28,7 +28,9 @@ export default function ProductInfo({ item }: { item: ProductItem }) {
         ? `/shop/coins/coins${item.amount}.svg`
         : isSub(item)
         ? '/shop/subs/sub.svg'
-        : '/shop/bundles.png';
+        : item.isLimited
+        ? '/shop/bundles/Starter 2.svg'
+        : `/shop/bundles/${item.name}.svg`;
 
     return (
         <div className='flex flex-col gap-6 w-full lg:w-1/2'>

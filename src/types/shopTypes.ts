@@ -19,6 +19,7 @@ export interface Bundle {
     subscription: number;
     price: number;
     combined: string[];
+    isLimited: boolean;
 }
 
 export interface FullBundle extends Bundle {
