@@ -22,6 +22,7 @@ import {
     DropdownMenuItem,
     DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { ModeToggle } from './theme-toggler';
 
 const languageMap: Record<string, string> = {
     en: 'English',
@@ -209,6 +210,7 @@ export default function Header() {
                     >
                         <Menu className='w-5 h-5' />
                     </Button>
+                    <ModeToggle />
                 </div>
             </div>
 

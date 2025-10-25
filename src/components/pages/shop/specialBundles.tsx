@@ -1,9 +1,12 @@
+'use client';
+
 import { Button } from '@/components/ui/button';
 import { FullBundle } from '@/types/shopTypes';
 import { formatNumber } from '@/utils/format';
 import { Plus } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { useTheme } from 'next-themes';
 
 const colorSchemes = [
     { primary: '#FFD900', secondary: '#B77100' },
@@ -19,12 +22,18 @@ export default function SpecialBundles({
     sale: number;
 }) {
     const t = useTranslations('Shop.MainPage.SpecialBundles');
+    const { resolvedTheme } = useTheme();
 
     return (
         <div className='flex justify-center items-center gap-6 flex-wrap'>
             {bundles.map((bundle, i) => {
                 const { primary, secondary } =
                     colorSchemes[i % colorSchemes.length];
+                const isLight = resolvedTheme === 'light';
+                const bg = isLight
+                    ? `linear-gradient(0deg, ${secondary}30, ${primary}70 80%)`
+                    : undefined;
+                const borderColor = isLight ? 'white' : primary;
 
                 const originalCosts = (
                     bundle.coinPackage.original * sale +
@@ -40,8 +49,8 @@ export default function SpecialBundles({
                 return (
                     <div
                         key={i}
-                        style={{ borderColor: primary }}
-                        className='flex flex-col items-center rounded-xl bg-black border py-0 min-w-[300px] shadow-[2px_0_10px_10px_rgba(0,0,0,0.6)] overflow-hidden hover:scale-102 transition-all duration-100'
+                        style={{ background: bg, borderColor }}
+                        className='flex flex-col items-center rounded-xl bg-white dark:bg-black border py-0 min-w-[300px] shadow-xl dark:shadow-[0_4px_10px_10px_rgba(0,0,0,0.6)] overflow-hidden hover:scale-102 transition-all duration-100'
                     >
                         <div
                             style={{ borderBottom: `1px solid ${primary}` }}

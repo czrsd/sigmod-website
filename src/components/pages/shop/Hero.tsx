@@ -60,11 +60,11 @@ export default function Hero({
             </p>
 
             {offerActive && (
-                <div className='border border-orange-500 bg-gradient-to-b from-orange-600/10 to-yellow-500/10 text-white py-8 mb-2 px-10 rounded-2xl shadow-lg space-y-4 w-full max-w-md'>
+                <div className='border border-orange-400 dark:border-orange-500 bg-gradient-to-b from-orange-600/60 dark:from-orange-600/10 to-yellow-500/60 dark:to-yellow-500/10 text-white py-8 mb-2 px-10 rounded-2xl shadow-lg space-y-4 w-full max-w-md'>
                     <div>
-                        <h2 className='text-3xl font-bold uppercase flex items-center justify-center my-3 text-orange-400'>
+                        <h2 className='text-3xl font-bold uppercase flex items-center justify-center my-3 text-orange-500 dark:text-orange-400'>
                             <Flame size={30} />
-                            <span className='bg-gradient-to-b from-orange-500 to-orange-400 text-transparent bg-clip-text'>
+                            <span className='bg-gradient-to-b from-orange-500 dark:from-orange-500 to-orange-600 dark:to-orange-400 text-transparent bg-clip-text'>
                                 {t('limitedOffersTitle')}
                             </span>
                         </h2>

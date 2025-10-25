@@ -10,7 +10,7 @@ export default function ContactPage() {
         <div className='flex flex-col items-center space-y-10'>
             <h2 className='text-4xl font-bold'>{t('title')}</h2>
             <div className='flex flex-col items-center space-y-6'>
-                <div className='flex flex-col gap-2 bg-neutral-900 py-8 px-12 rounded-xl'>
+                <div className='flex flex-col gap-2 bg-secondary dark:bg-neutral-900 py-8 px-12 rounded-xl'>
                     <span className='text-lg font-semibold'>
                         {t('supportEmail')}
                     </span>

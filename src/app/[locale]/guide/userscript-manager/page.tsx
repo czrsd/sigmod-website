@@ -35,7 +35,7 @@ export default function UserscriptManagerPage() {
                     </Link>
                 </Button>
                 <ZoomableImage
-                    src='/guide/chrome/tampermonkey_chrome.png'
+                    src='/guide/chrome/tampermonkey.png'
                     width={300}
                     height={100}
                     alt='Install tampermonkey'

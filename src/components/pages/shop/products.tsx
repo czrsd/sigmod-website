@@ -45,7 +45,7 @@ function ProductCard({
 }): React.ReactElement {
     return (
         <div
-            className='flex flex-col items-center justify-center gap-4 w-[300px] bg-neutral-900 rounded-lg p-10 cursor-pointer border hover:scale-101'
+            className='flex flex-col items-center justify-center gap-4 w-[300px] bg-secondary dark:bg-neutral-900 rounded-lg p-10 cursor-pointer border hover:scale-101'
             onClick={() => {
                 location.href = link;
             }}

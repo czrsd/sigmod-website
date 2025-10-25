@@ -1,13 +1,13 @@
 import '../globals.css';
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
-import { NextIntlClientProvider, hasLocale } from 'next-intl';
+import { hasLocale } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Footer from '@/components/Footer';
 import Preload from '@/components/Preload';
-import { LayoutTransition } from '@/components/layout-transition';
+import { Providers } from './providers';
 
 const SITE = (
     process.env.NEXT_PUBLIC_SITE_URL || 'https://dev.czrsd.com'
@@ -68,7 +68,7 @@ export default async function RootLayout({
     const twUrl = twImages[0] ?? ogUrl;
 
     return (
-        <html lang={locale}>
+        <html lang={locale} suppressHydrationWarning>
             <head>
                 <link rel='apple-touch-icon' href='/apple-touch-icon.png' />
                 <link
@@ -114,18 +114,12 @@ export default async function RootLayout({
                 <meta name='twitter:description' content={descStr} />
                 <meta name='twitter:image' content={twUrl} />
             </head>
-            <body className='dark overflow-x-hidden'>
-                <NextIntlClientProvider locale={locale} messages={messages}>
+            <body className='overflow-x-hidden'>
+                <Providers locale={locale} messages={messages}>
                     <Header />
-                    <LayoutTransition
-                        initial={{ opacity: 0, y: 0 }}
-                        animate={{ opacity: 1, y: -10 }}
-                        exit={{ opacity: 0, y: 0 }}
-                    >
-                        {children}
-                    </LayoutTransition>
+                    {children}
                     <Footer />
-                </NextIntlClientProvider>
+                </Providers>
             </body>
         </html>
     );

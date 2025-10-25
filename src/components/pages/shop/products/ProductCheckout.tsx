@@ -80,7 +80,7 @@ export default function ProductCheckout({
     };
 
     return (
-        <div className='flex flex-col gap-6 w-full lg:w-1/2 max-w-lg border-t lg:border-t-0 lg:border-l border-neutral-800 lg:pl-10 py-12'>
+        <div className='flex flex-col gap-6 w-full lg:w-1/2 max-w-lg border-t lg:border-t-0 lg:border-l lg:pl-10 py-12'>
             <h2 className='text-3xl font-bold mb-2'>{t('title')}</h2>
 
             <div className='w-full flex flex-col gap-2'>

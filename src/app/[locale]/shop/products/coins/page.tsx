@@ -83,7 +83,7 @@ export default function CoinPackages() {
 function ProductCard({ _id, amount, price, original, img, t }: any) {
     return (
         <div
-            className='flex flex-col items-center gap-4 min-w-[250px] bg-neutral-900 rounded-xl p-8 border border-neutral-800 hover:scale-103 transition-transform cursor-pointer'
+            className='flex flex-col items-center gap-4 min-w-[250px] bg-secondary dark:bg-neutral-900 rounded-xl p-8 border dark:border-neutral-800 hover:scale-103 transition-transform cursor-pointer'
             onClick={() => (location.href = `/shop/products/coins/${_id}`)}
         >
             <img
@@ -92,12 +92,13 @@ function ProductCard({ _id, amount, price, original, img, t }: any) {
                 width={100}
                 height={100}
                 draggable={false}
+                className='h-[100px]'
             />
             <div className='flex flex-col items-center'>
                 <span className='text-lg font-semibold'>
                     {t('coinsLabel', { amount: formatNumber(amount) })}
                 </span>
-                <span className='text-2xl font-bold text-white'>
+                <span className='text-2xl font-bold'>
                     {t('price', { price: price.toFixed(2) })}
                 </span>
                 <span className='relative text-neutral-500 text-sm'>
@@ -106,7 +107,7 @@ function ProductCard({ _id, amount, price, original, img, t }: any) {
                     </span>
                 </span>
             </div>
-            <Button variant='secondary' className='w-full font-semibold'>
+            <Button variant='outline' className='w-full font-semibold'>
                 {t('buyNow')}
             </Button>
         </div>

@@ -45,7 +45,7 @@ function ReasonCard({
     }>;
 }): React.ReactNode {
     return (
-        <div className='flex flex-col items-center justify-center gap-4 min-w-[250px] max-w-[300px] bg-neutral-900 rounded-lg p-10 border hover:-rotate-2 hover:scale-101 transition-all duration-100'>
+        <div className='flex flex-col items-center justify-center gap-4 min-w-[250px] max-w-[300px] bg-secondary dark:bg-neutral-900 rounded-lg p-10 border hover:-rotate-2 hover:scale-101 transition-all duration-100'>
             <div className='relative flex justify-center items-center py-2'>
                 <svg width='0' height='0'>
                     <defs>

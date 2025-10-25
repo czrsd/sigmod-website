@@ -76,7 +76,7 @@ function ProductCard({ bundle, sale, t }: any) {
             : t('monthsLabel', { duration: subPackage.duration });
     return (
         <div
-            className='flex flex-col items-center gap-4 min-w-[250px] bg-neutral-900 rounded-xl p-8 border border-neutral-800 hover:scale-103 transition-transform'
+            className='flex flex-col items-center gap-4 min-w-[250px] bg-secondary dark:bg-neutral-900 rounded-xl p-8 border dark:border-neutral-800 hover:scale-103 transition-transform'
             onClick={() => (location.href = `/shop/products/bundles/${_id}`)}
         >
             <img
@@ -85,6 +85,7 @@ function ProductCard({ bundle, sale, t }: any) {
                 width={100}
                 height={100}
                 draggable={false}
+                className='h-[100px]'
             />
             <div className='flex flex-col items-center justify-center'>
                 <span className='text-xl font-semibold bg-gradient-to-t from-blue-500 to-blue-300 text-transparent bg-clip-text mb-2'>
@@ -96,7 +97,7 @@ function ProductCard({ bundle, sale, t }: any) {
                         amount: formatNumber(coinPackage.amount),
                     })}
                 </span>
-                <span className='text-2xl font-bold text-white mt-2'>
+                <span className='text-2xl font-bold mt-2'>
                     {t('price', { price: price.toFixed(2) })}
                 </span>
                 <span className='relative text-neutral-500 text-sm'>
@@ -107,7 +108,7 @@ function ProductCard({ bundle, sale, t }: any) {
                     </span>
                 </span>
             </div>
-            <Button variant='secondary' className='w-full font-semibold'>
+            <Button variant='outline' className='w-full font-semibold'>
                 {t('buyNow')}
             </Button>
         </div>
