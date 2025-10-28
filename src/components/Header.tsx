@@ -201,6 +201,8 @@ export default function Header() {
                         </DropdownMenuContent>
                     </DropdownMenu>
 
+                    <ModeToggle />
+
                     <Button
                         variant='ghost'
                         size='icon'
@@ -210,7 +212,6 @@ export default function Header() {
                     >
                         <Menu className='w-5 h-5' />
                     </Button>
-                    <ModeToggle />
                 </div>
             </div>
 

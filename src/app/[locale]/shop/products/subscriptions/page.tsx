@@ -6,6 +6,9 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { SubPackage } from '@/types/shopTypes';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+
+type Translate = ReturnType<typeof useTranslations>;
 
 export default function SubscriptionPackages() {
     const t = useTranslations('Shop.Products.SubscriptionPackages');
@@ -33,7 +36,6 @@ export default function SubscriptionPackages() {
                         duration={sub.duration}
                         price={sub.price}
                         original={sub.original * sale}
-                        sale={sale}
                         t={t}
                     />
                 ))}
@@ -51,7 +53,19 @@ export default function SubscriptionPackages() {
     );
 }
 
-function ProductCard({ _id, duration, price, original, t }: any) {
+function ProductCard({
+    _id,
+    duration,
+    price,
+    original,
+    t,
+}: {
+    _id: string;
+    duration: number;
+    price: number;
+    original: number;
+    t: Translate;
+}) {
     const label =
         duration === 1
             ? t('monthLabel', { duration })
@@ -64,7 +78,7 @@ function ProductCard({ _id, duration, price, original, t }: any) {
                 (location.href = `/shop/products/subscriptions/${_id}`)
             }
         >
-            <img
+            <Image
                 src='/shop/subs/sub.svg'
                 alt={_id}
                 width={80}

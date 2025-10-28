@@ -11,6 +11,7 @@ import useWindowSize from '@/hooks/useWindowSize';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export default function PurchaseCompleted() {
     const t = useTranslations('Shop.Purchase.Complete');
@@ -108,11 +109,12 @@ export default function PurchaseCompleted() {
             </p>
 
             <div className='mt-6 flex flex-col items-center gap-4 dark:bg-neutral-900 rounded-xl border py-4 px-6 shadow-lg animate-fade-in-up'>
-                <img
+                <Image
                     className='rounded-full w-28 h-28 border shadow-lg'
                     src={order.userData?.imageURL || ''}
                     alt='User'
                 />
+
                 <span className='font-bold text-2xl'>
                     {order.userData?.fullName}
                 </span>

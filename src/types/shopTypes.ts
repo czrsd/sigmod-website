@@ -48,3 +48,10 @@ export interface CaptureOrderResponse {
         subscription: number;
     };
 }
+
+export interface Order {
+    orderId: string;
+    timestamp: number;
+    productType: string;
+    productId: string;
+}

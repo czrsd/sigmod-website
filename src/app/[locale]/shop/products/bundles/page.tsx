@@ -10,6 +10,10 @@ import { Button } from '@/components/ui/button';
 import { formatNumber } from '@/utils/format';
 import { FullBundle } from '@/types/shopTypes';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+
+type Translate = ReturnType<typeof useTranslations>;
+
 export default function BundlesPage() {
     const t = useTranslations('Shop.Products.BundlesPage');
     const [bundles, setBundles] = useState<FullBundle[] | null>(null);
@@ -67,7 +71,15 @@ export default function BundlesPage() {
         </section>
     );
 }
-function ProductCard({ bundle, sale, t }: any) {
+function ProductCard({
+    bundle,
+    sale,
+    t,
+}: {
+    bundle: FullBundle;
+    sale: number;
+    t: Translate;
+}) {
     const { _id, price, coinPackage, subPackage } = bundle;
     const original = coinPackage.original * sale + subPackage.original * sale;
     const durationLabel =
@@ -79,7 +91,7 @@ function ProductCard({ bundle, sale, t }: any) {
             className='flex flex-col items-center gap-4 min-w-[250px] bg-secondary dark:bg-neutral-900 rounded-xl p-8 border dark:border-neutral-800 hover:scale-103 transition-transform'
             onClick={() => (location.href = `/shop/products/bundles/${_id}`)}
         >
-            <img
+            <Image
                 src={`/shop/bundles/${bundle.name}.svg`}
                 alt={_id}
                 width={100}

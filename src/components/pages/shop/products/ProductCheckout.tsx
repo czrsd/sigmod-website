@@ -15,6 +15,7 @@ import Image from 'next/image';
 import { CreditCard, Mail } from 'lucide-react';
 import { verifyUser, purchaseItem } from '@/services/shop';
 import { useTranslations } from 'next-intl';
+import { Order } from '@/types/shopTypes';
 
 export default function ProductCheckout({
     productType,
@@ -62,7 +63,7 @@ export default function ProductCheckout({
         if (!result) return;
 
         if (result.approveLink) {
-            const existingOrders: any[] = JSON.parse(
+            const existingOrders: Order[] = JSON.parse(
                 localStorage.getItem('orders') || '[]'
             );
 

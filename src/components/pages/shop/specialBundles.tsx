@@ -1,5 +1,4 @@
 'use client';
-
 import { Button } from '@/components/ui/button';
 import { FullBundle } from '@/types/shopTypes';
 import { formatNumber } from '@/utils/format';
@@ -7,6 +6,8 @@ import { Plus } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
+import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 const colorSchemes = [
     { primary: '#FFD900', secondary: '#B77100' },
@@ -23,6 +24,10 @@ export default function SpecialBundles({
 }) {
     const t = useTranslations('Shop.MainPage.SpecialBundles');
     const { resolvedTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => setMounted(true), []);
+    if (!mounted) return null;
 
     return (
         <div className='flex justify-center items-center gap-6 flex-wrap'>
@@ -34,12 +39,10 @@ export default function SpecialBundles({
                     ? `linear-gradient(0deg, ${secondary}30, ${primary}70 80%)`
                     : undefined;
                 const borderColor = isLight ? 'white' : primary;
-
                 const originalCosts = (
                     bundle.coinPackage.original * sale +
                     bundle.subPackage.original * sale
                 ).toFixed(2);
-
                 const difference = Number(originalCosts) - bundle.price;
                 const savings = (
                     (difference / Number(originalCosts)) *
@@ -63,8 +66,9 @@ export default function SpecialBundles({
                         <div className='flex flex-col items-center py-4 space-y-2'>
                             <div className='flex justify-center items-center gap-5 py-10'>
                                 <div className='flex flex-col items-center'>
-                                    <img
+                                    <Image
                                         src={`/shop/coins/coins${bundle.coins}.svg`}
+                                        alt='Coins'
                                         width={60}
                                     />
                                     <span className='text-sm'>
@@ -74,8 +78,9 @@ export default function SpecialBundles({
                                 </div>
                                 <Plus size={24} />
                                 <div className='flex flex-col items-center'>
-                                    <img
+                                    <Image
                                         src={`/shop/subs/sub.svg`}
+                                        alt='Sub'
                                         width={40}
                                     />
                                     <span className='max-w-[80px] text-sm'>
@@ -112,6 +117,7 @@ export default function SpecialBundles({
                                 </span>
                             </div>
                             <Button
+                                variant={isLight ? 'secondary' : 'default'}
                                 asChild
                                 className='w-full uppercase font-bold'
                             >

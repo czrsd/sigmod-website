@@ -7,6 +7,9 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { CoinPackage } from '@/types/shopTypes';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
+
+type Translate = ReturnType<typeof useTranslations>;
 
 export default function CoinPackages() {
     const t = useTranslations('Shop.Products.CoinPackages');
@@ -80,13 +83,27 @@ export default function CoinPackages() {
     );
 }
 
-function ProductCard({ _id, amount, price, original, img, t }: any) {
+function ProductCard({
+    _id,
+    amount,
+    price,
+    original,
+    img,
+    t,
+}: {
+    _id: string;
+    amount: number;
+    price: number;
+    original: number;
+    img: string;
+    t: Translate;
+}) {
     return (
         <div
             className='flex flex-col items-center gap-4 min-w-[250px] bg-secondary dark:bg-neutral-900 rounded-xl p-8 border dark:border-neutral-800 hover:scale-103 transition-transform cursor-pointer'
             onClick={() => (location.href = `/shop/products/coins/${_id}`)}
         >
-            <img
+            <Image
                 src={img}
                 alt={_id}
                 width={100}

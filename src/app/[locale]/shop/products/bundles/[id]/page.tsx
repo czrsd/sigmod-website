@@ -3,7 +3,7 @@ import BundlePageClient from './BundlePageClient';
 export default async function BundlePage({
     params,
 }: {
-    params: { id: string };
+    params: Promise<{ id: string }>;
 }) {
     const { id: bundleId } = await params;
     return <BundlePageClient bundleId={bundleId} />;

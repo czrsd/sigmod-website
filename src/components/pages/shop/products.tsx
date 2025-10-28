@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export default function ProductList() {
     const t = useTranslations('Shop.MainPage.Products');
@@ -50,7 +51,7 @@ function ProductCard({
                 location.href = link;
             }}
         >
-            <img
+            <Image
                 src={img}
                 alt={name}
                 width={100}
