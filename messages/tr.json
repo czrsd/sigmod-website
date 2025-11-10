@@ -716,6 +716,12 @@
                 "supportEmail": "Destek e-postası",
                 "or": "veya",
                 "createTicket": "Discord’da destek bileti oluştur"
+            },
+            "Info": {
+                "shop": "SigModz Shop yasal bilgiler",
+                "refund": "İade Politikası",
+                "terms": "Hizmet Şartları",
+                "privacy": "Gizlilik Politikası"
             }
         },
         "Purchase": {
@@ -792,6 +798,104 @@
                 "paypal": "PayPal",
                 "buyWithPaypal": "PayPal ile Satın Al",
                 "processing": "İşleniyor..."
+            }
+        },
+        "PrivacyPage": {
+            "title": "Gizlilik Politikası",
+            "lastUpdated": "Son güncelleme: 06.11.2025",
+            "intro": "SigModz olarak gizliliğinize saygı duyuyor ve kişisel bilgilerinizi korumaya kararlıyız. Bu Gizlilik Politikası, verilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar.",
+            "sections": {
+                "1": {
+                    "title": "1. Topladığımız Bilgiler",
+                    "content": "E-posta adresiniz, hesap bilgileriniz, ödeme detaylarınız ve hizmetlerimizi kullanırken gönüllü olarak sağladığınız diğer bilgiler gibi kişisel bilgileri toplayabiliriz."
+                },
+                "2": {
+                    "title": "2. Bilgilerin Kullanımı",
+                    "content": "Bilgileriniz, hizmetlerimizi sağlamak ve geliştirmek, ödemeleri işlemek, sizinle iletişim kurmak ve yasal yükümlülüklere uyumu sağlamak için kullanılır."
+                },
+                "3": {
+                    "title": "3. Bilgilerinizin Paylaşımı",
+                    "content": "Kişisel bilgilerinizi satmayız. Veriler, güvenilir hizmet sağlayıcıları, ödeme işleyicileri veya yasal mercilerle gerektiğinde paylaşılabilir."
+                },
+                "4": {
+                    "title": "4. Veri Güvenliği",
+                    "content": "Bilgilerinizi yetkisiz erişim, ifşa veya yok edilmeden korumak için makul güvenlik önlemleri uygularız. Ancak hiçbir iletim veya depolama yöntemi tamamen güvenli değildir."
+                },
+                "5": {
+                    "title": "5. Haklarınız",
+                    "content": "Kişisel bilgilerinize erişme, düzeltme veya silme hakkına sahipsiniz. Bu hakları kullanmak için lütfen sigmallymod@proton.me adresinden bizimle iletişime geçin."
+                },
+                "6": {
+                    "title": "6. Politika Değişiklikleri",
+                    "content": "Bu Gizlilik Politikası zaman zaman güncellenebilir. SigModz’i kullanmaya devam etmeniz, güncellenmiş politikayı kabul ettiğiniz anlamına gelir."
+                },
+                "7": {
+                    "title": "7. İletişim",
+                    "content": "Bu Gizlilik Politikası veya bilgilerinizi nasıl işlediğimiz hakkında sorularınız varsa, lütfen sigmallymod@proton.me adresinden bizimle iletişime geçin."
+                }
+            }
+        },
+        "RefundPage": {
+            "title": "İade Politikası",
+            "lastUpdated": "Son güncelleme: 06.11.2025",
+            "sections": {
+                "overview": {
+                    "title": "Genel Bakış",
+                    "content": "Satın alımınızdan memnun kalmanızı istiyoruz. Memnun değilseniz, aşağıda açıklanan koşullar dahilinde iade talebinde bulunabilirsiniz."
+                },
+                "eligibility": {
+                    "title": "Uygunluk",
+                    "content": "Dijital ürünler için satın alımdan itibaren 14 gün içinde, içerik kullanılmamışsa iade yapılabilir. Tüm iade talepleri doğrulamaya tabidir."
+                },
+                "process": {
+                    "title": "İade Süreci",
+                    "content": "İade talebinde bulunmak için destek ekibimizle e-posta veya Discord üzerinden iletişime geçin. Onaylandıktan sonra iadeler 3–5 iş günü içinde işlenir."
+                },
+                "contact": {
+                    "title": "İletişim",
+                    "content": "İade ile ilgili sorular için sigmallymod@proton.me adresine ulaşabilir veya Discord sunucumuzda bir bilet oluşturabilirsiniz."
+                },
+                "discordLink": "Discord Sunucusuna Katıl"
+            }
+        },
+        "TermsPage": {
+            "title": "Hizmet Şartları",
+            "lastUpdated": "Son güncelleme: 06.11.2025",
+            "intro": "SigModz’e hoş geldiniz. Web sitemize erişerek veya kullanarak, bu Hizmet Şartlarına uymayı kabul etmiş olursunuz.",
+            "sections": {
+                "1": {
+                    "title": "1. Şartların Kabulü",
+                    "content": "SigModz’i kullanarak, bu şartları okuduğunuzu, anladığınızı ve kabul ettiğinizi onaylamış olursunuz."
+                },
+                "2": {
+                    "title": "2. Kullanıcı Sorumlulukları",
+                    "content": "Hizmetlerimizi kötüye kullanmamayı, yasa dışı içerik yüklememeyi veya web sitesinin işleyişini engellememeyi kabul edersiniz. Dolandırıcılık veya kötüye kullanım durumunda hesabınız askıya alınabilir veya kapatılabilir."
+                },
+                "3": {
+                    "title": "3. Dijital Ürünler ve Ödemeler",
+                    "content": "SigModz, satılmak üzere dijital ürünler sunar. Tüm satın alımlar İade Politikamız kapsamındadır. Dijital ürünlerin kullanımından doğan kayıp veya zararlardan sorumlu değiliz."
+                },
+                "4": {
+                    "title": "4. Sorumluluk Reddi ve Sınırlaması",
+                    "content": "Hizmetlerimiz “olduğu gibi” sunulmaktadır. SigModz, web sitemizin veya hizmetlerimizin kullanımından doğan dolaylı, tesadüfi veya sonuçsal zararlardan sorumlu değildir."
+                },
+                "5": {
+                    "title": "5. Şartlardaki Değişiklikler",
+                    "content": "Bu Hizmet Şartları herhangi bir zamanda güncellenebilir. SigModz’i kullanmaya devam etmeniz, güncellenmiş şartları kabul ettiğiniz anlamına gelir."
+                },
+                "6": {
+                    "title": "6. Hesap Sonlandırma",
+                    "content": "Bu şartların ihlali, dolandırıcılık veya uygunsuz kullanım durumunda hesapları askıya alma veya sonlandırma hakkımız saklıdır."
+                },
+                "7": {
+                    "title": "7. Geçerli Hukuk",
+                    "content": "Bu şartlar Almanya yasalarına tabidir. Bu şartlardan doğan herhangi bir uyuşmazlık Almanya mahkemelerinde çözülür."
+                },
+                "8": {
+                    "title": "8. İletişim",
+                    "content": "Bu Hizmet Şartlarıyla ilgili sorularınız için sigmallymod@proton.me adresinden bize ulaşabilirsiniz."
+                },
+                "discordLink": "Discord Sunucusuna Katıl"
             }
         }
     }

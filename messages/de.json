@@ -716,6 +716,12 @@
                 "supportEmail": "Support-E-Mail",
                 "or": "oder",
                 "createTicket": "Ticket auf Discord erstellen"
+            },
+            "Info": {
+                "shop": "Rechtliche Hinweise zum SigModz Shop",
+                "refund": "Rückerstattungsrichtlinie",
+                "terms": "Nutzungsbedingungen",
+                "privacy": "Datenschutzrichtlinie"
             }
         },
         "Purchase": {
@@ -792,6 +798,104 @@
                 "paypal": "PayPal",
                 "buyWithPaypal": "Mit PayPal kaufen",
                 "processing": "Verarbeite..."
+            }
+        },
+        "PrivacyPage": {
+            "title": "Datenschutzerklärung",
+            "lastUpdated": "Zuletzt aktualisiert: 06.11.2025",
+            "intro": "Bei SigModz respektieren wir Ihre Privatsphäre und verpflichten uns, Ihre persönlichen Daten zu schützen. Diese Datenschutzerklärung erklärt, wie wir Daten erfassen, verwenden und schützen.",
+            "sections": {
+                "1": {
+                    "title": "1. Gesammelte Informationen",
+                    "content": "Wir können persönliche Informationen wie Ihre E-Mail-Adresse, Kontoinformationen, Zahlungsdetails und andere freiwillig bereitgestellte Informationen beim Nutzen unserer Dienste erfassen."
+                },
+                "2": {
+                    "title": "2. Nutzung der Informationen",
+                    "content": "Ihre Informationen werden verwendet, um unsere Dienste bereitzustellen und zu verbessern, Zahlungen zu verarbeiten, mit Ihnen zu kommunizieren und die Einhaltung gesetzlicher Vorgaben sicherzustellen."
+                },
+                "3": {
+                    "title": "3. Weitergabe Ihrer Informationen",
+                    "content": "Wir verkaufen Ihre persönlichen Daten nicht. Daten können mit vertrauenswürdigen Dienstleistern, Zahlungsanbietern oder gesetzlichen Behörden geteilt werden, wenn dies gesetzlich vorgeschrieben ist."
+                },
+                "4": {
+                    "title": "4. Datensicherheit",
+                    "content": "Wir setzen angemessene Sicherheitsmaßnahmen ein, um Ihre Informationen vor unbefugtem Zugriff, Offenlegung oder Zerstörung zu schützen. Dennoch ist keine Übertragungs- oder Speicherungsmethode völlig sicher."
+                },
+                "5": {
+                    "title": "5. Ihre Rechte",
+                    "content": "Sie haben das Recht, auf Ihre Daten zuzugreifen, diese zu korrigieren oder zu löschen. Zur Ausübung dieser Rechte kontaktieren Sie uns bitte unter sigmallymod@proton.me."
+                },
+                "6": {
+                    "title": "6. Änderungen dieser Richtlinie",
+                    "content": "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Die fortgesetzte Nutzung von SigModz gilt als Akzeptanz der aktualisierten Richtlinie."
+                },
+                "7": {
+                    "title": "7. Kontakt",
+                    "content": "Bei Fragen zu dieser Datenschutzerklärung oder zum Umgang mit Ihren Daten kontaktieren Sie uns bitte unter sigmallymod@proton.me."
+                }
+            }
+        },
+        "RefundPage": {
+            "title": "Rückerstattungsrichtlinie",
+            "lastUpdated": "Zuletzt aktualisiert: 06.11.2025",
+            "sections": {
+                "overview": {
+                    "title": "Übersicht",
+                    "content": "Wir möchten, dass Sie mit Ihrem Kauf zufrieden sind. Wenn Sie nicht zufrieden sind, können Sie unter den unten beschriebenen Bedingungen eine Rückerstattung beantragen."
+                },
+                "eligibility": {
+                    "title": "Berechtigung",
+                    "content": "Rückerstattungen für digitale Produkte sind innerhalb von 14 Tagen nach dem Kauf möglich, sofern der Inhalt nicht verwendet wurde. Alle Rückerstattungsanfragen werden überprüft."
+                },
+                "process": {
+                    "title": "Rückerstattungsprozess",
+                    "content": "Um eine Rückerstattung zu beantragen, kontaktieren Sie unser Support-Team per E-Mail oder Discord. Nach Genehmigung wird die Rückerstattung innerhalb von 3–5 Werktagen bearbeitet."
+                },
+                "contact": {
+                    "title": "Kontakt",
+                    "content": "Bei Fragen zu Rückerstattungen wenden Sie sich bitte an sigmallymod@proton.me oder erstellen ein Ticket auf unserem Discord-Server."
+                },
+                "discordLink": "Dem Discord-Server beitreten"
+            }
+        },
+        "TermsPage": {
+            "title": "Nutzungsbedingungen",
+            "lastUpdated": "Zuletzt aktualisiert: 06.11.2025",
+            "intro": "Willkommen bei SigModz. Durch den Zugriff oder die Nutzung unserer Website erklären Sie sich damit einverstanden, diese Nutzungsbedingungen einzuhalten.",
+            "sections": {
+                "1": {
+                    "title": "1. Akzeptanz der Bedingungen",
+                    "content": "Durch die Nutzung von SigModz bestätigen Sie, dass Sie diese Bedingungen gelesen, verstanden und akzeptiert haben."
+                },
+                "2": {
+                    "title": "2. Pflichten des Nutzers",
+                    "content": "Sie verpflichten sich, unsere Dienste nicht missbräuchlich zu nutzen, keine illegalen Inhalte hochzuladen oder den Betrieb der Website zu stören. Betrügerisches oder missbräuchliches Verhalten kann zur Sperrung oder Kündigung Ihres Kontos führen."
+                },
+                "3": {
+                    "title": "3. Digitale Produkte & Zahlungen",
+                    "content": "SigModz bietet digitale Produkte zum Verkauf an. Alle Käufe unterliegen unserer Rückerstattungsrichtlinie. Wir übernehmen keine Verantwortung für Verluste oder Schäden durch die Nutzung digitaler Produkte."
+                },
+                "4": {
+                    "title": "4. Haftungsausschluss & Begrenzung der Haftung",
+                    "content": "Unsere Dienste werden \"wie besehen\" bereitgestellt. SigModz haftet nicht für indirekte, zufällige oder Folgeschäden, die aus der Nutzung unserer Website oder Dienste entstehen."
+                },
+                "5": {
+                    "title": "5. Änderungen der Bedingungen",
+                    "content": "Wir können diese Nutzungsbedingungen jederzeit aktualisieren. Die fortgesetzte Nutzung von SigModz gilt als Zustimmung zu den aktualisierten Bedingungen."
+                },
+                "6": {
+                    "title": "6. Kontokündigung",
+                    "content": "Wir behalten uns das Recht vor, Konten bei Verstößen gegen diese Bedingungen, betrügerischem Verhalten oder anderweitigem unangemessenem Gebrauch zu sperren oder zu kündigen."
+                },
+                "7": {
+                    "title": "7. Anwendbares Recht",
+                    "content": "Diese Bedingungen unterliegen dem Recht Deutschlands. Streitigkeiten, die sich aus diesen Bedingungen ergeben, unterliegen den Gerichten in Deutschland."
+                },
+                "8": {
+                    "title": "8. Kontakt",
+                    "content": "Bei Fragen zu diesen Nutzungsbedingungen können Sie uns unter sigmallymod@proton.me kontaktieren."
+                },
+                "discordLink": "Dem Discord-Server beitreten"
             }
         }
     }

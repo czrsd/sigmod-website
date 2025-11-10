@@ -716,6 +716,12 @@
                 "supportEmail": "Correo de soporte",
                 "or": "o",
                 "createTicket": "Crear ticket en Discord"
+            },
+            "Info": {
+                "shop": "Información legal de la tienda SigModz",
+                "refund": "Política de reembolso",
+                "terms": "Términos de servicio",
+                "privacy": "Política de privacidad"
             }
         },
         "Purchase": {
@@ -792,6 +798,104 @@
                 "paypal": "PayPal",
                 "buyWithPaypal": "Comprar con PayPal",
                 "processing": "Procesando..."
+            }
+        },
+        "PrivacyPage": {
+            "title": "Política de Privacidad",
+            "lastUpdated": "Última actualización: 06/11/2025",
+            "intro": "En SigModz, respetamos su privacidad y nos comprometemos a proteger su información personal. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos sus datos.",
+            "sections": {
+                "1": {
+                    "title": "1. Información que Recopilamos",
+                    "content": "Podemos recopilar información personal como su dirección de correo electrónico, información de cuenta, datos de pago y cualquier otra información que proporcione voluntariamente al usar nuestros servicios."
+                },
+                "2": {
+                    "title": "2. Uso de la Información",
+                    "content": "Su información se utiliza para proporcionar y mejorar nuestros servicios, procesar pagos, comunicarnos con usted y garantizar el cumplimiento de las obligaciones legales."
+                },
+                "3": {
+                    "title": "3. Compartir su Información",
+                    "content": "No vendemos su información personal. Podemos compartir datos con proveedores de servicios confiables, procesadores de pagos o autoridades legales cuando sea requerido por la ley."
+                },
+                "4": {
+                    "title": "4. Seguridad de los Datos",
+                    "content": "Implementamos medidas de seguridad razonables para proteger su información contra acceso no autorizado, divulgación o destrucción. Sin embargo, ningún método de transmisión o almacenamiento es completamente seguro."
+                },
+                "5": {
+                    "title": "5. Sus Derechos",
+                    "content": "Usted tiene derecho a acceder, corregir o eliminar su información personal. Para ejercer estos derechos, contáctenos en sigmallymod@proton.me."
+                },
+                "6": {
+                    "title": "6. Cambios en esta Política",
+                    "content": "Podemos actualizar esta Política de Privacidad de vez en cuando. El uso continuado de SigModz constituye la aceptación de la política actualizada."
+                },
+                "7": {
+                    "title": "7. Contacto",
+                    "content": "Si tiene preguntas sobre esta Política de Privacidad o cómo manejamos su información, contáctenos en sigmallymod@proton.me."
+                }
+            }
+        },
+        "RefundPage": {
+            "title": "Política de Reembolso",
+            "lastUpdated": "Última actualización: 06/11/2025",
+            "sections": {
+                "overview": {
+                    "title": "Resumen",
+                    "content": "Queremos que esté satisfecho con su compra. Si no está contento, puede solicitar un reembolso bajo las condiciones descritas a continuación."
+                },
+                "eligibility": {
+                    "title": "Elegibilidad",
+                    "content": "Los reembolsos están disponibles para productos digitales dentro de los 14 días posteriores a la compra, siempre que el contenido no haya sido utilizado. Todas las solicitudes de reembolso están sujetas a verificación."
+                },
+                "process": {
+                    "title": "Proceso de Reembolso",
+                    "content": "Para solicitar un reembolso, contacte a nuestro equipo de soporte por correo electrónico o Discord. Una vez aprobado, los reembolsos se procesarán dentro de 3 a 5 días hábiles."
+                },
+                "contact": {
+                    "title": "Contacto",
+                    "content": "Para cualquier pregunta sobre reembolsos, comuníquese con sigmallymod@proton.me o cree un ticket en nuestro servidor de Discord."
+                },
+                "discordLink": "Unirse al Servidor de Discord"
+            }
+        },
+        "TermsPage": {
+            "title": "Términos de Servicio",
+            "lastUpdated": "Última actualización: 06/11/2025",
+            "intro": "Bienvenido a SigModz. Al acceder o usar nuestro sitio web, acepta cumplir y estar sujeto a estos Términos de Servicio.",
+            "sections": {
+                "1": {
+                    "title": "1. Aceptación de los Términos",
+                    "content": "Al usar SigModz, reconoce que ha leído, comprendido y acepta estos términos."
+                },
+                "2": {
+                    "title": "2. Responsabilidades del Usuario",
+                    "content": "Usted acepta no hacer un uso indebido de nuestros servicios, subir contenido ilegal o interferir con el funcionamiento de nuestro sitio web. Cualquier comportamiento fraudulento o abusivo puede resultar en la suspensión o terminación de la cuenta."
+                },
+                "3": {
+                    "title": "3. Productos Digitales y Pagos",
+                    "content": "SigModz ofrece productos digitales a la venta. Todas las compras están sujetas a nuestra Política de Reembolso. No nos hacemos responsables de ninguna pérdida o daño derivado del uso de productos digitales."
+                },
+                "4": {
+                    "title": "4. Descargo de Responsabilidad y Limitación de Responsabilidad",
+                    "content": "Nuestros servicios se proporcionan \"tal cual\". SigModz no es responsable de daños indirectos, incidentales o consecuentes derivados del uso de nuestro sitio web o servicios."
+                },
+                "5": {
+                    "title": "5. Cambios en los Términos",
+                    "content": "Podemos actualizar estos Términos de Servicio en cualquier momento. El uso continuado de SigModz constituye la aceptación de los términos actualizados."
+                },
+                "6": {
+                    "title": "6. Terminación de la Cuenta",
+                    "content": "Nos reservamos el derecho de suspender o terminar cuentas por violaciones de estos términos, actividad fraudulenta u otro uso inapropiado."
+                },
+                "7": {
+                    "title": "7. Ley Aplicable",
+                    "content": "Estos términos se rigen por las leyes de Alemania. Cualquier disputa derivada de estos términos estará sujeta a los tribunales en Alemania."
+                },
+                "8": {
+                    "title": "8. Contacto",
+                    "content": "Si tiene alguna pregunta sobre estos Términos de Servicio, puede contactarnos en sigmallymod@proton.me."
+                },
+                "discordLink": "Unirse al Servidor de Discord"
             }
         }
     }

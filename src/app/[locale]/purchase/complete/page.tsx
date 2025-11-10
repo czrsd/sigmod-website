@@ -1,7 +1,7 @@
 'use client';
 
-import { captureOrder } from '@/services/shop';
-import { CaptureOrderResponse, Bundle } from '@/types/shopTypes';
+import { getOrderStatus } from '@/services/shop';
+import { OrderStatusResponse, Bundle } from '@/types/shopTypes';
 import { CheckCircle, Coins, Crown } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
@@ -15,11 +15,10 @@ import Image from 'next/image';
 
 export default function PurchaseCompleted() {
     const t = useTranslations('Shop.Purchase.Complete');
-    const [order, setOrder] = useState<CaptureOrderResponse | null>(null);
+    const [order, setOrder] = useState<OrderStatusResponse | null>(null);
     const [loading, setLoading] = useState(true);
     const searchParams = useSearchParams();
     const token = searchParams.get('token') || '';
-    const payerID = searchParams.get('PayerID') || '';
 
     const previousGold = order?.userData?.previousGold || 0;
     const currentGold = order?.userData?.gold || 0;
@@ -31,20 +30,41 @@ export default function PurchaseCompleted() {
     });
 
     useEffect(() => {
-        if (token && payerID) {
-            setLoading(true);
-            captureOrder(token, payerID)
-                .then((res) => {
-                    if (res) {
-                        setOrder(res);
-                        if (res.success && res.userData) {
-                            localStorage.setItem('email', res.userData.email);
-                        }
+        if (!token) return;
+
+        const interval = setInterval(async () => {
+            try {
+                const res = await getOrderStatus(token);
+                if (res?.success) {
+                    setOrder(res);
+
+                    if (res.status === 'completed') {
+                        localStorage.setItem(
+                            'email',
+                            res.userData?.email || ''
+                        );
+                        clearInterval(interval);
+                        setLoading(false);
+                    } else {
+                        setLoading(true);
                     }
-                })
-                .finally(() => setLoading(false));
-        }
-    }, [token, payerID]);
+                } else {
+                    setLoading(false);
+                }
+            } catch {
+                setLoading(false);
+            }
+        }, 2500);
+
+        (async () => {
+            try {
+                const res = await getOrderStatus(token);
+                if (res?.success) setOrder(res);
+            } catch {}
+        })();
+
+        return () => clearInterval(interval);
+    }, [token]);
 
     const subscriptionDate = order?.userData?.subscription
         ? new Date(order.userData.subscription).toLocaleDateString('de-DE')
@@ -56,20 +76,15 @@ export default function PurchaseCompleted() {
         return (
             <div className='flex flex-col items-center justify-center py-20'>
                 <div className='animate-spin mb-6 w-16 h-16 border-4 border-yellow-400 border-t-transparent rounded-full'></div>
-                <span className='text-xl font-semibold'>{t('loading')}</span>
-            </div>
-        );
-
-    if (!order)
-        return (
-            <div className='flex flex-col items-center py-10'>
-                <span className='text-red-500 text-xl font-semibold'>
-                    {t('failedCapture')}
+                <span className='text-xl font-semibold'>
+                    {order?.status === 'pending'
+                        ? 'Please wait while we verify your order...'
+                        : t('loading')}
                 </span>
             </div>
         );
 
-    if (!order.success)
+    if (!order)
         return (
             <div className='flex flex-col items-center py-10'>
                 <span className='text-red-500 text-xl font-semibold'>
@@ -78,7 +93,7 @@ export default function PurchaseCompleted() {
             </div>
         );
 
-    const productLabels: Record<CaptureOrderResponse['productType'], string> = {
+    const productLabels: Record<OrderStatusResponse['productType'], string> = {
         bundle: (order.product as Bundle).name,
         coins: t('coinsLabel'),
         subscription: t('subscriptionLabel'),
@@ -86,16 +101,26 @@ export default function PurchaseCompleted() {
 
     return (
         <div className='flex flex-col items-center py-10'>
-            <Confetti
-                width={width}
-                height={height}
-                numberOfPieces={200}
-                recycle={false}
-            />
+            {order.status === 'completed' && (
+                <Confetti
+                    width={width}
+                    height={height}
+                    numberOfPieces={200}
+                    recycle={false}
+                />
+            )}
+
             <div className='flex flex-col items-center animate-fade-in'>
-                <CheckCircle size={120} color='#5ace5aff' />
+                <CheckCircle
+                    size={120}
+                    color={
+                        order.status === 'completed' ? '#5ace5aff' : '#cccccc'
+                    }
+                />
                 <span className='text-3xl font-bold uppercase mt-4 text-green-500 drop-shadow-lg'>
-                    {t('purchaseComplete')}
+                    {order.status === 'completed'
+                        ? t('purchaseComplete')
+                        : 'Order is being verified'}
                 </span>
             </div>
 
@@ -108,51 +133,56 @@ export default function PurchaseCompleted() {
                 {t('orderId', { id: order.orderId })}
             </p>
 
-            <div className='mt-6 flex flex-col items-center gap-4 dark:bg-neutral-900 rounded-xl border py-4 px-6 shadow-lg animate-fade-in-up'>
-                <Image
-                    className='rounded-full w-28 h-28 border shadow-lg'
-                    src={order.userData?.imageURL || ''}
-                    alt='User'
-                />
+            {order.status === 'completed' && (
+                <div className='mt-6 flex flex-col items-center gap-4 dark:bg-neutral-900 rounded-xl border py-4 px-6 shadow-lg animate-fade-in-up'>
+                    <Image
+                        className='rounded-full w-28 h-28 border shadow-lg'
+                        src={order.userData?.imageURL || ''}
+                        width={112}
+                        height={112}
+                        alt='User'
+                    />
+                    <span className='font-bold text-2xl'>
+                        {order.userData?.fullName}
+                    </span>
 
-                <span className='font-bold text-2xl'>
-                    {order.userData?.fullName}
-                </span>
-
-                {(order.productType === 'coins' ||
-                    order.productType === 'bundle') && (
-                    <div className='flex flex-col gap-2'>
-                        <div className='flex items-center gap-2 text-xl font-semibold mt-2'>
-                            <animated.span className='text-yellow-400'>
-                                {goldSpring.value.to((val) => Math.floor(val))}
-                            </animated.span>
-                            <Coins size={24} className='text-yellow-400' />
-                        </div>
-                        {order.userData?.gold != null &&
-                            order.userData?.previousGold != null && (
-                                <span className='flex items-center gap-1 text-sm text-green-300'>
-                                    +
-                                    {order.userData.gold -
-                                        order.userData.previousGold}{' '}
-                                    {t('coinsLabel')}
-                                </span>
-                            )}
-                    </div>
-                )}
-
-                {(order.productType === 'subscription' ||
-                    order.productType === 'bundle') &&
-                    subscriptionDate && (
-                        <div className='flex items-center gap-2 text-sm text-gray-300 mt-1'>
-                            <Crown size={20} className='text-yellow-400' />
-                            <span>
-                                {t('subscriptionValidUntil', {
-                                    date: subscriptionDate,
-                                })}
-                            </span>
+                    {(order.productType === 'coins' ||
+                        order.productType === 'bundle') && (
+                        <div className='flex flex-col gap-2'>
+                            <div className='flex items-center gap-2 text-xl font-semibold mt-2'>
+                                <animated.span className='text-yellow-400'>
+                                    {goldSpring.value.to((val) =>
+                                        Math.floor(val)
+                                    )}
+                                </animated.span>
+                                <Coins size={24} className='text-yellow-400' />
+                            </div>
+                            {order.userData?.gold != null &&
+                                order.userData?.previousGold != null && (
+                                    <span className='flex items-center gap-1 text-sm text-green-300'>
+                                        +
+                                        {order.userData.gold -
+                                            order.userData.previousGold}{' '}
+                                        {t('coinsLabel')}
+                                    </span>
+                                )}
                         </div>
                     )}
-            </div>
+
+                    {(order.productType === 'subscription' ||
+                        order.productType === 'bundle') &&
+                        subscriptionDate && (
+                            <div className='flex items-center gap-2 text-sm text-gray-300 mt-1'>
+                                <Crown size={20} className='text-yellow-400' />
+                                <span>
+                                    {t('subscriptionValidUntil', {
+                                        date: subscriptionDate,
+                                    })}
+                                </span>
+                            </div>
+                        )}
+                </div>
+            )}
 
             <div className='mt-6 flex gap-4'>
                 <Button>

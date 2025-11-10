@@ -12,6 +12,7 @@ import {
 } from '@/services/shop';
 import { FullBundle, Bundle } from '@/types/shopTypes';
 import { getTranslations } from 'next-intl/server';
+import InfoPart from '@/components/pages/shop/Info';
 
 export default async function ShopPage() {
     const t = await getTranslations('Shop.MainPage');
@@ -43,7 +44,7 @@ export default async function ShopPage() {
         return (
             <main className='flex flex-col items-center text-center space-y-10 py-12'>
                 <Hero limitedEndsAt={limitedEndsAt || null} />
-                {preparedBundles.length > 0 && (
+                {preparedBundles && preparedBundles.length > 0 && (
                     <>
                         <SpecialBundles bundles={preparedBundles} sale={sale} />
                         <hr className='w-1/2' />
@@ -56,6 +57,7 @@ export default async function ShopPage() {
                 <FAQPage />
                 <hr className='w-1/2' />
                 <ContactPage />
+                <InfoPart />
             </main>
         );
     } catch {

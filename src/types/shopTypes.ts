@@ -33,10 +33,11 @@ export interface PurchaseResponse {
     approveLink: string;
 }
 
-export interface CaptureOrderResponse {
+export interface OrderStatusResponse {
     success: boolean;
     message?: string;
     orderId: string;
+    status: string;
     product: CoinPackage | SubPackage | Bundle;
     productType: 'coins' | 'subscription' | 'bundle';
     userData?: {

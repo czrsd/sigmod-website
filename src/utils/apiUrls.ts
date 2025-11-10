@@ -24,7 +24,7 @@ export const purchase = {
 };
 
 export const orders = {
-    capture: `${BASE_API}/order/capture`,
+    status: `${BASE_API}/order/status`,
     cancel: `${BASE_API}/order/cancel`,
 };
 

@@ -70,6 +70,7 @@ export default function SpecialBundles({
                                         src={`/shop/coins/coins${bundle.coins}.svg`}
                                         alt='Coins'
                                         width={60}
+                                        height={60}
                                     />
                                     <span className='text-sm'>
                                         {formatNumber(bundle.coins)}{' '}
@@ -82,6 +83,7 @@ export default function SpecialBundles({
                                         src={`/shop/subs/sub.svg`}
                                         alt='Sub'
                                         width={40}
+                                        height={40}
                                     />
                                     <span className='max-w-[80px] text-sm'>
                                         {bundle.subscription}{' '}

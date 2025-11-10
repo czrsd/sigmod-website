@@ -11,7 +11,7 @@ import {
     CoinPackage,
     SubPackage,
     PurchaseResponse,
-    CaptureOrderResponse,
+    OrderStatusResponse,
 } from '@/types/shopTypes';
 
 type Nullable<T> = T | null;
@@ -167,30 +167,25 @@ export const purchaseItem = async (
     }
 };
 
-export const captureOrder = async (
-    token: string,
-    payerId: string
-): Promise<CaptureOrderResponse | null> => {
+export const getOrderStatus = async (
+    token: string
+): Promise<OrderStatusResponse | null> => {
     try {
-        const { data } = await axios.post<CaptureOrderResponse>(
-            orders.capture,
-            {
-                token,
-                payerId,
-            }
-        );
+        const { data } = await axios.post<OrderStatusResponse>(orders.status, {
+            token,
+        });
         return data;
     } catch (err) {
-        console.error('Error capturing order', err);
+        console.error('Error getting order status', err);
         return null;
     }
 };
 
 export const cancelOrder = async (
     token: string
-): Promise<CaptureOrderResponse | null> => {
+): Promise<OrderStatusResponse | null> => {
     try {
-        const { data } = await axios.post<CaptureOrderResponse>(orders.cancel, {
+        const { data } = await axios.post<OrderStatusResponse>(orders.cancel, {
             token,
         });
         return data;
