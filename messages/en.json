@@ -795,8 +795,9 @@
                 "emailInvalid": "Invalid email",
                 "paymentMethod": "Payment method",
                 "selectPaymentPlaceholder": "Select payment method",
+                "stripe": "Stripe",
                 "paypal": "PayPal",
-                "buyWithPaypal": "Buy with PayPal",
+                "buy": "Purchase item",
                 "processing": "Processing..."
             }
         },

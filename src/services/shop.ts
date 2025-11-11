@@ -16,6 +16,11 @@ import {
 
 type Nullable<T> = T | null;
 
+interface StripeOrderQuery {
+    orderId: string;
+    sessionId: string;
+}
+
 export const getProductInfo = async (
     id: string
 ): Promise<
@@ -148,17 +153,15 @@ export const verifyUser = async (email: string): Promise<Nullable<boolean>> => {
 export const purchaseItem = async (
     email: string,
     type: 'coins' | 'subscription' | 'bundle',
-    productId: string
+    productId: string,
+    paymentMethod: string
 ): Promise<PurchaseResponse | null> => {
     try {
-        const endpoints = {
-            coins: purchase.coins,
-            subscription: purchase.subscription,
-            bundle: purchase.bundle,
-        };
-        const { data } = await axios.post<PurchaseResponse>(endpoints[type], {
+        const { data } = await axios.post<PurchaseResponse>(purchase, {
             userEmail: email,
             productId,
+            productType: type,
+            paymentMethod,
         });
         return data;
     } catch (err) {
@@ -168,13 +171,25 @@ export const purchaseItem = async (
 };
 
 export const getOrderStatus = async (
-    token: string
+    method: 'paypal' | 'stripe',
+    data: string | StripeOrderQuery
 ): Promise<OrderStatusResponse | null> => {
     try {
-        const { data } = await axios.post<OrderStatusResponse>(orders.status, {
-            token,
-        });
-        return data;
+        let payload: Record<string, any> = { method };
+
+        if (method === 'paypal') {
+            payload.token = data as string;
+        } else {
+            const stripeData = data as StripeOrderQuery;
+            payload.orderId = stripeData.orderId;
+            payload.sessionId = stripeData.sessionId;
+        }
+
+        const { data: res } = await axios.post<OrderStatusResponse>(
+            orders.status,
+            payload
+        );
+        return res;
     } catch (err) {
         console.error('Error getting order status', err);
         return null;
@@ -182,11 +197,13 @@ export const getOrderStatus = async (
 };
 
 export const cancelOrder = async (
-    token: string
+    orderId: string,
+    paymentMethod: string
 ): Promise<OrderStatusResponse | null> => {
     try {
         const { data } = await axios.post<OrderStatusResponse>(orders.cancel, {
-            token,
+            paymentMethod,
+            orderId,
         });
         return data;
     } catch (err) {

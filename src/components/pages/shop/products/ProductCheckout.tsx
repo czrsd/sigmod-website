@@ -29,6 +29,7 @@ export default function ProductCheckout({
     const [email, setEmail] = useState('');
     const [emailValid, setEmailValid] = useState<boolean | null>(null);
     const [loading, setLoading] = useState(false);
+    const [method, setMethod] = useState<string>('stripe');
 
     useEffect(() => {
         const savedEmail = localStorage.getItem('email');
@@ -56,7 +57,12 @@ export default function ProductCheckout({
         if (!emailValid) return;
         setLoading(true);
 
-        const result = await purchaseItem(email, productType, productId);
+        const result = await purchaseItem(
+            email,
+            productType,
+            productId,
+            method
+        );
 
         setLoading(false);
 
@@ -123,14 +129,25 @@ export default function ProductCheckout({
                     <CreditCard size={24} />
                     {t('paymentMethod')}
                 </Label>
-                <Select defaultValue='paypal'>
+                <Select defaultValue={method} onValueChange={setMethod}>
                     <SelectTrigger className='w-full py-6 text-lg'>
                         <SelectValue
                             placeholder={t('selectPaymentPlaceholder')}
                         />
                     </SelectTrigger>
                     <SelectContent>
-                        <SelectItem value='paypal'>
+                        <SelectItem value='stripe'>
+                            <div className='flex items-center gap-2'>
+                                <Image
+                                    src='/shop/stripe.svg'
+                                    alt='Stripe'
+                                    width={20}
+                                    height={20}
+                                />
+                                <span>{t('stripe')}</span>
+                            </div>
+                        </SelectItem>
+                        <SelectItem value='paypal' disabled>
                             <div className='flex items-center gap-2'>
                                 <Image
                                     src='/shop/paypal.svg'
@@ -152,12 +169,12 @@ export default function ProductCheckout({
                 disabled={!emailValid || loading}
             >
                 <Image
-                    src='/shop/paypal.svg'
+                    src={`/shop/${method}.svg`}
                     alt='PayPal'
                     width={20}
                     height={20}
                 />
-                {loading ? t('processing') : t('buyWithPaypal')}
+                {loading ? t('processing') : t('buy')}
             </Button>
         </div>
     );

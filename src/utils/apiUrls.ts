@@ -17,11 +17,7 @@ export const products = {
     specialBundles: `${BASE_API}/products/special-bundles`,
 };
 
-export const purchase = {
-    coins: `${BASE_API}/purchase/coins`,
-    subscription: `${BASE_API}/purchase/subscription`,
-    bundle: `${BASE_API}/purchase/bundle`,
-};
+export const purchase = `${BASE_API}/purchase`;
 
 export const orders = {
     status: `${BASE_API}/order/status`,

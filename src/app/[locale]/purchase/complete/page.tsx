@@ -18,7 +18,11 @@ export default function PurchaseCompleted() {
     const [order, setOrder] = useState<OrderStatusResponse | null>(null);
     const [loading, setLoading] = useState(true);
     const searchParams = useSearchParams();
-    const token = searchParams.get('token') || '';
+    const token = searchParams.get('token') || ''; // paypal
+    const orderId = searchParams.get('orderId') || ''; // stripe
+    const sessionId = searchParams.get('session_id') || ''; // stripe
+    const rawPaymentMethod = searchParams.get('method') || 'stripe';
+    const paymentMethod = rawPaymentMethod === 'paypal' ? 'paypal' : 'stripe';
 
     const previousGold = order?.userData?.previousGold || 0;
     const currentGold = order?.userData?.gold || 0;
@@ -30,41 +34,31 @@ export default function PurchaseCompleted() {
     });
 
     useEffect(() => {
-        if (!token) return;
+        if (!token && !(orderId && sessionId)) return;
 
-        const interval = setInterval(async () => {
-            try {
-                const res = await getOrderStatus(token);
-                if (res?.success) {
-                    setOrder(res);
+        const query =
+            paymentMethod === 'stripe' ? { orderId, sessionId } : token;
 
-                    if (res.status === 'completed') {
-                        localStorage.setItem(
-                            'email',
-                            res.userData?.email || ''
-                        );
-                        clearInterval(interval);
-                        setLoading(false);
-                    } else {
-                        setLoading(true);
-                    }
-                } else {
+        const fetchStatus = async () => {
+            const res = await getOrderStatus(paymentMethod, query);
+            if (res?.success) {
+                setOrder(res);
+                if (res.status === 'completed') {
+                    localStorage.setItem('email', res.userData?.email || '');
                     setLoading(false);
+                } else {
+                    setLoading(true);
                 }
-            } catch {
+            } else {
                 setLoading(false);
             }
-        }, 2500);
+        };
 
-        (async () => {
-            try {
-                const res = await getOrderStatus(token);
-                if (res?.success) setOrder(res);
-            } catch {}
-        })();
+        const interval = setInterval(fetchStatus, 2500);
+        fetchStatus();
 
         return () => clearInterval(interval);
-    }, [token]);
+    }, [token, orderId, sessionId, paymentMethod]);
 
     const subscriptionDate = order?.userData?.subscription
         ? new Date(order.userData.subscription).toLocaleDateString('de-DE')

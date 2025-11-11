@@ -795,8 +795,9 @@
                 "emailInvalid": "Неверный email",
                 "paymentMethod": "Метод оплаты",
                 "selectPaymentPlaceholder": "Выберите метод оплаты",
+                "stripe": "Stripe",
                 "paypal": "PayPal",
-                "buyWithPaypal": "Купить через PayPal",
+                "buy": "Купить товар",
                 "processing": "Обработка..."
             }
         },

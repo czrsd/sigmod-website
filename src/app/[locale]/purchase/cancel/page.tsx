@@ -13,15 +13,19 @@ export default function PurchaseCanceled() {
     const [loading, setLoading] = useState(true);
     const searchParams = useSearchParams();
     const token = searchParams.get('token') || '';
+    const orderId = searchParams.get('orderId') || '';
+    const paymentMethod = searchParams.get('method') || '';
 
     useEffect(() => {
-        if (token) {
+        if ((token || orderId) && paymentMethod) {
             setLoading(true);
-            cancelOrder(token).finally(() => setLoading(false));
+            cancelOrder(token || orderId, paymentMethod).finally(() =>
+                setLoading(false)
+            );
         }
-    }, [token]);
+    }, [token, orderId, paymentMethod]);
 
-    if (!token) return redirect('/shop');
+    if (!token && !orderId) return redirect('/shop');
 
     if (loading)
         return (
@@ -38,7 +42,7 @@ export default function PurchaseCanceled() {
                 {t('title')}
             </span>
             <span className='mt-2 text-sm text-neutral-400'>
-                {t('orderId', { id: token })}
+                {t('orderId', { id: token || orderId })}
             </span>
 
             <hr className='w-1/2 lg:w-1/3 my-5' />
