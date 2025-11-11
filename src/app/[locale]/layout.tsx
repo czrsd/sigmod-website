@@ -10,7 +10,7 @@ import Preload from '@/components/Preload';
 import { Providers } from './providers';
 
 const SITE = (
-    process.env.NEXT_PUBLIC_SITE_URL || 'https://dev.czrsd.com'
+    process.env.NEXT_PUBLIC_SITE_URL || 'https://sigmally.xyz'
 ).replace(/\/$/, '');
 
 async function getMetadata(locale: string): Promise<Metadata> {

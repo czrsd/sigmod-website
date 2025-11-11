@@ -175,14 +175,19 @@ export const getOrderStatus = async (
     data: string | StripeOrderQuery
 ): Promise<OrderStatusResponse | null> => {
     try {
-        let payload: Record<string, any> = { method };
+        let payload:
+            | { method: 'paypal'; token: string }
+            | { method: 'stripe'; orderId: string; sessionId: string };
 
         if (method === 'paypal') {
-            payload.token = data as string;
+            payload = { method, token: data as string };
         } else {
             const stripeData = data as StripeOrderQuery;
-            payload.orderId = stripeData.orderId;
-            payload.sessionId = stripeData.sessionId;
+            payload = {
+                method,
+                orderId: stripeData.orderId,
+                sessionId: stripeData.sessionId,
+            };
         }
 
         const { data: res } = await axios.post<OrderStatusResponse>(
