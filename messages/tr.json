@@ -795,7 +795,7 @@
                 "emailInvalid": "Geçersiz e-posta",
                 "paymentMethod": "Ödeme yöntemi",
                 "selectPaymentPlaceholder": "Ödeme yöntemi seçin",
-                "stripe": "Stripe",
+                "stripe": "Stripe (kart ödemesi)",
                 "paypal": "PayPal",
                 "buy": "Ürün satın al",
                 "processing": "İşleniyor..."

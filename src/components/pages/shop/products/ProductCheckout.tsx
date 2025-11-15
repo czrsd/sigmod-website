@@ -147,7 +147,7 @@ export default function ProductCheckout({
                                 <span>{t('stripe')}</span>
                             </div>
                         </SelectItem>
-                        <SelectItem value='paypal' disabled>
+                        <SelectItem value='paypal'>
                             <div className='flex items-center gap-2'>
                                 <Image
                                     src='/shop/paypal.svg'

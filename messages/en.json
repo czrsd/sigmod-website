@@ -795,7 +795,7 @@
                 "emailInvalid": "Invalid email",
                 "paymentMethod": "Payment method",
                 "selectPaymentPlaceholder": "Select payment method",
-                "stripe": "Stripe",
+                "stripe": "Stripe (card)",
                 "paypal": "PayPal",
                 "buy": "Purchase item",
                 "processing": "Processing..."
