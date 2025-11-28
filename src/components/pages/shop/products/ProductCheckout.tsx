@@ -16,6 +16,8 @@ import { CreditCard, Mail } from 'lucide-react';
 import { verifyUser, purchaseItem } from '@/services/shop';
 import { useTranslations } from 'next-intl';
 import { Order } from '@/types/shopTypes';
+import Link from 'next/link';
+import { discordLink } from '@/utils/getLink';
 
 export default function ProductCheckout({
     productType,
@@ -147,7 +149,7 @@ export default function ProductCheckout({
                                 <span>{t('stripe')}</span>
                             </div>
                         </SelectItem>
-                        <SelectItem value='paypal'>
+                        <SelectItem value='paypal' disabled>
                             <div className='flex items-center gap-2'>
                                 <Image
                                     src='/shop/paypal.svg'
@@ -160,6 +162,16 @@ export default function ProductCheckout({
                         </SelectItem>
                     </SelectContent>
                 </Select>
+
+                <span className='text-neutral-500 text-xs'>
+                    {t.rich('paypalInfo', {
+                        discord: (chunks) => (
+                            <Link className='underline' href={discordLink}>
+                                {chunks}
+                            </Link>
+                        ),
+                    })}
+                </span>
             </div>
 
             <Button

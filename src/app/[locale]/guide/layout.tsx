@@ -55,7 +55,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <aside
                 className={`${
                     menuOpen ? 'block' : 'hidden'
-                } md:block w-full md:w-64 p-6 border-r bg-background`}
+                } md:block w-full md:w-max md:min-w-64 p-6 border-r bg-background`}
             >
                 <nav className='flex flex-col gap-2'>
                     <span className='font-semibold mb-2 hidden md:block'>
