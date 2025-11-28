@@ -1,10 +1,10 @@
 {
     "Metadata": {
-        "desc": "Sigmally deneyiminizi SigModz ile geliştirin. En son SigMod ve SigFixes modlarını indirerek gelişmiş özelliklerin, performans iyileştirmelerinin, makroların, temaların ve daha fazlasının kilidini açın. Basit kurulum, güçlü araçlar, düzenli güncellemeler."
+        "desc": "SigModz ile Sigmally deneyiminizi geliştirin. Gelişmiş özelliklerin, performans yükseltmelerinin, makroların, temaların ve daha fazlasının kilidini açmak için en son SigMod ve SigFixes modlarını indirin. Basit kurulum, güçlü araçlar, düzenli güncellemeler."
     },
     "NotFound": {
         "title": "404 – Sayfa Bulunamadı",
-        "message": "Görünüşe göre bu sayfa mevcut değil veya taşınmış."
+        "message": "Görünüşe göre bu sayfa yok veya taşınmış."
     },
     "Header": {
         "home": "Ana Sayfa",
@@ -12,47 +12,47 @@
             "title": "Modlar",
             "sigmod": {
                 "title": "SigMod İstemcisi",
-                "desc": "Özel arayüz, makrolar, oyun otomasyonu"
+                "desc": "Özelleştirilmiş arayüz, makrolar, oyun otomasyonu"
             },
             "sigfixes": {
                 "title": "SigFixes",
-                "desc": "Multibox desteği, FPS artışı"
+                "desc": "Multibox desteği, FPS artırımı"
             }
         },
         "guide": "Kurulum Rehberi",
-        "faq": "SSS",
+        "faq": "FAQ",
         "about": "Hakkında",
         "shop": "Mağaza"
     },
     "Footer": {
-        "text": "© 2025 SigModz. Sigmally ile bağlantısı yoktur."
+        "text": "© 2025 SigModz. Sigmally ile bağlantılı değildir."
     },
     "HomePage": {
         "hero": {
-            "title": "Sigmally Modları",
-            "sub": "Daha hızlı performans, akıllı araçlar ve tam özelleştirme ile Sigmally oyununu geliştirin.",
+            "title": "Sigmally Modz",
+            "sub": "Daha akıcı performans, akıllı araçlar ve size ait gibi hissettiren bir kurulum ile Sigmally oturumlarınızı güçlendirin.",
             "start": "Başlayın"
         },
         "introduction": {
             "what": {
-                "title": "Sigmally Nedir?",
-                "desc": "Sigmally, daha güvenilir performans için özel sunucularda barındırılan hızlı tempolu, tarayıcı tabanlı agar.io tarzı bir oyundur. Peletleri toplayın, rakiplerinizi zekice geçin ve tatmin edici fizik ile duyarlı kontrollerle hücrenizi büyütün. Tek başınıza veya takımlarla dinamik maçlarda yarışın, global liderlik tablosunda yükselin ve düzenli topluluk etkinliklerine katılın."
+                "title": "Sigmally nedir?",
+                "desc": "Sigmally, daha istikrarlı performans için özel sunucularda çalışan tarayıcı tabanlı agar.io tarzı hızlı bir oyundur. Oyuna girersiniz, pelletleri toplarsınız, oyunculardan kaçarsınız ve temiz fizik ile keskin kontrollerle hücrenizi büyütürsünüz. Tek başına oynayın, arkadaşlarınızla takılın, lider tablosuna çıkın ve topluluk etkinliklerine istediğiniz zaman katılın."
             },
             "why": {
                 "title": "Neden",
-                "desc": "SigModz, gelişmiş araçları ve özelleştirmeleri doğrudan oyuna getirir. Hızlı beslemeler ve yeniden doğuşlar için makrolar oluşturun ve ince ayar yapın, arayüz temalarını ve düzenlerini stilinize göre özelleştirin ve günlük görevleri (örneğin coin toplama) otomatikleştirin. Performans iyileştirmeleri, multibox desteği ve sezgisel oyun içi kontrollerle ister gündelik oyuncu olun ister rekabetçi profesyonel, daha temiz, hızlı ve stratejik oynayın."
+                "desc": "SigModz, oyunu istediğiniz şekilde şekillendirmeniz için araçlar sunar. Split ve feed için makrolar kurun, arayüz temalarını ve düzenlerini ayarlayın ve günlük madeni para toplama gibi küçük görevleri otomatikleştirin. Performans artışları, multibox seçenekleri ve basit oyun içi kontroller ile ister rahat ister rekabetçi olun daha temiz ve daha hızlı oynarsınız."
             }
         },
         "mods": {
             "sigmod": {
                 "title": "SigMod",
-                "desc": "SigMod, güçlü araçları parmaklarınızın ucuna getiren tam oyun içi mod menüsü ile Sigmally deneyiminizi dönüştürür. Hızlı beslemeler ve bölünmeler için programlanabilir makrolar kurun, temalar ve düzenlerle her görsel öğeyi özelleştirin ve günlük coin toplama gibi rutin görevleri otomatikleştirin. Oyun tarzınıza uygun HUD, tuş atamaları ve sohbet ayarlarını tümüyle oyundan çıkmadan ayarlayın.",
-                "learnMore": "SigMod hakkında daha fazla bilgi edinin"
+                "desc": "SigMod, oyununuza tam bir mod menüsü ekler. Özel makrolar oluşturun, temaları ve düzenleri değiştirin ve günlük madeni para toplama gibi işleri otomatikleştirin. HUD'ınızı, tuş atamalarınızı ve sohbet ayarlarını ayarlayarak her şeyin oyun sırasında doğal hissetmesini sağlayın.",
+                "learnMore": "SigMod hakkında daha fazla bilgi"
             },
             "sigfixes": {
                 "title": "SigFixes",
-                "desc": "SigFixes, akıcı ve tutarlı kare hızları ve minimum gecikme için performansı süper şarj eder. Daha hızlı yükleme sürelerinin, daha net giriş tepkisinin ve yerleşik multibox kontrollerinin tadını çıkarın; böylece birden fazla hesabı sorunsuz yönetin. Titreme ve gecikmeyi ortadan kaldırmak için çizim gecikmesi, hücre saydamlığı, kamera yakınlaştırması ve isim ölçeklendirmesini ayarlayın.",
-                "learnMore": "SigFixes hakkında daha fazla bilgi edinin"
+                "desc": "SigFixes, daha istikrarlı kare hızı ve minimum gecikme için performansı iyileştirir. Daha hızlı yüklenin, daha sıkı giriş tepkisi alın ve yerleşik multibox araçlarıyla birden fazla hesabı kontrol edin. Her şeyin sorunsuz çalışması için draw delay, opaklık, yakınlaştırma ve ad ölçeklemesini ayarlayın.",
+                "learnMore": "SigFixes hakkında daha fazla bilgi"
             },
             "learnMore": "Öğren & Kur"
         },
@@ -60,61 +60,61 @@
             "questions": [
                 {
                     "question": "Bu scriptler güvenli mi?",
-                    "answer": "Evet—modlarımız tamamen açık kaynaklı ve şeffaftır, Tampermonkey ise milyonlarca kişi tarafından güvenilir. Gizli kod veya sürpriz yoktur."
+                    "answer": "Evet. Her şey açık kaynaklı ve Tampermonkey geniş çapta güvenilen bir araçtır. Gizli bir numara yok."
                 },
                 {
-                    "question": "İki moda da ihtiyacım var mı?",
-                    "answer": "Gerekli değil, ancak SigMod + SigFixes birlikte en iyi kontrol ve performansı sunar."
+                    "question": "Her iki moda da ihtiyacım var mı?",
+                    "answer": "Zorunlu değil. SigMod ve SigFixes'i birlikte kullanmak kontrol ve hız açısından en iyi karışımı verir."
                 },
                 {
-                    "question": "Sigmally'de kullanmak serbest mi?",
-                    "answer": "Evet. SigMod ve SigFixes gibi modlar, hem Sigmally topluluğu hem de sahibi tarafından yaygın olarak kabul edilmektedir."
+                    "question": "Sigmally'de izinli mi?",
+                    "answer": "Evet. Her iki mod da topluluk ve sahibi tarafından iyi bilinir ve kabul görür."
                 },
                 {
-                    "question": "Modları istediğim zaman kaldırabilir miyim?",
-                    "answer": "Evet—kullanıcı script yöneticinizden devre dışı bırakabilir veya kaldırabilirsiniz."
+                    "question": "Her zaman kaldırabilir miyim?",
+                    "answer": "Elbette. Kullanıcı script yöneticinizden kapatın veya kaldırın."
                 },
                 {
                     "question": "SigMod beni bir gecede profesyonel oyuncu yapar mı?",
-                    "answer": "Keşke! SigMod oyununuzu turbo şarj etmek gibidir—her şeyi daha akıcı yapar, ama direksiyon hala sizde. Refleksleriniz, stratejiniz ve sayısız çalışma saatiniz sizinle."
+                    "answer": "Keşke. SigMod işleri daha akıcı ve yönetilebilir hale getirir ama yetenek sizden gelir: zamanlama, okuma ve pratik."
                 }
             ]
         },
         "community": {
             "title": "Topluluk",
-            "desc": "Destek, hata bildirimleri ve gece geç saatlerde sorun çözmek için Discord'umuza katılın.",
+            "desc": "Destek, hata bildirimleri ve gece yardımı için Discord'umuza katılın.",
             "join": "Discord'a Katıl"
         }
     },
     "SigModPage": {
         "Hero": {
             "title": "SigMod İstemcisi",
-            "sub": "Özel makrolar, takım etiketleri, arayüz ayarları ve tam oyun içi kişiselleştirme ile Sigmally oyununu geliştirin.",
+            "sub": "Özel makrolar, takım etiketleri, UI ayarları ve tam oyun içi kişiselleştirme ile Sigmally oynanışınızı yükseltin.",
             "install": "SigMod'u Yükle",
-            "explore": "Özellikleri Keşfet",
-            "require": "Gerektirir",
+            "explore": "Özellikleri İncele",
+            "require": "Gereksinimler",
             "or": "veya"
         },
         "CoreFeatures": {
             "macros": {
                 "title": "Makrolar & Otomasyon",
-                "desc": "Özel kısayollar, tıklama dizisi makroları, anında yeniden doğuşlar ve otomatik coin toplama ile oyununuzu optimize edin."
+                "desc": "Özel kısayollar, tıklama sırası makroları, anında respawn ve otomatik madeni para toplama ile daha akıllı oynayın."
             },
             "party": {
-                "title": "Takım & Etiket Sistemi",
-                "desc": "Takım arkadaşlarınız için 3 harfli etiketler oluşturun, minimap üzerinde canlı takip edin, özel sohbet edin ve hassas pingler gönderin."
+                "title": "Party & Etiket Sistemi",
+                "desc": "Takım arkadaşları için 3 karakterli bir etiket oluşturun, mini haritada takip edin, özel sohbet edin ve hassas pingler gönderin."
             },
             "customization": {
                 "title": "Tam Kişiselleştirme",
-                "desc": "Arayüz temalarını değiştirin, yazı tiplerini seçin, düzenleri yeniden sıralayın ve tüm bunları tek bir menüde tuşlara atayın."
+                "desc": "Arayüz temalarını değiştirin, font seçin, düzenleri yeniden düzenleyin ve tuş atamalarını tek bir menüden yeniden mapleyin."
             }
         },
         "WhySigMod": {
             "title": "Neden SigMod?",
-            "desc1": "SigMod, Sigmally istemcisini akıllı otomasyon, arayüz kişiselleştirme ve tam UI kontrolü ile güçlendirir. Makrolar uygulayın, panelleri yeniden düzenleyin, tuşları yeniden atayın ve görselleri ince ayar yapın—hepsi şık bir oyun içi kontrol panelinde. Temaları değiştirin, isimleri yer imlerine ekleyin ve tek tıkla ekran görüntüsü alın.",
-            "desc2": "Dinamik etiketleme ile takımınızla koordinasyon sağlayın: özel sohbet kanalları, taktik pingler ve canlı minimap işaretleri. Maç istatistiklerinizi takip edin, arkadaşları yönetin ve sohbet yazı tipi, renk ve tuş atamalarını anında ayarlayın.",
-            "performance": "En iyi performans mı istiyorsunuz? SigMod'u ile eşleştirin",
-            "smooth": "ultra tepki veren oyun deneyimi için.",
+            "desc1": "SigMod, Sigmally'e otomasyon, kişiselleştirme ve tam UI kontrolü ekler. Makrolar kurun, panelleri taşıyın, tuşları yeniden atayın ve temiz bir oyun içi kontrol panelinden görselleri ayarlayın. Temaları değiştirin, favori isimleri kaydedin ve tek tıkla ekran görüntüsü alın.",
+            "desc2": "Dinamik etiketlerle takımınızla çalışın: özel sohbet, taktiksel pingler ve canlı mini harita işaretleri. Maç istatistiklerini kontrol edin, arkadaşları yönetin ve sohbet fontları ile tuş atamalarını anında ayarlayın.",
+            "performance": "Zirve performans mı istiyorsunuz? SigMod'u şu ile eşleştirin",
+            "smooth": "ultra duyarlı oynanış için.",
             "getStarted": "SigMod ile Başlayın"
         },
         "Features": {
@@ -122,94 +122,94 @@
             "list": [
                 {
                     "title": "Makrolar & Otomasyon",
-                    "summary": "Tüm hareketleri otomatikleştir — tuş atamaları, tricksplit ve fare makroları",
-                    "details": "Hızlı besleme, çift/üçlü/dörtlü bölünmeler ve tricksplit gibi gelişmiş hareketler için tuşları atayın. Sol/sağ tıklama davranışları için fare makroları oluşturun. Bölünme dizilerini hassas gecikme ve besleme hızlarıyla yapılandırın. İsimler, skinler veya yeniden doğuş gibi ayarları tek bir tuşla açıp kapatın—tamamen özelleştirilebilir."
+                    "summary": "Hareketleri otomatikleştirin: tuş atamaları, tricksplitler ve fare makroları",
+                    "details": "Hızlı feed, çift/üçlü/dörtlü split ve tricksplit gibi gelişmiş eylemler için tuş bağlayın. Sol ve sağ tıklama için fare makroları oluşturun. Hassas gecikmeler ve feed hızları ayarlayın. Bir tuşla isimleri, skinleri veya respawnu değiştirin. Her şey özelleştirilebilir."
                 },
                 {
-                    "title": "Takım & Etiket Sistemi",
-                    "summary": "3 harfli etiketler, minimap takibi, pingler & özel takım sohbeti",
-                    "details": "Özel takımlar oluşturmak için kendinize 3 karaktere kadar etiket atayın. Üyeler minimap'te takip edilir, isim ve skorla birlikte takım panelinde listelenir ve hassas pingler gönderebilir. Takım sohbeti, genel sohbetten izole güvenli iletişim sağlar. Hangi ping'in kimden geldiğini etiket indeksiyle görebilirsiniz."
+                    "title": "Party & Etiket Sistemi",
+                    "summary": "3 karakterli etiketler, mini harita takibi, pingler ve özel sohbet",
+                    "details": "Takım oluşturmak için 3 karakterli bir etiket seçin. Üyeleri mini haritada görün, party panelinde isim ve skorlarını görüntüleyin ve hassas pingler gönderin. Party sohbeti özel kalır."
                 },
                 {
-                    "title": "Menü Kişiselleştirme",
-                    "summary": "Temalar, yazı tipleri, düzen, sekmeler, kenarlıklar ve giriş stilleri",
-                    "details": "Temalar, yuvarlak köşeler, arka plan resimleri ve özel giriş kenarlıklarıyla arayüzünüzü kişiselleştirin. Discord veya dil butonları gibi istemediğiniz öğeleri gizleyin. Sekme sırasını, boşlukları, gölgeleri ayarlayın ve hazır düzenler arasında geçiş yaparak tamamen kişisel bir deneyim yaşayın."
+                    "title": "Menü Özelleştirmesi",
+                    "summary": "Temalar, fontlar, düzenler, sekmeler ve input stili",
+                    "details": "Temalar, yuvarlatılmış köşeler, arka plan görselleri ve özel input çerçeveleri ile UI'nızı kişiselleştirin. İstemediğiniz öğeleri gizleyin. Sekmeleri yeniden düzenleyin, boşlukları ayarlayın ve size uygun bir düzen seçin."
                 },
                 {
                     "title": "Görsel Oyun Ayarları",
-                    "summary": "Harita renkleri, opaklık, hücre stili ve yazı tipleri",
-                    "details": "Harita, sınır, yiyecek ve hücreler gibi temel oyun öğelerinin renk ve saydamlığını ayarlayın. Virüsler veya harita arka planları gibi oyun içi resimleri değiştirin. Farklı yazı tipleri seçin, oyuncu isimleri ve skinleri göster/gizle yapın, metin konturları uygulayın ve ızgara ile sınır gibi görsel katmanları açıp kapatın."
+                    "summary": "Harita renkleri, opaklık, hücre stili ve fontları ayarlayın",
+                    "details": "Harita, sınır, yiyecek ve hücreler için renk ve şeffaflığı değiştirin. Virüsler veya arka plan gibi oyun içi görselleri değiştirin. Font seçin, isimleri ve skinleri göster/gizle, metin konturları ekle ve ızgara veya sınır gibi kaplamaları açın."
                 },
                 {
                     "title": "Galeri & Ekran Görüntüleri",
-                    "summary": "Anları yakalayın ve oyun galeriniz yönetin",
-                    "details": "Oyun içinde anında ekran görüntüsü almak için tuş atayın. Galeri sekmesinde resim koleksiyonunuzu gözden geçirin. Her resim zaman damgası, silme ve indirme seçenekleri içerir. Galerinizi kolayca yönetin veya temizleyin."
+                    "summary": "Anları yakalayın ve galeriyi yönetin",
+                    "details": "Oyun içinde ekran görüntüsü almak için bir tuş atayın. Galeri sekmesinde zaman damgalarıyla resimleri görüntüleyin ve kolayca silin veya indirin. Görüntülerinizi tek yerde temizleyin veya dışa aktarın."
                 },
                 {
                     "title": "İsim Araçları & Renk Efektleri",
-                    "summary": "İsimleri kaydedin, jeneratörler, degrade & semboller kullanın",
-                    "details": "Popüler sitelerden (NickFinder, Tell.wtf) takma ad jeneratörlerine erişin. Favori isimlerinizi kaydedip tek tıkla kopyalayın. Özel karakterler ve degrade, çift tonlu efektlerle şık isimler oluşturun. Hızlı silme veya yeniden kullanım özellikleri yerleşiktir."
+                    "summary": "İsimleri kaydedin, jeneratörler, gradyanlar ve semboller kullanın",
+                    "details": "Takma isim jeneratörleri kullanın, favorileri hızlı kopyalama için kaydedin ve özel karakterlerle isimler oluşturun. Gradyanlar ve iki tonlu efektlerle canlı isim renkleri tasarlayın. İsimleri hızlıca silin veya tekrar kullanın."
                 },
                 {
                     "title": "Arkadaşlar & Mod Profili",
-                    "summary": "Kullanıcı ekle, özel sohbet et & mod kimliğini yönet",
-                    "details": "Kullanıcı adı veya Discord girişi ile arkadaş ekleyin ve sohbet edin. Çevrimiçi durum, etiket, sunucu ve daha fazlasını görün. Filtreler ve arama ile kullanıcı bulun. Avatar, biyografi, durum ve renk vurguları ile mod profilinizi özelleştirin. İstekleri kabul/red edin ve genel görünürlüğü kontrol edin."
+                    "summary": "Kullanıcı ekleyin, özel sohbet edin ve mod profilinizi şekillendirin",
+                    "details": "Mod profili oluşturmak ve kullanıcıları kullanıcı adı veya Discord ile eklemek için giriş yapın. Çevrimiçi durum, etiket ve sunucu bilgilerini görün. Arama ve filtreleri kullanın, avatar ve biyografinizi özelleştirin ve sizi kimlerin bulabileceğini kontrol edin."
                 },
                 {
                     "title": "İstatistikler & Hızlı Erişim Paneli",
-                    "summary": "Oyun istatistiklerini takip edin ve ana ayarları hızlı değiştirin",
-                    "details": "Ana sekme, oynama süresi, en yüksek kütle ve toplam ölüm sayısı gibi istatistikleri gösterir. Hızlı erişim paneli ile Kütle, Izgara, Sınır, Jel Fizikleri, Otomatik Yeniden Doğuş, Coin Toplama gibi ayarları menüden kolayca açıp kapatın."
+                    "summary": "Oyunu takip edin ve ana ayarları hızlıca değiştirin",
+                    "details": "Ana sayfa oyun süresi, en yüksek kütle ve ölümler gibi istatistikleri gösterir. Hızlı erişim paneli Mass, Grid, Border, Jelly Physics, Auto-Respawn, Coin Claim ve daha fazlasını menülerde aramadan açıp kapatır."
                 },
                 {
-                    "title": "Sohbet Sistemi Yenilemesi",
-                    "summary": "Sekmeler, tuş atamaları ve tam kontrol ile özel mod sohbeti",
-                    "details": "Sekmelerle Takım ve Ana sohbet arasında geçiş yapın. Mesajlar websocket ile canlı güncellenir. Konum gönderme, bulanıklık açma, zaman damgaları veya kompakt modu tuşlarla kontrol edin. Metin, arka plan ve tema renklerini (şeffaflık dahil) özelleştirin."
+                    "title": "Sohbet Sistemi Yeniden Tasarımı",
+                    "summary": "Sekmeli, tuş atamalı ve tam kontrollü özel sohbet",
+                    "details": "Party ve Main sohbetleri arasında sekmelerle geçiş yapın. Mesajlar canlı güncellenir. Konum paylaşmak, blur açıp kapatmak veya zaman etiketleri eklemek için tuş atamalarını kullanın. Metni, arka planı ve tema opaklığını özelleştirin."
                 }
             ],
             "viewMore": "Daha Fazla Gör"
         },
         "FAQ": {
-            "title": "SSS",
+            "title": "FAQ",
             "list": [
                 {
                     "question": "SigMod'un temel özellikleri nelerdir?",
-                    "answer": "SigMod tamamen özelleştirilebilir mod menüsü, güçlü makrolar ve otomasyon araçları, takım & etiket sistemi, canlı oyun içi istatistikler ve modern sohbet, isim ve arkadaş sistemi içerir—hepsi Sigmally oyun deneyiminizi geliştirmek için entegre edilmiştir."
+                    "answer": "Özelleştirilebilir bir mod menüsü, güçlü makrolar, party ve etiket sistemi, canlı istatistikler ve Sigmally deneyiminizi geliştiren modern bir isim ve arkadaş sistemi."
                 },
                 {
-                    "question": "SigMod hangi kişiselleştirme seçeneklerini sunar?",
-                    "answer": "Temalar, yazı tipleri, düzen boşlukları, kenar yarıçapı, isim renkleri (degrade dahil), UI saydamlığı, menü görselleri, oyun renkleri ve onlarca görsel ayarı değiştirebilirsiniz. Ayrıca ölüm ekranı ayarları, skin geçersiz kılmaları ve arka plan ön ayarlarını destekler."
+                    "question": "SigMod hangi özelleştirme seçeneklerini sunar?",
+                    "answer": "Temaları, fontları, düzen boşluklarını, köşe yarıçapını, gradyan dahil isim renklerini, UI opaklığını ve birçok görsel ayarı değiştirebilirsiniz. Ayrıca deathscreen ayarları, skin override'ları ve arka plan önayarlarını destekler."
                 },
                 {
                     "question": "Etiket sistemi nedir?",
-                    "answer": "Etiket sistemi, takım arkadaşlarınızla 3 harfli kodlar atayarak özel bir parti oluşturmanızı sağlar. Minimap'te birbirinizi takip eder, özel parti sohbeti yapar, ping gönderir ve ortak parti panelinde isimler ile etiket indekslerini görürsünüz."
+                    "answer": "Party oluşturmak için 3 karakterli bir etiket atayın. Mini haritada takım arkadaşlarını takip edin, özel sohbet edin, ping gönderin ve paylaşılan panelde skorları görüntüleyin."
                 },
                 {
                     "question": "Arkadaş sistemi nasıl çalışır?",
-                    "answer": "Mod profili oluşturup diğer oyuncuları arkadaş olarak ekleyebilirsiniz. Profilleri, rollerini, çevrimiçi durumlarını, sunucu bilgilerini görüntüleyip onlarla doğrudan sohbet edin. Arkadaş istekleri, arama, ayarlar ve profil özelleştirmeleri (avatar, biyografi, durum) dahil."
+                    "answer": "Bir mod profili oluşturun, arkadaş ekleyin, profilleri görüntüleyin ve doğrudan sohbet edin. Çevrimiçi durum, sunucu bilgisi görünür ve istekleri yönetin."
                 },
                 {
                     "question": "SigMod menüsünü nasıl açarım?",
-                    "answer": "Mod menüsünü açmak için V tuşuna basın veya oyunun sağ üst köşesindeki dişli simgesine tıklayın. Makrolar, Temalar, Galeri, Arkadaşlar ve daha fazlası için sekmeler içerir."
+                    "answer": "V tuşuna basın veya sağ üst köşedeki dişli simgesine tıklayın. Menüde Macros, Themes, Gallery, Friends ve daha fazlası için sekmeler bulunur."
                 },
                 {
-                    "question": "Kısayol tuşları ve makroları özelleştirebilir miyim?",
-                    "answer": "Evet. SigMod besleme, bölünme, tricksplit ve daha fazlası için gelişmiş tuş atama araçları sunar. Fare makroları atayabilir, line split davranışını yapılandırabilir, hızlı besleme hızını ayarlayabilir ve menü, isimler veya otomatik yeniden doğuş gibi UI geçişlerini bağlayabilirsiniz."
+                    "question": "Hotkey'leri ve makroları özelleştirebilir miyim?",
+                    "answer": "Evet. SigMod, feed, split ve tricksplit için gelişmiş tuş atamalarına sahiptir. Fare makroları atayabilir, split dizileri belirleyebilir ve UI toggle'larına kısayollar bağlayabilirsiniz."
                 },
                 {
                     "question": "SigMod oyun performansını etkiler mi?",
-                    "answer": "SigMod birçok özellik ekler ama hafif kalacak şekilde optimize edilmiştir. Daha iyi kare hızı veya az gecikme için SigFixes'i kurun—bu, temel Sigmally istemcisindeki performans darboğazlarını düzeltir."
+                    "answer": "SigMod hafif olacak şekilde optimize edilmiştir. Daha iyi FPS veya daha az gecikme için performans darboğazlarını hedefleyen SigFixes'i yükleyin."
                 },
                 {
-                    "question": "Ekran görüntüsü alıp yönetebilir miyim?",
-                    "answer": "Evet. Özel bir tuş atayarak oyun içinde anında ekran görüntüsü alın. Galeri sekmesinde tarih sırasına göre görüntüleyin, tek tıkla indirip silebilirsiniz."
+                    "question": "Ekran görüntüsü alabilir ve yönetebilir miyim?",
+                    "answer": "Evet. Ekran görüntüsü yakalamak için bir tuş atayın, Galeri'de tarihe göre görüntüleyin ve tek tıkla indirin veya silin."
                 }
             ]
         },
         "Community": {
             "title": "Topluluğa Katıl",
-            "text": "Yardıma mı ihtiyacınız var, hata mı buldunuz veya özel makrolarınızı mı paylaşmak istiyorsunuz? Discord'a katılın ve diğer SigMod kullanıcılarıyla bağlantı kurun.",
+            "text": "Yardıma mı ihtiyacınız var, bir hata mı buldunuz veya makro paylaşmak mı istiyorsunuz? Discord'a katılın ve diğer SigMod kullanıcılarıyla bağlantı kurun.",
             "discord": "Discord'a Katıl",
-            "explore": "Ya da kodu keşfedin"
+            "explore": "Ya da kodu inceleyin"
         }
     },
     "SigFixesPage": {
@@ -217,30 +217,30 @@
             "title": "SigFixes",
             "sub": "Sigmally'nin çekirdeğini ultra akıcı performans, hassas giriş ve gelişmiş multibox kontrolü ile güçlendirin.",
             "install": "SigFixes'i Yükle",
-            "explore": "Özellikleri Keşfet",
+            "explore": "Özellikleri İncele",
             "require": "Gerektirir",
             "or": "veya"
         },
         "CoreFeatures": {
             "performance": {
-                "title": "Performans Artışı",
-                "desc": "Daha hızlı bir motorla rendering motorunu değiştirir—daha akıcı görseller, daha az ani dalgalanma ve daha iyi genel kararlılık."
+                "title": "Artırılmış Performans",
+                "desc": "Daha hızlı görseller, daha az ani sıçrama ve daha iyi genel kararlılık için render motorunu değiştirir."
             },
             "multiboxing": {
-                "title": "Sorunsuz Multiboxing",
-                "desc": "Tek sekme kontrolü, dış hat ayarları, birleşme destekleri ve akıllı yeniden doğuş araçları—sorunsuz multibox kurulumları için optimize edildi."
+                "title": "Sorunsuz Multibox",
+                "desc": "Tek sekmede kontrol, kontur ayarları, merge yardımcıları ve multibox kurulumları için optimize edilmiş akıllı respawn araçları."
             },
             "input": {
                 "title": "Hassas Giriş",
-                "desc": "Giriş gecikmesini azaltır ve kontrol doğruluğunu artırır—özellikle makro ve bölünme stratejilerinde güçlü."
+                "desc": "Girdi gecikmesini azaltır ve kontrol doğruluğunu iyileştirir; makrolar veya split oyunları kullanırken özellikle faydalıdır."
             }
         },
         "WhySigFixes": {
             "title": "Neden SigFixes?",
-            "desc1": "SigFixes, Sigmally’nin rendering motorunu yeniler, daha akıcı kareler ve daha keskin giriş sağlar. Yaygın takılmaları giderir, gecikmeyi azaltır ve oyun deneyiminizi stabil tutar—özellikle baskı altındayken.",
-            "desc2": "Ciddi oyuncular için tasarlandı, multiboxing yaparken parlıyor. Daha hızlı girişler, senkronize kamera davranışı ve takip/merging için görsel ayarlarla tam kontrol sağlar.",
-            "worksWith": "Zaten kullanıyorsanız",
-            "combo": "? En iyi deneyim için ikisini birlikte kullanın.",
+            "desc1": "SigFixes, daha düzgün kareler ve daha keskin giriş için Sigmally'nin render sistemini elden geçirir. Yaygın takılmaları ortadan kaldırır, gecikmeyi düşürür ve yüksek baskı altında oyunun stabil kalmasını sağlar.",
+            "desc2": "Ciddi oyuncular için tasarlandı; multibox yaparken parlıyor. Daha hızlı girdiler, senkron kamera davranışı ve görsel ayarlar hücreleri takip etmenize ve merge etmenize tam kontrol sağlar.",
+            "worksWith": "Zaten kullanılan",
+            "combo": "Mükemmel deneyim için ikisini eşleştirin.",
             "getStarted": "SigFixes ile Başlayın"
         },
         "Features": {
@@ -249,193 +249,193 @@
             "list": [
                 {
                     "title": "Performans",
-                    "summary": "Canvas'ı yüksek hızlı WebGL render motoru ile değiştirir",
-                    "details": "SigFixes, oyunun canvas'ını tam optimize edilmiş WebGL render motoru ile değiştirerek gecikme ani yükselmelerini ortadan kaldırır. Bu sayede multibox veya kayıt sırasında bile daha akıcı oyun, daha iyi kare hızları ve tutarlı performans sağlar."
+                    "summary": "Canvas'ı yüksek hızlı WebGL render ile değiştirir",
+                    "details": "SigFixes, oyunun canvas'ını optimize edilmiş bir WebGL renderer ile değiştirerek lag sıçramalarını azaltır. Daha akıcı oynanış, daha iyi FPS ve multibox veya kayıt sırasında bile cihazlar arası istikrarlı performans bekleyin."
                 },
                 {
-                    "title": "Hassas Giriş",
-                    "summary": "Giriş ile hareket arasındaki gecikmeyi azaltır",
-                    "details": "Hareket, besleme veya bölünme sırasında gerçek zamanlı tepki yaşayın. SigFixes, tüm fare ve klavye hareketlerinde gecikmeyi azaltır ve hassasiyeti artırır. Özellikle hızlı mücadelelerde hareketleriniz daha keskin ve kontrolü kolay olur."
+                    "title": "Doğru Girdi",
+                    "summary": "Girdi ile hareket arasındaki gecikmeyi azaltır",
+                    "details": "Hareket ederken, feed yaparken ve split atarken gerçek zamanlı tepki hissedin. SigFixes gecikmeyi azaltır ve fare ile klavye eylemleri için kontrolü sıkılaştırır. Hızlı çatışmalarda hareketler daha keskin ve hassas hissedilir."
                 },
                 {
-                    "title": "Gelişmiş Multiboxing",
-                    "summary": "Tek sekme kontrolü, görüş birleşimi, yeniden doğuş yönetimi",
-                    "details": "Birden fazla oyun örneğini tek bir sekmeden yönetin. Görüş birleşim yöntemini seçin, dış hatları, renkleri ve yeniden doğuş mantığını özelleştirin. Kusursuz birleşmeyi etkinleştirin, küme yeniden doğuşlarını engelleyin ve 2+ sekmeli kurulumları kolayca optimize edin."
+                    "title": "Gelişmiş Multibox",
+                    "summary": "Tek sekmede kontrol, görüş birleşimi ve respawn yönetimi",
+                    "details": "Tek bir sekmeden birden fazla örneği yönetin. Görüş birleşimi yöntemini seçin, konturları ve renkleri özelleştirin ve respawn kurallarını ayarlayın. Pürüzsüz birleşmeyi etkinleştirin, küme respawn'larını engelleyin ve 2+ sekme için ayarları optimize edin."
                 },
                 {
                     "title": "Çizim Ayarları",
-                    "summary": "Çizim gecikmesi, hücre dış hatları, kamera ve yakınlaştırma ayarları",
-                    "details": "Görsellik ve performans dengesini sağlamak için özel çizim gecikmesi ayarlayın. Hücre dış hatlarını açıp kapatın, skin URL'nizi belirleyin, kamera davranışını (Doğal, Anında) seçin ve yakınlaştırma hızını ile otomatik yakınlaştırmayı hassas ayarlarla düzenleyin."
+                    "summary": "Draw delay, hücre konturları, kamera ve yakınlaştırmayı ince ayar yapın",
+                    "details": "Görsellik ile performans arasında denge kurmak için draw delay ayarlayın. Hücre konturlarını açıp kapatın, skin URL'si belirleyin, Natural veya Instant gibi kamera davranışını seçin ve tepki için zoom hızını ve auto-zoom'u ayarlayın."
                 },
                 {
                     "title": "Görsel Araçlar",
-                    "summary": "Saydamlık, parlama, skinler, jel fizikleri ve ızgara çizgileri",
-                    "details": "Hücrelerinizin, skinlerin, peletlerin veya parlama efektlerinin görünürlüğünü ve davranışını ayarlayın. Jel fizikleri ve hücreler arası çizgiler gibi katmanları açıp kapatın. Bölünemeyen hücreleri özel renk ve saydamlık ile vurgulayın."
+                    "summary": "Opaklık, glow, skinler, jelly fizik ve ızgara çizgileri",
+                    "details": "Hücrelerin, skinlerin ve pelletlerin görünürlüğünü ve davranışını ayarlayın. Jelly fizik ve overlay'leri açıp kapatın, bölünemeyen hücreleri özel renklerle vurgulayın ve glow ile opaklığı ince ayarlayın."
                 },
                 {
-                    "title": "Tema Kişiselleştirme",
-                    "summary": "Tema renginizi seçin ve arayüz görsellerini kontrol edin",
-                    "details": "Kendi tema renginizi seçin ve modu genelinde uygulayın. Renk vurgularından gökkuşağı sınırları ve harita arka planlarına kadar arayüzü kişisel tarzınıza göre uyarlayın."
+                    "title": "Tema Özelleştirmesi",
+                    "summary": "Bir tema rengi seçin ve UI görsellerini kontrol edin",
+                    "details": "Bir tema rengi seçin ve modu genelinde uygulayın. Renk vurguları, harita arka planları ve gökkuşağı bordürleri gibi efektlerle UI'yi stilinize uydurun."
                 },
                 {
                     "title": "Oyun Davranışı Ayarları",
-                    "summary": "Pushsplit gecikmesi, XP skor bölünmesi, bölünme sonrası hareket",
-                    "details": "Bölünmeler sonrası hareketin nasıl başlayacağını, pushsplit davranışlarını ve XP ile skorun nasıl gösterileceğini yapılandırın. Bu ince ayarlar rekabetçi hareketleri kolaylaştırır."
+                    "summary": "Pushsplit gecikmesi, XP skor bölünmesi ve split sonrası hareket",
+                    "details": "Split sonrası davranışı kontrol edin; hareket zamanlamaları, pushsplit işleme ve XP ile skor gösterimini ayarlayın. Bu seçenekler rekabetçi hareketleri öğrenmeyi kolaylaştırır."
                 },
                 {
                     "title": "Kamera Kontrolü",
-                    "summary": "Akıcılık, hız, yeniden doğuş kamerası mantığı",
-                    "details": "Kameranızın hareket şeklini ayarlayın: anında, doğal veya akıcı. Yeniden doğuş kamerası davranışı, yakınlaştırma interpolasyonu ve hızını tercihinize veya kurulumunuza göre kontrol edin."
+                    "summary": "Pürüzsüzlük, hız ve spawn kamera mantığı",
+                    "details": "Kamera hareketini ayarlayın: Instant, Natural veya Smooth. Spawn kamera davranışını, zoom interpolasyonunu ve hızı ayarlayın, kurulumunuza uyacak şekilde yapılandırın."
                 },
                 {
-                    "title": "Metin Renderi",
-                    "summary": "Yazı tipi boyutu, kalınlık, kontur ve klan gösterimi",
-                    "details": "İsim/kütle ölçeğini düzenleyin, kalın metni açıp kapatın, konturlar uygulayın ve klanları gizleyin/gösterin. Kaotik anlarda yüksek görünürlük veya minimal kurulumlar için ideal."
+                    "title": "Metin Renderı",
+                    "summary": "Font boyutu, ağırlık, kontur ve klan gösterimi",
+                    "details": "İsim ve kütle ölçeğini değiştirin, kalın metni açın, konturlar uygulayın ve klanları göster/gizle. Kaotik maçlarda okunabilirlik veya daha temiz bir UI için ideal."
                 }
             ]
         },
         "FAQ": {
-            "title": "SSS",
+            "title": "FAQ",
             "list": [
                 {
                     "question": "SigFixes nedir?",
-                    "answer": "SigFixes, Sigmally istemcisi için bir performans yamasıdır. Rendering motorunu WebGL canvas ile değiştirerek oyun deneyimini daha akıcı, hızlı ve tepki veren hale getirir—özellikle multiboxing ve rekabetçi oyun için faydalıdır."
+                    "answer": "SigFixes, Sigmally istemcisi için bir performans yamasıdır. Oyun deneyimini daha akıcı, hızlı ve duyarlı hale getirmek için render motorunu WebGL canvas'a değiştirir; multibox ve rekabetçi oyun için idealdir."
                 },
                 {
                     "question": "SigFixes oyunun görünümünü değiştirir mi?",
-                    "answer": "Varsayılan olarak, orijinal istemci gibi görünür. Ancak ileri kullanıcılar için skin geçersiz kılmaları, hücre opaklığı ayarları, metin ölçeklendirme, parlama efektleri ve bölünemeyen hücreler için konturlar gibi seçenekler ekler."
+                    "answer": "Varsayılan olarak orijinal istemciyle aynı görünür. İleri düzey kullanıcılar için skin override, hücre opaklığı, metin ölçeklendirme, glow ve bölünemeyen hücreler için konturlar gibi seçenekler ekler."
                 },
                 {
-                    "question": "SigFixes'i SigMod ile kullanabilir miyim?",
-                    "answer": "Kesinlikle. SigFixes, SigMod ile sorunsuz çalışır ve gelişmiş özellikleri performans iyileştirmeleri ve düşük gecikmeyle birleştirir."
+                    "question": "SigFixes'i SigMod ile birlikte kullanabilir miyim?",
+                    "answer": "Evet. SigFixes, gelişmiş özellikleri daha iyi performans ve daha az gecikme ile birleştirmek için SigMod ile birlikte çalışır."
                 },
                 {
-                    "question": "SigFixes multiboxing için faydalı mı?",
-                    "answer": "Evet. Tek sekme kontrolü, görüş birleşimi seçenekleri, yeniden doğuş engelleme ve sekme dış hatları gibi özelliklerle giriş gecikmesini azaltır ve sekmeler arası senkronizasyonu artırır."
+                    "question": "SigFixes multibox'a yardımcı olur mu?",
+                    "answer": "Evet. Tek sekmede kontrol, görüş birleşimi seçenekleri, spawn engelleme ve sekme konturları sunarak giriş gecikmesini azaltır ve sekmeler arası senkronizasyonu iyileştirir."
                 },
                 {
                     "question": "SigFixes nasıl kurulur?",
-                    "answer": "Önce Tampermonkey veya Violentmonkey (birini) yükleyin. Ardından tarayıcı uzantılar sayfasında Geliştirici Modu'nu açın. Son olarak resmi kaynaktan SigFixes kullanıcı scriptini yükleyin ve tarayıcınızı yeniden başlatın."
+                    "answer": "Tampermonkey veya Violentmonkey'i yükleyin, uzantılar sayfasında Geliştirici Modu'nu etkinleştirin, ardından resmi kaynaktan SigFixes userscript'ini kurun ve tarayıcınızı yeniden başlatın."
                 },
                 {
-                    "question": "Hangi kamera ayarlarını yapabilirim?",
-                    "answer": "Varsayılan ve Doğal kamera stilleri arasında geçiş yapabilir, hareketi Anında veya Akıcı yapabilir, yakınlaştırma hızını kontrol edebilir, otomatik yakınlaştırma ve yeniden doğuşta kamera takibini açıp kapatabilirsiniz."
+                    "question": "Hangi kamera ayarlarını değiştirebilirim?",
+                    "answer": "Varsayılan ve Natural kamera stilleri arasında geçiş yapın, hareketi Instant veya Smooth olarak ayarlayın, zoom hızını kontrol edin ve Auto-zoom ile spawn kamera takibini etkinleştirin."
                 },
                 {
-                    "question": "'Çizim gecikmesi' ayarı nedir?",
-                    "answer": "Çizim gecikmesi, oyun canvas'ının ne sıklıkla yenilendiğini belirler. Yüksek değer animasyonları daha akıcı yapar ama performansı düşürebilir; düşük değer performansı artırır ama görseller daha az akıcı olur. Tercihinize göre ayarlayın."
+                    "question": "Draw delay nedir?",
+                    "answer": "Draw delay canvas'ın ne sıklıkla yenilendiğini kontrol eder. Daha yüksek değerler animasyonları yumuşatır fakat performansı düşürebilir; daha düşük değerler performansı artırır ama görsel akıcılığı azaltabilir. Zevkinize göre ayarlayın."
                 },
                 {
-                    "question": "Metin ve isim gösterimini özelleştirebilir miyim?",
-                    "answer": "Evet. İsim ve kütle ölçeğini ayarlayabilir, kalın yazı tipi açıp kapatabilir, opaklık seviyeleri belirleyebilir, klan etiketlerini gösterip gizleyebilir ve kontur kalınlığını değiştirebilirsiniz."
+                    "question": "Metin ve isim görüntüsünü özelleştirebilir miyim?",
+                    "answer": "Evet. İsim ve kütle ölçeğini ayarlayın, kalın fontu açın, opaklık belirleyin, klan etiketlerini göster/gizle ve kontur kalınlığını netlik için ayarlayın."
                 }
             ]
         },
         "Community": {
             "title": "Topluluğa Katıl",
-            "text": "Yardıma mı ihtiyacınız var, hata mı buldunuz veya özel makrolarınızı mı paylaşmak istiyorsunuz? Discord'a katılın ve diğer SigFix kullanıcılarıyla bağlantı kurun.",
+            "text": "Yardıma mı ihtiyacınız var, bir hata mı buldunuz veya makro paylaşmak mı istiyorsunuz? Discord'a katılın ve diğer SigFix kullanıcılarıyla bağlantı kurun.",
             "discord": "Discord'a Katıl",
-            "explore": "Ya da kodu keşfedin"
+            "explore": "Ya da kodu inceleyin"
         }
     },
     "QuickGuide": {
-        "title": "Hızlı Kılavuz",
-        "note": "Bu sayfanın tam kılavuz kadar ayrıntılı olmadığını unutmayın.",
+        "title": "Hızlı Rehber",
+        "note": "Bu sayfa kısa bir özet olup tam rehber değildir.",
         "tampermonkey": {
-            "title": "Tampermonkey Yükle",
+            "title": "Tampermonkey'i Yükleyin",
             "desc": "SigMod ve SigFixes'i çalıştırmak için gereken userscript yöneticisini yükleyin.",
             "button": "Tampermonkey'i Al"
         },
         "developermode": {
-            "title": "Geliştirici Modunu Etkinleştir",
-            "desc": "Aşağıdaki resimlerdeki adımları izleyin. Geliştirici modunu etkinleştirerek tarayıcınızı yeniden başlatın."
+            "title": "Geliştirici Modunu Etkinleştirin",
+            "desc": "Aşağıdaki resimleri takip edin ve geliştirici modunu etkinleştirdikten sonra tarayıcınızı yeniden başlatın."
         },
         "allow_userscripts": {
-            "title": "User Scriptlere İzin Ver",
-            "desc": "Aşağıdaki resimlerdeki adımları izleyin."
+            "title": "Kullanıcı Scriptlerine İzin Verin",
+            "desc": "Aşağıdaki resimleri takip edin."
         },
         "sigmod": {
-            "title": "SigMod'u Yükle",
-            "desc": "Makrolar, kişiselleştirme, parti etiketleri ve daha fazlasını ekler."
+            "title": "SigMod'u Yükleyin",
+            "desc": "Makrolar, kişiselleştirme, party etiketleri ve daha fazlasını ekler."
         },
         "sigfixes": {
-            "title": "SigFixes'i Yükle",
-            "desc": "FPS arttırır, gecikmeyi azaltır, multiboxing'i etkinleştirir."
+            "title": "SigFixes'i Yükleyin",
+            "desc": "FPS'i artırır, lagı azaltır ve multibox'ı etkinleştirir."
         },
         "play": {
             "title": "Sigmally Oyna",
-            "desc": "Her şey hazır. Oynama zamanı.",
+            "desc": "Her şey hazır. Oynama vakti.",
             "button": "Şimdi Oyna"
         },
         "discord": "Discord'a Katıl",
-        "fullGuide": "Tam Kılavuza Bak"
+        "fullGuide": "Tam Rehberi Görüntüle"
     },
     "Guide": {
         "Sidebar": {
-            "title": "Kılavuz",
+            "title": "Rehber",
             "overview": "Genel Bakış",
             "usm": "Userscript Yöneticisi",
             "devmode": "Geliştirici Modu",
-            "aus_chrome": "User Scriptlere İzin Ver",
+            "aus_chrome": "Kullanıcı Scriptlerine İzin Ver",
             "sigmod": "SigMod",
             "sigfixes": "SigFixes",
             "end": "Sonuç"
         },
         "Overview": {
             "title": "Başlarken",
-            "desc": "SigModz'e hoş geldiniz! Bu kılavuz, Sigmally oyun deneyiminizi daha akıcı performans, tam kontrol ve güçlü araçlarla geliştiren SigMod ve SigFixes modlarını kurmanızı adım adım anlatır.",
-            "access": "Birkaç kolay adımda akıllı makrolar, FPS artışları, UI ayarları, gelişmiş seçenekler ve daha fazlasının kilidini açacaksınız—hepsi oyununuza sorunsuzca entegre edilir.",
+            "desc": "SigModz'e hoş geldiniz. Bu rehber, Sigmally'i daha akıcı performans, tam kontrol ve kullanışlı araçlarla güçlendiren iki temel mod olan SigMod ve SigFixes'in nasıl kurulacağını gösterir.",
+            "access": "Birkaç basit adımda akıllı makrolar, FPS artışları, UI ayarları ve gelişmiş seçeneklerin kilidini açacaksınız.",
             "video": {
                 "title": "Video eğitimi",
-                "desc": "Bu videoyu, görsel talimatları tercih ediyorsanız veya konu okumak için çok karmaşıksa izleyin.",
-                "credit": "Fake tarafından oluşturuldu",
+                "desc": "Görsel talimatları tercih ediyorsanız bunu izleyin.",
+                "credit": "Oluşturan: Fake",
                 "creditTitle": "Discord: fa_keo"
             },
             "start": "Kuruluma Başla",
-            "quickGuide": "Hızlı Kılavuz"
+            "quickGuide": "Hızlı Rehber"
         },
         "UserscriptManager": {
-            "title": "Userscript Yöneticisi Yükle",
-            "desc": "Bu modları kullanmak için bir userscript yöneticisi eklentisine ihtiyacınız var.",
+            "title": "Bir Userscript Yöneticisi Kurun",
+            "desc": "Bu modları çalıştırmak için bir userscript yöneticisi eklentisine ihtiyacınız var.",
             "recommend": "Öneriyoruz:",
-            "instruction": "Bu kılavuz Tampermonkey kullanıyor. Tarayıcınıza yüklemek için aşağıya tıklayın.",
+            "instruction": "Bu rehber Tampermonkey kullanır. Tarayıcınız için yüklemek üzere aşağıya tıklayın.",
             "button": "Tampermonkey'i Yükle",
-            "installed": "Yüklendikten sonra, sonraki adımda <SigMod>SigMod</SigMod> ve <SigFixes>SigFixes</SigFixes> gibi userscriptleri eklemeye hazır olacaksınız.",
+            "installed": "Kurulduğunda bir sonraki adımda <SigMod>SigMod</SigMod> ve <SigFixes>SigFixes</SigFixes> gibi userscript'leri eklemeye hazır olacaksınız.",
             "back": "Geri",
             "next": "İleri"
         },
         "DevMode": {
-            "title": "Geliştirici Modunu Etkinleştir",
-            "desc": "Tampermonkey'in SigMod ve SigFixes gibi scriptleri doğru kurup çalıştırabilmesi için Geliştirici Modu etkin olmalıdır.",
+            "title": "Geliştirici Modunu Etkinleştirin",
+            "desc": "SigMod ve SigFixes'in düzgün kurulumu ve çalışması için Tampermonkey'in Geliştirici Modu etkin olmalıdır.",
             "chrome": {
-                "pageTitle": "User Scriptlere İzin Ver",
+                "pageTitle": "Kullanıcı Scriptlerine İzin Ver",
                 "title": "Nasıl Etkinleştirilir",
-                "desc": "Chrome'da Tampermonkey eklenti ayarlarında 'User Scriptlere İzin Ver'i açarak özel scriptlerin çalışmasına izin verin.",
+                "desc": "Chrome için Tampermonkey eklenti ayarlarında Allow User Scripts'i etkinleştirin.",
                 "steps": [
-                    "Tarayıcı araç çubuğundaki puzzle simgesine tıklayın.",
-                    "Tampermonkey'in yanındaki üç noktaya tıklayın.",
-                    "'Uzantıyı yönet'i seçin.",
-                    "'User Scriptlere İzin Ver'i açın."
+                    "Tarayıcı araç çubuğundaki puzzle (oyuncak) simgesine tıklayın",
+                    "Tampermonkey'in yanındaki üç noktaya tıklayın",
+                    "Uzantıyı Yönet'i seçin",
+                    "Allow User Scripts'i açın"
                 ]
             },
             "opera": {
-                "title": "Opera İçin",
+                "title": "Opera için",
                 "steps": [
-                    "Araç çubuğunuzdaki küp simgesine (Uzantılar) tıklayın.",
-                    "'Uzantıları yönet'i seçin.",
-                    "Sağ üstte Geliştirici Modu'nu açın."
+                    "Araç çubuğundaki küp (Eklentiler) simgesine tıklayın",
+                    "Uzantıları Yönet'i seçin",
+                    "Sağ üstten Geliştirici Modu'nu açın"
                 ]
             },
             "edge": {
-                "title": "Edge İçin",
+                "title": "Edge için",
                 "steps": [
-                    "Araç çubuğundaki puzzle simgesine (Uzantılar) tıklayın.",
-                    "'Uzantıları yönet'i seçin.",
-                    "Yan panelde Geliştirici Modu'nu etkinleştirin."
+                    "Araç çubuğundaki puzzle simgesine tıklayın",
+                    "Uzantıları Yönet'i seçin",
+                    "Yan panelde Geliştirici Modu'nu etkinleştirin"
                 ]
             },
             "firefox": {
-                "title": "Firefox İçin",
+                "title": "Firefox için",
                 "steps": [
                     "Firefox Geliştirici Modu gerektirmez. Bu adımı atlayabilirsiniz."
                 ]
@@ -443,39 +443,39 @@
             "default": {
                 "title": "Tarayıcı Talimatları",
                 "steps": [
-                    "Geliştirici Modunu etkinleştirmek için tarayıcınızın belgelerini kontrol edin.",
-                    "Chromium tabanlı bir tarayıcı kullanıyorsanız, yukarıdaki adımları izleyin."
+                    "Geliştirici Modu'nu etkinleştirmek için tarayıcı belgelerinizi kontrol edin",
+                    "Chromium tabanlı bir tarayıcı kullanıyorsanız yukarıdaki adımları izleyin"
                 ]
             },
             "note": {
                 "label": "Not:",
-                "text": "Geliştirici Modunu etkinleştirdikten sonra Tampermonkey'in düzgün çalışması için tarayıcınızı yeniden başlatın."
+                "text": "Geliştirici Modu'nu etkinleştirdikten sonra Tampermonkey'in düzgün çalışması için tarayıcınızı yeniden başlatın."
             },
             "back": "Geri",
             "next": "İleri"
         },
         "SigMod": {
-            "title": "SigMod'u Yükle",
-            "desc": "Userscript yöneticiniz hazırsa, şimdi SigMod'u yükleme zamanı. Makrolar, özel temalar ve gelişmiş ayarlar gibi temel özellikleri oyununuza ekler.",
-            "popup": "SigMod'u yüklemek için aşağıya tıklayın. Açılan pencerede <i>Yükle</i> düğmesine basın.",
+            "title": "SigMod'u Yükleyin",
+            "desc": "Userscript yöneticiniz hazır olduğunda, oyuna makrolar, temalar ve gelişmiş ayarlar eklemek için SigMod'u yükleyin.",
+            "popup": "SigMod'u yüklemek için aşağıya tıklayın. Açılan pencerede Yükle'ye basın.",
             "button": "SigMod'u Yükle",
-            "after": "Yüklendikten sonra SigMod otomatik olarak Sigmally üzerinde çalışır. Oyundaki ayarlardan istediğiniz zaman kişiselleştirin. SigMod hakkında daha fazla bilgi için <link>buraya</link> bakın.",
+            "after": "Yüklendikten sonra SigMod otomatik olarak Sigmally üzerinde çalışır. Oyun içi ayarlardan özelleştirin. SigMod hakkında daha fazla bilgi <link>burada</link>.",
             "back": "Geri",
             "next": "İleri"
         },
         "SigFixes": {
-            "title": "SigFixes'i Yükle",
-            "desc": "SigFixes, Sigmally istemcisinin büyük bir kısmını yeniden yazarak hız ve akıcılık artırır. Yapan kişi yx.",
-            "prompt": "SigFixes'i yüklemek için aşağıya tıklayın.",
+            "title": "SigFixes'i Yükleyin",
+            "desc": "SigFixes, Sigmally istemcisinin bazı bölümlerini hız ve akıcılık için yeniden yazar. Yapımcı: yx.",
+            "prompt": "SigFixes'i kurmak için aşağıya tıklayın.",
             "button": "SigFixes'i Yükle",
-            "features": "Tek sekme multiboxing, bölünemeyen hücre dış hatları, özel çizim gecikmesi, metin boyutu, skinler ve opaklık gibi gelişmiş seçenekler içerir.",
+            "features": "Tek sekmede multibox, bölünemeyen hücre konturları, draw delay, metin boyutu, skinler ve opaklık gibi seçenekleri içerir.",
             "back": "Geri",
             "end": "Son"
         },
         "End": {
-            "title": "Her Şey Hazır 🎉",
-            "desc": "SigMod ve SigFixes yüklendi! Şimdi en akıcı ve kişiselleştirilebilir Sigmally deneyiminin tadını çıkarın. Ayarlarınızı yapın ve en iyisi olun.",
-            "notice": "Oyuna katılmadan önce tarayıcınızı yeniden başlatın.",
+            "title": "Hazırsınız 🎉",
+            "desc": "SigMod ve SigFixes kuruldu. Daha akıcı ve özelleştirilebilir bir Sigmally deneyiminin tadını çıkarın. Girin, ayarlarınızı yapın ve en iyi şekilde oynayın.",
+            "notice": "Oyuna katılmadan önce tarayıcınızı yeniden başlatın",
             "play": "Sigmally Oyna",
             "explore": "Keşfet"
         }
@@ -485,104 +485,104 @@
         "general": {
             "title": "Genel",
             "installMods": {
-                "question": "Modları nasıl yüklerim?",
-                "answer": "Başlamak kolay! Ayrıntılı veya hızlı <link>kurulum kılavuzumuzu</link> takip edin ve kısa sürede modlarla oynamaya başlayın."
+                "question": "Modları nasıl kurarım?",
+                "answer": "Detaylı veya hızlı <link>kurulum rehberini</link> izleyin. Hızla hazır olacaksınız."
             },
             "modsNotWorking": {
                 "question": "Modları yükledim ama çalışmıyor. Ne yapmalıyım?",
-                "answer": "Çoğu sorun Chrome veya Brave'de Tampermonkey'de 'User Scriptlere İzin Ver' aktif olmadığında ya da Edge ve Opera'da Geliştirici Modu kapalı olduğunda olur. Kesin talimatlar için <link>kurulum kılavuzuna</link> bakın. Hala takılırsanız Discord'dan destek talebi açın, size yardımcı oluruz."
+                "answer": "Çoğu sorun, Chrome veya Brave için Tampermonkey'te Allow User Scripts'in etkin olmamasından veya Edge/Opera'da Geliştirici Modu'nun kapalı olmasından kaynaklanır. Doğru adımlar için <link>kurulum rehberini</link> kontrol edin. Hala çalışmıyorsa Discord'a katılın ve bir ticket açın."
             },
             "safe": {
-                "question": "Tampermonkey ve bu userscriptler güvenli mi?",
-                "answer": "Evet, kesinlikle. Tampermonkey dünya çapında milyonlarca kişi tarafından güvenle kullanılır ve bizim scriptlerimiz sadece oyun deneyiminizi geliştirir, gizli bir şey içermez. Ayrıca script sayfalarındaki yorumları okuyabilirsiniz. Güvenle kullanın."
+                "question": "Tampermonkey ve bu userscript'ler güvenli mi?",
+                "answer": "Evet. Tampermonkey geniş olarak kullanılan bir uzantıdır ve script'lerimiz yalnızca oyunu iyileştirir. Gizli işlemler yoktur; script sayfalarındaki yorumları okuyabilirsiniz."
             },
             "sigmodAndSigfixes": {
-                "question": "Hem SigMod hem SigFixes'e ihtiyacım var mı?",
-                "answer": "Hayır ama ikisini birlikte kullanmak en iyi performans ve kişiselleştirmeyi sağlar. Birbirini tamamlayacak şekilde tasarlandılar."
+                "question": "Hem SigMod hem SigFixes gerekli mi?",
+                "answer": "Hayır. Birlikte kullanıldıklarında en iyi kişiselleştirme ve performans karışımını sunarlar."
             },
             "multibox": {
                 "question": "Multibox nasıl yapılır?",
-                "answer": "<strong>SigFixes</strong> kurarak bir tarayıcı sekmesinde birden fazla oyun örneğini sorunsuz çalıştırıp hepsini tek seferde kontrol edebilirsiniz. Kurulum için <link>buradaki</link> kılavuzu takip edin."
+                "answer": "Birden fazla oyun örneğini tek bir sekmede çalıştırmak ve birlikte kontrol etmek için SigFixes'i yükleyin. Tam kurulumu için <link>buradaki</link> rehbere bakın."
             },
             "uninstallMods": {
                 "question": "Modları istediğim zaman kaldırabilir miyim?",
-                "answer": "Evet, userscript yöneticinizden devre dışı bırakabilir veya tamamen kaldırabilirsiniz."
+                "answer": "Evet. İstediğiniz zaman userscript yöneticinizden devre dışı bırakın veya kaldırın."
             }
         },
         "sigmod": {
-            "title": "SigMod'a Özel",
+            "title": "SigMod'e Özel",
             "coreFeatures": {
                 "question": "SigMod'un temel özellikleri nelerdir?",
-                "answer": "SigMod güçlü kişiselleştirme, makrolar, otomasyon ve gelişmiş etiket sistemi ile Sigmally oyun deneyiminizi geliştirir."
+                "answer": "SigMod, özelleştirme, makrolar, otomasyon ve gelişmiş bir etiket sistemi ekler."
             },
             "customization": {
-                "question": "SigMod hangi kişiselleştirme seçeneklerini sunar?",
-                "answer": "Kısayol tuşları, UI temaları, oyun renkleri, oyun süreleri, yazı tipleri ve isim ayarlarını kendi tarzınıza göre değiştirebilirsiniz."
+                "question": "SigMod hangi kişiselleştirme seçeneklerini sunuyor?",
+                "answer": "Hotkey'leri, temaları, renkleri, zamanlayıcıları, fontları ve isim ayarlarını değiştirebilirsiniz."
             },
             "tagSystem": {
                 "question": "Etiket sistemi nedir?",
-                "answer": "Parti etiketlerini yönetip takım arkadaşlarını kolayca takip etmenizi sağlar. Minimap ve sohbet ile entegre çalışır, takım skorlarını ve oyuncu bilgilerini gösterir."
+                "answer": "Party etiketlerini yönetmenize ve takım arkadaşlarını takip etmenize yardımcı olur. Mini harita ve sohbet ile entegredir ve takım bilgilerini gösterir."
             },
             "friendSystem": {
                 "question": "Arkadaş sistemi nasıl çalışır?",
-                "answer": "Oyunda arkadaş ekleyip yönetebilir, onları takip ederek koordinasyon sağlayabilirsiniz."
+                "answer": "Bağlı kalmak ve oyunları koordine etmek için arkadaş ekleyin ve yönetin."
             },
             "openMenu": {
                 "question": "SigMod menüsünü nasıl açarım?",
-                "answer": "Oyundaki dişli simgesine tıklayın veya klavyeden “V” tuşuna basarak mod menüsünü açabilirsiniz."
+                "answer": "Oyunun UI'sindeki dişli simgesine tıklayın veya V tuşuna basın."
             },
             "customHotkeys": {
-                "question": "Kısayol tuşları ve makroları özelleştirebilir miyim?",
-                "answer": "Kesinlikle! SigMod kısayol tuşlarını ve fare makrolarını tamamen kişiselleştirmenize izin verir."
+                "question": "Hotkey'leri ve makroları özelleştirebilir miyim?",
+                "answer": "Evet. SigMod tüm hotkey'leri ve fare makrolarını oyun tarzınıza göre ayarlamanıza izin verir."
             },
             "performance": {
-                "question": "SigMod oyun performansını etkiler mi?",
-                "answer": "SigMod hafiftir ve performanstan çok kişiselleştirmeye odaklanır. Daha iyi FPS ve akıcılık için SigFixes'i kullanın."
+                "question": "SigMod performansı etkiler mi?",
+                "answer": "SigMod hafif olacak şekilde optimize edilmiştir ve kişiselleştirmeye odaklanır. FPS artışı için SigFixes'i kullanın."
             }
         },
         "sigfixes": {
             "title": "SigFixes'e Özel",
-            "note": "Her ayarın yanında detaylı açıklamalar için <strong>?</strong> simgesi bulunur, tıklayın!",
+            "note": "Her ayarın ayrıntılı açıklama içeren ? ikonu vardır.",
             "improvements": {
-                "question": "SigFixes neyi geliştirir?",
-                "answer": "FPS'i artırır, gecikme dalgalanmalarını azaltır, akıcı multiboxing sağlar ve çizim gecikmesi, opaklık, isim ölçeklendirme gibi kişiselleştirme seçenekleri sunar."
+                "question": "SigFixes neyi iyileştirir?",
+                "answer": "SigFixes kare hızlarını artırır, lag sıçramalarını azaltır, pürüzsüz multibox sağlar ve draw delay, opaklık ve isim ölçeklendirme gibi seçenekler ekler."
             },
             "multibox": {
-                "question": "SigFixes multiboxinge nasıl yardım eder?",
-                "answer": "Tek bir tarayıcı sekmesinde birden fazla oyun örneğini çalıştırmanızı sağlar, böylece multiboxing daha kolay ve akıcı olur."
+                "question": "SigFixes multibox için nasıl yardımcı olur?",
+                "answer": "Birden fazla örneği tek bir sekmede çalıştırmanıza ve akıcı kontrol sağlamanıza olanak tanır."
             },
             "fps": {
-                "question": "SigFixes FPS'i artırır mı?",
-                "answer": "Evet, rendering optimizasyonu ve gecikme azaltma sayesinde FPS'i önemli ölçüde yükseltir."
+                "question": "SigFixes FPSimi artırır mı?",
+                "answer": "Evet. Render optimizasyonu ve lag azaltma sayesinde FPS artışı sağlar."
             },
             "compatibility": {
-                "question": "SigFixes SigMod ile uyumlu mu?",
-                "answer": "Evet, tam uyumludur ve birlikte en iyi deneyimi sunmak için tasarlanmıştır."
+                "question": "SigFixes, SigMod ile uyumlu mu?",
+                "answer": "Evet. Sorunsuz birlikte çalışırlar."
             },
             "config": {
-                "question": "Çizim gecikmesi ve diğer ayarları nasıl yaparım?",
-                "answer": "Bunları SigFixes mod menüsünden ayarlayabilirsiniz. Her seçeneğin yanındaki “?” ikonuna tıklayarak detaylı bilgi alabilirsiniz."
+                "question": "Draw delay ve diğer ayarları nasıl yapılandırırım?",
+                "answer": "SigFixes menüsünü açın ve ayarları değiştirin. Ayrıntılar için ? ikonlarına bakın."
             }
         },
-        "needHelp": "Hala sorularınız mı var? Discord'a katılın ve destek talebi açın—yardımcı oluruz.",
+        "needHelp": "Hala sorularınız mı var? Discord'a katılın ve bir ticket açın.",
         "joinDiscord": "Discord'a Katıl"
     },
     "AboutPage": {
         "title": "SigModz Hakkında",
         "tldr": {
-            "title": "SigModz Nedir?",
-            "text": "SigModz, SigMod ve SigFixes gibi güçlü modlarla Sigmally deneyimini geliştirmeye odaklanan topluluk destekli bir projedir."
+            "title": "SigModz nedir?",
+            "text": "SigModz, Sigmally deneyimini SigMod ve SigFixes gibi güçlü modlarla iyileştiren bir topluluk projesidir."
         },
         "story": {
             "title": "Arka Plan",
-            "intro": "SigModz, Sigmally’yi gelişmiş özellikler ve kaliteli araçlarla daha iyi hâle getirmek isteyen oyuncu ve geliştiricileri bir araya getirir.",
-            "sigmodStart": "Her şey, RingZer0’nun açık kaynaklı sürümüne dayanan bir userscript modu olan SigMod ile başladı. Onun çalışması, Sigmally’de modern modding’in temelini attı.",
-            "sigmod": "SigMod; özelleştirme seçenekleri, arayüz iyileştirmeleri, makrolar ve topluluğun talep ettiği birçok özellik ekleyerek Sigmally için en popüler istemci modlarından biri hâline geldi.",
-            "sigfixes": "Daha sonra yx tarafından geliştirilen SigFixes, her şeyi bir adım ileri taşıdı: tam bir WebGL render motoru, multiboxing desteği, gelişmiş giriş hassasiyeti ve performans iyileştirmeleri — hepsi ciddi oyuncular için optimize edildi.",
-            "community": "Her iki mod da Sigmally topluluğu tarafından yaygın şekilde kabul görmekte ve oyunun sahibi tarafından da desteklenmektedir. SigModz, oyuncular ve geliştiricilerden gelen geri bildirimlerle gelişmeye devam ediyor.",
-            "thanks": "Orijinal tabanı sağlayan RingZer0’a ve teknik sınırları zorlayan yx’e özel teşekkürler. SigModz’un gelişmeye devam etmesini sağlayan şey, topluluğun desteğidir."
+            "intro": "SigModz, Sigmally'yi yeni özellikler ve sağlam araçlarla daha iyi hale getirmek isteyen oyuncuları ve geliştiricileri bir araya getirir.",
+            "sigmodStart": "Her şey RingZer0'ın açık kaynaklı sürümüne dayanan bir userscript olan SigMod ile başladı. Onun çalışması modern Sigmally modlamasının temelini oluşturdu.",
+            "sigmod": "SigMod, daha fazla kişiselleştirme, UI iyileştirmeleri, makrolar ve topluluk özellikleri ekleyerek Sigmally'de en çok kullanılan modlardan biri oldu.",
+            "sigfixes": "Daha sonra yx tarafından geliştirilen SigFixes teknik açıdan ilerleme kaydetti: tam bir WebGL renderer, multibox desteği, daha iyi giriş işleme ve ciddi oyun için performans iyileştirmeleri sundu.",
+            "community": "Her iki mod da Sigmally topluluğu tarafından kabul edilmiştir ve oyun sahibi tarafından desteklenmektedir. SigModz, oyuncular ve geliştiricilerin katkılarıyla büyümeye devam ediyor.",
+            "thanks": "Orijinal temel için RingZer0'a ve teknik ilerleme için yx'e teşekkürler. Topluluk desteği SigModz'i ileriye taşıyor."
         },
-        "joinDiscord": "Discord’a Katıl"
+        "joinDiscord": "Discord'a Katıl"
     },
     "TOSPage": {
         "title": "SigMod - Hizmet Şartları",
@@ -590,43 +590,43 @@
         "sections": {
             "introduction": {
                 "heading": "1. Giriş",
-                "text": "SigMod, {sigmallyLink} için bir modifikasyondur. Bunu kullanarak bu şartları kabul etmiş olursunuz. Kabul etmiyorsanız SigMod’u kullanmamalısınız.",
+                "text": "SigMod, {sigmallyLink} için bir modifikasyondur. Bunu kullanarak bu şartları kabul etmiş sayılırsınız. Kabul etmiyorsanız SigMod'u kullanmamalısınız.",
                 "sigmallyLinkText": "Sigmally",
                 "sigmallyLinkUrl": "https://one.sigmally.com"
             },
             "fairUse": {
                 "heading": "2. Adil Kullanım",
-                "text": "SigMod, oyunu daha eğlenceli hale getirmek için vardır, bozmaya değil. Haksız avantaj sağlamak için modifikasyon yapmayın veya başkalarının deneyimini bozacak otomasyon araçları kullanmayın."
+                "text": "SigMod oyunu geliştirmek için yapılmıştır, bozmak için değil. Haksız avantaj sağlamak veya başkalarının deneyimini zedeleyecek otomasyon kullanmak için değiştirmeyin."
             },
             "noGuarantees": {
-                "heading": "3. Garanti Yok",
-                "text": "SigMod \"olduğu gibi\" sunulmaktadır. Bir şey ters giderse — oyun yasağı, veri kaybı veya diğer sorunlar — sorumluluk kabul etmiyoruz."
+                "heading": "3. Garanti yoktur",
+                "text": "SigMod 'olduğu gibi' sunulur. Ban, veri kaybı veya başka bir sorun olursa sorumluluk kabul etmiyoruz."
             },
             "dataCollection": {
                 "heading": "4. Veri Toplama",
-                "intro": "SigMod düzgün çalışabilmek için bazı verileri otomatik olarak toplar:",
+                "intro": "SigMod düzgün çalışabilmek için bazı verileri toplar:",
                 "items": [
-                    "Google hesap verileri (kimlik doğrulama için kullanılıyorsa)",
-                    "Oyuncu istatistikleri (Altın, Seviye vb., ama kişisel veri yok)",
+                    "Google hesabı verileri (Google ile giriş yaptıysanız)",
+                    "Oyuncu istatistikleri (Altın, Seviye vb.) ancak kişisel veriler değil",
                     "IP adresi",
-                    "Tarayıcı/Cihaz bilgisi"
+                    "Tarayıcı bilgileri"
                 ],
-                "accountText": "\"Arkadaşlar\" özelliğini kullanıyorsanız, bir kullanıcı adı ve şifre ile hesap oluşturmanız gerekir. Şifreler güvenli bir şekilde hashlenip saklanır. Şifrenizin güvenliğini nasıl sağladığımızı ve backend kaynak kodunu {githubLink} üzerinde görebilirsiniz.",
+                "accountText": "Arkadaşlar özelliğini kullanırsanız bir kullanıcı adı ve şifre ile hesap gerekir. Şifreler hash'lenmiş ve güvenli şekilde saklanır. Parola işleme dahil backend kodunu {githubLink} üzerinde inceleyebilirsiniz.",
                 "githubLinkText": "GitHub",
                 "githubLinkUrl": "https://github.com/czrsd/sigmod"
             },
             "changes": {
-                "heading": "5. Bu Şartlarda Değişiklikler",
-                "text": "Bu şartlar zamanla değişebilir. SigMod’u değişikliklerden sonra kullanmaya devam ederseniz, bunları kabul etmiş sayılırsınız."
+                "heading": "5. Bu Şartlardaki Değişiklikler",
+                "text": "Bu şartlar değiştirilebilir. Güncellemelerden sonra SigMod'u kullanmaya devam ederseniz yeni şartları kabul etmiş sayılırsınız."
             },
             "enforcement": {
                 "heading": "6. Uygulama",
-                "text": "Kuralları ihlal ederseniz, IP engeli de dahil olmak üzere önlemler alabiliriz. İhlallerden dolayı ciddi finansal kayıplar meydana gelirse, yasal adımlar değerlendirilebilir."
+                "text": "Kuralları ihlal ederseniz IP banları dahil önlemler alabiliriz. Ciddi mali zarar varsa yasal işlemler düşünülebilir."
             },
             "contact": {
                 "heading": "7. İletişim",
-                "intro": "Sorularınız veya endişeleriniz varsa, bizimle iletişime geçin:",
-                "items": ["Discord: czrsd", "E-posta: {emailLink}"],
+                "intro": "Sorularınız varsa bize ulaşın:",
+                "items": ["Discord: czrsd", "Email: {emailLink}"],
                 "emailLinkText": "admin@czrsd.com",
                 "emailLinkUrl": "mailto:admin@czrsd.com"
             }
@@ -636,33 +636,33 @@
         "MainPage": {
             "failed": "Mağaza verileri yüklenemedi. Lütfen daha sonra tekrar deneyin.",
             "Hero": {
-                "title": "<gold>Altın</gold> & <subscriptions>Abonelikleri</subscriptions> Daha Ucuz Alın",
-                "description": "Oyun içi fiyatlar yüksek. Burada, süresi sınırlı özel fırsatları bulabilirsiniz.",
+                "title": "<gold>Gold</gold> & <subscriptions>Abonelikleri</subscriptions> Daha Ucuza Alın",
+                "description": "Oyun içi fiyatlar yüksek. Burada uzun süre kalmayacak özel fırsatlar bulacaksınız.",
                 "limitedOffersTitle": "Sınırlı Teklifler",
-                "limitedOffersSubtitle": "Tükenmeden kapın!",
-                "endsIn": "Sona eriyor"
+                "limitedOffersSubtitle": "Tükenmeden kap!",
+                "endsIn": "Biter"
             },
             "SpecialBundles": {
-                "coins": "Altın",
+                "coins": "Paralar",
                 "subscription": "Abonelik",
                 "month": "ay",
-                "months": "ay",
+                "months": "aylar",
                 "save": "%{percent} Tasarruf",
                 "buyNow": "Şimdi Satın Al"
             },
             "Products": {
                 "title": "Ürünler",
                 "coins": {
-                    "name": "Altın",
-                    "description": "5.000’den 1.000.000’e kadar bireysel altın paketleri"
+                    "name": "Paralar",
+                    "description": "5.000'den 1.000.000'a kadar bireysel para miktarları"
                 },
                 "subscriptions": {
                     "name": "Abonelikler",
-                    "description": "Premium özelliklere erişim kazanın"
+                    "description": "Premium özelliklere erişim"
                 },
                 "bundles": {
                     "name": "Paketler",
-                    "description": "Altın ve abonelikleri daha uygun fiyata birleştiren teklifler"
+                    "description": "Daha iyi fiyata para ve abonelik paketleri"
                 }
             },
             "WhyBuyHere": {
@@ -670,44 +670,44 @@
                 "reasons": [
                     {
                         "title": "Hızlı Teslimat",
-                        "description": "Ödeme yaptıktan hemen sonra ürünlerinizi anında alın, bekleme yok."
+                        "description": "Ödeme sonrası öğeler anında hesabınıza eklenir."
                     },
                     {
                         "title": "Güvenli Ödeme",
-                        "description": "Tüm ödemeler şifrelenmiş ve PayPal gibi güvenilir sağlayıcılar aracılığıyla işlenir."
+                        "description": "Ödemeler şifrelenir ve PayPal gibi güvenilir sağlayıcılar tarafından işlenir."
                     },
                     {
                         "title": "Güven",
-                        "description": "Sigmally doğrulanmış bir moderatör ve 28.000’den fazla kurulumlu SigMod’un yaratıcısı tarafından yapılmıştır."
+                        "description": "Onaylı bir Sigmally moderatörü ve SigMod'un yaratıcısı tarafından yapılmıştır; 28.000'den fazla kurulum."
                     },
                     {
                         "title": "En İyi Değer",
-                        "description": "Gizli ücretler olmadan adil fiyatlar ve harika değer elde edin."
+                        "description": "Adil fiyatlandırma ve net şartlar, gizli maliyet yok."
                     }
                 ]
             },
             "FAQ": {
-                "title": "SSS",
+                "title": "FAQ",
                 "items": [
                     {
-                        "question": "Altın veya abonelik satın aldım ama hesabımda görünmüyor. Ne yapmalıyım?",
-                        "answer": "Tarayıcınızda sayfayı yenileyin. Görüntülenen altınlar güncel olmayabilir. Yenilemeden sonra hâlâ görünmüyorsa, destek ile iletişime geçin."
+                        "question": "Paralar veya abonelik satın aldım ama hesabımda görünmüyor. Ne yapmalıyım?",
+                        "answer": "Sayfayı yenileyin. Bakiye hâlâ güncellenmediyse destek ile iletişime geçin."
                     },
                     {
-                        "question": "PayPal ödememi tamamladıktan sonra ne olur?",
-                        "answer": "Sitemize geri yönlendirileceksiniz. Siparişiniz onaylanacak ve ürünler hesabınıza anında eklenecek."
+                        "question": "PayPal ödemen tamamlandıktan sonra ne olur?",
+                        "answer": "Siparişinizin onaylandığı siteye geri yönlendirileceksiniz ve ürünler hesabınıza eklenecek."
                     },
                     {
                         "question": "PayPal sekmesini yönlendirilmeden önce kapatırsam ne olur?",
-                        "answer": "Sorun değil. Siteyi yeniden açabilir ve sipariş durumunuzu kontrol edebilirsiniz — ödeme geçtiyse teslimat yine de işlenecektir."
+                        "answer": "Sorun değil. Siteyi tekrar açın ve sipariş durumunu kontrol edin. Ödeme gerçekleştiyse teslimat işlenir."
                     },
                     {
-                        "question": "Satın alımımı birden fazla hesapta kullanabilir miyim?",
-                        "answer": "Hayır, satın alımlar, ödeme sırasında kullandığınız hesaba bağlanır. Bu her şeyi güvenli ve adil tutar."
+                        "question": "Satın alımı birden fazla hesapta kullanabilir miyim?",
+                        "answer": "Hayır. Satın almalar ödeme sırasında kullanılan hesaba bağlıdır, güvenlik ve adalet için."
                     },
                     {
-                        "question": "Yanlış paketi yanlışlıkla aldıysam ne yapmalıyım?",
-                        "answer": "Hemen destek ile iletişime geçin. Sipariş henüz onaylanmadıysa, değiştirebilir veya iade edebiliriz."
+                        "question": "Yanlış paket satın aldıysam ne olur?",
+                        "answer": "Hemen destek ile iletişime geçin. Sipariş onaylanmadıysa ayarlama veya iade mümkündür."
                     }
                 ]
             },
@@ -715,10 +715,10 @@
                 "title": "İletişim",
                 "supportEmail": "Destek e-postası",
                 "or": "veya",
-                "createTicket": "Discord’da destek bileti oluştur"
+                "createTicket": "Discord'da ticket oluştur"
             },
             "Info": {
-                "shop": "SigModz Shop yasal bilgiler",
+                "shop": "SigModz Mağaza yasal bilgileri",
                 "refund": "İade Politikası",
                 "terms": "Hizmet Şartları",
                 "privacy": "Gizlilik Politikası"
@@ -726,28 +726,28 @@
         },
         "Purchase": {
             "Complete": {
-                "loading": "Satın alma işlemi tamamlanıyor...",
-                "failedCapture": "Sipariş alınamadı.",
-                "failedPurchase": "Satın alma başarısız oldu. Lütfen Discord üzerinden destek ile iletişime geçin.",
+                "loading": "Satın alma tamamlanıyor...",
+                "failedCapture": "Sipariş yakalanamadı.",
+                "failedPurchase": "Satın alma başarısız. Lütfen Discord üzerinden destek ile iletişime geçin.",
                 "purchaseComplete": "Satın Alma Tamamlandı!",
                 "thanks": "Siparişiniz için teşekkürler!",
-                "orderId": "Sipariş ID: {id}",
-                "coinsLabel": "Altın",
+                "orderId": "Sipariş id: {id}",
+                "coinsLabel": "Paralar",
                 "subscriptionLabel": "Abonelik",
                 "subscriptionValidUntil": "Abonelik geçerli: {date}",
                 "goToGame": "Oyuna Git",
-                "shopMore": "Daha fazla al"
+                "shopMore": "Daha Fazla Al"
             },
             "Canceled": {
                 "loading": "Yükleniyor...",
                 "title": "Satın Alma İptal Edildi",
                 "orderId": "Sipariş ID: {id}",
-                "noPayment": "Herhangi bir ödeme yapılmadı.",
-                "supportText": "Bu bir hata ise veya satın alma sırasında sorun yaşadıysanız, lütfen destek ile iletişime geçin.",
+                "noPayment": "Herhangi bir ödeme işlenmedi.",
+                "supportText": "Bu bir hata ise veya satın alma sırasında sorun yaşadıysanız lütfen destek ile iletişime geçin.",
                 "returnToShop": "Mağazaya Dön",
                 "backToGame": "Oyuna Dön",
                 "needHelp": "Yardıma mı ihtiyacınız var?",
-                "contactSupport": "Destek ile İletişime Geçin"
+                "contactSupport": "Destekle İletişime Geç"
             }
         },
         "Products": {
@@ -755,11 +755,11 @@
             "CoinPackages": {
                 "loading": "Yükleniyor...",
                 "notFound": "Ürün bulunamadı",
-                "title": "Altın Paketleri",
-                "saveMore": "Daha fazla tasarruf etmek ister misiniz? Paketlerimizi inceleyin.",
+                "title": "Para Paketleri",
+                "saveMore": "Daha fazla tasarruf etmek ister misiniz? Paketlerimize göz atın.",
                 "buyNow": "Şimdi Satın Al",
                 "viewBundles": "Paketleri Görüntüle",
-                "coinsLabel": "{amount} Altın",
+                "coinsLabel": "{amount} Paralar",
                 "price": "€{price}",
                 "originalPrice": "€{original}"
             },
@@ -767,11 +767,11 @@
                 "loading": "Yükleniyor...",
                 "notFound": "Ürün bulunamadı",
                 "title": "Abonelik Paketleri",
-                "saveMore": "Daha fazla tasarruf etmek ister misiniz? Paketlerimizi inceleyin.",
+                "saveMore": "Daha fazla tasarruf etmek ister misiniz? Paketlerimize göz atın.",
                 "buyNow": "Şimdi Satın Al",
                 "viewBundles": "Paketleri Görüntüle",
                 "monthLabel": "{duration} ay",
-                "monthsLabel": "{duration} ay",
+                "monthsLabel": "{duration} aylar",
                 "price": "€{price}",
                 "originalPrice": "€{original}"
             },
@@ -780,124 +780,125 @@
                 "notFound": "Ürün bulunamadı",
                 "title": "Paketler",
                 "buyNow": "Şimdi Satın Al",
-                "monthLabel": "{duration} aylık Abonelik",
-                "monthsLabel": "{duration} aylık Abonelik",
-                "coinsLabel": "{amount} Altın",
+                "monthLabel": "{duration} ay Abonelik",
+                "monthsLabel": "{duration} ay Abonelik",
+                "coinsLabel": "{amount} Paralar",
                 "price": "€{price}",
                 "originalPrice": "€{original}"
             },
             "Checkout": {
                 "title": "Ödeme",
                 "emailLabel": "E-posta",
-                "emailPlaceholder": "Sigmally e-postanızı girin",
-                "emailDescription": "Bu e-posta, Sigmally hesabınıza bağlı olan adresle eşleşmelidir!",
+                "emailPlaceholder": "Sigmally e-posta adresinizi girin",
+                "emailDescription": "Bu e-posta, Sigmally hesabınızdaki adresle eşleşmelidir.",
                 "emailValid": "E-posta geçerli",
                 "emailInvalid": "Geçersiz e-posta",
                 "paymentMethod": "Ödeme yöntemi",
                 "selectPaymentPlaceholder": "Ödeme yöntemi seçin",
-                "stripe": "Stripe (kart ödemesi)",
+                "stripe": "Stripe (kart)",
                 "paypal": "PayPal",
-                "buy": "Ürün satın al",
+                "paypalInfo": "PayPal, <discord>Discord sunucusunda</discord> ticket üzerinden veya Cursed ile DM yoluyla desteklenir. Ödemeler F&F ile başarıyla sonuçlanır.",
+                "buy": "Ürünü Satın Al",
                 "processing": "İşleniyor..."
             }
-        },
-        "PrivacyPage": {
-            "title": "Gizlilik Politikası",
-            "lastUpdated": "Son güncelleme: 06.11.2025",
-            "intro": "SigModz olarak gizliliğinize saygı duyuyor ve kişisel bilgilerinizi korumaya kararlıyız. Bu Gizlilik Politikası, verilerinizi nasıl topladığımızı, kullandığımızı ve koruduğumuzu açıklar.",
-            "sections": {
-                "1": {
-                    "title": "1. Topladığımız Bilgiler",
-                    "content": "E-posta adresiniz, hesap bilgileriniz, ödeme detaylarınız ve hizmetlerimizi kullanırken gönüllü olarak sağladığınız diğer bilgiler gibi kişisel bilgileri toplayabiliriz."
-                },
-                "2": {
-                    "title": "2. Bilgilerin Kullanımı",
-                    "content": "Bilgileriniz, hizmetlerimizi sağlamak ve geliştirmek, ödemeleri işlemek, sizinle iletişim kurmak ve yasal yükümlülüklere uyumu sağlamak için kullanılır."
-                },
-                "3": {
-                    "title": "3. Bilgilerinizin Paylaşımı",
-                    "content": "Kişisel bilgilerinizi satmayız. Veriler, güvenilir hizmet sağlayıcıları, ödeme işleyicileri veya yasal mercilerle gerektiğinde paylaşılabilir."
-                },
-                "4": {
-                    "title": "4. Veri Güvenliği",
-                    "content": "Bilgilerinizi yetkisiz erişim, ifşa veya yok edilmeden korumak için makul güvenlik önlemleri uygularız. Ancak hiçbir iletim veya depolama yöntemi tamamen güvenli değildir."
-                },
-                "5": {
-                    "title": "5. Haklarınız",
-                    "content": "Kişisel bilgilerinize erişme, düzeltme veya silme hakkına sahipsiniz. Bu hakları kullanmak için lütfen sigmallymod@proton.me adresinden bizimle iletişime geçin."
-                },
-                "6": {
-                    "title": "6. Politika Değişiklikleri",
-                    "content": "Bu Gizlilik Politikası zaman zaman güncellenebilir. SigModz’i kullanmaya devam etmeniz, güncellenmiş politikayı kabul ettiğiniz anlamına gelir."
-                },
-                "7": {
-                    "title": "7. İletişim",
-                    "content": "Bu Gizlilik Politikası veya bilgilerinizi nasıl işlediğimiz hakkında sorularınız varsa, lütfen sigmallymod@proton.me adresinden bizimle iletişime geçin."
-                }
+        }
+    },
+    "PrivacyPage": {
+        "title": "Gizlilik Politikası",
+        "lastUpdated": "Son güncelleme: 06/11/2025",
+        "intro": "SigModz olarak gizliliğinize saygı duyuyor ve kişisel bilgilerinizi korumayı hedefliyoruz. Bu politika, hangi verileri topladığımızı ve nasıl kullandığımızı açıklar.",
+        "sections": {
+            "1": {
+                "title": "1. Topladığımız Bilgiler",
+                "content": "E-posta adresiniz, hesap bilgileri, ödeme detayları ve gönüllü olarak sağladığınız diğer bilgiler gibi kişisel veriler toplayabiliriz."
+            },
+            "2": {
+                "title": "2. Bilgilerin Kullanımı",
+                "content": "Hizmetlerimizi sunmak ve geliştirmek, ödemeleri işlemek, sizinle iletişim kurmak ve yasal yükümlülükleri yerine getirmek için bilgilerinizi kullanıyoruz."
+            },
+            "3": {
+                "title": "3. Bilgilerinizi Paylaşma",
+                "content": "Kişisel bilgilerinizi satmıyoruz. Güvenilir hizmet sağlayıcılar, ödeme işlemcileri veya yasal mercilerle kanun gereği gerektiğinde veri paylaşabiliriz."
+            },
+            "4": {
+                "title": "4. Veri Güvenliği",
+                "content": "Verilerinizi yetkisiz erişim, ifşa veya yok edilmeden korumak için makul güvenlik önlemleri kullanıyoruz. Hiçbir iletim veya depolama yöntemi tamamen güvenli değildir."
+            },
+            "5": {
+                "title": "5. Haklarınız",
+                "content": "Kişisel verilerinize erişme, düzeltme veya silme hakkınız vardır. Bu hakları kullanmak için sigmallymod@proton.me ile iletişime geçin."
+            },
+            "6": {
+                "title": "6. Politika Değişiklikleri",
+                "content": "Bu politikayı zaman zaman güncelleyebiliriz. SigModz'i kullanmaya devam etmeniz güncellenmiş politikayı kabul ettiğiniz anlamına gelir."
+            },
+            "7": {
+                "title": "7. İletişim",
+                "content": "Bu Gizlilik Politikası ile ilgili sorular için sigmallymod@proton.me adresiyle iletişime geçin."
             }
-        },
-        "RefundPage": {
-            "title": "İade Politikası",
-            "lastUpdated": "Son güncelleme: 06.11.2025",
-            "sections": {
-                "overview": {
-                    "title": "Genel Bakış",
-                    "content": "Satın alımınızdan memnun kalmanızı istiyoruz. Memnun değilseniz, aşağıda açıklanan koşullar dahilinde iade talebinde bulunabilirsiniz."
-                },
-                "eligibility": {
-                    "title": "Uygunluk",
-                    "content": "Dijital ürünler için satın alımdan itibaren 14 gün içinde, içerik kullanılmamışsa iade yapılabilir. Tüm iade talepleri doğrulamaya tabidir."
-                },
-                "process": {
-                    "title": "İade Süreci",
-                    "content": "İade talebinde bulunmak için destek ekibimizle e-posta veya Discord üzerinden iletişime geçin. Onaylandıktan sonra iadeler 3–5 iş günü içinde işlenir."
-                },
-                "contact": {
-                    "title": "İletişim",
-                    "content": "İade ile ilgili sorular için sigmallymod@proton.me adresine ulaşabilir veya Discord sunucumuzda bir bilet oluşturabilirsiniz."
-                },
-                "discordLink": "Discord Sunucusuna Katıl"
-            }
-        },
-        "TermsPage": {
-            "title": "Hizmet Şartları",
-            "lastUpdated": "Son güncelleme: 06.11.2025",
-            "intro": "SigModz’e hoş geldiniz. Web sitemize erişerek veya kullanarak, bu Hizmet Şartlarına uymayı kabul etmiş olursunuz.",
-            "sections": {
-                "1": {
-                    "title": "1. Şartların Kabulü",
-                    "content": "SigModz’i kullanarak, bu şartları okuduğunuzu, anladığınızı ve kabul ettiğinizi onaylamış olursunuz."
-                },
-                "2": {
-                    "title": "2. Kullanıcı Sorumlulukları",
-                    "content": "Hizmetlerimizi kötüye kullanmamayı, yasa dışı içerik yüklememeyi veya web sitesinin işleyişini engellememeyi kabul edersiniz. Dolandırıcılık veya kötüye kullanım durumunda hesabınız askıya alınabilir veya kapatılabilir."
-                },
-                "3": {
-                    "title": "3. Dijital Ürünler ve Ödemeler",
-                    "content": "SigModz, satılmak üzere dijital ürünler sunar. Tüm satın alımlar İade Politikamız kapsamındadır. Dijital ürünlerin kullanımından doğan kayıp veya zararlardan sorumlu değiliz."
-                },
-                "4": {
-                    "title": "4. Sorumluluk Reddi ve Sınırlaması",
-                    "content": "Hizmetlerimiz “olduğu gibi” sunulmaktadır. SigModz, web sitemizin veya hizmetlerimizin kullanımından doğan dolaylı, tesadüfi veya sonuçsal zararlardan sorumlu değildir."
-                },
-                "5": {
-                    "title": "5. Şartlardaki Değişiklikler",
-                    "content": "Bu Hizmet Şartları herhangi bir zamanda güncellenebilir. SigModz’i kullanmaya devam etmeniz, güncellenmiş şartları kabul ettiğiniz anlamına gelir."
-                },
-                "6": {
-                    "title": "6. Hesap Sonlandırma",
-                    "content": "Bu şartların ihlali, dolandırıcılık veya uygunsuz kullanım durumunda hesapları askıya alma veya sonlandırma hakkımız saklıdır."
-                },
-                "7": {
-                    "title": "7. Geçerli Hukuk",
-                    "content": "Bu şartlar Almanya yasalarına tabidir. Bu şartlardan doğan herhangi bir uyuşmazlık Almanya mahkemelerinde çözülür."
-                },
-                "8": {
-                    "title": "8. İletişim",
-                    "content": "Bu Hizmet Şartlarıyla ilgili sorularınız için sigmallymod@proton.me adresinden bize ulaşabilirsiniz."
-                },
-                "discordLink": "Discord Sunucusuna Katıl"
-            }
+        }
+    },
+    "RefundPage": {
+        "title": "İade Politikası",
+        "lastUpdated": "Son güncelleme: 06/11/2025",
+        "sections": {
+            "overview": {
+                "title": "Genel Bakış",
+                "content": "Satın alımınızdan memnun kalmanızı isteriz. Memnun değilseniz aşağıdaki koşullar dahilinde iade talep edebilirsiniz."
+            },
+            "eligibility": {
+                "title": "Uygunluk",
+                "content": "Dijital ürünler için, içerik kullanılmamış olması koşuluyla satın alma tarihinden itibaren 14 gün içinde iadeler yapılır. Tüm talepler doğrulamaya tabidir."
+            },
+            "process": {
+                "title": "İade Süreci",
+                "content": "İade talep etmek için destek ile e-posta veya Discord üzerinden iletişime geçin. Onaylandıktan sonra iadeler 3–5 iş günü içinde işlenir."
+            },
+            "contact": {
+                "title": "İletişim",
+                "content": "İade ile ilgili sorular için sigmallymod@proton.me adresine ulaşın veya Discord sunucumuzda ticket oluşturun."
+            },
+            "discordLink": "Discord Sunucusuna Katıl"
+        }
+    },
+    "TermsPage": {
+        "title": "Hizmet Şartları",
+        "lastUpdated": "Son güncelleme: 06/11/2025",
+        "intro": "SigModz'e hoş geldiniz. Sitemizi kullanarak bu Hizmet Şartlarını kabul etmiş olursunuz.",
+        "sections": {
+            "1": {
+                "title": "1. Şartların Kabulü",
+                "content": "SigModz'i kullanarak bu şartları okuduğunuzu ve kabul ettiğinizi onaylarsınız."
+            },
+            "2": {
+                "title": "2. Kullanıcı Sorumlulukları",
+                "content": "Hizmetlerimizi kötüye kullanmayın, yasa dışı içerik yüklemeyin veya siteye müdahale etmeyin. Dolandırıcılık veya kötüye kullanım askıya alma veya sonlandırmaya yol açabilir."
+            },
+            "3": {
+                "title": "3. Dijital Ürünler & Ödemeler",
+                "content": "Dijital ürünler satıyoruz. Tüm satın alımlar İade Politikamıza tabidir. Dijital ürünlerin kullanımı nedeniyle oluşabilecek kayıplardan sorumlu değiliz."
+            },
+            "4": {
+                "title": "4. Feragat & Sorumluluğun Sınırlandırılması",
+                "content": "Hizmetler olduğu gibi sunulur. SigModz, sitemizin veya hizmetlerin kullanımından kaynaklanan dolaylı, arızi veya sonuçsal zararlardan sorumlu değildir."
+            },
+            "5": {
+                "title": "5. Şartlarda Değişiklikler",
+                "content": "Bu şartları güncelleyebiliriz. SigModz'i kullanmaya devam etmeniz değişiklikleri kabul ettiğiniz anlamına gelir."
+            },
+            "6": {
+                "title": "6. Hesap Sonlandırma",
+                "content": "İhlaller, dolandırıcılık veya kötüye kullanım durumunda hesapları askıya alabilir veya sonlandırabiliriz."
+            },
+            "7": {
+                "title": "7. Geçerli Hukuk",
+                "content": "Bu şartlar Almanya yasalarına tabidir ve uyuşmazlıklar Alman mahkemelerinde çözülecektir."
+            },
+            "8": {
+                "title": "8. İletişim",
+                "content": "Bu şartlarla ilgili sorular için sigmallymod@proton.me ile iletişime geçin."
+            },
+            "discordLink": "Discord Sunucusuna Katıl"
         }
     }
 }

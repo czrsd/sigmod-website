@@ -1,169 +1,169 @@
 {
     "Metadata": {
-        "desc": "Verbessere dein Sigmally-Erlebnis mit SigModz. Lade die neuesten SigMod- und SigFixes-Mods herunter, um erweiterte Funktionen, Performance-Optimierungen, Makros, Themes und mehr freizuschalten. Einfache Einrichtung, mächtige Tools, regelmäßige Updates."
+        "desc": "Verbessere dein Sigmally-Erlebnis mit SigModz. Lade die neuesten SigMod- und SigFixes-Mods herunter, um erweiterte Funktionen, Leistungsverbesserungen, Makros, Themes und mehr freizuschalten. Einfache Einrichtung, leistungsstarke Werkzeuge, regelmäßige Updates."
     },
     "NotFound": {
         "title": "404 – Seite nicht gefunden",
-        "message": "Sieht so aus, als gäbe es diese Seite nicht oder sie wurde verschoben."
+        "message": "Diese Seite existiert offenbar nicht oder wurde verschoben."
     },
     "Header": {
-        "home": "Startseite",
+        "home": "Start",
         "mods": {
             "title": "Mods",
             "sigmod": {
                 "title": "SigMod Client",
-                "desc": "Individuelle UI, Makros, Spielautomatisierung"
+                "desc": "Benutzerdefinierte Oberfläche, Makros, Spielautomatisierung"
             },
             "sigfixes": {
                 "title": "SigFixes",
-                "desc": "Multibox-Unterstützung, FPS-Boost"
+                "desc": "Multibox-Unterstützung, FPS-Steigerung"
             }
         },
-        "guide": "Setup-Anleitung",
+        "guide": "Installationsanleitung",
         "faq": "FAQ",
-        "about": "Über uns",
-        "shop": "Laden"
+        "about": "Über",
+        "shop": "Shop"
     },
     "Footer": {
-        "text": "© 2025 SigModz. Nicht affiliiert mit Sigmally."
+        "text": "© 2025 SigModz. Nicht mit Sigmally verbunden."
     },
     "HomePage": {
         "hero": {
             "title": "Sigmally Modz",
-            "sub": "Steigere dein Sigmally-Spiel mit schnellerer Leistung, cleveren Tools und voller Anpassung.",
-            "start": "Los geht’s"
+            "sub": "Verbessere deine Sigmally-Sessions mit flüssigerer Performance, schlaueren Tools und einer Einrichtung, die sich wie deine anfühlt.",
+            "start": "Loslegen"
         },
         "introduction": {
             "what": {
                 "title": "Was ist Sigmally?",
-                "desc": "Sigmally ist ein temporeiches Browser‑Spiel im Agar‑io‑Stil auf privaten Servern für zuverlässigere Performance. Futter aufnehmen, Gegnern ausweichen und deine Zelle mit schöner Physik und reaktionsschnellen Steuerungen vergrößern. Solo spielen oder im Team antreten, globale Ranglisten erklimmen und regelmäßig an Community-Events teilnehmen."
+                "desc": "Sigmally ist ein schnelles browserbasiertes Agar.io-ähnliches Spiel, das auf privaten Servern für stabilere Performance läuft. Du steigst ein, sammelst Pellets, weichst anderen Spielern aus und baust deine Zelle mit sauberer Physik und präziser Steuerung auf. Allein spielen, mit Freunden teamen, die Rangliste erklimmen und bei Community-Events mitmachen."
             },
             "why": {
                 "title": "Warum",
-                "desc": "SigModz bringt fortschrittliche Tools und Anpassungen direkt ins Spiel. Makros für schnelle Feeds und Respawns erstellen und optimieren, UI-Themes und Layouts nach deinem Stil anpassen und tägliche Aufgaben wie Münz-Sammeln automatisieren. Mit Performance-Tweaks, Multibox-Support und intuitiven In‑Game-Steuerungen spielst du sauberer, schneller und strategischer – egal ob Gelegenheitsspieler oder Wettkampf-Profi."
+                "desc": "SigModz gibt dir Werkzeuge, das Spiel nach deinen Wünschen zu formen. Richte Makros für Splits und Feeds ein, passe UI-Themes und Layouts an und automatisiere kleine Aufgaben wie tägliche Münzen. Mit Performance-Boosts, Multibox-Optionen und einfachen Ingame-Steuerelementen spielst du sauberer und schneller, egal ob casual oder kompetitiv."
             }
         },
         "mods": {
             "sigmod": {
                 "title": "SigMod",
-                "desc": "SigMod verwandelt dein Sigmally-Erlebnis mit einem vollständigen In‑Game‑Mod‑Menü. Programmiere Makros für schnelle Feeds und Splits, passe jedes visuelle Element mit Themes und Layouts an und automatisiere Routineaufgaben wie tägliches Münz-Sammeln. Passe HUD, Tastenbelegung und Chat-Einstellungen an – alles ohne das Spiel zu verlassen.",
-                "learnMore": "Erfahren Sie mehr über SigMod"
+                "desc": "SigMod fügt ein vollständiges Mod-Menü direkt ins Spiel ein. Erstelle benutzerdefinierte Makros, wechsle Themes und Layouts und automatisiere Dinge wie tägliche Münzen. Passe HUD, Tastenbelegung und Chat-Einstellungen an, damit alles natürlich wirkt beim Spielen.",
+                "learnMore": "Mehr über SigMod erfahren"
             },
             "sigfixes": {
                 "title": "SigFixes",
-                "desc": "SigFixes erhöht die Performance für flüssige, konstante Frameraten und minimales Lag. Genieße schnellere Ladezeiten, klarere Eingabereaktionen und integrierten Multibox‑Support, um mehrere Accounts nahtlos zu steuern. Justiere Draw-Delay, Zell-Opazität, Kamera-Zoom und Namens-Skalierung für ruckelfreie, präzise Gameplay-Erlebnisse.",
-                "learnMore": "Erfahren Sie mehr über SigFixes"
+                "desc": "SigFixes verbessert die Performance für stabilere FPS und minimale Verzögerungen. Lade schneller, erhalte präzisere Eingaben und steuere mehrere Accounts mit integrierten Multibox-Tools. Passe Draw-Delay, Deckkraft, Zoom und Namensskalierung an, damit alles flüssig läuft.",
+                "learnMore": "Mehr über SigFixes erfahren"
             },
-            "learnMore": "Mehr erfahren & installieren"
+            "learnMore": "Mehr & installieren"
         },
         "faq": {
             "questions": [
                 {
                     "question": "Sind diese Skripte sicher?",
-                    "answer": "Ja – unsere Mods sind vollständig Open‑Source und transparent, und Tampermonkey wird von Millionen genutzt. Kein versteckter Code, keine Überraschungen."
+                    "answer": "Ja. Alles ist Open-Source und Tampermonkey ist weit verbreitet und vertrauenswürdig. Keine versteckten Tricks."
                 },
                 {
                     "question": "Brauche ich beide Mods?",
-                    "answer": "Nicht zwingend, aber SigMod + SigFixes zusammen bieten die beste Kontrolle und Performance."
+                    "answer": "Nicht zwingend. SigMod und SigFixes zusammen bieten die beste Kombination aus Kontrolle und Geschwindigkeit."
                 },
                 {
                     "question": "Sind sie in Sigmally erlaubt?",
-                    "answer": "Ja. Mods wie SigMod und SigFixes werden sowohl von der Sigmally-Community als auch von ihrem Eigentümer allgemein akzeptiert."
+                    "answer": "Ja. Beide Mods sind in der Community bekannt und vom Betreiber akzeptiert."
                 },
                 {
                     "question": "Kann ich sie jederzeit entfernen?",
-                    "answer": "Ja – einfach im Userscript‑Manager deaktivieren oder deinstallieren."
+                    "answer": "Klar. Schalte sie einfach ab oder deinstalliere sie in deinem Userscript-Manager."
                 },
                 {
-                    "question": "Macht mich SigMod über Nacht zum Pro-Gamer?",
-                    "answer": "Ich wünschte! SigMod wirkt wie ein Turbo für dein Spiel – alles läuft flüssiger, aber am Steuer sitzt du immer noch. Reflexe, Strategie und Übung bleiben deine Aufgabe."
+                    "question": "Macht SigMod mich über Nacht zum Profi?",
+                    "answer": "Wenn doch. SigMod glättet und vereinfacht Abläufe, aber Skill kommt von dir: Timing, Reads und Übung."
                 }
             ]
         },
         "community": {
             "title": "Community",
-            "desc": "Tritt unserem Discord bei für Support, Bug-Reports und nächtliches Troubleshooting mit anderen Spielern.",
+            "desc": "Tritt unserem Discord bei für Support, Bug-Reports und nächtliche Hilfe von anderen Spielern.",
             "join": "Discord beitreten"
         }
     },
     "SigModPage": {
         "Hero": {
             "title": "SigMod Client",
-            "sub": "Steigere dein Sigmally-Spiel mit Makros, Team‑Tags, UI‑Tweaks und kompletter In‑Game‑Personalisierung.",
+            "sub": "Heb dein Sigmally-Spiel mit benutzerdefinierten Makros, Team-Tags, UI-Anpassungen und kompletter Ingame-Personalisierung auf ein neues Level.",
             "install": "SigMod installieren",
-            "explore": "Funktionen entdecken",
-            "require": "Erfordert",
+            "explore": "Funktionen ansehen",
+            "require": "Benötigt",
             "or": "oder"
         },
         "CoreFeatures": {
             "macros": {
                 "title": "Makros & Automatisierung",
-                "desc": "Optimiere dein Spiel mit Shortcuts, Klick‑Sequenz‑Makros, Sofort‑Respawns und automatischem Münzsammeln."
+                "desc": "Spiele schlauer mit benutzerdefinierten Shortcuts, Klick-Sequenz-Makros, automatischem Respawn und Auto-Münzen."
             },
             "party": {
-                "title": "Party‑ & Tag‑System",
-                "desc": "Erstelle 3‑Buchstaben‑Tags für Teamkollegen, verfolge sie live auf der Minikarte, chatte privat und sende präzise Pings."
+                "title": "Party- & Tag-System",
+                "desc": "Erstelle einen 3-Zeichen-Tag für Teammitglieder, verfolge sie auf der Minimap, chatte privat und sende präzise Pings."
             },
             "customization": {
                 "title": "Volle Personalisierung",
-                "desc": "Schalte jedes Detail um – Themes, Schriftarten, Layouts, Tasten neu belegen im einheitlichen Menü."
+                "desc": "Ändere UI-Themes, wähle Fonts, ordne Layouts neu und belege Tasten aus einem Menü."
             }
         },
         "WhySigMod": {
             "title": "Warum SigMod?",
-            "desc1": "SigMod erweitert den Sigmally‑Client mit intelligenter Automatisierung, Interface‑Personalisierung und vollständiger UI‑Kontrolle. Makros anwenden, Panels verschieben, Tasten neu belegen und visuelle Feinabstimmung – alles innerhalb eines schicken In‑Game-Dashboards. Themes wechseln, Namen bookmarken und Screenshots mit einem Klick machen.",
-            "desc2": "Koordiniere dich mit deinem Squad über dynamische Tags: privater Chat, taktische Pings und Minimap‑Marker. Verfolge Match‑Stats, verwalte Freunde und passe Chat‑Schrift, Farben und Tastenbindung on the fly an.",
+            "desc1": "SigMod fügt Automatisierung, Personalisierung und volle UI-Kontrolle zu Sigmally hinzu. Richte Makros ein, verschiebe Panels, belege Tasten neu und passe Optik von einem sauberen Ingame-Dashboard an. Wechsel Themes, markiere Namen und mach Screenshots mit einem Klick.",
+            "desc2": "Arbeite mit deinem Squad via dynamischen Tags: privater Chat, taktische Pings und Live-Minimap-Marker. Sieh Match-Statistiken, verwalte Freunde und passe Chat-Fonts sowie Tastenbelegungen unterwegs an.",
             "performance": "Willst du maximale Performance? Kombiniere SigMod mit",
             "smooth": "für ultraschnelles Gameplay.",
-            "getStarted": "Leg los mit SigMod"
+            "getStarted": "Mit SigMod loslegen"
         },
         "Features": {
-            "title": "SigMod‑Features",
+            "title": "SigMod-Funktionen",
             "list": [
                 {
                     "title": "Makros & Automatisierung",
-                    "summary": "Automatisiere jede Aktion – Hotkeys, Tricksplits & Klick‑Makros",
-                    "details": "Belege Tasten für schnelle Aktionen wie Feed, Double/Triple/Quad‑Split und Tricksplits. Erstelle Klick‑Makros für links/rechts Klicks. Konfiguriere Split‑Sequenzen mit exakten Verzögerungen. Toggle-Optionen für Name, Skin oder Respawn – alles vollständig anpassbar."
+                    "summary": "Automatisiere Aktionen: Tasten, Tricksplits und Mausklick-Makros",
+                    "details": "Belege Tasten für fortgeschrittene Aktionen wie schnelles Füttern, Doppel-/Dreifach-/Vierfach-Splits und Tricksplits. Erstelle Mauskroks für Links- und Rechtsklick, setze genaue Verzögerungen und Füttergeschwindigkeiten. Schalte Namen, Skins oder Respawn per Taste. Alles anpassbar."
                 },
                 {
-                    "title": "Party‑ & Tag‑System",
-                    "summary": "3‑Buchstaben‑Tags, Minimap‑Tracking, Pings & privater Chat",
-                    "details": "Vergib ein Tag (bis zu 3 Zeichen) für private Teams. Teammitglieder erscheinen auf der Minikarte, im Party‑Panel mit Name & Score und können präzise Pings senden. Der Party‑Chat erlaubt sicheren Austausch – getrennt vom öffentlichen Chat. Du siehst, wer welchen Ping gesendet hat."
+                    "title": "Party- & Tag-System",
+                    "summary": "3-Zeichen-Tags, Minimap-Tracking, Pings und privater Chat",
+                    "details": "Wähle ein 3-Zeichen-Tag für dein Team. Sieh Mitglieder auf der Minimap, ihre Namen und Scores in einem Party-Panel und sende exakte Pings. Party-Chat bleibt privat."
                 },
                 {
-                    "title": "Menü‑Anpassung",
-                    "summary": "Themes, Schrift, Layout, Tabs, Rahmen & Eingabestil",
-                    "details": "Passe deine UI an mit Themes, abgerundeten Ecken, Hintergrundbildern und individuellen Eingaberahmen. Blende störende Elemente wie Discord‑ oder Sprachbuttons aus. Ordne Tabs, Abstände und Schatten und wechsle zwischen Layout‑Presets."
+                    "title": "Menü-Anpassung",
+                    "summary": "Themes, Fonts, Layouts, Tabs und Eingabestil",
+                    "details": "Personalisiere UI mit Themes, abgerundeten Ecken, Hintergrundbildern und Eingabefeldern. Verstecke Elemente, ordne Tabs neu, passe Abstände an und wähle Layouts, die zu dir passen."
                 },
                 {
                     "title": "Visuelle Spieleinstellungen",
-                    "summary": "Kartenfarben, Opazität, Zell‑Style & Schrift",
-                    "details": "Regle Farbe und Transparenz von Karte, Rand, Nahrung und Zellen. Ersetze In‑Game‑Bilder wie Viren oder Hintergründe. Wähle Schriftarten, zeige/verborgene Namen und Skins, wende Text-Outlines an und aktiviere Overlays wie Grid oder Border."
+                    "summary": "Kartenfarben, Deckkraft, Zellstil und Fonts anpassen",
+                    "details": "Ändere Farbe und Transparenz von Karte, Rand, Futter und Zellen. Ersetze Ingame-Bilder wie Viren oder Hintergründe. Wähle Fonts, zeige oder verstecke Namen und Skins, füge Textkonturen hinzu und schalte Overlays wie Grid und Border."
                 },
                 {
                     "title": "Galerie & Screenshots",
-                    "summary": "Momente festhalten & deine Galerie verwalten",
-                    "details": "Belege eine Taste für Sofort‑Screenshots im Spiel. Durchsuche deine Bilder in der Galerie‑Sektion. Jedes Bild mit Zeitstempel, löschen und herunterladen. Galerie einfach verwalten."
+                    "summary": "Momente festhalten und Galerie verwalten",
+                    "details": "Belege eine Taste für Screenshots. Durchsuche Bilder in der Galerie mit Zeitstempeln und lösche oder lade sie mit einem Klick herunter. Bereinige oder exportiere Aufnahmen zentral."
                 },
                 {
-                    "title": "Namens‑Tools & Farbeffekte",
-                    "summary": "Namen speichern, Generator, Verläufe & Symbole",
-                    "details": "Nutze Nick‑Generatoren (NickFinder, Tell.wtf). Speichere Favoriten für schnellen Kopier‑Zugriff. Erstelle stylische Namen mit Sonderzeichen und Farbverläufen. Schnell löschen oder wiederverwenden integriert."
+                    "title": "Namens-Tools & Farbeffekte",
+                    "summary": "Namen speichern, Generatoren, Verläufe und Symbole",
+                    "details": "Nutze Nickname-Generatoren, speichere Favoriten zum schnellen Kopieren und erstelle Namen mit Sonderzeichen. Entwirf farbige Namen mit Verläufen und Zweifarb-Effekten. Lösche oder nutze Namen wieder schnell."
                 },
                 {
-                    "title": "Freunde & Mod‑Profil",
-                    "summary": "Nutzer hinzufügen, privat chatten & Mod‑Identität verwalten",
-                    "details": "Füge Freunde per Nutzername oder Discord‑Login hinzu. Sieh Online‑Status, Tag, Server etc. Filter und Suche helfen dir. Passe Mod‑Profil an mit Avatar, Bio, Status und Farben. Anfragen annehmen/ablehnen und Sichtbarkeit einstellen."
+                    "title": "Freunde & Mod-Profil",
+                    "summary": "Benutzer hinzufügen, privat chatten und Profil anpassen",
+                    "details": "Logge dich ein, um ein Mod-Profil zu erstellen und Freunde per Username oder Discord hinzuzufügen. Sieh Online-Status, Tag- und Server-Infos. Suche, filtere, passe Avatar und Bio an und kontrolliere Sichtbarkeit."
                 },
                 {
-                    "title": "Stats & Schnellzugriffs‑Panel",
-                    "summary": "Verfolge Spielstatistiken, toggle Settings sofort",
-                    "details": "Im Home‑Tab: Zeit gespielt, Top‑Mass, Tode. Im Schnellzugriffs‑Panel kannst du Mass, Grid, Border, Jelly‑Physik, Auto‑Respawn, Coin‑Claim und mehr toggeln – ohne Einstellungen‑Menü zu durchforsten."
+                    "title": "Stats & Schnellzugriff",
+                    "summary": "Spielverlauf verfolgen und Einstellungen schnell toggeln",
+                    "details": "Home zeigt Statistiken wie Spielzeit, Top-Masse und Tode. Das Schnellzugriffs-Panel schaltet Masse, Grid, Border, Jelly-Physik, Auto-Respawn, Coin-Claim und mehr ohne Menüs."
                 },
                 {
-                    "title": "Chat‑System‑Überarbeitung",
-                    "summary": "Eigenes Chat‑Modul mit Tabs, Hotkeys & Kontrolle",
-                    "details": "Wechsle zwischen Party‑ und Haupt‑Chat per Tabs. Nachrichten in Echtzeit via Websocket‑Interception. Hotkeys senden deinen Standort, toggle Blur, Zeit‑Tags oder Kompakt‑Mode. Passe Text, Hintergrund und Theme‑Farben inkl. Transparenz an."
+                    "title": "Chat-Überarbeitung",
+                    "summary": "Angepasster Chat mit Tabs, Tasten und voller Kontrolle",
+                    "details": "Wechsle zwischen Party- und Hauptchat per Tabs. Nachrichten aktualisieren sich live. Nutze Tasten, um Position zu teilen, Blur umzuschalten oder Zeitstempel hinzuzufügen. Passe Text, Hintergrund und Transparenz an."
                 }
             ],
             "viewMore": "Mehr anzeigen"
@@ -172,42 +172,38 @@
             "title": "FAQ",
             "list": [
                 {
-                    "question": "Was sind die Kernfeatures von SigMod?",
-                    "answer": "SigMod bietet ein vollständig anpassbares Mod‑Menü, mächtige Makros und Automatisierung, Party‑ & Tag‑System, Live‑Stats und modernes Chat‑, Namens‑ und Freundes‑System – alles integriert, um dein Sigmally‑Erlebnis zu verbessern."
+                    "question": "Was sind die Kernfunktionen von SigMod?",
+                    "answer": "Ein anpassbares Mod-Menü, mächtige Makros, ein Party-/Tag-System, Live-Stats und ein modernes System für Namen und Freunde, das dein Sigmally-Spiel verbessert."
                 },
                 {
-                    "question": "Welche Anpassungen bietet SigMod?",
-                    "answer": "Du kannst Themes, Schriftarten, Layout‑Abstände, Rahmenradius, Namensfarben (inkl. Verläufe), UI‑Opazität, Visuals, Spiel‑Farben ändern und Dutzende optische Einstellungen toggeln. Auch Deathscreen‑Tweaks, Skin‑Overrides und Hintergrund‑Presets sind möglich."
+                    "question": "Welche Anpassungsoptionen bietet SigMod?",
+                    "answer": "Ändere Themes, Fonts, Layout-Abstände, Rundungen, Namenfarben inklusive Verläufe, UI-Deckkraft und viele visuelle Einstellungen. Unterstützt Deathscreen-Tweaks, Skin-Overrides und Hintergrundvorgaben."
                 },
                 {
-                    "question": "Was ist das Tag‑System?",
-                    "answer": "Mit dem Tag‑System vergibst du einen 3‑Buchstaben‑Code, um ein Team zu bilden. Ihr werdet auf der Minikarte getrackt, chattet privat, sendet Pings und seht Punkte im gemeinsamen Panel."
+                    "question": "Was ist das Tag-System?",
+                    "answer": "Weise ein 3-Zeichen-Tag zu, um eine Party zu bilden. Verfolge Teammitglieder auf der Minimap, chatte privat, sende Pings und sehe gemeinsame Werte."
                 },
                 {
-                    "question": "Wie funktioniert das Freundes-System?",
-                    "answer": "Du kannst dich einloggen, ein Mod‑Profil erstellen und Freunde hinzufügen. Profile, Rollen, Online‑Status, Server‑Info einsehen und direkt chatten. Freundesanfragen, Suche, Einstellungen und Profil‑Anpassung (Avatar, Bio, Status) inklusive."
+                    "question": "Wie funktioniert das Freundessystem?",
+                    "answer": "Erstelle ein Mod-Profil, füge Freunde hinzu, sieh Profile und chatte direkt. Sieh Online-Status, Serverinfos und verwalte Anfragen."
                 },
                 {
-                    "question": "Wie öffne ich das SigMod‑Menü?",
-                    "answer": "Drücke die Taste V oder klicke auf das Zahnrad‑Icon oben rechts im Spiel, um das Mod‑Menü zu öffnen. Dort findest du Tabs wie Makros, Themes, Galerie, Freunde u. v. m."
+                    "question": "Wie öffne ich das SigMod-Menü?",
+                    "answer": "Drücke V oder klicke auf das Zahnrad-Symbol oben rechts."
                 },
                 {
                     "question": "Kann ich Hotkeys und Makros anpassen?",
-                    "answer": "Ja. SigMod bietet fortschrittliche Tastenbelegung für Feed, Splits, Tricksplits u. a. Du kannst Maus‑Makros festlegen, Linesplit‑Verhalten einstellen, Feed‑Geschwindigkeit anpassen und UI‑Toggles belegen wie Menü, Namen oder Auto‑Respawn."
+                    "answer": "Ja. SigMod bietet erweiterte Tastenbelegung für Feed, Split und Tricksplits. Du kannst Mauskroks zuweisen, Split-Sequenzen setzen und UI-Toggles belegen."
                 },
                 {
-                    "question": "Beeinflusst SigMod die Spielperformance?",
-                    "answer": "SigMod fügt viele Features hinzu, ist jedoch leichtgewichtig optimiert. Für bessere FPS oder weniger Lag installiere SigFixes – das Performance‑Bottlenecks im Bas-Client ausmerzt."
-                },
-                {
-                    "question": "Kann ich Screenshots erstellen und verwalten?",
-                    "answer": "Ja. Nutze eine angelegte Taste, um Sofort‑Screenshots im Spiel zu machen. Im Galerie‑Tab kannst du sie nach Datum ansehen, herunterladen oder löschen."
+                    "question": "Beeinflusst SigMod die Spiel-Performance?",
+                    "answer": "SigMod ist leichtgewichtig und fokussiert auf Anpassung. Für FPS-Verbesserungen nutze SigFixes."
                 }
             ]
         },
         "Community": {
             "title": "Community beitreten",
-            "text": "Brauchst du Hilfe, hast einen Bug gefunden oder willst eigene Makros teilen? Tritt unserem Discord bei und vernetze dich mit anderen SigMod‑Nutzern.",
+            "text": "Brauche Hilfe, Bug gefunden oder willst Makros teilen? Tritt dem Discord bei und vernetze dich mit anderen SigMod-Nutzern.",
             "discord": "Discord beitreten",
             "explore": "Oder den Code ansehen auf"
         }
@@ -215,82 +211,82 @@
     "SigFixesPage": {
         "Hero": {
             "title": "SigFixes",
-            "sub": "Verbessere Sigmallys Kern mit ultrasanfter Performance, präziser Steuerung und fortschrittlicher Multibox-Kontrolle.",
+            "sub": "Verbessere Sigmallys Kern mit ultrasanfter Performance, präziser Eingabe und fortgeschrittener Multibox-Kontrolle.",
             "install": "SigFixes installieren",
-            "explore": "Funktionen entdecken",
-            "require": "Erfordert",
+            "explore": "Funktionen ansehen",
+            "require": "Benötigt",
             "or": "oder"
         },
         "CoreFeatures": {
             "performance": {
                 "title": "Verbesserte Performance",
-                "desc": "Wechselt die Rendering-Engine für schnellere, flüssigere Grafiken, weniger Aussetzer und stabilere Leistung."
+                "desc": "Ersetzt die Rendering-Engine für schnellere Darstellung, weniger Spikes und bessere Stabilität."
             },
             "multiboxing": {
-                "title": "Perfektes Multiboxing",
-                "desc": "Ein-Tab-Steuerung, Umriss-Anpassungen, Merge-Hilfen und smarte Respawn-Tools – optimiert für nahtlose Multibox-Setups."
+                "title": "Fehlerfreies Multiboxing",
+                "desc": "Steuerung in einem Tab, Outline-Anpassungen, Merge-Hilfen und smarte Respawn-Tools für Multibox-Setups."
             },
             "input": {
-                "title": "Präzise Steuerung",
-                "desc": "Verringert Eingabeverzögerungen und verbessert die Kontrolle – besonders effektiv bei Makros und Split-Strategien."
+                "title": "Präzise Eingabe",
+                "desc": "Reduziert Eingabeverzögerung und verbessert Steuerungsgenauigkeit, nützlich bei Makros und Splits."
             }
         },
         "WhySigFixes": {
             "title": "Warum SigFixes?",
-            "desc1": "SigFixes überarbeitet Sigmallys Rendering für flüssigere Frames und schärfere Eingaben. Es beseitigt Aussetzer, senkt Verzögerungen und sorgt für konstantes Gameplay – selbst unter Druck.",
-            "desc2": "Speziell für ernsthafte Spieler gemacht, glänzt es beim Multiboxing. Mit schnelleren Eingaben, synchroner Kamera und visuellen Hilfen für Merge hast du volle Kontrolle.",
-            "worksWith": "Schon SigMod im Einsatz?",
-            "combo": "? Kombiniere beide für das ultimative Erlebnis.",
-            "getStarted": "Starte mit SigFixes"
+            "desc1": "SigFixes überholt Sigmallys Rendering für flüssigere Frames und präzisere Eingabe. Es beseitigt Stottern, verringert Verzögerungen und hält das Gameplay stabil unter Druck.",
+            "desc2": "Für ernsthafte Spieler entwickelt, glänzt es beim Multiboxing. Schnellere Eingaben, synchronisierte Kamera und visuelle Anpassungen helfen beim Tracking und Merge.",
+            "worksWith": "Schon in Benutzung mit",
+            "combo": "Kombiniere beides für das ultimative Erlebnis.",
+            "getStarted": "Mit SigFixes loslegen"
         },
         "Features": {
-            "title": "SigFixes Features",
+            "title": "SigFixes-Funktionen",
             "viewMore": "Mehr anzeigen",
             "list": [
                 {
                     "title": "Performance",
-                    "summary": "Ersetzt das Canvas durch ultraschnelles WebGL-Rendering",
-                    "details": "SigFixes eliminiert Lag-Spikes, indem das Spiel-Canvas durch einen voll optimierten WebGL-Renderer ersetzt wird. Das sorgt für flüssigeres Gameplay, bessere FPS und konstante Leistung auf allen Geräten – auch beim Multiboxing oder Aufnahmen."
+                    "summary": "Ersetzt das Canvas durch schnelles WebGL-Rendering",
+                    "details": "SigFixes reduziert Lag-Spikes, indem es das Spiel-Canvas durch einen optimierten WebGL-Renderer ersetzt. Erwarte flüssigeres Gameplay, bessere FPS und stabile Performance auf vielen Geräten."
                 },
                 {
-                    "title": "Präzise Steuerung",
+                    "title": "Genauere Eingabe",
                     "summary": "Weniger Verzögerung zwischen Eingabe und Bewegung",
-                    "details": "Erlebe Echtzeit-Reaktion beim Bewegen, Füttern oder Splitten. SigFixes reduziert Latenz und steigert die Präzision bei Maus- und Tastatureingaben. Jede Bewegung fühlt sich schärfer und kontrollierter an – besonders in schnellen Gefechten."
+                    "details": "Spüre nahezu Echtzeit-Reaktion beim Bewegen, Füttern und Splitten. SigFixes reduziert Latenz und verbessert die Kontrolle bei Maus- und Tastatureingaben."
                 },
                 {
-                    "title": "Fortschrittliches Multiboxing",
-                    "summary": "Ein-Tab-Steuerung, Sicht-Merge, Respawn-Handling",
-                    "details": "Steuere mehrere Instanzen aus einem Tab. Wähle deine Merge-Methode, passe Umrisse, Farben und Respawn-Logik an. Aktiviere fehlerfreies Mergen, blockiere Cluster-Respawns und optimiere das Setup für 2+ Tabs mühelos."
+                    "title": "Fortgeschrittenes Multiboxing",
+                    "summary": "Steuerung in einem Tab, Sicht-Merging und Respawn-Handling",
+                    "details": "Verwalte mehrere Instanzen aus einem Tab. Wähle Sicht-Merge-Methoden, passe Outlines und Farben an und setze Respawn-Regeln. Ermögliche sanftes Mergen, blockiere Cluster-Respawns und optimiere Setups für 2+ Tabs."
                 },
                 {
-                    "title": "Zeichen-Einstellungen",
-                    "summary": "Draw-Delay, Zell-Umrisse, Kamera & Zoom anpassen",
-                    "details": "Stelle den Draw-Delay ein, um Balance zwischen Grafik und Performance zu finden. Schalte Zell-Umrisse ein oder aus, setze deine Skin-URL, wähle Kamera-Verhalten (Natürlich, Instant) und justiere Zoom-Geschwindigkeit und Auto-Zoom für reaktionsschnelles Spiel."
+                    "title": "Draw-Einstellungen",
+                    "summary": "Draw-Delay, Zell-Outlines, Kamera und Zoom anpassen",
+                    "details": "Setze Draw-Delay zur Balance zwischen Optik und Performance. Schalte Zell-Outlines, Skin-URLs und Kamera-Verhalten wie Natural oder Instant. Passe Zoom-Geschwindigkeit und Auto-Zoom an."
                 },
                 {
                     "title": "Visuelle Werkzeuge",
-                    "summary": "Deckkraft, Glow, Skins, Jelly-Physik und Gitternetzlinien",
-                    "details": "Passe Sichtbarkeit und Verhalten von Zellen, Skins, Pellets und Glow an. Aktiviere/deaktiviere Jelly-Physik und Overlays wie Linien zwischen Zellen und Cursor. Hebe nicht teilbare Zellen mit eigenen Farben und Transparenz hervor."
+                    "summary": "Deckkraft, Glow, Skins, Jelly-Physik und Gitterlinien",
+                    "details": "Passe Sichtbarkeit und Verhalten für Zellen, Skins und Pellets an. Schalte Jelly-Physik und Overlays ein/aus, hebe unsplittbare Zellen farblich hervor und justiere Glow und Deckkraft."
                 },
                 {
                     "title": "Theme-Anpassung",
-                    "summary": "Wähle deine Theme-Farbe und steuere UI-Optik",
-                    "details": "Wähle deine Theme-Farbe und setze sie im Mod durch. Passe die UI deinem Stil an – von Farb-Akzenten bis zu visuellen Effekten wie Regenbogen-Rahmen und Karten-Hintergründen."
+                    "summary": "Wähle Theme-Farbe und UI-Optik",
+                    "details": "Wähle eine Theme-Farbe und wende sie im Mod an. Stimme UI-Farben, Kartenhintergründe und Effekte wie Regenbogen-Ränder ab."
                 },
                 {
-                    "title": "Spielverhalten anpassen",
-                    "summary": "Pushsplit-Delay, XP-/Score-Split, Aftersplit-Bewegung",
-                    "details": "Konfiguriere das Verhalten nach Splits: Wann beginnt Bewegung, wie funktionieren Pushsplits, wie werden XP und Score angezeigt. Diese Feinjustierungen erleichtern kompetitives Movement."
+                    "title": "Spielverhalten tweaks",
+                    "summary": "Pushsplit-Delay, XP-Score-Split und Nachsplit-Bewegung",
+                    "details": "Steuere Post-Split-Verhalten inklusive Bewegungs-Timing, Pushsplit-Handhabung und wie XP und Score angezeigt werden. Diese Optionen erleichtern Wettbewerbsbewegungen."
                 },
                 {
-                    "title": "Kamera-Steuerung",
-                    "summary": "Sanftheit, Geschwindigkeit, Spawn-Kamera-Logik",
-                    "details": "Passe Kamerabewegung an: sofort, natürlich oder sanft. Steuere Spawn-Kamera-Verhalten, Zoom-Interpolation und Geschwindigkeit passend zu deinen Vorlieben."
+                    "title": "Kamerasteuerung",
+                    "summary": "Glätte, Geschwindigkeit und Spawn-Kamera-Logik",
+                    "details": "Passe Kamerabewegung an: Instant, Natural oder Smooth. Steuer Spawn-Kamera-Verhalten, Zoom-Interpolation und Geschwindigkeit."
                 },
                 {
-                    "title": "Textdarstellung",
-                    "summary": "Schriftgröße, Stärke, Umriss und Clan-Anzeige",
-                    "details": "Bearbeite Namen-/Massen-Skalierung, schalte fette Schrift ein/aus, setze Umrisse, blende Clans ein oder aus. Perfekt für Minimal-Setups oder hohe Sichtbarkeit in chaotischen Situationen."
+                    "title": "Text-Rendering",
+                    "summary": "Schriftgröße, Gewicht, Kontur und Clan-Anzeige",
+                    "details": "Ändere Namen- und Massen-Skalierung, schalte fette Schrift, Konturen und Clan-Anzeige ein/aus. Gut für minimalistische Setups oder Lesbarkeit in chaotischen Matches."
                 }
             ]
         },
@@ -299,60 +295,60 @@
             "list": [
                 {
                     "question": "Was ist SigFixes?",
-                    "answer": "SigFixes ist ein Performance-Patch für den Sigmally-Client. Es ersetzt die Rendering-Engine durch ein WebGL-Canvas und sorgt so für flüssigeres, schnelleres und reaktionsschnelleres Gameplay – besonders hilfreich für Multiboxing und Wettkampf."
+                    "answer": "SigFixes ist ein Performance-Patch für den Sigmally-Client. Es ersetzt die Rendering-Engine durch ein WebGL-Canvas für flüssigeres, schnelleres und reaktionsschnelleres Gameplay, ideal für Multiboxing und kompetitives Spiel."
                 },
                 {
                     "question": "Verändert SigFixes das Aussehen des Spiels?",
-                    "answer": "Standardmäßig sieht es aus wie der Original-Client. Für Fortgeschrittene gibt es aber Optionen wie Skin-Overrides, Zell-Deckkraft, Textskalierung, Glow-Effekte und Umrisse für nicht teilbare Zellen."
+                    "answer": "Standardmäßig sieht es gleich aus wie der Original-Client. Für Fortgeschrittene bietet es Optionen wie Skin-Overrides, Zell-Deckkraft, Textskalierung, Glow und Konturen."
                 },
                 {
-                    "question": "Kann ich SigFixes zusammen mit SigMod nutzen?",
-                    "answer": "Ja, SigFixes funktioniert nahtlos mit SigMod zusammen und kombiniert fortgeschrittene Features mit verbesserter Performance und weniger Lag."
+                    "question": "Kann ich SigFixes mit SigMod nutzen?",
+                    "answer": "Ja. SigFixes funktioniert zusammen mit SigMod, um Features mit verbesserter Performance zu kombinieren."
                 },
                 {
                     "question": "Hilft SigFixes beim Multiboxing?",
-                    "answer": "Ja. Es bietet Ein-Tab-Steuerung, Sicht-Merge-Optionen, Spawn-Blockierung und Tab-Umrisse – alles für geringere Eingabeverzögerung und bessere Synchronisation zwischen Tabs."
+                    "answer": "Ja. Es bietet Ein-Tab-Steuerung, Sicht-Merge-Optionen, Spawn-Blocking und Tab-Outlines zur Reduzierung von Eingabeverzögerung und besseren Synchronisation."
                 },
                 {
                     "question": "Wie installiere ich SigFixes?",
-                    "answer": "Installiere zuerst Tampermonkey oder Violentmonkey (nur eins). Aktiviere den Entwicklermodus in deinem Browser. Dann installiere das SigFixes-Userscript von der offiziellen Quelle und starte den Browser neu."
+                    "answer": "Installiere Tampermonkey oder Violentmonkey, aktiviere den Entwicklermodus in den Erweiterungseinstellungen, installiere das SigFixes-Userscript aus der offiziellen Quelle und starte den Browser neu."
                 },
                 {
                     "question": "Welche Kameraeinstellungen kann ich anpassen?",
-                    "answer": "Du kannst zwischen Standard- und Natürlicher Kamera wechseln, Bewegung auf Instant oder Smooth stellen, Zoom-Geschwindigkeit steuern und Auto-Zoom sowie Kamera-Tracking beim Spawn aktivieren."
+                    "answer": "Wechsle zwischen Default und Natural, setze Bewegung auf Instant oder Smooth, steuere Zoom-Geschwindigkeit und aktiviere Auto-Zoom sowie Spawn-Kamera-Tracking."
                 },
                 {
-                    "question": "Was ist die Draw-Delay-Einstellung?",
-                    "answer": "Draw-Delay steuert, wie oft das Spiel-Canvas aktualisiert wird. Höhere Werte machen Animationen flüssiger, können aber Leistung senken. Niedrigere Werte erhöhen FPS, machen die Grafik aber weniger glatt. Du kannst es nach Belieben anpassen."
+                    "question": "Was ist die Einstellung 'draw delay'?",
+                    "answer": "Draw-Delay steuert, wie oft das Canvas aktualisiert wird. Höhere Werte glätten Animationen, können aber Performance verringern; niedrigere Werte verbessern Performance, machen Optik weniger flüssig. Justiere nach Geschmack."
                 },
                 {
                     "question": "Kann ich Text- und Namensanzeige anpassen?",
-                    "answer": "Ja. Du kannst Name- und Massen-Skalierung anpassen, fette Schrift toggeln, Deckkraft einstellen, Clan-Tags zeigen oder verstecken und Umrissstärken verändern für bessere Sichtbarkeit oder ein saubereres UI."
+                    "answer": "Ja. Passe Namens- und Massen-Skalierung an, aktiviere fette Schrift, setze Deckkraft, zeige/verstecke Clan-Tags und justiere Konturstärke."
                 }
             ]
         },
         "Community": {
             "title": "Community beitreten",
-            "text": "Brauchst du Hilfe, hast einen Bug gefunden oder willst eigene Makros teilen? Tritt unserem Discord bei und vernetze dich mit anderen SigFix-Nutzern.",
+            "text": "Brauche Hilfe, Bug gefunden oder Makros teilen? Tritt dem Discord bei und vernetze dich mit anderen SigFix-Nutzern.",
             "discord": "Discord beitreten",
             "explore": "Oder den Code ansehen auf"
         }
     },
     "QuickGuide": {
-        "title": "Kurzanleitung",
-        "note": "Diese Seite ist nicht so detailliert wie die komplette Anleitung.",
+        "title": "Kurzguide",
+        "note": "Diese Seite ist eine kurze Zusammenfassung, nicht die vollständige Anleitung.",
         "tampermonkey": {
             "title": "Tampermonkey installieren",
-            "desc": "Installiere den Userscript-Manager, der für SigMod und SigFixes nötig ist.",
+            "desc": "Installiere den Userscript-Manager, der benötigt wird, um SigMod und SigFixes auszuführen.",
             "button": "Tampermonkey holen"
         },
         "developermode": {
             "title": "Entwicklermodus aktivieren",
-            "desc": "Folge den Schritten auf den Bildern unten. Starte den Browser mit aktiviertem Entwicklermodus neu."
+            "desc": "Folge den Bildern unten und starte den Browser neu, nachdem du den Entwicklermodus aktiviert hast."
         },
         "allow_userscripts": {
             "title": "User Scripts erlauben",
-            "desc": "Folge den Schritten auf den Bildern unten."
+            "desc": "Folge den Bildern unten."
         },
         "sigmod": {
             "title": "SigMod installieren",
@@ -360,7 +356,7 @@
         },
         "sigfixes": {
             "title": "SigFixes installieren",
-            "desc": "Verbessert FPS, reduziert Lag, aktiviert Multiboxing."
+            "desc": "Steigert FPS, reduziert Lag und ermöglicht Multiboxing."
         },
         "play": {
             "title": "Sigmally spielen",
@@ -368,13 +364,13 @@
             "button": "Jetzt spielen"
         },
         "discord": "Discord beitreten",
-        "fullGuide": "Komplette Anleitung ansehen"
+        "fullGuide": "Vollständige Anleitung ansehen"
     },
     "Guide": {
         "Sidebar": {
             "title": "Anleitung",
-            "overview": "Überblick",
-            "usm": "Userscript Manager",
+            "overview": "Übersicht",
+            "usm": "Userscript-Manager",
             "devmode": "Entwicklermodus",
             "aus_chrome": "User Scripts erlauben",
             "sigmod": "SigMod",
@@ -382,100 +378,100 @@
             "end": "Abschluss"
         },
         "Overview": {
-            "title": "Loslegen",
-            "desc": "Willkommen bei SigModz! Diese Anleitung zeigt dir, wie du SigMod und SigFixes installierst – die zwei Kernmods, die dein Sigmally-Gameplay mit flüssigerer Performance, voller Kontrolle und mächtigen Tools aufwerten.",
-            "access": "In nur wenigen Schritten schaltest du clevere Makros, FPS-Boosts, UI-Anpassungen, erweiterte Einstellungen und mehr frei – alles nahtlos ins Spiel integriert.",
+            "title": "Erste Schritte",
+            "desc": "Willkommen bei SigModz. Diese Anleitung zeigt, wie du SigMod und SigFixes installierst, die beiden Kern-Mods, die Sigmally mit flüssigerer Performance, kompletter Kontrolle und nützlichen Tools aufwerten.",
+            "access": "In wenigen Schritten schaltest du clevere Makros, FPS-Boosts, UI-Tweaks und erweiterte Einstellungen frei.",
             "video": {
-                "title": "Videoanleitung",
-                "desc": "Schau dir dieses Video an, wenn du visuelle Anweisungen bevorzugst oder das Thema zu kompliziert zum Lesen ist.",
+                "title": "Video-Tutorial",
+                "desc": "Sieh dir das an, wenn du visuelle Anleitungen bevorzugst.",
                 "credit": "Erstellt von Fake",
                 "creditTitle": "Discord: fa_keo"
             },
             "start": "Installation starten",
-            "quickGuide": "Kurzanleitung"
+            "quickGuide": "Kurzguide"
         },
         "UserscriptManager": {
-            "title": "Userscript Manager installieren",
-            "desc": "Um diese Mods zu nutzen, brauchst du eine Userscript-Manager-Erweiterung.",
+            "title": "Userscript-Manager installieren",
+            "desc": "Du brauchst eine Userscript-Manager-Erweiterung, um diese Mods zu nutzen.",
             "recommend": "Wir empfehlen:",
-            "instruction": "Diese Anleitung verwendet Tampermonkey. Klicke unten, um es für deinen Browser zu installieren.",
+            "instruction": "Diese Anleitung nutzt Tampermonkey. Klicke unten, um es für deinen Browser zu installieren.",
             "button": "Tampermonkey installieren",
-            "installed": "Nach der Installation kannst du Userscripts wie <SigMod>SigMod</SigMod> und <SigFixes>SigFixes</SigFixes> hinzufügen.",
+            "installed": "Sobald installiert bist du bereit, Userscripts wie <SigMod>SigMod</SigMod> und <SigFixes>SigFixes</SigFixes> hinzuzufügen.",
             "back": "Zurück",
             "next": "Weiter"
         },
         "DevMode": {
             "title": "Entwicklermodus aktivieren",
-            "desc": "Tampermonkey benötigt den Entwicklermodus, um Skripte wie SigMod und SigFixes korrekt auszuführen.",
+            "desc": "Tampermonkey benötigt den Entwicklermodus, um SigMod und SigFixes korrekt zu installieren und auszuführen.",
             "chrome": {
                 "pageTitle": "User Scripts erlauben",
-                "title": "So aktivierst du es",
-                "desc": "Für Chrome aktiviere 'User Scripts erlauben' in den Tampermonkey-Erweiterungseinstellungen.",
+                "title": "So geht's",
+                "desc": "Für Chrome aktiviere 'Allow User Scripts' in den Tampermonkey-Erweiterungseinstellungen.",
                 "steps": [
-                    "Klicke auf das Puzzle-Symbol in der Browser-Leiste.",
-                    "Klicke die drei Punkte neben Tampermonkey an.",
-                    "Wähle 'Erweiterung verwalten'.",
-                    "Schalte 'User Scripts erlauben' ein."
+                    "Klicke auf das Puzzle-Symbol in der Browser-Toolbar",
+                    "Klicke auf die drei Punkte neben Tampermonkey",
+                    "Wähle 'Erweiterung verwalten'",
+                    "Schalte 'Allow User Scripts' ein"
                 ]
             },
             "opera": {
                 "title": "Für Opera",
                 "steps": [
-                    "Klicke auf das Würfel-Symbol (Erweiterungen) in der Leiste.",
-                    "Wähle 'Erweiterungen verwalten'.",
-                    "Aktiviere oben rechts den Entwicklermodus."
+                    "Klicke auf das Würfel-Symbol (Erweiterungen) in deiner Toolbar",
+                    "Wähle 'Erweiterungen verwalten'",
+                    "Aktiviere oben rechts den Entwicklermodus"
                 ]
             },
             "edge": {
                 "title": "Für Edge",
                 "steps": [
-                    "Klicke auf das Puzzle-Symbol (Erweiterungen) in der Leiste.",
-                    "Wähle 'Erweiterungen verwalten'.",
-                    "Aktiviere im Sidebar den Entwicklermodus."
+                    "Klicke auf das Puzzle-Symbol in der Toolbar",
+                    "Wähle 'Erweiterungen verwalten'",
+                    "Aktiviere den Entwicklermodus in der Seitenleiste"
                 ]
             },
             "firefox": {
                 "title": "Für Firefox",
                 "steps": [
-                    "Firefox benötigt keinen Entwicklermodus. Diesen Schritt kannst du überspringen."
+                    "Firefox benötigt keinen Entwicklermodus. Du kannst diesen Schritt überspringen."
                 ]
             },
             "default": {
                 "title": "Browser-Anleitung",
                 "steps": [
-                    "Prüfe die Dokumentation deines Browsers zum Entwicklermodus.",
-                    "Bei Chromium-basierten Browsern folge den obigen Schritten."
+                    "Prüfe die Browser-Dokumentation zum Aktivieren des Entwicklermodus",
+                    "Bei Chromium-basierten Browsern folge den obigen Schritten"
                 ]
             },
             "note": {
                 "label": "Hinweis:",
-                "text": "Starte deinen Browser nach dem Aktivieren des Entwicklermodus neu, damit Tampermonkey richtig funktioniert."
+                "text": "Starte deinen Browser neu, nachdem du den Entwicklermodus aktiviert hast, damit Tampermonkey korrekt funktioniert."
             },
             "back": "Zurück",
             "next": "Weiter"
         },
         "SigMod": {
             "title": "SigMod installieren",
-            "desc": "Jetzt, da dein Userscript Manager bereit ist, installiere SigMod. Es fügt Makros, Themes und erweiterte Einstellungen hinzu.",
-            "popup": "Klicke unten zum Installieren. Im Popup bestätige mit <i>Installieren</i>.",
+            "desc": "Mit deinem Userscript-Manager installiere SigMod, um Makros, Themes und erweiterte Einstellungen ins Spiel zu bringen.",
+            "popup": "Klicke unten zum Installieren von SigMod. Im Popup auf 'Installieren' klicken.",
             "button": "SigMod installieren",
-            "after": "Nach der Installation läuft SigMod automatisch in Sigmally. Passe es jederzeit im Ingame-Menü an. Mehr zu SigMod <link>hier</link>.",
+            "after": "Nach der Installation läuft SigMod automatisch auf Sigmally. Passe es in den Ingame-Einstellungen an. Mehr über SigMod <link>hier</link>.",
             "back": "Zurück",
             "next": "Weiter"
         },
         "SigFixes": {
             "title": "SigFixes installieren",
-            "desc": "SigFixes schreibt große Teile von Sigmallys Client um für mehr Geschwindigkeit und Sanftheit. Von yx entwickelt.",
-            "prompt": "Klicke unten zum Installieren von SigFixes.",
+            "desc": "SigFixes überschriebt Teile des Sigmally-Clients, um Geschwindigkeit und Glätte zu erhöhen. Erstellt von yx.",
+            "prompt": "Klicke unten, um SigFixes zu installieren.",
             "button": "SigFixes installieren",
-            "features": "Enthält Features wie Ein-Tab-Multiboxing, Umrisse für nicht teilbare Zellen, Draw-Delay, Textgröße, Skins und Deckkraft.",
+            "features": "Enthält Optionen wie Ein-Tab-Multiboxing, Umriss für unsplittbare Zellen, Draw-Delay, Textgröße, Skins und Deckkraft.",
             "back": "Zurück",
             "end": "Ende"
         },
         "End": {
             "title": "Alles bereit 🎉",
-            "desc": "SigMod und SigFixes sind installiert! Genieße das flüssigste und anpassbarste Sigmally-Erlebnis. Leg los, justiere und spiel dein bestes Spiel.",
-            "notice": "Starten Sie Ihren Browser neu, bevor Sie dem Spiel beitreten",
+            "desc": "SigMod und SigFixes sind installiert. Genieße ein flüssigeres, anpassbares Sigmally-Erlebnis. Tauche ein, passe deine Einstellungen an und spiele dein Bestes.",
+            "notice": "Starte deinen Browser neu, bevor du dem Spiel beitrittst",
             "play": "Sigmally spielen",
             "explore": "Entdecken"
         }
@@ -486,146 +482,146 @@
             "title": "Allgemein",
             "installMods": {
                 "question": "Wie installiere ich die Mods?",
-                "answer": "Starte einfach! Folge unserer detaillierten oder schnellen <link>Installationsanleitung</link> und spiele mit Mods in kürzester Zeit."
+                "answer": "Folge der ausführlichen oder der schnellen <link>Installationsanleitung</link>. Du bist schnell einsatzbereit."
             },
             "modsNotWorking": {
-                "question": "Mods installiert, funktionieren aber nicht. Was tun?",
-                "answer": "Meist fehlt die Aktivierung von 'User Scripts erlauben' in Tampermonkey (Chrome/Brave) oder Entwicklermodus (Edge/Opera). Schau in die <link>Installationsanleitung</link>. Hilfe im Discord."
+                "question": "Ich habe die Mods installiert, aber sie funktionieren nicht. Was nun?",
+                "answer": "Die meisten Probleme entstehen, wenn 'Allow User Scripts' in Tampermonkey für Chrome/Brave nicht aktiviert ist oder der Entwicklermodus in Edge/Opera fehlt. Schau in die <link>Installationsanleitung</link>. Wenn es weiterhin nicht geht, tritt dem Discord bei und öffne ein Ticket."
             },
             "safe": {
                 "question": "Sind Tampermonkey und diese Userscripts sicher?",
-                "answer": "Ja. Tampermonkey wird von Millionen genutzt. Unsere Scripts verbessern nur dein Spiel, ohne versteckte Tricks. Bewertungen findest du auf den Script-Seiten."
+                "answer": "Ja. Tampermonkey ist eine verbreitete Erweiterung und unsere Skripte verbessern nur das Spiel. Keine versteckten Aktionen. Lies Reviews auf den Script-Seiten."
             },
             "sigmodAndSigfixes": {
-                "question": "Brauche ich SigMod und SigFixes?",
-                "answer": "Nicht zwingend, aber zusammen bieten sie beste Performance und Anpassung. Sie ergänzen sich perfekt."
+                "question": "Brauche ich SigMod und SigFixes beide?",
+                "answer": "Nein. Zusammen bieten sie jedoch die beste Kombination aus Anpassung und Performance."
             },
             "multibox": {
                 "question": "Wie multiboxe ich?",
-                "answer": "Installiere <strong>SigFixes</strong>, um mehrere Instanzen in einem Tab flüssig zu steuern. Schritt-für-Schritt im Guide <link>hier</link>."
+                "answer": "Installiere SigFixes, um mehrere Spielinstanzen in einem Tab laufen zu lassen und sie gemeinsam zu steuern. Folge der kompletten Anleitung <link>hier</link>."
             },
             "uninstallMods": {
-                "question": "Kann ich Mods jederzeit deinstallieren?",
-                "answer": "Ja, einfach im Userscript Manager deaktivieren oder entfernen."
+                "question": "Kann ich die Mods jederzeit deinstallieren?",
+                "answer": "Ja. Deaktiviere oder entferne sie jederzeit in deinem Userscript-Manager."
             }
         },
         "sigmod": {
-            "title": "SigMod Spezifisch",
+            "title": "SigMod-spezifisch",
             "coreFeatures": {
-                "question": "Was sind die Kernfeatures von SigMod?",
-                "answer": "SigMod bietet mächtige Anpassungen, Makros, Automatisierung und ein Tag-System zur Verbesserung deines Sigmally-Spiels."
+                "question": "Was sind SigMods Kernfunktionen?",
+                "answer": "SigMod fügt Anpassung, Makros, Automatisierung und ein erweitertes Tag-System hinzu."
             },
             "customization": {
-                "question": "Welche Anpassungen bietet SigMod?",
-                "answer": "Hotkeys, UI-Themes, Spiel-Farben, Spielzeiten, Schriftarten und Namenseinstellungen sind frei wählbar."
+                "question": "Welche Anpassungsoptionen bietet SigMod?",
+                "answer": "Du kannst Hotkeys, Themes, Farben, Timer, Fonts und Namen-Einstellungen ändern."
             },
             "tagSystem": {
                 "question": "Was ist das Tag-System?",
-                "answer": "Es verwaltet Party-Tags und erleichtert das Verfolgen von Teammitgliedern. Integration in Minikarte und Chat, zeigt Team-Punkte und Infos für bessere Koordination."
+                "answer": "Es hilft beim Verwalten von Party-Tags und dem Nachverfolgen von Teammates. Es verknüpft sich mit Minimap und Chat und zeigt Teaminfos."
             },
             "friendSystem": {
-                "question": "Wie funktioniert das Freundes-System?",
-                "answer": "Füge Freunde hinzu, verwalte sie und bleibe in Kontakt im Spiel."
+                "question": "Wie funktioniert das Freundessystem?",
+                "answer": "Füge Freunde hinzu und verwalte sie, um verbunden zu bleiben und zusammen zu spielen."
             },
             "openMenu": {
                 "question": "Wie öffne ich das SigMod-Menü?",
-                "answer": "Klicke auf das Zahnrad-Icon oder drücke die Taste V im Spiel."
+                "answer": "Klicke auf das Zahnrad im Spiel-UI oder drücke V."
             },
             "customHotkeys": {
                 "question": "Kann ich Hotkeys und Makros anpassen?",
-                "answer": "Ja, SigMod erlaubt volle Anpassung von Hotkeys und Mausmakros für deinen Stil."
+                "answer": "Ja. SigMod erlaubt das Anpassen aller Hotkeys und Mauskroks für deinen Spielstil."
             },
             "performance": {
-                "question": "Beeinflusst SigMod die Spiel-Performance?",
-                "answer": "SigMod ist leichtgewichtig und fokussiert auf Anpassung, nicht Performance-Boost. Für FPS und flüssiges Gameplay nutze SigFixes."
+                "question": "Beeinflusst SigMod die Performance?",
+                "answer": "SigMod ist leichtgewichtig und konzentriert sich auf Anpassung. Für FPS-Boosts nutze SigFixes."
             }
         },
         "sigfixes": {
-            "title": "SigFixes Spezifisch",
-            "note": "Jede Einstellung hat ein <strong>?</strong> Icon für Details – anklicken!",
+            "title": "SigFixes-spezifisch",
+            "note": "Jede Einstellung hat ein ?-Icon mit detaillierter Erklärung.",
             "improvements": {
                 "question": "Was verbessert SigFixes?",
-                "answer": "Verbessert FPS, reduziert Lag-Spikes, ermöglicht sanftes Multiboxing und bietet Anpassungen wie Draw-Delay, Deckkraft und Namensskalierung."
+                "answer": "SigFixes erhöht FPS, reduziert Lag-Spikes, ermöglicht flüssiges Multiboxing und fügt Optionen wie Draw-Delay, Deckkraft und Namensskalierung hinzu."
             },
             "multibox": {
                 "question": "Wie hilft SigFixes beim Multiboxing?",
-                "answer": "Es erlaubt mehrere Spielinstanzen in einem Browser-Tab für einfacheres Multiboxing."
+                "answer": "Es lässt mehrere Instanzen in einem Tab laufen und bietet flüssige Steuerung."
             },
             "fps": {
                 "question": "Verbessert SigFixes meine FPS?",
-                "answer": "Ja, es boostet FPS stark durch optimiertes Rendering und weniger Lag."
+                "answer": "Ja. Es steigert FPS durch Rendering-Optimierung und Lag-Reduktion."
             },
             "compatibility": {
                 "question": "Ist SigFixes mit SigMod kompatibel?",
-                "answer": "Ja, beide sind voll kompatibel und ergänzen sich optimal."
+                "answer": "Ja. Sie arbeiten zusammen ohne Probleme."
             },
             "config": {
                 "question": "Wie konfiguriere ich Draw-Delay und andere Einstellungen?",
-                "answer": "Das geht im SigFixes-Menü. Klick die ' ? ' Icons für Details zu jeder Option."
+                "answer": "Öffne das SigFixes-Menü und passe die Optionen an. Nutze die ?-Icons für Details."
             }
         },
-        "needHelp": "Noch Fragen? Tritt unserem Discord bei und erstelle ein Support-Ticket – wir helfen dir.",
+        "needHelp": "Noch Fragen? Tritt unserem Discord bei und öffne ein Ticket.",
         "joinDiscord": "Discord beitreten"
     },
     "AboutPage": {
         "title": "Über SigModz",
         "tldr": {
             "title": "Was ist SigModz?",
-            "text": "SigModz ist ein Community-Projekt, das die Sigmally-Erfahrung durch leistungsstarke Mods wie SigMod und SigFixes verbessert."
+            "text": "SigModz ist ein Community-Projekt, das das Sigmally-Erlebnis mit mächtigen Mods wie SigMod und SigFixes verbessert."
         },
         "story": {
             "title": "Hintergrund",
-            "intro": "SigModz vereint Spieler und Entwickler, die Sigmally mit fortschrittlichen Features und hochwertigen Tools verbessern wollen.",
-            "sigmodStart": "Alles begann mit SigMod – einem Userscript-Mod, der ursprünglich auf RingZer0s Open-Source-Version basierte. Seine Arbeit war die Grundlage für modernes Modding in Sigmally.",
-            "sigmod": "SigMod brachte erweiterte Anpassungen, UI-Verbesserungen, Makros und viele von der Community gewünschte Features – und wurde so zu einem der beliebtesten Client-Mods für Sigmally.",
-            "sigfixes": "Später ging SigFixes von yx noch weiter: ein kompletter WebGL-Renderer, Multiboxing-Support, verbesserte Eingabepräzision und Performance-Upgrades – alles optimiert für ambitionierte Spieler.",
-            "community": "Beide Mods sind in der Sigmally-Community weit verbreitet und werden auch vom Owner akzeptiert. SigModz entwickelt sich stetig weiter – durch Feedback von Spielern und Entwicklern.",
-            "thanks": "Großer Dank an RingZer0 für die ursprüngliche Basis und an yx für die technischen Durchbrüche. Die Unterstützung der Community hält SigModz am Leben."
+            "intro": "SigModz bringt Spieler und Entwickler zusammen, die Sigmally mit neuen Features und stabilen Tools verbessern wollen.",
+            "sigmodStart": "Es begann mit SigMod, einem Userscript basierend auf RingZer0s Open-Source-Version. Seine Arbeit wurde zur Basis moderner Sigmally-Mods.",
+            "sigmod": "SigMod fügte mehr Anpassungen, UI-Verbesserungen, Makros und Community-Features hinzu und wurde eines der meistgenutzten Mods.",
+            "sigfixes": "Später brachte yx mit SigFixes Fortschritt durch einen vollständigen WebGL-Renderer, Multibox-Unterstützung, bessere Eingabeverarbeitung und Performance-Verbesserungen.",
+            "community": "Beide Mods sind in der Sigmally-Community anerkannt und vom Spielbetreiber unterstützt. SigModz wächst weiter dank Spielern und Entwicklern.",
+            "thanks": "Danke an RingZer0 für die ursprüngliche Basis und an yx für die technische Weiterentwicklung. Die Community hält SigModz am Laufen."
         },
-        "joinDiscord": "Tritt dem Discord bei"
+        "joinDiscord": "Discord beitreten"
     },
     "TOSPage": {
         "title": "SigMod - Nutzungsbedingungen",
-        "lastUpdated": "Zuletzt aktualisiert: 03.02.2025",
+        "lastUpdated": "Zuletzt aktualisiert: 03/02/2025",
         "sections": {
             "introduction": {
                 "heading": "1. Einführung",
-                "text": "SigMod ist eine Modifikation für {sigmallyLink}. Durch die Nutzung stimmen Sie diesen Bedingungen zu. Wenn Sie nicht zustimmen, sollten Sie SigMod nicht verwenden.",
+                "text": "SigMod ist eine Modifikation für {sigmallyLink}. Durch die Nutzung stimmst du diesen Bedingungen zu. Wenn du nicht zustimmst, solltest du SigMod nicht verwenden.",
                 "sigmallyLinkText": "Sigmally",
                 "sigmallyLinkUrl": "https://one.sigmally.com"
             },
             "fairUse": {
                 "heading": "2. Fair Use",
-                "text": "SigMod soll das Spiel spaßiger machen, nicht kaputt. Bitte modifizieren Sie es nicht, um unfaire Vorteile zu erhalten, oder verwenden Sie Automatisierungstools, die das Erlebnis für andere ruinieren."
+                "text": "SigMod soll das Spiel verbessern, nicht zerstören. Nutze es nicht, um dir unfaire Vorteile zu verschaffen oder Automatisierung einzusetzen, die das Erlebnis anderer beeinträchtigt."
             },
             "noGuarantees": {
                 "heading": "3. Keine Garantien",
-                "text": "SigMod wird \"wie es ist\" bereitgestellt. Wenn etwas schiefläuft – sei es ein Spielbann, Datenverlust oder andere Probleme – übernehmen wir keine Verantwortung."
+                "text": "SigMod wird wie besehen bereitgestellt. Wenn etwas schiefgeht, wie ein Bann, Datenverlust oder Ähnliches, übernehmen wir keine Verantwortung."
             },
             "dataCollection": {
                 "heading": "4. Datenerhebung",
-                "intro": "SigMod sammelt automatisch einige Daten, um korrekt zu funktionieren:",
+                "intro": "SigMod sammelt einige Daten, damit es korrekt funktioniert:",
                 "items": [
-                    "Google-Konto-Daten (falls zur Authentifizierung verwendet)",
-                    "Spielerstatistiken (Gold, Level, etc., aber keine persönlichen Daten)",
+                    "Google-Kontodaten, wenn du dich damit anmeldest",
+                    "Spielerstatistiken wie Gold und Level, aber nichts Persönliches",
                     "IP-Adresse",
-                    "Browser-/Geräteinformationen"
+                    "Browser-Informationen"
                 ],
-                "accountText": "Wenn Sie die Funktion \"Freunde\" verwenden, müssen Sie ein Konto mit Benutzernamen und Passwort erstellen. Passwörter werden sicher gehasht und gespeichert. Sie können den Quellcode des Backends einsehen, einschließlich wie wir die Sicherheit Ihres Passworts gewährleisten, auf {githubLink}.",
+                "accountText": "Wenn du die Freunde-Funktion nutzt, brauchst du ein Konto mit Benutzername und Passwort. Passwörter werden gehasht und sicher gespeichert. Den Backend-Code, inklusive Passwort-Handhabung, findest du auf {githubLink}.",
                 "githubLinkText": "GitHub",
                 "githubLinkUrl": "https://github.com/czrsd/sigmod"
             },
             "changes": {
                 "heading": "5. Änderungen dieser Bedingungen",
-                "text": "Diese Bedingungen können sich im Laufe der Zeit ändern. Wenn Sie SigMod nach Änderungen weiterhin verwenden, stimmen Sie ihnen zu."
+                "text": "Diese Bedingungen können geändert werden. Wenn du SigMod nach Updates weiter nutzt, akzeptierst du die neuen Bedingungen."
             },
             "enforcement": {
                 "heading": "6. Durchsetzung",
-                "text": "Wenn Sie die Regeln verletzen, können wir Maßnahmen ergreifen, einschließlich IP-Sperren. Wenn erheblicher finanzieller Schaden durch Verstöße entsteht, können rechtliche Schritte erwogen werden."
+                "text": "Bei Verstößen können Maßnahmen ergriffen werden, einschließlich IP-Banns. Bei schwerem finanziellen Schaden behalten wir uns rechtliche Schritte vor."
             },
             "contact": {
                 "heading": "7. Kontakt",
-                "intro": "Wenn Sie Fragen oder Bedenken haben, kontaktieren Sie uns:",
+                "intro": "Bei Fragen kontaktiere uns:",
                 "items": ["Discord: czrsd", "E-Mail: {emailLink}"],
                 "emailLinkText": "admin@czrsd.com",
                 "emailLinkUrl": "mailto:admin@czrsd.com"
@@ -634,16 +630,16 @@
     },
     "Shop": {
         "MainPage": {
-            "failed": "Fehler beim Laden der Shop-Daten. Bitte versuche es später erneut.",
+            "failed": "Shop-Daten konnten nicht geladen werden. Bitte später erneut versuchen.",
             "Hero": {
-                "title": "Hole dir <gold>Gold</gold> & <subscriptions>Abonnements</subscriptions> günstiger",
-                "description": "Die Preise im Spiel sind hoch. Hier findest du exklusive Angebote, die nicht ewig verfügbar sind.",
+                "title": "Hol dir dein <gold>Gold</gold> & <subscriptions>Abonnements</subscriptions> günstiger",
+                "description": "Ingame-Preise sind hoch. Hier findest du exklusive Angebote, die nicht lange verfügbar sind.",
                 "limitedOffersTitle": "Limitierte Angebote",
-                "limitedOffersSubtitle": "Schnapp sie dir, bevor sie weg sind!",
+                "limitedOffersSubtitle": "Schnell zugreifen, bevor sie weg sind!",
                 "endsIn": "Endet in"
             },
             "SpecialBundles": {
-                "coins": "Coins",
+                "coins": "Münzen",
                 "subscription": "Abonnement",
                 "month": "Monat",
                 "months": "Monate",
@@ -653,16 +649,16 @@
             "Products": {
                 "title": "Produkte",
                 "coins": {
-                    "name": "Coins",
-                    "description": "Individuelle Coin-Mengen von 5.000 bis 1.000.000"
+                    "name": "Münzen",
+                    "description": "Einzelne Münzmengen von 5.000 bis 1.000.000"
                 },
                 "subscriptions": {
                     "name": "Abonnements",
-                    "description": "Erhalte Zugang zu Premium-Funktionen"
+                    "description": "Zugang zu Premium-Funktionen"
                 },
                 "bundles": {
                     "name": "Bundles",
-                    "description": "Kombination aus Coins und Abonnement in einem Angebot zu einem günstigeren Preis"
+                    "description": "Münzen und Abos kombiniert für besseren Preis"
                 }
             },
             "WhyBuyHere": {
@@ -670,19 +666,19 @@
                 "reasons": [
                     {
                         "title": "Schnelle Lieferung",
-                        "description": "Erhalte deine Items sofort nach der Zahlung ohne Wartezeit."
+                        "description": "Items werden nach Zahlung sofort deinem Konto hinzugefügt."
                     },
                     {
                         "title": "Sicherer Checkout",
-                        "description": "Alle Zahlungen sind verschlüsselt und werden über vertrauenswürdige Anbieter wie PayPal abgewickelt."
+                        "description": "Zahlungen sind verschlüsselt und werden von vertrauenswürdigen Anbietern wie PayPal abgewickelt."
                     },
                     {
                         "title": "Vertrauen",
-                        "description": "Erstellt von einem verifizierten Sigmally-Moderator und dem Schöpfer von SigMod mit über 28.000 Installationen."
+                        "description": "Gemacht von einem verifizierten Sigmally-Moderator und dem Ersteller von SigMod mit über 28.000 Installationen."
                     },
                     {
-                        "title": "Beste Preis-Leistung",
-                        "description": "Genieße faire Preise und großen Wert ohne versteckte Kosten."
+                        "title": "Bestes Preis-Leistungs-Verhältnis",
+                        "description": "Faire Preise und klare Bedingungen, keine versteckten Kosten."
                     }
                 ]
             },
@@ -690,24 +686,24 @@
                 "title": "FAQ",
                 "items": [
                     {
-                        "question": "Ich habe Coins oder ein Abonnement gekauft, sie erscheinen aber nicht auf meinem Konto. Was soll ich tun?",
-                        "answer": "Aktualisiere die Seite in deinem Browser. Deine angezeigten Coins sind möglicherweise nicht aktuell. Wenn sie nach dem Aktualisieren immer noch nicht erscheinen, kontaktiere bitte den Support."
+                        "question": "Ich habe Münzen oder ein Abo gekauft und sie erscheinen nicht. Was tun?",
+                        "answer": "Aktualisiere die Seite. Wenn der Saldo nicht erscheint, kontaktiere den Support."
                     },
                     {
-                        "question": "Was passiert, nachdem ich meine PayPal-Zahlung abgeschlossen habe?",
-                        "answer": "Du wirst zurück auf unsere Seite weitergeleitet. Dort wird deine Bestellung bestätigt und die Items werden sofort deinem Konto hinzugefügt."
+                        "question": "Was passiert nach PayPal-Zahlung?",
+                        "answer": "Du wirst zurück zur Seite geleitet, deine Bestellung wird bestätigt und Items werden deinem Konto hinzugefügt."
                     },
                     {
-                        "question": "Was passiert, wenn ich den PayPal-Tab schließe, bevor die Rückleitung erfolgt?",
-                        "answer": "Kein Problem. Du kannst die Seite erneut öffnen und deinen Bestellstatus prüfen – wenn die Zahlung erfolgt ist, wird deine Lieferung trotzdem bearbeitet."
+                        "question": "Was, wenn ich das PayPal-Tab vor der Rückleitung schließe?",
+                        "answer": "Kein Problem. Öffne die Seite erneut und prüfe den Bestellstatus. Wenn die Zahlung durchging, wird die Lieferung verarbeitet."
                     },
                     {
-                        "question": "Kann ich meinen Kauf auf mehreren Konten verwenden?",
-                        "answer": "Nein, Käufe sind an das Konto gebunden, das du beim Checkout verwendet hast. So bleibt alles sicher und fair."
+                        "question": "Kann ich meinen Kauf auf mehreren Accounts nutzen?",
+                        "answer": "Nein. Käufe sind an das Konto gebunden, das beim Checkout genutzt wurde."
                     },
                     {
                         "question": "Was, wenn ich versehentlich das falsche Paket gekauft habe?",
-                        "answer": "Kontaktiere sofort den Support. Wenn die Bestellung noch nicht bestätigt wurde, können wir sie anpassen oder erstatten."
+                        "answer": "Kontaktiere umgehend den Support. Wenn die Bestellung noch nicht bestätigt ist, können wir anpassen oder erstatten."
                     }
                 ]
             },
@@ -718,56 +714,56 @@
                 "createTicket": "Ticket auf Discord erstellen"
             },
             "Info": {
-                "shop": "Rechtliche Hinweise zum SigModz Shop",
+                "shop": "SigModz Shop rechtliche Infos",
                 "refund": "Rückerstattungsrichtlinie",
                 "terms": "Nutzungsbedingungen",
-                "privacy": "Datenschutzrichtlinie"
+                "privacy": "Datenschutz"
             }
         },
         "Purchase": {
             "Complete": {
-                "loading": "Abschluss des Kaufs...",
-                "failedCapture": "Fehler beim Erfassen der Bestellung.",
-                "failedPurchase": "Kauf fehlgeschlagen. Bitte kontaktiere den Support auf Discord.",
+                "loading": "Kauf wird abgeschlossen...",
+                "failedCapture": "Erfassung der Bestellung fehlgeschlagen.",
+                "failedPurchase": "Kauf fehlgeschlagen. Bitte kontaktiere den Support im Discord.",
                 "purchaseComplete": "Kauf abgeschlossen!",
                 "thanks": "Danke für deine Bestellung!",
                 "orderId": "Bestell-ID: {id}",
-                "coinsLabel": "Coins",
+                "coinsLabel": "Münzen",
                 "subscriptionLabel": "Abonnement",
-                "subscriptionValidUntil": "Abonnement gültig bis {date}",
+                "subscriptionValidUntil": "Abo gültig bis {date}",
                 "goToGame": "Zum Spiel",
-                "shopMore": "Mehr einkaufen"
+                "shopMore": "Mehr im Shop"
             },
             "Canceled": {
-                "loading": "Lade...",
+                "loading": "Lädt...",
                 "title": "Kauf abgebrochen",
                 "orderId": "Bestell-ID: {id}",
                 "noPayment": "Es wurde keine Zahlung verarbeitet.",
-                "supportText": "Wenn dies ein Versehen war oder du Probleme hattest, den Kauf abzuschließen, kontaktiere bitte unseren Support.",
+                "supportText": "War das ein Versehen oder hattest du Probleme? Bitte kontaktiere den Support.",
                 "returnToShop": "Zurück zum Shop",
                 "backToGame": "Zurück zum Spiel",
-                "needHelp": "Brauchst du Hilfe?",
+                "needHelp": "Brauche Hilfe?",
                 "contactSupport": "Support kontaktieren"
             }
         },
         "Products": {
             "back": "Zurück",
             "CoinPackages": {
-                "loading": "Lade...",
+                "loading": "Lädt...",
                 "notFound": "Produkt nicht gefunden",
-                "title": "Coin-Pakete",
-                "saveMore": "Willst du noch mehr sparen? Schau dir unsere Bundles an.",
+                "title": "Münzpakete",
+                "saveMore": "Möchtest du mehr sparen? Schau dir unsere Bundles an.",
                 "buyNow": "Jetzt kaufen",
                 "viewBundles": "Bundles anzeigen",
-                "coinsLabel": "{amount} Coins",
+                "coinsLabel": "{amount} Münzen",
                 "price": "€{price}",
                 "originalPrice": "€{original}"
             },
             "SubscriptionPackages": {
-                "loading": "Lade...",
+                "loading": "Lädt...",
                 "notFound": "Produkt nicht gefunden",
                 "title": "Abonnement-Pakete",
-                "saveMore": "Willst du noch mehr sparen? Schau dir unsere Bundles an.",
+                "saveMore": "Möchtest du mehr sparen? Schau dir unsere Bundles an.",
                 "buyNow": "Jetzt kaufen",
                 "viewBundles": "Bundles anzeigen",
                 "monthLabel": "{duration} Monat",
@@ -776,128 +772,129 @@
                 "originalPrice": "€{original}"
             },
             "BundlesPage": {
-                "loading": "Lade...",
+                "loading": "Lädt...",
                 "notFound": "Produkt nicht gefunden",
                 "title": "Bundles",
                 "buyNow": "Jetzt kaufen",
-                "monthLabel": "{duration} Monat-Abonnement",
-                "monthsLabel": "{duration} Monate-Abonnement",
-                "coinsLabel": "{amount} Coins",
+                "monthLabel": "{duration} Monat Abonnement",
+                "monthsLabel": "{duration} Monate Abonnement",
+                "coinsLabel": "{amount} Münzen",
                 "price": "€{price}",
                 "originalPrice": "€{original}"
             },
             "Checkout": {
-                "title": "Checkout",
+                "title": "Kasse",
                 "emailLabel": "E-Mail",
                 "emailPlaceholder": "Gib deine Sigmally-E-Mail ein",
-                "emailDescription": "Diese E-Mail muss mit der E-Mail-Adresse deines Sigmally-Kontos übereinstimmen!",
+                "emailDescription": "Diese E-Mail muss mit der in deinem Sigmally-Account übereinstimmen.",
                 "emailValid": "E-Mail ist gültig",
                 "emailInvalid": "Ungültige E-Mail",
                 "paymentMethod": "Zahlungsmethode",
-                "selectPaymentPlaceholder": "Wähle eine Zahlungsmethode",
-                "stripe": "Stripe (Kredit-/Debitkarte)",
+                "selectPaymentPlaceholder": "Zahlungsmethode wählen",
+                "stripe": "Stripe (Karte)",
                 "paypal": "PayPal",
+                "paypalInfo": "PayPal wird auf dem <discord>Discord-Server</discord> in einem Ticket oder per DM mit Cursed unterstützt. Zahlungen funktionieren via F&F.",
                 "buy": "Artikel kaufen",
-                "processing": "Verarbeite..."
+                "processing": "Verarbeitung..."
             }
-        },
-        "PrivacyPage": {
-            "title": "Datenschutzerklärung",
-            "lastUpdated": "Zuletzt aktualisiert: 06.11.2025",
-            "intro": "Bei SigModz respektieren wir Ihre Privatsphäre und verpflichten uns, Ihre persönlichen Daten zu schützen. Diese Datenschutzerklärung erklärt, wie wir Daten erfassen, verwenden und schützen.",
-            "sections": {
-                "1": {
-                    "title": "1. Gesammelte Informationen",
-                    "content": "Wir können persönliche Informationen wie Ihre E-Mail-Adresse, Kontoinformationen, Zahlungsdetails und andere freiwillig bereitgestellte Informationen beim Nutzen unserer Dienste erfassen."
-                },
-                "2": {
-                    "title": "2. Nutzung der Informationen",
-                    "content": "Ihre Informationen werden verwendet, um unsere Dienste bereitzustellen und zu verbessern, Zahlungen zu verarbeiten, mit Ihnen zu kommunizieren und die Einhaltung gesetzlicher Vorgaben sicherzustellen."
-                },
-                "3": {
-                    "title": "3. Weitergabe Ihrer Informationen",
-                    "content": "Wir verkaufen Ihre persönlichen Daten nicht. Daten können mit vertrauenswürdigen Dienstleistern, Zahlungsanbietern oder gesetzlichen Behörden geteilt werden, wenn dies gesetzlich vorgeschrieben ist."
-                },
-                "4": {
-                    "title": "4. Datensicherheit",
-                    "content": "Wir setzen angemessene Sicherheitsmaßnahmen ein, um Ihre Informationen vor unbefugtem Zugriff, Offenlegung oder Zerstörung zu schützen. Dennoch ist keine Übertragungs- oder Speicherungsmethode völlig sicher."
-                },
-                "5": {
-                    "title": "5. Ihre Rechte",
-                    "content": "Sie haben das Recht, auf Ihre Daten zuzugreifen, diese zu korrigieren oder zu löschen. Zur Ausübung dieser Rechte kontaktieren Sie uns bitte unter sigmallymod@proton.me."
-                },
-                "6": {
-                    "title": "6. Änderungen dieser Richtlinie",
-                    "content": "Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Die fortgesetzte Nutzung von SigModz gilt als Akzeptanz der aktualisierten Richtlinie."
-                },
-                "7": {
-                    "title": "7. Kontakt",
-                    "content": "Bei Fragen zu dieser Datenschutzerklärung oder zum Umgang mit Ihren Daten kontaktieren Sie uns bitte unter sigmallymod@proton.me."
-                }
+        }
+    },
+    "PrivacyPage": {
+        "title": "Datenschutz",
+        "lastUpdated": "Zuletzt aktualisiert: 06/11/2025",
+        "intro": "Bei SigModz respektieren wir deine Privatsphäre und schützen deine Daten. Diese Richtlinie erklärt, welche Daten wir sammeln und wie wir sie nutzen.",
+        "sections": {
+            "1": {
+                "title": "1. Gesammelte Informationen",
+                "content": "Wir können persönliche Informationen sammeln wie deine E-Mail-Adresse, Kontoinfos, Zahlungsdetails und alles, was du freiwillig angibst."
+            },
+            "2": {
+                "title": "2. Verwendung der Informationen",
+                "content": "Wir nutzen deine Daten, um Dienste zu liefern und zu verbessern, Zahlungen zu bearbeiten, mit dir zu kommunizieren und gesetzliche Pflichten zu erfüllen."
+            },
+            "3": {
+                "title": "3. Weitergabe deiner Informationen",
+                "content": "Wir verkaufen deine Daten nicht. Wir können Daten mit vertrauenswürdigen Dienstleistern, Zahlungsabwicklern oder rechtlichen Behörden teilen, wenn gesetzlich erforderlich."
+            },
+            "4": {
+                "title": "4. Datensicherheit",
+                "content": "Wir nutzen angemessene Sicherheitsmaßnahmen, um deine Daten vor unbefugtem Zugriff, Offenlegung oder Zerstörung zu schützen. Keine Übertragung oder Speicherung ist vollkommen sicher."
+            },
+            "5": {
+                "title": "5. Deine Rechte",
+                "content": "Du hast das Recht, deine Daten einzusehen, zu korrigieren oder löschen zu lassen. Um diese Rechte auszuüben, kontaktiere uns unter sigmallymod@proton.me."
+            },
+            "6": {
+                "title": "6. Änderungen dieser Richtlinie",
+                "content": "Wir können diese Richtlinie von Zeit zu Zeit aktualisieren. Die fortgesetzte Nutzung von SigModz bedeutet, dass du die aktualisierte Richtlinie akzeptierst."
+            },
+            "7": {
+                "title": "7. Kontakt",
+                "content": "Bei Fragen zur Datenschutzerklärung kontaktiere uns unter sigmallymod@proton.me."
             }
-        },
-        "RefundPage": {
-            "title": "Rückerstattungsrichtlinie",
-            "lastUpdated": "Zuletzt aktualisiert: 06.11.2025",
-            "sections": {
-                "overview": {
-                    "title": "Übersicht",
-                    "content": "Wir möchten, dass Sie mit Ihrem Kauf zufrieden sind. Wenn Sie nicht zufrieden sind, können Sie unter den unten beschriebenen Bedingungen eine Rückerstattung beantragen."
-                },
-                "eligibility": {
-                    "title": "Berechtigung",
-                    "content": "Rückerstattungen für digitale Produkte sind innerhalb von 14 Tagen nach dem Kauf möglich, sofern der Inhalt nicht verwendet wurde. Alle Rückerstattungsanfragen werden überprüft."
-                },
-                "process": {
-                    "title": "Rückerstattungsprozess",
-                    "content": "Um eine Rückerstattung zu beantragen, kontaktieren Sie unser Support-Team per E-Mail oder Discord. Nach Genehmigung wird die Rückerstattung innerhalb von 3–5 Werktagen bearbeitet."
-                },
-                "contact": {
-                    "title": "Kontakt",
-                    "content": "Bei Fragen zu Rückerstattungen wenden Sie sich bitte an sigmallymod@proton.me oder erstellen ein Ticket auf unserem Discord-Server."
-                },
-                "discordLink": "Dem Discord-Server beitreten"
-            }
-        },
-        "TermsPage": {
-            "title": "Nutzungsbedingungen",
-            "lastUpdated": "Zuletzt aktualisiert: 06.11.2025",
-            "intro": "Willkommen bei SigModz. Durch den Zugriff oder die Nutzung unserer Website erklären Sie sich damit einverstanden, diese Nutzungsbedingungen einzuhalten.",
-            "sections": {
-                "1": {
-                    "title": "1. Akzeptanz der Bedingungen",
-                    "content": "Durch die Nutzung von SigModz bestätigen Sie, dass Sie diese Bedingungen gelesen, verstanden und akzeptiert haben."
-                },
-                "2": {
-                    "title": "2. Pflichten des Nutzers",
-                    "content": "Sie verpflichten sich, unsere Dienste nicht missbräuchlich zu nutzen, keine illegalen Inhalte hochzuladen oder den Betrieb der Website zu stören. Betrügerisches oder missbräuchliches Verhalten kann zur Sperrung oder Kündigung Ihres Kontos führen."
-                },
-                "3": {
-                    "title": "3. Digitale Produkte & Zahlungen",
-                    "content": "SigModz bietet digitale Produkte zum Verkauf an. Alle Käufe unterliegen unserer Rückerstattungsrichtlinie. Wir übernehmen keine Verantwortung für Verluste oder Schäden durch die Nutzung digitaler Produkte."
-                },
-                "4": {
-                    "title": "4. Haftungsausschluss & Begrenzung der Haftung",
-                    "content": "Unsere Dienste werden \"wie besehen\" bereitgestellt. SigModz haftet nicht für indirekte, zufällige oder Folgeschäden, die aus der Nutzung unserer Website oder Dienste entstehen."
-                },
-                "5": {
-                    "title": "5. Änderungen der Bedingungen",
-                    "content": "Wir können diese Nutzungsbedingungen jederzeit aktualisieren. Die fortgesetzte Nutzung von SigModz gilt als Zustimmung zu den aktualisierten Bedingungen."
-                },
-                "6": {
-                    "title": "6. Kontokündigung",
-                    "content": "Wir behalten uns das Recht vor, Konten bei Verstößen gegen diese Bedingungen, betrügerischem Verhalten oder anderweitigem unangemessenem Gebrauch zu sperren oder zu kündigen."
-                },
-                "7": {
-                    "title": "7. Anwendbares Recht",
-                    "content": "Diese Bedingungen unterliegen dem Recht Deutschlands. Streitigkeiten, die sich aus diesen Bedingungen ergeben, unterliegen den Gerichten in Deutschland."
-                },
-                "8": {
-                    "title": "8. Kontakt",
-                    "content": "Bei Fragen zu diesen Nutzungsbedingungen können Sie uns unter sigmallymod@proton.me kontaktieren."
-                },
-                "discordLink": "Dem Discord-Server beitreten"
-            }
+        }
+    },
+    "RefundPage": {
+        "title": "Rückerstattungsrichtlinie",
+        "lastUpdated": "Zuletzt aktualisiert: 06/11/2025",
+        "sections": {
+            "overview": {
+                "title": "Übersicht",
+                "content": "Wir möchten, dass du mit deinem Kauf zufrieden bist. Wenn nicht, kannst du innerhalb der untenstehenden Bedingungen eine Rückerstattung anfragen."
+            },
+            "eligibility": {
+                "title": "Anspruchsberechtigung",
+                "content": "Rückerstattungen für digitale Waren sind innerhalb von 14 Tagen nach Kauf möglich, sofern der Inhalt nicht verwendet wurde. Alle Anfragen werden überprüft."
+            },
+            "process": {
+                "title": "Rückerstattungsprozess",
+                "content": "Um eine Rückerstattung zu beantragen, kontaktiere den Support per E-Mail oder Discord. Nach Genehmigung werden Rückerstattungen innerhalb von 3–5 Werktagen bearbeitet."
+            },
+            "contact": {
+                "title": "Kontakt",
+                "content": "Für Rückerstattungsfragen wende dich an sigmallymod@proton.me oder erstelle ein Ticket auf unserem Discord-Server."
+            },
+            "discordLink": "Discord-Server beitreten"
+        }
+    },
+    "TermsPage": {
+        "title": "Nutzungsbedingungen",
+        "lastUpdated": "Zuletzt aktualisiert: 06/11/2025",
+        "intro": "Willkommen bei SigModz. Durch die Nutzung unserer Seite stimmst du diesen Nutzungsbedingungen zu.",
+        "sections": {
+            "1": {
+                "title": "1. Zustimmung zu den Bedingungen",
+                "content": "Durch die Nutzung von SigModz bestätigst du, dass du diese Bedingungen gelesen und akzeptiert hast."
+            },
+            "2": {
+                "title": "2. Pflichten der Nutzer",
+                "content": "Missbrauche unsere Dienste nicht, lade keine illegalen Inhalte hoch und störe die Seite nicht. Betrug oder Missbrauch kann zur Sperrung führen."
+            },
+            "3": {
+                "title": "3. Digitale Waren & Zahlungen",
+                "content": "Wir verkaufen digitale Waren. Alle Käufe unterliegen unserer Rückerstattungsrichtlinie. Wir haften nicht für Verluste durch die Nutzung digitaler Waren."
+            },
+            "4": {
+                "title": "4. Haftungsausschluss & Beschränkung der Haftung",
+                "content": "Dienste werden wie besehen bereitgestellt. SigModz haftet nicht für indirekte, zufällige oder Folgeschäden."
+            },
+            "5": {
+                "title": "5. Änderungen der Bedingungen",
+                "content": "Wir können diese Bedingungen aktualisieren. Die fortgesetzte Nutzung bedeutet, dass du die Änderungen akzeptierst."
+            },
+            "6": {
+                "title": "6. Kontosperrung",
+                "content": "Wir können Konten bei Verstößen, Betrug oder Missbrauch sperren oder löschen."
+            },
+            "7": {
+                "title": "7. Anwendbares Recht",
+                "content": "Diese Bedingungen unterliegen deutschem Recht und Streitigkeiten werden vor deutschen Gerichten verhandelt."
+            },
+            "8": {
+                "title": "8. Kontakt",
+                "content": "Bei Fragen zu diesen Bedingungen kontaktiere uns unter sigmallymod@proton.me."
+            },
+            "discordLink": "Discord-Server beitreten"
         }
     }
 }
