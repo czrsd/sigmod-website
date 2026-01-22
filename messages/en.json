@@ -636,7 +636,7 @@
         "MainPage": {
             "failed": "Failed to load shop data. Please try again later.",
             "Hero": {
-                "title": "Get Your <gold>Gold</gold> & <subscriptions>Subscriptions</subscriptions> Cheaper",
+                "title": "The Complete Source for <gold>Coins</gold>, <subscriptions>Subs</subscriptions> & Beyond.",
                 "description": "In-game prices are high. Here you'll find exclusive deals that won't last.",
                 "limitedOffersTitle": "Limited Offers",
                 "limitedOffersSubtitle": "Grab them before they're gone!",
@@ -678,7 +678,7 @@
                     },
                     {
                         "title": "Trust",
-                        "description": "Made by a verified Sigmally moderator and the creator of SigMod with over 28,000 installs."
+                        "description": "Made by a verified Sigmally moderator and the creator of SigMod with 30,000 installs."
                     },
                     {
                         "title": "Best Value",

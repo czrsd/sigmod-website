@@ -131,7 +131,11 @@ export default function ProductCheckout({
                     <CreditCard size={24} />
                     {t('paymentMethod')}
                 </Label>
-                <Select defaultValue={method} onValueChange={setMethod}>
+                <Select
+                    disabled
+                    defaultValue={method}
+                    onValueChange={setMethod}
+                >
                     <SelectTrigger className='w-full py-6 text-lg'>
                         <SelectValue
                             placeholder={t('selectPaymentPlaceholder')}

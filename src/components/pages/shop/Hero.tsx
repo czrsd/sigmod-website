@@ -19,16 +19,21 @@ export default function Hero({
             const now = Date.now();
             const diff = limitedEndsAt - now;
             if (diff <= 0) return '';
-            const h = Math.floor(diff / 3600000)
+
+            const days = Math.floor(diff / (24 * 3600000));
+            const hours = Math.floor((diff % (24 * 3600000)) / 3600000)
                 .toString()
                 .padStart(2, '0');
-            const m = Math.floor((diff % 3600000) / 60000)
+            const minutes = Math.floor((diff % 3600000) / 60000)
                 .toString()
                 .padStart(2, '0');
-            const s = Math.floor((diff % 60000) / 1000)
+            const seconds = Math.floor((diff % 60000) / 1000)
                 .toString()
                 .padStart(2, '0');
-            return `${h}:${m}:${s}`;
+
+            return days > 0
+                ? `${days}d ${hours}:${minutes}:${seconds}`
+                : `${hours}:${minutes}:${seconds}`;
         };
 
         setTimeLeft(calculateTimeLeft());
