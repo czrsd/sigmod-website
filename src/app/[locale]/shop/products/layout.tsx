@@ -34,8 +34,8 @@ export default function ProductsLayout({
     };
 
     return (
-        <div className='flex flex-col max-w-5xl w-full mx-auto px-6 pt-6'>
-            <div className='flex items-center gap-3'>
+        <div className='flex flex-col w-full mx-auto px-6 pt-6'>
+            <div className='relative flex items-center w-full gap-3'>
                 <Button
                     variant='outline'
                     className='flex items-center gap-2 cursor-pointer'
@@ -44,7 +44,15 @@ export default function ProductsLayout({
                     <ArrowLeft size={16} />
                     {t('back')}
                 </Button>
+
+                <div className='absolute left-1/2 -translate-x-1/2'>
+                    <h1 className='text-2xl sm:text-3xl font-extrabold tracking-tight bg-gradient-to-r from-orange-500 to-yellow-500 text-transparent bg-clip-text pb-1'>
+                        SigModz Shop
+                    </h1>
+                </div>
             </div>
+
+            <div className='h-[1px] w-xl bg-gradient-to-r from-transparent via-orange-400 to-transparent self-center mt-5'></div>
 
             <main className='flex flex-col items-center text-center space-y-10 pt-10 pb-16'>
                 {children}

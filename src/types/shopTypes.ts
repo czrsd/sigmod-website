@@ -27,6 +27,29 @@ export interface FullBundle extends Bundle {
     subPackage: SubPackage;
 }
 
+export interface Skin {
+    _id: string;
+    skinId: string;
+    name: string;
+    rarity: 'common' | 'rare' | 'epic' | 'legendary';
+    coins: number;
+    cards: number;
+    price: number;
+    __v: number;
+    createdAt: Date;
+    updatedAt: Date;
+}
+
+export interface Boost {
+    _id: string;
+    hours: number;
+    cost: number;
+    price: number;
+    __v: number;
+    createdAt: Date;
+    updatedAt: Date;
+}
+
 export interface PurchaseResponse {
     success: boolean;
     orderId: string;

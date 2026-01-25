@@ -12,6 +12,8 @@ import {
     SubPackage,
     PurchaseResponse,
     OrderStatusResponse,
+    Skin,
+    Boost,
 } from '@/types/shopTypes';
 
 type Nullable<T> = T | null;
@@ -128,6 +130,52 @@ export const getAllSubPackages = async (): Promise<Nullable<SubPackage[]>> => {
     }
 };
 
+export const getAllSkins = async (): Promise<Nullable<Skin[]>> => {
+    try {
+        const { data } = await axios.get<{ skins: Skin[] }>(products.skins.all);
+        return data.skins;
+    } catch (err) {
+        console.error('Error fetching all skins', err);
+        return null;
+    }
+};
+
+export const getSkin = async (id: string): Promise<Nullable<Skin>> => {
+    try {
+        const { data } = await axios.get<{ skin: Skin }>(
+            products.skins.single(id)
+        );
+        return data.skin;
+    } catch (err) {
+        console.error(`Error fetching skin ${id}`, err);
+        return null;
+    }
+};
+
+export const getAllBoosts = async (): Promise<Nullable<Boost[]>> => {
+    try {
+        const { data } = await axios.get<{ boosts: Boost[] }>(
+            products.boosts.all
+        );
+        return data.boosts;
+    } catch (err) {
+        console.error('Error fetching all boost packages', err);
+        return null;
+    }
+};
+
+export const getBoost = async (id: string): Promise<Nullable<Boost>> => {
+    try {
+        const { data } = await axios.get<{ boostPackage: Boost }>(
+            products.boosts.single(id)
+        );
+        return data.boostPackage;
+    } catch (err) {
+        console.error(`Error fetching boost package ${id}`, err);
+        return null;
+    }
+};
+
 export const getSale = async (): Promise<number> => {
     try {
         const { data } = await axios.get<{ sale: number }>(sale);
@@ -152,7 +200,7 @@ export const verifyUser = async (email: string): Promise<Nullable<boolean>> => {
 
 export const purchaseItem = async (
     email: string,
-    type: 'coins' | 'subscription' | 'bundle',
+    type: 'coins' | 'subscription' | 'bundle' | 'boost' | 'skin',
     productId: string,
     paymentMethod: string
 ): Promise<PurchaseResponse | null> => {

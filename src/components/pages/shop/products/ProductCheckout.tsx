@@ -23,7 +23,7 @@ export default function ProductCheckout({
     productType,
     productId,
 }: {
-    productType: 'coins' | 'subscription' | 'bundle';
+    productType: 'coins' | 'subscription' | 'bundle' | 'boost' | 'skin';
     productId: string;
 }) {
     const t = useTranslations('Shop.Products.Checkout');
@@ -131,11 +131,7 @@ export default function ProductCheckout({
                     <CreditCard size={24} />
                     {t('paymentMethod')}
                 </Label>
-                <Select
-                    disabled
-                    defaultValue={method}
-                    onValueChange={setMethod}
-                >
+                <Select defaultValue={method} onValueChange={setMethod}>
                     <SelectTrigger className='w-full py-6 text-lg'>
                         <SelectValue
                             placeholder={t('selectPaymentPlaceholder')}
@@ -153,7 +149,7 @@ export default function ProductCheckout({
                                 <span>{t('stripe')}</span>
                             </div>
                         </SelectItem>
-                        <SelectItem value='paypal' disabled>
+                        <SelectItem value='paypal'>
                             <div className='flex items-center gap-2'>
                                 <Image
                                     src='/shop/paypal.svg'

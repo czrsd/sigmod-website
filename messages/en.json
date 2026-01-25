@@ -663,6 +663,18 @@
                 "bundles": {
                     "name": "Bundles",
                     "description": "Coins and subscriptions bundled for a better price"
+                },
+                "skins": {
+                    "name": "Skins",
+                    "description": "Instantly get skins for a fair price"
+                },
+                "boosts": {
+                    "name": "Boosts",
+                    "description": "Boost your gameplay by receiving more XP and more awards"
+                },
+                "servers": {
+                    "name": "Private servers",
+                    "description": "Access private servers for your friends for practising, multiboxing and events. All managed with a dedicated dashboard"
                 }
             },
             "WhyBuyHere": {
@@ -785,6 +797,25 @@
                 "coinsLabel": "{amount} Coins",
                 "price": "€{price}",
                 "originalPrice": "€{original}"
+            },
+            "Skins": {
+                "loading": "Loading...",
+                "notFound": "Product not found",
+                "title": "Skins",
+                "saveMore": "Want to save even more? Check our bundles.",
+                "buyNow": "Buy now",
+                "viewBundles": "View Bundles",
+                "price": "€{price}"
+            },
+            "Boosts": {
+                "loading": "Loading...",
+                "notFound": "Product not found",
+                "title": "Boosts",
+                "hours": "hours",
+                "saveMore": "Want to save even more? Check our bundles.",
+                "buyNow": "Buy now",
+                "viewBundles": "View Bundles",
+                "price": "€{price}"
             },
             "Checkout": {
                 "title": "Checkout",

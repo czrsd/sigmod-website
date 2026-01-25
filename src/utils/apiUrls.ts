@@ -15,6 +15,14 @@ export const products = {
         single: (id: string) => `${BASE_API}/products/bundles/${id}`,
     },
     specialBundles: `${BASE_API}/products/special-bundles`,
+    skins: {
+        all: `${BASE_API}/products/skins`,
+        single: (id: string) => `${BASE_API}/products/skins/${id}`,
+    },
+    boosts: {
+        all: `${BASE_API}/products/boosts`,
+        single: (id: string) => `${BASE_API}/products/boosts/${id}`,
+    },
 };
 
 export const purchase = `${BASE_API}/purchase`;

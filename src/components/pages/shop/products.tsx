@@ -29,25 +29,21 @@ export default function ProductList() {
                     link='/shop/products/bundles'
                 />
                 <ProductCard
-                    name={'Skins'}
-                    description={'Instantly get skins for a fair price'}
+                    name={t('skins.name')}
+                    description={t('skins.description')}
                     img='/shop/products/skins.png'
                     link='/shop/products/skins'
                     roundImage={true}
                 />
                 <ProductCard
-                    name={'Boosts'}
-                    description={
-                        'Boost your gameplay by receiving more XP and more awards'
-                    }
+                    name={t('boosts.name')}
+                    description={t('boosts.description')}
                     img='/shop/products/boosts.png'
                     link='/shop/products/boosts'
                 />
                 <ProductCard
-                    name={'Private servers'}
-                    description={
-                        'Access private servers for your friends for practising, multiboxing and events. All managed with a dedicated dashboard'
-                    }
+                    name={t('servers.name')}
+                    description={t('servers.description')}
                     img='/shop/products/serverrack.png'
                     link='/shop/products/private-servers'
                 />
