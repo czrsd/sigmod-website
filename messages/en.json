@@ -636,11 +636,11 @@
         "MainPage": {
             "failed": "Failed to load shop data. Please try again later.",
             "Hero": {
-                "title": "The Complete Source for <gold>Coins</gold>, <subscriptions>Subs</subscriptions> & Beyond.",
-                "description": "In-game prices are high. Here you'll find exclusive deals that won't last.",
-                "limitedOffersTitle": "Limited Offers",
-                "limitedOffersSubtitle": "Grab them before they're gone!",
-                "endsIn": "Ends in"
+                "title": "Your Premier Source for <gold>Coins</gold>, <subscriptions>Subs</subscriptions> & More.",
+                "description": "Stop overpaying for in-game currency. Access exclusive, high-value deals and level up your experience for less.",
+                "limitedOffersTitle": "Limited Deals",
+                "limitedOffersSubtitle": "Premium bundles at unbeatable prices.",
+                "endsIn": "Offer ends in"
             },
             "SpecialBundles": {
                 "coins": "Coins",
@@ -652,6 +652,7 @@
             },
             "Products": {
                 "title": "Products",
+                "view": "View products →",
                 "coins": {
                     "name": "Coins",
                     "description": "Individual coin amounts from 5,000 up to 1,000,000"
@@ -725,12 +726,15 @@
             },
             "Contact": {
                 "title": "Contact",
-                "supportEmail": "Support email",
-                "or": "or",
-                "createTicket": "Create ticket on Discord"
+                "supportEmail": "Support Email",
+                "emailResponseTime": "Usually responds within 24h",
+                "discordTitle": "Discord Support",
+                "discordDesc": "Fastest help via our ticket system",
+                "createTicket": "Create ticket on Discord",
+                "footerNote": "We are here for you"
             },
             "Info": {
-                "shop": "SigModz Shop legal info",
+                "shop": "© 2026 Sigmally Modz Shop • All rights reserved.",
                 "refund": "Refund Policy",
                 "terms": "Terms of Service",
                 "privacy": "Privacy Policy"

@@ -76,7 +76,10 @@ export default function Header() {
         <header className='sticky top-0 z-50 bg-background/70 backdrop-blur-sm border-b'>
             <div className='max-w-7xl mx-auto px-4 md:px-6 py-3 flex items-center justify-between'>
                 <div className='flex items-center gap-4'>
-                    <Link href='/' className='flex items-center gap-2'>
+                    <Link
+                        href='/'
+                        className='flex items-center gap-2 hover:scale-106 transition-all duration-200'
+                    >
                         <Image
                             src='/sigmodz.svg'
                             alt='Logo'

@@ -114,10 +114,35 @@ export default async function RootLayout({
                 <meta name='twitter:description' content={descStr} />
                 <meta name='twitter:image' content={twUrl} />
             </head>
-            <body className='overflow-x-hidden'>
+            <body className='overflow-x-hidden bg-bg dark:bg-[#050505] transition-colors duration-500'>
                 <Providers locale={locale} messages={messages}>
                     <Header />
-                    {children}
+
+                    <div className='fixed inset-0 -z-10 overflow-hidden pointer-events-none'>
+                        <div
+                            className='absolute top-[5%] left-[5%] w-[20%] h-[20%] rounded-full 
+                bg-blue-400/10 dark:bg-blue-600/20 blur-[180px] animate-drift'
+                        />
+                        <div
+                            className='absolute bottom-[5%] right-[-5%] w-[35%] h-[35%] rounded-full 
+                bg-purple-400/10 dark:bg-purple-600/20 blur-[160px] animate-drift [animation-delay:3s]'
+                        />
+                        <div
+                            className='absolute top-[25%] right-[10%] w-[25%] h-[25%] rounded-full 
+                bg-emerald-400/5 dark:bg-emerald-600/10 blur-[140px] animate-drift [animation-delay:6s]'
+                        />
+
+                        <div className='bg-grid absolute inset-0 opacity-30 dark:opacity-40' />
+
+                        <div
+                            className='absolute inset-0 
+                bg-[radial-gradient(circle_at_center,rgba(255,255,255,0)_0%,rgba(255,255,255,0.7)_100%)] 
+                dark:bg-[radial-gradient(circle_at_center,rgba(0,0,0,0)_0%,rgba(5,5,5,0.6)_100%)]'
+                        />
+                    </div>
+
+                    <div className='relative z-0'>{children}</div>
+
                     <Footer />
                 </Providers>
             </body>
