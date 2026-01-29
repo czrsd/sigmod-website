@@ -50,7 +50,7 @@ export default function EndPage() {
                         className='bg-blue-600 hover:bg-blue-700 text-white font-black px-12 h-16 rounded-2xl text-xl shadow-[0_0_30px_rgba(37,99,235,0.4)] transition-all hover:scale-105 active:scale-95'
                         asChild
                     >
-                        <Link href='https://one.sigmally.com/' target='_blank'>
+                        <Link href='/game' target='_blank'>
                             <Gamepad2 className='mr-3 h-6 w-6' />
                             {t('play')}
                         </Link>

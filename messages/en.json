@@ -25,7 +25,7 @@
         "shop": "Shop"
     },
     "Footer": {
-        "text": "© 2025 SigModz. Not affiliated with Sigmally."
+        "disclaimer": "Not affiliated with Sigmally. Developed for the community."
     },
     "HomePage": {
         "hero": {
@@ -500,6 +500,11 @@
     },
     "FAQPage": {
         "title": "Frequently Asked Questions",
+        "subtitle": "Everything you need to know to master the arena.",
+        "needHelp": "Still have questions?",
+        "joinDiscord": "Join Discord Support",
+        "discordDesc": "Join our community for real-time support, bug reports, and feedback.",
+        "statusLabel": "Community Driven",
         "general": {
             "title": "General",
             "installMods": {
@@ -581,12 +586,11 @@
                 "question": "How do I configure draw delay and other settings?",
                 "answer": "Open the SigFixes menu and adjust them. Check the ? icons for details."
             }
-        },
-        "needHelp": "Still have questions? Join our Discord and open a ticket.",
-        "joinDiscord": "Join Discord"
+        }
     },
     "AboutPage": {
-        "title": "About SigModz",
+        "title": "Our Story",
+        "subtitle": "The evolution of Sigmally modding.",
         "tldr": {
             "title": "What is SigModz?",
             "text": "SigModz is a community project that improves the Sigmally experience with powerful mods like SigMod and SigFixes."
@@ -599,6 +603,24 @@
             "sigfixes": "Later SigFixes by yx pushed things further with a full WebGL renderer, multiboxing support, better input handling and performance upgrades for serious play.",
             "community": "Both mods are accepted by the Sigmally community and supported by the game's owner. SigModz keeps growing with help from players and developers.",
             "thanks": "Thanks to RingZer0 for the original base and to yx for pushing technical progress. The community support keeps SigModz moving forward."
+        },
+        "roadmap": {
+            "title": "Roadmap",
+            "phase1": {
+                "title": "The Foundation",
+                "date": "2022 - 2024",
+                "desc": "Establishing SigMod as the standard for macros and basic UI customization based on the original RingZer0 source."
+            },
+            "phase2": {
+                "title": "Technical Evolution",
+                "date": "2024 - 2025",
+                "desc": "Launch of SigFixes. Introduction of WebGL rendering and advanced multiboxing."
+            },
+            "phase3": {
+                "title": "The Future",
+                "date": "2025+",
+                "desc": "Ongoing refinements based on community feedback, UI polishing and adapting to game updates."
+            }
         },
         "joinDiscord": "Join the Discord"
     },
