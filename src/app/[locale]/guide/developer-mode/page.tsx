@@ -2,15 +2,26 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ArrowLeft } from 'lucide-react';
+import {
+    ArrowRight,
+    ArrowLeft,
+    AlertTriangle,
+    ShieldCheck,
+} from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { detectBrowser } from '@/utils/getLink';
 import { ZoomableImage } from '@/components/ZoomableImage';
 
-const WarningBox = ({ children }: { children: React.ReactNode }) => (
-    <div className='border border-yellow-400 p-4 text-yellow-400 rounded-md'>
-        {children}
+const WarningBox = ({ label, text }: { label: string; text: string }) => (
+    <div className='bg-yellow-500/5 border border-yellow-500/20 p-5 rounded-2xl flex gap-4 items-start'>
+        <AlertTriangle className='text-yellow-500 shrink-0' size={24} />
+        <div className='text-sm leading-relaxed text-yellow-200/80'>
+            <strong className='text-yellow-500 uppercase tracking-wider text-xs block mb-1'>
+                {label}
+            </strong>
+            {text}
+        </div>
     </div>
 );
 
@@ -40,65 +51,86 @@ export default function DeveloperModePage() {
     >('default');
 
     useEffect(() => {
-        setBrowser(detectBrowser());
+        setBrowser(detectBrowser() as any);
     }, []);
 
     const { base, files } = imageData[browser] ?? imageData.default;
 
     return (
-        <div className='max-w-3xl px-4 space-y-8'>
+        <div className='max-w-4xl space-y-10'>
             <div className='space-y-4'>
-                <h1 className='text-3xl font-bold'>
+                <h1 className='text-3xl md:text-4xl font-black italic tracking-tighter text-white uppercase flex items-center gap-3'>
+                    <ShieldCheck className='text-blue-500' size={32} />
                     {browser === 'chrome' ? t('chrome.pageTitle') : t('title')}
                 </h1>
-                <p className='text-muted-foreground text-lg'>
+                <p className='text-neutral-400 text-lg max-w-2xl'>
                     {browser === 'chrome' ? t('chrome.desc') : t('desc')}
                 </p>
+            </div>
 
-                <div>
-                    <h2 className='font-semibold text-xl mb-2'>
+            <div className='grid grid-cols-1 lg:grid-cols-5 gap-10 items-start'>
+                <div className='lg:col-span-2 space-y-6'>
+                    <h2 className='text-white font-bold uppercase tracking-widest text-sm border-b border-white/10 pb-2'>
                         {t(`${browser}.title`)}
                     </h2>
-                    <ol className='list-decimal list-inside space-y-2 text-base'>
+                    <ol className='space-y-4'>
                         {t
                             .raw(`${browser}.steps`)
                             .map((step: string, i: number) => (
-                                <li key={i}>{step}</li>
+                                <li
+                                    key={i}
+                                    className='flex gap-4 items-start group'
+                                >
+                                    <span className='w-6 h-6 rounded bg-white/5 border border-white/10 text-white text-[10px] font-bold flex items-center justify-center shrink-0 group-hover:border-blue-500 transition-colors'>
+                                        {i + 1}
+                                    </span>
+                                    <span className='text-neutral-300 text-sm font-medium pt-0.5 leading-snug'>
+                                        {step}
+                                    </span>
+                                </li>
                             ))}
                     </ol>
                 </div>
 
-                <div className='flex flex-wrap gap-4'>
+                <div className='lg:col-span-3 flex flex-wrap gap-4 justify-center lg:justify-start'>
                     {files.map((img, i) => (
-                        <ZoomableImage
+                        <div
                             key={i}
-                            src={base + img}
-                            width={i === 0 ? 200 : 260}
-                            height={300}
-                            alt={img.replace('.png', '').replace('_', ' ')}
-                            className='w-max'
-                        />
+                            className='p-2 bg-white/5 border border-white/10 rounded-xl hover:border-blue-500/50 transition-colors'
+                        >
+                            <ZoomableImage
+                                src={base + img}
+                                width={i === 0 ? 180 : 240}
+                                height={300}
+                                alt={img}
+                                className='rounded-lg'
+                            />
+                        </div>
                     ))}
                 </div>
             </div>
 
-            {browser !== 'chrome' && (
-                <WarningBox>
-                    <strong>{t('note.label')}</strong> {t('note.text')}
-                </WarningBox>
+            {browser !== 'chrome' && browser !== 'firefox' && (
+                <WarningBox label={t('note.label')} text={t('note.text')} />
             )}
 
-            <div className='flex justify-between'>
-                <Button asChild>
+            <div className='flex justify-between pt-6'>
+                <Button
+                    variant='ghost'
+                    className='text-neutral-500 hover:text-white'
+                    asChild
+                >
                     <Link href='/guide/userscript-manager'>
-                        <ArrowLeft className='mr-1' />
-                        {t('back')}
+                        <ArrowLeft className='mr-2 h-4 w-4' /> {t('back')}
                     </Link>
                 </Button>
-                <Button asChild>
+                <Button
+                    size='lg'
+                    className='bg-white text-black hover:bg-neutral-200 font-bold px-8 rounded-full shadow-lg'
+                    asChild
+                >
                     <Link href='/guide/sigmod'>
-                        {t('next')}
-                        <ArrowRight className='ml-1' />
+                        {t('next')} <ArrowRight className='ml-2 h-4 w-4' />
                     </Link>
                 </Button>
             </div>

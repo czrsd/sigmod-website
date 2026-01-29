@@ -388,28 +388,28 @@
         "fullGuide": "View Full Guide"
     },
     "Guide": {
+        "Overview": {
+            "title": "Setup Guide",
+            "desc": "Follow these steps to enhance your Sigmally experience. Our mods provide custom UI, advanced macros, and better performance.",
+            "access": "The mod menu can be opened in-game by pressing the 'V' key or clicking the gear icon.",
+            "start": "Get Started",
+            "quickGuide": "Quick Installation",
+            "video": {
+                "title": "Video Tutorial",
+                "desc": "Prefer watching? This 2-minute video covers the entire installation process.",
+                "credit": "Tutorial by Sigmally Community",
+                "creditTitle": "Verified Community Content"
+            }
+        },
         "Sidebar": {
-            "title": "Guide",
+            "title": "Installation",
             "overview": "Overview",
             "usm": "Userscript Manager",
             "devmode": "Developer Mode",
             "aus_chrome": "Allow User Scripts",
             "sigmod": "SigMod",
             "sigfixes": "SigFixes",
-            "end": "Conclusion"
-        },
-        "Overview": {
-            "title": "Getting Started",
-            "desc": "Welcome to SigModz. This guide shows how to install SigMod and SigFixes, the two core mods that boost Sigmally with smoother performance, total control and useful tools.",
-            "access": "In a few simple steps you'll unlock smart macros, FPS boosts, UI tweaks and advanced settings.",
-            "video": {
-                "title": "Video tutorial",
-                "desc": "Watch this if you prefer visual instructions.",
-                "credit": "Created by Fake",
-                "creditTitle": "Discord: fa_keo"
-            },
-            "start": "Start Installation",
-            "quickGuide": "Quick Guide"
+            "end": "Ready to Play"
         },
         "UserscriptManager": {
             "title": "Install a Userscript Manager",
@@ -490,10 +490,11 @@
             "end": "End"
         },
         "End": {
-            "title": "You're All Set 🎉",
-            "desc": "SigMod and SigFixes are installed. Enjoy a smoother, more customizable Sigmally experience. Dive in, tweak your setup and play your best.",
-            "notice": "Restart your browser before joining the game",
-            "play": "Play Sigmally",
+            "title": "Ready for Action!",
+            "desc": "Everything is set up correctly. You are now running the most advanced mods for Sigmally.",
+            "completed_label": "Installation Finished",
+            "notice": "Verify your Menu",
+            "play": "Start Playing Now",
             "explore": "Explore"
         }
     },
