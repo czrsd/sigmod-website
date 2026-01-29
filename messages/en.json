@@ -29,9 +29,14 @@
     },
     "HomePage": {
         "hero": {
-            "title": "Sigmally Modz",
-            "sub": "Boost your Sigmally sessions with smoother performance, smarter tools and a setup that feels like yours.",
-            "start": "Get Started"
+            "title": "<glow>Sigmally Modz</glow>",
+            "sub": "Experience the game like never before with custom UIs, powerful macros and seamless automation.",
+            "shop_now": "Visit Shop",
+            "start": "Setup Guide",
+            "stats": {
+                "total": "Total Installs",
+                "active": "Installs today"
+            }
         },
         "introduction": {
             "what": {
@@ -46,43 +51,55 @@
         "mods": {
             "sigmod": {
                 "title": "SigMod",
-                "desc": "SigMod puts a full mod menu right into your game. Build custom macros, switch up themes and layouts and automate things like daily-coin collection. Adjust your HUD, keybinds and chat settings so everything feels natural while you play.",
-                "learnMore": "Learn more about SigMod"
+                "desc": "SigMod adds a comprehensive mod menu directly into your Sigmally client. It gives you full control over your interface, custom themes and an integrated account system with a friend list and real-time chat. You can automate minor tasks like daily coin collection and adjust the game settings to fit your playstyle.",
+                "features": [
+                    "Advanced Chat & Party System",
+                    "Custom Macros & Keybinds",
+                    "Profile & Friend List",
+                    "Menu & Game Themes"
+                ],
+                "learnMore": "Explore SigMod"
             },
             "sigfixes": {
                 "title": "SigFixes",
-                "desc": "SigFixes improves performance for steadier frame rates and minimal lag. Load in faster, get tighter input response and control multiple accounts with built-in multibox tools. Tune draw delay, opacity, zoom and name scaling to keep everything running smooth.",
-                "learnMore": "Learn more about SigFixes"
+                "desc": "This extension focuses entirely on technical optimization and performance. SigFixes helps reduce lag, stabilizes your frame rate and provides essential tools like multibox support for controlling multiple accounts simultaneously while ensuring faster loading times.",
+                "features": [
+                    "FPS & Performance Boost",
+                    "Built-in Multibox Tools",
+                    "Input Lag Reduction",
+                    "Advanced Zoom & Graphics"
+                ],
+                "learnMore": "Explore SigFixes"
             },
-            "learnMore": "Learn & Install"
+            "learnMore": "Installation & Guide"
         },
         "faq": {
             "questions": [
                 {
                     "question": "Are these scripts safe?",
-                    "answer": "Yes. Everything’s open-source and Tampermonkey is widely trusted. No hidden tricks."
+                    "answer": "Yes. The code is open for anyone to check and Tampermonkey is about as standard as it gets. No shady background tasks or hidden surprises here."
                 },
                 {
                     "question": "Do I need both mods?",
-                    "answer": "Not really. Using SigMod and SigFixes together gives you the best mix of control and speed."
+                    "answer": "You don't have to, but they work better as a team. SigMod handles the features while SigFixes keeps the performance from tanking. It's like having a fast car that actually has a steering wheel."
                 },
                 {
                     "question": "Are they allowed in Sigmally?",
-                    "answer": "Yes. Both mods are well known and accepted by the community and the owner."
+                    "answer": "Yeah, don't worry. Both mods are well known in the community and even the owner is cool with them. You won't get banned for just wanting a better UI."
                 },
                 {
                     "question": "Can I remove them anytime?",
-                    "answer": "Sure. Just turn them off or uninstall them in your userscript manager."
+                    "answer": "Of course. If you decide you miss the laggy original look, just toggle them off or delete the script in your manager. No messy uninstallation required."
                 },
                 {
-                    "question": "Will SigMod turn me into a pro gamer overnight?",
-                    "answer": "If only. SigMod makes things smoother and easier to handle but skill comes from you: timing, reads and practice."
+                    "question": "Will SigMod turn me into a pro overnight?",
+                    "answer": "We wish. It definitely makes the game easier to handle and look at, but you still have to do the clicking yourself. Good luck with the practice though."
                 }
             ]
         },
         "community": {
-            "title": "Community",
-            "desc": "Join our Discord for support, bug reports and late-night help from other players.",
+            "title": "Need a Hand?",
+            "desc": "If something's broken or you just can't get the macros to work, jump into our Discord. It's the best place for quick help, bug reports, or just seeing what others are up to.",
             "join": "Join Discord"
         }
     },
@@ -687,7 +704,7 @@
                     },
                     {
                         "title": "Secure Checkout",
-                        "description": "Payments are encrypted and handled by trusted providers like PayPal."
+                        "description": "Payments are encrypted and handled by trusted providers like PayPal and Stripe."
                     },
                     {
                         "title": "Trust",
