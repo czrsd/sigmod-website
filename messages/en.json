@@ -817,6 +817,28 @@
                 "viewBundles": "View Bundles",
                 "price": "€{price}"
             },
+            "Servers": {
+                "loading": "Loading available servers...",
+                "notFound": "No servers found at the moment.",
+                "title": "Private Server Hosting",
+                "description": "High-performance hardware. Full root access. Instant setup.",
+                "regionsAvailable": "Regions Available",
+                "ctaButton": "Contact to Purchase",
+                "durations": {
+                    "14d": "14 Days",
+                    "1m": "1 Month",
+                    "3m": "3 Months",
+                    "6m": "6 Months",
+                    "12m": "1 Year"
+                },
+                "period": {
+                    "fourteenDays": "14 days",
+                    "oneMonth": "month",
+                    "threeMonths": "3 months",
+                    "sixMonths": "6 months",
+                    "twelveMonths": "year"
+                }
+            },
             "Checkout": {
                 "title": "Checkout",
                 "emailLabel": "Email",

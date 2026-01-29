@@ -50,6 +50,24 @@ export interface Boost {
     updatedAt: Date;
 }
 
+export interface Server {
+    _id: string;
+    title: string;
+    maxPlayers: number;
+    regions: string[];
+    pricing: {
+        fourteenDays: number;
+        oneMonth: number;
+        threeMonths: number;
+        sixMonths: number;
+        twelveMonths: number;
+    };
+    features: string[];
+    __v: number;
+    createdAt: Date;
+    updatedAt: Date;
+}
+
 export interface PurchaseResponse {
     success: boolean;
     orderId: string;

@@ -14,6 +14,7 @@ import {
     OrderStatusResponse,
     Skin,
     Boost,
+    Server,
 } from '@/types/shopTypes';
 
 type Nullable<T> = T | null;
@@ -172,6 +173,18 @@ export const getBoost = async (id: string): Promise<Nullable<Boost>> => {
         return data.boostPackage;
     } catch (err) {
         console.error(`Error fetching boost package ${id}`, err);
+        return null;
+    }
+};
+
+export const getAllPrivateServers = async (): Promise<Nullable<Server[]>> => {
+    try {
+        const { data } = await axios.get<{ servers: Server[] }>(
+            products.servers
+        );
+        return data.servers;
+    } catch (err) {
+        console.error('Error fetching all servers', err);
         return null;
     }
 };

@@ -23,6 +23,7 @@ export const products = {
         all: `${BASE_API}/products/boosts`,
         single: (id: string) => `${BASE_API}/products/boosts/${id}`,
     },
+    servers: `${BASE_API}/products/servers`,
 };
 
 export const purchase = `${BASE_API}/purchase`;

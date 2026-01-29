@@ -42,7 +42,7 @@ export default function ProductInfo({ item }: { item: ProductItem }) {
         : isSkin(item)
         ? `https://sigmally.com/static/skins/${item.name}.png`
         : isBoost(item)
-        ? `/shop/boosts/boost_${item.hours}.svg`
+        ? `/shop/products/boosts.png`
         : item.isLimited
         ? '/shop/bundles/Starter 2.svg'
         : `/shop/bundles/${item.name}.svg`;
