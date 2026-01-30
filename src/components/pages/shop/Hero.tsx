@@ -3,21 +3,34 @@
 import { useEffect, useState } from 'react';
 import { Flame, Timer } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { Progress } from '@/components/ui/progress';
 
 export default function Hero({
     limitedEndsAt,
+    startedAt,
 }: {
     limitedEndsAt: number | null;
+    startedAt: number | null;
 }) {
     const t = useTranslations('Shop.MainPage.Hero');
     const [timeLeft, setTimeLeft] = useState<string | null>(null);
+    const [progress, setProgress] = useState(100);
 
     useEffect(() => {
-        if (!limitedEndsAt) return;
-        const calculateTimeLeft = () => {
+        if (!limitedEndsAt || !startedAt) return;
+
+        const totalDuration = limitedEndsAt - startedAt;
+
+        const calculateStats = () => {
             const now = Date.now();
             const diff = limitedEndsAt - now;
-            if (diff <= 0) return '';
+
+            if (diff <= 0 || totalDuration <= 0) {
+                setTimeLeft('');
+                setProgress(0);
+                return;
+            }
+
             const days = Math.floor(diff / 86400000);
             const hours = Math.floor((diff % 86400000) / 3600000)
                 .toString()
@@ -28,18 +41,25 @@ export default function Hero({
             const seconds = Math.floor((diff % 60000) / 1000)
                 .toString()
                 .padStart(2, '0');
-            return days > 0
-                ? `${days}d ${hours}:${minutes}:${seconds}`
-                : `${hours}:${minutes}:${seconds}`;
+
+            setTimeLeft(
+                days > 0
+                    ? `${days}d ${hours}:${minutes}:${seconds}`
+                    : `${hours}:${minutes}:${seconds}`
+            );
+
+            const rawRemaining = (diff / totalDuration) * 100;
+            const rawProgress = 100 - rawRemaining;
+
+            const clampedProgress = Math.max(0, Math.min(100, rawProgress));
+
+            setProgress(clampedProgress);
         };
 
-        setTimeLeft(calculateTimeLeft());
-        const interval = setInterval(
-            () => setTimeLeft(calculateTimeLeft()),
-            1000
-        );
+        calculateStats();
+        const interval = setInterval(calculateStats, 1000);
         return () => clearInterval(interval);
-    }, [limitedEndsAt]);
+    }, [limitedEndsAt, startedAt]);
 
     const offerActive = timeLeft && timeLeft !== '';
 
@@ -92,8 +112,11 @@ export default function Hero({
                             </div>
                         </div>
 
-                        <div className='w-full h-1 bg-neutral-200 dark:bg-neutral-800 rounded-full overflow-hidden'>
-                            <div className='h-full bg-orange-500 w-[65%] animate-pulse' />
+                        <div className='w-full space-y-2'>
+                            <Progress
+                                value={Number(progress) || 0}
+                                className='bg-transparent border'
+                            />
                         </div>
                     </div>
                 </div>

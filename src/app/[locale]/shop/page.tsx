@@ -19,6 +19,7 @@ export default async function ShopPage() {
     try {
         const bundlesRes = await getSpecialBundles();
         const limitedEndsAt = bundlesRes?.limitedEndsAt || 0;
+        const startedAt = bundlesRes?.startedAt || 0;
 
         let preparedBundles: FullBundle[] = [];
         let sale = 1;
@@ -43,7 +44,10 @@ export default async function ShopPage() {
 
         return (
             <main className='flex flex-col items-center text-center space-y-10 py-12'>
-                <Hero limitedEndsAt={limitedEndsAt || null} />
+                <Hero
+                    limitedEndsAt={limitedEndsAt || null}
+                    startedAt={startedAt || null}
+                />
                 {preparedBundles && preparedBundles.length > 0 && (
                     <>
                         <SpecialBundles bundles={preparedBundles} sale={sale} />

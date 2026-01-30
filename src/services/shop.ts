@@ -39,12 +39,17 @@ export const getProductInfo = async (
 };
 
 export const getSpecialBundles = async (): Promise<
-    Nullable<{ specialBundles: Bundle[]; limitedEndsAt: number }>
+    Nullable<{
+        specialBundles: Bundle[];
+        limitedEndsAt: number;
+        startedAt: number;
+    }>
 > => {
     try {
         const { data } = await axios.get<{
             specialBundles: Bundle[];
             limitedEndsAt: number;
+            startedAt: number;
         }>(products.specialBundles);
         return data;
     } catch (err) {
