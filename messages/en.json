@@ -35,7 +35,8 @@
             "start": "Setup Guide",
             "stats": {
                 "total": "Total Installs",
-                "active": "Installs today"
+                "active": "Installs today",
+                "online": "Online"
             }
         },
         "introduction": {
@@ -396,7 +397,7 @@
             "quickGuide": "Quick Installation",
             "video": {
                 "title": "Video Tutorial",
-                "desc": "Prefer watching? This 2-minute video covers the entire installation process.",
+                "desc": "Prefer watching? This 40 seconds video covers the entire installation process.",
                 "credit": "Tutorial by Sigmally Community",
                 "creditTitle": "Verified Community Content"
             }
@@ -618,7 +619,7 @@
             },
             "phase3": {
                 "title": "The Future",
-                "date": "2025+",
+                "date": "2026+",
                 "desc": "Ongoing refinements based on community feedback, UI polishing and adapting to game updates."
             }
         },

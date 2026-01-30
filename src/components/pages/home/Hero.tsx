@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import {
@@ -9,7 +9,7 @@ import {
     CarouselItem,
 } from '@/components/ui/carousel';
 import Autoplay from 'embla-carousel-autoplay';
-import { ArrowRight, ShoppingCart, Users } from 'lucide-react';
+import { ArrowRight, ShoppingCart } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -24,37 +24,43 @@ const images = [
 
 export function HeroSection() {
     const t = useTranslations('HomePage.hero');
-    const [stats, setStats] = useState({ total: '30,000+', daily: '...' });
+    const [isLoading, setIsLoading] = useState(true);
+    const [stats, setStats] = useState({
+        total: '30,000+',
+        daily: '50+',
+        online: '70+',
+    });
+
+    const plugin = useRef(Autoplay({ delay: 4000, stopOnInteraction: true }));
 
     useEffect(() => {
+        const controller = new AbortController();
+
         async function fetchStats() {
             try {
-                const ids = ['454648', '483587'];
-                let total = 0;
-                let daily = 0;
-                for (const id of ids) {
-                    const res = await fetch(
-                        `https://greasyfork.org/scripts/${id}.json`
-                    );
-                    const data = await res.json();
-                    total += data.total_installs;
-                    daily += data.daily_installs;
-                }
-                setStats({
-                    total: total.toLocaleString(),
-                    daily: daily.toLocaleString(),
+                const res = await fetch('/api/stats', {
+                    signal: controller.signal,
                 });
-            } catch (e) {
-                console.error('Failed to fetch GreasyFork stats', e);
+                if (res.ok) {
+                    const data = await res.json();
+                    setStats(data);
+                }
+            } catch (e: any) {
+                if (e.name !== 'AbortError') {
+                    console.error('Failed to fetch stats', e);
+                }
+            } finally {
+                setIsLoading(false);
             }
         }
+
         fetchStats();
+        return () => controller.abort();
     }, []);
 
     return (
         <section className='relative flex flex-col lg:flex-row items-center justify-between px-6 md:px-16 pt-24 pb-20 lg:pt-44 lg:pb-32 gap-16 overflow-hidden'>
             <div className='w-full lg:w-1/2 text-center lg:text-left space-y-10 relative z-10'>
-                {/* Headline & Sub */}
                 <div className='space-y-6'>
                     <h1 className='text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[1.1] md:leading-[1] tracking-tighter'>
                         {t.rich('title', {
@@ -77,7 +83,7 @@ export function HeroSection() {
                         asChild
                     >
                         <Link href='/shop'>
-                            <ShoppingCart className='mr-2 h-5 w-5' />{' '}
+                            <ShoppingCart className='mr-2 h-5 w-5' />
                             {t('shop_now')}
                         </Link>
                     </Button>
@@ -95,28 +101,24 @@ export function HeroSection() {
                 </div>
 
                 <div className='pt-4 flex flex-row items-center justify-center lg:justify-start gap-12'>
-                    <div className='flex flex-col'>
-                        <span className='text-3xl font-black text-white italic tracking-tighter leading-none'>
-                            {stats.total}
-                        </span>
-                        <span className='text-[10px] uppercase font-bold tracking-[0.2em] text-neutral-500 mt-2'>
-                            {t('stats.total')}
-                        </span>
-                    </div>
-
+                    <StatItem
+                        loading={isLoading}
+                        value={stats.total}
+                        label={t('stats.total')}
+                    />
                     <div className='w-px h-10 bg-white/10 hidden sm:block' />
-
-                    <div className='flex flex-col'>
-                        <div className='flex items-center gap-2'>
-                            <span className='text-3xl font-black text-white italic tracking-tighter leading-none'>
-                                {stats.daily}
-                            </span>
-                            <div className='w-2 h-2 rounded-full bg-green-500 animate-pulse' />
-                        </div>
-                        <span className='text-[10px] uppercase font-bold tracking-[0.2em] text-neutral-500 mt-2'>
-                            {t('stats.active')}
-                        </span>
-                    </div>
+                    <StatItem
+                        loading={isLoading}
+                        value={stats.daily}
+                        label={t('stats.active')}
+                    />
+                    <div className='w-px h-10 bg-white/10 hidden sm:block' />
+                    <StatItem
+                        loading={isLoading}
+                        value={stats.online}
+                        label={t('stats.online')}
+                        hasPulse
+                    />
                 </div>
             </div>
 
@@ -125,18 +127,19 @@ export function HeroSection() {
                 <div className='relative bg-neutral-900/50 backdrop-blur-2xl border border-white/10 p-2 rounded-[2rem] shadow-2xl'>
                     <Carousel
                         opts={{ loop: true }}
-                        plugins={[Autoplay({ delay: 4000 })]}
+                        plugins={[plugin.current]}
                         className='w-full'
                     >
                         <CarouselContent>
                             {images.map((img, idx) => (
-                                <CarouselItem key={idx}>
+                                <CarouselItem key={img}>
                                     <div className='relative aspect-video overflow-hidden rounded-[1.6rem]'>
                                         <Image
                                             src={'/preview/' + img}
                                             alt={img}
                                             fill
                                             className='object-cover'
+                                            sizes='(max-width: 768px) 100vw, 50vw'
                                             priority={idx === 0}
                                         />
                                     </div>
@@ -147,5 +150,37 @@ export function HeroSection() {
                 </div>
             </div>
         </section>
+    );
+}
+
+function StatItem({
+    value,
+    label,
+    loading,
+    hasPulse,
+}: {
+    value: string;
+    label: string;
+    loading: boolean;
+    hasPulse?: boolean;
+}) {
+    return (
+        <div className='flex flex-col min-w-[80px]'>
+            <div className='flex items-center gap-2'>
+                {loading ? (
+                    <div className='h-8 w-20 bg-white/10 animate-pulse rounded-md' />
+                ) : (
+                    <span className='text-3xl font-black text-white italic tracking-tighter leading-none'>
+                        {value}
+                    </span>
+                )}
+                {!loading && hasPulse && (
+                    <div className='w-2 h-2 rounded-full bg-green-500 animate-pulse' />
+                )}
+            </div>
+            <span className='text-[10px] uppercase font-bold tracking-[0.2em] text-neutral-500 mt-2'>
+                {label}
+            </span>
+        </div>
     );
 }

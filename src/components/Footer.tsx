@@ -36,7 +36,7 @@ export default function Footer() {
                             label='SigFixes Source'
                         />
                         <FooterLink
-                            href='https://one.sigmally.com/'
+                            href='/game'
                             icon={<ExternalLink size={16} />}
                             label='Sigmally'
                         />
