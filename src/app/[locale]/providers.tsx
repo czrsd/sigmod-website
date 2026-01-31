@@ -1,6 +1,7 @@
 'use client';
 import { ThemeProvider } from 'next-themes';
 import { NextIntlClientProvider } from 'next-intl';
+import { SessionProvider } from 'next-auth/react';
 import React from 'react';
 
 export function Providers({
@@ -13,20 +14,22 @@ export function Providers({
     messages?: Record<string, string | Record<string, string>>;
 }) {
     return (
-        <ThemeProvider
-            attribute='class'
-            defaultTheme='system'
-            enableSystem
-            disableTransitionOnChange
-        >
-            <NextIntlClientProvider
-                locale={locale}
-                messages={messages}
-                timeZone={Intl.DateTimeFormat().resolvedOptions().timeZone}
-                now={new Date()}
+        <SessionProvider>
+            <ThemeProvider
+                attribute='class'
+                defaultTheme='system'
+                enableSystem
+                disableTransitionOnChange
             >
-                {children}
-            </NextIntlClientProvider>
-        </ThemeProvider>
+                <NextIntlClientProvider
+                    locale={locale}
+                    messages={messages}
+                    timeZone={Intl.DateTimeFormat().resolvedOptions().timeZone}
+                    now={new Date()}
+                >
+                    {children}
+                </NextIntlClientProvider>
+            </ThemeProvider>
+        </SessionProvider>
     );
 }

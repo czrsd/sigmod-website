@@ -53,6 +53,7 @@ const mods = [
 
 const navLinks = [
     { href: '/guide', labelKey: 'guide' },
+    { href: '/tutorials', labelKey: 'tutorials' },
     { href: '/faq', labelKey: 'faq' },
     { href: '/about', labelKey: 'about' },
     { href: '/shop', labelKey: 'shop' },
@@ -65,6 +66,11 @@ export default function Header() {
     const locale = useLocale();
     const pathname = usePathname();
     const router = useRouter();
+
+    const isActive = (href: string) => {
+        const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
+        return pathWithoutLocale === href;
+    };
 
     const changeLanguage = (newLocale: string) => {
         const segments = pathname.split('/');
@@ -139,7 +145,16 @@ export default function Header() {
                             {navLinks.map(({ href, labelKey }) => (
                                 <NavigationMenuItem key={href}>
                                     <NavigationMenuLink asChild>
-                                        <Link href={href}>{t(labelKey)}</Link>
+                                        <Link
+                                            href={href}
+                                            className={
+                                                isActive(href)
+                                                    ? 'text-primary'
+                                                    : 'text-muted-foreground hover:text-foreground'
+                                            }
+                                        >
+                                            {t(labelKey)}
+                                        </Link>
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
                             ))}

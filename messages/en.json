@@ -20,6 +20,7 @@
             }
         },
         "guide": "Setup Guide",
+        "tutorials": "Tutorials",
         "faq": "FAQ",
         "about": "About",
         "shop": "Shop"
@@ -504,6 +505,29 @@
             "notice": "Verify your Menu",
             "play": "Start Playing Now",
             "explore": "Explore"
+        }
+    },
+    "TutorialPage": {
+        "dashboard": {
+            "upload": {
+                "title": "Title",
+                "mediaType": "Media Type",
+                "contentUrl": "Content URL",
+                "description": "Description",
+                "tags": "Select Tags (Multiple)",
+                "submit": "Submit Tutorial",
+                "update": "Update Tutorial",
+                "processing": "Processing...",
+                "youtube": {
+                    "autoThumbnail": "Use YouTube Thumbnail?",
+                    "customThumbnail": "Upload custom thumbnail"
+                },
+                "dropzone": {
+                    "video": "Drag & drop video here or click",
+                    "images": "Drag & drop images here or click (Max. 10)",
+                    "thumbnail": "Drag & drop thumbnail here or click"
+                }
+            }
         }
     },
     "FAQPage": {
