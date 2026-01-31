@@ -1,23 +1,27 @@
 import mongoose, { Document, Model, Schema, models, model } from 'mongoose';
 import { ITag } from './Tag';
 
-export interface ITutorial extends Document {
+export interface ITutorialData {
+    _id: string;
     title: string;
     description: string;
     type: 'youtube' | 'video' | 'image';
     contentUrls: string[];
     thumbnailUrl?: string;
     authorId: string;
-    tags: mongoose.Types.ObjectId[] | ITag[];
+    tags: ITag[];
     status: 'pending' | 'approved' | 'rejected';
-
     duration: number;
-
-    likes: number;
+    likes: string[];
     views: number;
+    createdAt: string | Date;
+    updatedAt: string | Date;
+}
 
-    createdAt: Date;
-    updatedAt: Date;
+export interface ITutorial
+    extends Omit<ITutorialData, '_id' | 'tags'>,
+        Document {
+    tags: mongoose.Types.ObjectId[] | ITag[];
 }
 
 const TutorialSchema = new Schema<ITutorial>(
@@ -31,6 +35,7 @@ const TutorialSchema = new Schema<ITutorial>(
         },
         contentUrls: [{ type: String, required: true }],
         authorId: { type: String, required: true },
+        thumbnailUrl: { type: String },
         tags: [
             {
                 type: Schema.Types.ObjectId,

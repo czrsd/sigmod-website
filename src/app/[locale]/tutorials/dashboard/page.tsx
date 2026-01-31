@@ -13,11 +13,14 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Tutorial } from '@/types/communityTypes';
+import { ITutorialData as Tutorial } from '@/models/Tutorial';
+import { Serializable } from '@/types/utils';
 
 export default function UploaderDashboard() {
     const { data: session } = useSession();
-    const [myTutorials, setMyTutorials] = useState<Tutorial[]>([]);
+    const [myTutorials, setMyTutorials] = useState<Serializable<Tutorial[]>>(
+        []
+    );
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
