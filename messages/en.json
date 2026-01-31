@@ -129,11 +129,14 @@
         },
         "WhySigMod": {
             "title": "Why choose SigMod?",
-            "desc1": "SigMod adds automation, personalization and full UI control to Sigmally. Set up macros, move panels, remap keys and tweak visuals from a clean in-game dashboard. Change themes, bookmark names and snap screenshots in one click.",
-            "desc2": "Work with your squad using dynamic tags: private chat, tactical pings and live minimap markers. Check match stats, manage friends and tweak chat fonts and keybinds on the fly.",
+            "desc1": "SigMod adds automation, personalization and full UI control to Sigmally. Set up macros, move panels, remap keys and tweak visuals from a clean in-game dashboard.",
+            "desc2": "Work with your squad using dynamic tags: private chat, tactical pings and live minimap markers. Check match stats and manage friends on the fly.",
+            "highlight1": "Full UI Automation",
+            "highlight2": "Tactical Squad Play",
+            "highlight3": "One-Click Control",
             "performance": "Want peak performance? Pair SigMod with",
             "smooth": "for ultra-responsive gameplay.",
-            "getStarted": "Get Started with SigMod"
+            "getStarted": "Get Started Now"
         },
         "Features": {
             "title": "SigMod Features",
@@ -232,6 +235,7 @@
     },
     "SigFixesPage": {
         "Hero": {
+            "badge": "Performance Optimizer",
             "title": "SigFixes",
             "sub": "Enhance Sigmally's core with ultra smooth performance, precise input and advanced multibox control.",
             "install": "Install SigFixes",
@@ -257,7 +261,10 @@
             "title": "Why choose SigFixes?",
             "desc1": "SigFixes overhauls Sigmally's rendering for smoother frames and sharper input. It removes common stutters, lowers delay and keeps gameplay steady under pressure.",
             "desc2": "Built for serious players, it shines when multiboxing. Faster inputs, synced camera behavior and visual tweaks help you track and merge with full control.",
-            "worksWith": "Already using",
+            "highlight1": "Max Performance",
+            "highlight2": "Stable Frames",
+            "highlight3": "Input Optimization",
+            "worksWith": "Works with",
             "combo": "Pair both for the ultimate experience.",
             "getStarted": "Get Started with SigFixes"
         },
