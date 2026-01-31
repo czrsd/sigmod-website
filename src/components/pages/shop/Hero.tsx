@@ -115,7 +115,7 @@ export default function Hero({
                         <div className='w-full space-y-2'>
                             <Progress
                                 value={Number(progress) || 0}
-                                className='bg-transparent border'
+                                className='bg-orange-950/50 border'
                             />
                         </div>
                     </div>

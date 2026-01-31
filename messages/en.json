@@ -688,8 +688,13 @@
                 "subscription": "Subscription",
                 "month": "month",
                 "months": "months",
-                "save": "Save {percent}%",
-                "buyNow": "Buy now"
+                "save": "SAVE {percent}%",
+                "buyNow": "Buy now",
+                "labels": {
+                    "flash": "Starter Choice",
+                    "popular": "Most Popular",
+                    "ultimate": "Ultimate Savings"
+                }
             },
             "Products": {
                 "title": "Products",
@@ -813,6 +818,10 @@
                 "loading": "Loading...",
                 "notFound": "Product not found",
                 "title": "Coin Packages",
+                "features": {
+                    "instant": "Instant Delivery",
+                    "unlock": "Unlock Items"
+                },
                 "saveMore": "Want to save even more? Check our bundles.",
                 "buyNow": "Buy now",
                 "viewBundles": "View Bundles",
@@ -823,19 +832,28 @@
             "SubscriptionPackages": {
                 "loading": "Loading...",
                 "notFound": "Product not found",
-                "title": "Subscription Packages",
-                "saveMore": "Want to save even more? Check our bundles.",
+                "title": "Premium Subscriptions",
+                "saveMore": "Want to save even more?",
                 "buyNow": "Buy now",
                 "viewBundles": "View Bundles",
-                "monthLabel": "{duration} month",
-                "monthsLabel": "{duration} months",
+                "monthLabel": "{duration} Month",
+                "monthsLabel": "{duration} Months",
                 "price": "€{price}",
-                "originalPrice": "€{original}"
+                "originalPrice": "€{original}",
+                "perks": {
+                    "clans": "Clan Creation",
+                    "pass": "Exclusive Sigma Pass",
+                    "goldNick": "Gold Nickname"
+                }
             },
             "BundlesPage": {
                 "loading": "Loading...",
                 "notFound": "Product not found",
                 "title": "Bundles",
+                "features": {
+                    "bestValue": "Best Value",
+                    "exclusive": "All-in-One Pack"
+                },
                 "buyNow": "Buy now",
                 "monthLabel": "{duration} month Subscription",
                 "monthsLabel": "{duration} months Subscription",

@@ -2,33 +2,12 @@
 import { Button } from '@/components/ui/button';
 import { FullBundle } from '@/types/shopTypes';
 import { formatNumber } from '@/utils/format';
-import { Plus, Sparkles, Flame, TrendingUp } from 'lucide-react';
+import { Plus, Sparkles, Flame, TrendingUp, Zap } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
-
-const colorSchemes = [
-    {
-        primary: '#FFD900',
-        secondary: '#B77100',
-        glow: 'rgba(255, 217, 0, 0.3)',
-        label: 'Best Value',
-    },
-    {
-        primary: '#44FF00',
-        secondary: '#086200',
-        glow: 'rgba(68, 255, 0, 0.3)',
-        label: 'Most Popular',
-    },
-    {
-        primary: '#0095FF',
-        secondary: '#0018B7',
-        glow: 'rgba(0, 149, 255, 0.3)',
-        label: 'Trending',
-    },
-];
 
 export default function SpecialBundles({
     bundles,
@@ -42,7 +21,32 @@ export default function SpecialBundles({
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => setMounted(true), []);
+
     if (!mounted) return null;
+
+    const colorSchemes = [
+        {
+            primary: '#FFD900',
+            secondary: '#B77100',
+            glow: 'rgba(255, 217, 0, 0.3)',
+            label: t('labels.flash'),
+            icon: <Zap size={12} fill='black' />,
+        },
+        {
+            primary: '#44FF00',
+            secondary: '#086200',
+            glow: 'rgba(68, 255, 0, 0.3)',
+            label: t('labels.popular'),
+            icon: <Flame size={12} fill='black' />,
+        },
+        {
+            primary: '#0095FF',
+            secondary: '#0018B7',
+            glow: 'rgba(0, 149, 255, 0.3)',
+            label: t('labels.ultimate'),
+            icon: <TrendingUp size={12} />,
+        },
+    ];
 
     return (
         <div className='flex justify-center items-center gap-10 flex-wrap py-12'>
@@ -54,6 +58,7 @@ export default function SpecialBundles({
                     bundle.coinPackage.original * sale +
                     bundle.subPackage.original * sale
                 ).toFixed(2);
+
                 const savings = (
                     ((Number(originalCosts) - bundle.price) /
                         Number(originalCosts)) *
@@ -83,23 +88,19 @@ export default function SpecialBundles({
                             className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center gap-1 px-4 py-1.5 rounded-full text-black font-black text-[10px] uppercase tracking-widest shadow-xl border border-white/20'
                             style={{ background: scheme.primary }}
                         >
-                            {i === 1 ? (
-                                <Flame size={12} fill='black' />
-                            ) : (
-                                <TrendingUp size={12} />
-                            )}
+                            {scheme.icon}
                             {scheme.label}
                         </div>
 
                         <div className='absolute top-4 right-4 z-10'>
                             <div className='bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded-md shadow-md'>
-                                SAVE {savings}%
+                                {t('save', { percent: savings })}
                             </div>
                         </div>
 
                         <div className='w-full pt-8 pb-4 text-center'>
                             <h3
-                                className='text-2xl font-black uppercase italic tracking-tighter'
+                                className='text-3xl font-black uppercase italic tracking-tighter'
                                 style={{
                                     color: scheme.primary,
                                     textShadow: `0 0 15px ${scheme.glow}`,
@@ -165,6 +166,9 @@ export default function SpecialBundles({
                                             background: `linear-gradient(to bottom, #fff, ${scheme.primary})`,
                                             WebkitBackgroundClip: 'text',
                                             WebkitTextFillColor: 'transparent',
+                                            WebkitTextStroke: isLight
+                                                ? '1px rgba(0,0,0,0.1)'
+                                                : 'none',
                                             filter: `drop-shadow(0 0 20px ${scheme.glow})`,
                                         }}
                                     >

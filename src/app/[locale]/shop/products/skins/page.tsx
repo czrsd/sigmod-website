@@ -51,7 +51,9 @@ export default function SkinsProducts() {
 
     return (
         <section className='flex flex-col items-center text-center space-y-8'>
-            <h1 className='text-3xl font-bold'>{t('title')}</h1>
+            <h1 className='text-4xl font-black uppercase italic tracking-tighter'>
+                {t('title')}
+            </h1>
 
             <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl w-full'>
                 {skins.map((skin, i) => (
@@ -59,9 +61,15 @@ export default function SkinsProducts() {
                 ))}
             </div>
 
-            <div className='flex flex-col items-center space-y-3 pt-6'>
-                <p className='text-sm text-neutral-400'>{t('saveMore')}</p>
-                <Button asChild variant='outline' className='font-semibold'>
+            <div className='flex flex-col items-center space-y-3 pt-4'>
+                <p className='text-xs font-bold uppercase tracking-widest text-neutral-500'>
+                    {t('saveMore')}
+                </p>
+                <Button
+                    asChild
+                    variant='outline'
+                    className='font-bold uppercase italic transition-all'
+                >
                     <Link href='/shop/products/bundles'>
                         {t('viewBundles')}
                     </Link>
