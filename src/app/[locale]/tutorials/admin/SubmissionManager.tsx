@@ -107,7 +107,6 @@ export default function SubmissionManager({
                         key={tutorial._id}
                         className='group relative flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 rounded-3xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-all'
                     >
-                        {/* Info Section */}
                         <div className='space-y-1'>
                             <div className='flex items-center gap-3'>
                                 <span

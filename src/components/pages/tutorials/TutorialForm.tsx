@@ -4,7 +4,7 @@ import { useState, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { useTranslations } from 'next-intl';
 import { useDropzone } from 'react-dropzone';
-import { Send, Hash, Upload, X } from 'lucide-react';
+import { Send, Hash, ImageIcon, Upload, X } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
@@ -27,7 +27,6 @@ export default function TutorialForm({
     const router = useRouter();
     const [loading, setLoading] = useState(false);
 
-    // Form States
     const [title, setTitle] = useState(initialData?.title || '');
     const [description, setDescription] = useState(
         initialData?.description || ''
@@ -35,8 +34,6 @@ export default function TutorialForm({
     const [youtubeUrl, setYoutubeUrl] = useState(
         initialData?.contentUrls?.[0] || ''
     );
-
-    // Media States
     const [mediaType, setMediaType] = useState<'youtube' | 'video' | 'images'>(
         initialData?.type || 'youtube'
     );
@@ -44,61 +41,75 @@ export default function TutorialForm({
         initialData?.tags || []
     );
 
-    // Thumbnail & File States
-    const [useYoutubeThumbnail, setUseYoutubeThumbnail] = useState(true);
-    const [files, setFiles] = useState<File[]>([]);
-    const [previews, setPreviews] = useState<string[]>([]);
+    const [contentFiles, setContentFiles] = useState<File[]>([]);
+    const [contentPreviews, setContentPreviews] = useState<string[]>([]);
 
-    // --- Helpers ---
+    const [thumbnailFile, setThumbnailFile] = useState<File | null>(null);
+    const [thumbnailPreview, setThumbnailPreview] = useState<string | null>(
+        initialData?.thumbnailUrl || null
+    );
+    const [useYoutubeThumbnail, setUseYoutubeThumbnail] = useState(
+        !initialData?.thumbnailUrl
+    );
+
+    const MAX_TAGS = 5;
 
     const toggleTag = (id: string) => {
-        setSelectedTags((prev) =>
-            prev.includes(id) ? prev.filter((i) => i !== id) : [...prev, id]
-        );
-    };
-
-    const onDrop = useCallback(
-        (acceptedFiles: File[]) => {
-            // If uploading custom thumbnail for YT, allow only 1 image
-            if (mediaType === 'youtube') {
-                const file = acceptedFiles[0];
-                setFiles([file]);
-                setPreviews([URL.createObjectURL(file)]);
-                return;
+        setSelectedTags((prev) => {
+            if (prev.includes(id)) {
+                return prev.filter((i) => i !== id);
             }
 
+            if (prev.length >= MAX_TAGS) {
+                return prev;
+            }
+
+            return [...prev, id];
+        });
+    };
+    const onDropContent = useCallback(
+        (acceptedFiles: File[]) => {
             const newFiles =
                 mediaType === 'video' ? [acceptedFiles[0]] : acceptedFiles;
-            setFiles(newFiles);
-            setPreviews(newFiles.map((file) => URL.createObjectURL(file)));
+            setContentFiles(newFiles);
+            setContentPreviews(
+                newFiles.map((file) => URL.createObjectURL(file))
+            );
         },
         [mediaType]
     );
 
-    const { getRootProps, getInputProps, isDragActive } = useDropzone({
-        onDrop,
+    const onDropThumbnail = useCallback((acceptedFiles: File[]) => {
+        const file = acceptedFiles[0];
+        setThumbnailFile(file);
+        setThumbnailPreview(URL.createObjectURL(file));
+    }, []);
+
+    const contentDropzone = useDropzone({
+        onDrop: onDropContent,
         accept:
             mediaType === 'video'
                 ? { 'video/*': ['.mp4', '.webm'] }
-                : { 'image/*': ['.jpeg', '.png', '.webp', '.gif'] },
+                : { 'image/*': ['.jpeg', '.png', '.webp'] },
         multiple: mediaType === 'images',
-        maxFiles: mediaType === 'video' || mediaType === 'youtube' ? 1 : 10,
     });
 
-    // --- Upload Logic ---
+    const thumbnailDropzone = useDropzone({
+        onDrop: onDropThumbnail,
+        accept: { 'image/*': ['.jpeg', '.png', '.webp'] },
+        multiple: false,
+    });
 
     const uploadFileToProxy = async (file: File) => {
         const formData = new FormData();
         formData.append('file', file);
-
         const res = await fetch('/api/upload', {
             method: 'POST',
             body: formData,
         });
-
         if (!res.ok) throw new Error('Upload failed');
         const data = await res.json();
-        return data.url; // The CDN URL
+        return data.url;
     };
 
     const handleSubmit = async (e: React.FormEvent) => {
@@ -107,57 +118,56 @@ export default function TutorialForm({
 
         try {
             let contentUrls: string[] = [];
-            let thumbnailUrl = null;
+            let finalThumbnailUrl = initialData?.thumbnailUrl || null;
 
-            // 1. Handle File Uploads based on type
+            if (
+                (mediaType !== 'youtube' || !useYoutubeThumbnail) &&
+                thumbnailFile
+            ) {
+                finalThumbnailUrl = await uploadFileToProxy(thumbnailFile);
+            }
+
             if (mediaType === 'youtube') {
                 contentUrls = [youtubeUrl];
-                // Handle Custom Thumbnail
-                if (!useYoutubeThumbnail && files.length > 0) {
-                    thumbnailUrl = await uploadFileToProxy(files[0]);
-                }
             } else {
-                // Upload Video or Images
-                const uploadPromises = files.map((file) =>
+                const uploadPromises = contentFiles.map((file) =>
                     uploadFileToProxy(file)
                 );
                 contentUrls = await Promise.all(uploadPromises);
+                if (contentUrls.length === 0 && initialData)
+                    contentUrls = initialData.contentUrls;
             }
 
             if (contentUrls.length === 0) {
-                alert('Please provide content (URL or Files)');
+                alert('Please provide content');
                 setLoading(false);
                 return;
             }
 
-            // 2. Submit Tutorial Data
             const payload = {
                 title,
                 description,
                 type: mediaType,
                 contentUrls,
-                thumbnailUrl,
+                thumbnailUrl: finalThumbnailUrl,
                 tags: selectedTags,
             };
 
             const endpoint = initialData
                 ? `/api/tutorials/${initialData._id}`
                 : '/api/tutorials';
-            const method = initialData ? 'PATCH' : 'POST';
-
             const res = await fetch(endpoint, {
-                method,
+                method: initialData ? 'PATCH' : 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(payload),
             });
 
             if (!res.ok) throw new Error('Submission failed');
-
             router.push('/tutorials');
             router.refresh();
         } catch (error) {
             console.error(error);
-            alert('Something went wrong. Check console.');
+            alert('Error during upload');
         } finally {
             setLoading(false);
         }
@@ -168,7 +178,6 @@ export default function TutorialForm({
             onSubmit={handleSubmit}
             className='w-full max-w-3xl space-y-8 p-8 rounded-[2.5rem] border border-white/5 bg-white/[0.02] backdrop-blur-xl'
         >
-            {/* Title & Type */}
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                 <div className='space-y-2'>
                     <label className='text-[10px] font-black uppercase italic text-neutral-500 ml-2'>
@@ -178,6 +187,7 @@ export default function TutorialForm({
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         className='bg-white/5 border-white/10 h-14 rounded-2xl font-bold'
+                        placeholder='How to...'
                         required
                     />
                 </div>
@@ -189,8 +199,8 @@ export default function TutorialForm({
                         value={mediaType}
                         onChange={(e) => {
                             setMediaType(e.target.value as any);
-                            setFiles([]);
-                            setPreviews([]);
+                            setContentFiles([]);
+                            setContentPreviews([]);
                             setUseYoutubeThumbnail(true);
                         }}
                         className='w-full h-14 bg-[#0c0c0c] border border-white/10 rounded-2xl px-4 text-sm font-bold text-white outline-none focus:border-primary'
@@ -202,9 +212,8 @@ export default function TutorialForm({
                 </div>
             </div>
 
-            {/* Media Area */}
             <div className='space-y-4'>
-                {mediaType === 'youtube' && (
+                {mediaType === 'youtube' ? (
                     <div className='space-y-4 animate-in fade-in slide-in-from-top-2'>
                         <Input
                             value={youtubeUrl}
@@ -223,73 +232,109 @@ export default function TutorialForm({
                             />
                         </div>
                     </div>
+                ) : (
+                    <div className='space-y-2 animate-in fade-in slide-in-from-top-2'>
+                        <label className='text-[10px] font-black uppercase italic text-neutral-500 ml-2'>
+                            {mediaType === 'video'
+                                ? 'Upload Video (MP4)'
+                                : 'Upload Images'}
+                        </label>
+                        <div
+                            {...contentDropzone.getRootProps()}
+                            className={`relative border-2 border-dashed rounded-3xl p-10 transition-all cursor-pointer flex flex-col items-center justify-center gap-4 ${
+                                contentDropzone.isDragActive
+                                    ? 'border-primary bg-primary/5'
+                                    : 'border-white/10 hover:border-white/20 bg-white/5'
+                            }`}
+                        >
+                            <input {...contentDropzone.getInputProps()} />
+                            {contentPreviews.length > 0 ? (
+                                <div className='grid grid-cols-2 md:grid-cols-3 gap-4 w-full'>
+                                    {contentPreviews.map((p, i) => (
+                                        <div
+                                            key={i}
+                                            className='relative aspect-video rounded-xl overflow-hidden border border-white/10'
+                                        >
+                                            {mediaType === 'video' ? (
+                                                <video
+                                                    src={p}
+                                                    className='w-full h-full object-cover'
+                                                />
+                                            ) : (
+                                                <img
+                                                    src={p}
+                                                    className='w-full h-full object-cover'
+                                                    alt='Preview'
+                                                />
+                                            )}
+                                        </div>
+                                    ))}
+                                </div>
+                            ) : (
+                                <>
+                                    <div className='p-4 rounded-full bg-white/5 text-primary'>
+                                        <Upload size={24} />
+                                    </div>
+                                    <p className='text-[10px] font-black uppercase italic text-neutral-400'>
+                                        {mediaType === 'video'
+                                            ? 'Drop your video here'
+                                            : 'Drop your images here'}
+                                    </p>
+                                </>
+                            )}
+                        </div>
+                    </div>
                 )}
 
-                {/* Dropzone for Video, Images, or Custom Thumbnail */}
                 {(mediaType !== 'youtube' || !useYoutubeThumbnail) && (
-                    <div
-                        {...getRootProps()}
-                        className={`relative border-2 border-dashed rounded-3xl p-10 transition-all cursor-pointer flex flex-col items-center justify-center gap-4 ${
-                            isDragActive
-                                ? 'border-primary bg-primary/5'
-                                : 'border-white/10 hover:border-white/20 bg-white/5'
-                        }`}
-                    >
-                        <input {...getInputProps()} />
-                        {previews.length > 0 ? (
-                            <div className='grid grid-cols-2 md:grid-cols-3 gap-4 w-full'>
-                                {previews.map((p, i) => (
-                                    <div
-                                        key={i}
-                                        className='relative aspect-video rounded-xl overflow-hidden border border-white/10'
+                    <div className='space-y-2 animate-in fade-in'>
+                        <label className='text-[10px] font-black uppercase italic text-neutral-500 ml-2'>
+                            Thumbnail
+                        </label>
+                        <div
+                            {...thumbnailDropzone.getRootProps()}
+                            className={`relative border-2 border-dashed rounded-3xl p-6 transition-all cursor-pointer flex flex-col items-center justify-center gap-2 ${
+                                thumbnailDropzone.isDragActive
+                                    ? 'border-primary bg-primary/5'
+                                    : 'border-white/10 bg-white/5'
+                            }`}
+                        >
+                            <input {...thumbnailDropzone.getInputProps()} />
+                            {thumbnailPreview ? (
+                                <div className='relative w-40 aspect-video rounded-lg overflow-hidden border border-white/20'>
+                                    <img
+                                        src={thumbnailPreview}
+                                        className='w-full h-full object-cover'
+                                        alt='thumbnail'
+                                    />
+                                    <button
+                                        type='button'
+                                        onClick={(e) => {
+                                            e.stopPropagation();
+                                            setThumbnailFile(null);
+                                            setThumbnailPreview(null);
+                                        }}
+                                        className='absolute top-1 right-1 p-1 bg-black/50 rounded-full hover:bg-red-500'
                                     >
-                                        {mediaType === 'video' ? (
-                                            <video
-                                                src={p}
-                                                className='w-full h-full object-cover'
-                                            />
-                                        ) : (
-                                            <img
-                                                src={p}
-                                                className='w-full h-full object-cover'
-                                                alt='Preview'
-                                            />
-                                        )}
-                                        <button
-                                            type='button'
-                                            onClick={(e) => {
-                                                e.stopPropagation();
-                                                setPreviews([]);
-                                                setFiles([]);
-                                            }}
-                                            className='absolute top-2 right-2 p-1 bg-black/50 rounded-full hover:bg-red-500 transition-colors'
-                                        >
-                                            <X size={14} />
-                                        </button>
-                                    </div>
-                                ))}
-                            </div>
-                        ) : (
-                            <>
-                                <div className='p-4 rounded-full bg-white/5 text-primary'>
-                                    <Upload size={24} />
+                                        <X size={12} />
+                                    </button>
                                 </div>
-                                <p className='text-[10px] font-black uppercase italic text-neutral-400'>
-                                    {t(
-                                        `dropzone.${
-                                            mediaType === 'youtube'
-                                                ? 'thumbnail'
-                                                : mediaType
-                                        }`
-                                    )}
-                                </p>
-                            </>
-                        )}
+                            ) : (
+                                <>
+                                    <ImageIcon
+                                        size={20}
+                                        className='text-neutral-500'
+                                    />
+                                    <p className='text-[10px] font-black uppercase italic text-neutral-400'>
+                                        Upload custom thumbnail
+                                    </p>
+                                </>
+                            )}
+                        </div>
                     </div>
                 )}
             </div>
 
-            {/* Description */}
             <div className='space-y-2'>
                 <label className='text-[10px] font-black uppercase italic text-neutral-500 ml-2'>
                     {t('description')}
@@ -298,30 +343,49 @@ export default function TutorialForm({
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
                     className='bg-white/5 border-white/10 min-h-[120px] rounded-2xl font-medium'
+                    placeholder='This video shows...'
                     required
                 />
             </div>
 
-            {/* Tags */}
             <div className='space-y-3'>
-                <label className='text-[10px] font-black uppercase italic text-neutral-500 ml-2 flex items-center gap-2'>
-                    <Hash size={12} /> {t('tags')}
-                </label>
-                <div className='flex flex-wrap gap-2 p-4 rounded-2xl bg-black/40 border border-white/5'>
-                    {tags.map((tag) => (
-                        <button
-                            key={tag._id}
-                            type='button'
-                            onClick={() => toggleTag(tag._id)}
-                            className={`px-4 py-2 rounded-xl text-[10px] font-black uppercase italic border transition-all ${
-                                selectedTags.includes(tag._id)
-                                    ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
-                                    : 'bg-white/5 border-white/10 text-neutral-500 hover:border-white/20'
-                            }`}
+                <div className='space-y-3'>
+                    <label className='text-[10px] font-black uppercase italic text-neutral-500 ml-2 flex items-center justify-between'>
+                        <span className='flex items-center gap-2'>
+                            <Hash size={12} /> {t('tags')}
+                        </span>
+                        <span
+                            className={
+                                selectedTags.length >= 5 ? 'text-primary' : ''
+                            }
                         >
-                            {tag.name}
-                        </button>
-                    ))}
+                            {selectedTags.length} / 5
+                        </span>
+                    </label>
+                    <div className='flex flex-wrap gap-2 p-4 rounded-2xl bg-black/40 border border-white/5'>
+                        {tags.map((tag) => {
+                            const isSelected = selectedTags.includes(tag._id);
+                            const isLimitReached = selectedTags.length >= 5;
+
+                            return (
+                                <button
+                                    key={tag._id}
+                                    type='button'
+                                    onClick={() => toggleTag(tag._id)}
+                                    disabled={!isSelected && isLimitReached}
+                                    className={`px-4 py-2 rounded-xl text-[10px] font-black uppercase italic border transition-all ${
+                                        isSelected
+                                            ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+                                            : isLimitReached
+                                            ? 'bg-white/5 border-white/5 text-neutral-700 cursor-not-allowed'
+                                            : 'bg-white/5 border-white/10 text-neutral-500 hover:border-white/20'
+                                    }`}
+                                >
+                                    {tag.name}
+                                </button>
+                            );
+                        })}
+                    </div>
                 </div>
             </div>
 

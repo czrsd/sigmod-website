@@ -5,6 +5,8 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import ViewLog from '@/models/ViewLog';
 import crypto from 'crypto';
+import mongoose from 'mongoose';
+import User from '@/models/User';
 
 interface RouteParams {
     params: {
@@ -14,49 +16,62 @@ interface RouteParams {
 
 export async function GET(
     req: NextRequest,
-    { params }: { params: { id: string } }
+    { params }: { params: Promise<{ id: string }> }
 ) {
     await dbConnect();
     const { id } = await params;
+
+    const query = mongoose.Types.ObjectId.isValid(id)
+        ? { _id: id }
+        : { slug: id };
+
+    const tutorial = await Tutorial.findOne(query)
+        .populate('tags')
+        .populate({ path: 'authorId', select: 'name image role', model: User });
+    if (!tutorial)
+        return NextResponse.json({ error: 'Not found' }, { status: 404 });
 
     const ip = req.headers.get('x-forwarded-for') || '0.0.0.0';
     const ua = req.headers.get('user-agent') || 'unknown';
 
     const viewHash = crypto
         .createHash('sha256')
-        .update(`${id}-${ip}-${ua}`)
+        .update(`${tutorial._id}-${ip}-${ua}`)
         .digest('hex');
-
-    let tutorial;
 
     try {
         await ViewLog.create({ identifier: viewHash });
 
-        tutorial = await Tutorial.findByIdAndUpdate(
-            id,
+        const updatedTutorial = await Tutorial.findByIdAndUpdate(
+            tutorial._id,
             { $inc: { views: 1 } },
             { new: true }
         ).populate('tags');
-    } catch (e) {
-        tutorial = await Tutorial.findById(id).populate('tags');
-    }
 
-    if (!tutorial)
-        return NextResponse.json({ error: 'Not found' }, { status: 404 });
-    return NextResponse.json(tutorial);
+        return NextResponse.json(updatedTutorial);
+    } catch (e) {
+        return NextResponse.json(tutorial);
+    }
 }
 
 export async function POST(
     req: NextRequest,
-    { params }: { params: { id: string } }
+    { params }: { params: Promise<{ id: string }> }
 ) {
     const session = await getServerSession(authOptions);
     if (!session)
         return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
+    const { id } = await params;
     await dbConnect();
+
     const userId = session.user.id;
-    const tutorial = await Tutorial.findById(params.id);
+
+    const query = mongoose.Types.ObjectId.isValid(id)
+        ? { _id: id }
+        : { slug: id };
+
+    const tutorial = await Tutorial.findOne(query);
 
     if (!tutorial)
         return NextResponse.json({ error: 'Not found' }, { status: 404 });
@@ -64,13 +79,17 @@ export async function POST(
     const hasLiked = tutorial.likes.includes(userId);
 
     if (hasLiked) {
-        tutorial.likes = tutorial.likes.filter((id) => id !== userId);
+        tutorial.likes = tutorial.likes.filter((lid: string) => lid !== userId);
     } else {
         tutorial.likes.push(userId);
     }
 
     await tutorial.save();
-    return NextResponse.json({ likes: tutorial.likes, hasLiked: !hasLiked });
+
+    return NextResponse.json({
+        likes: tutorial.likes,
+        hasLiked: !hasLiked,
+    });
 }
 
 // ADMIN/MODERATOR ROUTES
@@ -81,32 +100,50 @@ export async function DELETE(req: Request, { params }: RouteParams) {
         return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
     const { id } = await params;
-
     await dbConnect();
 
     try {
         const tutorial = await Tutorial.findById(id);
-
-        if (!tutorial) {
-            return NextResponse.json(
-                { error: 'Tutorial not found' },
-                { status: 404 }
-            );
-        }
+        if (!tutorial)
+            return NextResponse.json({ error: 'Not found' }, { status: 404 });
 
         const isAuthor = tutorial.authorId === session.user.id;
         const isAdmin =
             session.user.role === 'admin' || session.user.role === 'moderator';
-
-        if (!isAuthor && !isAdmin) {
+        if (!isAuthor && !isAdmin)
             return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
+
+        const filesToDelete = [...(tutorial.contentUrls || [])];
+        if (tutorial.thumbnailUrl) filesToDelete.push(tutorial.thumbnailUrl);
+
+        const cdnFiles = filesToDelete.filter((url) =>
+            url.includes('cdn.sigmally.xyz')
+        );
+
+        if (cdnFiles.length > 0) {
+            try {
+                await Promise.all(
+                    cdnFiles.map(async (fileUrl) => {
+                        await fetch('https://cdn.sigmally.xyz/delete', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'x-api-key': process.env.CDN_API_KEY as string,
+                            },
+                            body: JSON.stringify({ fileUrl }),
+                        });
+                    })
+                );
+            } catch (cdnErr) {
+                console.error('Failed to notify CDN about deletion:', cdnErr);
+            }
         }
 
         await Tutorial.findByIdAndDelete(id);
 
         return NextResponse.json({
             success: true,
-            message: 'Tutorial deleted',
+            message: 'Tutorial and associated files deleted',
         });
     } catch (error) {
         console.error('Delete Error:', error);

@@ -17,10 +17,18 @@ import {
     Eye,
     Heart,
     ArrowUpRight,
+    SlidersHorizontal,
 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { ITutorialData as Tutorial } from '@/models/Tutorial';
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from '@/components/ui/select';
+import { ITutorialPopulated as Tutorial } from '@/models/Tutorial';
 import { ITagData as Tag } from '@/models/Tag';
 import { Serializable } from '@/types/utils';
 
@@ -30,6 +38,7 @@ export default function TutorialsPage() {
     const [tags, setTags] = useState<Serializable<Tag[]>>([]);
     const [activeTag, setActiveTag] = useState('all');
     const [activeType, setActiveType] = useState('all');
+    const [sortBy, setSortBy] = useState('likes');
     const [search, setSearch] = useState('');
     const [loading, setLoading] = useState(true);
 
@@ -43,14 +52,14 @@ export default function TutorialsPage() {
         const fetchTutorials = async () => {
             setLoading(true);
             const res = await fetch(
-                `/api/tutorials?tag=${activeTag}&type=${activeType}`
+                `/api/tutorials?tag=${activeTag}&type=${activeType}&sort=${sortBy}`
             );
             const data = await res.json();
             setTutorials(data);
             setLoading(false);
         };
         fetchTutorials();
-    }, [activeTag, activeType]);
+    }, [activeTag, activeType, sortBy]);
 
     const filtered = tutorials.filter((t) =>
         t.title.toLowerCase().includes(search.toLowerCase())
@@ -136,74 +145,102 @@ export default function TutorialsPage() {
                 </div>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-                <div className='md:col-span-2 relative group'>
-                    <Search
-                        className='absolute left-4 top-1/2 -translate-y-1/2 text-white/20 group-focus-within:text-primary transition-colors'
-                        size={18}
-                    />
+            <div className='grid grid-cols-1 lg:grid-cols-4 gap-4 items-end'>
+                <div className='lg:col-span-2 relative group'>
+                    <div className='flex items-center gap-2 mb-2 text-neutral-500 text-[10px] font-black uppercase italic tracking-widest'>
+                        <Search size={12} className='text-primary' /> Search
+                    </div>
                     <Input
                         placeholder='Search tutorials...'
-                        className='pl-12 bg-white/5 border-white/10 h-12 rounded-xl focus:ring-1 ring-primary/50 transition-all placeholder:text-neutral-600 font-medium'
+                        className='pl-4 bg-white/5 border-white/10 h-12 rounded-xl focus:ring-1 ring-primary/50 transition-all placeholder:text-neutral-600 font-medium'
                         onChange={(e) => setSearch(e.target.value)}
                     />
                 </div>
-                <div className='flex bg-white/5 p-1 rounded-xl border border-white/10'>
-                    {['all', 'youtube', 'video', 'image'].map((type) => (
-                        <button
-                            key={type}
-                            onClick={() => setActiveType(type)}
-                            className={`flex-1 text-[10px] font-black uppercase italic rounded-lg transition-all py-2 ${
-                                activeType === type
-                                    ? 'bg-white/10 text-primary shadow-inner'
-                                    : 'text-neutral-500 hover:text-white'
-                            }`}
-                        >
-                            {type}
-                        </button>
-                    ))}
+
+                <div className='space-y-2'>
+                    <div className='flex items-center gap-2 text-neutral-500 text-[10px] font-black uppercase italic tracking-widest'>
+                        <Filter size={12} className='text-primary' /> Category
+                    </div>
+                    <Select value={activeTag} onValueChange={setActiveTag}>
+                        <SelectTrigger className='bg-white/5 border-white/10 h-12 rounded-xl text-white font-bold uppercase italic text-[11px]'>
+                            <SelectValue placeholder='Category' />
+                        </SelectTrigger>
+                        <SelectContent className='bg-[#0A0A0A] border-white/10 text-white'>
+                            <SelectItem
+                                value='all'
+                                className='font-bold uppercase italic text-[11px]'
+                            >
+                                All Categories
+                            </SelectItem>
+                            {tags.map((tag) => (
+                                <SelectItem
+                                    key={tag._id}
+                                    value={tag.slug}
+                                    className='font-bold uppercase italic text-[11px]'
+                                >
+                                    <div className='flex items-center gap-2'>
+                                        <div
+                                            className='w-2 h-2 rounded-full'
+                                            style={{
+                                                backgroundColor: tag.color,
+                                            }}
+                                        />
+                                        {tag.name}
+                                    </div>
+                                </SelectItem>
+                            ))}
+                        </SelectContent>
+                    </Select>
+                </div>
+
+                <div className='space-y-2'>
+                    <div className='flex items-center gap-2 text-neutral-500 text-[10px] font-black uppercase italic tracking-widest'>
+                        <SlidersHorizontal size={12} className='text-primary' />{' '}
+                        Sort By
+                    </div>
+                    <Select value={sortBy} onValueChange={setSortBy}>
+                        <SelectTrigger className='bg-white/5 border-white/10 h-12 rounded-xl text-white font-bold uppercase italic text-[11px]'>
+                            <SelectValue />
+                        </SelectTrigger>
+                        <SelectContent className='bg-[#0A0A0A] border-white/10 text-white'>
+                            <SelectItem
+                                value='newest'
+                                className='font-bold uppercase italic text-[11px]'
+                            >
+                                Newest First
+                            </SelectItem>
+                            <SelectItem
+                                value='views'
+                                className='font-bold uppercase italic text-[11px]'
+                            >
+                                Most Viewed
+                            </SelectItem>
+                            <SelectItem
+                                value='likes'
+                                className='font-bold uppercase italic text-[11px]'
+                            >
+                                Most Liked
+                            </SelectItem>
+                        </SelectContent>
+                    </Select>
                 </div>
             </div>
 
-            <div className='space-y-3'>
-                <div className='flex items-center gap-2 text-neutral-500 text-[10px] font-black uppercase italic tracking-widest'>
-                    <Filter size={12} className='text-primary' /> Filter by
-                    Category
-                </div>
-                <div className='flex flex-wrap gap-2'>
+            {/* Type Filter (Youtube, Video, Images) */}
+            <div className='flex bg-white/5 p-1 rounded-xl border border-white/10 max-w-sm'>
+                {['all', 'youtube', 'video', 'images'].map((type) => (
                     <button
-                        onClick={() => setActiveTag('all')}
-                        className={`px-5 py-2 rounded-full border text-[10px] font-black uppercase italic transition-all ${
-                            activeTag === 'all'
-                                ? 'bg-primary border-primary text-black'
-                                : 'bg-white/5 border-white/10 text-white hover:border-white/30'
+                        key={type}
+                        onClick={() => setActiveType(type)}
+                        className={`flex-1 text-[10px] font-black uppercase italic rounded-lg transition-all py-2 ${
+                            activeType === type
+                                ? 'bg-white/10 text-primary shadow-inner'
+                                : 'text-neutral-500 hover:text-white'
                         }`}
                     >
-                        All
+                        {type}
                     </button>
-                    {tags.map((tag) => (
-                        <button
-                            key={tag._id}
-                            onClick={() => setActiveTag(tag.slug)}
-                            className={`px-5 py-2 rounded-full border text-[10px] font-black uppercase italic transition-all ${
-                                activeTag === tag.slug
-                                    ? 'brightness-125 shadow-[0_0_15px_rgba(255,255,255,0.1)]'
-                                    : 'bg-white/5 border-white/10 text-neutral-400 hover:border-white/40'
-                            }`}
-                            style={{
-                                backgroundColor:
-                                    activeTag === tag.slug
-                                        ? tag.color
-                                        : 'transparent',
-                                borderColor:
-                                    activeTag === tag.slug ? tag.color : '',
-                                color: activeTag === tag.slug ? '#000' : '',
-                            }}
-                        >
-                            {tag.name}
-                        </button>
-                    ))}
-                </div>
+                ))}
             </div>
 
             {loading ? (
@@ -214,7 +251,7 @@ export default function TutorialsPage() {
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
                     {filtered.map((t) => (
                         <Link
-                            href={`/tutorials/${t._id}`}
+                            href={`/tutorials/${t.slug || t._id}`}
                             key={t._id}
                             className='group relative block p-px rounded-[2.2rem] bg-gradient-to-br from-white/10 to-transparent hover:from-primary/20 transition-all duration-500'
                         >
@@ -229,7 +266,12 @@ export default function TutorialsPage() {
                                                   )
                                                 : null;
                                         const displayImage =
-                                            t.thumbnailUrl || ytThumb;
+                                            t.thumbnailUrl ||
+                                            ytThumb ||
+                                            (t.type === 'images' &&
+                                            t.contentUrls?.[0]
+                                                ? t.contentUrls[0]
+                                                : null);
 
                                         if (displayImage) {
                                             return (
@@ -281,6 +323,21 @@ export default function TutorialsPage() {
                                             <ImageIcon size={16} />
                                         )}
                                     </div>
+                                </div>
+
+                                <div className='absolute top-4 right-4 flex items-center gap-2 p-1.5 pr-3 rounded-full bg-black/60 backdrop-blur-md border border-white/10'>
+                                    {t.authorId?.image ? (
+                                        <img
+                                            src={t.authorId.image}
+                                            className='w-5 h-5 rounded-full object-cover'
+                                            alt=''
+                                        />
+                                    ) : (
+                                        <div className='w-5 h-5 rounded-full bg-white/10' />
+                                    )}
+                                    <span className='text-[9px] font-bold text-white/90 uppercase tracking-wider'>
+                                        By {t.authorId?.name || 'Unknown'}
+                                    </span>
                                 </div>
 
                                 <div className='p-6 flex flex-col flex-grow'>

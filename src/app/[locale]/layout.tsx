@@ -8,6 +8,7 @@ import { routing } from '@/i18n/routing';
 import Footer from '@/components/Footer';
 import Preload from '@/components/Preload';
 import { Providers } from './providers';
+import { Toaster } from '@/components/ui/sonner';
 
 const SITE = (
     process.env.NEXT_PUBLIC_SITE_URL || 'https://sigmally.xyz'
@@ -144,6 +145,8 @@ export default async function RootLayout({
                     <div className='relative z-0'>{children}</div>
 
                     <Footer />
+
+                    <Toaster />
                 </Providers>
             </body>
         </html>

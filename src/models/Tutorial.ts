@@ -3,9 +3,10 @@ import { ITag } from './Tag';
 
 export interface ITutorialData {
     _id: string;
+    slug: string;
     title: string;
     description: string;
-    type: 'youtube' | 'video' | 'image';
+    type: 'youtube' | 'video' | 'images';
     contentUrls: string[];
     thumbnailUrl?: string;
     authorId: string;
@@ -18,6 +19,15 @@ export interface ITutorialData {
     updatedAt: string | Date;
 }
 
+export interface ITutorialPopulated extends Omit<ITutorialData, 'authorId'> {
+    authorId: {
+        _id: string;
+        name: string;
+        image: string;
+        role?: string;
+    };
+}
+
 export interface ITutorial
     extends Omit<ITutorialData, '_id' | 'tags'>,
         Document {
@@ -27,10 +37,17 @@ export interface ITutorial
 const TutorialSchema = new Schema<ITutorial>(
     {
         title: { type: String, required: true, trim: true },
+        slug: {
+            type: String,
+            required: true,
+            unique: true,
+            lowercase: true,
+            trim: true,
+        },
         description: { type: String, required: true },
         type: {
             type: String,
-            enum: ['youtube', 'video', 'image'],
+            enum: ['youtube', 'video', 'images'],
             required: true,
         },
         contentUrls: [{ type: String, required: true }],
