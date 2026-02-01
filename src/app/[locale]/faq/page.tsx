@@ -102,19 +102,19 @@ const RenderSection = ({
     t: any;
 }) => (
     <div className='bg-white/[0.02] border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col h-full'>
-        <div className='flex items-center gap-4 border-b border-white/5 pb-6 mb-2'>
+        <div className='flex items-center gap-4 border-b border-black/5 dark:border-white/5 pb-6 mb-2'>
             <div className='w-12 h-12 rounded-2xl bg-blue-600/10 flex items-center justify-center text-blue-500 shrink-0'>
                 <Icon size={24} />
             </div>
             <div>
-                <h2 className='text-2xl font-black italic uppercase tracking-tighter text-white leading-none'>
+                <h2 className='text-2xl font-black italic uppercase tracking-tighter leading-none'>
                     {t(`${titleKey}.title`)}
                 </h2>
                 {titleKey === 'sigfixes' && (
-                    <p className='text-neutral-500 text-[10px] mt-2 uppercase tracking-widest font-bold'>
+                    <p className='text-neutral-700 dark:text-neutral-500 text-[10px] mt-2 uppercase tracking-widest font-bold'>
                         {t.rich('sigfixes.note', {
                             strong: (c: any) => (
-                                <span className='text-neutral-400'>{c}</span>
+                                <span className='text-neutral-600'>{c}</span>
                             ),
                         })}
                     </p>
@@ -127,12 +127,12 @@ const RenderSection = ({
                 <AccordionItem
                     key={i}
                     value={`${titleKey}-${i}`}
-                    className='border-white/5 last:border-0'
+                    className='border-black/20 dark:border-white/5 last:border-0'
                 >
-                    <AccordionTrigger className='text-left text-neutral-300 hover:text-white transition-all py-4 font-bold tracking-tight text-sm md:text-base'>
+                    <AccordionTrigger className='text-left text-neutral-700 hover:text-neutral-500 dark:text-neutral-300 dark:hover:text-white transition-all py-4 font-bold tracking-tight text-sm md:text-base'>
                         {t(question)}
                     </AccordionTrigger>
-                    <AccordionContent className='text-neutral-400 leading-relaxed pb-6 pt-2 text-sm md:text-base'>
+                    <AccordionContent className='text-neutral-700 dark:text-neutral-400 leading-relaxed pb-6 pt-2 text-sm md:text-base'>
                         {answer(t)}
                     </AccordionContent>
                 </AccordionItem>
@@ -146,13 +146,12 @@ export default function FAQPage() {
 
     return (
         <main className='max-w-6xl mx-auto px-6 py-20 space-y-16'>
-            {/* Header Section */}
             <div className='text-center space-y-4'>
-                <div className='inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-neutral-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-4'>
+                <div className='inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 dark:bg-white/5 border border-white/10 text-neutral-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-4'>
                     <HelpCircle size={12} className='text-blue-500' />
                     {t('statusLabel')}
                 </div>
-                <h1 className='text-5xl md:text-7xl font-black italic tracking-tighter text-white uppercase leading-none'>
+                <h1 className='text-5xl md:text-7xl font-black italic tracking-tighter uppercase leading-none'>
                     {t('title')}
                 </h1>
                 <p className='text-neutral-500 text-lg max-w-xl mx-auto italic'>
@@ -160,9 +159,7 @@ export default function FAQPage() {
                 </p>
             </div>
 
-            {/* Content Grid */}
             <div className='grid gap-8'>
-                {/* General Section (Full Width) */}
                 <RenderSection
                     titleKey='general'
                     items={faqData.general}
@@ -170,7 +167,6 @@ export default function FAQPage() {
                     t={t}
                 />
 
-                {/* Specific Sections (Two Columns) */}
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
                     <RenderSection
                         titleKey='sigmod'
@@ -187,7 +183,6 @@ export default function FAQPage() {
                 </div>
             </div>
 
-            {/* Support Callout */}
             <div className='bg-gradient-to-br from-blue-600 to-purple-700 rounded-[2.5rem] p-10 text-center relative overflow-hidden group shadow-[0_20px_50px_rgba(37,99,235,0.25)]'>
                 <div className='absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
                 <div className='relative z-10 space-y-6'>

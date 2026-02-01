@@ -64,7 +64,7 @@ export default function SubmissionManager({
                 <Button
                     variant='ghost'
                     onClick={() => setEditingId(null)}
-                    className='mb-6 hover:bg-white/10 text-neutral-400 hover:text-white'
+                    className='mb-6 hover:bg-white/10 text-neutral-400 dark:hover:text-white'
                 >
                     <ArrowLeft className='mr-2 h-4 w-4' />
                     {t('backSubmissions')}
@@ -83,14 +83,14 @@ export default function SubmissionManager({
     return (
         <div className='w-full max-w-5xl grid gap-4'>
             {tutorials.length === 0 ? (
-                <div className='text-center p-10 border border-white/5 rounded-3xl bg-white/5 text-neutral-500 italic'>
+                <div className='text-center p-10 border border-white/5 rounded-3xl bg-black/5 dark:bg-white/5 text-neutral-500 italic'>
                     {t('empty')}
                 </div>
             ) : (
                 tutorials.map((tutorial) => (
                     <div
                         key={tutorial._id}
-                        className='group relative flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 rounded-3xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-all'
+                        className='group relative flex flex-col md:flex-row md:items-center justify-between gap-4 p-6 rounded-3xl border border-black/5 dark:border-white/5 bg-black/[0.02] dark:bg-white/[0.02] hover:bg-black/[0.04] dark:hover:bg-white/[0.04] transition-all'
                     >
                         <div className='space-y-1'>
                             <div className='flex items-center gap-3'>
@@ -103,7 +103,7 @@ export default function SubmissionManager({
                                             : 'bg-yellow-500 shadow-[0_0_10px_#eab308]'
                                     }`}
                                 />
-                                <h3 className='font-bold text-lg text-white group-hover:text-primary transition-colors'>
+                                <h3 className='font-bold text-lg group-hover:text-primary transition-colors'>
                                     {tutorial.title}
                                 </h3>
                             </div>
@@ -177,13 +177,13 @@ export default function SubmissionManager({
                                 </Button>
                             )}
 
-                            <div className='w-px h-6 bg-white/10 mx-1' />
+                            <div className='w-px h-6 bg-black/10 dark:bg-white/10 mx-1' />
 
                             <Button
                                 size='icon'
                                 variant='ghost'
                                 onClick={() => setEditingId(tutorial._id)}
-                                className='h-10 w-10 rounded-xl hover:bg-white/10 text-neutral-400'
+                                className='h-10 w-10 rounded-xl hover:bg-black/10 dark:hover:bg-white/10 text-neutral-400'
                                 title={t('edit')}
                             >
                                 <Edit size={18} />

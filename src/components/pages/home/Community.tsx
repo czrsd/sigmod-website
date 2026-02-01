@@ -10,16 +10,16 @@ export function CommunitySection() {
         <section className='relative px-6 md:px-16 py-32 max-w-5xl mx-auto overflow-hidden'>
             <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full -z-10' />
 
-            <div className='flex flex-col items-center text-center space-y-6 bg-neutral-900/40 backdrop-blur-md border border-white/5 p-10 md:p-16 rounded-[2.5rem] shadow-2xl'>
+            <div className='flex flex-col items-center text-center space-y-6 bg-neutral-200/90 dark:bg-neutral-900/40 backdrop-blur-md border border-white/5 p-10 md:p-16 rounded-[2.5rem] shadow-2xl'>
                 <div className='w-14 h-14 bg-[#5865F2]/10 rounded-2xl flex items-center justify-center text-[#5865F2] mb-2'>
                     <MessageSquare size={32} />
                 </div>
 
-                <h3 className='text-4xl md:text-5xl font-black uppercase italic tracking-tighter'>
+                <h4 className='text-4xl md:text-5xl font-black uppercase italic tracking-tighter'>
                     {t('title')}
-                </h3>
+                </h4>
 
-                <p className='text-lg text-neutral-400 max-w-lg leading-relaxed'>
+                <p className='text-lg text-neutral-600 dark:text-neutral-300 max-w-lg leading-relaxed'>
                     {t('desc')}
                 </p>
 

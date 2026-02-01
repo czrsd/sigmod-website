@@ -133,7 +133,7 @@ export default function SpecialBundles({
 
                                 <Plus
                                     size={24}
-                                    className='text-white/20 font-black'
+                                    className='text-black/20 dark:text-white/20 font-black'
                                 />
 
                                 <div className='flex flex-col items-center animate-float-delayed relative z-10'>
@@ -144,7 +144,7 @@ export default function SpecialBundles({
                                         height={60}
                                         className='drop-shadow-2xl'
                                     />
-                                    <span className='text-xs font-black mt-2 bg-white/10 px-2 py-0.5 rounded-full backdrop-blur-md'>
+                                    <span className='text-xs font-black mt-2 bg-black/10 dark:bg-white/10 px-2 py-0.5 rounded-full backdrop-blur-md'>
                                         {bundle.subscription}{' '}
                                         {bundle.subscription === 1
                                             ? t('month')
@@ -153,7 +153,7 @@ export default function SpecialBundles({
                                 </div>
                             </div>
 
-                            <div className='flex flex-col items-center bg-white/5 dark:bg-black/40 w-full py-5 rounded-2xl border border-white/5 shadow-inner'>
+                            <div className='flex flex-col items-center bg-black/5 dark:bg-white/5 dark:bg-black/40 w-full py-5 rounded-2xl border border-black/5 dark:border-white/5 shadow-inner'>
                                 <div className='relative mb-1'>
                                     <span className='text-sm opacity-40 line-through decoration-red-500/80 decoration-2 italic'>
                                         €{originalCosts}
@@ -184,7 +184,7 @@ export default function SpecialBundles({
                                 />
                                 <Button
                                     asChild
-                                    className='relative w-full h-14 uppercase font-black text-lg transition-all active:scale-95 rounded-xl border-t border-white/20'
+                                    className='relative w-full h-14 uppercase font-black text-lg transition-all active:scale-95 rounded-xl border-t border-black/20 dark:border-white/20'
                                     style={{
                                         background: `linear-gradient(180deg, ${scheme.primary}, ${scheme.secondary})`,
                                         color: '#000',

@@ -49,14 +49,13 @@ export function Preview() {
     return (
         <section className='max-w-5xl mx-auto py-12 px-4'>
             <div className='relative group'>
-                {/* Background Glow */}
                 <div className='absolute -inset-1 bg-gradient-to-r from-primary/20 via-purple-500/20 to-blue-500/20 rounded-[2rem] blur-2xl opacity-50 group-hover:opacity-100 transition duration-1000'></div>
 
                 <Carousel
                     setApi={setApi}
                     opts={{ loop: true }}
                     plugins={[Autoplay({ delay: 5000 })]}
-                    className='relative bg-black/40 backdrop-blur-md rounded-[1.5rem] border border-white/10 shadow-2xl overflow-hidden'
+                    className='relative bg-white/40 dark:bg-black/40 backdrop-blur-md rounded-[1.5rem] border border-white/10 shadow-2xl overflow-hidden'
                 >
                     <CarouselContent>
                         {images.map((img, idx) => {
@@ -114,8 +113,8 @@ export function Preview() {
                             className={cn(
                                 'h-1.5 rounded-full transition-all duration-500 ease-out',
                                 current === i
-                                    ? 'w-12 bg-white shadow-[0_0_15px_rgba(255,255,255,0.8)]'
-                                    : 'w-6 bg-white/20 group-hover:bg-white/50'
+                                    ? 'w-12 bg-black dark:bg-white shadow-[0_0_15px_rgba(255,255,255,0.8)]'
+                                    : 'w-6 bg-black/20 dark:bg-white/20 group-hover:bg-black/50 dark:group-hover:bg-white/50'
                             )}
                         />
                     </button>

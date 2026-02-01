@@ -177,7 +177,7 @@ export default function TutorialForm({
     return (
         <form
             onSubmit={handleSubmit}
-            className='w-full max-w-3xl space-y-8 p-8 rounded-[2.5rem] border border-white/5 bg-white/[0.02] backdrop-blur-xl'
+            className='w-full max-w-3xl space-y-8 p-8 rounded-[2.5rem] border border-black/5 dark:border-white/5 bg-black/[0.02] dark:bg-white/[0.02] backdrop-blur-xl'
         >
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
                 <div className='space-y-2'>
@@ -187,7 +187,7 @@ export default function TutorialForm({
                     <Input
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
-                        className='bg-white/5 border-white/10 h-14 rounded-2xl font-bold'
+                        className='bg-black/5 border-black/10 dark:bg-white/5 dark:border-white/10 h-14 rounded-2xl font-bold'
                         placeholder={t('placeholders.title')}
                         required
                     />
@@ -204,7 +204,7 @@ export default function TutorialForm({
                             setContentPreviews([]);
                             setUseYoutubeThumbnail(true);
                         }}
-                        className='w-full h-14 bg-[#0c0c0c] border border-white/10 rounded-2xl px-4 text-sm font-bold text-white outline-none focus:border-primary'
+                        className='w-full h-14 bg-secondary dark:bg-[#0c0c0c] border border-black/10 dark:border-white/10 rounded-2xl px-4 text-sm font-bold outline-none focus:border-primary'
                     >
                         <option value='youtube'>
                             {t('mediaOptions.youtube')}
@@ -224,7 +224,7 @@ export default function TutorialForm({
                             value={youtubeUrl}
                             onChange={(e) => setYoutubeUrl(e.target.value)}
                             placeholder={t('placeholders.youtubeUrl')}
-                            className='bg-white/5 border-white/10 h-14 rounded-2xl font-bold'
+                            className='bg-black/5 border-black/10 dark:bg-white/5 dark:border-white/10 h-14 rounded-2xl font-bold'
                             required
                         />
                         <div className='flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/10'>
@@ -249,7 +249,7 @@ export default function TutorialForm({
                             className={`relative border-2 border-dashed rounded-3xl p-10 transition-all cursor-pointer flex flex-col items-center justify-center gap-4 ${
                                 contentDropzone.isDragActive
                                     ? 'border-primary bg-primary/5'
-                                    : 'border-white/10 hover:border-white/20 bg-white/5'
+                                    : 'border-black/10 border-black/20 bg-black/5 dark:border-white/10 hover:border-white/20 dark:bg-white/5'
                             }`}
                         >
                             <input {...contentDropzone.getInputProps()} />
@@ -258,7 +258,7 @@ export default function TutorialForm({
                                     {contentPreviews.map((p, i) => (
                                         <div
                                             key={i}
-                                            className='relative aspect-video rounded-xl overflow-hidden border border-white/10'
+                                            className='relative aspect-video rounded-xl overflow-hidden border border-black/10 dark:border-white/10'
                                         >
                                             {mediaType === 'video' ? (
                                                 <video
@@ -293,7 +293,7 @@ export default function TutorialForm({
 
                 {(mediaType !== 'youtube' || !useYoutubeThumbnail) && (
                     <div className='space-y-2 animate-in fade-in'>
-                        <label className='text-[10px] font-black uppercase italic text-neutral-500 ml-2'>
+                        <label className='text-[10px] font-black uppercase italic text-neutral-700 dark:text-neutral-500 ml-2'>
                             Thumbnail
                         </label>
                         <div
@@ -301,12 +301,12 @@ export default function TutorialForm({
                             className={`relative border-2 border-dashed rounded-3xl p-6 transition-all cursor-pointer flex flex-col items-center justify-center gap-2 ${
                                 thumbnailDropzone.isDragActive
                                     ? 'border-primary bg-primary/5'
-                                    : 'border-white/10 bg-white/5'
+                                    : 'border-black/10 dark:border-white/10 bg-black/5 dark:bg-white/5'
                             }`}
                         >
                             <input {...thumbnailDropzone.getInputProps()} />
                             {thumbnailPreview ? (
-                                <div className='relative w-40 aspect-video rounded-lg overflow-hidden border border-white/20'>
+                                <div className='relative w-40 aspect-video rounded-lg overflow-hidden border border-black/20 dark:border-white/20'>
                                     <img
                                         src={thumbnailPreview}
                                         className='w-full h-full object-cover'
@@ -347,7 +347,7 @@ export default function TutorialForm({
                 <Textarea
                     value={description}
                     onChange={(e) => setDescription(e.target.value)}
-                    className='bg-white/5 border-white/10 min-h-[120px] rounded-2xl font-medium'
+                    className='bg-black/5 dark:bg-white/5 border-black/10 dark:border-white/10 min-h-[120px] rounded-2xl font-medium'
                     placeholder='This video shows...'
                     required
                 />
@@ -380,10 +380,10 @@ export default function TutorialForm({
                                     disabled={!isSelected && isLimitReached}
                                     className={`px-4 py-2 rounded-xl text-[10px] font-black uppercase italic border transition-all ${
                                         isSelected
-                                            ? 'bg-white text-black border-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
+                                            ? 'bg-black text-white dark:bg-white dark:text-black border-black dark:border-white shadow-[0_0_15px_rgba(255,255,255,0.2)]'
                                             : isLimitReached
-                                            ? 'bg-white/5 border-white/5 text-neutral-700 cursor-not-allowed'
-                                            : 'bg-white/5 border-white/10 text-neutral-500 hover:border-white/20'
+                                            ? 'bg-black/5 dark:bg-white/5 border-black/5 dark:border-white/5 text-neutral-300 dark:text-neutral-600 dark:text-neutral-400 cursor-not-allowed'
+                                            : 'bg-black/5 dark:bg-white/5 border-black/10 dark:border-white/10 text-neutral-300 dark:text-neutral-600 dark:text-neutral-400 hover:border-black/20 dark:hover:border-white/20'
                                     }`}
                                 >
                                     {tag.name}
@@ -397,7 +397,7 @@ export default function TutorialForm({
             <Button
                 disabled={loading}
                 type='submit'
-                className='w-full h-16 bg-primary hover:bg-primary/90 text-black font-black uppercase italic rounded-2xl text-lg shadow-2xl transition-all active:scale-[0.98]'
+                className='w-full h-16 bg-primary hover:bg-primary/90 text-white dark:text-black font-black uppercase italic rounded-2xl text-lg shadow-2xl transition-all active:scale-[0.98]'
             >
                 {loading
                     ? t('processing')

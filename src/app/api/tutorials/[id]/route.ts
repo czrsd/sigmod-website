@@ -8,16 +8,11 @@ import crypto from 'crypto';
 import mongoose from 'mongoose';
 import User from '@/models/User';
 
-interface RouteParams {
-    params: {
-        id: string;
-    };
-}
+type RouteContext = {
+    params: Promise<{ id: string }>;
+};
 
-export async function GET(
-    req: NextRequest,
-    { params }: { params: Promise<{ id: string }> }
-) {
+export async function GET(req: NextRequest, { params }: RouteContext) {
     await dbConnect();
     const { id } = await params;
 
@@ -28,6 +23,7 @@ export async function GET(
     const tutorial = await Tutorial.findOne(query)
         .populate('tags')
         .populate({ path: 'authorId', select: 'name image role', model: User });
+
     if (!tutorial)
         return NextResponse.json({ error: 'Not found' }, { status: 404 });
 
@@ -54,10 +50,7 @@ export async function GET(
     }
 }
 
-export async function POST(
-    req: NextRequest,
-    { params }: { params: Promise<{ id: string }> }
-) {
+export async function POST(req: NextRequest, { params }: RouteContext) {
     const session = await getServerSession(authOptions);
     if (!session)
         return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -92,9 +85,7 @@ export async function POST(
     });
 }
 
-// ADMIN/MODERATOR ROUTES
-
-export async function DELETE(req: Request, { params }: RouteParams) {
+export async function DELETE(req: NextRequest, { params }: RouteContext) {
     const session = await getServerSession(authOptions);
     if (!session)
         return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
@@ -110,6 +101,7 @@ export async function DELETE(req: Request, { params }: RouteParams) {
         const isAuthor = tutorial.authorId === session.user.id;
         const isAdmin =
             session.user.role === 'admin' || session.user.role === 'moderator';
+
         if (!isAuthor && !isAdmin)
             return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
 
@@ -154,13 +146,12 @@ export async function DELETE(req: Request, { params }: RouteParams) {
     }
 }
 
-export async function PATCH(req: Request, { params }: RouteParams) {
+export async function PATCH(req: NextRequest, { params }: RouteContext) {
     const session = await getServerSession(authOptions);
     if (!session)
         return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
 
     const { id } = await params;
-
     await dbConnect();
 
     try {

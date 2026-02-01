@@ -53,7 +53,7 @@ function ReasonCard({
         <div
             className='group relative flex items-center gap-6 p-6 
                         bg-white/5 dark:bg-neutral-900/40 backdrop-blur-xl 
-                        rounded-2xl border border-white/10 dark:border-white/5
+                        rounded-2xl border border-black/10 dark:border-white/10 dark:border-white/5
                         transition-all duration-300 hover:border-primary/50 hover:bg-white/10'
         >
             <div className='relative flex-shrink-0'>

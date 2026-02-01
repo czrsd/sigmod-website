@@ -35,7 +35,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         browser === 'firefox' ? steps.filter((s) => !s.skipIfFirefox) : steps;
 
     return (
-        <div className='flex flex-col md:flex-row w-full min-h-screen bg-[#050505]'>
+        <div className='flex flex-col md:flex-row w-full min-h-screen bg-secondary'>
             <div className='md:hidden p-4 flex items-center justify-between border-b border-white/5 bg-black/50 backdrop-blur-xl sticky top-0 z-50'>
                 <div className='flex items-center gap-2'>
                     <LayoutDashboard size={18} className='text-blue-500' />
@@ -56,12 +56,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <aside
                 className={`${
                     menuOpen ? 'block' : 'hidden'
-                } md:block w-full md:w-80 p-6 border-r border-white/5 bg-[#080808]`}
+                } md:block w-full md:w-80 p-6 border-r border-white/5 bg-secondary dark:bg-[#080808]`}
             >
                 <div className='sticky top-10'>
                     <div className='hidden md:flex items-center gap-3 mb-10 px-4'>
                         <div className='w-1 h-6 bg-blue-600 rounded-full' />
-                        <span className='font-black text-xl italic uppercase tracking-tighter text-white'>
+                        <span className='font-black text-xl italic uppercase tracking-tighter dark:text-white'>
                             {t('title')}
                         </span>
                     </div>
@@ -79,7 +79,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                                     className={`justify-start h-12 rounded-xl transition-all duration-300 ${
                                         isActive
                                             ? 'bg-blue-600/10 text-blue-400 font-bold border border-blue-600/20'
-                                            : 'text-neutral-500 hover:text-white hover:bg-white/5'
+                                            : 'text-neutral-500 hover:text-black dark:hover:text-white hover:bg-white/5'
                                     }`}
                                 >
                                     <Link
@@ -104,7 +104,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </div>
             </aside>
 
-            <main className='flex-1 p-6 md:p-12 lg:p-20 bg-gradient-to-br from-black to-[#0a0a0a]'>
+            <main className='flex-1 p-6 md:p-12 lg:p-20 bg-gradient-to-br from-white to-neutral-300 dark:from-black dark:to-neutral-900'>
                 <div className='max-w-5xl mx-auto'>{children}</div>
             </main>
         </div>

@@ -40,8 +40,8 @@ export function WhySigFixes() {
                     </div>
 
                     <div className='space-y-6 text-neutral-400 font-medium leading-relaxed'>
-                        <p className='text-lg text-white/80'>{t('desc1')}</p>
-                        <p>{t('desc2')}</p>
+                        <p className='text-lg text-primary/80'>{t('desc1')}</p>
+                        <p className='text-neutral-600'>{t('desc2')}</p>
                     </div>
 
                     <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4'>
@@ -59,7 +59,7 @@ export function WhySigFixes() {
                     </div>
 
                     <div className='p-4 rounded-2xl bg-white/5 border border-white/10 text-sm'>
-                        <p className='text-neutral-400 flex items-center justify-center lg:justify-start gap-2 flex-wrap'>
+                        <p className='text-neutral-600 dark:text-neutral-400 flex items-center justify-center lg:justify-start gap-2 flex-wrap'>
                             <Activity size={16} className='text-cyan-500' />
                             {t('worksWith')}{' '}
                             <Link
@@ -92,7 +92,7 @@ export function WhySigFixes() {
                 <div className='flex-1 relative w-full max-w-[440px] aspect-square hidden md:block'>
                     <div className='absolute inset-0 bg-cyan-500/10 rounded-full blur-[100px] animate-pulse' />
 
-                    <div className='relative h-full w-full rounded-[2.5rem] border border-white/10 bg-neutral-900/40 backdrop-blur-2xl p-10 flex flex-col justify-center gap-6 overflow-hidden'>
+                    <div className='relative h-full w-full rounded-[2.5rem] border border-white/10 bg-neutral-400/40 dark:bg-neutral-900/40 backdrop-blur-2xl p-10 flex flex-col justify-center gap-6 overflow-hidden'>
                         <Gauge
                             size={140}
                             className='text-cyan-500 opacity-10 absolute -top-10 -right-10 rotate-12'

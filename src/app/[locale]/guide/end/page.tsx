@@ -16,20 +16,20 @@ export default function EndPage() {
                     <PartyPopper size={14} />
                     {t('completed_label') || 'Setup Complete'}
                 </div>
-                <h1 className='text-4xl md:text-6xl font-black italic tracking-tighter text-white uppercase'>
+                <h1 className='text-4xl md:text-6xl font-black italic tracking-tighter uppercase'>
                     {t('title')}
                 </h1>
-                <p className='text-neutral-400 text-lg max-w-2xl'>
+                <p className='text-neutral-600 dark:text-neutral-400 text-lg max-w-2xl'>
                     {t('desc')}
                 </p>
             </div>
 
             <div className='relative group max-w-2xl'>
                 <div className='absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur opacity-20 group-hover:opacity-30 transition duration-1000'></div>
-                <div className='relative bg-neutral-900 border border-white/10 p-4 rounded-2xl'>
+                <div className='relative bg-neutral-200 dark:bg-neutral-900 border border-white/10 p-4 rounded-2xl'>
                     <div className='flex items-center gap-2 mb-4 px-2'>
                         <Sparkles size={18} className='text-yellow-500' />
-                        <span className='text-sm font-bold text-white uppercase tracking-tight'>
+                        <span className='text-sm font-bold uppercase tracking-tight'>
                             {t('notice')}
                         </span>
                     </div>
@@ -47,7 +47,7 @@ export default function EndPage() {
                 <div className='flex flex-wrap gap-4'>
                     <Button
                         size='lg'
-                        className='bg-blue-600 hover:bg-blue-700 text-white font-black px-12 h-16 rounded-2xl text-xl shadow-[0_0_30px_rgba(37,99,235,0.4)] transition-all hover:scale-105 active:scale-95'
+                        className='bg-blue-600 hover:bg-blue-700 font-black px-12 h-16 rounded-2xl text-xl shadow-[0_0_30px_rgba(37,99,235,0.4)] transition-all hover:scale-105 active:scale-95'
                         asChild
                     >
                         <Link href='/game' target='_blank'>
@@ -60,7 +60,7 @@ export default function EndPage() {
                 <div className='flex flex-wrap gap-3'>
                     <Button
                         variant='outline'
-                        className='border-white/10 bg-white/5 hover:bg-white/10 text-white font-bold rounded-xl h-12'
+                        className='border-white/10 bg-white/5 hover:bg-white/10 font-bold rounded-xl h-12'
                         asChild
                     >
                         <Link href='/sigmod'>
@@ -70,7 +70,7 @@ export default function EndPage() {
                     </Button>
                     <Button
                         variant='outline'
-                        className='border-white/10 bg-white/5 hover:bg-white/10 text-white font-bold rounded-xl h-12'
+                        className='border-white/10 bg-white/5 hover:bg-white/10 font-bold rounded-xl h-12'
                         asChild
                     >
                         <Link href='/sigfixes'>

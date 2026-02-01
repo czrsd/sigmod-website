@@ -6,7 +6,6 @@ import {
     Features,
     FAQ,
     Community,
-    GlowItems,
 } from '@/components/pages/sigfixes';
 
 export default function SigFixesPage() {
@@ -19,7 +18,6 @@ export default function SigFixesPage() {
             <Features />
             <FAQ />
             <Community />
-            <GlowItems />
         </main>
     );
 }

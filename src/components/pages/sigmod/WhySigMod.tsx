@@ -30,7 +30,7 @@ export function WhySigMod() {
                         <div className='h-1.5 w-24 bg-primary mx-auto lg:mx-0 rounded-full' />
                     </div>
 
-                    <div className='space-y-6 text-neutral-400 font-medium leading-relaxed'>
+                    <div className='space-y-6 text-neutral-600 dark:text-neutral-400 font-medium leading-relaxed'>
                         <p className='text-lg text-white/80'>{t('desc1')}</p>
                         <p>{t('desc2')}</p>
                     </div>
@@ -50,7 +50,7 @@ export function WhySigMod() {
                     </div>
 
                     <div className='p-4 rounded-2xl bg-white/5 border border-white/10 text-sm'>
-                        <p className='text-neutral-400'>
+                        <p className='text-neutral-600 dark:text-neutral-400'>
                             ⚡ {t('performance')}{' '}
                             <Link
                                 href={LINKS.sigfixes}
@@ -81,7 +81,7 @@ export function WhySigMod() {
 
                 <div className='flex-1 relative w-full max-w-[400px] aspect-square hidden md:block'>
                     <div className='absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse' />
-                    <div className='relative h-full w-full rounded-[2.5rem] border border-white/10 bg-neutral-900/50 backdrop-blur-xl p-8 flex flex-col justify-center items-center overflow-hidden'>
+                    <div className='relative h-full w-full rounded-[2.5rem] border border-white/10 bg-neutral-600/50 dark:bg-neutral-900/50 backdrop-blur-xl p-8 flex flex-col justify-center items-center overflow-hidden'>
                         <ShieldCheck
                             size={120}
                             className='text-primary opacity-20 absolute -top-10 -right-10 rotate-12'

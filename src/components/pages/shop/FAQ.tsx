@@ -27,7 +27,7 @@ export default function FAQ() {
                         <AccordionItem
                             key={i}
                             value={`general-${i}`}
-                            className='border-none bg-white/5 dark:bg-neutral-900/40 backdrop-blur-md rounded-2xl px-6 overflow-hidden transition-all hover:bg-white/10 dark:hover:bg-white/5 border border-white/10 dark:border-white/5'
+                            className='bg-white/5 dark:bg-neutral-900/40 backdrop-blur-md rounded-2xl px-6 overflow-hidden transition-all hover:bg-white/10 dark:hover:bg-white/5 border border-black/10 dark:border-white/5'
                         >
                             <AccordionTrigger className='text-left text-base hover:no-underline py-6'>
                                 {item.question}

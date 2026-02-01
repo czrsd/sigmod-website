@@ -5,7 +5,6 @@ import {
     ModsSection,
     FAQSection,
     CommunitySection,
-    GlowItems,
 } from '@/components/pages/home';
 
 export default function Home() {
@@ -16,7 +15,6 @@ export default function Home() {
             <ModsSection />
             <FAQSection />
             <CommunitySection />
-            <GlowItems />
         </div>
     );
 }

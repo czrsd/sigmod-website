@@ -61,7 +61,7 @@ export default function UploaderDashboard() {
                 </div>
                 <Button
                     asChild
-                    className='bg-primary hover:bg-primary/90 text-black font-black uppercase italic rounded-xl px-6 h-12 shadow-[0_0_20px_rgba(var(--primary),0.2)]'
+                    className='bg-primary hover:bg-primary/90 font-black uppercase italic rounded-xl px-6 h-12 shadow-[0_0_20px_rgba(var(--primary),0.2)]'
                 >
                     <Link href='/tutorials/dashboard/upload'>
                         <Plus size={18} className='mr-2' strokeWidth={3} />{' '}
@@ -76,7 +76,7 @@ export default function UploaderDashboard() {
                         label: t('totalUploads'),
                         val: stats.total,
                         icon: BarChart3,
-                        color: 'text-white',
+                        color: 'text-primary',
                     },
                     {
                         label: t('approved'),
@@ -93,7 +93,7 @@ export default function UploaderDashboard() {
                 ].map((stat, i) => (
                     <div
                         key={i}
-                        className='p-6 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-between'
+                        className='p-6 rounded-2xl bg-black/5 dark:bg-white/5 border border-white/10 flex items-center justify-between'
                     >
                         <div>
                             <p className='text-[10px] font-black uppercase italic text-neutral-500 mb-1'>
@@ -105,7 +105,7 @@ export default function UploaderDashboard() {
                                 {stat.val}
                             </p>
                         </div>
-                        <stat.icon size={32} className='opacity-20' />
+                        <stat.icon size={32} className='opacity-30' />
                     </div>
                 ))}
             </div>
@@ -116,9 +116,9 @@ export default function UploaderDashboard() {
                     {t('yourSubmissions')}
                 </h2>
 
-                <div className='overflow-hidden rounded-3xl border border-white/5 bg-white/[0.02]'>
+                <div className='overflow-hidden rounded-3xl border border-black/5 dark:border-white/5 bg-black/[0.02] dark:bg-white/[0.02]'>
                     <table className='w-full text-left border-collapse'>
-                        <thead className='bg-white/5 text-[10px] font-black uppercase italic text-neutral-500'>
+                        <thead className='bg-black/5 dark:bg-white/5 text-[10px] font-black uppercase italic text-neutral-600 dark:text-neutral-500'>
                             <tr>
                                 <th className='px-6 py-4'>{t('tutorial')}</th>
                                 <th className='px-6 py-4'>{t('category')}</th>
@@ -151,7 +151,7 @@ export default function UploaderDashboard() {
                                 myTutorials.map((tutorial) => (
                                     <tr
                                         key={tutorial._id}
-                                        className='group hover:bg-white/[0.03] transition-colors'
+                                        className='group hover:bg-black/[0.03] dark:hover:bg-white/[0.03] transition-colors'
                                     >
                                         <td className='px-6 py-4'>
                                             <div className='font-black uppercase italic text-sm group-hover:text-primary transition-colors'>
@@ -168,7 +168,7 @@ export default function UploaderDashboard() {
                                                 {tutorial.tags.map((tag) => (
                                                     <span
                                                         key={tag._id}
-                                                        className='text-[9px] px-2 py-0.5 rounded bg-white/5 border border-white/10 font-bold uppercase'
+                                                        className='text-[9px] px-2 py-0.5 rounded bg-black/5 dark:bg-white/5 border border-white/10 font-bold uppercase'
                                                         style={{
                                                             color: tag.color,
                                                         }}
@@ -207,7 +207,7 @@ export default function UploaderDashboard() {
                                         </td>
                                         <td className='px-6 py-4 text-right'>
                                             <Button
-                                                className='p-2 rounded-lg bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white transition-all'
+                                                className='p-2 rounded-lg bg-black/5 hover:bg-black/10 dark:bg-white/5 dark:hover:bg-white/10 text-neutral-400 hover:text-primary transition-all'
                                                 asChild
                                             >
                                                 <Link

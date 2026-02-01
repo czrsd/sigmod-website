@@ -124,7 +124,7 @@ export default function TutorialDetailPage() {
             <Button
                 variant='ghost'
                 onClick={() => window.history.back()}
-                className='mb-8 text-neutral-400'
+                className='mb-8 text-neutral-600 dark:text-neutral-400'
             >
                 <ArrowLeft size={16} className='mr-2' /> {t('back')}
             </Button>
@@ -208,24 +208,24 @@ export default function TutorialDetailPage() {
                             {tutorial.tags?.map((tag) => (
                                 <span
                                     key={tag._id}
-                                    className='px-3 py-1 rounded-full text-[10px] font-bold uppercase italic border border-white/10 bg-white/5'
+                                    className='px-3 py-1 rounded-full text-[10px] font-bold uppercase italic border border-white/10 bg-black/5 dark:bg-white/5'
                                     style={{ color: tag.color }}
                                 >
                                     {tag.name}
                                 </span>
                             ))}
                         </div>
-                        <h1 className='text-4xl font-black uppercase italic tracking-tighter text-white leading-none'>
+                        <h1 className='text-4xl font-black uppercase italic tracking-tighter leading-none'>
                             {tutorial.title}
                         </h1>
-                        <p className='text-neutral-400 leading-relaxed text-lg'>
+                        <p className='text-neutral-600 dark:text-neutral-400 leading-relaxed text-lg'>
                             {tutorial.description}
                         </p>
                     </div>
                 </div>
 
                 <div className='space-y-6'>
-                    <div className='p-8 rounded-[2rem] bg-white/5 border border-white/10 backdrop-blur-md space-y-8'>
+                    <div className='p-8 rounded-[2rem] bg-black/5 dark:bg-white/5 border border-white/10 backdrop-blur-md space-y-8'>
                         <div className='flex items-center gap-4 pb-6 border-b border-white/5'>
                             <div className='relative'>
                                 {tutorial.authorId?.image ? (
@@ -250,7 +250,7 @@ export default function TutorialDetailPage() {
                                         {tutorial.authorId?.role || t('member')}
                                     </span>
                                 </div>
-                                <h4 className='text-xl font-black italic uppercase leading-tight text-white tracking-tighter'>
+                                <h4 className='text-xl font-black italic uppercase leading-tight tracking-tighter'>
                                     {tutorial.authorId?.name ||
                                         t('unknownUser')}
                                 </h4>
@@ -265,7 +265,7 @@ export default function TutorialDetailPage() {
                                 <span className='text-xs font-bold text-neutral-500 uppercase tracking-widest'>
                                     {t('views')}
                                 </span>
-                                <div className='flex items-center gap-2 text-2xl font-black italic text-white'>
+                                <div className='flex items-center gap-2 text-2xl font-black italic'>
                                     <Eye className='text-primary' />{' '}
                                     {tutorial.views}
                                 </div>
@@ -294,7 +294,7 @@ export default function TutorialDetailPage() {
                         </div>
 
                         <div className='pt-6 border-t border-white/5 space-y-4'>
-                            <div className='flex items-center gap-3 text-neutral-400'>
+                            <div className='flex items-center gap-3 text-neutral-600 dark:text-neutral-400'>
                                 <Calendar size={18} />
                                 <span className='text-sm font-medium'>
                                     {new Date(
@@ -306,7 +306,7 @@ export default function TutorialDetailPage() {
                                     })}
                                 </span>
                             </div>
-                            <div className='flex items-center gap-3 text-neutral-400'>
+                            <div className='flex items-center gap-3 text-neutral-600 dark:text-neutral-400'>
                                 {tutorial.type === 'youtube' ? (
                                     <YoutubeIcon size={18} />
                                 ) : tutorial.type === 'video' ? (
@@ -321,7 +321,7 @@ export default function TutorialDetailPage() {
                         </div>
 
                         <Button
-                            className='w-full bg-primary hover:bg-primary/80 text-black font-black uppercase italic py-6 rounded-xl shadow-lg shadow-primary/20 cursor-pointer'
+                            className='w-full bg-primary hover:bg-primary/80 font-black uppercase italic py-6 rounded-xl shadow-lg shadow-primary/20 cursor-pointer'
                             onClick={handleShare}
                         >
                             {t('share')}

@@ -13,22 +13,20 @@ export default function SigModPage() {
     return (
         <div className='max-w-4xl space-y-10'>
             <div className='space-y-4'>
-                <h1 className='text-3xl md:text-4xl font-black italic tracking-tighter text-white uppercase flex items-center gap-3'>
+                <h1 className='text-3xl md:text-4xl font-black italic tracking-tighter uppercase flex items-center gap-3'>
                     <Terminal className='text-blue-500' size={32} />
                     {t('title')}
                 </h1>
-                <p className='text-neutral-400 text-lg max-w-2xl'>
+                <p className='text-neutral-600 dark:text-neutral-400 text-lg max-w-2xl'>
                     {t('desc')}
                 </p>
             </div>
 
-            <div className='bg-neutral-900/50 border border-white/10 rounded-2xl overflow-hidden'>
+            <div className='bg-neutral-300 dark:bg-neutral-900/50 border border-white/10 rounded-2xl overflow-hidden'>
                 <div className='p-8 space-y-6'>
                     <div className='space-y-2'>
-                        <h3 className='text-white font-bold text-xl'>
-                            {t('button')}
-                        </h3>
-                        <p className='text-neutral-400 text-sm'>
+                        <h3 className='font-bold text-xl'>{t('button')}</h3>
+                        <p className='text-neutral-600 dark:text-neutral-400 text-sm'>
                             {t.rich('popup', {
                                 i: (chunk) => (
                                     <span className='text-blue-400 italic'>
@@ -63,7 +61,7 @@ export default function SigModPage() {
                 </div>
 
                 <div className='bg-white/5 p-4 px-8 border-t border-white/5'>
-                    <p className='text-sm text-neutral-500 italic'>
+                    <p className='text-sm text-neutral-600 dark:text-neutral-500 italic'>
                         {t.rich('after', {
                             link: (chunk) => (
                                 <Link
@@ -79,11 +77,7 @@ export default function SigModPage() {
             </div>
 
             <div className='flex justify-between pt-6'>
-                <Button
-                    variant='ghost'
-                    className='text-neutral-500 hover:text-white'
-                    asChild
-                >
+                <Button variant='ghost' className='text-neutral-500' asChild>
                     <Link href='/guide/userscript-manager'>
                         <ArrowLeft className='mr-2 h-4 w-4' /> {t('back')}
                     </Link>

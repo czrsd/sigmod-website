@@ -14,13 +14,13 @@ export default function GuideOverview() {
                 <div>
                     <div className='flex items-center gap-4 mb-4 text-blue-500'>
                         <BookMarked size={32} />
-                        <h1 className='text-4xl md:text-5xl font-black tracking-tighter italic text-white'>
+                        <h1 className='text-4xl md:text-5xl font-black tracking-tighter italic text-neutral-800 dark:text-primary'>
                             {t('title')}
                         </h1>
                     </div>
-                    <div className='space-y-4 text-neutral-400 text-lg leading-relaxed'>
+                    <div className='space-y-4 text-neutral-600 dark:text-neutral-400 text-lg leading-relaxed'>
                         <p>{t('desc')}</p>
-                        <p className='p-4 rounded-xl bg-blue-500/5 border border-blue-500/10 text-neutral-300'>
+                        <p className='p-4 rounded-xl bg-blue-500/5 border border-blue-500/10 text-neutral-500 dark:text-neutral-300'>
                             {t('access')}
                         </p>
                     </div>
@@ -41,7 +41,7 @@ export default function GuideOverview() {
                     <Button
                         variant='outline'
                         size='lg'
-                        className='border-white/10 bg-white/5 hover:bg-white/10 text-white font-bold rounded-full px-8 backdrop-blur-md'
+                        className='border-white/10 bg-white/5 hover:bg-white/10 font-bold rounded-full px-8 backdrop-blur-md'
                         asChild
                     >
                         <Link href='/quick-guide'>{t('quickGuide')}</Link>

@@ -22,6 +22,15 @@ const images = [
     'multibox.png',
 ];
 
+const imageAlts: Record<string, string> = {
+    'menu.png': 'Sigmally Mod Menu interface with custom features',
+    'before_after.png': 'Comparison of vanilla Sigmally vs SigModz graphics',
+    'customization-comparison.png': 'Custom skin and UI customization options',
+    'game_menu.png': 'In-game mod settings for Sigmally',
+    'party_system.png': 'Sigmally party system and clan features',
+    'multibox.png': 'Multibox support for Sigmally players',
+};
+
 export function HeroSection() {
     const t = useTranslations('HomePage.hero');
     const [isLoading, setIsLoading] = useState(true);
@@ -71,7 +80,7 @@ export function HeroSection() {
                             ),
                         })}
                     </h1>
-                    <p className='mx-auto lg:mx-0 max-w-lg text-lg md:text-xl text-neutral-400 leading-relaxed font-medium'>
+                    <p className='mx-auto lg:mx-0 max-w-lg text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed font-medium'>
                         {t('sub')}
                     </p>
                 </div>
@@ -91,7 +100,7 @@ export function HeroSection() {
                     <Button
                         variant='outline'
                         size='lg'
-                        className='border-white/10 bg-white/5 hover:bg-white/10 text-white font-bold px-10 h-14 rounded-full backdrop-blur-md'
+                        className='border-black/10 dark:border-white/10 bg-white/5 hover:bg-white/10 font-bold px-10 h-14 rounded-full backdrop-blur-md'
                         asChild
                     >
                         <Link href='/guide'>
@@ -136,11 +145,21 @@ export function HeroSection() {
                                     <div className='relative aspect-video overflow-hidden rounded-[1.6rem]'>
                                         <Image
                                             src={'/preview/' + img}
-                                            alt={img}
+                                            alt={
+                                                imageAlts[img] ||
+                                                `Sigmally Mod Feature: ${img.replace(
+                                                    '.png',
+                                                    ''
+                                                )}`
+                                            }
                                             fill
                                             className='object-cover'
-                                            sizes='(max-width: 768px) 100vw, 50vw'
+                                            sizes='(max-width: 768px) 100vw, 40vw'
                                             priority={idx === 0}
+                                            {...(idx === 0
+                                                ? { fetchPriority: 'high' }
+                                                : {})}
+                                            loading='eager'
                                         />
                                     </div>
                                 </CarouselItem>
@@ -168,9 +187,9 @@ function StatItem({
         <div className='flex flex-col min-w-[80px]'>
             <div className='flex items-center gap-2'>
                 {loading ? (
-                    <div className='h-8 w-20 bg-white/10 animate-pulse rounded-md' />
+                    <div className='h-[30px] w-20 bg-white/10 animate-pulse rounded-md' />
                 ) : (
-                    <span className='text-3xl font-black text-white italic tracking-tighter leading-none'>
+                    <span className='text-3xl font-black italic tracking-tighter leading-none'>
                         {value}
                     </span>
                 )}
@@ -178,7 +197,7 @@ function StatItem({
                     <div className='w-2 h-2 rounded-full bg-green-500 animate-pulse' />
                 )}
             </div>
-            <span className='text-[10px] uppercase font-bold tracking-[0.2em] text-neutral-500 mt-2'>
+            <span className='text-[10px] uppercase font-bold tracking-[0.2em] text-neutral-600 dark:text-neutral-300 mt-2'>
                 {label}
             </span>
         </div>

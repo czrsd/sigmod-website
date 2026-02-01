@@ -83,16 +83,16 @@ export function Features() {
                                                 <div className='p-3 rounded-2xl bg-primary/10 border border-primary/20 text-primary group-hover:scale-110 transition-transform duration-500'>
                                                     <Icon size={24} />
                                                 </div>
-                                                <span className='text-[10px] font-black uppercase tracking-[0.2em] text-white/20 group-hover:text-primary/50 transition-colors'>
+                                                <span className='text-[10px] font-black uppercase tracking-[0.2em] text-primary/20 group-hover:text-primary/50 transition-colors'>
                                                     Feature {i + 1}
                                                 </span>
                                             </div>
 
                                             <div className='space-y-3 flex-grow'>
-                                                <h3 className='text-xl font-black uppercase italic tracking-tighter text-white group-hover:text-primary transition-colors'>
+                                                <h3 className='text-xl font-black uppercase italic tracking-tighter group-hover:text-primary transition-colors'>
                                                     {f.title}
                                                 </h3>
-                                                <p className='text-sm leading-relaxed text-neutral-400 font-medium line-clamp-3'>
+                                                <p className='text-sm leading-relaxed text-neutral-600 dark:text-neutral-400 font-medium line-clamp-3'>
                                                     {f.summary}
                                                 </p>
                                             </div>
@@ -104,7 +104,7 @@ export function Features() {
                                         </div>
                                     </DialogTrigger>
 
-                                    <DialogContent className='bg-neutral-950 border-white/10 rounded-[2rem] max-w-lg'>
+                                    <DialogContent className='bg-neutral-200 dark:bg-neutral-950 border-white/10 rounded-[2rem] max-w-lg'>
                                         <DialogHeader className='space-y-4'>
                                             <div className='mx-auto p-4 rounded-2xl bg-primary/10 border border-primary/20 text-primary w-fit'>
                                                 <Icon size={32} />
@@ -113,7 +113,7 @@ export function Features() {
                                                 {f.title}
                                             </DialogTitle>
                                             <div className='h-1 w-12 bg-primary mx-auto rounded-full' />
-                                            <DialogDescription className='text-neutral-300 text-base leading-relaxed text-center pt-4'>
+                                            <DialogDescription className='text-neutral-600 dark:text-neutral-300 text-base leading-relaxed text-center pt-4'>
                                                 {f.details}
                                             </DialogDescription>
                                         </DialogHeader>

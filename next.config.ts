@@ -12,6 +12,18 @@ const nextConfig: NextConfig = {
                 protocol: 'https',
                 hostname: 'sigmally.com',
             },
+            {
+                protocol: 'https',
+                hostname: 'cdn.sigmally.xyz',
+            },
+            {
+                protocol: 'https',
+                hostname: 'img.youtube.com',
+            },
+            {
+                protocol: 'https',
+                hostname: 'cdn.discordapp.com',
+            },
         ],
     },
 };

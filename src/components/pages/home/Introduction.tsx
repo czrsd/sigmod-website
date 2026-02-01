@@ -9,31 +9,31 @@ export function IntroductionSection() {
             <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[var(--glow)]/5 blur-[120px] rounded-full -z-10' />
 
             <div className='grid md:grid-cols-2 gap-8'>
-                <div className='group relative p-8 rounded-[2rem] bg-neutral-900/40 backdrop-blur-md border border-white/5 hover:border-[var(--glow)]/30 transition-all duration-500'>
+                <div className='group relative p-8 rounded-[2rem] bg-neutral-300/40 dark:bg-neutral-900/40 backdrop-blur-md border border-white/5 hover:border-[var(--glow)]/30 transition-all duration-500'>
                     <div className='w-12 h-12 mb-6 rounded-2xl bg-[var(--glow)]/10 flex items-center justify-center text-[var(--glow)]'>
                         <Info size={28} />
                     </div>
 
-                    <h3 className='text-2xl font-black uppercase italic tracking-tight mb-4'>
+                    <h2 className='text-2xl font-black uppercase italic tracking-tight mb-4'>
                         {t('what.title')}
-                    </h3>
+                    </h2>
 
-                    <p className='text-neutral-400 text-sm md:text-base leading-relaxed'>
+                    <p className='text-neutral-700 dark:text-neutral-300 text-sm md:text-base leading-relaxed'>
                         {t('what.desc')}
                     </p>
                 </div>
 
-                <div className='group relative p-8 rounded-[2rem] bg-neutral-900/40 backdrop-blur-md border border-white/5 hover:border-blue-500/30 transition-all duration-500'>
+                <div className='group relative p-8 rounded-[2rem] bg-neutral-300/40 dark:bg-neutral-900/40 backdrop-blur-md border border-white/5 hover:border-blue-500/30 transition-all duration-500'>
                     <div className='w-12 h-12 mb-6 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-400'>
                         <Zap size={28} />
                     </div>
 
-                    <h3 className='text-2xl font-black uppercase italic tracking-tight mb-4'>
+                    <h2 className='text-2xl font-black uppercase italic tracking-tight mb-4'>
                         {t('why.title')}{' '}
                         <span className='text-blue-500'>Sigmally Modz</span>?
-                    </h3>
+                    </h2>
 
-                    <p className='text-neutral-400 text-sm md:text-base leading-relaxed'>
+                    <p className='text-neutral-700 dark:text-neutral-300 text-sm md:text-base leading-relaxed'>
                         {t('why.desc')}
                     </p>
                 </div>

@@ -31,6 +31,7 @@ import {
 import { ITutorialPopulated as Tutorial } from '@/models/Tutorial';
 import { ITagData as Tag } from '@/models/Tag';
 import { Serializable } from '@/types/utils';
+import Image from 'next/image';
 
 export default function TutorialsPage() {
     const t = useTranslations('TutorialPage.overview');
@@ -80,12 +81,12 @@ export default function TutorialsPage() {
 
     return (
         <div className='max-w-7xl mx-auto px-6 py-12 space-y-8'>
-            <div className='flex flex-col sm:flex-row justify-between items-center p-4 rounded-3xl bg-white/5 border border-white/10 gap-4 backdrop-blur-md'>
+            <div className='flex flex-col sm:flex-row justify-between items-center p-4 rounded-3xl bg-black/5 dark:bg-white/5 border border-white/10 gap-4 backdrop-blur-md'>
                 <div className='flex items-center gap-3'>
                     <div className='p-2 bg-primary/20 rounded-xl'>
                         <PlusCircle className='text-primary' size={24} />
                     </div>
-                    <span className='font-black uppercase italic text-sm tracking-widest text-white'>
+                    <span className='font-black uppercase italic text-sm tracking-widest'>
                         {t('communityHub')}
                     </span>
                 </div>
@@ -153,7 +154,7 @@ export default function TutorialsPage() {
                     </div>
                     <Input
                         placeholder={t('searchPlaceholder')}
-                        className='pl-4 bg-white/5 border-white/10 h-12 rounded-xl focus:ring-1 ring-primary/50 transition-all placeholder:text-neutral-600 font-medium'
+                        className='pl-4 bg-black/5 dark:bg-white/5 border-black/10 dark:border-white/10 placeholder:text-neutral-500 dark:placeholder:text-neutral-600 h-12 rounded-xl focus:ring-1 ring-primary/50 transition-all font-medium'
                         onChange={(e) => setSearch(e.target.value)}
                     />
                 </div>
@@ -164,10 +165,10 @@ export default function TutorialsPage() {
                         {t('category')}
                     </div>
                     <Select value={activeTag} onValueChange={setActiveTag}>
-                        <SelectTrigger className='bg-white/5 border-white/10 h-12 rounded-xl text-white font-bold uppercase italic text-[11px]'>
+                        <SelectTrigger className='bg-black/5 dark:bg-white/5 border-black/10 dark:border-white/10 h-12 rounded-xl font-bold uppercase italic text-[11px]'>
                             <SelectValue placeholder={t('category')} />
                         </SelectTrigger>
-                        <SelectContent className='bg-[#0A0A0A] border-white/10 text-white'>
+                        <SelectContent className='bg-secondary dark:bg-[#0A0A0A] border-black/10 dark:border-white/10'>
                             <SelectItem
                                 value='all'
                                 className='font-bold uppercase italic text-[11px]'
@@ -201,10 +202,10 @@ export default function TutorialsPage() {
                         {t('sortBy')}
                     </div>
                     <Select value={sortBy} onValueChange={setSortBy}>
-                        <SelectTrigger className='bg-white/5 border-white/10 h-12 rounded-xl text-white font-bold uppercase italic text-[11px]'>
+                        <SelectTrigger className='bg-black/5 dark:bg-white/5 border-black/10 dark:border-white/10 h-12 rounded-xl font-bold uppercase italic text-[11px]'>
                             <SelectValue />
                         </SelectTrigger>
-                        <SelectContent className='bg-[#0A0A0A] border-white/10 text-white'>
+                        <SelectContent className='bg-secondary dark:bg-[#0A0A0A] border-white/10'>
                             <SelectItem
                                 value='newest'
                                 className='font-bold uppercase italic text-[11px]'
@@ -228,15 +229,15 @@ export default function TutorialsPage() {
                 </div>
             </div>
 
-            <div className='flex bg-white/5 p-1 rounded-xl border border-white/10 max-w-sm'>
+            <div className='flex bg-black/5 dark:bg-white/5 p-1 rounded-xl border border-white/10 max-w-sm'>
                 {['all', 'youtube', 'video', 'images'].map((type) => (
                     <button
                         key={type}
                         onClick={() => setActiveType(type)}
                         className={`flex-1 text-[10px] font-black uppercase italic rounded-lg transition-all py-2 ${
                             activeType === type
-                                ? 'bg-white/10 text-primary shadow-inner'
-                                : 'text-neutral-500 hover:text-white'
+                                ? 'bg-black/10 dark:bg-white/10 text-primary shadow-inner'
+                                : 'text-neutral-500 hover:text-primary'
                         }`}
                     >
                         {t(`type.${type}`)}
@@ -256,8 +257,8 @@ export default function TutorialsPage() {
                             key={x._id}
                             className='group relative block p-px rounded-[2.2rem] bg-gradient-to-br from-white/10 to-transparent hover:from-primary/20 transition-all duration-500'
                         >
-                            <div className='h-full overflow-hidden rounded-[2.1rem] bg-[#0A0A0A] border border-white/5 flex flex-col'>
-                                <div className='relative aspect-video overflow-hidden border-b border-white/5 bg-neutral-900'>
+                            <div className='h-full overflow-hidden rounded-[2.1rem] bg-secondary dark:bg-[#0A0A0A] border border-black/5 dark:border-white/5 flex flex-col'>
+                                <div className='relative aspect-video overflow-hidden border-b border-black/5 border-white/5 bg-neutral-200 dark:bg-neutral-900'>
                                     {(() => {
                                         const ytThumb =
                                             x.type === 'youtube' &&
@@ -275,9 +276,11 @@ export default function TutorialsPage() {
                                                 : null);
                                         if (displayImage) {
                                             return (
-                                                <img
+                                                <Image
                                                     src={displayImage}
                                                     alt={x.title}
+                                                    width={400}
+                                                    height={200}
                                                     className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110'
                                                     onError={(e) => {
                                                         const target =
@@ -312,7 +315,7 @@ export default function TutorialsPage() {
                                             </div>
                                         );
                                     })()}
-                                    <div className='absolute top-4 left-4 p-2 rounded-xl bg-black/60 backdrop-blur-md border border-white/10 text-primary'>
+                                    <div className='absolute top-4 left-4 p-2 rounded-xl bg-white/60 dark:bg-black/60 backdrop-blur-md border border-black/10 dark:border-white/10 text-primary'>
                                         {x.type === 'youtube' ? (
                                             <Youtube size={16} />
                                         ) : x.type === 'video' ? (
@@ -322,35 +325,37 @@ export default function TutorialsPage() {
                                         )}
                                     </div>
                                 </div>
-                                <div className='absolute top-4 right-4 flex items-center gap-2 p-1.5 pr-3 rounded-full bg-black/60 backdrop-blur-md border border-white/10'>
+                                <div className='absolute top-4 right-4 flex items-center gap-2 p-1.5 pr-3 rounded-full bg-white/60 dark:bg-black/60 backdrop-blur-md border border-black/10 dark:border-white/10'>
                                     {x.authorId?.image ? (
-                                        <img
+                                        <Image
                                             src={x.authorId.image}
+                                            width={20}
+                                            height={20}
                                             className='w-5 h-5 rounded-full object-cover'
                                             alt=''
                                         />
                                     ) : (
                                         <div className='w-5 h-5 rounded-full bg-white/10' />
                                     )}
-                                    <span className='text-[9px] font-bold text-white/90 uppercase tracking-wider'>
+                                    <span className='text-[9px] font-bold text-black/90 dark:text-white/90 uppercase tracking-wider'>
                                         {t('by')}{' '}
                                         {x.authorId?.name || t('unknown')}
                                     </span>
                                 </div>
                                 <div className='p-6 flex flex-col flex-grow'>
-                                    <h3 className='text-xl font-black uppercase italic tracking-tighter mb-6 leading-tight group-hover:text-primary transition-colors line-clamp-2'>
+                                    <h3 className='text-xl font-black uppercase italic tracking-tighter mb-6 leading-tight text-neutral-700 dark:text-neutral-100 group-hover:text-primary transition-colors line-clamp-2'>
                                         {x.title}
                                     </h3>
 
                                     <div className='mt-auto pt-5 border-t border-white/5 flex items-center justify-between'>
                                         <div className='flex items-center gap-4'>
-                                            <div className='flex items-center gap-1.5 text-neutral-500 group-hover:text-neutral-300 transition-colors'>
+                                            <div className='flex items-center gap-1.5 text-neutral-700 dark:text-neutral-500 group-hover:text-neutral-500 dark:group-hover:text-neutral-300 transition-colors'>
                                                 <Eye size={14} />
                                                 <span className='text-[10px] font-black italic uppercase'>
                                                     {x.views || 0}
                                                 </span>
                                             </div>
-                                            <div className='flex items-center gap-1.5 text-neutral-500 group-hover:text-red-400 transition-colors'>
+                                            <div className='flex items-center gap-1.5 text-neutral-600 dark:text-neutral-500 group-hover:text-red-400 transition-colors'>
                                                 <Heart
                                                     size={14}
                                                     className={

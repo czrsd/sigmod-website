@@ -13,11 +13,11 @@ export default function SigFixesPage() {
     return (
         <div className='max-w-4xl space-y-10'>
             <div className='space-y-4'>
-                <h1 className='text-3xl md:text-4xl font-black italic tracking-tighter text-white uppercase flex items-center gap-3'>
+                <h1 className='text-3xl md:text-4xl font-black italic tracking-tighter uppercase flex items-center gap-3'>
                     <Wrench className='text-purple-500' size={32} />
                     {t('title')}
                 </h1>
-                <p className='text-neutral-400 text-lg max-w-2xl'>
+                <p className='text-neutral-600 dark:text-neutral-400 text-lg max-w-2xl'>
                     {t('desc')}
                 </p>
             </div>
@@ -29,12 +29,12 @@ export default function SigFixesPage() {
                             <ShieldCheck size={16} />
                             Optimization Required
                         </div>
-                        <p className='text-neutral-300 leading-relaxed'>
+                        <p className='text-neutral-600 dark:text-neutral-300 leading-relaxed'>
                             {t('prompt')}
                         </p>
                         <Button
                             size='lg'
-                            className='w-full bg-purple-600 hover:bg-purple-700 text-white font-bold h-12 rounded-xl'
+                            className='w-full bg-purple-600 hover:bg-purple-700 font-bold h-12 rounded-xl'
                             asChild
                         >
                             <Link href={sigfixLink} target='_blank'>
@@ -43,7 +43,7 @@ export default function SigFixesPage() {
                         </Button>
                     </div>
 
-                    <p className='text-neutral-500 text-sm leading-relaxed px-2'>
+                    <p className='text-neutral-600 dark:text-neutral-500 text-sm leading-relaxed px-2'>
                         {t('features')}
                     </p>
                 </div>
@@ -61,18 +61,14 @@ export default function SigFixesPage() {
             </div>
 
             <div className='flex justify-between pt-10 border-t border-white/5'>
-                <Button
-                    variant='ghost'
-                    className='text-neutral-500 hover:text-white'
-                    asChild
-                >
+                <Button variant='ghost' className='text-neutral-500' asChild>
                     <Link href='/guide/sigmod'>
                         <ArrowLeft className='mr-2 h-4 w-4' /> {t('back')}
                     </Link>
                 </Button>
                 <Button
                     size='lg'
-                    className='bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:scale-105 transition-transform font-black px-10 rounded-full'
+                    className='bg-gradient-to-r from-blue-600 to-purple-600 hover:scale-105 transition-transform font-black px-10 rounded-full'
                     asChild
                 >
                     <Link href='/guide/end'>

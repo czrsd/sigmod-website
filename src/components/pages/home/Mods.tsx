@@ -32,39 +32,36 @@ const ModItem = ({
             index % 2 !== 0 ? 'lg:flex-row-reverse' : ''
         }`}
     >
-        {/* Bild-Container mit Glass-Effekt */}
         <div className='w-full lg:w-1/2 group relative'>
             <div className='absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-[2rem] blur-2xl opacity-0 group-hover:opacity-100 transition duration-700' />
             <div className='relative overflow-hidden rounded-2xl border border-white/10 bg-neutral-900/50 backdrop-blur-sm p-2 shadow-2xl'>
                 <Image
                     src={img}
-                    width={800}
-                    height={500}
+                    width={520}
+                    height={350}
                     alt={alt}
                     className='rounded-xl transition-transform duration-700 group-hover:scale-[1.02]'
                 />
             </div>
         </div>
 
-        {/* Text-Inhalt */}
         <div className='w-full lg:w-1/2 space-y-6'>
             <div className='space-y-2'>
-                <h2 className='text-4xl md:text-5xl font-black uppercase italic tracking-tighter text-foreground'>
+                <h3 className='text-4xl md:text-5xl font-black uppercase italic tracking-tighter text-foreground'>
                     {title}
-                </h2>
+                </h3>
                 <div className='h-1 w-20 bg-blue-600 rounded-full' />
             </div>
 
-            <p className='text-lg leading-relaxed text-muted-foreground'>
+            <p className='text-lg leading-relaxed text-neutral-600 dark:text-neutral-300'>
                 {desc}
             </p>
 
-            {/* Key Features als schnelle Liste */}
             <ul className='grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2'>
                 {features.map((feature, i) => (
                     <li
                         key={i}
-                        className='flex items-center gap-2 text-sm font-medium text-neutral-300'
+                        className='flex items-center gap-2 text-sm font-medium text-neutral-600 dark:text-neutral-200'
                     >
                         <CheckCircle2 className='text-blue-500 w-4 h-4' />
                         {feature}
@@ -76,7 +73,7 @@ const ModItem = ({
                 <Button
                     asChild
                     variant='outline'
-                    className='rounded-full px-8 h-12 border-white/10 hover:bg-white/5 font-bold uppercase italic tracking-wider transition-all hover:gap-4'
+                    className='rounded-full px-8 h-12 border-black/10 dark:border-white/10 hover:bg-white/5 font-bold uppercase italic tracking-wider transition-all hover:gap-4'
                 >
                     <Link href={link}>
                         {learnMore} <ArrowRight className='w-4 h-4' />

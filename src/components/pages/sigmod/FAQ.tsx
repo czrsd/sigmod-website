@@ -33,7 +33,7 @@ export function FAQ() {
                         value={`general-${i}`}
                         className='border-none'
                     >
-                        <AccordionTrigger className='flex gap-4 px-6 py-4 rounded-2xl bg-white/[0.03] border border-white/5 hover:bg-white/[0.06] hover:no-underline transition-all group data-[state=open]:rounded-b-none data-[state=open]:border-primary/30'>
+                        <AccordionTrigger className='flex gap-4 px-6 py-4 rounded-2xl bg-black/[0.03] dark:bg-white/[0.03] border border-black/5 dark:border-white/5 hover:bg-black/[0.06] dark:hover:bg-white/[0.06] hover:no-underline transition-all group data-[state=open]:rounded-b-none data-[state=open]:border-primary/30'>
                             <div className='flex items-center gap-4 text-left font-bold uppercase italic tracking-tight group-hover:text-primary transition-colors'>
                                 <HelpCircle
                                     size={18}
@@ -42,7 +42,7 @@ export function FAQ() {
                                 {question}
                             </div>
                         </AccordionTrigger>
-                        <AccordionContent className='px-6 py-4 rounded-b-2xl bg-white/[0.01] border-x border-b border-white/5 text-neutral-400 leading-relaxed'>
+                        <AccordionContent className='px-6 py-4 rounded-b-2xl bg-black/[0.01] dark:bg-white/[0.01] border-x border-b border-black/5 dark:border-white/5 text-neutral-600 dark:text-neutral-400 leading-relaxed'>
                             {answer}
                         </AccordionContent>
                     </AccordionItem>

@@ -18,7 +18,7 @@ export default function ContactPage() {
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8 w-full px-4'>
-                <div className='group relative flex flex-col items-center p-10 bg-white/5 dark:bg-neutral-900/40 backdrop-blur-xl rounded-2xl border border-white/10 dark:border-white/5 transition-all duration-300 hover:bg-white/10'>
+                <div className='group relative flex flex-col items-center p-10 bg-black/5 dark:bg-white/5 dark:bg-neutral-900/40 backdrop-blur-xl rounded-2xl border border-black/10 dark:border-white/10 dark:border-white/5 transition-all duration-300 hover:bg-white/10'>
                     <div className='w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform'>
                         <Mail className='w-7 h-7 text-primary' />
                     </div>
@@ -39,7 +39,7 @@ export default function ContactPage() {
                     </a>
                 </div>
 
-                <div className='group relative flex flex-col items-center p-10 bg-white/5 dark:bg-[#5865F2]/5 backdrop-blur-xl rounded-2xl border border-white/10 dark:border-[#5865F2]/20 transition-all duration-300 hover:bg-[#5865F2]/10'>
+                <div className='group relative flex flex-col items-center p-10 bg-black/5 dark:bg-[#5865F2]/5 backdrop-blur-xl rounded-2xl border border-black/10 dark:border-[#5865F2]/20 transition-all duration-300 hover:bg-[#5865F2]/10'>
                     <div className='w-14 h-14 bg-[#5865F2]/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform'>
                         <MessageSquare className='w-7 h-7 text-[#5865F2]' />
                     </div>

@@ -21,23 +21,29 @@ export function FAQSection() {
                     <HelpCircle size={14} />
                     <span>Support</span>
                 </div>
-                <h3 className='text-4xl md:text-5xl font-black uppercase italic tracking-tighter text-center'>
+                <h4 className='text-4xl md:text-5xl font-black uppercase italic tracking-tighter text-center'>
                     FAQ
-                </h3>
+                </h4>
             </div>
 
-            <Accordion type='single' collapsible className='w-full space-y-3'>
-                {questions.map((item, i) => (
+            <Accordion type='single' collapsible className='space-y-4'>
+                {questions.map(({ question, answer }, i) => (
                     <AccordionItem
                         key={i}
-                        value={`item-${i}`}
-                        className='border border-white/5 bg-neutral-900/40 backdrop-blur-sm rounded-2xl px-4 transition-all hover:border-white/10'
+                        value={`general-${i}`}
+                        className='border-none'
                     >
-                        <AccordionTrigger className='hover:no-underline font-bold text-left py-5'>
-                            {item.question}
+                        <AccordionTrigger className='flex gap-4 px-6 py-4 rounded-2xl bg-black/[0.03] dark:bg-white/[0.03] border border-black/5 dark:border-white/5 hover:bg-black/[0.06] dark:hover:bg-white/[0.06] hover:no-underline transition-all group data-[state=open]:rounded-b-none data-[state=open]:border-primary/30'>
+                            <div className='flex items-center gap-4 text-left font-bold uppercase italic tracking-tight group-hover:text-primary transition-colors'>
+                                <HelpCircle
+                                    size={18}
+                                    className='text-primary opacity-50 group-hover:opacity-100 shrink-0'
+                                />
+                                {question}
+                            </div>
                         </AccordionTrigger>
-                        <AccordionContent className='text-neutral-400 leading-relaxed pb-5'>
-                            {item.answer}
+                        <AccordionContent className='px-6 py-4 rounded-b-2xl bg-black/[0.01] dark:bg-white/[0.01] border-x border-b border-black/5 dark:border-white/5 text-neutral-600 dark:text-neutral-400 leading-relaxed'>
+                            {answer}
                         </AccordionContent>
                     </AccordionItem>
                 ))}

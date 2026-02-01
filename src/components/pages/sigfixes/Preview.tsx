@@ -90,8 +90,8 @@ export function Preview() {
                     </CarouselContent>
 
                     <div className='hidden md:block'>
-                        <CarouselPrevious className='left-4 bg-black/50 border-white/10 transition-all z-20' />
-                        <CarouselNext className='right-4 bg-black/50 border-white/10 transition-all z-20' />
+                        <CarouselPrevious className='left-4 bg-black/50 border-white/10 text-white transition-all z-20' />
+                        <CarouselNext className='right-4 bg-black/50 border-white/10 text-white transition-all z-20' />
                     </div>
                 </Carousel>
             </div>
@@ -112,7 +112,7 @@ export function Preview() {
                                 'h-1.5 rounded-full transition-all duration-500 ease-out',
                                 current === i
                                     ? 'w-12 bg-cyan-400 shadow-[0_0_15px_rgba(34,211,238,0.8)]'
-                                    : 'w-6 bg-white/20 group-hover:bg-cyan-400/40'
+                                    : 'w-6 bg-black/20 dark:bg-white/20 group-hover:bg-cyan-400/40'
                             )}
                         />
                     </button>

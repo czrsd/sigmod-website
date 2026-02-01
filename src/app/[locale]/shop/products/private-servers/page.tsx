@@ -195,7 +195,7 @@ function ProductCard({
             <div className='px-6 pb-6'>
                 <div className='relative w-full aspect-video rounded-lg overflow-hidden bg-neutral-100 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 group'>
                     <Image
-                        src='/images/dashboard-placeholder.png'
+                        src='/shop/servers/sps_dashboard.png'
                         alt='Server Dashboard Interface'
                         fill
                         className='object-cover transition-transform duration-700 group-hover:scale-105'

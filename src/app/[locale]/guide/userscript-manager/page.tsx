@@ -21,17 +21,17 @@ export default function UserscriptManagerPage() {
     return (
         <div className='max-w-4xl space-y-10'>
             <div className='space-y-4'>
-                <h1 className='text-3xl md:text-4xl font-black italic tracking-tighter text-white uppercase'>
+                <h1 className='text-3xl md:text-4xl font-black italic tracking-tighter uppercase'>
                     {t('title')}
                 </h1>
-                <p className='text-neutral-400 text-lg max-w-2xl'>
+                <p className='text-neutral-500 dark:text-neutral-400 text-lg max-w-2xl'>
                     {t('desc')}
                 </p>
             </div>
 
             <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
                 <div className='bg-white/5 border border-white/10 p-6 rounded-2xl space-y-4'>
-                    <h3 className='font-bold text-white flex items-center gap-2'>
+                    <h3 className='font-bold flex items-center gap-2'>
                         <Download size={18} className='text-blue-500' />
                         {t('recommend')}
                     </h3>
@@ -68,17 +68,13 @@ export default function UserscriptManagerPage() {
                 </div>
             </div>
 
-            <div className='p-6 rounded-2xl bg-gradient-to-r from-blue-600/10 to-transparent border-l-4 border-blue-600 text-neutral-300'>
+            <div className='p-6 rounded-2xl bg-gradient-to-r from-blue-600/10 to-transparent border-l-4 border-blue-600 text-neutral-700 dark:text-neutral-300'>
                 {t.rich('installed', {
                     SigMod: (children) => (
-                        <span className='text-white font-bold italic'>
-                            {children}
-                        </span>
+                        <span className='font-bold italic'>{children}</span>
                     ),
                     SigFixes: (children) => (
-                        <span className='text-white font-bold italic'>
-                            {children}
-                        </span>
+                        <span className='font-bold italic'>{children}</span>
                     ),
                 })}
             </div>

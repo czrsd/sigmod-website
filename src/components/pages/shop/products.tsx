@@ -75,7 +75,7 @@ function ProductCard({
         <div
             className='group relative flex flex-col items-center justify-center gap-6 w-[300px] h-[320px] 
                        bg-white/40 dark:bg-neutral-900/40 backdrop-blur-md 
-                       rounded-2xl p-8 cursor-pointer border border-white/20 dark:border-white/5 
+                       rounded-2xl p-8 cursor-pointer border border-black/20 dark:border-white/20 dark:border-white/5 
                        transition-all duration-300 hover:translate-y-[-5px] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)]'
             onClick={() => {
                 location.href = link;

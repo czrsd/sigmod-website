@@ -59,18 +59,18 @@ export default function DeveloperModePage() {
     return (
         <div className='max-w-4xl space-y-10'>
             <div className='space-y-4'>
-                <h1 className='text-3xl md:text-4xl font-black italic tracking-tighter text-white uppercase flex items-center gap-3'>
+                <h1 className='text-3xl md:text-4xl font-black italic tracking-tighter uppercase flex items-center gap-3'>
                     <ShieldCheck className='text-blue-500' size={32} />
                     {browser === 'chrome' ? t('chrome.pageTitle') : t('title')}
                 </h1>
-                <p className='text-neutral-400 text-lg max-w-2xl'>
+                <p className='text-neutral-600 dark:text-neutral-400 text-lg max-w-2xl'>
                     {browser === 'chrome' ? t('chrome.desc') : t('desc')}
                 </p>
             </div>
 
             <div className='grid grid-cols-1 lg:grid-cols-5 gap-10 items-start'>
                 <div className='lg:col-span-2 space-y-6'>
-                    <h2 className='text-white font-bold uppercase tracking-widest text-sm border-b border-white/10 pb-2'>
+                    <h2 className='font-bold uppercase tracking-widest text-sm border-b border-white/10 pb-2'>
                         {t(`${browser}.title`)}
                     </h2>
                     <ol className='space-y-4'>
@@ -81,10 +81,10 @@ export default function DeveloperModePage() {
                                     key={i}
                                     className='flex gap-4 items-start group'
                                 >
-                                    <span className='w-6 h-6 rounded bg-white/5 border border-white/10 text-white text-[10px] font-bold flex items-center justify-center shrink-0 group-hover:border-blue-500 transition-colors'>
+                                    <span className='w-6 h-6 rounded bg-white/5 border border-white/10 text-[10px] font-bold flex items-center justify-center shrink-0 group-hover:border-blue-500 transition-colors'>
                                         {i + 1}
                                     </span>
-                                    <span className='text-neutral-300 text-sm font-medium pt-0.5 leading-snug'>
+                                    <span className='text-neutral-600 dark:text-neutral-300 text-sm font-medium pt-0.5 leading-snug'>
                                         {step}
                                     </span>
                                 </li>
@@ -115,11 +115,7 @@ export default function DeveloperModePage() {
             )}
 
             <div className='flex justify-between pt-6'>
-                <Button
-                    variant='ghost'
-                    className='text-neutral-500 hover:text-white'
-                    asChild
-                >
+                <Button variant='ghost' className='text-neutral-500' asChild>
                     <Link href='/guide/userscript-manager'>
                         <ArrowLeft className='mr-2 h-4 w-4' /> {t('back')}
                     </Link>

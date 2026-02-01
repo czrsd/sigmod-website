@@ -11,7 +11,7 @@ export default function AboutPage() {
     return (
         <main className='max-w-5xl mx-auto px-6 py-20 space-y-24'>
             <header className='space-y-4'>
-                <h1 className='text-5xl md:text-7xl font-black italic tracking-tighter text-white uppercase leading-none'>
+                <h1 className='text-5xl md:text-7xl font-black italic tracking-tighter uppercase leading-none'>
                     {t('title')}
                 </h1>
                 <p className='text-blue-500 font-bold uppercase tracking-[0.3em] text-xs'>
@@ -21,15 +21,15 @@ export default function AboutPage() {
 
             <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
                 <div className='lg:col-span-5 space-y-6'>
-                    <div className='bg-white/[0.03] border border-white/10 p-8 rounded-3xl relative overflow-hidden group'>
+                    <div className='bg-black/[0.03] dark:bg-white/[0.03] border border-black/10 dark:border-white/10 p-8 rounded-3xl relative overflow-hidden group'>
                         <div className='absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity'>
                             <Rocket size={80} />
                         </div>
-                        <h3 className='text-2xl font-black italic uppercase text-white mb-4 flex items-center gap-2'>
+                        <h3 className='text-2xl font-black italic uppercase mb-4 flex items-center gap-2'>
                             <Milestone className='text-blue-500' size={20} />
                             {t('tldr.title')}
                         </h3>
-                        <p className='text-neutral-400 leading-relaxed relative z-10'>
+                        <p className='text-neutral-600 dark:text-neutral-400 leading-relaxed relative z-10'>
                             {t('tldr.text')}
                         </p>
                     </div>
@@ -49,13 +49,13 @@ export default function AboutPage() {
                     </Button>
                 </div>
 
-                <div className='lg:col-span-7 space-y-6 text-neutral-300 leading-relaxed text-lg'>
-                    <h3 className='text-white font-bold flex items-center gap-2 uppercase tracking-widest text-sm mb-8'>
+                <div className='lg:col-span-7 space-y-6 text-neutral-700 dark:text-neutral-300 leading-relaxed text-lg'>
+                    <h3 className='font-bold flex items-center gap-2 uppercase tracking-widest text-sm mb-8'>
                         <History size={16} className='text-blue-500' />
                         {t('story.title')}
                     </h3>
                     <p>{t('story.intro')}</p>
-                    <p className='text-neutral-500 italic border-l-2 border-white/10 pl-6 my-8'>
+                    <p className='text-neutral-600 dark:text-neutral-500 italic border-l-2 border-black/10 dark:border-white/10 pl-6 my-8'>
                         {t('story.sigmodStart')}
                     </p>
                     <p>{t('story.sigmod')}</p>
@@ -68,16 +68,14 @@ export default function AboutPage() {
                 </div>
             </div>
 
-            {/* Roadmap Section */}
             <section className='pt-10 space-y-12'>
                 <div className='text-center'>
-                    <h2 className='text-3xl font-black italic uppercase text-white tracking-tighter'>
+                    <h2 className='text-3xl font-black italic uppercase tracking-tighter'>
                         {t('roadmap.title')}
                     </h2>
                 </div>
 
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-8 relative'>
-                    {/* Roadmap Cards */}
                     <RoadmapStep
                         phase='01'
                         title={t('roadmap.phase1.title')}
@@ -131,7 +129,7 @@ function RoadmapStep({
             >
                 Phase {phase} — {date}
             </span>
-            <h4 className='text-white font-bold text-xl mb-4 italic uppercase tracking-tight'>
+            <h4 className='font-bold text-xl mb-4 italic uppercase tracking-tight'>
                 {title}
             </h4>
             <p className='text-neutral-500 text-sm leading-relaxed'>{desc}</p>

@@ -10,7 +10,7 @@ export function Community() {
 
     return (
         <section className='max-w-5xl mx-auto py-24 px-6'>
-            <div className='relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-gradient-to-br from-white/[0.05] to-transparent backdrop-blur-md p-8 md:p-16 text-center space-y-8'>
+            <div className='relative overflow-hidden rounded-[2.5rem] border border-black/10 dark:border-white/10 bg-gradient-to-br from-black/[0.05] dark:from-white/[0.05] to-transparent backdrop-blur-md p-8 md:p-16 text-center space-y-8'>
                 <div className='absolute -top-24 -right-24 w-64 h-64 bg-primary/10 blur-[80px] rounded-full' />
                 <div className='absolute -bottom-24 -left-24 w-64 h-64 bg-blue-500/10 blur-[80px] rounded-full' />
 
