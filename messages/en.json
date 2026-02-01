@@ -405,7 +405,7 @@
             "quickGuide": "Quick Installation",
             "video": {
                 "title": "Video Tutorial",
-                "desc": "Prefer watching? This 40 seconds video covers the entire installation process.",
+                "desc": "Prefer watching? This video covers the entire installation process.",
                 "credit": "Tutorial by Sigmally Community",
                 "creditTitle": "Verified Community Content"
             }
@@ -502,14 +502,74 @@
             "title": "Ready for Action!",
             "desc": "Everything is set up correctly. You are now running the most advanced mods for Sigmally.",
             "completed_label": "Installation Finished",
-            "notice": "Verify your Menu",
+            "notice": "Restart your browser before you join the game, then enjoy!",
             "play": "Start Playing Now",
             "explore": "Explore"
         }
     },
     "TutorialPage": {
+        "overview": {
+            "communityHub": "Community Hub",
+            "admin": "Admin",
+            "upload": "Upload",
+            "loginDiscord": "Login with Discord",
+            "search": "Search",
+            "searchPlaceholder": "Search tutorials...",
+            "category": "Category",
+            "allCategories": "All Categories",
+            "sortBy": "Sort by",
+            "newestFirst": "Newest first",
+            "mostViewed": "Most viewed",
+            "mostLiked": "Most liked",
+            "type": {
+                "all": "All",
+                "youtube": "YouTube",
+                "video": "Video",
+                "images": "Images"
+            },
+            "syncing": "Syncing...",
+            "by": "By",
+            "unknown": "Unknown",
+            "view": "View"
+        },
+        "tutorialDetail": {
+            "back": "Back",
+            "loading": "Loading tutorial...",
+            "noContent": "No content available",
+            "loginToLike": "Please log in to like this tutorial.",
+            "shareTitle": "Check out this tutorial",
+            "copied": "Tutorial URL copied to clipboard!",
+            "shareFailed": "Could not share or copy the link.",
+            "member": "Member",
+            "unknownUser": "Unknown user",
+            "contentCreator": "Content creator",
+            "views": "Views",
+            "share": "Share tutorial",
+            "contentType": "{type} content"
+        },
         "dashboard": {
+            "overview": {
+                "accessDenied": "Access denied",
+                "creator": "Creator",
+                "dashboard": "Dashboard",
+                "subtitle": "Manage your contributions and track approval status.",
+                "newTutorial": "New Tutorial",
+                "totalUploads": "Total Uploads",
+                "approved": "Approved",
+                "pending": "Pending",
+                "yourSubmissions": "Your Submissions",
+                "tutorial": "Tutorial",
+                "category": "Category",
+                "status": "Status",
+                "action": "Action",
+                "loading": "Loading your data...",
+                "empty": "No tutorials uploaded yet.",
+                "rejected": "rejected"
+            },
             "upload": {
+                "upload": "Upload",
+                "content": "Content",
+                "hint": "Your submission will be reviewed by the moderation team.",
                 "title": "Title",
                 "mediaType": "Media Type",
                 "contentUrl": "Content URL",
@@ -518,6 +578,21 @@
                 "submit": "Submit Tutorial",
                 "update": "Update Tutorial",
                 "processing": "Processing...",
+                "placeholders": {
+                    "title": "How to...",
+                    "youtubeUrl": "https://youtube.com/watch?v=...",
+                    "description": "This video shows..."
+                },
+                "mediaOptions": {
+                    "youtube": "YouTube Video",
+                    "video": "Direct MP4",
+                    "images": "Images / Graphic"
+                },
+                "labels": {
+                    "uploadVideo": "Upload Video (MP4)",
+                    "uploadImages": "Upload Images",
+                    "thumbnail": "Thumbnail"
+                },
                 "youtube": {
                     "autoThumbnail": "Use YouTube Thumbnail?",
                     "customThumbnail": "Upload custom thumbnail"
@@ -525,9 +600,39 @@
                 "dropzone": {
                     "video": "Drag & drop video here or click",
                     "images": "Drag & drop images here or click (Max. 10)",
-                    "thumbnail": "Drag & drop thumbnail here or click"
+                    "thumbnail": "Drag & drop thumbnail here or click",
+                    "videoShort": "Drop your video here",
+                    "imagesShort": "Drop your images here"
+                },
+                "alts": {
+                    "preview": "Preview",
+                    "thumbnail": "Thumbnail preview"
+                },
+                "errors": {
+                    "noContent": "Please provide content",
+                    "uploadFailed": "Upload failed",
+                    "submissionFailed": "Submission failed",
+                    "generic": "Error during upload"
                 }
             }
+        },
+        "adminSubmissions": {
+            "manage": "Manage",
+            "tutorials": "Tutorials",
+            "back": "Back to tutorials",
+            "backSubmissions": "Back to submissions",
+            "editing": "Editing",
+            "empty": "No submissions found.",
+            "approve": "Approve",
+            "reject": "Reject",
+            "edit": "Edit",
+            "delete": "Delete",
+            "pending": "pending",
+            "approved": "approved",
+            "rejected": "rejected",
+            "confirmDelete": "Are you sure you want to delete this tutorial?",
+            "errorUpdate": "Error updating status",
+            "errorDelete": "Error deleting tutorial"
         }
     },
     "FAQPage": {
@@ -768,7 +873,7 @@
                     },
                     {
                         "title": "Trust",
-                        "description": "Made by a verified Sigmally moderator and the creator of SigMod with 30,000 installs."
+                        "description": "Made by a verified Sigmally moderator and the creator of SigMod with 30,000+ installs."
                     },
                     {
                         "title": "Best Value",

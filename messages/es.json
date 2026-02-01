@@ -20,18 +20,25 @@
             }
         },
         "guide": "Guía de instalación",
+        "tutorials": "Tutoriales",
         "faq": "FAQ",
         "about": "Acerca de",
         "shop": "Tienda"
     },
     "Footer": {
-        "text": "© 2025 SigModz. No afiliado con Sigmally."
+        "disclaimer": "No afiliado a Sigmally. Desarrollado para la comunidad."
     },
     "HomePage": {
         "hero": {
-            "title": "Sigmally Modz",
-            "sub": "Mejora tus sesiones en Sigmally con rendimiento más fluido, herramientas inteligentes y una configuración que se siente como tuya.",
-            "start": "Comenzar"
+            "title": "<glow>Sigmally Modz</glow>",
+            "sub": "Experimenta el juego como nunca antes con UIs personalizadas, macros potentes y automatización fluida.",
+            "shop_now": "Visitar tienda",
+            "start": "Guía de instalación",
+            "stats": {
+                "total": "Instalaciones totales",
+                "active": "Instalaciones hoy",
+                "online": "En línea"
+            }
         },
         "introduction": {
             "what": {
@@ -46,37 +53,49 @@
         "mods": {
             "sigmod": {
                 "title": "SigMod",
-                "desc": "SigMod integra un menú de mod completo dentro del juego. Crea macros personalizadas, cambia temas y layouts y automatiza cosas como la recolección diaria de monedas. Ajusta el HUD, las teclas y la configuración del chat para que todo se sienta natural mientras juegas.",
-                "learnMore": "Más sobre SigMod"
+                "desc": "SigMod añade un menú de mod completo directamente en tu cliente de Sigmally. Te da control total sobre tu interfaz, temas personalizados y un sistema de cuentas integrado con lista de amigos y chat en tiempo real. Puedes automatizar tareas menores como la recolección diaria de monedas y ajustar la configuración del juego a tu estilo de juego.",
+                "features": [
+                    "Sistema avanzado de chat y grupo",
+                    "Macros y teclas personalizadas",
+                    "Perfil y lista de amigos",
+                    "Temas de menú y juego"
+                ],
+                "learnMore": "Explorar SigMod"
             },
             "sigfixes": {
                 "title": "SigFixes",
-                "desc": "SigFixes mejora el rendimiento para obtener FPS más estables y retardos mínimos. Carga más rápido, obtén respuestas de entrada más precisas y controla varias cuentas con herramientas multibox integradas. Ajusta el retraso de dibujo, la opacidad, el zoom y la escala de nombres para mantener todo fluido.",
-                "learnMore": "Más sobre SigFixes"
+                "desc": "Esta extensión se centra totalmente en la optimización técnica y el rendimiento. SigFixes ayuda a reducir el lag, estabiliza tu tasa de frames y proporciona herramientas esenciales como soporte multibox para controlar varias cuentas simultáneamente mientras asegura tiempos de carga más rápidos.",
+                "features": [
+                    "Aumento de FPS y rendimiento",
+                    "Herramientas multibox integradas",
+                    "Reducción del lag de entrada",
+                    "Zoom avanzado y gráficos mejorados"
+                ],
+                "learnMore": "Explorar SigFixes"
             },
-            "learnMore": "Aprender e instalar"
+            "learnMore": "Instalación y guía"
         },
         "faq": {
             "questions": [
                 {
                     "question": "¿Son seguros estos scripts?",
-                    "answer": "Sí. Todo es de código abierto y Tampermonkey es ampliamente confiable. No hay trucos ocultos."
+                    "answer": "Sí. El código está abierto para que cualquiera lo revise y Tampermonkey es tan estándar como puede ser. No hay tareas ocultas ni sorpresas."
                 },
                 {
                     "question": "¿Necesito ambos mods?",
-                    "answer": "No necesariamente. Usar SigMod y SigFixes juntos te da la mejor combinación de control y velocidad."
+                    "answer": "No es obligatorio, pero funcionan mejor en equipo. SigMod maneja las funciones mientras que SigFixes mantiene el rendimiento estable. Es como tener un coche rápido que realmente tiene volante."
                 },
                 {
                     "question": "¿Están permitidos en Sigmally?",
-                    "answer": "Sí. Ambos mods son conocidos por la comunidad y están aceptados por el propietario."
+                    "answer": "Sí, no te preocupes. Ambos mods son conocidos en la comunidad y hasta el propietario está de acuerdo con ellos. No te banearán por querer una mejor UI."
                 },
                 {
                     "question": "¿Puedo quitarlos en cualquier momento?",
-                    "answer": "Claro. Simplemente apágalos o desinstálalos en tu gestor de userscripts."
+                    "answer": "Claro. Si decides que extrañas el aspecto original con lag, solo desactívalos o elimina el script en tu gestor. No se requiere desinstalación complicada."
                 },
                 {
-                    "question": "¿Me convertirá SigMod en un pro de la noche a la mañana?",
-                    "answer": "Ojalá. SigMod hace las cosas más suaves y fáciles de manejar, pero la habilidad viene de ti: timing, lectura y práctica."
+                    "question": "¿SigMod me hará un pro de la noche a la mañana?",
+                    "answer": "Ojalá. Definitivamente hace que el juego sea más fácil de manejar y ver, pero todavía debes hacer los clics tú mismo. Buena suerte con la práctica."
                 }
             ]
         },
@@ -111,11 +130,13 @@
         },
         "WhySigMod": {
             "title": "Por qué elegir SigMod?",
-            "desc1": "SigMod añade automatización, personalización y control total de la UI a Sigmally. Configura macros, mueve paneles, reasigna teclas y ajusta visuales desde un tablero limpio dentro del juego. Cambia temas, guarda nombres favoritos y toma capturas con un clic.",
-            "desc2": "Colabora con tu escuadra usando tags dinámicos: chat privado, pings tácticos y marcadores en el minimapa. Consulta estadísticas de partidas, gestiona amigos y ajusta fuentes y atajos sobre la marcha.",
-            "performance": "¿Quieres máximo rendimiento? Combina SigMod con",
-            "smooth": "para juego ultra sensible.",
-            "getStarted": "Empezar con SigMod"
+            "desc": "Si algo está roto o simplemente no puedes hacer que las macros funcionen, únete a nuestro Discord. Es el mejor lugar para ayuda rápida, reportes de errores o ver lo que otros están haciendo.",
+            "desc1": "SigMod añade automatización, personalización y control total de la UI a Sigmally. Configura macros, mueve paneles, reasigna teclas y ajusta visuales desde un panel limpio dentro del juego.",
+            "desc2": "Trabaja con tu escuadra usando etiquetas dinámicas: chat privado, pings tácticos y marcadores en el minimapa en vivo. Consulta estadísticas de partidas y gestiona amigos al instante.",
+            "highlight1": "Automatización total de UI",
+            "highlight2": "Juego táctico en escuadra",
+            "highlight3": "Control con un clic",
+            "getStarted": "Comenzar ahora"
         },
         "Features": {
             "title": "Funciones de SigMod",
@@ -210,6 +231,7 @@
     },
     "SigFixesPage": {
         "Hero": {
+            "badge": "Optimizador de rendimiento",
             "title": "SigFixes",
             "sub": "Mejora el núcleo de Sigmally con rendimiento ultra suave, entrada precisa y control multibox avanzado.",
             "install": "Instalar SigFixes",
@@ -235,7 +257,10 @@
             "title": "Por qué SigFixes?",
             "desc1": "SigFixes reforma el render de Sigmally para frames más suaves y entrada más nítida. Elimina stutters, reduce el retardo y mantiene el juego estable bajo presión.",
             "desc2": "Diseñado para jugadores serios, destaca al multiboxear. Entradas más rápidas, comportamiento de cámara sincronizado y ajustes visuales ayudan a rastrear y mergear con control total.",
-            "worksWith": "Ya funciona con",
+            "highlight1": "Máximo rendimiento",
+            "highlight2": "Frames estables",
+            "highlight3": "Optimización de entradas",
+            "worksWith": "Funciona con",
             "combo": "Combínalos para la experiencia definitiva.",
             "getStarted": "Empezar con SigFixes"
         },
@@ -367,28 +392,28 @@
         "fullGuide": "Ver guía completa"
     },
     "Guide": {
+        "Overview": {
+            "title": "Guía de instalación",
+            "desc": "Sigue estos pasos para mejorar tu experiencia en Sigmally. Nuestros mods proporcionan UI personalizadas, macros avanzadas y mejor rendimiento.",
+            "access": "El menú del mod puede abrirse dentro del juego presionando la tecla 'V' o haciendo clic en el icono de engranaje.",
+            "start": "Comenzar",
+            "quickGuide": "Instalación rápida",
+            "video": {
+                "title": "Tutorial en video",
+                "desc": "¿Prefieres ver? Este video cubre todo el proceso de instalación.",
+                "credit": "Tutorial por la comunidad de Sigmally",
+                "creditTitle": "Contenido verificado de la comunidad"
+            }
+        },
         "Sidebar": {
-            "title": "Guía",
+            "title": "Instalación",
             "overview": "Resumen",
             "usm": "Gestor de Userscripts",
             "devmode": "Modo desarrollador",
             "aus_chrome": "Permitir User Scripts",
             "sigmod": "SigMod",
             "sigfixes": "SigFixes",
-            "end": "Conclusión"
-        },
-        "Overview": {
-            "title": "Primeros pasos",
-            "desc": "Bienvenido a SigModz. Esta guía muestra cómo instalar SigMod y SigFixes, los dos mods principales que mejoran Sigmally con rendimiento más fluido, control total y herramientas útiles.",
-            "access": "En unos simples pasos desbloquearás macros inteligentes, boosts de FPS, ajustes de UI y opciones avanzadas.",
-            "video": {
-                "title": "Tutorial en video",
-                "desc": "Míralo si prefieres instrucciones visuales.",
-                "credit": "Creado por Fake",
-                "creditTitle": "Discord: fa_keo"
-            },
-            "start": "Comenzar instalación",
-            "quickGuide": "Guía rápida"
+            "end": "Listo para jugar"
         },
         "UserscriptManager": {
             "title": "Instalar un gestor de userscripts",
@@ -469,15 +494,149 @@
             "end": "Final"
         },
         "End": {
-            "title": "Todo listo 🎉",
-            "desc": "SigMod y SigFixes están instalados. Disfruta de una experiencia Sigmally más fluida y personalizable. Entra, ajusta tu configuración y juega lo mejor posible.",
-            "notice": "Reinicia el navegador antes de unirte al juego",
-            "play": "Jugar Sigmally",
+            "title": "¡Listo para la acción!",
+            "desc": "Todo está configurado correctamente. Ahora estás usando los mods más avanzados para Sigmally.",
+            "completed_label": "Instalación completada",
+            "notice": "Reinicia tu navegador antes de unirte al juego y luego ¡disfruta!",
+            "play": "Comenzar a jugar ahora",
             "explore": "Explorar"
+        }
+    },
+    "TutorialPage": {
+        "overview": {
+            "communityHub": "Centro de la comunidad",
+            "admin": "Admin",
+            "upload": "Subir",
+            "loginDiscord": "Iniciar sesión con Discord",
+            "search": "Buscar",
+            "searchPlaceholder": "Buscar tutoriales...",
+            "category": "Categoría",
+            "allCategories": "Todas las categorías",
+            "sortBy": "Ordenar por",
+            "newestFirst": "Más recientes primero",
+            "mostViewed": "Más vistos",
+            "mostLiked": "Más gustados",
+            "type": {
+                "all": "Todos",
+                "youtube": "YouTube",
+                "video": "Video",
+                "images": "Imágenes"
+            },
+            "syncing": "Sincronizando...",
+            "by": "Por",
+            "unknown": "Desconocido",
+            "view": "Ver"
+        },
+        "tutorialDetail": {
+            "back": "Atrás",
+            "loading": "Cargando tutorial...",
+            "noContent": "No hay contenido disponible",
+            "loginToLike": "Por favor inicia sesión para dar me gusta a este tutorial.",
+            "shareTitle": "Mira este tutorial",
+            "copied": "URL del tutorial copiada al portapapeles",
+            "shareFailed": "No se pudo compartir o copiar el enlace.",
+            "member": "Miembro",
+            "unknownUser": "Usuario desconocido",
+            "contentCreator": "Creador de contenido",
+            "views": "Vistas",
+            "share": "Compartir tutorial",
+            "contentType": "Contenido {type}"
+        },
+        "dashboard": {
+            "overview": {
+                "accessDenied": "Acceso denegado",
+                "creator": "Creador",
+                "dashboard": "Panel",
+                "subtitle": "Gestiona tus contribuciones y sigue el estado de aprobación.",
+                "newTutorial": "Nuevo tutorial",
+                "totalUploads": "Subidas totales",
+                "approved": "Aprobado",
+                "pending": "Pendiente",
+                "yourSubmissions": "Tus envíos",
+                "tutorial": "Tutorial",
+                "category": "Categoría",
+                "status": "Estado",
+                "action": "Acción",
+                "loading": "Cargando tus datos...",
+                "empty": "No se han subido tutoriales aún.",
+                "rejected": "rechazado"
+            },
+            "upload": {
+                "upload": "Subir",
+                "content": "Contenido",
+                "hint": "Tu envío será revisado por el equipo de moderación.",
+                "title": "Título",
+                "mediaType": "Tipo de medio",
+                "contentUrl": "URL del contenido",
+                "description": "Descripción",
+                "tags": "Seleccionar etiquetas (múltiples)",
+                "submit": "Enviar tutorial",
+                "update": "Actualizar tutorial",
+                "processing": "Procesando...",
+                "placeholders": {
+                    "title": "Cómo...",
+                    "youtubeUrl": "https://youtube.com/watch?v=...",
+                    "description": "Este video muestra..."
+                },
+                "mediaOptions": {
+                    "youtube": "Video de YouTube",
+                    "video": "MP4 directo",
+                    "images": "Imágenes / Gráficos"
+                },
+                "labels": {
+                    "uploadVideo": "Subir video (MP4)",
+                    "uploadImages": "Subir imágenes",
+                    "thumbnail": "Miniatura"
+                },
+                "youtube": {
+                    "autoThumbnail": "¿Usar miniatura de YouTube?",
+                    "customThumbnail": "Subir miniatura personalizada"
+                },
+                "dropzone": {
+                    "video": "Arrastra y suelta el video aquí o haz clic",
+                    "images": "Arrastra y suelta las imágenes aquí o haz clic (Máx. 10)",
+                    "thumbnail": "Arrastra y suelta la miniatura aquí o haz clic",
+                    "videoShort": "Suelta tu video aquí",
+                    "imagesShort": "Suelta tus imágenes aquí"
+                },
+                "alts": {
+                    "preview": "Vista previa",
+                    "thumbnail": "Vista previa de miniatura"
+                },
+                "errors": {
+                    "noContent": "Por favor proporciona contenido",
+                    "uploadFailed": "Error al subir",
+                    "submissionFailed": "Error al enviar",
+                    "generic": "Error durante la subida"
+                }
+            }
+        },
+        "adminSubmissions": {
+            "manage": "Gestionar",
+            "tutorials": "Tutoriales",
+            "back": "Volver a tutoriales",
+            "backSubmissions": "Volver a envíos",
+            "editing": "Editando",
+            "empty": "No se encontraron envíos.",
+            "approve": "Aprobar",
+            "reject": "Rechazar",
+            "edit": "Editar",
+            "delete": "Eliminar",
+            "pending": "pendiente",
+            "approved": "aprobado",
+            "rejected": "rechazado",
+            "confirmDelete": "¿Estás seguro de que deseas eliminar este tutorial?",
+            "errorUpdate": "Error al actualizar el estado",
+            "errorDelete": "Error al eliminar el tutorial"
         }
     },
     "FAQPage": {
         "title": "Preguntas frecuentes",
+        "subtitle": "Todo lo que necesitas saber para dominar la arena.",
+        "needHelp": "¿Aún tienes preguntas?",
+        "joinDiscord": "Únete al soporte de Discord",
+        "discordDesc": "Únete a nuestra comunidad para soporte en tiempo real, reportes de errores y comentarios.",
+        "statusLabel": "Impulsado por la comunidad",
         "general": {
             "title": "General",
             "installMods": {
@@ -559,12 +718,11 @@
                 "question": "¿Cómo configuro draw delay y otros ajustes?",
                 "answer": "Abre el menú de SigFixes y ajusta las opciones. Usa los iconos ? para más detalles."
             }
-        },
-        "needHelp": "¿Aún tienes dudas? Únete a nuestro Discord y abre un ticket.",
-        "joinDiscord": "Unirse a Discord"
+        }
     },
     "AboutPage": {
-        "title": "Acerca de SigModz",
+        "title": "Nuestra historia",
+        "subtitle": "La evolución del modding en Sigmally",
         "tldr": {
             "title": "¿Qué es SigModz?",
             "text": "SigModz es un proyecto comunitario que mejora la experiencia de Sigmally con mods potentes como SigMod y SigFixes."
@@ -577,6 +735,24 @@
             "sigfixes": "Más tarde, yx impulsó el avance con SigFixes, aportando un renderer WebGL completo, soporte multibox, mejor manejo de entradas y mejoras de rendimiento para juego serio.",
             "community": "Ambos mods están aceptados por la comunidad de Sigmally y cuentan con el apoyo del propietario del juego. SigModz sigue creciendo gracias a jugadores y desarrolladores.",
             "thanks": "Gracias a RingZer0 por la base original y a yx por el avance técnico. El apoyo de la comunidad mantiene SigModz en movimiento."
+        },
+        "roadmap": {
+            "title": "Hoja de ruta",
+            "phase1": {
+                "title": "La fundación",
+                "date": "2022 - 2024",
+                "desc": "Estableciendo SigMod como el estándar para macros y personalización básica de UI basado en la fuente original de RingZer0."
+            },
+            "phase2": {
+                "title": "Evolución técnica",
+                "date": "2024 - 2025",
+                "desc": "Lanzamiento de SigFixes. Introducción de renderizado WebGL y multiboxing avanzado."
+            },
+            "phase3": {
+                "title": "El futuro",
+                "date": "2026+",
+                "desc": "Mejoras continuas basadas en comentarios de la comunidad, pulido de UI y adaptación a actualizaciones del juego."
+            }
         },
         "joinDiscord": "Unirse a Discord"
     },
@@ -632,22 +808,28 @@
         "MainPage": {
             "failed": "Error al cargar datos de la tienda. Inténtalo de nuevo más tarde.",
             "Hero": {
-                "title": "Consigue tu <gold>Oro</gold> & <subscriptions>Suscripciones</subscriptions> más barato",
-                "description": "Los precios en el juego son altos. Aquí encontrarás ofertas exclusivas por tiempo limitado.",
+                "title": "Tu fuente principal de <gold>Monedas</gold>, <subscriptions>Subs</subscriptions> y más.",
+                "description": "Deja de pagar de más por la moneda del juego. Accede a ofertas exclusivas de alto valor y mejora tu experiencia por menos.",
                 "limitedOffersTitle": "Ofertas limitadas",
-                "limitedOffersSubtitle": "¡Consíguelas antes de que se agoten!",
-                "endsIn": "Termina en"
+                "limitedOffersSubtitle": "Paquetes premium a precios inigualables",
+                "endsIn": "La oferta termina en"
             },
             "SpecialBundles": {
                 "coins": "Monedas",
                 "subscription": "Suscripción",
                 "month": "mes",
                 "months": "meses",
-                "save": "Ahorra {percent}%",
-                "buyNow": "Comprar ahora"
+                "save": "AHORRA {percent}%",
+                "buyNow": "Comprar ahora",
+                "labels": {
+                    "flash": "Elección inicial",
+                    "popular": "Más popular",
+                    "ultimate": "Ahorro máximo"
+                }
             },
             "Products": {
                 "title": "Productos",
+                "view": "Ver productos →",
                 "coins": {
                     "name": "Monedas",
                     "description": "Cantidades individuales de monedas de 5.000 hasta 1.000.000"
@@ -659,6 +841,20 @@
                 "bundles": {
                     "name": "Paquetes",
                     "description": "Monedas y suscripciones combinadas a mejor precio"
+                },
+                "skins": {
+                    "name": "Skins",
+                    "description": "Obtén skins al instante a un precio justo"
+                },
+                "boosts": {
+                    "name": "Potenciadores",
+                    "description": "Mejora tu juego obteniendo más XP y más recompensas"
+                },
+                "servers": {
+                    "name": "Servidores privados",
+                    "description": "Accede a servidores privados para tus amigos para practicar, multiboxing y eventos. Todo gestionado desde un panel dedicado",
+                    "payments": "Los pagos están encriptados y manejados por proveedores confiables como PayPal y Stripe.",
+                    "createdBy": "Creado por un moderador verificado de Sigmally y el creador de SigMod con más de 30,000 instalaciones."
                 }
             },
             "WhyBuyHere": {
@@ -709,12 +905,15 @@
             },
             "Contact": {
                 "title": "Contacto",
-                "supportEmail": "Email de soporte",
-                "or": "o",
-                "createTicket": "Crear ticket en Discord"
+                "supportEmail": "Correo de soporte",
+                "emailResponseTime": "Generalmente responde en 24h",
+                "discordTitle": "Soporte en Discord",
+                "discordDesc": "Ayuda más rápida a través de nuestro sistema de tickets",
+                "createTicket": "Crear ticket en Discord",
+                "footerNote": "Estamos aquí para ti"
             },
             "Info": {
-                "shop": "Información legal de la tienda SigModz",
+                "shop": "© 2026 Tienda Sigmally Modz • Todos los derechos reservados",
                 "refund": "Política de reembolso",
                 "terms": "Términos de servicio",
                 "privacy": "Política de privacidad"
@@ -752,6 +951,10 @@
                 "loading": "Cargando...",
                 "notFound": "Producto no encontrado",
                 "title": "Paquetes de monedas",
+                "features": {
+                    "instant": "Entrega instantánea",
+                    "unlock": "Desbloquear items"
+                },
                 "saveMore": "¿Quieres ahorrar más? Mira nuestros bundles.",
                 "buyNow": "Comprar ahora",
                 "viewBundles": "Ver bundles",
@@ -762,25 +965,75 @@
             "SubscriptionPackages": {
                 "loading": "Cargando...",
                 "notFound": "Producto no encontrado",
-                "title": "Paquetes de suscripción",
-                "saveMore": "¿Quieres ahorrar más? Mira nuestros bundles.",
+                "title": "Suscripciones Premium",
+                "saveMore": "¿Quieres ahorrar aún más?",
                 "buyNow": "Comprar ahora",
                 "viewBundles": "Ver bundles",
-                "monthLabel": "{duration} mes",
-                "monthsLabel": "{duration} meses",
-                "price": "€{price}",
-                "originalPrice": "€{original}"
+                "monthLabel": "{duration} Mes",
+                "monthsLabel": "{duration} Meses",
+                "originalPrice": "€{original}",
+                "perks": {
+                    "clans": "Creación de clanes",
+                    "pass": "Sigma Pass exclusivo",
+                    "goldNick": "Nickname dorado"
+                },
+                "price": "€{price}"
             },
             "BundlesPage": {
                 "loading": "Cargando...",
                 "notFound": "Producto no encontrado",
                 "title": "Bundles",
+                "features": {
+                    "bestValue": "Mejor valor",
+                    "exclusive": "Paquete todo en uno"
+                },
                 "buyNow": "Comprar ahora",
                 "monthLabel": "{duration} mes Suscripción",
                 "monthsLabel": "{duration} meses Suscripción",
                 "coinsLabel": "{amount} Monedas",
                 "price": "€{price}",
                 "originalPrice": "€{original}"
+            },
+            "Skins": {
+                "loading": "Cargando...",
+                "notFound": "Producto no encontrado",
+                "title": "Skins",
+                "saveMore": "¿Quieres ahorrar aún más? Mira nuestros paquetes.",
+                "buyNow": "Comprar ahora",
+                "viewBundles": "Ver paquetes",
+                "price": "€{price}"
+            },
+            "Boosts": {
+                "loading": "Cargando...",
+                "notFound": "Producto no encontrado",
+                "title": "Potenciadores",
+                "hours": "horas",
+                "saveMore": "¿Quieres ahorrar aún más? Mira nuestros paquetes.",
+                "buyNow": "Comprar ahora",
+                "viewBundles": "Ver paquetes",
+                "price": "€{price}"
+            },
+            "Servers": {
+                "loading": "Cargando servidores disponibles...",
+                "notFound": "No se encontraron servidores en este momento.",
+                "title": "Hospedaje de servidores privados",
+                "description": "Hardware de alto rendimiento. Acceso root completo. Configuración inmediata.",
+                "regionsAvailable": "Regiones disponibles",
+                "ctaButton": "Contactar para comprar",
+                "durations": {
+                    "14d": "14 días",
+                    "1m": "1 mes",
+                    "3m": "3 meses",
+                    "6m": "6 meses",
+                    "12m": "1 año"
+                },
+                "period": {
+                    "fourteenDays": "14 días",
+                    "oneMonth": "mes",
+                    "threeMonths": "3 meses",
+                    "sixMonths": "6 meses",
+                    "twelveMonths": "año"
+                }
             },
             "Checkout": {
                 "title": "Checkout",

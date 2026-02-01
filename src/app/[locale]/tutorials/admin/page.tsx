@@ -8,6 +8,8 @@ import SubmissionManager from './SubmissionManager';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
+import { getTranslations } from 'next-intl/server';
+import User from '@/models/User';
 
 export const dynamic = 'force-dynamic';
 
@@ -21,10 +23,19 @@ export default async function AdminSubmissionsPage() {
         redirect('/');
     }
 
+    const t = await getTranslations('TutorialPage.adminSubmissions');
+
     await dbConnect();
 
-    const tutorials = await Tutorial.find({}).sort({ createdAt: -1 }).lean();
-
+    const tutorials = await Tutorial.find({})
+        .populate('tags')
+        .populate({
+            path: 'authorId',
+            select: 'name image',
+            model: User,
+        })
+        .sort({ createdAt: -1 })
+        .lean();
     const tags = await Tag.find({}).lean();
 
     const serializedTutorials = JSON.parse(JSON.stringify(tutorials));
@@ -32,15 +43,20 @@ export default async function AdminSubmissionsPage() {
 
     return (
         <section className='flex flex-col items-center py-20 px-6 space-y-10 min-h-screen'>
-            <div className='text-center space-y-2'>
+            <div className='text-center space-y-2 relative '>
                 <h1 className='text-3xl md:text-5xl font-black uppercase italic tracking-tighter'>
-                    Manage <span className='text-primary'>Tutorials</span>
+                    {t('manage')}{' '}
+                    <span className='text-primary'>{t('tutorials')}</span>
                 </h1>
                 <div className='h-1 md:h-2 w-24 bg-primary mx-auto rounded-full' />
-                <Button variant='outline' asChild>
+                <Button
+                    className='absolute top-2 -left-70'
+                    variant='outline'
+                    asChild
+                >
                     <Link href={'/tutorials'}>
                         <ArrowLeft />
-                        Back to tutorials
+                        {t('back')}
                     </Link>
                 </Button>
             </div>

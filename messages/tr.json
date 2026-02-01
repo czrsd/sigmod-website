@@ -20,18 +20,25 @@
             }
         },
         "guide": "Kurulum Rehberi",
+        "tutorials": "Eğitimler",
         "faq": "FAQ",
         "about": "Hakkında",
         "shop": "Mağaza"
     },
     "Footer": {
-        "text": "© 2025 SigModz. Sigmally ile bağlantılı değildir."
+        "disclaimer": "Sigmally ile bağlantılı değildir. Topluluk için geliştirilmiştir."
     },
     "HomePage": {
         "hero": {
-            "title": "Sigmally Modz",
-            "sub": "Daha akıcı performans, akıllı araçlar ve size ait gibi hissettiren bir kurulum ile Sigmally oturumlarınızı güçlendirin.",
-            "start": "Başlayın"
+            "title": "<glow>Sigmally Modz</glow>",
+            "sub": "Özel arayüzler, güçlü makrolar ve kesintisiz otomasyon ile oyunu hiç olmadığı gibi deneyimleyin.",
+            "shop_now": "Mağazayı Ziyaret Et",
+            "start": "Kurulum Rehberi",
+            "stats": {
+                "total": "Toplam Kurulum",
+                "active": "Bugünkü Kurulumlar",
+                "online": "Çevrimiçi"
+            }
         },
         "introduction": {
             "what": {
@@ -46,43 +53,55 @@
         "mods": {
             "sigmod": {
                 "title": "SigMod",
-                "desc": "SigMod, oyununuza tam bir mod menüsü ekler. Özel makrolar oluşturun, temaları ve düzenleri değiştirin ve günlük madeni para toplama gibi işleri otomatikleştirin. HUD'ınızı, tuş atamalarınızı ve sohbet ayarlarını ayarlayarak her şeyin oyun sırasında doğal hissetmesini sağlayın.",
-                "learnMore": "SigMod hakkında daha fazla bilgi"
+                "desc": "SigMod, Sigmally istemcinize kapsamlı bir mod menüsü ekler. Arayüzünüz, özel temalar ve arkadaş listesi ile gerçek zamanlı sohbet içeren entegre hesap sistemi üzerinde tam kontrol sağlar. Günlük coin toplama gibi küçük görevleri otomatikleştirebilir ve oyun ayarlarını oyun tarzınıza göre uyarlayabilirsiniz.",
+                "features": [
+                    "Gelişmiş Sohbet & Parti Sistemi",
+                    "Özel Makrolar & Kısayol Tuşları",
+                    "Profil & Arkadaş Listesi",
+                    "Menü & Oyun Temaları"
+                ],
+                "learnMore": "SigMod'u Keşfet"
             },
             "sigfixes": {
                 "title": "SigFixes",
-                "desc": "SigFixes, daha istikrarlı kare hızı ve minimum gecikme için performansı iyileştirir. Daha hızlı yüklenin, daha sıkı giriş tepkisi alın ve yerleşik multibox araçlarıyla birden fazla hesabı kontrol edin. Her şeyin sorunsuz çalışması için draw delay, opaklık, yakınlaştırma ve ad ölçeklemesini ayarlayın.",
-                "learnMore": "SigFixes hakkında daha fazla bilgi"
+                "desc": "Bu eklenti tamamen teknik optimizasyona ve performansa odaklanır. SigFixes gecikmeyi azaltır, kare hızınızı stabilize eder ve aynı anda birden fazla hesabı kontrol etmek için multibox desteği gibi temel araçlar sağlar, ayrıca daha hızlı yükleme süreleri sunar.",
+                "features": [
+                    "FPS & Performans Artışı",
+                    "Yerleşik Multibox Araçları",
+                    "Giriş Gecikmesini Azaltma",
+                    "Gelişmiş Yakınlaştırma & Grafikler"
+                ],
+                "learnMore": "SigFixes'i Keşfet"
             },
-            "learnMore": "Öğren & Kur"
+            "learnMore": "Kurulum & Rehber"
         },
         "faq": {
             "questions": [
                 {
                     "question": "Bu scriptler güvenli mi?",
-                    "answer": "Evet. Her şey açık kaynaklı ve Tampermonkey geniş çapta güvenilen bir araçtır. Gizli bir numara yok."
+                    "answer": "Evet. Kod herkesin incelemesine açıktır ve Tampermonkey oldukça standarttır. Gizli arka plan görevleri veya sürprizler yoktur."
                 },
                 {
                     "question": "Her iki moda da ihtiyacım var mı?",
-                    "answer": "Zorunlu değil. SigMod ve SigFixes'i birlikte kullanmak kontrol ve hız açısından en iyi karışımı verir."
+                    "answer": "Zorunda değilsiniz, ancak birlikte çalıştıklarında daha iyi sonuç alırsınız. SigMod özellikleri yönetirken SigFixes performansın düşmesini engeller. Bu, gerçekten direksiyonlu hızlı bir arabaya sahip olmak gibi."
                 },
                 {
                     "question": "Sigmally'de izinli mi?",
-                    "answer": "Evet. Her iki mod da topluluk ve sahibi tarafından iyi bilinir ve kabul görür."
+                    "answer": "Evet, merak etmeyin. Her iki mod da toplulukta iyi bilinir ve sahibi bile bunlara izin verir. Daha iyi bir UI istediğiniz için banlanmazsınız."
                 },
                 {
                     "question": "Her zaman kaldırabilir miyim?",
-                    "answer": "Elbette. Kullanıcı script yöneticinizden kapatın veya kaldırın."
+                    "answer": "Elbette. Orijinal gecikmeli görünümü özlerseniz, sadece kapatın veya yöneticinizdeki scripti silin. Karmaşık bir kaldırma işlemi gerekmez."
                 },
                 {
-                    "question": "SigMod beni bir gecede profesyonel oyuncu yapar mı?",
-                    "answer": "Keşke. SigMod işleri daha akıcı ve yönetilebilir hale getirir ama yetenek sizden gelir: zamanlama, okuma ve pratik."
+                    "question": "SigMod beni bir gecede profesyonel yapar mı?",
+                    "answer": "Keşke yapabilseydik. Oyunu kesinlikle daha kolay yönetilebilir ve göze hoş hale getirir, ama tıklamaları hâlâ siz yapmalısınız. Pratik yaparken iyi şanslar."
                 }
             ]
         },
         "community": {
-            "title": "Topluluk",
-            "desc": "Destek, hata bildirimleri ve gece yardımı için Discord'umuza katılın.",
+            "title": "Yardıma mı ihtiyacınız var?",
+            "desc": "Bir şey kırılırsa veya makroları çalıştıramıyorsanız, Discord sunucumuza katılın. Hızlı yardım, hata bildirimleri veya diğerlerinin neler yaptığını görmek için en iyi yer.",
             "join": "Discord'a Katıl"
         }
     },
@@ -111,11 +130,14 @@
         },
         "WhySigMod": {
             "title": "Neden SigMod?",
-            "desc1": "SigMod, Sigmally'e otomasyon, kişiselleştirme ve tam UI kontrolü ekler. Makrolar kurun, panelleri taşıyın, tuşları yeniden atayın ve temiz bir oyun içi kontrol panelinden görselleri ayarlayın. Temaları değiştirin, favori isimleri kaydedin ve tek tıkla ekran görüntüsü alın.",
-            "desc2": "Dinamik etiketlerle takımınızla çalışın: özel sohbet, taktiksel pingler ve canlı mini harita işaretleri. Maç istatistiklerini kontrol edin, arkadaşları yönetin ve sohbet fontları ile tuş atamalarını anında ayarlayın.",
+            "desc1": "SigMod, Sigmally'e otomasyon, kişiselleştirme ve tam UI kontrolü ekler. Makrolar kurun, panelleri taşıyın, tuşları yeniden atayın ve görselliği temiz bir oyun içi panelden ayarlayın.",
+            "desc2": "Dinamik etiketler kullanarak ekibinizle çalışın: özel sohbet, taktiksel pingler ve canlı mini harita işaretleri. Maç istatistiklerini kontrol edin ve arkadaşlarınızı yönetin.",
+            "highlight1": "Tam UI Otomasyonu",
+            "highlight2": "Taktiksel Ekip Oyunu",
+            "highlight3": "Tek Tıkla Kontrol",
             "performance": "Zirve performans mı istiyorsunuz? SigMod'u şu ile eşleştirin",
             "smooth": "ultra duyarlı oynanış için.",
-            "getStarted": "SigMod ile Başlayın"
+            "getStarted": "Hemen Başlayın"
         },
         "Features": {
             "title": "SigMod Özellikleri",
@@ -214,6 +236,7 @@
     },
     "SigFixesPage": {
         "Hero": {
+            "badge": "Performans Optimizörü",
             "title": "SigFixes",
             "sub": "Sigmally'nin çekirdeğini ultra akıcı performans, hassas giriş ve gelişmiş multibox kontrolü ile güçlendirin.",
             "install": "SigFixes'i Yükle",
@@ -239,7 +262,10 @@
             "title": "Neden SigFixes?",
             "desc1": "SigFixes, daha düzgün kareler ve daha keskin giriş için Sigmally'nin render sistemini elden geçirir. Yaygın takılmaları ortadan kaldırır, gecikmeyi düşürür ve yüksek baskı altında oyunun stabil kalmasını sağlar.",
             "desc2": "Ciddi oyuncular için tasarlandı; multibox yaparken parlıyor. Daha hızlı girdiler, senkron kamera davranışı ve görsel ayarlar hücreleri takip etmenize ve merge etmenize tam kontrol sağlar.",
-            "worksWith": "Zaten kullanılan",
+            "highlight1": "Maksimum Performans",
+            "highlight2": "Stabil Kareler",
+            "highlight3": "Girdi Optimizasyonu",
+            "worksWith": "Şu modlarla çalışır",
             "combo": "Mükemmel deneyim için ikisini eşleştirin.",
             "getStarted": "SigFixes ile Başlayın"
         },
@@ -371,28 +397,28 @@
         "fullGuide": "Tam Rehberi Görüntüle"
     },
     "Guide": {
+        "Overview": {
+            "title": "Kurulum Rehberi",
+            "desc": "Bu adımları takip ederek Sigmally deneyiminizi geliştirin. Modlarımız özel arayüz, gelişmiş makrolar ve daha iyi performans sunar.",
+            "access": "Mod menüsü oyun içinde 'V' tuşuna basarak veya dişli simgesine tıklayarak açılabilir.",
+            "start": "Başlayın",
+            "quickGuide": "Hızlı Kurulum",
+            "video": {
+                "title": "Video Eğitimi",
+                "desc": "İzlemeyi mi tercih edersiniz? Bu video tüm kurulum sürecini kapsar.",
+                "credit": "Sigmally Topluluğu tarafından hazırlanan eğitim",
+                "creditTitle": "Onaylı Topluluk İçeriği"
+            }
+        },
         "Sidebar": {
-            "title": "Rehber",
+            "title": "Kurulum",
             "overview": "Genel Bakış",
             "usm": "Userscript Yöneticisi",
             "devmode": "Geliştirici Modu",
             "aus_chrome": "Kullanıcı Scriptlerine İzin Ver",
             "sigmod": "SigMod",
             "sigfixes": "SigFixes",
-            "end": "Sonuç"
-        },
-        "Overview": {
-            "title": "Başlarken",
-            "desc": "SigModz'e hoş geldiniz. Bu rehber, Sigmally'i daha akıcı performans, tam kontrol ve kullanışlı araçlarla güçlendiren iki temel mod olan SigMod ve SigFixes'in nasıl kurulacağını gösterir.",
-            "access": "Birkaç basit adımda akıllı makrolar, FPS artışları, UI ayarları ve gelişmiş seçeneklerin kilidini açacaksınız.",
-            "video": {
-                "title": "Video eğitimi",
-                "desc": "Görsel talimatları tercih ediyorsanız bunu izleyin.",
-                "credit": "Oluşturan: Fake",
-                "creditTitle": "Discord: fa_keo"
-            },
-            "start": "Kuruluma Başla",
-            "quickGuide": "Hızlı Rehber"
+            "end": "Oynamaya Hazır"
         },
         "UserscriptManager": {
             "title": "Bir Userscript Yöneticisi Kurun",
@@ -473,15 +499,149 @@
             "end": "Son"
         },
         "End": {
-            "title": "Hazırsınız 🎉",
-            "desc": "SigMod ve SigFixes kuruldu. Daha akıcı ve özelleştirilebilir bir Sigmally deneyiminin tadını çıkarın. Girin, ayarlarınızı yapın ve en iyi şekilde oynayın.",
-            "notice": "Oyuna katılmadan önce tarayıcınızı yeniden başlatın",
-            "play": "Sigmally Oyna",
+            "title": "Harekete Hazır!",
+            "desc": "Her şey doğru şekilde kuruldu. Artık Sigmally için en gelişmiş modları çalıştırıyorsunuz.",
+            "completed_label": "Kurulum Tamamlandı",
+            "notice": "Oyuna katılmadan önce tarayıcınızı yeniden başlatın, ardından keyfini çıkarın!",
+            "play": "Hemen Oynamaya Başla",
             "explore": "Keşfet"
+        }
+    },
+    "TutorialPage": {
+        "overview": {
+            "communityHub": "Topluluk Merkezi",
+            "admin": "Yönetici",
+            "upload": "Yükle",
+            "loginDiscord": "Discord ile Giriş Yap",
+            "search": "Ara",
+            "searchPlaceholder": "Eğitimlerde ara...",
+            "category": "Kategori",
+            "allCategories": "Tüm Kategoriler",
+            "sortBy": "Sırala",
+            "newestFirst": "En Yeniler Önce",
+            "mostViewed": "En Çok Görüntülenen",
+            "mostLiked": "En Çok Beğenilen",
+            "type": {
+                "all": "Tümü",
+                "youtube": "YouTube",
+                "video": "Video",
+                "images": "Görseller"
+            },
+            "syncing": "Senkronize ediliyor...",
+            "by": "Tarafından",
+            "unknown": "Bilinmeyen",
+            "view": "Görüntüle"
+        },
+        "tutorialDetail": {
+            "back": "Geri",
+            "loading": "Eğitim yükleniyor...",
+            "noContent": "İçerik bulunamadı",
+            "loginToLike": "Bu eğitimi beğenmek için lütfen giriş yapın.",
+            "shareTitle": "Bu eğitimi paylaşın",
+            "copied": "Eğitim URL'si panoya kopyalandı!",
+            "shareFailed": "Bağlantı paylaşılamadı veya kopyalanamadı.",
+            "member": "Üye",
+            "unknownUser": "Bilinmeyen kullanıcı",
+            "contentCreator": "İçerik oluşturucu",
+            "views": "Görüntüleme",
+            "share": "Eğitimi Paylaş",
+            "contentType": "{type} içeriği"
+        },
+        "dashboard": {
+            "overview": {
+                "accessDenied": "Erişim reddedildi",
+                "creator": "Oluşturan",
+                "dashboard": "Panel",
+                "subtitle": "Katkılarınızı yönetin ve onay durumunu takip edin.",
+                "newTutorial": "Yeni Eğitim",
+                "totalUploads": "Toplam Yüklemeler",
+                "approved": "Onaylandı",
+                "pending": "Beklemede",
+                "yourSubmissions": "Gönderileriniz",
+                "tutorial": "Eğitim",
+                "category": "Kategori",
+                "status": "Durum",
+                "action": "Eylem",
+                "loading": "Verileriniz yükleniyor...",
+                "empty": "Henüz eğitim yüklenmedi.",
+                "rejected": "reddedildi"
+            },
+            "upload": {
+                "upload": "Yükle",
+                "content": "İçerik",
+                "hint": "Gönderiniz moderasyon ekibi tarafından incelenecektir.",
+                "title": "Başlık",
+                "mediaType": "Medya Türü",
+                "contentUrl": "İçerik URL'si",
+                "description": "Açıklama",
+                "tags": "Etiketleri Seç (Çoklu)",
+                "submit": "Eğitimi Gönder",
+                "update": "Eğitimi Güncelle",
+                "processing": "İşleniyor...",
+                "placeholders": {
+                    "title": "Nasıl...",
+                    "youtubeUrl": "https://youtube.com/watch?v=...",
+                    "description": "Bu video gösteriyor..."
+                },
+                "mediaOptions": {
+                    "youtube": "YouTube Videosu",
+                    "video": "Doğrudan MP4",
+                    "images": "Görseller / Grafik"
+                },
+                "labels": {
+                    "uploadVideo": "Video Yükle (MP4)",
+                    "uploadImages": "Görselleri Yükle",
+                    "thumbnail": "Küçük Resim"
+                },
+                "youtube": {
+                    "autoThumbnail": "YouTube Küçük Resmi Kullan?",
+                    "customThumbnail": "Özel Küçük Resim Yükle"
+                },
+                "dropzone": {
+                    "video": "Videoyu buraya sürükle veya tıkla",
+                    "images": "Görselleri buraya sürükle veya tıkla (Maks. 10)",
+                    "thumbnail": "Küçük resmi buraya sürükle veya tıkla",
+                    "videoShort": "Videonu buraya bırak",
+                    "imagesShort": "Görsellerini buraya bırak"
+                },
+                "alts": {
+                    "preview": "Önizleme",
+                    "thumbnail": "Küçük resim önizleme"
+                },
+                "errors": {
+                    "noContent": "Lütfen içerik sağlayın",
+                    "uploadFailed": "Yükleme başarısız",
+                    "submissionFailed": "Gönderim başarısız",
+                    "generic": "Yükleme sırasında hata"
+                }
+            }
+        },
+        "adminSubmissions": {
+            "manage": "Yönet",
+            "tutorials": "Eğitimler",
+            "back": "Eğitimlere Geri Dön",
+            "backSubmissions": "Gönderilere Geri Dön",
+            "editing": "Düzenleniyor",
+            "empty": "Gönderi bulunamadı.",
+            "approve": "Onayla",
+            "reject": "Reddet",
+            "edit": "Düzenle",
+            "delete": "Sil",
+            "pending": "beklemede",
+            "approved": "onaylandı",
+            "rejected": "reddedildi",
+            "confirmDelete": "Bu eğitimi silmek istediğinizden emin misiniz?",
+            "errorUpdate": "Durum güncellenirken hata oluştu",
+            "errorDelete": "Eğitim silinirken hata oluştu"
         }
     },
     "FAQPage": {
         "title": "Sıkça Sorulan Sorular",
+        "subtitle": "Arena'yı ustalıkla yönetmek için bilmeniz gereken her şey.",
+        "needHelp": "Hâlâ sorularınız mı var?",
+        "joinDiscord": "Discord Destek Sunucusuna Katıl",
+        "discordDesc": "Topluluğumuza katılın ve gerçek zamanlı destek, hata bildirimi ve geri bildirim alın.",
+        "statusLabel": "Topluluk Odaklı",
         "general": {
             "title": "Genel",
             "installMods": {
@@ -563,12 +723,11 @@
                 "question": "Draw delay ve diğer ayarları nasıl yapılandırırım?",
                 "answer": "SigFixes menüsünü açın ve ayarları değiştirin. Ayrıntılar için ? ikonlarına bakın."
             }
-        },
-        "needHelp": "Hala sorularınız mı var? Discord'a katılın ve bir ticket açın.",
-        "joinDiscord": "Discord'a Katıl"
+        }
     },
     "AboutPage": {
-        "title": "SigModz Hakkında",
+        "title": "Bizim Hikayemiz",
+        "subtitle": "Sigmally modlamasının evrimi.",
         "tldr": {
             "title": "SigModz nedir?",
             "text": "SigModz, Sigmally deneyimini SigMod ve SigFixes gibi güçlü modlarla iyileştiren bir topluluk projesidir."
@@ -581,6 +740,24 @@
             "sigfixes": "Daha sonra yx tarafından geliştirilen SigFixes teknik açıdan ilerleme kaydetti: tam bir WebGL renderer, multibox desteği, daha iyi giriş işleme ve ciddi oyun için performans iyileştirmeleri sundu.",
             "community": "Her iki mod da Sigmally topluluğu tarafından kabul edilmiştir ve oyun sahibi tarafından desteklenmektedir. SigModz, oyuncular ve geliştiricilerin katkılarıyla büyümeye devam ediyor.",
             "thanks": "Orijinal temel için RingZer0'a ve teknik ilerleme için yx'e teşekkürler. Topluluk desteği SigModz'i ileriye taşıyor."
+        },
+        "roadmap": {
+            "title": "Yol Haritası",
+            "phase1": {
+                "title": "Temel",
+                "date": "2022 - 2024",
+                "desc": "SigMod'u makrolar ve temel UI özelleştirmeleri için standart haline getirmek, orijinal RingZer0 kaynağına dayalı."
+            },
+            "phase2": {
+                "title": "Teknik Evrim",
+                "date": "2024 - 2025",
+                "desc": "SigFixes başlatıldı. WebGL render ve gelişmiş multiboxing tanıtıldı."
+            },
+            "phase3": {
+                "title": "Gelecek",
+                "date": "2026+",
+                "desc": "Topluluk geri bildirimine dayalı sürekli iyileştirmeler, UI cilalama ve oyun güncellemelerine uyum."
+            }
         },
         "joinDiscord": "Discord'a Katıl"
     },
@@ -636,22 +813,28 @@
         "MainPage": {
             "failed": "Mağaza verileri yüklenemedi. Lütfen daha sonra tekrar deneyin.",
             "Hero": {
-                "title": "<gold>Gold</gold> & <subscriptions>Abonelikleri</subscriptions> Daha Ucuza Alın",
-                "description": "Oyun içi fiyatlar yüksek. Burada uzun süre kalmayacak özel fırsatlar bulacaksınız.",
-                "limitedOffersTitle": "Sınırlı Teklifler",
-                "limitedOffersSubtitle": "Tükenmeden kap!",
-                "endsIn": "Biter"
+                "title": "Başlıca Kaynağınız: <gold>Coinler</gold>, <subscriptions>Abonelikler</subscriptions> & Daha Fazlası.",
+                "description": "Oyun içi para birimi için fazla ödeme yapmayı bırakın. Özel, yüksek değerli fırsatlara erişin ve deneyiminizi daha az harcayarak geliştirin.",
+                "limitedOffersTitle": "Sınırlı Fırsatlar",
+                "limitedOffersSubtitle": "Rakipsiz fiyatlarla premium paketler.",
+                "endsIn": "Teklif bitiyor"
             },
             "SpecialBundles": {
                 "coins": "Paralar",
                 "subscription": "Abonelik",
                 "month": "ay",
                 "months": "aylar",
-                "save": "%{percent} Tasarruf",
-                "buyNow": "Şimdi Satın Al"
+                "save": "%{percent} TASARRUF",
+                "buyNow": "Şimdi Satın Al",
+                "labels": {
+                    "flash": "Başlangıç Seçimi",
+                    "popular": "En Popüler",
+                    "ultimate": "En Yüksek Tasarruf"
+                }
             },
             "Products": {
                 "title": "Ürünler",
+                "view": "Ürünleri Görüntüle →",
                 "coins": {
                     "name": "Paralar",
                     "description": "5.000'den 1.000.000'a kadar bireysel para miktarları"
@@ -663,6 +846,20 @@
                 "bundles": {
                     "name": "Paketler",
                     "description": "Daha iyi fiyata para ve abonelik paketleri"
+                },
+                "skins": {
+                    "name": "Kaplamalar",
+                    "description": "Adil bir fiyatla hemen kaplamalar edinin"
+                },
+                "boosts": {
+                    "name": "Güçlendirmeler",
+                    "description": "Daha fazla XP ve ödül alarak oyun deneyiminizi güçlendirin"
+                },
+                "servers": {
+                    "name": "Özel Sunucular",
+                    "description": "Arkadaşlarınızla pratik, multiboxing ve etkinlikler için özel sunuculara erişim. Tüm yönetim özel panel ile sağlanır.",
+                    "paymentsDescription": "Ödemeler şifrelenir ve PayPal veya Stripe gibi güvenilir sağlayıcılar tarafından işlenir.",
+                    "madeBy": "Sigmally onaylı bir moderatör ve 30.000+ kurulumlu SigMod yaratıcısı tarafından yapıldı."
                 }
             },
             "WhyBuyHere": {
@@ -713,12 +910,15 @@
             },
             "Contact": {
                 "title": "İletişim",
-                "supportEmail": "Destek e-postası",
-                "or": "veya",
-                "createTicket": "Discord'da ticket oluştur"
+                "supportEmail": "Destek E-postası",
+                "emailResponseTime": "Genellikle 24 saat içinde yanıt verir",
+                "discordTitle": "Discord Desteği",
+                "discordDesc": "Bilet sistemi ile en hızlı yardım",
+                "createTicket": "Discord'da bilet oluştur",
+                "footerNote": "Biz buradayız"
             },
             "Info": {
-                "shop": "SigModz Mağaza yasal bilgileri",
+                "shop": "© 2026 Sigmally Modz Mağazası © Tüm hakları saklıdır.",
                 "refund": "İade Politikası",
                 "terms": "Hizmet Şartları",
                 "privacy": "Gizlilik Politikası"
@@ -756,6 +956,10 @@
                 "loading": "Yükleniyor...",
                 "notFound": "Ürün bulunamadı",
                 "title": "Para Paketleri",
+                "features": {
+                    "instant": "Anında Teslim",
+                    "unlock": "Öğeleri Aç"
+                },
                 "saveMore": "Daha fazla tasarruf etmek ister misiniz? Paketlerimize göz atın.",
                 "buyNow": "Şimdi Satın Al",
                 "viewBundles": "Paketleri Görüntüle",
@@ -766,25 +970,75 @@
             "SubscriptionPackages": {
                 "loading": "Yükleniyor...",
                 "notFound": "Ürün bulunamadı",
-                "title": "Abonelik Paketleri",
-                "saveMore": "Daha fazla tasarruf etmek ister misiniz? Paketlerimize göz atın.",
+                "title": "Premium Abonelikler",
+                "saveMore": "Daha fazla tasarruf etmek ister misiniz?",
                 "buyNow": "Şimdi Satın Al",
                 "viewBundles": "Paketleri Görüntüle",
-                "monthLabel": "{duration} ay",
-                "monthsLabel": "{duration} aylar",
+                "monthLabel": "{duration} Ay",
+                "monthsLabel": "{duration} Ay",
                 "price": "€{price}",
-                "originalPrice": "€{original}"
+                "originalPrice": "€{original}",
+                "perks": {
+                    "clans": "Klan Oluşturma",
+                    "pass": "Özel Sigma Pass",
+                    "goldNick": "Altın Takma Ad"
+                }
             },
             "BundlesPage": {
                 "loading": "Yükleniyor...",
                 "notFound": "Ürün bulunamadı",
                 "title": "Paketler",
+                "features": {
+                    "bestValue": "En İyi Değer",
+                    "exclusive": "Hepsi Bir Arada Paket"
+                },
                 "buyNow": "Şimdi Satın Al",
                 "monthLabel": "{duration} ay Abonelik",
                 "monthsLabel": "{duration} ay Abonelik",
                 "coinsLabel": "{amount} Paralar",
                 "price": "€{price}",
                 "originalPrice": "€{original}"
+            },
+            "Skins": {
+                "loading": "Yükleniyor...",
+                "notFound": "Ürün bulunamadı",
+                "title": "Kaplamalar",
+                "saveMore": "Daha fazla tasarruf etmek ister misiniz? Paketlerimizi inceleyin.",
+                "buyNow": "Şimdi Satın Al",
+                "viewBundles": "Paketleri Görüntüle",
+                "price": "€{price}"
+            },
+            "Boosts": {
+                "loading": "Yükleniyor...",
+                "notFound": "Ürün bulunamadı",
+                "title": "Güçlendirmeler",
+                "hours": "saat",
+                "saveMore": "Daha fazla tasarruf etmek ister misiniz? Paketlerimizi inceleyin.",
+                "buyNow": "Şimdi Satın Al",
+                "viewBundles": "Paketleri Görüntüle",
+                "price": "€{price}"
+            },
+            "Servers": {
+                "loading": "Mevcut sunucular yükleniyor...",
+                "notFound": "Şu anda sunucu bulunamadı.",
+                "title": "Özel Sunucu Barındırma",
+                "description": "Yüksek performanslı donanım. Tam root erişimi. Anında kurulum.",
+                "regionsAvailable": "Mevcut Bölgeler",
+                "ctaButton": "Satın Almak için İletişime Geç",
+                "durations": {
+                    "14d": "14 Gün",
+                    "1m": "1 Ay",
+                    "3m": "3 Ay",
+                    "6m": "6 Ay",
+                    "12m": "1 Yıl"
+                },
+                "period": {
+                    "fourteenDays": "14 gün",
+                    "oneMonth": "ay",
+                    "threeMonths": "3 ay",
+                    "sixMonths": "6 ay",
+                    "twelveMonths": "yıl"
+                }
             },
             "Checkout": {
                 "title": "Ödeme",

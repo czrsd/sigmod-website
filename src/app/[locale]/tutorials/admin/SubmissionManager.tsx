@@ -6,32 +6,18 @@ import { format } from 'date-fns';
 import { Edit, Trash2, CheckCircle, XCircle, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import TutorialForm from '@/components/pages/tutorials/TutorialForm';
-
-interface Tutorial {
-    _id: string;
-    title: string;
-    description: string;
-    type: 'youtube' | 'video' | 'image';
-    contentUrls: string[];
-    authorId: string;
-    tags: Tag[];
-    status: 'pending' | 'approved' | 'rejected';
-    createdAt: Date;
-}
-
-interface Tag {
-    _id: string;
-    name: string;
-    color: string;
-}
+import { useTranslations } from 'next-intl';
+import { ITutorialPopulated } from '@/models/Tutorial';
+import { ITagData } from '@/models/Tag';
 
 export default function SubmissionManager({
     tutorials,
     tags,
 }: {
-    tutorials: Tutorial[];
-    tags: Tag[];
+    tutorials: ITutorialPopulated[];
+    tags: ITagData[];
 }) {
+    const t = useTranslations('TutorialPage.adminSubmissions');
     const router = useRouter();
     const [editingId, setEditingId] = useState<string | null>(null);
     const [loadingId, setLoadingId] = useState<string | null>(null);
@@ -49,16 +35,15 @@ export default function SubmissionManager({
 
             if (!res.ok) throw new Error('Failed to update');
             router.refresh();
-        } catch (error) {
-            console.error(error);
-            alert('Error updating status');
+        } catch {
+            alert(t('errorUpdate'));
         } finally {
             setLoadingId(null);
         }
     };
 
     const handleDelete = async (id: string) => {
-        if (!confirm('Are you sure you want to delete this tutorial?')) return;
+        if (!confirm(t('confirmDelete'))) return;
         setLoadingId(id);
         try {
             const res = await fetch(`/api/tutorials/${id}`, {
@@ -66,8 +51,8 @@ export default function SubmissionManager({
             });
             if (!res.ok) throw new Error('Failed to delete');
             router.refresh();
-        } catch (error) {
-            alert('Error deleting tutorial');
+        } catch {
+            alert(t('errorDelete'));
         } finally {
             setLoadingId(null);
         }
@@ -82,12 +67,12 @@ export default function SubmissionManager({
                     className='mb-6 hover:bg-white/10 text-neutral-400 hover:text-white'
                 >
                     <ArrowLeft className='mr-2 h-4 w-4' />
-                    Back to Submissions
+                    {t('backSubmissions')}
                 </Button>
 
                 <div className='mb-6 p-4 rounded-2xl bg-primary/10 border border-primary/20 text-primary text-sm font-bold uppercase italic flex items-center gap-3'>
                     <Edit size={16} />
-                    Editing: {editingTutorial.title}
+                    {t('editing')}: {editingTutorial.title}
                 </div>
 
                 <TutorialForm tags={tags} initialData={editingTutorial} />
@@ -99,7 +84,7 @@ export default function SubmissionManager({
         <div className='w-full max-w-5xl grid gap-4'>
             {tutorials.length === 0 ? (
                 <div className='text-center p-10 border border-white/5 rounded-3xl bg-white/5 text-neutral-500 italic'>
-                    No submissions found.
+                    {t('empty')}
                 </div>
             ) : (
                 tutorials.map((tutorial) => (
@@ -132,6 +117,15 @@ export default function SubmissionManager({
                                     )}
                                 </span>
                                 <span>•</span>
+                                <div className='flex items-center'>
+                                    <img
+                                        src={tutorial.authorId.image}
+                                        className='w-6 h-5 rounded-full object-cover'
+                                        alt={tutorial.authorId._id}
+                                    />
+                                    <span>{tutorial.authorId.name}</span>
+                                </div>
+                                <span>•</span>
                                 <span
                                     className={
                                         tutorial.status === 'pending'
@@ -141,7 +135,7 @@ export default function SubmissionManager({
                                             : 'text-red-500'
                                     }
                                 >
-                                    {tutorial.status}
+                                    {t(tutorial.status)}
                                 </span>
                             </div>
                         </div>
@@ -159,7 +153,7 @@ export default function SubmissionManager({
                                         )
                                     }
                                     className='h-10 w-10 rounded-xl hover:bg-green-500/20 hover:text-green-500 text-neutral-600'
-                                    title='Approve'
+                                    title={t('approve')}
                                 >
                                     <CheckCircle size={18} />
                                 </Button>
@@ -177,7 +171,7 @@ export default function SubmissionManager({
                                         )
                                     }
                                     className='h-10 w-10 rounded-xl hover:bg-red-500/20 hover:text-red-500 text-neutral-600'
-                                    title='Reject'
+                                    title={t('reject')}
                                 >
                                     <XCircle size={18} />
                                 </Button>
@@ -190,7 +184,7 @@ export default function SubmissionManager({
                                 variant='ghost'
                                 onClick={() => setEditingId(tutorial._id)}
                                 className='h-10 w-10 rounded-xl hover:bg-white/10 text-neutral-400'
-                                title='Edit'
+                                title={t('edit')}
                             >
                                 <Edit size={18} />
                             </Button>
@@ -201,7 +195,7 @@ export default function SubmissionManager({
                                 disabled={loadingId === tutorial._id}
                                 onClick={() => handleDelete(tutorial._id)}
                                 className='h-10 w-10 rounded-xl hover:bg-red-500/10 hover:text-red-500 text-neutral-400'
-                                title='Delete'
+                                title={t('delete')}
                             >
                                 <Trash2 size={18} />
                             </Button>

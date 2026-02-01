@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Switch } from '@/components/ui/switch';
+import { toast } from 'sonner';
 
 interface Tag {
     _id: string;
@@ -107,7 +108,7 @@ export default function TutorialForm({
             method: 'POST',
             body: formData,
         });
-        if (!res.ok) throw new Error('Upload failed');
+        if (!res.ok) throw new Error(t('errors.uploadFailed'));
         const data = await res.json();
         return data.url;
     };
@@ -139,7 +140,7 @@ export default function TutorialForm({
             }
 
             if (contentUrls.length === 0) {
-                alert('Please provide content');
+                toast.error(t('errors.noContent'));
                 setLoading(false);
                 return;
             }
@@ -162,12 +163,12 @@ export default function TutorialForm({
                 body: JSON.stringify(payload),
             });
 
-            if (!res.ok) throw new Error('Submission failed');
+            if (!res.ok) throw new Error(t('errors.submissionFailed'));
             router.push('/tutorials');
             router.refresh();
         } catch (error) {
             console.error(error);
-            alert('Error during upload');
+            toast.error(t('errors.generic'));
         } finally {
             setLoading(false);
         }
@@ -187,7 +188,7 @@ export default function TutorialForm({
                         value={title}
                         onChange={(e) => setTitle(e.target.value)}
                         className='bg-white/5 border-white/10 h-14 rounded-2xl font-bold'
-                        placeholder='How to...'
+                        placeholder={t('placeholders.title')}
                         required
                     />
                 </div>
@@ -205,9 +206,13 @@ export default function TutorialForm({
                         }}
                         className='w-full h-14 bg-[#0c0c0c] border border-white/10 rounded-2xl px-4 text-sm font-bold text-white outline-none focus:border-primary'
                     >
-                        <option value='youtube'>YouTube Video</option>
-                        <option value='video'>Direct MP4</option>
-                        <option value='images'>Images / Graphic</option>
+                        <option value='youtube'>
+                            {t('mediaOptions.youtube')}
+                        </option>
+                        <option value='video'>{t('mediaOptions.video')}</option>
+                        <option value='images'>
+                            {t('mediaOptions.images')}
+                        </option>
                     </select>
                 </div>
             </div>
@@ -218,7 +223,7 @@ export default function TutorialForm({
                         <Input
                             value={youtubeUrl}
                             onChange={(e) => setYoutubeUrl(e.target.value)}
-                            placeholder='https://youtube.com/watch?v=...'
+                            placeholder={t('placeholders.youtubeUrl')}
                             className='bg-white/5 border-white/10 h-14 rounded-2xl font-bold'
                             required
                         />
@@ -236,8 +241,8 @@ export default function TutorialForm({
                     <div className='space-y-2 animate-in fade-in slide-in-from-top-2'>
                         <label className='text-[10px] font-black uppercase italic text-neutral-500 ml-2'>
                             {mediaType === 'video'
-                                ? 'Upload Video (MP4)'
-                                : 'Upload Images'}
+                                ? t('labels.uploadVideo')
+                                : t('labels.uploadImages')}
                         </label>
                         <div
                             {...contentDropzone.getRootProps()}
@@ -264,7 +269,7 @@ export default function TutorialForm({
                                                 <img
                                                     src={p}
                                                     className='w-full h-full object-cover'
-                                                    alt='Preview'
+                                                    alt={t('alts.preview')}
                                                 />
                                             )}
                                         </div>
@@ -277,8 +282,8 @@ export default function TutorialForm({
                                     </div>
                                     <p className='text-[10px] font-black uppercase italic text-neutral-400'>
                                         {mediaType === 'video'
-                                            ? 'Drop your video here'
-                                            : 'Drop your images here'}
+                                            ? t('dropzone.videoShort')
+                                            : t('dropzone.imagesShort')}
                                     </p>
                                 </>
                             )}
@@ -305,7 +310,7 @@ export default function TutorialForm({
                                     <img
                                         src={thumbnailPreview}
                                         className='w-full h-full object-cover'
-                                        alt='thumbnail'
+                                        alt={t('labels.thumbnail')}
                                     />
                                     <button
                                         type='button'
@@ -326,7 +331,7 @@ export default function TutorialForm({
                                         className='text-neutral-500'
                                     />
                                     <p className='text-[10px] font-black uppercase italic text-neutral-400'>
-                                        Upload custom thumbnail
+                                        {t('youtube.customThumbnail')}
                                     </p>
                                 </>
                             )}

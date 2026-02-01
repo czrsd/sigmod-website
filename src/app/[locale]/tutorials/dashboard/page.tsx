@@ -15,8 +15,10 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ITutorialData as Tutorial } from '@/models/Tutorial';
 import { Serializable } from '@/types/utils';
+import { useTranslations } from 'next-intl';
 
 export default function UploaderDashboard() {
+    const t = useTranslations('TutorialPage.dashboard.overview');
     const { data: session } = useSession();
     const [myTutorials, setMyTutorials] = useState<Serializable<Tutorial[]>>(
         []
@@ -41,7 +43,7 @@ export default function UploaderDashboard() {
     if (!session)
         return (
             <div className='h-screen flex items-center justify-center font-black italic uppercase'>
-                Access Denied
+                {t('accessDenied')}
             </div>
         );
 
@@ -50,10 +52,11 @@ export default function UploaderDashboard() {
             <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-6'>
                 <div>
                     <h1 className='text-4xl font-black uppercase italic tracking-tighter'>
-                        Creator <span className='text-primary'>Dashboard</span>
+                        {t('creator')}{' '}
+                        <span className='text-primary'>{t('dashboard')}</span>
                     </h1>
                     <p className='text-neutral-500 text-sm font-medium'>
-                        Manage your contributions and track approval status.
+                        {t('subtitle')}
                     </p>
                 </div>
                 <Button
@@ -61,8 +64,8 @@ export default function UploaderDashboard() {
                     className='bg-primary hover:bg-primary/90 text-black font-black uppercase italic rounded-xl px-6 h-12 shadow-[0_0_20px_rgba(var(--primary),0.2)]'
                 >
                     <Link href='/tutorials/dashboard/upload'>
-                        <Plus size={18} className='mr-2' strokeWidth={3} /> New
-                        Tutorial
+                        <Plus size={18} className='mr-2' strokeWidth={3} />{' '}
+                        {t('newTutorial')}
                     </Link>
                 </Button>
             </div>
@@ -70,19 +73,19 @@ export default function UploaderDashboard() {
             <div className='grid grid-cols-1 sm:grid-cols-3 gap-4'>
                 {[
                     {
-                        label: 'Total Uploads',
+                        label: t('totalUploads'),
                         val: stats.total,
                         icon: BarChart3,
                         color: 'text-white',
                     },
                     {
-                        label: 'Approved',
+                        label: t('approved'),
                         val: stats.approved,
                         icon: CheckCircle2,
                         color: 'text-green-500',
                     },
                     {
-                        label: 'Pending',
+                        label: t('pending'),
                         val: stats.pending,
                         icon: Clock,
                         color: 'text-yellow-500',
@@ -109,18 +112,20 @@ export default function UploaderDashboard() {
 
             <div className='space-y-4'>
                 <h2 className='text-xl font-black uppercase italic tracking-tight flex items-center gap-2'>
-                    <LayoutDashboard size={20} className='text-primary' /> Your
-                    Submissions
+                    <LayoutDashboard size={20} className='text-primary' />{' '}
+                    {t('yourSubmissions')}
                 </h2>
 
                 <div className='overflow-hidden rounded-3xl border border-white/5 bg-white/[0.02]'>
                     <table className='w-full text-left border-collapse'>
                         <thead className='bg-white/5 text-[10px] font-black uppercase italic text-neutral-500'>
                             <tr>
-                                <th className='px-6 py-4'>Tutorial</th>
-                                <th className='px-6 py-4'>Category</th>
-                                <th className='px-6 py-4'>Status</th>
-                                <th className='px-6 py-4 text-right'>Action</th>
+                                <th className='px-6 py-4'>{t('tutorial')}</th>
+                                <th className='px-6 py-4'>{t('category')}</th>
+                                <th className='px-6 py-4'>{t('status')}</th>
+                                <th className='px-6 py-4 text-right'>
+                                    {t('action')}
+                                </th>
                             </tr>
                         </thead>
                         <tbody className='divide-y divide-white/5'>
@@ -130,7 +135,7 @@ export default function UploaderDashboard() {
                                         colSpan={4}
                                         className='px-6 py-10 text-center animate-pulse font-bold italic text-neutral-600'
                                     >
-                                        Loading your data...
+                                        {t('loading')}
                                     </td>
                                 </tr>
                             ) : myTutorials.length === 0 ? (
@@ -139,28 +144,28 @@ export default function UploaderDashboard() {
                                         colSpan={4}
                                         className='px-6 py-10 text-center text-neutral-500 font-medium text-sm'
                                     >
-                                        No tutorials uploaded yet.
+                                        {t('empty')}
                                     </td>
                                 </tr>
                             ) : (
-                                myTutorials.map((t) => (
+                                myTutorials.map((tutorial) => (
                                     <tr
-                                        key={t._id}
+                                        key={tutorial._id}
                                         className='group hover:bg-white/[0.03] transition-colors'
                                     >
                                         <td className='px-6 py-4'>
                                             <div className='font-black uppercase italic text-sm group-hover:text-primary transition-colors'>
-                                                {t.title}
+                                                {tutorial.title}
                                             </div>
                                             <div className='text-[10px] text-neutral-500 font-medium uppercase'>
                                                 {new Date(
-                                                    t.createdAt
+                                                    tutorial.createdAt
                                                 ).toLocaleDateString()}
                                             </div>
                                         </td>
                                         <td className='px-6 py-4'>
                                             <div className='flex gap-1'>
-                                                {t.tags.map((tag) => (
+                                                {tutorial.tags.map((tag) => (
                                                     <span
                                                         key={tag._id}
                                                         className='text-[9px] px-2 py-0.5 rounded bg-white/5 border border-white/10 font-bold uppercase'
@@ -176,30 +181,42 @@ export default function UploaderDashboard() {
                                         <td className='px-6 py-4'>
                                             <span
                                                 className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[9px] font-black uppercase italic border ${
-                                                    t.status === 'approved'
+                                                    tutorial.status ===
+                                                    'approved'
                                                         ? 'bg-green-500/10 border-green-500/20 text-green-500'
-                                                        : t.status ===
+                                                        : tutorial.status ===
                                                           'rejected'
                                                         ? 'bg-red-500/10 border-red-500/20 text-red-500'
                                                         : 'bg-yellow-500/10 border-yellow-500/20 text-yellow-500'
                                                 }`}
                                             >
-                                                {t.status === 'approved' && (
+                                                {tutorial.status ===
+                                                    'approved' && (
                                                     <CheckCircle2 size={10} />
                                                 )}
-                                                {t.status === 'pending' && (
+                                                {tutorial.status ===
+                                                    'pending' && (
                                                     <Clock size={10} />
                                                 )}
-                                                {t.status === 'rejected' && (
+                                                {tutorial.status ===
+                                                    'rejected' && (
                                                     <XCircle size={10} />
                                                 )}
-                                                {t.status}
+                                                {t(tutorial.status)}
                                             </span>
                                         </td>
                                         <td className='px-6 py-4 text-right'>
-                                            <button className='p-2 rounded-lg bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white transition-all'>
-                                                <ExternalLink size={16} />
-                                            </button>
+                                            <Button
+                                                className='p-2 rounded-lg bg-white/5 hover:bg-white/10 text-neutral-400 hover:text-white transition-all'
+                                                asChild
+                                            >
+                                                <Link
+                                                    href={`/tutorials/${tutorial.slug}`}
+                                                    target='_blank'
+                                                >
+                                                    <ExternalLink size={16} />
+                                                </Link>
+                                            </Button>
                                         </td>
                                     </tr>
                                 ))

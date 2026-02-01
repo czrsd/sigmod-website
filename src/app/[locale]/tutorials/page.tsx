@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useSession, signIn, signOut } from 'next-auth/react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 import {
     Search,
     Upload,
@@ -10,7 +11,6 @@ import {
     Youtube,
     PlayCircle,
     Image as ImageIcon,
-    Star,
     Filter,
     ShieldUser,
     LogOut,
@@ -33,6 +33,7 @@ import { ITagData as Tag } from '@/models/Tag';
 import { Serializable } from '@/types/utils';
 
 export default function TutorialsPage() {
+    const t = useTranslations('TutorialPage.overview');
     const { data: session } = useSession();
     const [tutorials, setTutorials] = useState<Serializable<Tutorial[]>>([]);
     const [tags, setTags] = useState<Serializable<Tag[]>>([]);
@@ -61,8 +62,8 @@ export default function TutorialsPage() {
         fetchTutorials();
     }, [activeTag, activeType, sortBy]);
 
-    const filtered = tutorials.filter((t) =>
-        t.title.toLowerCase().includes(search.toLowerCase())
+    const filtered = tutorials.filter((x) =>
+        x.title.toLowerCase().includes(search.toLowerCase())
     );
 
     const getYoutubeThumbnail = (url: string) => {
@@ -85,7 +86,7 @@ export default function TutorialsPage() {
                         <PlusCircle className='text-primary' size={24} />
                     </div>
                     <span className='font-black uppercase italic text-sm tracking-widest text-white'>
-                        Community Hub
+                        {t('communityHub')}
                     </span>
                 </div>
                 <div className='flex gap-2'>
@@ -103,13 +104,12 @@ export default function TutorialsPage() {
                                             size={16}
                                             className='mr-2'
                                         />{' '}
-                                        Admin
+                                        {t('admin')}
                                     </Link>
                                 </Button>
                             )}
                             <div className='relative group'>
                                 <div className='absolute -inset-1.5 bg-gradient-to-r from-emerald-600 to-emerald-300 rounded-xl blur-lg opacity-0 group-hover:opacity-50 transition-all duration-500' />
-
                                 <Button
                                     asChild
                                     className='relative bg-gradient-to-br from-emerald-400 via-emerald-500 to-teal-600 text-neutral-800 font-black uppercase italic rounded-xl h-10 px-6 transition-all duration-300 hover:scale-105 active:scale-95 border border-emerald-300/30 shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)]'
@@ -122,7 +122,7 @@ export default function TutorialsPage() {
                                             size={16}
                                             className='mr-2 stroke-[3px]'
                                         />
-                                        Upload
+                                        {t('upload')}
                                     </Link>
                                 </Button>
                             </div>
@@ -139,7 +139,7 @@ export default function TutorialsPage() {
                             onClick={() => signIn('discord')}
                             className='bg-[#5865F2] hover:bg-[#4752C4] text-white font-bold uppercase italic rounded-xl h-10 shadow-lg shadow-[#5865F2]/20'
                         >
-                            Login with Discord
+                            {t('loginDiscord')}
                         </Button>
                     )}
                 </div>
@@ -148,10 +148,11 @@ export default function TutorialsPage() {
             <div className='grid grid-cols-1 lg:grid-cols-4 gap-4 items-end'>
                 <div className='lg:col-span-2 relative group'>
                     <div className='flex items-center gap-2 mb-2 text-neutral-500 text-[10px] font-black uppercase italic tracking-widest'>
-                        <Search size={12} className='text-primary' /> Search
+                        <Search size={12} className='text-primary' />{' '}
+                        {t('search')}
                     </div>
                     <Input
-                        placeholder='Search tutorials...'
+                        placeholder={t('searchPlaceholder')}
                         className='pl-4 bg-white/5 border-white/10 h-12 rounded-xl focus:ring-1 ring-primary/50 transition-all placeholder:text-neutral-600 font-medium'
                         onChange={(e) => setSearch(e.target.value)}
                     />
@@ -159,18 +160,19 @@ export default function TutorialsPage() {
 
                 <div className='space-y-2'>
                     <div className='flex items-center gap-2 text-neutral-500 text-[10px] font-black uppercase italic tracking-widest'>
-                        <Filter size={12} className='text-primary' /> Category
+                        <Filter size={12} className='text-primary' />{' '}
+                        {t('category')}
                     </div>
                     <Select value={activeTag} onValueChange={setActiveTag}>
                         <SelectTrigger className='bg-white/5 border-white/10 h-12 rounded-xl text-white font-bold uppercase italic text-[11px]'>
-                            <SelectValue placeholder='Category' />
+                            <SelectValue placeholder={t('category')} />
                         </SelectTrigger>
                         <SelectContent className='bg-[#0A0A0A] border-white/10 text-white'>
                             <SelectItem
                                 value='all'
                                 className='font-bold uppercase italic text-[11px]'
                             >
-                                All Categories
+                                {t('allCategories')}
                             </SelectItem>
                             {tags.map((tag) => (
                                 <SelectItem
@@ -196,7 +198,7 @@ export default function TutorialsPage() {
                 <div className='space-y-2'>
                     <div className='flex items-center gap-2 text-neutral-500 text-[10px] font-black uppercase italic tracking-widest'>
                         <SlidersHorizontal size={12} className='text-primary' />{' '}
-                        Sort By
+                        {t('sortBy')}
                     </div>
                     <Select value={sortBy} onValueChange={setSortBy}>
                         <SelectTrigger className='bg-white/5 border-white/10 h-12 rounded-xl text-white font-bold uppercase italic text-[11px]'>
@@ -207,26 +209,25 @@ export default function TutorialsPage() {
                                 value='newest'
                                 className='font-bold uppercase italic text-[11px]'
                             >
-                                Newest First
+                                {t('newestFirst')}
                             </SelectItem>
                             <SelectItem
                                 value='views'
                                 className='font-bold uppercase italic text-[11px]'
                             >
-                                Most Viewed
+                                {t('mostViewed')}
                             </SelectItem>
                             <SelectItem
                                 value='likes'
                                 className='font-bold uppercase italic text-[11px]'
                             >
-                                Most Liked
+                                {t('mostLiked')}
                             </SelectItem>
                         </SelectContent>
                     </Select>
                 </div>
             </div>
 
-            {/* Type Filter (Youtube, Video, Images) */}
             <div className='flex bg-white/5 p-1 rounded-xl border border-white/10 max-w-sm'>
                 {['all', 'youtube', 'video', 'images'].map((type) => (
                     <button
@@ -238,46 +239,45 @@ export default function TutorialsPage() {
                                 : 'text-neutral-500 hover:text-white'
                         }`}
                     >
-                        {type}
+                        {t(`type.${type}`)}
                     </button>
                 ))}
             </div>
 
             {loading ? (
                 <div className='py-32 text-center animate-pulse font-black italic text-neutral-600 uppercase tracking-widest'>
-                    Syncing...
+                    {t('syncing')}
                 </div>
             ) : (
                 <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                    {filtered.map((t) => (
+                    {filtered.map((x) => (
                         <Link
-                            href={`/tutorials/${t.slug || t._id}`}
-                            key={t._id}
+                            href={`/tutorials/${x.slug || x._id}`}
+                            key={x._id}
                             className='group relative block p-px rounded-[2.2rem] bg-gradient-to-br from-white/10 to-transparent hover:from-primary/20 transition-all duration-500'
                         >
                             <div className='h-full overflow-hidden rounded-[2.1rem] bg-[#0A0A0A] border border-white/5 flex flex-col'>
                                 <div className='relative aspect-video overflow-hidden border-b border-white/5 bg-neutral-900'>
                                     {(() => {
                                         const ytThumb =
-                                            t.type === 'youtube' &&
-                                            t.contentUrls?.[0]
+                                            x.type === 'youtube' &&
+                                            x.contentUrls?.[0]
                                                 ? getYoutubeThumbnail(
-                                                      t.contentUrls[0]
+                                                      x.contentUrls[0]
                                                   )
                                                 : null;
                                         const displayImage =
-                                            t.thumbnailUrl ||
+                                            x.thumbnailUrl ||
                                             ytThumb ||
-                                            (t.type === 'images' &&
-                                            t.contentUrls?.[0]
-                                                ? t.contentUrls[0]
+                                            (x.type === 'images' &&
+                                            x.contentUrls?.[0]
+                                                ? x.contentUrls[0]
                                                 : null);
-
                                         if (displayImage) {
                                             return (
                                                 <img
                                                     src={displayImage}
-                                                    alt={t.title}
+                                                    alt={x.title}
                                                     className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110'
                                                     onError={(e) => {
                                                         const target =
@@ -298,13 +298,12 @@ export default function TutorialsPage() {
                                                 />
                                             );
                                         }
-
                                         return (
                                             <div className='w-full h-full flex items-center justify-center bg-gradient-to-br from-neutral-800 to-neutral-900'>
                                                 <div className='opacity-20 group-hover:opacity-40 transition-opacity'>
-                                                    {t.type === 'youtube' ? (
+                                                    {x.type === 'youtube' ? (
                                                         <Youtube size={48} />
-                                                    ) : t.type === 'video' ? (
+                                                    ) : x.type === 'video' ? (
                                                         <PlayCircle size={48} />
                                                     ) : (
                                                         <ImageIcon size={48} />
@@ -313,22 +312,20 @@ export default function TutorialsPage() {
                                             </div>
                                         );
                                     })()}
-
                                     <div className='absolute top-4 left-4 p-2 rounded-xl bg-black/60 backdrop-blur-md border border-white/10 text-primary'>
-                                        {t.type === 'youtube' ? (
+                                        {x.type === 'youtube' ? (
                                             <Youtube size={16} />
-                                        ) : t.type === 'video' ? (
+                                        ) : x.type === 'video' ? (
                                             <PlayCircle size={16} />
                                         ) : (
                                             <ImageIcon size={16} />
                                         )}
                                     </div>
                                 </div>
-
                                 <div className='absolute top-4 right-4 flex items-center gap-2 p-1.5 pr-3 rounded-full bg-black/60 backdrop-blur-md border border-white/10'>
-                                    {t.authorId?.image ? (
+                                    {x.authorId?.image ? (
                                         <img
-                                            src={t.authorId.image}
+                                            src={x.authorId.image}
                                             className='w-5 h-5 rounded-full object-cover'
                                             alt=''
                                         />
@@ -336,26 +333,13 @@ export default function TutorialsPage() {
                                         <div className='w-5 h-5 rounded-full bg-white/10' />
                                     )}
                                     <span className='text-[9px] font-bold text-white/90 uppercase tracking-wider'>
-                                        By {t.authorId?.name || 'Unknown'}
+                                        {t('by')}{' '}
+                                        {x.authorId?.name || t('unknown')}
                                     </span>
                                 </div>
-
                                 <div className='p-6 flex flex-col flex-grow'>
-                                    <div className='flex justify-between items-start mb-4'>
-                                        <div className='flex flex-wrap gap-1'>
-                                            {t.tags.slice(0, 2).map((tag) => (
-                                                <span
-                                                    key={tag._id}
-                                                    className='text-[9px] font-bold px-2 py-1 rounded-lg bg-white/5 border border-white/10 text-neutral-400 uppercase tracking-tighter'
-                                                >
-                                                    {tag.name}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    </div>
-
                                     <h3 className='text-xl font-black uppercase italic tracking-tighter mb-6 leading-tight group-hover:text-primary transition-colors line-clamp-2'>
-                                        {t.title}
+                                        {x.title}
                                     </h3>
 
                                     <div className='mt-auto pt-5 border-t border-white/5 flex items-center justify-between'>
@@ -363,26 +347,27 @@ export default function TutorialsPage() {
                                             <div className='flex items-center gap-1.5 text-neutral-500 group-hover:text-neutral-300 transition-colors'>
                                                 <Eye size={14} />
                                                 <span className='text-[10px] font-black italic uppercase'>
-                                                    {t.views || 0}
+                                                    {x.views || 0}
                                                 </span>
                                             </div>
                                             <div className='flex items-center gap-1.5 text-neutral-500 group-hover:text-red-400 transition-colors'>
                                                 <Heart
                                                     size={14}
                                                     className={
-                                                        t.likes?.length > 0
+                                                        x.likes?.length > 0
                                                             ? 'fill-current'
                                                             : ''
                                                     }
                                                 />
                                                 <span className='text-[10px] font-black italic uppercase'>
-                                                    {t.likes?.length || 0}
+                                                    {x.likes?.length || 0}
                                                 </span>
                                             </div>
                                         </div>
 
                                         <div className='flex items-center gap-1 text-primary text-[10px] font-black uppercase italic opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all'>
-                                            View <ArrowUpRight size={14} />
+                                            {t('view')}{' '}
+                                            <ArrowUpRight size={14} />
                                         </div>
                                     </div>
                                 </div>
