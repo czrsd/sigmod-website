@@ -14,8 +14,8 @@ import { useEffect, useState, useCallback } from 'react';
 import { cn } from '@/lib/utils';
 
 const images: string[] = [
-    'menu.png',
-    'party_system.png',
+    'menu.webp',
+    'party_system.webp',
     'sigmod/macro_tab.png',
     'sigmod/game_tab.png',
     'sigmod/name_tab.png',

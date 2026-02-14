@@ -37,7 +37,7 @@ const mods = [
         href: '/sigmod',
         titleKey: 'mods.sigmod.title',
         descKey: 'mods.sigmod.desc',
-        imgSrc: '/preview/sigmod_menu.png',
+        imgSrc: '/preview/sigmod_menu.webp',
         imgAlt: 'SigMod Menu',
         imgSize: 92,
     },
@@ -79,7 +79,7 @@ export default function Header() {
     };
 
     return (
-        <header className='sticky top-0 z-50 bg-background/70 backdrop-blur-sm border-b'>
+        <header className='sticky top-0 z-50 bg-background lg:bg-background/70 lg:backdrop-blur-sm border-b'>
             <div className='max-w-7xl mx-auto px-4 md:px-6 py-3 flex items-center justify-between'>
                 <div className='flex items-center gap-4'>
                     <Link

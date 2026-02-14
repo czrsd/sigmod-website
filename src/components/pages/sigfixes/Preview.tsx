@@ -14,8 +14,8 @@ import { useEffect, useState, useCallback } from 'react';
 import { cn } from '@/lib/utils';
 
 const images: string[] = [
-    'before_after.png',
-    'multibox.png',
+    'before_after.webp',
+    'multibox.webp',
     'sigfixes/sigfixes.png',
     'sigfixes/camera.png',
     'sigfixes/multiboxing.png',

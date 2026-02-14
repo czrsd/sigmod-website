@@ -1,6 +1,6 @@
 'use client';
 
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, HTMLMotionProps } from 'framer-motion';
 import { useSelectedLayoutSegment } from 'next/navigation';
 import { LayoutRouterContext } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
@@ -47,25 +47,31 @@ interface LayoutTransitionProps {
     exit: React.ComponentProps<typeof motion.div>['exit'];
 }
 
+interface LayoutTransitionProps extends HTMLMotionProps<'div'> {
+    children: React.ReactNode;
+}
+
 export function LayoutTransition({
     children,
     className,
-    style,
     initial,
     animate,
     exit,
+    transition,
+    ...rest
 }: LayoutTransitionProps) {
     const segment = useSelectedLayoutSegment();
 
     return (
         <AnimatePresence mode='wait' initial={false}>
             <motion.div
-                className={className}
-                style={style}
                 key={segment}
+                className={className}
                 initial={initial}
                 animate={animate}
                 exit={exit}
+                transition={transition}
+                {...rest}
             >
                 <FrozenRouter>{children}</FrozenRouter>
             </motion.div>

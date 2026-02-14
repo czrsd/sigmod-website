@@ -1,4 +1,3 @@
-'use client';
 import {
     HeroSection,
     IntroductionSection,
@@ -7,7 +6,7 @@ import {
     CommunitySection,
 } from '@/components/pages/home';
 
-export default function Home() {
+export default async function Home() {
     return (
         <div>
             <HeroSection />

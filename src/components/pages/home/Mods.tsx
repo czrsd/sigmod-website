@@ -37,10 +37,12 @@ const ModItem = ({
             <div className='relative overflow-hidden rounded-2xl border border-white/10 bg-neutral-900/50 backdrop-blur-sm p-2 shadow-2xl'>
                 <Image
                     src={img}
+                    alt={alt}
                     width={520}
                     height={350}
-                    alt={alt}
-                    className='rounded-xl transition-transform duration-700 group-hover:scale-[1.02]'
+                    sizes='(max-width: 768px) 90vw, (max-width: 1200px) 40vw, 520px'
+                    decoding='async'
+                    className='rounded-xl transition-transform duration-700 group-hover:scale-[1.02] w-full h-auto'
                 />
             </div>
         </div>
@@ -91,7 +93,7 @@ export function ModsSection() {
         <section className='flex flex-col gap-32 md:gap-48 px-6 md:px-16 py-32 max-w-7xl mx-auto overflow-hidden'>
             <ModItem
                 index={0}
-                img='/preview/sigmod_menu.png'
+                img='/preview/sigmod_menu.webp'
                 alt='SigMod preview'
                 title={t('sigmod.title')}
                 desc={t('sigmod.desc')}
@@ -101,7 +103,7 @@ export function ModsSection() {
             />
             <ModItem
                 index={1}
-                img='/preview/multibox.png'
+                img='/preview/multibox.webp'
                 alt='SigFixes preview'
                 title={t('sigfixes.title')}
                 desc={t('sigfixes.desc')}

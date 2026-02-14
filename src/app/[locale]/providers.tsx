@@ -3,6 +3,7 @@ import { ThemeProvider } from 'next-themes';
 import { NextIntlClientProvider } from 'next-intl';
 import { SessionProvider } from 'next-auth/react';
 import React from 'react';
+import { LayoutTransition } from '@/components/layout-transition';
 
 export function Providers({
     children,

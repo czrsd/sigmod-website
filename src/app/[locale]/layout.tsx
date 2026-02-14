@@ -1,5 +1,5 @@
 import '../globals.css';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import Header from '@/components/Header';
 import { hasLocale } from 'next-intl';
 import { getMessages } from 'next-intl/server';
@@ -7,14 +7,27 @@ import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Footer from '@/components/Footer';
 import { Providers } from './providers';
-import { Toaster } from '@/components/ui/sonner';
 import { Inter } from 'next/font/google';
+import { Toaster } from 'sonner';
+import { LayoutTransition } from '@/components/layout-transition';
 
 const inter = Inter({
     subsets: ['latin'],
     display: 'swap',
     variable: '--font-inter',
+    adjustFontFallback: true,
+    preload: true,
 });
+
+export const viewport: Viewport = {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    themeColor: [
+        { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+        { media: '(prefers-color-scheme: dark)', color: '#0a0a0a' },
+    ],
+};
 
 export async function generateMetadata({
     params,
@@ -96,19 +109,27 @@ export default async function RootLayout({
     return (
         <html lang={locale} suppressHydrationWarning>
             <body
-                className={`${inter.className} overflow-x-hidden bg-bg dark:bg-[#050505] transition-colors duration-500`}
+                className={`${inter.className} overflow-x-hidden bg-bg dark:bg-[#050505]`}
             >
                 <Providers locale={locale} messages={messages}>
                     <Header />
 
                     <div className='fixed inset-0 -z-10 overflow-hidden pointer-events-none'>
-                        <div className='hidden lg:block absolute top-[5%] left-[5%] w-[20%] h-[20%] rounded-full bg-blue-400/10 dark:bg-blue-600/20 blur-[120px] animate-drift will-change-transform' />
-                        <div className='hidden lg:block absolute bottom-[5%] right-[-5%] w-[35%] h-[35%] rounded-full bg-purple-400/10 dark:bg-purple-600/20 blur-[100px] animate-drift [animation-delay:3s] will-change-transform' />
+                        <div className='hidden lg:block absolute top-[5%] left-[5%] w-[20%] h-[20%] rounded-full bg-blue-400/10 dark:bg-blue-600/20 blur-[120px] lg:animate-drift will-change-transform' />
+                        <div className='hidden lg:block absolute bottom-[5%] right-[-5%] w-[35%] h-[35%] rounded-full bg-purple-400/10 dark:bg-purple-600/20 blur-[100px] lg:animate-drift [animation-delay:3s] will-change-transform' />
 
                         <div className='bg-grid absolute inset-0 opacity-30 dark:opacity-40' />
                     </div>
 
+                    {/*
+                    <LayoutTransition
+                        initial={{ opacity: 0, y: 4 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: -4 }}
+                        transition={{ duration: 0.2, ease: 'easeInOut' }}
+                    >*/}
                     <main className='relative z-0'>{children}</main>
+                    {/*</LayoutTransition>*/}
 
                     <Footer />
 
