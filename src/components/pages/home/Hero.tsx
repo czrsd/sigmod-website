@@ -154,12 +154,17 @@ export function HeroSection() {
                                             }
                                             fill
                                             className='object-cover'
-                                            sizes='(max-width: 768px) 100vw, 40vw'
+                                            sizes='(max-width: 768px) 100vw, 600px'
                                             priority={idx === 0}
                                             {...(idx === 0
                                                 ? { fetchPriority: 'high' }
                                                 : {})}
-                                            loading='eager'
+                                            loading={
+                                                idx === 0 ? 'eager' : 'lazy'
+                                            }
+                                            decoding={
+                                                idx === 0 ? 'sync' : 'async'
+                                            }
                                         />
                                     </div>
                                 </CarouselItem>

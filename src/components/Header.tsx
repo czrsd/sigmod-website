@@ -56,7 +56,7 @@ const navLinks = [
     { href: '/tutorials', labelKey: 'tutorials' },
     { href: '/faq', labelKey: 'faq' },
     { href: '/about', labelKey: 'about' },
-    { href: '/shop', labelKey: 'shop' },
+    // { href: '/shop', labelKey: 'shop' },
 ];
 
 export default function Header() {

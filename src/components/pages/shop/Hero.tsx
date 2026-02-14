@@ -65,6 +65,11 @@ export default function Hero({
 
     return (
         <div className='flex flex-col items-center pt-10 pb-6 w-full max-w-4xl px-4'>
+            <div className='w-full border-1 border-red-500/50 bg-red-500/20 rounded-lg p-5 my-10'>
+                The shop is currently under maintance and will be available
+                soon!
+            </div>
+
             <div className='mb-4 px-4 py-1.5 rounded-full border border-primary/20 bg-primary/5 text-primary text-[10px] uppercase font-black tracking-[0.2em]'>
                 Official Sigmally Modz Shop
             </div>
