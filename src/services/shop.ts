@@ -1,4 +1,3 @@
-import axios from 'axios';
 import {
     products,
     purchase,
@@ -24,13 +23,25 @@ interface StripeOrderQuery {
     sessionId: string;
 }
 
+const handleResponse = async <T>(res: Response): Promise<T> => {
+    if (!res.ok) {
+        throw new Error(`HTTP error! Status: ${res.status}`);
+    }
+    return res.json();
+};
+
 export const getProductInfo = async (
     id: string
 ): Promise<
     Nullable<{ product: Bundle | CoinPackage | SubPackage; type: string }>
 > => {
     try {
-        const { data } = await axios.get(products.single(id));
+        const res = await fetch(products.single(id));
+        const data = await handleResponse<{
+            product: Bundle | CoinPackage | SubPackage;
+            type: string;
+        }>(res);
+
         return { product: data.product, type: data.type };
     } catch (err) {
         console.error('Error fetching special bundles', err);
@@ -46,12 +57,8 @@ export const getSpecialBundles = async (): Promise<
     }>
 > => {
     try {
-        const { data } = await axios.get<{
-            specialBundles: Bundle[];
-            limitedEndsAt: number;
-            startedAt: number;
-        }>(products.specialBundles);
-        return data;
+        const res = await fetch(products.specialBundles);
+        return await handleResponse(res);
     } catch (err) {
         console.error('Error fetching special bundles', err);
         return null;
@@ -60,9 +67,8 @@ export const getSpecialBundles = async (): Promise<
 
 export const getAllDefaultBundles = async (): Promise<Nullable<Bundle[]>> => {
     try {
-        const { data } = await axios.get<{ bundles: Bundle[] }>(
-            products.bundles.all
-        );
+        const res = await fetch(products.bundles.all);
+        const data = await handleResponse<{ bundles: Bundle[] }>(res);
         return data.bundles;
     } catch (err) {
         console.error('Error fetching all bundles', err);
@@ -72,9 +78,8 @@ export const getAllDefaultBundles = async (): Promise<Nullable<Bundle[]>> => {
 
 export const getBundle = async (id: string): Promise<Nullable<Bundle>> => {
     try {
-        const { data } = await axios.get<{ bundle: Bundle }>(
-            products.bundles.single(id)
-        );
+        const res = await fetch(products.bundles.single(id));
+        const data = await handleResponse<{ bundle: Bundle }>(res);
         return data.bundle;
     } catch (err) {
         console.error(`Error fetching bundle ${id}`, err);
@@ -86,9 +91,8 @@ export const getCoinPackage = async (
     id: string
 ): Promise<Nullable<CoinPackage>> => {
     try {
-        const { data } = await axios.get<{ coinPackage: CoinPackage }>(
-            products.coins.single(id)
-        );
+        const res = await fetch(products.coins.single(id));
+        const data = await handleResponse<{ coinPackage: CoinPackage }>(res);
         return data.coinPackage;
     } catch (err) {
         console.error(`Error fetching coin package ${id}`, err);
@@ -100,9 +104,8 @@ export const getAllCoinPackages = async (): Promise<
     Nullable<CoinPackage[]>
 > => {
     try {
-        const { data } = await axios.get<{ coins: CoinPackage[] }>(
-            products.coins.all
-        );
+        const res = await fetch(products.coins.all);
+        const data = await handleResponse<{ coins: CoinPackage[] }>(res);
         return data.coins;
     } catch (err) {
         console.error('Error fetching all coin packages', err);
@@ -114,8 +117,9 @@ export const getSubscriptionPackage = async (
     id: string
 ): Promise<Nullable<SubPackage>> => {
     try {
-        const { data } = await axios.get<{ subscriptionPackage: SubPackage }>(
-            products.subscriptions.single(id)
+        const res = await fetch(products.subscriptions.single(id));
+        const data = await handleResponse<{ subscriptionPackage: SubPackage }>(
+            res
         );
         return data.subscriptionPackage;
     } catch (err) {
@@ -126,9 +130,8 @@ export const getSubscriptionPackage = async (
 
 export const getAllSubPackages = async (): Promise<Nullable<SubPackage[]>> => {
     try {
-        const { data } = await axios.get<{ subscriptions: SubPackage[] }>(
-            products.subscriptions.all
-        );
+        const res = await fetch(products.subscriptions.all);
+        const data = await handleResponse<{ subscriptions: SubPackage[] }>(res);
         return data.subscriptions;
     } catch (err) {
         console.error('Error fetching all subscription packages', err);
@@ -138,7 +141,8 @@ export const getAllSubPackages = async (): Promise<Nullable<SubPackage[]>> => {
 
 export const getAllSkins = async (): Promise<Nullable<Skin[]>> => {
     try {
-        const { data } = await axios.get<{ skins: Skin[] }>(products.skins.all);
+        const res = await fetch(products.skins.all);
+        const data = await handleResponse<{ skins: Skin[] }>(res);
         return data.skins;
     } catch (err) {
         console.error('Error fetching all skins', err);
@@ -148,9 +152,8 @@ export const getAllSkins = async (): Promise<Nullable<Skin[]>> => {
 
 export const getSkin = async (id: string): Promise<Nullable<Skin>> => {
     try {
-        const { data } = await axios.get<{ skin: Skin }>(
-            products.skins.single(id)
-        );
+        const res = await fetch(products.skins.single(id));
+        const data = await handleResponse<{ skin: Skin }>(res);
         return data.skin;
     } catch (err) {
         console.error(`Error fetching skin ${id}`, err);
@@ -160,9 +163,8 @@ export const getSkin = async (id: string): Promise<Nullable<Skin>> => {
 
 export const getAllBoosts = async (): Promise<Nullable<Boost[]>> => {
     try {
-        const { data } = await axios.get<{ boosts: Boost[] }>(
-            products.boosts.all
-        );
+        const res = await fetch(products.boosts.all);
+        const data = await handleResponse<{ boosts: Boost[] }>(res);
         return data.boosts;
     } catch (err) {
         console.error('Error fetching all boost packages', err);
@@ -172,9 +174,8 @@ export const getAllBoosts = async (): Promise<Nullable<Boost[]>> => {
 
 export const getBoost = async (id: string): Promise<Nullable<Boost>> => {
     try {
-        const { data } = await axios.get<{ boostPackage: Boost }>(
-            products.boosts.single(id)
-        );
+        const res = await fetch(products.boosts.single(id));
+        const data = await handleResponse<{ boostPackage: Boost }>(res);
         return data.boostPackage;
     } catch (err) {
         console.error(`Error fetching boost package ${id}`, err);
@@ -184,9 +185,8 @@ export const getBoost = async (id: string): Promise<Nullable<Boost>> => {
 
 export const getAllPrivateServers = async (): Promise<Nullable<Server[]>> => {
     try {
-        const { data } = await axios.get<{ servers: Server[] }>(
-            products.servers
-        );
+        const res = await fetch(products.servers);
+        const data = await handleResponse<{ servers: Server[] }>(res);
         return data.servers;
     } catch (err) {
         console.error('Error fetching all servers', err);
@@ -196,7 +196,8 @@ export const getAllPrivateServers = async (): Promise<Nullable<Server[]>> => {
 
 export const getSale = async (): Promise<number> => {
     try {
-        const { data } = await axios.get<{ sale: number }>(sale);
+        const res = await fetch(sale);
+        const data = await handleResponse<{ sale: number }>(res);
         return data.sale ?? 1;
     } catch (err) {
         console.error('Error fetching sale', err);
@@ -206,9 +207,8 @@ export const getSale = async (): Promise<number> => {
 
 export const verifyUser = async (email: string): Promise<Nullable<boolean>> => {
     try {
-        const { data } = await axios.get<{ isValid: boolean }>(
-            validateUser(email)
-        );
+        const res = await fetch(validateUser(email));
+        const data = await handleResponse<{ isValid: boolean }>(res);
         return data.isValid;
     } catch (err) {
         console.error(`Error verifying user ${email}`, err);
@@ -223,13 +223,20 @@ export const purchaseItem = async (
     paymentMethod: string
 ): Promise<PurchaseResponse | null> => {
     try {
-        const { data } = await axios.post<PurchaseResponse>(purchase, {
-            userEmail: email,
-            productId,
-            productType: type,
-            paymentMethod,
+        const res = await fetch(purchase, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                userEmail: email,
+                productId,
+                productType: type,
+                paymentMethod,
+            }),
         });
-        return data;
+
+        return await handleResponse<PurchaseResponse>(res);
     } catch (err) {
         console.error(`Error purchasing ${type}`, err);
         return null;
@@ -256,11 +263,15 @@ export const getOrderStatus = async (
             };
         }
 
-        const { data: res } = await axios.post<OrderStatusResponse>(
-            orders.status,
-            payload
-        );
-        return res;
+        const res = await fetch(orders.status, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(payload),
+        });
+
+        return await handleResponse<OrderStatusResponse>(res);
     } catch (err) {
         console.error('Error getting order status', err);
         return null;
@@ -272,11 +283,18 @@ export const cancelOrder = async (
     paymentMethod: string
 ): Promise<OrderStatusResponse | null> => {
     try {
-        const { data } = await axios.post<OrderStatusResponse>(orders.cancel, {
-            paymentMethod,
-            orderId,
+        const res = await fetch(orders.cancel, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                paymentMethod,
+                orderId,
+            }),
         });
-        return data;
+
+        return await handleResponse<OrderStatusResponse>(res);
     } catch (err) {
         console.error('Error cancelling order', err);
         return null;

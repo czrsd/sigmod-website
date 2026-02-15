@@ -2,106 +2,9 @@ import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ShoppingCart } from 'lucide-react';
 import Link from 'next/link';
-import { Suspense } from 'react';
 import Image from 'next/image';
-import { DynamicCarousel } from './DynamicCarousel';
-
-async function getStats() {
-    const ids = ['454648', '483587'];
-
-    try {
-        const [res1, res2, onlineRes] = await Promise.all([
-            fetch(`https://greasyfork.org/scripts/${ids[0]}.json`, {
-                next: { revalidate: 600 },
-            }),
-            fetch(`https://greasyfork.org/scripts/${ids[1]}.json`, {
-                next: { revalidate: 600 },
-            }),
-            fetch('https://mod.czrsd.com/onlineusers', {
-                next: { revalidate: 60 },
-            }),
-        ]);
-
-        let total = 0;
-        let daily = 0;
-        let onlineCount = 70;
-
-        if (res1.ok) {
-            const data = await res1.json();
-            total += data.total_installs || 0;
-            daily += data.daily_installs || 0;
-        }
-        if (res2.ok) {
-            const data = await res2.json();
-            total += data.total_installs || 0;
-            daily += data.daily_installs || 0;
-        }
-        if (onlineRes.ok) {
-            const data = await onlineRes.json();
-            onlineCount = data.onlineUsers;
-        }
-
-        return {
-            total: total.toLocaleString() + '+',
-            daily: daily.toLocaleString() + '+',
-            online: onlineCount + '+',
-        };
-    } catch (error) {
-        console.error('Stats fetch failed', error);
-        return { total: '30,000+', daily: '50+', online: '70+' };
-    }
-}
-
-function StatItem({
-    value,
-    label,
-    hasPulse,
-}: {
-    value: string;
-    label: string;
-    hasPulse?: boolean;
-}) {
-    return (
-        <div className='flex flex-col min-w-[80px]'>
-            <div className='flex items-center gap-2'>
-                <span className='text-lg md:text-3xl w-full font-black italic tracking-tighter leading-none'>
-                    {value}
-                </span>
-                {hasPulse && (
-                    <div className='w-2 h-2 rounded-full bg-green-500 animate-pulse' />
-                )}
-            </div>
-            <span className='text-[10px] uppercase font-bold tracking-[0.2em] text-neutral-600 dark:text-neutral-300 mt-2'>
-                {label}
-            </span>
-        </div>
-    );
-}
-
-async function StatsDisplay() {
-    const t = useTranslations('HomePage.hero');
-    const stats = await getStats();
-
-    return (
-        <div className='pt-4 flex flex-row items-center justify-center lg:justify-start gap-12'>
-            <StatItem value={stats.total} label={t('stats.total')} />
-            <div className='w-px h-10 bg-white/10 hidden sm:block' />
-            <StatItem value={stats.daily} label={t('stats.active')} />
-            <div className='w-px h-10 bg-white/10 hidden sm:block' />
-            <StatItem value={stats.online} label={t('stats.online')} hasPulse />
-        </div>
-    );
-}
-
-function StatsSkeleton() {
-    return (
-        <div className='pt-4 flex gap-12'>
-            <div className='h-[41px] md:h-[53px] w-[80px] bg-neutral-200 dark:bg-neutral-800 animate-pulse rounded-lg' />
-            <div className='h-[41px] md:h-[53px] w-[80px] bg-neutral-200 dark:bg-neutral-800 animate-pulse rounded-lg' />
-            <div className='h-[41px] md:h-[53px] w-[80px] bg-neutral-200 dark:bg-neutral-800 animate-pulse rounded-lg' />
-        </div>
-    );
-}
+import StatsClient from './StatsClient';
+import CarouselWrapper from './CarouselWrapper';
 
 export function HeroSection() {
     const t = useTranslations('HomePage.hero');
@@ -147,29 +50,26 @@ export function HeroSection() {
                     </Button>
                 </div>
 
-                <Suspense fallback={<StatsSkeleton />}>
-                    <StatsDisplay />
-                </Suspense>
+                <StatsClient />
             </div>
 
             <div className='w-full lg:w-1/2 relative z-10'>
-                <div className='relative w-full overflow-hidden rounded-xl md:rounded-[2rem] aspect-video md:shadow-2xl border border-white/10'>
+                <div
+                    className='relative w-full overflow-hidden rounded-xl md:rounded-[2rem] md:shadow-2xl border border-white/10'
+                    style={{ aspectRatio: '16 / 9' }}
+                >
                     <Image
                         src='/preview/menu.webp'
                         alt='Sigmally Mod Menu interface'
-                        width={1200}
-                        height={675}
+                        fill
                         priority
                         fetchPriority='high'
-                        loading='eager'
-                        quality={60}
+                        quality={75}
                         className='object-cover z-0'
                         sizes='(max-width: 768px) 85vw, (max-width: 1200px) 45vw, (max-width: 1920px) 45vw, 1200px'
                     />
 
-                    <div className='hidden md:block absolute inset-0 z-10'>
-                        <DynamicCarousel />
-                    </div>
+                    <CarouselWrapper />
                 </div>
 
                 <div className='hidden md:block absolute -inset-4 bg-blue-600/10 rounded-[3rem] blur-3xl opacity-50 pointer-events-none -z-10' />

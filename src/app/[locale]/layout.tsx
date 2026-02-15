@@ -37,7 +37,9 @@ export async function generateMetadata({
     const { locale } = await params;
     const messages = await getMessages({ locale });
     const SITE = (
-        process.env.NEXT_PUBLIC_SITE_URL || 'https://sigmally.xyz'
+        process.env.NODE_ENV === 'development'
+            ? 'https://dev.czrsd.com'
+            : 'https://sigmally.xyz'
     ).replace(/\/$/, '');
 
     const title = 'Sigmally Modz';
@@ -106,12 +108,18 @@ export default async function RootLayout({
 
     const messages = await getMessages({ locale });
 
+    const now = new Date();
+
     return (
         <html lang={locale} suppressHydrationWarning>
+            <head>
+                <link rel='preconnect' href='https://api.greasyfork.org' />
+                <link rel='preconnect' href='https://mod.czrsd.com' />
+            </head>
             <body
                 className={`${inter.className} overflow-x-hidden bg-bg dark:bg-[#050505]`}
             >
-                <Providers locale={locale} messages={messages}>
+                <Providers locale={locale} messages={messages} now={now}>
                     <Header />
 
                     <div className='fixed inset-0 -z-10 overflow-hidden pointer-events-none'>
@@ -121,15 +129,14 @@ export default async function RootLayout({
                         <div className='bg-grid absolute inset-0 opacity-30 dark:opacity-40' />
                     </div>
 
-                    {/*
                     <LayoutTransition
                         initial={{ opacity: 0, y: 4 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -4 }}
                         transition={{ duration: 0.2, ease: 'easeInOut' }}
-                    >*/}
-                    <main className='relative z-0'>{children}</main>
-                    {/*</LayoutTransition>*/}
+                    >
+                        <main className='relative z-0'>{children}</main>
+                    </LayoutTransition>
 
                     <Footer />
 

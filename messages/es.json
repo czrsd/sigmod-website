@@ -130,12 +130,13 @@
         },
         "WhySigMod": {
             "title": "Por qué elegir SigMod?",
-            "desc": "Si algo está roto o simplemente no puedes hacer que las macros funcionen, únete a nuestro Discord. Es el mejor lugar para ayuda rápida, reportes de errores o ver lo que otros están haciendo.",
             "desc1": "SigMod añade automatización, personalización y control total de la UI a Sigmally. Configura macros, mueve paneles, reasigna teclas y ajusta visuales desde un panel limpio dentro del juego.",
             "desc2": "Trabaja con tu escuadra usando etiquetas dinámicas: chat privado, pings tácticos y marcadores en el minimapa en vivo. Consulta estadísticas de partidas y gestiona amigos al instante.",
             "highlight1": "Automatización total de UI",
             "highlight2": "Juego táctico en escuadra",
             "highlight3": "Control con un clic",
+            "performance": "¿Quieres el máximo rendimiento? Combina SigMod con",
+            "smooth": "para una jugabilidad ultra fluida.",
             "getStarted": "Comenzar ahora"
         },
         "Features": {

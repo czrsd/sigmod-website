@@ -3,16 +3,17 @@ import { ThemeProvider } from 'next-themes';
 import { NextIntlClientProvider } from 'next-intl';
 import { SessionProvider } from 'next-auth/react';
 import React from 'react';
-import { LayoutTransition } from '@/components/layout-transition';
 
 export function Providers({
     children,
     locale,
     messages,
+    now,
 }: {
     children: React.ReactNode;
     locale: string;
     messages?: Record<string, string | Record<string, string>>;
+    now: Date;
 }) {
     return (
         <SessionProvider>
@@ -26,7 +27,7 @@ export function Providers({
                     locale={locale}
                     messages={messages}
                     timeZone={Intl.DateTimeFormat().resolvedOptions().timeZone}
-                    now={new Date()}
+                    now={now}
                 >
                     {children}
                 </NextIntlClientProvider>
