@@ -19,16 +19,19 @@ function StatItem({
     value,
     label,
     hasPulse,
+    suffix,
 }: {
     value: number | null;
     label: string;
     hasPulse?: boolean;
+    suffix?: string;
 }) {
     return (
         <div className='flex flex-col min-w-[80px]'>
             <div className='flex items-center gap-2'>
                 <span className='text-lg md:text-3xl w-full font-black italic tracking-tighter leading-none'>
                     {formatStat(value)}
+                    {value !== null ? suffix : null}
                 </span>
                 {hasPulse && (
                     <div className='w-2 h-2 rounded-full bg-green-500 animate-pulse' />
@@ -108,7 +111,12 @@ export default function StatsClient() {
             <div className='w-px h-10 bg-white/10 hidden sm:block' />
             <StatItem value={stats.daily} label={t('stats.active')} />
             <div className='w-px h-10 bg-white/10 hidden sm:block' />
-            <StatItem value={stats.online} label={t('stats.online')} hasPulse />
+            <StatItem
+                value={stats.online}
+                label={t('stats.online')}
+                hasPulse
+                suffix='+'
+            />
         </div>
     );
 }
