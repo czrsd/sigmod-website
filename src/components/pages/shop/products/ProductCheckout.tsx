@@ -16,7 +16,7 @@ import { CreditCard, Mail } from 'lucide-react';
 import { verifyUser, purchaseItem } from '@/services/shop';
 import { useTranslations } from 'next-intl';
 import { Order } from '@/types/shopTypes';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { discordLink } from '@/utils/getLink';
 
 export default function ProductCheckout({

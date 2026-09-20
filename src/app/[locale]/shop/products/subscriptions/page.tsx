@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { getAllSubPackages, getSale } from '@/services/shop';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { SubPackage } from '@/types/shopTypes';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';

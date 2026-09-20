@@ -45,7 +45,7 @@ export async function GET(req: NextRequest, { params }: RouteContext) {
         ).populate('tags');
 
         return NextResponse.json(updatedTutorial);
-    } catch (e) {
+    } catch {
         return NextResponse.json(tutorial);
     }
 }

@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { getAllSkins, getSale } from '@/services/shop';
+import { getAllSkins } from '@/services/shop';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Skin } from '@/types/shopTypes';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -38,14 +38,9 @@ const cardRarityClasses: Record<Rarity, string> = {
 export default function SkinsProducts() {
     const t = useTranslations('Shop.Products.Skins');
     const [skins, setSkins] = useState<Skin[]>([]);
-    const [sale, setSale] = useState(1);
-
     useEffect(() => {
         getAllSkins().then((res) => {
             if (res) setSkins(res);
-        });
-        getSale().then((s) => {
-            if (s) setSale(s);
         });
     }, []);
 

@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Github, ExternalLink, ShieldCheck } from 'lucide-react';
 
 export default function Footer() {
@@ -36,9 +36,9 @@ export default function Footer() {
                             label='SigFixes Source'
                         />
                         <FooterLink
-                            href='/game'
+                            href='https://one.sigmally.com/'
                             icon={<ExternalLink size={16} />}
-                            label='Sigmally'
+                            label='Play Sigmally'
                         />
                     </div>
                 </div>

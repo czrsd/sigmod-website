@@ -1,11 +1,10 @@
 'use client';
 
 import { useTranslations, useLocale } from 'next-intl';
-import { usePathname, useRouter } from 'next/navigation';
+import { Link, usePathname, useRouter } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
 import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Menu, ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from './ui/button';
 import {
@@ -68,14 +67,11 @@ export default function Header() {
     const router = useRouter();
 
     const isActive = (href: string) => {
-        const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
-        return pathWithoutLocale === href;
+        return pathname === href;
     };
 
     const changeLanguage = (newLocale: string) => {
-        const segments = pathname.split('/');
-        segments[1] = newLocale;
-        router.replace(segments.join('/') || '/');
+        router.replace(pathname || '/', { locale: newLocale });
     };
 
     return (
@@ -197,7 +193,7 @@ export default function Header() {
                                 locale,
                                 ...routing.locales.filter((l) => l !== locale),
                             ].map((lng) => (
-                                <DropdownMenuItem
+                                <DropdownMenuItem asChild
                                     key={lng}
                                     onClick={() => changeLanguage(lng)}
                                     className={`flex items-center gap-2 ${
@@ -206,14 +202,20 @@ export default function Header() {
                                             : ''
                                     }`}
                                 >
-                                    <Image
-                                        src={`/flags/${lng}.svg`}
-                                        alt={lng}
-                                        width={18}
-                                        height={18}
-                                        className='rounded-sm'
-                                    />
-                                    {languageMap[lng] ?? lng.toUpperCase()}
+                                    <Link
+                                        href={pathname || '/'}
+                                        locale={lng}
+                                        className='flex items-center gap-2 w-full'
+                                    >
+                                        <Image
+                                            src={`/flags/${lng}.svg`}
+                                            alt={lng}
+                                            width={18}
+                                            height={18}
+                                            className='rounded-sm'
+                                        />
+                                        {languageMap[lng] ?? lng.toUpperCase()}
+                                    </Link>
                                 </DropdownMenuItem>
                             ))}
                         </DropdownMenuContent>

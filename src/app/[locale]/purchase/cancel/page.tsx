@@ -1,14 +1,14 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { XCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { redirect, useSearchParams } from 'next/navigation';
 import { cancelOrder } from '@/services/shop';
 import { useTranslations } from 'next-intl';
 
-export default function PurchaseCanceled() {
+function PurchaseCanceledContent() {
     const t = useTranslations('Shop.Purchase.Canceled');
     const [loading, setLoading] = useState(true);
     const searchParams = useSearchParams();
@@ -70,5 +70,13 @@ export default function PurchaseCanceled() {
                 </Link>
             </div>
         </div>
+    );
+}
+
+export default function PurchaseCanceled() {
+    return (
+        <Suspense fallback={null}>
+            <PurchaseCanceledContent />
+        </Suspense>
     );
 }

@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ArrowLeft, Download, ExternalLink } from 'lucide-react';
 import { getTampermonkeyLink, detectBrowser } from '@/utils/getLink';

@@ -1,7 +1,7 @@
 'use client';
 
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { ZoomableImage } from '@/components/ZoomableImage';
 import { PartyPopper, Gamepad2, Search, Sparkles } from 'lucide-react';

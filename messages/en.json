@@ -509,6 +509,8 @@
     },
     "TutorialPage": {
         "overview": {
+            "title": "Sigmally Tutorials & Guides",
+            "description": "Community tutorials for installing SigMod, configuring SigFixes, using macros and improving your Sigmally setup.",
             "communityHub": "Community Hub",
             "admin": "Admin",
             "upload": "Upload",

@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import {
     Accordion,
@@ -10,11 +10,19 @@ import {
 } from '@/components/ui/accordion';
 import { Button } from '@/components/ui/button';
 import { discordLink } from '@/utils/getLink';
-import { HelpCircle, Terminal, Wrench, MessageSquare } from 'lucide-react';
+import {
+    HelpCircle,
+    Terminal,
+    Wrench,
+    MessageSquare,
+    type LucideIcon,
+} from 'lucide-react';
+
+type Translator = ReturnType<typeof useTranslations>;
 
 type FAQItem = {
     question: string;
-    answer: (t: any) => React.ReactNode;
+    answer: (t: Translator) => React.ReactNode;
 };
 
 const createLink = (href: string) => (chunks: React.ReactNode) =>
@@ -55,7 +63,7 @@ const faqData: Record<string, FAQItem[]> = {
             question: 'general.multibox.question',
             answer: (t) =>
                 t.rich('general.multibox.answer', {
-                    strong: (c: any) => (
+                    strong: (c: React.ReactNode) => (
                         <strong className='text-white'>{c}</strong>
                     ),
                     link: createLink('/guide'),
@@ -98,8 +106,8 @@ const RenderSection = ({
 }: {
     titleKey: string;
     items: FAQItem[];
-    icon: any;
-    t: any;
+    icon: LucideIcon;
+    t: Translator;
 }) => (
     <div className='bg-white/[0.02] border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col h-full'>
         <div className='flex items-center gap-4 border-b border-black/5 dark:border-white/5 pb-6 mb-2'>
@@ -113,7 +121,7 @@ const RenderSection = ({
                 {titleKey === 'sigfixes' && (
                     <p className='text-neutral-700 dark:text-neutral-500 text-[10px] mt-2 uppercase tracking-widest font-bold'>
                         {t.rich('sigfixes.note', {
-                            strong: (c: any) => (
+                            strong: (c: React.ReactNode) => (
                                 <span className='text-neutral-600'>{c}</span>
                             ),
                         })}

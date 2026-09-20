@@ -258,6 +258,9 @@
             "title": "Warum SigFixes?",
             "desc1": "SigFixes überholt Sigmallys Rendering für flüssigere Frames und präzisere Eingabe. Es beseitigt Stottern, verringert Verzögerungen und hält das Gameplay stabil unter Druck.",
             "desc2": "Für ernsthafte Spieler entwickelt, glänzt es beim Multiboxing. Schnellere Eingaben, synchronisierte Kamera und visuelle Anpassungen helfen beim Tracking und Merge.",
+            "highlight1": "Maximale Performance",
+            "highlight2": "Stabile Frames",
+            "highlight3": "Input-Optimierung",
             "highlight1_perf": "Maximale Performance",
             "highlight2_perf": "Stabile Frames",
             "highlight3_perf": "Input-Optimierung",
@@ -505,6 +508,8 @@
     },
     "TutorialPage": {
         "overview": {
+            "title": "Sigmally-Tutorials und Anleitungen",
+            "description": "Community-Anleitungen zur Installation von SigMod, zur Konfiguration von SigFixes, für Makros und dein Sigmally-Setup.",
             "communityHub": "Community Hub",
             "admin": "Admin",
             "upload": "Hochladen",

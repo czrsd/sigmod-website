@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import {
     getTampermonkeyLink,
@@ -32,14 +32,15 @@ import { ZoomableImage } from '@/components/ZoomableImage';
 import { detectBrowser } from '@/utils/getLink';
 
 export default function QuickGuidePage() {
-    const [browser, setBrowser] = useState<string | null>(null);
+    // Render a complete generic guide on the server. Browser detection only
+    // refines the screenshots after hydration and must not hide the page from
+    // crawlers or users with JavaScript disabled.
+    const [browser, setBrowser] = useState('other');
     const t = useTranslations('QuickGuide');
 
     useEffect(() => {
         setBrowser(detectBrowser());
     }, []);
-
-    if (!browser) return null;
 
     let devModeStep = null;
 

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { useSession, signIn, signOut } from 'next-auth/react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import {
     Search,
@@ -81,6 +81,14 @@ export default function TutorialsPage() {
 
     return (
         <div className='max-w-7xl mx-auto px-6 py-12 space-y-8'>
+            <header className='max-w-3xl space-y-3'>
+                <h1 className='text-4xl md:text-6xl font-black uppercase italic tracking-tighter'>
+                    {t('title')}
+                </h1>
+                <p className='text-lg leading-relaxed text-neutral-600 dark:text-neutral-400'>
+                    {t('description')}
+                </p>
+            </header>
             <div className='flex flex-col sm:flex-row justify-between items-center p-4 rounded-3xl bg-black/5 dark:bg-white/5 border border-white/10 gap-4 backdrop-blur-md'>
                 <div className='flex items-center gap-3'>
                     <div className='p-2 bg-primary/20 rounded-xl'>

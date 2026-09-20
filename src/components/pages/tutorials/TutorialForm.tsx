@@ -17,12 +17,22 @@ interface Tag {
     color: string;
 }
 
+type TutorialDraft = {
+    _id?: string;
+    title?: string;
+    description?: string;
+    contentUrls?: string[];
+    type?: 'youtube' | 'video' | 'images';
+    tags?: unknown[];
+    thumbnailUrl?: string;
+};
+
 export default function TutorialForm({
     tags,
     initialData,
 }: {
     tags: Tag[];
-    initialData?: any;
+    initialData?: TutorialDraft;
 }) {
     const t = useTranslations('TutorialPage.dashboard.upload');
     const router = useRouter();
@@ -39,7 +49,13 @@ export default function TutorialForm({
         initialData?.type || 'youtube'
     );
     const [selectedTags, setSelectedTags] = useState<string[]>(
-        initialData?.tags || []
+        initialData?.tags?.map((tag) => {
+            if (typeof tag === 'string') return tag;
+            if (tag && typeof tag === 'object' && '_id' in tag) {
+                return String(tag._id);
+            }
+            return String(tag);
+        }) || []
     );
 
     const [contentFiles, setContentFiles] = useState<File[]>([]);
@@ -136,7 +152,7 @@ export default function TutorialForm({
                 );
                 contentUrls = await Promise.all(uploadPromises);
                 if (contentUrls.length === 0 && initialData)
-                    contentUrls = initialData.contentUrls;
+                    contentUrls = initialData.contentUrls || [];
             }
 
             if (contentUrls.length === 0) {
@@ -199,7 +215,9 @@ export default function TutorialForm({
                     <select
                         value={mediaType}
                         onChange={(e) => {
-                            setMediaType(e.target.value as any);
+                            setMediaType(
+                                e.target.value as 'youtube' | 'video' | 'images'
+                            );
                             setContentFiles([]);
                             setContentPreviews([]);
                             setUseYoutubeThumbnail(true);

@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import {
     ArrowRight,
@@ -51,7 +51,16 @@ export default function DeveloperModePage() {
     >('default');
 
     useEffect(() => {
-        setBrowser(detectBrowser() as any);
+        const detected = detectBrowser();
+        setBrowser(
+            detected === 'chrome' ||
+                detected === 'edge' ||
+                detected === 'opera' ||
+                detected === 'firefox' ||
+                detected === 'safari'
+                ? detected
+                : 'default'
+        );
     }, []);
 
     const { base, files } = imageData[browser] ?? imageData.default;

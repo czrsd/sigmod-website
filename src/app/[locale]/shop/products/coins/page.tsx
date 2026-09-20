@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { getAllCoinPackages, getSale } from '@/services/shop';
 import { formatNumber } from '@/utils/format';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { CoinPackage } from '@/types/shopTypes';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';

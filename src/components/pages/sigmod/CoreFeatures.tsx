@@ -17,7 +17,7 @@ export function CoreFeatures() {
 
     return (
         <section className='grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto pb-20 px-4'>
-            {features.map(({ Icon, title, description, color }, i) => (
+            {features.map(({ Icon, title, description, color }) => (
                 <div
                     key={title}
                     className='group relative flex flex-col items-center text-center p-8 rounded-[2rem] border border-black/5 dark:border-white/5 bg-gradient-to-b from-black/[0.07] dark:from-white/[0.07] to-transparent backdrop-blur-sm transition-all duration-500 hover:-translate-y-2'

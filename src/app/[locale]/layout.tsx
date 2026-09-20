@@ -2,7 +2,7 @@ import '../globals.css';
 import type { Metadata, Viewport } from 'next';
 import Header from '@/components/Header';
 import { hasLocale } from 'next-intl';
-import { getMessages } from 'next-intl/server';
+import { getMessages, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import Footer from '@/components/Footer';
@@ -10,6 +10,7 @@ import { Providers } from './providers';
 import { Inter } from 'next/font/google';
 import { Toaster } from 'sonner';
 import { LayoutTransition } from '@/components/layout-transition';
+import { siteUrl } from '@/lib/seo';
 
 const inter = Inter({
     subsets: ['latin'],
@@ -36,24 +37,18 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { locale } = await params;
     const messages = await getMessages({ locale });
-    const SITE = (
-        process.env.NODE_ENV === 'development'
-            ? 'https://dev.czrsd.com'
-            : 'https://sigmally.xyz'
-    ).replace(/\/$/, '');
-
-    const title = 'Sigmally Modz';
+    const title = 'Sigmally Mods – SigMod & SigFixes';
     const description =
         messages?.Metadata?.desc ?? 'Download mods for Sigmally';
-    const image = `${SITE}/SigModzBanner.png`;
+    const image = `${siteUrl}/SigModzBanner.png`;
 
     return {
         title: {
             default: title,
-            template: `%s | ${title}`,
+            template: '%s | SigModz',
         },
         description,
-        metadataBase: new URL(SITE),
+        metadataBase: new URL(siteUrl),
         openGraph: {
             title,
             description,
@@ -83,17 +78,11 @@ export async function generateMetadata({
             apple: '/apple-touch-icon.png',
         },
         manifest: '/site.webmanifest',
-        alternates: {
-            canonical: `${SITE}/${locale}`,
-            languages: {
-                en: `${SITE}/en`,
-                de: `${SITE}/de`,
-                ru: `${SITE}/ru`,
-                es: `${SITE}/es`,
-                tr: `${SITE}/tr`,
-            },
-        },
     };
+}
+
+export function generateStaticParams() {
+    return routing.locales.map((locale) => ({ locale }));
 }
 
 export default async function RootLayout({
@@ -105,6 +94,7 @@ export default async function RootLayout({
 }) {
     const { locale } = await params;
     if (!hasLocale(routing.locales, locale)) notFound();
+    setRequestLocale(locale);
 
     const messages = await getMessages({ locale });
 
@@ -135,7 +125,7 @@ export default async function RootLayout({
                         exit={{ opacity: 0, y: -4 }}
                         transition={{ duration: 0.2, ease: 'easeInOut' }}
                     >
-                        <main className='relative z-0'>{children}</main>
+                        <div className='relative z-0'>{children}</div>
                     </LayoutTransition>
 
                     <Footer />

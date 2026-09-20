@@ -3,17 +3,17 @@
 import { getOrderStatus } from '@/services/shop';
 import { OrderStatusResponse, Bundle } from '@/types/shopTypes';
 import { CheckCircle, Coins, Crown } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { useSpring, animated } from '@react-spring/web';
 import Confetti from 'react-confetti';
 import useWindowSize from '@/hooks/useWindowSize';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 
-export default function PurchaseCompleted() {
+function PurchaseCompletedContent() {
     const t = useTranslations('Shop.Purchase.Complete');
     const [order, setOrder] = useState<OrderStatusResponse | null>(null);
     const [loading, setLoading] = useState(true);
@@ -187,5 +187,13 @@ export default function PurchaseCompleted() {
                 </Button>
             </div>
         </div>
+    );
+}
+
+export default function PurchaseCompleted() {
+    return (
+        <Suspense fallback={null}>
+            <PurchaseCompletedContent />
+        </Suspense>
     );
 }

@@ -16,7 +16,7 @@ export async function GET() {
             .sort({ createdAt: -1 });
 
         return NextResponse.json(tutorials);
-    } catch (error) {
+    } catch {
         return NextResponse.json({ error: 'Failed to fetch' }, { status: 500 });
     }
 }

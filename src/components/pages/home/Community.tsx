@@ -1,7 +1,7 @@
 import { useTranslations } from 'next-intl';
 import { discordLink } from '@/utils/getLink';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { MessageSquare } from 'lucide-react';
 
 export function CommunitySection() {
@@ -15,9 +15,9 @@ export function CommunitySection() {
                     <MessageSquare size={32} />
                 </div>
 
-                <h4 className='text-4xl md:text-5xl font-black uppercase italic tracking-tighter'>
+                <h2 className='text-4xl md:text-5xl font-black uppercase italic tracking-tighter'>
                     {t('title')}
-                </h4>
+                </h2>
 
                 <p className='text-lg text-neutral-600 dark:text-neutral-300 max-w-lg leading-relaxed'>
                     {t('desc')}

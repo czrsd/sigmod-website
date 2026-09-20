@@ -6,11 +6,18 @@ if (!MONGODB_URI) {
     throw new Error('Bitte MONGODB_URI in der .env definieren!');
 }
 
-let cached = (global as any).mongoose;
+type MongooseCache = {
+    conn: Awaited<ReturnType<typeof mongoose.connection.getClient>> | null;
+    promise: Promise<Awaited<ReturnType<typeof mongoose.connection.getClient>>> | null;
+};
 
-if (!cached) {
-    cached = (global as any).mongoose = { conn: null, promise: null };
-}
+const globalWithMongoose = global as typeof globalThis & {
+    mongoose?: MongooseCache;
+};
+
+const cached: MongooseCache =
+    globalWithMongoose.mongoose ??
+    (globalWithMongoose.mongoose = { conn: null, promise: null });
 
 async function dbConnect() {
     if (cached.conn) {

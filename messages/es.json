@@ -505,6 +505,8 @@
     },
     "TutorialPage": {
         "overview": {
+            "title": "Tutoriales y guías de Sigmally",
+            "description": "Tutoriales de la comunidad para instalar SigMod, configurar SigFixes, usar macros y mejorar tu configuración de Sigmally.",
             "communityHub": "Centro de la comunidad",
             "admin": "Admin",
             "upload": "Subir",
@@ -642,7 +644,7 @@
             "title": "General",
             "installMods": {
                 "question": "¿Cómo instalo los mods?",
-                "answer": "Sigue la guía de instalación detallada o la rápida <link>. Estarás listo en poco tiempo."
+                    "answer": "Sigue la guía de instalación detallada o la rápida <link>instalación</link>. Estarás listo en poco tiempo."
             },
             "modsNotWorking": {
                 "question": "Instalé los mods pero no funcionan. ¿Qué hago?",

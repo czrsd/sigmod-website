@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
+import mongoose from 'mongoose';
 import { authOptions } from '@/lib/auth';
 import dbConnect from '@/lib/db';
 import Tutorial from '@/models/Tutorial';
@@ -15,7 +16,13 @@ export async function GET(req: Request) {
     const sort = searchParams.get('sort');
 
     try {
-        let query: any = { status: 'approved' };
+        const query: {
+            status: 'approved';
+            tags?: mongoose.Types.ObjectId;
+            type?: string;
+        } = {
+            status: 'approved',
+        };
 
         if (tagSlug && tagSlug !== 'all') {
             const tag = await Tag.findOne({ slug: tagSlug });
@@ -26,7 +33,7 @@ export async function GET(req: Request) {
             query.type = type;
         }
 
-        let sortQuery: any = { likes: -1, createdAt: -1 };
+        let sortQuery: Record<string, -1 | 1> = { likes: -1, createdAt: -1 };
 
         if (sort === 'views') {
             sortQuery = { views: -1, createdAt: -1 };
@@ -68,7 +75,7 @@ export async function POST(req: Request) {
             );
         }
 
-        let baseSlug = slugify(title);
+        const baseSlug = slugify(title);
         let finalSlug = baseSlug;
 
         const existingCount = await Tutorial.countDocuments({
@@ -99,7 +106,7 @@ export async function POST(req: Request) {
     } catch (error) {
         console.error('Create Tutorial Error:', error);
 
-        if ((error as any).code === 11000) {
+        if ((error as { code?: number }).code === 11000) {
             return NextResponse.json(
                 {
                     error: 'Titel oder Slug bereits vergeben. Bitte versuche einen anderen Titel.',

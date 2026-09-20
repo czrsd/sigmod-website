@@ -1,7 +1,5 @@
+import { redirect } from 'next/navigation';
+
 export default function DownloadPage() {
-    return (
-        <div>
-            <span>SigMod</span>
-        </div>
-    );
+    redirect('/sigmod');
 }

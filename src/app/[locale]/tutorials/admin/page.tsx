@@ -7,7 +7,7 @@ import Tutorial from '@/models/Tutorial';
 import SubmissionManager from './SubmissionManager';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { getTranslations } from 'next-intl/server';
 import User from '@/models/User';
 

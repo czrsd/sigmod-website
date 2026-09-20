@@ -7,7 +7,7 @@ export async function GET() {
         await dbConnect();
         const tags = await Tag.find({});
         return NextResponse.json(tags);
-    } catch (error) {
+    } catch {
         return NextResponse.json(
             { error: 'Failed to fetch tags' },
             { status: 500 }

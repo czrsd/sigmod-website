@@ -509,6 +509,8 @@
     },
     "TutorialPage": {
         "overview": {
+            "title": "Руководства и учебники Sigmally",
+            "description": "Руководства сообщества по установке SigMod, настройке SigFixes, макросам и улучшению конфигурации Sigmally.",
             "communityHub": "Центр сообщества",
             "admin": "Админ",
             "upload": "Загрузить",

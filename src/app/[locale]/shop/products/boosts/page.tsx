@@ -1,9 +1,9 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { getAllBoosts, getSale } from '@/services/shop';
+import { getAllBoosts } from '@/services/shop';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Boost } from '@/types/shopTypes';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
@@ -14,14 +14,9 @@ type Translate = ReturnType<typeof useTranslations>;
 export default function SkinsProducts() {
     const t = useTranslations('Shop.Products.Boosts');
     const [boosts, setBoosts] = useState<Boost[]>([]);
-    const [sale, setSale] = useState(1);
-
     useEffect(() => {
         getAllBoosts().then((res) => {
             if (res) setBoosts(res);
-        });
-        getSale().then((s) => {
-            if (s) setSale(s);
         });
     }, []);
 

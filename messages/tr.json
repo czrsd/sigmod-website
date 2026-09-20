@@ -509,6 +509,8 @@
     },
     "TutorialPage": {
         "overview": {
+            "title": "Sigmally Eğitimleri ve Rehberleri",
+            "description": "SigMod kurulumu, SigFixes ayarları, makrolar ve Sigmally kurulumunu geliştirmek için topluluk rehberleri.",
             "communityHub": "Topluluk Merkezi",
             "admin": "Yönetici",
             "upload": "Yükle",

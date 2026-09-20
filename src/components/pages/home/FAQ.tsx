@@ -21,9 +21,9 @@ export function FAQSection() {
                     <HelpCircle size={14} />
                     <span>Support</span>
                 </div>
-                <h4 className='text-4xl md:text-5xl font-black uppercase italic tracking-tighter text-center'>
+                <h2 className='text-4xl md:text-5xl font-black uppercase italic tracking-tighter text-center'>
                     FAQ
-                </h4>
+                </h2>
             </div>
 
             <Accordion type='single' collapsible className='space-y-4'>

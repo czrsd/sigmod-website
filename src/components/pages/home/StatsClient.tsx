@@ -91,7 +91,7 @@ export default function StatsClient() {
                         online: onlineCount + '+',
                     });
                 }
-            } catch (error) {
+            } catch {
                 if (mounted) {
                     setStats({
                         total: '30,000+',

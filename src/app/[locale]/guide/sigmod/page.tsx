@@ -1,8 +1,8 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ArrowLeft, Terminal, Cpu } from 'lucide-react';
+import { ArrowRight, ArrowLeft, Terminal } from 'lucide-react';
 import { sigmodLink } from '@/utils/getLink';
 import { useTranslations } from 'next-intl';
 import { ZoomableImage } from '@/components/ZoomableImage';

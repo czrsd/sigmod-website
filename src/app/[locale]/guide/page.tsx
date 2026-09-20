@@ -1,9 +1,26 @@
-'use client';
-
-import Link from 'next/link';
+import type { Metadata } from 'next';
+import { getTranslations } from 'next-intl/server';
+import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, BookMarked, PlayCircle } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import { pageMetadata } from '@/lib/seo';
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'Guide.Overview' });
+
+    return pageMetadata({
+        locale,
+        pathname: '/guide',
+        title: t('title'),
+        description: t('desc'),
+    });
+}
 
 export default function GuideOverview() {
     const t = useTranslations('Guide.Overview');
@@ -61,6 +78,8 @@ export default function GuideOverview() {
                         </div>
                         <video
                             src='/guide/videos/tutorial.mp4'
+                            poster='/guide/main_menu.png'
+                            preload='metadata'
                             className='w-full rounded-xl bg-black'
                             width={520}
                             height={288}

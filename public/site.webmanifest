@@ -1,6 +1,10 @@
 {
     "name": "Sigmally Modz",
     "short_name": "SigModz",
+    "description": "Unofficial SigMod and SigFixes mods for Sigmally.",
+    "start_url": "/en",
+    "scope": "/",
+    "lang": "en",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",

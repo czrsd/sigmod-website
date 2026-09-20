@@ -4,7 +4,7 @@ import { FullBundle } from '@/types/shopTypes';
 import { formatNumber } from '@/utils/format';
 import { Plus, Sparkles, Flame, TrendingUp, Zap } from 'lucide-react';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import Image from 'next/image';

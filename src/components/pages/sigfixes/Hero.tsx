@@ -1,6 +1,6 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 import { sigfixLink } from '@/utils/getLink';
 import { ArrowRight, Zap, ShieldCheck } from 'lucide-react';
@@ -75,7 +75,7 @@ export function Hero() {
                     >
                         Tampermonkey
                     </Link>
-                    <span className='text-neutral-700 font-black'>//</span>
+                    <span className='text-neutral-700 font-black'>{'//'}</span>
                     <Link
                         href='https://violentmonkey.github.io'
                         target='_blank'

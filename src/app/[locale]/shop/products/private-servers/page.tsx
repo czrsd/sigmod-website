@@ -24,6 +24,8 @@ import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Server } from '@/types/shopTypes';
 
+type Translate = ReturnType<typeof useTranslations>;
+
 type PricingDuration =
     | 'fourteenDays'
     | 'oneMonth'
@@ -145,7 +147,7 @@ function ProductCard({
     server: Server;
     duration: PricingDuration;
     isPopular: boolean;
-    t: any;
+    t: Translate;
 }) {
     const price = server.pricing?.[duration] ?? 0;
 
