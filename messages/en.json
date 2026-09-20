@@ -871,7 +871,7 @@
                     },
                     {
                         "title": "Secure Checkout",
-                        "description": "Payments are encrypted and handled by trusted providers like PayPal and Stripe."
+                        "description": "Payments are encrypted and handled securely by Stripe."
                     },
                     {
                         "title": "Trust",
@@ -891,11 +891,11 @@
                         "answer": "Refresh the page. If the balance still doesn't update please contact support."
                     },
                     {
-                        "question": "What happens after I complete my PayPal payment?",
+                        "question": "What happens after I complete my Stripe payment?",
                         "answer": "You'll be redirected back to the site where your order is confirmed and items are added to your account."
                     },
                     {
-                        "question": "What if I close the PayPal tab before it redirects back?",
+                        "question": "What if I close the Stripe checkout before it redirects back?",
                         "answer": "No problem. Reopen the site and check your order status. If the payment went through delivery will still be processed."
                     },
                     {
@@ -1050,8 +1050,8 @@
                 "paymentMethod": "Payment method",
                 "selectPaymentPlaceholder": "Select payment method",
                 "stripe": "Stripe (card)",
-                "paypal": "PayPal",
-                "paypalInfo": "PayPal is supported on the <discord>Discord server</discord> in a ticket or via DMs with Cursed. Payments succeed via F&F.",
+                "paypal": "Unavailable",
+                "paypalInfo": "Stripe is currently the only available payment method.",
                 "buy": "Purchase item",
                 "processing": "Processing..."
             }

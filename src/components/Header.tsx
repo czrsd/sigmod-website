@@ -55,8 +55,10 @@ const navLinks = [
     { href: '/tutorials', labelKey: 'tutorials' },
     { href: '/faq', labelKey: 'faq' },
     { href: '/about', labelKey: 'about' },
-    // { href: '/shop', labelKey: 'shop' },
+    { href: '/shop', labelKey: 'shop' },
 ];
+
+const externalLinks = [{ href: 'https://zig.sigmally.xyz', label: 'Zig' }];
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -146,6 +148,18 @@ export default function Header() {
                                         >
                                             {t(labelKey)}
                                         </Link>
+                                    </NavigationMenuLink>
+                                </NavigationMenuItem>
+                            ))}
+                            {externalLinks.map(({ href, label }) => (
+                                <NavigationMenuItem key={href}>
+                                    <NavigationMenuLink asChild>
+                                        <a
+                                            href={href}
+                                            className='text-muted-foreground hover:text-foreground'
+                                        >
+                                            {label}
+                                        </a>
                                     </NavigationMenuLink>
                                 </NavigationMenuItem>
                             ))}
@@ -243,6 +257,11 @@ export default function Header() {
                         <Link key={href} href={href} className='block'>
                             {t(labelKey)}
                         </Link>
+                    ))}
+                    {externalLinks.map(({ href, label }) => (
+                        <a key={href} href={href} className='block'>
+                            {label}
+                        </a>
                     ))}
                 </nav>
             )}

@@ -91,9 +91,6 @@ function ReasonCard({
                 </p>
             </div>
 
-            <div className='absolute right-4 bottom-2 opacity-[0.03] pointer-events-none'>
-                <Icon className='w-20 h-20' />
-            </div>
         </div>
     );
 }

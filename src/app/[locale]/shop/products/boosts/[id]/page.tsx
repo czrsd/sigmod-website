@@ -1,10 +1,5 @@
-import BoostPageClient from './BoostPageClient';
+import { notFound } from 'next/navigation';
 
-export default async function CoinPage({
-    params,
-}: {
-    params: Promise<{ id: string }>;
-}) {
-    const { id: boostId } = await params;
-    return <BoostPageClient boostId={boostId} />;
+export default function BoostProductUnavailable() {
+    notFound();
 }

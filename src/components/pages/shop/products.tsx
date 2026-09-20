@@ -33,25 +33,6 @@ export default function ProductList() {
                     img='/shop/products/bundles.png'
                     link='/shop/products/bundles'
                 />
-                <ProductCard
-                    name={t('skins.name')}
-                    description={t('skins.description')}
-                    img='/shop/products/skins.png'
-                    link='/shop/products/skins'
-                    roundImage={true}
-                />
-                <ProductCard
-                    name={t('boosts.name')}
-                    description={t('boosts.description')}
-                    img='/shop/products/boosts.png'
-                    link='/shop/products/boosts'
-                />
-                <ProductCard
-                    name={t('servers.name')}
-                    description={t('servers.description')}
-                    img='/shop/products/serverrack.png'
-                    link='/shop/products/private-servers'
-                />
             </div>
         </div>
     );

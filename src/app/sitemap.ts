@@ -18,11 +18,8 @@ const publicPaths = [
     '/about',
     '/shop',
     '/shop/products/coins',
-    '/shop/products/skins',
-    '/shop/products/boosts',
     '/shop/products/bundles',
     '/shop/products/subscriptions',
-    '/shop/products/private-servers',
 ] as const;
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

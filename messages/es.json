@@ -869,7 +869,7 @@
                     },
                     {
                         "title": "Pago seguro",
-                        "description": "Los pagos están cifrados y gestionados por proveedores confiables como PayPal."
+                        "description": "Los pagos están cifrados y gestionados de forma segura por Stripe."
                     },
                     {
                         "title": "Confianza",
@@ -889,11 +889,11 @@
                         "answer": "Refresca la página. Si el saldo sigue sin aparecer, contacta con soporte."
                     },
                     {
-                        "question": "¿Qué ocurre después de mi pago por PayPal?",
+                        "question": "¿Qué ocurre después de mi pago por Stripe?",
                         "answer": "Serás redirigido de vuelta al sitio donde se confirmará tu pedido y los artículos se añadirán a tu cuenta."
                     },
                     {
-                        "question": "¿Y si cierro la pestaña de PayPal antes de redirigirme?",
+                        "question": "¿Y si cierro el checkout de Stripe antes de volver?",
                         "answer": "No hay problema. Vuelve a abrir el sitio y comprueba el estado del pedido. Si el pago se realizó, la entrega seguirá procesándose."
                     },
                     {
@@ -1048,8 +1048,8 @@
                 "paymentMethod": "Método de pago",
                 "selectPaymentPlaceholder": "Selecciona método de pago",
                 "stripe": "Stripe (tarjeta)",
-                "paypal": "PayPal",
-                "paypalInfo": "PayPal está disponible en el <discord>servidor de Discord</discord> en un ticket o por DM con Cursed. Los pagos funcionan vía F&F.",
+                "paypal": "No disponible",
+                "paypalInfo": "Stripe es actualmente el único método de pago disponible.",
                 "buy": "Comprar artículo",
                 "processing": "Procesando..."
             }

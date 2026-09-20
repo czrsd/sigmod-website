@@ -4,20 +4,11 @@ import { useEffect, useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
-import {
-    Select,
-    SelectTrigger,
-    SelectContent,
-    SelectItem,
-    SelectValue,
-} from '@/components/ui/select';
 import Image from 'next/image';
 import { CreditCard, Mail } from 'lucide-react';
 import { verifyUser, purchaseItem } from '@/services/shop';
 import { useTranslations } from 'next-intl';
 import { Order } from '@/types/shopTypes';
-import { Link } from '@/i18n/navigation';
-import { discordLink } from '@/utils/getLink';
 
 export default function ProductCheckout({
     productType,
@@ -31,7 +22,7 @@ export default function ProductCheckout({
     const [email, setEmail] = useState('');
     const [emailValid, setEmailValid] = useState<boolean | null>(null);
     const [loading, setLoading] = useState(false);
-    const [method, setMethod] = useState<string>('stripe');
+    const method = 'stripe';
 
     useEffect(() => {
         const savedEmail = localStorage.getItem('email');
@@ -131,47 +122,15 @@ export default function ProductCheckout({
                     <CreditCard size={24} />
                     {t('paymentMethod')}
                 </Label>
-                <Select defaultValue={method} onValueChange={setMethod}>
-                    <SelectTrigger className='w-full py-6 text-lg'>
-                        <SelectValue
-                            placeholder={t('selectPaymentPlaceholder')}
-                        />
-                    </SelectTrigger>
-                    <SelectContent>
-                        <SelectItem value='stripe'>
-                            <div className='flex items-center gap-2'>
-                                <Image
-                                    src='/shop/stripe.svg'
-                                    alt='Stripe'
-                                    width={20}
-                                    height={20}
-                                />
-                                <span>{t('stripe')}</span>
-                            </div>
-                        </SelectItem>
-                        <SelectItem value='paypal'>
-                            <div className='flex items-center gap-2'>
-                                <Image
-                                    src='/shop/paypal.svg'
-                                    alt='PayPal'
-                                    width={20}
-                                    height={20}
-                                />
-                                <span>{t('paypal')}</span>
-                            </div>
-                        </SelectItem>
-                    </SelectContent>
-                </Select>
-
-                <span className='text-neutral-500 text-xs'>
-                    {t.rich('paypalInfo', {
-                        discord: (chunks) => (
-                            <Link className='underline' href={discordLink}>
-                                {chunks}
-                            </Link>
-                        ),
-                    })}
-                </span>
+                <div className='flex items-center gap-3 w-full rounded-md border px-4 py-3 text-lg'>
+                    <Image
+                        src='/shop/stripe.svg'
+                        alt='Stripe'
+                        width={24}
+                        height={24}
+                    />
+                    <span>{t('stripe')}</span>
+                </div>
             </div>
 
             <Button
@@ -182,7 +141,7 @@ export default function ProductCheckout({
             >
                 <Image
                     src={`/shop/${method}.svg`}
-                    alt='PayPal'
+                    alt='Stripe'
                     width={20}
                     height={20}
                 />

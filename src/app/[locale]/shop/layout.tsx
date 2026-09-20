@@ -2,11 +2,11 @@ import type { Metadata } from 'next';
 import { pageMetadata } from '@/lib/seo';
 
 const descriptions: Record<string, string> = {
-    en: 'Official SigModz shop for Sigmally coins, subscriptions, skins, boosts and bundles.',
-    de: 'Offizieller SigModz-Shop für Sigmally-Münzen, Abos, Skins, Boosts und Bundles.',
-    es: 'Tienda oficial de SigModz para monedas, suscripciones, skins, boosts y paquetes de Sigmally.',
-    tr: 'Sigmally coinleri, abonelikleri, skinleri, boostları ve paketleri için resmi SigModz mağazası.',
-    ru: 'Официальный магазин SigModz: монеты, подписки, скины, усилители и наборы для Sigmally.',
+    en: 'SigModz shop for Sigmally coins, subscriptions and bundles.',
+    de: 'SigModz-Shop für Sigmally-Münzen, Abos und Bundles.',
+    es: 'Tienda de SigModz para monedas, suscripciones y paquetes de Sigmally.',
+    tr: 'Sigmally coinleri, abonelikleri ve paketleri için SigModz mağazası.',
+    ru: 'Магазин SigModz: монеты, подписки и наборы для Sigmally.',
 };
 
 export async function generateMetadata({

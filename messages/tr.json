@@ -873,7 +873,7 @@
                     },
                     {
                         "title": "Güvenli Ödeme",
-                        "description": "Ödemeler şifrelenir ve PayPal gibi güvenilir sağlayıcılar tarafından işlenir."
+                        "description": "Ödemeler şifrelenir ve Stripe tarafından güvenli şekilde işlenir."
                     },
                     {
                         "title": "Güven",
@@ -893,11 +893,11 @@
                         "answer": "Sayfayı yenileyin. Bakiye hâlâ güncellenmediyse destek ile iletişime geçin."
                     },
                     {
-                        "question": "PayPal ödemen tamamlandıktan sonra ne olur?",
+                        "question": "Stripe ödemen tamamlandıktan sonra ne olur?",
                         "answer": "Siparişinizin onaylandığı siteye geri yönlendirileceksiniz ve ürünler hesabınıza eklenecek."
                     },
                     {
-                        "question": "PayPal sekmesini yönlendirilmeden önce kapatırsam ne olur?",
+                        "question": "Stripe ödeme sayfasını yönlendirilmeden önce kapatırsam ne olur?",
                         "answer": "Sorun değil. Siteyi tekrar açın ve sipariş durumunu kontrol edin. Ödeme gerçekleştiyse teslimat işlenir."
                     },
                     {
@@ -1052,8 +1052,8 @@
                 "paymentMethod": "Ödeme yöntemi",
                 "selectPaymentPlaceholder": "Ödeme yöntemi seçin",
                 "stripe": "Stripe (kart)",
-                "paypal": "PayPal",
-                "paypalInfo": "PayPal, <discord>Discord sunucusunda</discord> ticket üzerinden veya Cursed ile DM yoluyla desteklenir. Ödemeler F&F ile başarıyla sonuçlanır.",
+                "paypal": "Kullanılamıyor",
+                "paypalInfo": "Şu anda yalnızca Stripe ödeme yöntemi kullanılabilir.",
                 "buy": "Ürünü Satın Al",
                 "processing": "İşleniyor..."
             }

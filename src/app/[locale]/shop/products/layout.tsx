@@ -14,7 +14,7 @@ export async function generateMetadata({
         pathname: '/shop/products',
         title: 'SigModz Products for Sigmally',
         description:
-            'Browse Sigmally coins, subscriptions, skins, boosts, private servers and bundles from SigModz.',
+            'Browse Sigmally coins, subscriptions and bundles from SigModz.',
     });
 }
 

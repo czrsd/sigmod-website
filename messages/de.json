@@ -870,7 +870,7 @@
                     },
                     {
                         "title": "Sicherer Checkout",
-                        "description": "Zahlungen werden verschlüsselt und von vertrauenswürdigen Anbietern wie PayPal und Stripe abgewickelt."
+                        "description": "Zahlungen werden verschlüsselt und sicher über Stripe abgewickelt."
                     },
                     {
                         "title": "Vertrauen",
@@ -890,11 +890,11 @@
                         "answer": "Aktualisiere die Seite. Wenn der Saldo nicht erscheint, kontaktiere den Support."
                     },
                     {
-                        "question": "Was passiert nach PayPal-Zahlung?",
+                        "question": "Was passiert nach der Stripe-Zahlung?",
                         "answer": "Du wirst zurück zur Seite geleitet, deine Bestellung wird bestätigt und Items werden deinem Konto hinzugefügt."
                     },
                     {
-                        "question": "Was, wenn ich das PayPal-Tab vor der Rückleitung schließe?",
+                        "question": "Was, wenn ich den Stripe-Checkout vor der Rückleitung schließe?",
                         "answer": "Kein Problem. Öffne die Seite erneut und prüfe den Bestellstatus. Wenn die Zahlung durchging, wird die Lieferung verarbeitet."
                     },
                     {
@@ -1051,8 +1051,8 @@
                 "paymentMethod": "Zahlungsmethode",
                 "selectPaymentPlaceholder": "Zahlungsmethode wählen",
                 "stripe": "Stripe (Karte)",
-                "paypal": "PayPal",
-                "paypalInfo": "PayPal wird auf dem <discord>Discord-Server</discord> in einem Ticket oder per DM mit Cursed unterstützt. Zahlungen funktionieren via F&F.",
+                "paypal": "Derzeit nicht verfügbar",
+                "paypalInfo": "Derzeit ist nur Stripe als Zahlungsmethode verfügbar.",
                 "buy": "Artikel kaufen",
                 "processing": "Verarbeitung..."
             }
