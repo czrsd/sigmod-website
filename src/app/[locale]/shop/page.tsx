@@ -32,6 +32,8 @@ export default async function ShopPage() {
                         getSubscriptionPackage(bundle.combined?.[1]),
                     ]);
 
+                    console.log(coinPackage, subPackage);
+
                     if (!coinPackage || !subPackage)
                         throw new Error('Invalid bundle data');
 
@@ -64,7 +66,8 @@ export default async function ShopPage() {
                 <InfoPart />
             </main>
         );
-    } catch {
+    } catch (e) {
+        console.log(e);
         return (
             <main className='flex flex-col items-center justify-center py-20'>
                 <p className='text-neutral-400'>{t('failed')}</p>

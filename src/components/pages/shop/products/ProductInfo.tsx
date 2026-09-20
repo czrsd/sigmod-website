@@ -49,7 +49,7 @@ export default function ProductInfo({ item }: { item: ProductItem }) {
 
     return (
         <div className='flex flex-col gap-6 w-full lg:w-1/2'>
-            <div className='relative overflow-hidden rounded-xl bg-neutral-900/50 pr-4'>
+            <div className='relative overflow-hidden rounded-xl pr-4'>
                 <Image
                     src={image}
                     alt={item._id || 'Item'}
