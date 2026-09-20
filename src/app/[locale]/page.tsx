@@ -41,7 +41,7 @@ export default async function Home({
                     '@graph': [
                         {
                             '@type': 'WebSite',
-                            '@id': `${absoluteUrl('/')}/#website`,
+                            '@id': `${absoluteUrl('/')}#website`,
                             url: absoluteUrl(`/${locale}`),
                             name: 'SigModz',
                             alternateName: 'Sigmally Mods',
@@ -49,7 +49,7 @@ export default async function Home({
                         },
                         {
                             '@type': 'Organization',
-                            '@id': `${absoluteUrl('/')}/#organization`,
+                            '@id': `${absoluteUrl('/')}#organization`,
                             name: 'SigModz',
                             url: absoluteUrl(`/${locale}`),
                             logo: absoluteUrl('/sigmodz.svg'),

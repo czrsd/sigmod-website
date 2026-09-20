@@ -13,14 +13,19 @@ import User from '@/models/User';
 
 export const dynamic = 'force-dynamic';
 
-export default async function AdminSubmissionsPage() {
+export default async function AdminSubmissionsPage({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const { locale } = await params;
     const session = await getServerSession(authOptions);
 
     if (
         !session ||
         (session.user.role !== 'admin' && session.user.role !== 'moderator')
     ) {
-        redirect('/');
+        redirect(`/${locale}`);
     }
 
     const t = await getTranslations('TutorialPage.adminSubmissions');

@@ -4,17 +4,23 @@ import { Suspense, useEffect, useState } from 'react';
 import { XCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/navigation';
-import { redirect, useSearchParams } from 'next/navigation';
+import { useSearchParams } from 'next/navigation';
+import { useRouter } from '@/i18n/navigation';
 import { cancelOrder } from '@/services/shop';
 import { useTranslations } from 'next-intl';
 
 function PurchaseCanceledContent() {
     const t = useTranslations('Shop.Purchase.Canceled');
     const [loading, setLoading] = useState(true);
+    const router = useRouter();
     const searchParams = useSearchParams();
     const token = searchParams.get('token') || '';
     const orderId = searchParams.get('orderId') || '';
     const paymentMethod = searchParams.get('method') || '';
+
+    useEffect(() => {
+        if (!token && !orderId) router.replace('/shop');
+    }, [token, orderId, router]);
 
     useEffect(() => {
         if ((token || orderId) && paymentMethod) {
@@ -25,7 +31,7 @@ function PurchaseCanceledContent() {
         }
     }, [token, orderId, paymentMethod]);
 
-    if (!token && !orderId) return redirect('/shop');
+    if (!token && !orderId) return null;
 
     if (loading)
         return (

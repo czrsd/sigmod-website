@@ -21,7 +21,15 @@ export async function generateMetadata({
     });
 }
 
-export default function SigFixesLayout({ children }: { children: React.ReactNode }) {
+export default async function SigFixesLayout({
+    children,
+    params,
+}: {
+    children: React.ReactNode;
+    params: Promise<{ locale: string }>;
+}) {
+    const { locale } = await params;
+
     return (
         <>
             <JsonLd
@@ -29,8 +37,8 @@ export default function SigFixesLayout({ children }: { children: React.ReactNode
                     '@context': 'https://schema.org',
                     '@type': 'BreadcrumbList',
                     itemListElement: [
-                        { '@type': 'ListItem', position: 1, name: 'Sigmally Mods', item: absoluteUrl('/en') },
-                        { '@type': 'ListItem', position: 2, name: 'SigFixes', item: absoluteUrl('/en/sigfixes') },
+                        { '@type': 'ListItem', position: 1, name: 'Sigmally Mods', item: absoluteUrl(`/${locale}`) },
+                        { '@type': 'ListItem', position: 2, name: 'SigFixes', item: absoluteUrl(`/${locale}/sigfixes`) },
                     ],
                 }}
             />

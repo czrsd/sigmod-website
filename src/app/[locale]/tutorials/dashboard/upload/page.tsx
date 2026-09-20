@@ -6,9 +6,14 @@ import Tag from '@/models/Tag';
 import TutorialForm from '@/components/pages/tutorials/TutorialForm';
 import { getTranslations } from 'next-intl/server';
 
-export default async function UploadPage() {
+export default async function UploadPage({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const { locale } = await params;
     const session = await getServerSession(authOptions);
-    if (!session) redirect('/');
+    if (!session) redirect(`/${locale}`);
 
     const t = await getTranslations('TutorialPage.dashboard.upload');
 

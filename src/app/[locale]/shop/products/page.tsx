@@ -1,5 +1,10 @@
 import { redirect } from 'next/navigation';
 
-export default function ProductsPage() {
-    redirect('/shop');
+export default async function ProductsPage({
+    params,
+}: {
+    params: Promise<{ locale: string }>;
+}) {
+    const { locale } = await params;
+    redirect(`/${locale}/shop`);
 }

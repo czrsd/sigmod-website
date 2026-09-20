@@ -1,7 +1,7 @@
 'use client';
 
 import { useTranslations, useLocale } from 'next-intl';
-import { Link, usePathname, useRouter } from '@/i18n/navigation';
+import { Link, usePathname } from '@/i18n/navigation';
 import { routing } from '@/i18n/routing';
 import { useState } from 'react';
 import Image from 'next/image';
@@ -64,14 +64,9 @@ export default function Header() {
     const t = useTranslations('Header');
     const locale = useLocale();
     const pathname = usePathname();
-    const router = useRouter();
 
     const isActive = (href: string) => {
         return pathname === href;
-    };
-
-    const changeLanguage = (newLocale: string) => {
-        router.replace(pathname || '/', { locale: newLocale });
     };
 
     return (
@@ -195,7 +190,6 @@ export default function Header() {
                             ].map((lng) => (
                                 <DropdownMenuItem asChild
                                     key={lng}
-                                    onClick={() => changeLanguage(lng)}
                                     className={`flex items-center gap-2 ${
                                         lng === locale
                                             ? 'opacity-50 pointer-events-none'
