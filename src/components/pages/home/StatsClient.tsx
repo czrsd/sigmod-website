@@ -4,17 +4,23 @@ import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
 
 type Stats = {
-    total: string;
-    daily: string;
-    online: string;
+    total: number | null;
+    daily: number | null;
+    online: number | null;
 };
+
+const STATS_REFRESH_INTERVAL_MS = 30_000;
+
+function formatStat(value: number | null) {
+    return value === null ? '—' : value.toLocaleString();
+}
 
 function StatItem({
     value,
     label,
     hasPulse,
 }: {
-    value: string;
+    value: number | null;
     label: string;
     hasPulse?: boolean;
 }) {
@@ -22,7 +28,7 @@ function StatItem({
         <div className='flex flex-col min-w-[80px]'>
             <div className='flex items-center gap-2'>
                 <span className='text-lg md:text-3xl w-full font-black italic tracking-tighter leading-none'>
-                    {value}
+                    {formatStat(value)}
                 </span>
                 {hasPulse && (
                     <div className='w-2 h-2 rounded-full bg-green-500 animate-pulse' />
@@ -55,57 +61,40 @@ export default function StatsClient() {
 
         async function fetchStats() {
             try {
-                const ids = ['454648', '483587'];
-
-                const [res1, res2, onlineRes] = await Promise.all([
-                    fetch(`https://greasyfork.org/scripts/${ids[0]}.json`),
-                    fetch(`https://greasyfork.org/scripts/${ids[1]}.json`),
-                    fetch('https://mod.czrsd.com/onlineusers'),
-                ]);
-
-                let total = 0;
-                let daily = 0;
-                let onlineCount = 70;
-
-                if (res1.ok) {
-                    const data = await res1.json();
-                    total += data.total_installs || 0;
-                    daily += data.daily_installs || 0;
+                const response = await fetch('/api/stats', {
+                    cache: 'no-store',
+                });
+                if (!response.ok) {
+                    throw new Error(`Stats request failed with ${response.status}`);
                 }
-
-                if (res2.ok) {
-                    const data = await res2.json();
-                    total += data.total_installs || 0;
-                    daily += data.daily_installs || 0;
-                }
-
-                if (onlineRes.ok) {
-                    const data = await onlineRes.json();
-                    onlineCount = data.onlineUsers;
-                }
-
+                const data = (await response.json()) as Stats;
                 if (mounted) {
                     setStats({
-                        total: total.toLocaleString() + '+',
-                        daily: daily.toLocaleString() + '+',
-                        online: onlineCount + '+',
+                        total: data.total,
+                        daily: data.daily,
+                        online: data.online,
                     });
                 }
             } catch {
                 if (mounted) {
                     setStats({
-                        total: '30,000+',
-                        daily: '50+',
-                        online: '70+',
+                        total: null,
+                        daily: null,
+                        online: null,
                     });
                 }
             }
         }
 
         fetchStats();
+        const refreshTimer = window.setInterval(
+            fetchStats,
+            STATS_REFRESH_INTERVAL_MS,
+        );
 
         return () => {
             mounted = false;
+            window.clearInterval(refreshTimer);
         };
     }, []);
 
