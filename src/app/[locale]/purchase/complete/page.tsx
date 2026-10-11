@@ -18,9 +18,9 @@ function PurchaseCompletedContent() {
     const [order, setOrder] = useState<OrderStatusResponse | null>(null);
     const [loading, setLoading] = useState(true);
     const searchParams = useSearchParams();
-    const token = searchParams.get('token') || ''; // paypal
-    const orderId = searchParams.get('orderId') || ''; // stripe
-    const sessionId = searchParams.get('session_id') || ''; // stripe
+    const token = searchParams.get('token') || '';
+    const orderId = searchParams.get('orderId') || '';
+    const sessionId = searchParams.get('session_id') || '';
     const rawPaymentMethod = searchParams.get('method') || 'stripe';
     const paymentMethod = rawPaymentMethod === 'paypal' ? 'paypal' : 'stripe';
 

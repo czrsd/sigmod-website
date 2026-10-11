@@ -30,17 +30,16 @@ import {
 } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
-// Icons passend zu SigFixes Features
 const icons = [
-    Gauge, // Performance
-    MousePointerClick, // Input
-    SplitSquareHorizontal, // Multiboxing
-    LayoutTemplate, // UI/Layout
-    Eye, // Visuals
-    Paintbrush2, // Customization
-    FileCog, // Settings/Patches
-    Focus, // Camera
-    Layers, // Rendering
+    Gauge,
+    MousePointerClick,
+    SplitSquareHorizontal,
+    LayoutTemplate,
+    Eye,
+    Paintbrush2,
+    FileCog,
+    Focus,
+    Layers,
 ];
 
 export function Features() {
