@@ -19,7 +19,7 @@ export async function GET(req: Request) {
         const query: {
             status: 'approved';
             tags?: mongoose.Types.ObjectId;
-            type?: string;
+            type?: 'youtube' | 'video' | 'images';
         } = {
             status: 'approved',
         };
@@ -29,7 +29,7 @@ export async function GET(req: Request) {
             if (tag) query.tags = tag._id;
         }
 
-        if (type && type !== 'all') {
+        if (type === 'youtube' || type === 'video' || type === 'images') {
             query.type = type;
         }
 

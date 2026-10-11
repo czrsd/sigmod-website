@@ -16,13 +16,16 @@ import InfoPart from '@/components/pages/shop/Info';
 
 export default async function ShopPage() {
     const t = await getTranslations('Shop.MainPage');
+    let preparedBundles: FullBundle[] = [];
+    let sale = 1;
+    let limitedEndsAt: number | null = null;
+    let startedAt: number | null = null;
+    let isError = false;
+
     try {
         const bundlesRes = await getSpecialBundles();
-        const limitedEndsAt = bundlesRes?.limitedEndsAt || 0;
-        const startedAt = bundlesRes?.startedAt || 0;
-
-        let preparedBundles: FullBundle[] = [];
-        let sale = 1;
+        limitedEndsAt = bundlesRes?.limitedEndsAt || null;
+        startedAt = bundlesRes?.startedAt || null;
 
         if (bundlesRes?.specialBundles?.length) {
             preparedBundles = await Promise.all(
@@ -31,8 +34,6 @@ export default async function ShopPage() {
                         getCoinPackage(bundle.combined?.[0]),
                         getSubscriptionPackage(bundle.combined?.[1]),
                     ]);
-
-                    console.log(coinPackage, subPackage);
 
                     if (!coinPackage || !subPackage)
                         throw new Error('Invalid bundle data');
@@ -43,35 +44,39 @@ export default async function ShopPage() {
 
             sale = (await getSale()) || 1;
         }
-
-        return (
-            <main className='flex flex-col items-center text-center space-y-10 py-12'>
-                <Hero
-                    limitedEndsAt={limitedEndsAt || null}
-                    startedAt={startedAt || null}
-                />
-                {preparedBundles && preparedBundles.length > 0 && (
-                    <>
-                        <SpecialBundles bundles={preparedBundles} sale={sale} />
-                        <hr className='w-1/2' />
-                    </>
-                )}
-                <ProductList />
-                <hr className='w-1/2' />
-                <WhyBuyHere />
-                <hr className='w-1/2' />
-                <FAQPage />
-                <hr className='w-1/2' />
-                <ContactPage />
-                <InfoPart />
-            </main>
-        );
     } catch (e) {
-        console.log(e);
+        console.error(e);
+        isError = true;
+    }
+
+    if (isError) {
         return (
             <main className='flex flex-col items-center justify-center py-20'>
                 <p className='text-neutral-400'>{t('failed')}</p>
             </main>
         );
     }
+
+    return (
+        <main className='flex flex-col items-center text-center space-y-10 py-12'>
+            <Hero
+                limitedEndsAt={limitedEndsAt}
+                startedAt={startedAt}
+            />
+            {preparedBundles && preparedBundles.length > 0 && (
+                <>
+                    <SpecialBundles bundles={preparedBundles} sale={sale} />
+                    <hr className='w-1/2' />
+                </>
+            )}
+            <ProductList />
+            <hr className='w-1/2' />
+            <WhyBuyHere />
+            <hr className='w-1/2' />
+            <FAQPage />
+            <hr className='w-1/2' />
+            <ContactPage />
+            <InfoPart />
+        </main>
+    );
 }

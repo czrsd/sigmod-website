@@ -2,7 +2,8 @@
 
 import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
-import { MessageSquare, Github, ExternalLink } from 'lucide-react';
+import { MessageSquare, ExternalLink } from 'lucide-react';
+import { Github } from '@/components/icons';
 import { useTranslations } from 'next-intl';
 
 export function Community() {

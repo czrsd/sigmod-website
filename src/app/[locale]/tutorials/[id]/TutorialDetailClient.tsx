@@ -9,10 +9,10 @@ import {
     Heart,
     Calendar,
     ArrowLeft,
-    Youtube as YoutubeIcon,
     PlayCircle,
     Image as ImageIcon,
 } from 'lucide-react';
+import { YoutubeIcon } from '@/components/icons';
 import { Button } from '@/components/ui/button';
 import { ITutorialPopulated as Tutorial } from '@/models/Tutorial';
 import { Serializable } from '@/types/utils';
@@ -26,6 +26,38 @@ import {
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { DialogTitle } from '@radix-ui/react-dialog';
 import { toast } from 'sonner';
+
+function ZoomableImage({
+    title,
+    src,
+    alt,
+}: {
+    title: string;
+    src: string;
+    alt: string;
+}) {
+    return (
+        <Dialog>
+            <DialogTrigger asChild>
+                <img
+                    src={src}
+                    className='w-full h-full object-contain cursor-zoom-in hover:opacity-90 transition-opacity'
+                    alt={alt}
+                />
+            </DialogTrigger>
+            <DialogContent className='max-w-[95vw] max-h-[95vh] p-0 border-none bg-transparent flex flex-col items-center justify-center shadow-none'>
+                <DialogTitle className='text-2xl font-bold uppercase italic'>
+                    {title}
+                </DialogTitle>
+                <img
+                    src={src}
+                    className='w-full h-full max-h-[90vh] object-contain rounded-lg'
+                    alt={alt}
+                />
+            </DialogContent>
+        </Dialog>
+    );
+}
 
 export default function TutorialDetailPage({
     initialTutorial,
@@ -94,36 +126,6 @@ export default function TutorialDetailPage({
 
     const hasLiked =
         session?.user?.id && tutorial.likes?.includes(session.user.id);
-
-    const ZoomableImage = ({
-        title,
-        src,
-        alt,
-    }: {
-        title: string;
-        src: string;
-        alt: string;
-    }) => (
-        <Dialog>
-            <DialogTrigger asChild>
-                <img
-                    src={src}
-                    className='w-full h-full object-contain cursor-zoom-in hover:opacity-90 transition-opacity'
-                    alt={alt}
-                />
-            </DialogTrigger>
-            <DialogContent className='max-w-[95vw] max-h-[95vh] p-0 border-none bg-transparent flex flex-col items-center justify-center shadow-none'>
-                <DialogTitle className='text-2xl font-bold uppercase italic'>
-                    {title}
-                </DialogTitle>
-                <img
-                    src={src}
-                    className='w-full h-full max-h-[90vh] object-contain rounded-lg'
-                    alt={alt}
-                />
-            </DialogContent>
-        </Dialog>
-    );
 
     return (
         <div className='max-w-5xl mx-auto px-6 py-12'>

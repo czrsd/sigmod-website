@@ -8,7 +8,6 @@ import {
     Search,
     Upload,
     PlusCircle,
-    Youtube,
     PlayCircle,
     Image as ImageIcon,
     Filter,
@@ -19,6 +18,7 @@ import {
     ArrowUpRight,
     SlidersHorizontal,
 } from 'lucide-react';
+import { Youtube } from '@/components/icons';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import {
