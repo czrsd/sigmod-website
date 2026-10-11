@@ -6,26 +6,27 @@ import { MessageSquare } from 'lucide-react';
 
 export function CommunitySection() {
     const t = useTranslations('HomePage.community');
-    return (
-        <section className='relative px-6 md:px-16 py-32 max-w-5xl mx-auto overflow-hidden'>
-            <div className='absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-blue-600/10 blur-[100px] rounded-full -z-10' />
 
-            <div className='flex flex-col items-center text-center space-y-6 bg-neutral-200/90 dark:bg-neutral-900/40 backdrop-blur-md border border-white/5 p-10 md:p-16 rounded-[2.5rem] shadow-2xl'>
-                <div className='w-14 h-14 bg-[#5865F2]/10 rounded-2xl flex items-center justify-center text-[#5865F2] mb-2'>
-                    <MessageSquare size={32} />
+    return (
+        <section className='px-6 md:px-16 py-16 md:py-24 max-w-4xl mx-auto'>
+            <div className='flex flex-col items-center text-center space-y-5 bg-black/[0.02] dark:bg-white/[0.02] border border-black/5 dark:border-white/10 p-8 md:p-12 rounded-2xl'>
+                <div className='w-12 h-12 bg-[#5865F2]/10 rounded-xl flex items-center justify-center text-[#5865F2]'>
+                    <MessageSquare size={24} />
                 </div>
 
-                <h2 className='text-4xl md:text-5xl font-black uppercase italic tracking-tighter'>
-                    {t('title')}
-                </h2>
+                <div className='space-y-2 max-w-md'>
+                    <h2 className='text-2xl md:text-3xl font-bold tracking-tight text-foreground'>
+                        {t('title')}
+                    </h2>
 
-                <p className='text-lg text-neutral-600 dark:text-neutral-300 max-w-lg leading-relaxed'>
-                    {t('desc')}
-                </p>
+                    <p className='text-sm md:text-base text-neutral-600 dark:text-neutral-400 leading-relaxed'>
+                        {t('desc')}
+                    </p>
+                </div>
 
                 <Button
                     size='lg'
-                    className='bg-[#5865F2] hover:bg-[#4752C4] text-white px-10 h-14 rounded-full font-bold uppercase italic tracking-widest transition-all hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(88,101,242,0.3)] border-t border-white/20'
+                    className='bg-[#5865F2] hover:bg-[#4752C4] text-white px-8 h-12 rounded-full font-semibold transition-colors shadow-md mt-2'
                     asChild
                 >
                     <Link href={discordLink} target='_blank'>

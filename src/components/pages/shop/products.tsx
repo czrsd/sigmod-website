@@ -3,18 +3,23 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
+import { Link } from '@/i18n/navigation';
+import { ArrowRight } from 'lucide-react';
 
 export default function ProductList() {
     const t = useTranslations('Shop.MainPage.Products');
     return (
-        <div className='flex flex-col items-center space-y-10'>
+        <section className='flex flex-col items-center space-y-10 w-full max-w-5xl mx-auto'>
             <div className='text-center space-y-2'>
-                <h2 className='text-4xl md:text-5xl font-black uppercase italic tracking-tighter'>
+                <h2 className='text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground'>
                     {t('title')}
                 </h2>
-                <div className='h-1 w-20 bg-primary mx-auto rounded-full' />
+                <p className='text-sm text-neutral-500 max-w-md mx-auto'>
+                    Choose from game coins, VIP subscriptions, and curated special bundles.
+                </p>
             </div>
-            <div className='flex justify-center flex-wrap gap-6 max-w-5xl'>
+
+            <div className='grid grid-cols-1 md:grid-cols-3 gap-6 w-full px-4'>
                 <ProductCard
                     name={t('coins.name')}
                     description={t('coins.description')}
@@ -34,7 +39,7 @@ export default function ProductList() {
                     link='/shop/products/bundles'
                 />
             </div>
-        </div>
+        </section>
     );
 }
 
@@ -53,44 +58,34 @@ function ProductCard({
 }): React.ReactElement {
     const t = useTranslations('Shop.MainPage.Products');
     return (
-        <div
-            className='group relative flex flex-col items-center justify-center gap-6 w-[300px] h-[320px] 
-                       bg-white/40 dark:bg-neutral-900/40 backdrop-blur-md 
-                       rounded-2xl p-8 cursor-pointer border border-black/20 dark:border-white/20 dark:border-white/5 
-                       transition-all duration-300 hover:translate-y-[-5px] hover:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.3)]'
-            onClick={() => {
-                location.href = link;
-            }}
+        <Link
+            href={link}
+            className='group flex flex-col justify-between items-center text-center p-8 rounded-2xl border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] hover:border-black/20 dark:hover:border-white/20 hover:bg-black/[0.04] dark:hover:bg-white/[0.04] transition-all duration-200'
         >
-            <div className='absolute inset-0 rounded-2xl bg-gradient-to-b from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
-
-            <div className='relative z-10 transition-transform duration-500 group-hover:scale-110'>
+            <div className='relative mb-6 transition-transform duration-300 group-hover:scale-105'>
                 <Image
                     src={img}
                     alt={name}
-                    width={110}
-                    height={110}
+                    width={96}
+                    height={96}
                     draggable={false}
-                    className={`${
-                        roundImage ? 'rounded-full' : ''
-                    } drop-shadow-xl`}
+                    className={`${roundImage ? 'rounded-full' : ''} drop-shadow-md`}
                 />
             </div>
 
-            <div className='relative z-10 flex flex-col items-center text-center space-y-2'>
-                <span className='text-2xl font-black tracking-tight text-neutral-800 dark:text-neutral-100'>
+            <div className='space-y-2 mb-6 flex-1 flex flex-col justify-center'>
+                <h3 className='text-xl font-bold tracking-tight text-foreground'>
                     {name}
-                </span>
-                <p className='text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed line-clamp-2'>
+                </h3>
+                <p className='text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed line-clamp-2'>
                     {description}
                 </p>
             </div>
 
-            <div className='relative z-10 mt-2 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0'>
-                <span className='text-[10px] font-black uppercase tracking-[0.2em] text-primary'>
-                    {t('view')}
-                </span>
+            <div className='inline-flex items-center text-xs font-semibold text-blue-600 dark:text-blue-400 group-hover:gap-1.5 gap-1 transition-all'>
+                <span>{t('view')}</span>
+                <ArrowRight size={13} />
             </div>
-        </div>
+        </Link>
     );
 }

@@ -10,34 +10,34 @@ import {
 
 export default function FAQ() {
     const t = useTranslations('Shop.MainPage.FAQ');
-    const faqData = t.raw('items');
+    const faqData = t.raw('items') as { question: string; answer: string }[];
 
     return (
-        <section className='w-full max-w-3xl mx-auto px-6 space-y-10 py-10'>
+        <section className='w-full max-w-3xl mx-auto px-4 space-y-8 py-6'>
             <div className='text-center space-y-2'>
-                <h2 className='text-4xl md:text-5xl font-black uppercase italic tracking-tighter'>
+                <h2 className='text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground'>
                     {t('title')}
                 </h2>
-                <div className='h-1 w-20 bg-primary mx-auto rounded-full' />
+                <p className='text-sm text-neutral-500 max-w-md mx-auto'>
+                    Common questions regarding shop orders, coins, and delivery.
+                </p>
             </div>
 
-            <Accordion type='single' collapsible className='space-y-4'>
-                {faqData.map(
-                    (item: { question: string; answer: string }, i: number) => (
-                        <AccordionItem
-                            key={i}
-                            value={`general-${i}`}
-                            className='bg-white/5 dark:bg-neutral-900/40 backdrop-blur-md rounded-2xl px-6 overflow-hidden transition-all hover:bg-white/10 dark:hover:bg-white/5 border border-black/10 dark:border-white/5'
-                        >
-                            <AccordionTrigger className='text-left text-base hover:no-underline py-6'>
-                                {item.question}
-                            </AccordionTrigger>
-                            <AccordionContent className='text-left text-neutral-500 dark:text-neutral-400 text-md leading-relaxed pb-6'>
-                                {item.answer}
-                            </AccordionContent>
-                        </AccordionItem>
-                    )
-                )}
+            <Accordion type='single' collapsible className='space-y-3'>
+                {faqData.map((item, i) => (
+                    <AccordionItem
+                        key={i}
+                        value={`shop-faq-${i}`}
+                        className='rounded-xl border border-black/5 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] overflow-hidden text-left'
+                    >
+                        <AccordionTrigger className='px-5 py-4 text-left font-semibold text-sm md:text-base hover:no-underline hover:text-blue-500 transition-colors'>
+                            {item.question}
+                        </AccordionTrigger>
+                        <AccordionContent className='px-5 pb-4 pt-1 text-sm text-neutral-600 dark:text-neutral-400 leading-relaxed'>
+                            {item.answer}
+                        </AccordionContent>
+                    </AccordionItem>
+                ))}
             </Accordion>
         </section>
     );

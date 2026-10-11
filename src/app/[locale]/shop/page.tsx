@@ -52,30 +52,40 @@ export default async function ShopPage() {
     if (isError) {
         return (
             <main className='flex flex-col items-center justify-center py-20'>
-                <p className='text-neutral-400'>{t('failed')}</p>
+                <p className='text-neutral-500'>{t('failed')}</p>
             </main>
         );
     }
 
     return (
-        <main className='flex flex-col items-center text-center space-y-10 py-12'>
+        <main className='flex flex-col items-center text-center space-y-16 py-12 max-w-7xl mx-auto px-6'>
             <Hero
                 limitedEndsAt={limitedEndsAt}
                 startedAt={startedAt}
             />
+
             {preparedBundles && preparedBundles.length > 0 && (
-                <>
+                <div className='w-full'>
                     <SpecialBundles bundles={preparedBundles} sale={sale} />
-                    <hr className='w-1/2' />
-                </>
+                </div>
             )}
+
+            <div className='w-full max-w-4xl h-px bg-black/5 dark:bg-white/10' />
+
             <ProductList />
-            <hr className='w-1/2' />
+
+            <div className='w-full max-w-4xl h-px bg-black/5 dark:bg-white/10' />
+
             <WhyBuyHere />
-            <hr className='w-1/2' />
+
+            <div className='w-full max-w-4xl h-px bg-black/5 dark:bg-white/10' />
+
             <FAQPage />
-            <hr className='w-1/2' />
+
+            <div className='w-full max-w-4xl h-px bg-black/5 dark:bg-white/10' />
+
             <ContactPage />
+
             <InfoPart />
         </main>
     );

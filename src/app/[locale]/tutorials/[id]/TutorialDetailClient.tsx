@@ -11,6 +11,7 @@ import {
     ArrowLeft,
     PlayCircle,
     Image as ImageIcon,
+    Share2,
 } from 'lucide-react';
 import { YoutubeIcon } from '@/components/icons';
 import { Button } from '@/components/ui/button';
@@ -41,17 +42,17 @@ function ZoomableImage({
             <DialogTrigger asChild>
                 <img
                     src={src}
-                    className='w-full h-full object-contain cursor-zoom-in hover:opacity-90 transition-opacity'
+                    className='w-full h-full object-contain cursor-zoom-in hover:opacity-95 transition-opacity'
                     alt={alt}
                 />
             </DialogTrigger>
             <DialogContent className='max-w-[95vw] max-h-[95vh] p-0 border-none bg-transparent flex flex-col items-center justify-center shadow-none'>
-                <DialogTitle className='text-2xl font-bold uppercase italic'>
+                <DialogTitle className='text-lg font-bold text-white mb-2'>
                     {title}
                 </DialogTitle>
                 <img
                     src={src}
-                    className='w-full h-full max-h-[90vh] object-contain rounded-lg'
+                    className='w-full h-full max-h-[90vh] object-contain rounded-xl'
                     alt={alt}
                 />
             </DialogContent>
@@ -119,7 +120,7 @@ export default function TutorialDetailPage({
 
     if (!tutorial)
         return (
-            <div className='py-20 text-center animate-pulse'>
+            <div className='py-24 text-center text-sm text-neutral-400 animate-pulse'>
                 {t('loading')}
             </div>
         );
@@ -128,28 +129,27 @@ export default function TutorialDetailPage({
         session?.user?.id && tutorial.likes?.includes(session.user.id);
 
     return (
-        <div className='max-w-5xl mx-auto px-6 py-12'>
+        <div className='max-w-5xl mx-auto px-6 py-12 md:py-16'>
             <Button
                 variant='ghost'
+                size='sm'
                 onClick={() => window.history.back()}
-                className='mb-8 text-neutral-600 dark:text-neutral-400'
+                className='mb-6 text-neutral-500 hover:text-foreground -ml-2'
             >
-                <ArrowLeft size={16} className='mr-2' /> {t('back')}
+                <ArrowLeft size={16} className='mr-1.5' /> {t('back')}
             </Button>
 
-            <div className='grid grid-cols-1 lg:grid-cols-3 gap-12'>
-                <div className='lg:col-span-2 space-y-8'>
-                    <div className='relative aspect-video rounded-[2rem] overflow-hidden border border-white/10 bg-black shadow-2xl'>
-                        {tutorial?.contentUrls &&
-                        tutorial.contentUrls.length > 0 ? (
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-8 items-start'>
+                {/* Main Content (Media & Details) */}
+                <div className='lg:col-span-2 space-y-6'>
+                    <div className='relative aspect-video rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 bg-neutral-900 shadow-md'>
+                        {tutorial?.contentUrls && tutorial.contentUrls.length > 0 ? (
                             <>
                                 {tutorial.type === 'youtube' ? (
                                     <iframe
                                         className='w-full h-full'
                                         src={`https://www.youtube.com/embed/${
-                                            tutorial.contentUrls[0].includes(
-                                                'v='
-                                            )
+                                            tutorial.contentUrls[0].includes('v=')
                                                 ? tutorial.contentUrls[0]
                                                       .split('v=')[1]
                                                       .split('&')[0]
@@ -170,15 +170,9 @@ export default function TutorialDetailPage({
                                                             className='pl-0 h-full flex items-center justify-center'
                                                         >
                                                             <ZoomableImage
-                                                                title={
-                                                                    tutorial.title
-                                                                }
+                                                                title={tutorial.title}
                                                                 src={url}
-                                                                alt={`${
-                                                                    tutorial.title
-                                                                } - ${
-                                                                    index + 1
-                                                                }`}
+                                                                alt={`${tutorial.title} - ${index + 1}`}
                                                             />
                                                         </CarouselItem>
                                                     )
@@ -205,136 +199,119 @@ export default function TutorialDetailPage({
                                 )}
                             </>
                         ) : (
-                            <div className='w-full h-full flex items-center justify-center text-neutral-600'>
+                            <div className='w-full h-full flex items-center justify-center text-neutral-500 text-sm'>
                                 {t('noContent')}
                             </div>
                         )}
                     </div>
 
-                    <div className='space-y-4'>
-                        <div className='flex flex-wrap gap-2'>
-                            {tutorial.tags?.map((tag) => (
-                                <span
-                                    key={tag._id}
-                                    className='px-3 py-1 rounded-full text-[10px] font-bold uppercase italic border border-white/10 bg-black/5 dark:bg-white/5'
-                                    style={{ color: tag.color }}
-                                >
-                                    {tag.name}
-                                </span>
-                            ))}
-                        </div>
-                        <h1 className='text-4xl font-black uppercase italic tracking-tighter leading-none'>
+                    <div className='space-y-3'>
+                        {tutorial.tags && tutorial.tags.length > 0 && (
+                            <div className='flex flex-wrap gap-2'>
+                                {tutorial.tags.map((tag) => (
+                                    <span
+                                        key={tag._id}
+                                        className='px-2.5 py-0.5 rounded-md text-xs font-medium border border-black/5 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.04]'
+                                        style={{ color: tag.color }}
+                                    >
+                                        {tag.name}
+                                    </span>
+                                ))}
+                            </div>
+                        )}
+
+                        <h1 className='text-2xl sm:text-4xl font-extrabold tracking-tight text-foreground leading-tight'>
                             {tutorial.title}
                         </h1>
-                        <p className='text-neutral-600 dark:text-neutral-400 leading-relaxed text-lg'>
+
+                        <p className='text-neutral-600 dark:text-neutral-400 leading-relaxed text-sm sm:text-base'>
                             {tutorial.description}
                         </p>
                     </div>
                 </div>
 
-                <div className='space-y-6'>
-                    <div className='p-8 rounded-[2rem] bg-black/5 dark:bg-white/5 border border-white/10 backdrop-blur-md space-y-8'>
-                        <div className='flex items-center gap-4 pb-6 border-b border-white/5'>
-                            <div className='relative'>
-                                {tutorial.authorId?.image ? (
-                                    <img
-                                        src={tutorial.authorId.image}
-                                        alt={tutorial.authorId.name}
-                                        className='w-14 h-14 rounded-2xl object-cover border border-white/10 shadow-inner'
-                                    />
-                                ) : (
-                                    <div className='w-14 h-14 rounded-2xl bg-neutral-800 border border-white/10 flex items-center justify-center'>
-                                        <span className='text-xl font-black italic text-neutral-600'>
-                                            {tutorial.authorId?.name?.[0] ||
-                                                '?'}
-                                        </span>
-                                    </div>
-                                )}
+                {/* Sidebar Details Card */}
+                <div className='p-6 rounded-2xl border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] space-y-6'>
+                    {/* Author */}
+                    <div className='flex items-center gap-3.5 pb-5 border-b border-black/5 dark:border-white/10'>
+                        {tutorial.authorId?.image ? (
+                            <img
+                                src={tutorial.authorId.image}
+                                alt={tutorial.authorId.name}
+                                className='w-11 h-11 rounded-xl object-cover'
+                            />
+                        ) : (
+                            <div className='w-11 h-11 rounded-xl bg-neutral-200 dark:bg-neutral-800 flex items-center justify-center text-sm font-bold text-neutral-600'>
+                                {tutorial.authorId?.name?.[0] || '?'}
                             </div>
+                        )}
 
-                            <div className='flex flex-col gap-0.5'>
-                                <div className='flex items-center gap-2'>
-                                    <span className='text-[10px] font-bold text-primary uppercase tracking-[0.2em] italic'>
-                                        {tutorial.authorId?.role || t('member')}
-                                    </span>
-                                </div>
-                                <h4 className='text-xl font-black italic uppercase leading-tight tracking-tighter'>
-                                    {tutorial.authorId?.name ||
-                                        t('unknownUser')}
-                                </h4>
-                                <span className='text-[10px] font-medium text-neutral-500 uppercase'>
-                                    {t('contentCreator')}
-                                </span>
-                            </div>
+                        <div className='flex flex-col'>
+                            <span className='text-sm font-bold text-foreground'>
+                                {tutorial.authorId?.name || t('unknownUser')}
+                            </span>
+                            <span className='text-xs text-neutral-500 capitalize'>
+                                {tutorial.authorId?.role || t('member')}
+                            </span>
                         </div>
-
-                        <div className='flex justify-between items-center'>
-                            <div className='space-y-1'>
-                                <span className='text-xs font-bold text-neutral-500 uppercase tracking-widest'>
-                                    {t('views')}
-                                </span>
-                                <div className='flex items-center gap-2 text-2xl font-black italic'>
-                                    <Eye className='text-primary' />{' '}
-                                    {tutorial.views}
-                                </div>
-                            </div>
-                            <button
-                                onClick={handleLike}
-                                disabled={isLiking}
-                                className={`group flex flex-col items-center gap-1 transition-all cursor-pointer ${
-                                    hasLiked
-                                        ? 'text-red-500'
-                                        : 'text-neutral-500 hover:text-red-400'
-                                }`}
-                            >
-                                <Heart
-                                    size={32}
-                                    className={`${
-                                        hasLiked
-                                            ? 'fill-current scale-110'
-                                            : 'group-hover:scale-110'
-                                    } transition-transform`}
-                                />
-                                <span className='text-xs font-bold'>
-                                    {tutorial.likes.length}
-                                </span>
-                            </button>
-                        </div>
-
-                        <div className='pt-6 border-t border-white/5 space-y-4'>
-                            <div className='flex items-center gap-3 text-neutral-600 dark:text-neutral-400'>
-                                <Calendar size={18} />
-                                <span className='text-sm font-medium'>
-                                    {new Date(
-                                        tutorial.createdAt
-                                    ).toLocaleDateString(undefined, {
-                                        day: '2-digit',
-                                        month: 'long',
-                                        year: 'numeric',
-                                    })}
-                                </span>
-                            </div>
-                            <div className='flex items-center gap-3 text-neutral-600 dark:text-neutral-400'>
-                                {tutorial.type === 'youtube' ? (
-                                    <YoutubeIcon size={18} />
-                                ) : tutorial.type === 'video' ? (
-                                    <PlayCircle size={18} />
-                                ) : (
-                                    <ImageIcon size={18} />
-                                )}
-                                <span className='text-sm font-medium uppercase italic'>
-                                    {t('contentType', { type: tutorial.type })}
-                                </span>
-                            </div>
-                        </div>
-
-                        <Button
-                            className='w-full bg-primary hover:bg-primary/80 font-black uppercase italic py-6 rounded-xl shadow-lg shadow-primary/20 cursor-pointer'
-                            onClick={handleShare}
-                        >
-                            {t('share')}
-                        </Button>
                     </div>
+
+                    {/* Stats (Views & Likes) */}
+                    <div className='flex justify-between items-center py-1'>
+                        <div className='flex items-center gap-2 text-neutral-600 dark:text-neutral-400 text-sm'>
+                            <Eye size={16} />
+                            <span>{tutorial.views || 0} views</span>
+                        </div>
+
+                        <button
+                            onClick={handleLike}
+                            disabled={isLiking}
+                            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold transition-colors ${
+                                hasLiked
+                                    ? 'bg-red-500/10 text-red-500'
+                                    : 'bg-black/5 dark:bg-white/5 text-neutral-600 dark:text-neutral-400 hover:text-red-500'
+                            }`}
+                        >
+                            <Heart
+                                size={14}
+                                className={hasLiked ? 'fill-current' : ''}
+                            />
+                            <span>{tutorial.likes?.length || 0}</span>
+                        </button>
+                    </div>
+
+                    {/* Info */}
+                    <div className='space-y-3 pt-2 border-t border-black/5 dark:border-white/10 text-xs text-neutral-500'>
+                        <div className='flex items-center gap-2'>
+                            <Calendar size={14} />
+                            <span>
+                                {new Date(tutorial.createdAt).toLocaleDateString(undefined, {
+                                    day: '2-digit',
+                                    month: 'short',
+                                    year: 'numeric',
+                                })}
+                            </span>
+                        </div>
+                        <div className='flex items-center gap-2 capitalize'>
+                            {tutorial.type === 'youtube' ? (
+                                <YoutubeIcon size={14} />
+                            ) : tutorial.type === 'video' ? (
+                                <PlayCircle size={14} />
+                            ) : (
+                                <ImageIcon size={14} />
+                            )}
+                            <span>{tutorial.type}</span>
+                        </div>
+                    </div>
+
+                    {/* Share Button */}
+                    <Button
+                        className='w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold h-11 rounded-xl shadow-sm text-xs'
+                        onClick={handleShare}
+                    >
+                        <Share2 size={14} className='mr-1.5' />
+                        {t('share')}
+                    </Button>
                 </div>
             </div>
         </div>

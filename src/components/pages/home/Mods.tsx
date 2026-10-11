@@ -28,13 +28,12 @@ const ModItem = ({
     index,
 }: ModItemProps) => (
     <article
-        className={`flex flex-col lg:flex-row items-center gap-12 lg:gap-20 ${
+        className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 ${
             index % 2 !== 0 ? 'lg:flex-row-reverse' : ''
         }`}
     >
-        <div className='w-full lg:w-1/2 group relative'>
-            <div className='absolute -inset-4 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-[2rem] blur-2xl opacity-0 group-hover:opacity-100 transition duration-700' />
-            <div className='relative overflow-hidden rounded-2xl border border-white/10 bg-neutral-900/50 backdrop-blur-sm p-2 shadow-2xl'>
+        <div className='w-full lg:w-1/2'>
+            <div className='relative overflow-hidden rounded-2xl border border-black/10 dark:border-white/10 bg-neutral-900/40 shadow-lg p-2'>
                 <Image
                     src={img}
                     alt={alt}
@@ -42,43 +41,41 @@ const ModItem = ({
                     height={350}
                     sizes='(max-width: 768px) 90vw, (max-width: 1200px) 40vw, 520px'
                     decoding='async'
-                    className='rounded-xl transition-transform duration-700 group-hover:scale-[1.02] w-full h-auto'
+                    className='rounded-xl w-full h-auto object-cover'
                 />
             </div>
         </div>
 
         <div className='w-full lg:w-1/2 space-y-6'>
-            <div className='space-y-2'>
-                <h3 className='text-4xl md:text-5xl font-black uppercase italic tracking-tighter text-foreground'>
+            <div className='space-y-3'>
+                <h3 className='text-3xl md:text-4xl font-bold tracking-tight text-foreground'>
                     {title}
                 </h3>
-                <div className='h-1 w-20 bg-blue-600 rounded-full' />
+                <p className='text-base md:text-lg leading-relaxed text-neutral-600 dark:text-neutral-400'>
+                    {desc}
+                </p>
             </div>
 
-            <p className='text-lg leading-relaxed text-neutral-600 dark:text-neutral-300'>
-                {desc}
-            </p>
-
-            <ul className='grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2'>
+            <ul className='grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1'>
                 {features.map((feature, i) => (
                     <li
                         key={i}
-                        className='flex items-center gap-2 text-sm font-medium text-neutral-600 dark:text-neutral-200'
+                        className='flex items-center gap-2.5 text-sm text-neutral-600 dark:text-neutral-300'
                     >
-                        <CheckCircle2 className='text-blue-500 w-4 h-4' />
-                        {feature}
+                        <CheckCircle2 className='text-blue-500 w-4 h-4 shrink-0' />
+                        <span>{feature}</span>
                     </li>
                 ))}
             </ul>
 
-            <div className='pt-4'>
+            <div className='pt-2'>
                 <Button
                     asChild
                     variant='outline'
-                    className='rounded-full px-8 h-12 border-black/10 dark:border-white/10 hover:bg-white/5 font-bold uppercase italic tracking-wider transition-all hover:gap-4'
+                    className='rounded-full px-6 h-11 border-black/10 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/5 font-medium'
                 >
                     <Link href={link}>
-                        {learnMore} <ArrowRight className='w-4 h-4' />
+                        {learnMore} <ArrowRight className='w-4 h-4 ml-1.5' />
                     </Link>
                 </Button>
             </div>
@@ -90,7 +87,7 @@ export function ModsSection() {
     const t = useTranslations('HomePage.mods');
 
     return (
-        <section className='flex flex-col gap-32 md:gap-48 px-6 md:px-16 py-32 max-w-7xl mx-auto overflow-hidden'>
+        <section className='flex flex-col gap-20 md:gap-28 px-6 md:px-16 py-16 md:py-24 max-w-7xl mx-auto'>
             <ModItem
                 index={0}
                 img='/preview/sigmod_menu.webp'

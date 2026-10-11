@@ -10,42 +10,42 @@ export function HeroSection() {
     const t = useTranslations('HomePage.hero');
 
     return (
-        <section className='relative flex flex-col lg:flex-row items-center justify-between px-6 md:px-16 pt-24 pb-20 lg:pt-44 lg:pb-32 gap-16 overflow-hidden'>
-            <div className='w-full lg:w-1/2 text-center lg:text-left space-y-10 relative z-10'>
-                <div className='space-y-6'>
-                    <h1 className='text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black leading-[1.1] md:leading-[1] tracking-tighter'>
+        <section className='relative flex flex-col lg:flex-row items-center justify-between px-6 md:px-16 pt-20 pb-16 lg:pt-36 lg:pb-28 gap-12 lg:gap-16'>
+            <div className='w-full lg:w-1/2 text-center lg:text-left space-y-8 relative z-10'>
+                <div className='space-y-5'>
+                    <h1 className='text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.05]'>
                         {t.rich('title', {
                             glow: (chunks) => (
-                                <span className='bg-gradient-to-r from-[var(--glow)] to-purple-400 text-transparent bg-clip-text'>
+                                <span className='text-foreground'>
                                     {chunks}
                                 </span>
                             ),
                         })}
                     </h1>
-                    <p className='mx-auto lg:mx-0 max-w-lg text-lg md:text-xl text-neutral-600 dark:text-neutral-400 leading-relaxed font-medium'>
+                    <p className='mx-auto lg:mx-0 max-w-lg text-lg text-neutral-600 dark:text-neutral-400 leading-relaxed font-normal'>
                         {t('sub')}
                     </p>
                 </div>
 
-                <div className='flex flex-wrap gap-4 justify-center lg:justify-start'>
+                <div className='flex flex-wrap gap-3.5 justify-center lg:justify-start'>
                     <Button
                         size='lg'
-                        className='bg-blue-600 hover:bg-blue-700 text-white font-bold px-10 h-14 rounded-full transition-all hover:scale-105 shadow-xl shadow-blue-600/20'
+                        className='bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 h-12 rounded-full transition-colors shadow-md'
                         asChild
                     >
-                        <Link href='/shop'>
-                            <ShoppingCart className='mr-2 h-5 w-5' />
-                            {t('shop_now')}
+                        <Link href='/guide'>
+                            {t('start')} <ArrowRight className='ml-2 h-4 w-4' />
                         </Link>
                     </Button>
                     <Button
                         variant='outline'
                         size='lg'
-                        className='border-black/10 dark:border-white/10 bg-white/5 hover:bg-white/10 font-bold px-10 h-14 rounded-full backdrop-blur-md'
+                        className='border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.04] hover:bg-black/[0.05] dark:hover:bg-white/[0.08] font-semibold px-8 h-12 rounded-full'
                         asChild
                     >
-                        <Link href='/guide'>
-                            {t('start')} <ArrowRight className='ml-2 h-5 w-5' />
+                        <Link href='/shop'>
+                            <ShoppingCart className='mr-2 h-4 w-4' />
+                            {t('shop_now')}
                         </Link>
                     </Button>
                 </div>
@@ -55,7 +55,7 @@ export function HeroSection() {
 
             <div className='w-full lg:w-1/2 relative z-10'>
                 <div
-                    className='relative w-full overflow-hidden rounded-xl md:rounded-[2rem] md:shadow-2xl border border-white/10'
+                    className='relative w-full overflow-hidden rounded-2xl md:rounded-3xl border border-black/10 dark:border-white/10 bg-neutral-900/60 shadow-xl'
                     style={{ aspectRatio: '16 / 9' }}
                 >
                     <Image
@@ -71,8 +71,6 @@ export function HeroSection() {
 
                     <CarouselWrapper />
                 </div>
-
-                <div className='hidden md:block absolute -inset-4 bg-blue-600/10 rounded-[3rem] blur-3xl opacity-50 pointer-events-none -z-10' />
             </div>
         </section>
     );

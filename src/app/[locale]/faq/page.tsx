@@ -29,7 +29,7 @@ const createLink = (href: string) => (chunks: React.ReactNode) =>
     (
         <Link
             href={href}
-            className='text-blue-400 hover:text-blue-500 font-bold transition-colors'
+            className='text-blue-500 hover:underline font-semibold'
         >
             {chunks}
         </Link>
@@ -64,7 +64,7 @@ const faqData: Record<string, FAQItem[]> = {
             answer: (t) =>
                 t.rich('general.multibox.answer', {
                     strong: (c: React.ReactNode) => (
-                        <strong className='text-white'>{c}</strong>
+                        <strong className='font-semibold text-foreground'>{c}</strong>
                     ),
                     link: createLink('/guide'),
                 }),
@@ -109,20 +109,20 @@ const RenderSection = ({
     icon: LucideIcon;
     t: Translator;
 }) => (
-    <div className='bg-white/[0.02] border border-white/5 rounded-3xl p-6 md:p-8 flex flex-col h-full'>
-        <div className='flex items-center gap-4 border-b border-black/5 dark:border-white/5 pb-6 mb-2'>
-            <div className='w-12 h-12 rounded-2xl bg-blue-600/10 flex items-center justify-center text-blue-500 shrink-0'>
-                <Icon size={24} />
+    <div className='bg-black/[0.02] dark:bg-white/[0.02] border border-black/10 dark:border-white/10 rounded-2xl p-6 md:p-8 flex flex-col h-full'>
+        <div className='flex items-center gap-3.5 border-b border-black/5 dark:border-white/10 pb-5 mb-3'>
+            <div className='w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-500 shrink-0'>
+                <Icon size={20} />
             </div>
             <div>
-                <h2 className='text-2xl font-black italic uppercase tracking-tighter leading-none'>
+                <h2 className='text-xl font-bold tracking-tight text-foreground'>
                     {t(`${titleKey}.title`)}
                 </h2>
                 {titleKey === 'sigfixes' && (
-                    <p className='text-neutral-700 dark:text-neutral-500 text-[10px] mt-2 uppercase tracking-widest font-bold'>
+                    <p className='text-neutral-500 text-xs mt-0.5'>
                         {t.rich('sigfixes.note', {
                             strong: (c: React.ReactNode) => (
-                                <span className='text-neutral-600'>{c}</span>
+                                <span className='font-semibold text-foreground'>{c}</span>
                             ),
                         })}
                     </p>
@@ -135,12 +135,12 @@ const RenderSection = ({
                 <AccordionItem
                     key={i}
                     value={`${titleKey}-${i}`}
-                    className='border-black/20 dark:border-white/5 last:border-0'
+                    className='border-black/5 dark:border-white/10 last:border-0'
                 >
-                    <AccordionTrigger className='text-left text-neutral-700 hover:text-neutral-500 dark:text-neutral-300 dark:hover:text-white transition-all py-4 font-bold tracking-tight text-sm md:text-base'>
+                    <AccordionTrigger className='text-left text-neutral-800 dark:text-neutral-200 hover:text-blue-500 hover:no-underline transition-colors py-4 font-semibold text-sm md:text-base'>
                         {t(question)}
                     </AccordionTrigger>
-                    <AccordionContent className='text-neutral-700 dark:text-neutral-400 leading-relaxed pb-6 pt-2 text-sm md:text-base'>
+                    <AccordionContent className='text-neutral-600 dark:text-neutral-400 leading-relaxed pb-5 pt-1 text-sm'>
                         {answer(t)}
                     </AccordionContent>
                 </AccordionItem>
@@ -153,21 +153,17 @@ export default function FAQPage() {
     const t = useTranslations('FAQPage');
 
     return (
-        <main className='max-w-6xl mx-auto px-6 py-20 space-y-16'>
-            <div className='text-center space-y-4'>
-                <div className='inline-flex items-center gap-2 px-3 py-1 rounded-full bg-black/5 dark:bg-white/5 border border-white/10 text-neutral-500 text-[10px] font-bold uppercase tracking-[0.2em] mb-4'>
-                    <HelpCircle size={12} className='text-blue-500' />
-                    {t('statusLabel')}
-                </div>
-                <h1 className='text-5xl md:text-7xl font-black italic tracking-tighter uppercase leading-none'>
+        <main className='max-w-5xl mx-auto px-6 py-16 md:py-24 space-y-12'>
+            <div className='text-center space-y-3 max-w-xl mx-auto'>
+                <h1 className='text-4xl sm:text-6xl font-extrabold tracking-tight text-foreground leading-[1.05]'>
                     {t('title')}
                 </h1>
-                <p className='text-neutral-500 text-lg max-w-xl mx-auto italic'>
+                <p className='text-neutral-600 dark:text-neutral-400 text-base'>
                     {t('subtitle')}
                 </p>
             </div>
 
-            <div className='grid gap-8'>
+            <div className='space-y-6'>
                 <RenderSection
                     titleKey='general'
                     items={faqData.general}
@@ -175,7 +171,7 @@ export default function FAQPage() {
                     t={t}
                 />
 
-                <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 gap-6'>
                     <RenderSection
                         titleKey='sigmod'
                         items={faqData.sigmod}
@@ -191,33 +187,34 @@ export default function FAQPage() {
                 </div>
             </div>
 
-            <div className='bg-gradient-to-br from-blue-600 to-purple-700 rounded-[2.5rem] p-10 text-center relative overflow-hidden group shadow-[0_20px_50px_rgba(37,99,235,0.25)]'>
-                <div className='absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500' />
-                <div className='relative z-10 space-y-6'>
-                    <div className='w-16 h-16 bg-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center mx-auto border border-white/20 rotate-3 group-hover:rotate-0 transition-transform'>
-                        <MessageSquare className='text-white' size={32} />
+            <div className='rounded-2xl p-8 sm:p-10 text-center bg-black/[0.02] dark:bg-white/[0.02] border border-black/10 dark:border-white/10'>
+                <div className='max-w-md mx-auto space-y-4'>
+                    <div className='w-12 h-12 bg-[#5865F2]/10 rounded-xl flex items-center justify-center mx-auto text-[#5865F2]'>
+                        <MessageSquare size={24} />
                     </div>
-                    <div className='space-y-2'>
-                        <h2 className='text-3xl font-black italic uppercase tracking-tighter text-white'>
+                    <div className='space-y-1.5'>
+                        <h2 className='text-2xl font-bold tracking-tight text-foreground'>
                             {t('needHelp')}
                         </h2>
-                        <p className='text-white/70 max-w-md mx-auto font-medium'>
+                        <p className='text-xs sm:text-sm text-neutral-500 leading-relaxed'>
                             {t('discordDesc')}
                         </p>
                     </div>
-                    <Button
-                        size='lg'
-                        className='bg-white text-black hover:bg-neutral-100 font-black px-12 h-14 rounded-2xl shadow-xl transition-all hover:scale-105 active:scale-95'
-                        asChild
-                    >
-                        <Link
-                            href={discordLink}
-                            target='_blank'
-                            rel='noopener noreferrer'
+                    <div className='pt-2'>
+                        <Button
+                            size='lg'
+                            className='bg-[#5865F2] hover:bg-[#4752C4] text-white font-semibold px-8 h-12 rounded-full shadow-sm'
+                            asChild
                         >
-                            {t('joinDiscord')}
-                        </Link>
-                    </Button>
+                            <a
+                                href={discordLink}
+                                target='_blank'
+                                rel='noopener noreferrer'
+                            >
+                                {t('joinDiscord')}
+                            </a>
+                        </Button>
+                    </div>
                 </div>
             </div>
         </main>

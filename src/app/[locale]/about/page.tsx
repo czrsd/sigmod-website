@@ -4,78 +4,84 @@ import { Button } from '@/components/ui/button';
 import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
 import { Rocket, History, Milestone, Users, MessageSquare } from 'lucide-react';
+import { discordLink } from '@/utils/getLink';
 
 export default function AboutPage() {
     const t = useTranslations('AboutPage');
 
     return (
-        <main className='max-w-5xl mx-auto px-6 py-20 space-y-24'>
-            <header className='space-y-4'>
-                <h1 className='text-5xl md:text-7xl font-black italic tracking-tighter uppercase leading-none'>
+        <main className='max-w-5xl mx-auto px-6 py-16 md:py-24 space-y-20'>
+            {/* Header */}
+            <header className='space-y-3 max-w-2xl'>
+                <h1 className='text-4xl sm:text-6xl font-extrabold tracking-tight text-foreground leading-[1.05]'>
                     {t('title')}
                 </h1>
-                <p className='text-blue-500 font-bold uppercase tracking-[0.3em] text-xs'>
+                <p className='text-base text-neutral-500 dark:text-neutral-400'>
                     {t('subtitle')}
                 </p>
             </header>
 
-            <div className='grid grid-cols-1 lg:grid-cols-12 gap-12'>
-                <div className='lg:col-span-5 space-y-6'>
-                    <div className='bg-black/[0.03] dark:bg-white/[0.03] border border-black/10 dark:border-white/10 p-8 rounded-3xl relative overflow-hidden group'>
-                        <div className='absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity'>
-                            <Rocket size={80} />
-                        </div>
-                        <h3 className='text-2xl font-black italic uppercase mb-4 flex items-center gap-2'>
-                            <Milestone className='text-blue-500' size={20} />
+            {/* TLDR & Story Split */}
+            <div className='grid grid-cols-1 lg:grid-cols-12 gap-10 items-start'>
+                {/* TLDR Card */}
+                <div className='lg:col-span-5 space-y-4'>
+                    <div className='bg-black/[0.02] dark:bg-white/[0.02] border border-black/10 dark:border-white/10 p-6 sm:p-8 rounded-2xl relative overflow-hidden'>
+                        <h2 className='text-lg font-bold text-foreground mb-3 flex items-center gap-2'>
+                            <Milestone className='text-blue-500' size={18} />
                             {t('tldr.title')}
-                        </h3>
-                        <p className='text-neutral-600 dark:text-neutral-400 leading-relaxed relative z-10'>
+                        </h2>
+                        <p className='text-neutral-600 dark:text-neutral-400 text-sm leading-relaxed'>
                             {t('tldr.text')}
                         </p>
                     </div>
 
                     <Button
-                        className='w-full bg-blue-600 hover:bg-blue-700 text-white font-black h-14 rounded-2xl shadow-lg'
+                        className='w-full bg-[#5865F2] hover:bg-[#4752C4] text-white font-semibold h-12 rounded-xl transition-colors shadow-sm'
                         asChild
                     >
-                        <Link
-                            href='https://discord.gg/QyUhvUC8AD'
+                        <a
+                            href={discordLink}
                             target='_blank'
                             rel='noopener noreferrer'
                         >
-                            <MessageSquare className='mr-2' size={20} />
+                            <MessageSquare className='mr-2' size={18} />
                             {t('joinDiscord')}
-                        </Link>
+                        </a>
                     </Button>
                 </div>
 
-                <div className='lg:col-span-7 space-y-6 text-neutral-700 dark:text-neutral-300 leading-relaxed text-lg'>
-                    <h3 className='font-bold flex items-center gap-2 uppercase tracking-widest text-sm mb-8'>
+                {/* Story */}
+                <div className='lg:col-span-7 space-y-5 text-neutral-600 dark:text-neutral-400 leading-relaxed text-base'>
+                    <div className='flex items-center gap-2 text-foreground font-semibold text-sm pb-1 border-b border-black/5 dark:border-white/10'>
                         <History size={16} className='text-blue-500' />
                         {t('story.title')}
-                    </h3>
+                    </div>
                     <p>{t('story.intro')}</p>
-                    <p className='text-neutral-600 dark:text-neutral-500 italic border-l-2 border-black/10 dark:border-white/10 pl-6 my-8'>
+                    <p className='text-neutral-700 dark:text-neutral-300 border-l-2 border-blue-500 pl-4 py-1 italic text-sm'>
                         {t('story.sigmodStart')}
                     </p>
                     <p>{t('story.sigmod')}</p>
                     <p>{t('story.sigfixes')}</p>
                     <p>{t('story.community')}</p>
-                    <div className='pt-4 flex items-center gap-4 text-sm font-medium text-neutral-500'>
-                        <Users size={18} className='text-blue-500' />
+                    <div className='pt-2 flex items-center gap-2.5 text-xs text-neutral-500 font-medium'>
+                        <Users size={16} className='text-blue-500' />
                         {t('story.thanks')}
                     </div>
                 </div>
             </div>
 
-            <section className='pt-10 space-y-12'>
-                <div className='text-center'>
-                    <h2 className='text-3xl font-black italic uppercase tracking-tighter'>
+            {/* Roadmap */}
+            <section className='space-y-8 pt-4'>
+                <div>
+                    <h2 className='text-2xl sm:text-3xl font-extrabold tracking-tight text-foreground'>
                         {t('roadmap.title')}
                     </h2>
+                    <p className='text-xs text-neutral-500 mt-1'>
+                        Project milestones and ongoing updates.
+                    </p>
                 </div>
 
-                <div className='grid grid-cols-1 md:grid-cols-3 gap-8 relative'>
+                <div className='grid grid-cols-1 md:grid-cols-3 gap-5'>
                     <RoadmapStep
                         phase='01'
                         title={t('roadmap.phase1.title')}
@@ -116,23 +122,25 @@ function RoadmapStep({
 }) {
     return (
         <div
-            className={`p-8 rounded-3xl border transition-all duration-500 ${
+            className={`p-6 rounded-2xl border transition-all ${
                 active
-                    ? 'bg-blue-600/10 border-blue-500 shadow-[0_0_30px_rgba(37,99,235,0.1)]'
-                    : 'bg-white/[0.02] border-white/5'
+                    ? 'bg-blue-500/[0.04] border-blue-500/30 ring-1 ring-blue-500/20'
+                    : 'bg-black/[0.02] dark:bg-white/[0.02] border-black/10 dark:border-white/10'
             }`}
         >
             <span
-                className={`text-[10px] font-black tracking-[0.3em] uppercase mb-4 block ${
-                    active ? 'text-blue-500' : 'text-neutral-600'
+                className={`text-[11px] font-semibold tracking-wider uppercase mb-2 block ${
+                    active ? 'text-blue-500' : 'text-neutral-400'
                 }`}
             >
                 Phase {phase} — {date}
             </span>
-            <h4 className='font-bold text-xl mb-4 italic uppercase tracking-tight'>
+            <h3 className='font-bold text-base text-foreground mb-2'>
                 {title}
-            </h4>
-            <p className='text-neutral-500 text-sm leading-relaxed'>{desc}</p>
+            </h3>
+            <p className='text-neutral-600 dark:text-neutral-400 text-xs sm:text-sm leading-relaxed'>
+                {desc}
+            </p>
         </div>
     );
 }

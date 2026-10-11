@@ -27,14 +27,11 @@ import {
 } from '@/components/ui/dialog';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 import { useTranslations } from 'next-intl';
-import { Glow } from '@/components/Glow';
 import { ZoomableImage } from '@/components/ZoomableImage';
 import { detectBrowser } from '@/utils/getLink';
+import { Zap, ExternalLink, ArrowRight, BookOpen, MessageSquare } from 'lucide-react';
 
 export default function QuickGuidePage() {
-    // Render a complete generic guide on the server. Browser detection only
-    // refines the screenshots after hydration and must not hide the page from
-    // crawlers or users with JavaScript disabled.
     const [browser, setBrowser] = useState('other');
     const t = useTranslations('QuickGuide');
 
@@ -95,7 +92,7 @@ export default function QuickGuidePage() {
                 external: true,
             },
         },
-        ...(devModeStep.skip ? [] : [devModeStep]),
+        ...(devModeStep && !devModeStep.skip ? [devModeStep] : []),
         {
             title: t('sigmod.title'),
             description: t('sigmod.desc'),
@@ -129,80 +126,70 @@ export default function QuickGuidePage() {
     ];
 
     return (
-        <section className='max-w-3xl mx-auto px-6 md:px-16 py-24'>
-            <GlowItems />
-            <h1 className='text-4xl font-bold text-center'>{t('title')}</h1>
-            <p className='text-muted-foreground text-center text-xs mt-2 mb-10'>
-                {t('note')}
-            </p>
+        <section className='max-w-4xl mx-auto px-6 py-16 md:py-24 space-y-10'>
+            <div className='text-center space-y-3 max-w-xl mx-auto'>
+                <div className='inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs font-semibold'>
+                    <Zap size={14} />
+                    Quick Setup
+                </div>
+                <h1 className='text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground'>
+                    {t('title')}
+                </h1>
+                <p className='text-sm text-neutral-500 dark:text-neutral-400 leading-relaxed'>
+                    {t('note')}
+                </p>
+            </div>
 
-            <div className='space-y-10'>
+            <div className='space-y-6'>
                 {baseSteps.map((step, i) => (
-                    <Card key={i} className='bg-black/30 backdrop-blur-sm'>
-                        <CardHeader>
-                            <CardTitle className='flex items-center gap-2'>
-                                <span className='text-xl text-muted-foreground'>
-                                    {i + 1}.
-                                </span>{' '}
-                                {step.title}
+                    <Card
+                        key={i}
+                        className='rounded-2xl border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] shadow-sm overflow-hidden'
+                    >
+                        <CardHeader className='pb-3'>
+                            <CardTitle className='flex items-center gap-3 text-lg font-bold'>
+                                <span className='w-6 h-6 rounded-md bg-blue-500/10 text-blue-600 dark:text-blue-400 text-xs flex items-center justify-center font-semibold shrink-0'>
+                                    {i + 1}
+                                </span>
+                                <span>{step.title}</span>
                             </CardTitle>
-                            <CardDescription>
+                            <CardDescription className='text-sm text-neutral-600 dark:text-neutral-400 pl-9'>
                                 {step.description}
                             </CardDescription>
                         </CardHeader>
-                        <CardContent>
-                            {step.images && step.images.length > 0 && (
-                                <div className='flex flex-col sm:flex-row gap-4 mt-4'>
-                                    <div className='sm:w-1/2'>
-                                        <Dialog>
-                                            <DialogTrigger asChild>
-                                                <Image
-                                                    src={step.images[0]}
-                                                    alt={`Step ${
-                                                        i + 1
-                                                    } image 1`}
-                                                    width={600}
-                                                    height={300}
-                                                    className='rounded-xl border shadow cursor-zoom-in hover:scale-105 transition w-full h-full object-cover'
-                                                />
-                                            </DialogTrigger>
-                                            <DialogContent className='max-w-4xl p-0 bg-transparent border-none shadow-none'>
-                                                <VisuallyHidden>
-                                                    <DialogTitle>
-                                                        Zoomed Image
-                                                    </DialogTitle>
-                                                </VisuallyHidden>
-                                                <Image
-                                                    src={step.images[0]}
-                                                    alt={`Step ${
-                                                        i + 1
-                                                    } zoomed image 1`}
-                                                    width={1200}
-                                                    height={800}
-                                                    className='mx-auto rounded-xl'
-                                                />
-                                            </DialogContent>
-                                        </Dialog>
-                                    </div>
-                                    <div className='sm:w-1/2 flex flex-col gap-4'>
-                                        {step.images
-                                            .slice(1)
-                                            .map((img, idx) => (
-                                                <ZoomableImage
-                                                    key={idx}
-                                                    src={img}
-                                                    alt={`Step ${i + 1}`}
-                                                    width={600}
-                                                    height={300}
-                                                />
-                                            ))}
-                                    </div>
+
+                        {step.images && step.images.length > 0 && (
+                            <CardContent className='pl-9 pt-2'>
+                                <div className='grid grid-cols-1 sm:grid-cols-2 gap-4'>
+                                    {step.images.map((img, idx) => (
+                                        <div
+                                            key={idx}
+                                            className='rounded-xl border border-black/10 dark:border-white/10 overflow-hidden bg-neutral-900/60 p-2'
+                                        >
+                                            <ZoomableImage
+                                                src={img}
+                                                alt={`Step ${i + 1} image ${idx + 1}`}
+                                                width={400}
+                                                height={220}
+                                                className='rounded-lg w-full h-auto'
+                                            />
+                                        </div>
+                                    ))}
                                 </div>
-                            )}
-                        </CardContent>
+                            </CardContent>
+                        )}
+
                         {step.button && (
-                            <CardFooter>
-                                <Button variant={step.button.variant} asChild>
+                            <CardFooter className='pl-9 pt-2 pb-6'>
+                                <Button
+                                    variant={step.button.variant}
+                                    className={`rounded-full px-6 h-10 text-xs font-semibold ${
+                                        step.button.variant === 'default'
+                                            ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                                            : 'border-black/10 dark:border-white/10'
+                                    }`}
+                                    asChild
+                                >
                                     <Link
                                         href={step.button.href}
                                         target={
@@ -217,6 +204,9 @@ export default function QuickGuidePage() {
                                         }
                                     >
                                         {step.button.text}
+                                        {step.button.external && (
+                                            <ExternalLink className='ml-1.5 h-3.5 w-3.5' />
+                                        )}
                                     </Link>
                                 </Button>
                             </CardFooter>
@@ -225,48 +215,32 @@ export default function QuickGuidePage() {
                 ))}
             </div>
 
-            <div className='pt-10 space-x-3 flex flex-wrap justify-center'>
-                <Button variant='outline' asChild>
-                    <Link
+            <div className='pt-6 flex flex-wrap justify-center gap-3'>
+                <Button
+                    variant='outline'
+                    className='rounded-full h-11 px-6 border-black/10 dark:border-white/10 font-medium'
+                    asChild
+                >
+                    <Link href='/guide'>
+                        <BookOpen className='mr-2 h-4 w-4' />
+                        {t('fullGuide')}
+                    </Link>
+                </Button>
+                <Button
+                    variant='outline'
+                    className='rounded-full h-11 px-6 border-black/10 dark:border-white/10 font-medium'
+                    asChild
+                >
+                    <a
                         href={discordLink}
                         target='_blank'
                         rel='noopener noreferrer'
                     >
+                        <MessageSquare className='mr-2 h-4 w-4 text-[#5865F2]' />
                         {t('discord')}
-                    </Link>
-                </Button>
-                <Button variant='secondary' asChild>
-                    <Link href='/guide'>{t('fullGuide')}</Link>
+                    </a>
                 </Button>
             </div>
         </section>
-    );
-}
-
-function GlowItems() {
-    return (
-        <>
-            <Glow
-                top='-30%'
-                left='-20%'
-                width='600px'
-                height='600px'
-                opacity={0.4}
-            />
-            <Glow
-                top='15%'
-                left='40%'
-                width='400px'
-                height='400px'
-                opacity={0.18}
-            />
-            <Glow
-                top='60%'
-                right='-16%'
-                width='400px'
-                height='400px'
-                opacity={0.3}
-            />
-        </>
     );
 }

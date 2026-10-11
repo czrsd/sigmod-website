@@ -113,10 +113,7 @@ export default async function RootLayout({
                     <Header />
 
                     <div className='fixed inset-0 -z-10 overflow-hidden pointer-events-none'>
-                        <div className='hidden lg:block absolute top-[5%] left-[5%] w-[20%] h-[20%] rounded-full bg-blue-400/10 dark:bg-blue-600/20 blur-[120px] lg:animate-drift will-change-transform' />
-                        <div className='hidden lg:block absolute bottom-[5%] right-[-5%] w-[35%] h-[35%] rounded-full bg-purple-400/10 dark:bg-purple-600/20 blur-[100px] lg:animate-drift [animation-delay:3s] will-change-transform' />
-
-                        <div className='bg-grid absolute inset-0 opacity-30 dark:opacity-40' />
+                        <div className='bg-grid absolute inset-0 opacity-20 dark:opacity-30 [mask-image:radial-gradient(ellipse_80%_80%_at_50%_30%,#000_40%,transparent_100%)]' />
                     </div>
 
                     <LayoutTransition

@@ -1,12 +1,11 @@
 'use client';
+
 import { Button } from '@/components/ui/button';
 import { FullBundle } from '@/types/shopTypes';
 import { formatNumber } from '@/utils/format';
-import { Plus, Sparkles, Flame, TrendingUp, Zap } from 'lucide-react';
+import { Plus, Sparkles, ArrowRight } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
-import { useTheme } from 'next-themes';
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 export default function SpecialBundles({
@@ -17,42 +16,12 @@ export default function SpecialBundles({
     sale: number;
 }) {
     const t = useTranslations('Shop.MainPage.SpecialBundles');
-    const { resolvedTheme } = useTheme();
-    const [mounted, setMounted] = useState(false);
 
-    useEffect(() => setMounted(true), []);
-
-    if (!mounted) return null;
-
-    const colorSchemes = [
-        {
-            primary: '#FFD900',
-            secondary: '#B77100',
-            glow: 'rgba(255, 217, 0, 0.3)',
-            label: t('labels.flash'),
-            icon: <Zap size={12} fill='black' />,
-        },
-        {
-            primary: '#44FF00',
-            secondary: '#086200',
-            glow: 'rgba(68, 255, 0, 0.3)',
-            label: t('labels.popular'),
-            icon: <Flame size={12} fill='black' />,
-        },
-        {
-            primary: '#0095FF',
-            secondary: '#0018B7',
-            glow: 'rgba(0, 149, 255, 0.3)',
-            label: t('labels.ultimate'),
-            icon: <TrendingUp size={12} />,
-        },
-    ];
 
     return (
-        <div className='flex justify-center items-center gap-10 flex-wrap py-12'>
+        <div className='flex justify-center items-stretch gap-6 flex-wrap py-6 w-full max-w-5xl mx-auto'>
             {bundles.map((bundle, i) => {
-                const scheme = colorSchemes[i % colorSchemes.length];
-                const isLight = resolvedTheme === 'light';
+                const isPopular = i === 1;
 
                 const originalCosts = (
                     bundle.coinPackage.original * sale +
@@ -68,169 +37,107 @@ export default function SpecialBundles({
                 return (
                     <div
                         key={i}
-                        className='relative group flex flex-col items-center rounded-[2rem] border transition-all duration-500 hover:-translate-y-3 min-w-[340px]'
-                        style={{
-                            borderColor: isLight
-                                ? 'rgba(0,0,0,0.1)'
-                                : 'rgba(255,255,255,0.1)',
-                            boxShadow: `0 20px 50px -15px ${scheme.glow}, inset 0 0 20px rgba(255,255,255,0.05)`,
-                            background: isLight
-                                ? 'linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4))'
-                                : 'linear-gradient(135deg, rgba(20,20,20,0.8), rgba(0,0,0,0.6))',
-                            backdropFilter: 'blur(4px)',
-                        }}
+                        className={`relative flex flex-col justify-between rounded-2xl border p-6 sm:p-8 w-full sm:w-[320px] transition-all duration-300 ${
+                            isPopular
+                                ? 'border-blue-500/40 bg-blue-500/[0.03] shadow-md ring-1 ring-blue-500/20'
+                                : 'border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] hover:border-black/20 dark:hover:border-white/20'
+                        }`}
                     >
-                        <div className='absolute inset-0 pointer-events-none overflow-hidden rounded-[2rem]'>
-                            <div className='absolute top-0 -inset-full h-full w-1/2 z-5 block transform -skew-x-12 bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:animate-shine' />
-                        </div>
+                        {/* Top Badges */}
+                        <div className='flex items-center justify-between gap-2 mb-4'>
+                            {isPopular ? (
+                                <span className='inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-blue-600 text-white text-[11px] font-semibold tracking-wide'>
+                                    <Sparkles size={12} />
+                                    {t('labels.popular')}
+                                </span>
+                            ) : (
+                                <span className='inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-black/5 dark:bg-white/5 text-neutral-500 text-[11px] font-medium'>
+                                    Bundle
+                                </span>
+                            )}
 
-                        <div
-                            className='absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center gap-1 px-4 py-1.5 rounded-full text-black font-black text-[10px] uppercase tracking-widest shadow-xl border border-white/20'
-                            style={{ background: scheme.primary }}
-                        >
-                            {scheme.icon}
-                            {scheme.label}
-                        </div>
-
-                        <div className='absolute top-4 right-4 z-10'>
-                            <div className='bg-red-600 text-white text-[10px] font-black px-2 py-0.5 rounded-md shadow-md'>
+                            <span className='px-2 py-0.5 rounded-md bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 text-[11px] font-semibold'>
                                 {t('save', { percent: savings })}
-                            </div>
+                            </span>
                         </div>
 
-                        <div className='w-full pt-8 pb-4 text-center'>
-                            <h3
-                                className='text-3xl font-black uppercase italic tracking-tighter'
-                                style={{
-                                    color: scheme.primary,
-                                    textShadow: `0 0 15px ${scheme.glow}`,
-                                }}
-                            >
+                        {/* Bundle Title */}
+                        <div className='text-left mb-6'>
+                            <h3 className='text-2xl font-bold tracking-tight text-foreground'>
                                 {bundle.name}
                             </h3>
+                            <p className='text-xs text-neutral-500 mt-1'>
+                                Coins + VIP Subscription Package
+                            </p>
                         </div>
 
-                        <div className='flex flex-col items-center p-8 w-full space-y-8'>
-                            <div className='flex justify-center items-center gap-6 relative'>
-                                <div
-                                    className='absolute inset-0 blur-3xl opacity-20 scale-150'
-                                    style={{ background: scheme.primary }}
+                        {/* Bundled Content Showcase */}
+                        <div className='flex items-center justify-center gap-5 p-4 rounded-xl bg-black/[0.02] dark:bg-white/[0.03] border border-black/5 dark:border-white/5 mb-6'>
+                            <div className='flex flex-col items-center gap-1.5'>
+                                <Image
+                                    src={`/shop/coins/coins${bundle.coins}.svg`}
+                                    alt='Coins'
+                                    width={64}
+                                    height={64}
+                                    className='drop-shadow'
                                 />
-
-                                <div className='flex flex-col items-center animate-float relative z-10'>
-                                    <Image
-                                        src={`/shop/coins/coins${bundle.coins}.svg`}
-                                        alt='Coins'
-                                        width={85}
-                                        height={85}
-                                        className='drop-shadow-2xl'
-                                    />
-                                    <span className='text-xs font-black mt-2 bg-white/10 px-2 py-0.5 rounded-full backdrop-blur-md'>
-                                        {formatNumber(bundle.coins)}{' '}
-                                        {t('coins')}
-                                    </span>
-                                </div>
-
-                                <Plus
-                                    size={24}
-                                    className='text-black/20 dark:text-white/20 font-black'
-                                />
-
-                                <div className='flex flex-col items-center animate-float-delayed relative z-10'>
-                                    <Image
-                                        src={`/shop/subs/sub.svg`}
-                                        alt='Sub'
-                                        width={60}
-                                        height={60}
-                                        className='drop-shadow-2xl'
-                                    />
-                                    <span className='text-xs font-black mt-2 bg-black/10 dark:bg-white/10 px-2 py-0.5 rounded-full backdrop-blur-md'>
-                                        {bundle.subscription}{' '}
-                                        {bundle.subscription === 1
-                                            ? t('month')
-                                            : t('months')}
-                                    </span>
-                                </div>
+                                <span className='text-xs font-semibold text-foreground'>
+                                    {formatNumber(bundle.coins)} {t('coins')}
+                                </span>
                             </div>
 
-                            <div className='flex flex-col items-center bg-black/5 dark:bg-white/5 dark:bg-black/40 w-full py-5 rounded-2xl border border-black/5 dark:border-white/5 shadow-inner'>
-                                <div className='relative mb-1'>
-                                    <span className='text-sm opacity-40 line-through decoration-red-500/80 decoration-2 italic'>
+                            <Plus size={18} className='text-neutral-400 shrink-0' />
+
+                            <div className='flex flex-col items-center gap-1.5'>
+                                <Image
+                                    src={`/shop/subs/sub.svg`}
+                                    alt='Subscription'
+                                    width={50}
+                                    height={50}
+                                    className='drop-shadow'
+                                />
+                                <span className='text-xs font-semibold text-foreground'>
+                                    {bundle.subscription}{' '}
+                                    {bundle.subscription === 1
+                                        ? t('month')
+                                        : t('months')}
+                                </span>
+                            </div>
+                        </div>
+
+                        {/* Price & Checkout CTA */}
+                        <div className='space-y-4 pt-2'>
+                            <div className='flex items-baseline justify-between'>
+                                <div>
+                                    <span className='text-xs text-neutral-400 line-through mr-2'>
                                         €{originalCosts}
                                     </span>
-                                </div>
-                                <div className='flex items-baseline gap-1'>
-                                    <span
-                                        className='text-4xl font-black tracking-tighter'
-                                        style={{
-                                            background: `linear-gradient(to bottom, #fff, ${scheme.primary})`,
-                                            WebkitBackgroundClip: 'text',
-                                            WebkitTextFillColor: 'transparent',
-                                            WebkitTextStroke: isLight
-                                                ? '1px rgba(0,0,0,0.1)'
-                                                : 'none',
-                                            filter: `drop-shadow(0 0 20px ${scheme.glow})`,
-                                        }}
-                                    >
+                                    <span className='text-3xl font-extrabold tracking-tight text-foreground'>
                                         €{bundle.price.toFixed(2)}
                                     </span>
                                 </div>
+                                <span className='text-xs text-neutral-500'>
+                                    one-time
+                                </span>
                             </div>
 
-                            <div className='w-full relative group/btn'>
-                                <div
-                                    className='absolute -inset-0.5 rounded-xl blur opacity-30 group-hover/btn:opacity-100 transition duration-500'
-                                    style={{ background: scheme.primary }}
-                                />
-                                <Button
-                                    asChild
-                                    className='relative w-full h-14 uppercase font-black text-lg transition-all active:scale-95 rounded-xl border-t border-black/20 dark:border-white/20'
-                                    style={{
-                                        background: `linear-gradient(180deg, ${scheme.primary}, ${scheme.secondary})`,
-                                        color: '#000',
-                                        boxShadow: `0 4px 15px rgba(0,0,0,0.3)`,
-                                    }}
-                                >
-                                    <Link
-                                        href={`/shop/products/bundles/${bundle._id}`}
-                                    >
-                                        <div className='flex items-center gap-2'>
-                                            {t('buyNow')}
-                                            <Sparkles size={18} fill='black' />
-                                        </div>
-                                    </Link>
-                                </Button>
-                            </div>
+                            <Button
+                                asChild
+                                className={`w-full h-11 font-semibold rounded-xl transition-colors shadow-sm ${
+                                    isPopular
+                                        ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                                        : 'bg-foreground text-background hover:bg-foreground/90'
+                                }`}
+                            >
+                                <Link href={`/shop/products/bundles/${bundle._id}`}>
+                                    <span>{t('buyNow')}</span>
+                                    <ArrowRight size={15} className='ml-1.5' />
+                                </Link>
+                            </Button>
                         </div>
                     </div>
                 );
             })}
-
-            <style jsx global>{`
-                @keyframes shine {
-                    100% {
-                        left: 125%;
-                    }
-                }
-                .animate-shine {
-                    animation: shine 0.8s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-                }
-                @keyframes float {
-                    0%,
-                    100% {
-                        transform: translateY(0) rotate(0deg);
-                    }
-                    50% {
-                        transform: translateY(-12px) rotate(2deg);
-                    }
-                }
-                .animate-float {
-                    animation: float 4s ease-in-out infinite;
-                }
-                .animate-float-delayed {
-                    animation: float 4s ease-in-out infinite 0.5s;
-                }
-            `}</style>
         </div>
     );
 }

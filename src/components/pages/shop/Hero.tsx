@@ -50,7 +50,6 @@ export default function Hero({
 
             const rawRemaining = (diff / totalDuration) * 100;
             const rawProgress = 100 - rawRemaining;
-
             const clampedProgress = Math.max(0, Math.min(100, rawProgress));
 
             setProgress(clampedProgress);
@@ -64,54 +63,52 @@ export default function Hero({
     const offerActive = timeLeft && timeLeft !== '';
 
     return (
-        <div className='flex flex-col items-center pt-10 pb-6 w-full max-w-4xl px-4'>
-            <h1 className='text-5xl md:text-7xl font-black italic tracking-tighter uppercase leading-none text-center'>
+        <div className='flex flex-col items-center pt-8 pb-4 w-full max-w-4xl px-4'>
+            <h1 className='text-4xl sm:text-6xl font-extrabold tracking-tight text-center leading-[1.1]'>
                 {t.rich('title', {
                     gold: (chunks) => (
-                        <span className='text-transparent bg-clip-text bg-gradient-to-b from-yellow-300 to-yellow-600 drop-shadow-sm'>
+                        <span className='text-amber-500'>
                             {chunks}
                         </span>
                     ),
                     subscriptions: (chunks) => (
-                        <span className='text-transparent bg-clip-text bg-gradient-to-b from-yellow-300 to-yellow-600 drop-shadow-sm'>
+                        <span className='text-blue-500'>
                             {chunks}
                         </span>
                     ),
                 })}
             </h1>
 
-            <p className='mt-6 text-neutral-500 dark:text-neutral-400 max-w-lg text-center text-lg leading-relaxed font-medium'>
+            <p className='mt-4 text-neutral-600 dark:text-neutral-400 max-w-lg text-center text-base sm:text-lg leading-relaxed'>
                 {t('description')}
             </p>
 
             {offerActive && (
-                <div className='mt-12 relative group w-full max-w-md'>
-                    <div className='absolute inset-0 bg-orange-600/20 blur-3xl animate-pulse rounded-full' />
-
-                    <div className='relative overflow-hidden bg-white/5 dark:bg-neutral-900/30 backdrop-blur-xl border border-orange-500/30 dark:border-orange-500/20 p-8 rounded-[2.5rem] shadow-2xl flex flex-col items-center space-y-4'>
-                        <div className='flex flex-col items-center'>
-                            <div className='flex items-center gap-2 text-orange-500 font-black uppercase tracking-widest text-xs mb-2'>
-                                <Flame size={16} className='animate-bounce' />
+                <div className='mt-8 w-full max-w-md'>
+                    <div className='rounded-2xl border border-amber-500/30 bg-amber-500/5 dark:bg-amber-500/[0.03] p-6 flex flex-col items-center space-y-4 shadow-sm'>
+                        <div className='flex flex-col items-center text-center'>
+                            <div className='flex items-center gap-1.5 text-amber-500 text-xs font-semibold uppercase tracking-wider mb-1'>
+                                <Flame size={15} />
                                 {t('limitedOffersTitle')}
                             </div>
-                            <p className='text-sm text-neutral-600 dark:text-neutral-400 font-medium'>
+                            <p className='text-xs sm:text-sm text-neutral-600 dark:text-neutral-400'>
                                 {t('limitedOffersSubtitle')}
                             </p>
                         </div>
 
-                        <div className='flex flex-col items-center bg-black/5 dark:bg-white/5 w-full py-4 rounded-2xl border border-white/5'>
-                            <div className='text-[10px] uppercase tracking-[0.3em] text-neutral-500 mb-1 flex items-center gap-1'>
-                                <Timer size={10} /> {t('endsIn')}
+                        <div className='flex flex-col items-center bg-black/[0.03] dark:bg-white/[0.04] w-full py-3.5 rounded-xl border border-black/5 dark:border-white/5'>
+                            <div className='text-[11px] text-neutral-500 mb-1 flex items-center gap-1 font-medium'>
+                                <Timer size={12} /> {t('endsIn')}
                             </div>
-                            <div className='text-4xl font-mono font-black tracking-widest bg-gradient-to-b from-neutral-800 to-black dark:from-white dark:to-neutral-400 bg-clip-text text-transparent'>
+                            <div className='text-3xl font-mono font-bold tracking-wider text-foreground'>
                                 {timeLeft}
                             </div>
                         </div>
 
-                        <div className='w-full space-y-2'>
+                        <div className='w-full'>
                             <Progress
                                 value={Number(progress) || 0}
-                                className='bg-orange-950/50 border'
+                                className='h-1.5 bg-neutral-200 dark:bg-neutral-800'
                             />
                         </div>
                     </div>

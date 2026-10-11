@@ -8,12 +8,11 @@ import {
     Features,
     FAQ,
     Community,
-    GlowItems,
 } from '@/components/pages/sigmod';
 
 export default function SigModPage() {
     return (
-        <main className='max-w-5xl mx-auto px-6 md:px-16 pt-20 space-y-24'>
+        <main className='max-w-5xl mx-auto px-6 md:px-16 pt-16 md:pt-20 space-y-20'>
             <Hero />
             <CoreFeatures />
             <Preview />
@@ -21,7 +20,6 @@ export default function SigModPage() {
             <Features />
             <FAQ />
             <Community />
-            <GlowItems />
         </main>
     );
 }

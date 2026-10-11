@@ -9,65 +9,69 @@ export default function ContactPage() {
     const t = useTranslations('Shop.MainPage.Contact');
 
     return (
-        <div className='flex flex-col items-center space-y-12 py-10 w-full max-w-4xl'>
+        <section className='flex flex-col items-center space-y-10 py-6 w-full max-w-4xl mx-auto'>
             <div className='text-center space-y-2'>
-                <h2 className='text-4xl md:text-5xl font-black uppercase italic tracking-tighter'>
+                <h2 className='text-3xl sm:text-4xl font-extrabold tracking-tight text-foreground'>
                     {t('title')}
                 </h2>
-                <div className='h-1 w-20 bg-primary mx-auto rounded-full' />
+                <p className='text-sm text-neutral-500 max-w-md mx-auto'>
+                    Need help with an order or have questions? Get in touch with us anytime.
+                </p>
             </div>
 
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-8 w-full px-4'>
-                <div className='group relative flex flex-col items-center p-10 bg-black/5 dark:bg-white/5 dark:bg-neutral-900/40 backdrop-blur-xl rounded-2xl border border-black/10 dark:border-white/10 dark:border-white/5 transition-all duration-300 hover:bg-white/10'>
-                    <div className='w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform'>
-                        <Mail className='w-7 h-7 text-primary' />
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-6 w-full px-4'>
+                <div className='flex flex-col items-center text-center p-8 bg-black/[0.02] dark:bg-white/[0.02] rounded-2xl border border-black/10 dark:border-white/10 space-y-3'>
+                    <div className='w-12 h-12 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-500 mb-1'>
+                        <Mail className='w-6 h-6' />
                     </div>
 
-                    <h3 className='text-lg font-bold mb-2'>
+                    <h3 className='text-base font-bold text-foreground'>
                         {t('supportEmail')}
                     </h3>
-                    <p className='text-neutral-400 text-sm mb-6 text-center'>
+                    <p className='text-neutral-500 text-xs max-w-xs'>
                         {t('emailResponseTime')}
                     </p>
 
                     <a
                         href='mailto:sigmallymod@proton.me'
-                        className='text-lg font-medium hover:text-primary transition-colors flex items-center gap-2'
+                        className='text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline pt-2 inline-flex items-center gap-1.5'
                     >
                         sigmallymod@proton.me
-                        <ExternalLink className='w-4 h-4 opacity-50' />
+                        <ExternalLink className='w-3.5 h-3.5' />
                     </a>
                 </div>
 
-                <div className='group relative flex flex-col items-center p-10 bg-black/5 dark:bg-[#5865F2]/5 backdrop-blur-xl rounded-2xl border border-black/10 dark:border-[#5865F2]/20 transition-all duration-300 hover:bg-[#5865F2]/10'>
-                    <div className='w-14 h-14 bg-[#5865F2]/20 rounded-full flex items-center justify-center mb-6 group-hover:scale-110 transition-transform'>
-                        <MessageSquare className='w-7 h-7 text-[#5865F2]' />
+                <div className='flex flex-col items-center text-center p-8 bg-black/[0.02] dark:bg-white/[0.02] rounded-2xl border border-black/10 dark:border-white/10 space-y-3'>
+                    <div className='w-12 h-12 bg-[#5865F2]/10 rounded-xl flex items-center justify-center text-[#5865F2] mb-1'>
+                        <MessageSquare className='w-6 h-6' />
                     </div>
 
-                    <h3 className='text-lg font-bold mb-2'>
+                    <h3 className='text-base font-bold text-foreground'>
                         {t('discordTitle')}
                     </h3>
-                    <p className='text-neutral-400 text-sm mb-6 text-center'>
+                    <p className='text-neutral-500 text-xs max-w-xs'>
                         {t('discordDesc')}
                     </p>
 
-                    <Button
-                        asChild
-                        className='bg-[#5865F2] hover:bg-[#4752C4] text-white rounded-full px-8 py-6 h-auto text-md font-bold transition-all hover:shadow-[0_0_20px_rgba(88,101,242,0.4)]'
-                    >
-                        <Link
-                            href='https://discord.gg/QyUhvUC8AD'
-                            target='_blank'
+                    <div className='pt-2'>
+                        <Button
+                            asChild
+                            className='bg-[#5865F2] hover:bg-[#4752C4] text-white rounded-full px-6 h-10 text-xs font-semibold shadow-sm'
                         >
-                            {t('createTicket')}
-                        </Link>
-                    </Button>
+                            <Link
+                                href='https://discord.gg/QyUhvUC8AD'
+                                target='_blank'
+                            >
+                                {t('createTicket')}
+                            </Link>
+                        </Button>
+                    </div>
                 </div>
             </div>
 
-            <p className='text-xs uppercase tracking-[0.3em] text-neutral-600 dark:text-neutral-500'>
+            <p className='text-xs text-neutral-400 text-center'>
                 {t('footerNote')}
             </p>
-        </div>
+        </section>
     );
 }

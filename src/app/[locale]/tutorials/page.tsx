@@ -7,7 +7,6 @@ import { useTranslations } from 'next-intl';
 import {
     Search,
     Upload,
-    PlusCircle,
     PlayCircle,
     Image as ImageIcon,
     Filter,
@@ -17,6 +16,7 @@ import {
     Heart,
     ArrowUpRight,
     SlidersHorizontal,
+    Video,
 } from 'lucide-react';
 import { Youtube } from '@/components/icons';
 import { Input } from '@/components/ui/input';
@@ -80,65 +80,54 @@ export default function TutorialsPage() {
     };
 
     return (
-        <div className='max-w-7xl mx-auto px-6 py-12 space-y-8'>
-            <header className='max-w-3xl space-y-3'>
-                <h1 className='text-4xl md:text-6xl font-black uppercase italic tracking-tighter'>
-                    {t('title')}
-                </h1>
-                <p className='text-lg leading-relaxed text-neutral-600 dark:text-neutral-400'>
-                    {t('description')}
-                </p>
-            </header>
-            <div className='flex flex-col sm:flex-row justify-between items-center p-4 rounded-3xl bg-black/5 dark:bg-white/5 border border-white/10 gap-4 backdrop-blur-md'>
-                <div className='flex items-center gap-3'>
-                    <div className='p-2 bg-primary/20 rounded-xl'>
-                        <PlusCircle className='text-primary' size={24} />
-                    </div>
-                    <span className='font-black uppercase italic text-sm tracking-widest'>
-                        {t('communityHub')}
-                    </span>
+        <div className='max-w-7xl mx-auto px-6 py-12 md:py-16 space-y-8'>
+            {/* Header */}
+            <div className='flex flex-col md:flex-row justify-between items-start md:items-end gap-6'>
+                <div className='max-w-2xl space-y-3'>
+                    <h1 className='text-3xl sm:text-5xl font-extrabold tracking-tight text-foreground'>
+                        {t('title')}
+                    </h1>
+                    <p className='text-base text-neutral-600 dark:text-neutral-400 leading-relaxed'>
+                        {t('description')}
+                    </p>
                 </div>
-                <div className='flex gap-2'>
+
+                {/* Session / Action Controls */}
+                <div className='flex items-center gap-2.5'>
                     {session ? (
                         <>
                             {(session.user.role === 'admin' ||
                                 session.user.role === 'moderator') && (
                                 <Button
                                     asChild
-                                    variant='default'
-                                    className='bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 border border-blue-500/20 font-bold uppercase italic rounded-xl h-10'
+                                    variant='outline'
+                                    size='sm'
+                                    className='rounded-xl h-10 border-black/10 dark:border-white/10 text-xs font-semibold'
                                 >
                                     <Link href='/tutorials/admin'>
-                                        <ShieldUser
-                                            size={16}
-                                            className='mr-2'
-                                        />{' '}
+                                        <ShieldUser size={15} className='mr-1.5' />
                                         {t('admin')}
                                     </Link>
                                 </Button>
                             )}
-                            <div className='relative group'>
-                                <div className='absolute -inset-1.5 bg-gradient-to-r from-emerald-600 to-emerald-300 rounded-xl blur-lg opacity-0 group-hover:opacity-50 transition-all duration-500' />
-                                <Button
-                                    asChild
-                                    className='relative bg-gradient-to-br from-emerald-400 via-emerald-500 to-teal-600 text-neutral-800 font-black uppercase italic rounded-xl h-10 px-6 transition-all duration-300 hover:scale-105 active:scale-95 border border-emerald-300/30 shadow-[inset_0_1px_1px_rgba(255,255,255,0.3)]'
-                                >
-                                    <Link
-                                        href='/tutorials/dashboard'
-                                        className='flex items-center'
-                                    >
-                                        <Upload
-                                            size={16}
-                                            className='mr-2 stroke-[3px]'
-                                        />
-                                        {t('upload')}
-                                    </Link>
-                                </Button>
-                            </div>
+
+                            <Button
+                                asChild
+                                size='sm'
+                                className='bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl h-10 px-5 shadow-sm text-xs'
+                            >
+                                <Link href='/tutorials/dashboard'>
+                                    <Upload size={15} className='mr-1.5' />
+                                    {t('upload')}
+                                </Link>
+                            </Button>
+
                             <Button
                                 onClick={() => signOut()}
                                 variant='ghost'
-                                className='text-neutral-500 hover:text-red-400 hover:bg-red-400/10 rounded-xl h-10 transition-all'
+                                size='icon'
+                                className='text-neutral-500 hover:text-red-500 rounded-xl h-10 w-10'
+                                title='Sign out'
                             >
                                 <LogOut size={16} />
                             </Button>
@@ -146,7 +135,7 @@ export default function TutorialsPage() {
                     ) : (
                         <Button
                             onClick={() => signIn('discord')}
-                            className='bg-[#5865F2] hover:bg-[#4752C4] text-white font-bold uppercase italic rounded-xl h-10 shadow-lg shadow-[#5865F2]/20'
+                            className='bg-[#5865F2] hover:bg-[#4752C4] text-white font-semibold rounded-xl h-10 px-5 text-xs shadow-sm'
                         >
                             {t('loginDiscord')}
                         </Button>
@@ -154,49 +143,41 @@ export default function TutorialsPage() {
                 </div>
             </div>
 
-            <div className='grid grid-cols-1 lg:grid-cols-4 gap-4 items-end'>
-                <div className='lg:col-span-2 relative group'>
-                    <div className='flex items-center gap-2 mb-2 text-neutral-500 text-[10px] font-black uppercase italic tracking-widest'>
-                        <Search size={12} className='text-primary' />{' '}
-                        {t('search')}
-                    </div>
+            {/* Filters Row */}
+            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-4 items-end pt-2'>
+                <div className='lg:col-span-5 relative'>
                     <Input
                         placeholder={t('searchPlaceholder')}
-                        className='pl-4 bg-black/5 dark:bg-white/5 border-black/10 dark:border-white/10 placeholder:text-neutral-500 dark:placeholder:text-neutral-600 h-12 rounded-xl focus:ring-1 ring-primary/50 transition-all font-medium'
+                        className='pl-10 bg-black/[0.02] dark:bg-white/[0.03] border-black/10 dark:border-white/10 h-11 rounded-xl text-sm focus:ring-1 focus:ring-blue-500'
                         onChange={(e) => setSearch(e.target.value)}
+                    />
+                    <Search
+                        size={16}
+                        className='absolute left-3.5 top-1/2 -translate-y-1/2 text-neutral-400 pointer-events-none'
                     />
                 </div>
 
-                <div className='space-y-2'>
-                    <div className='flex items-center gap-2 text-neutral-500 text-[10px] font-black uppercase italic tracking-widest'>
-                        <Filter size={12} className='text-primary' />{' '}
-                        {t('category')}
-                    </div>
+                <div className='lg:col-span-3'>
                     <Select value={activeTag} onValueChange={setActiveTag}>
-                        <SelectTrigger className='bg-black/5 dark:bg-white/5 border-black/10 dark:border-white/10 h-12 rounded-xl font-bold uppercase italic text-[11px]'>
+                        <SelectTrigger className='bg-black/[0.02] dark:bg-white/[0.03] border-black/10 dark:border-white/10 h-11 rounded-xl text-xs font-medium'>
                             <SelectValue placeholder={t('category')} />
                         </SelectTrigger>
-                        <SelectContent className='bg-secondary dark:bg-[#0A0A0A] border-black/10 dark:border-white/10'>
-                            <SelectItem
-                                value='all'
-                                className='font-bold uppercase italic text-[11px]'
-                            >
+                        <SelectContent className='border-black/10 dark:border-white/10'>
+                            <SelectItem value='all' className='text-xs'>
                                 {t('allCategories')}
                             </SelectItem>
                             {tags.map((tag) => (
                                 <SelectItem
                                     key={tag._id}
                                     value={tag.slug}
-                                    className='font-bold uppercase italic text-[11px]'
+                                    className='text-xs'
                                 >
                                     <div className='flex items-center gap-2'>
-                                        <div
+                                        <span
                                             className='w-2 h-2 rounded-full'
-                                            style={{
-                                                backgroundColor: tag.color,
-                                            }}
+                                            style={{ backgroundColor: tag.color }}
                                         />
-                                        {tag.name}
+                                        <span>{tag.name}</span>
                                     </div>
                                 </SelectItem>
                             ))}
@@ -204,189 +185,156 @@ export default function TutorialsPage() {
                     </Select>
                 </div>
 
-                <div className='space-y-2'>
-                    <div className='flex items-center gap-2 text-neutral-500 text-[10px] font-black uppercase italic tracking-widest'>
-                        <SlidersHorizontal size={12} className='text-primary' />{' '}
-                        {t('sortBy')}
-                    </div>
+                <div className='lg:col-span-2'>
                     <Select value={sortBy} onValueChange={setSortBy}>
-                        <SelectTrigger className='bg-black/5 dark:bg-white/5 border-black/10 dark:border-white/10 h-12 rounded-xl font-bold uppercase italic text-[11px]'>
+                        <SelectTrigger className='bg-black/[0.02] dark:bg-white/[0.03] border-black/10 dark:border-white/10 h-11 rounded-xl text-xs font-medium'>
                             <SelectValue />
                         </SelectTrigger>
-                        <SelectContent className='bg-secondary dark:bg-[#0A0A0A] border-white/10'>
-                            <SelectItem
-                                value='newest'
-                                className='font-bold uppercase italic text-[11px]'
-                            >
+                        <SelectContent className='border-black/10 dark:border-white/10'>
+                            <SelectItem value='newest' className='text-xs'>
                                 {t('newestFirst')}
                             </SelectItem>
-                            <SelectItem
-                                value='views'
-                                className='font-bold uppercase italic text-[11px]'
-                            >
+                            <SelectItem value='views' className='text-xs'>
                                 {t('mostViewed')}
                             </SelectItem>
-                            <SelectItem
-                                value='likes'
-                                className='font-bold uppercase italic text-[11px]'
-                            >
+                            <SelectItem value='likes' className='text-xs'>
                                 {t('mostLiked')}
                             </SelectItem>
                         </SelectContent>
                     </Select>
                 </div>
+
+                {/* Content Type Filter Pills */}
+                <div className='lg:col-span-2 flex bg-black/[0.03] dark:bg-white/[0.04] p-1 rounded-xl border border-black/5 dark:border-white/5 h-11 items-center'>
+                    {['all', 'youtube', 'video', 'images'].map((type) => (
+                        <button
+                            key={type}
+                            onClick={() => setActiveType(type)}
+                            className={`flex-1 text-[11px] font-medium rounded-lg transition-colors py-1.5 ${
+                                activeType === type
+                                    ? 'bg-background text-foreground shadow-sm'
+                                    : 'text-neutral-500 hover:text-foreground'
+                            }`}
+                        >
+                            {t(`type.${type}`)}
+                        </button>
+                    ))}
+                </div>
             </div>
 
-            <div className='flex bg-black/5 dark:bg-white/5 p-1 rounded-xl border border-white/10 max-w-sm'>
-                {['all', 'youtube', 'video', 'images'].map((type) => (
-                    <button
-                        key={type}
-                        onClick={() => setActiveType(type)}
-                        className={`flex-1 text-[10px] font-black uppercase italic rounded-lg transition-all py-2 ${
-                            activeType === type
-                                ? 'bg-black/10 dark:bg-white/10 text-primary shadow-inner'
-                                : 'text-neutral-500 hover:text-primary'
-                        }`}
-                    >
-                        {t(`type.${type}`)}
-                    </button>
-                ))}
-            </div>
-
+            {/* Tutorials Grid */}
             {loading ? (
-                <div className='py-32 text-center animate-pulse font-black italic text-neutral-600 uppercase tracking-widest'>
+                <div className='py-28 text-center text-sm text-neutral-400 animate-pulse'>
                     {t('syncing')}
                 </div>
+            ) : filtered.length === 0 ? (
+                <div className='py-24 text-center rounded-2xl border border-dashed border-black/10 dark:border-white/10 p-12'>
+                    <p className='text-neutral-500 text-sm'>
+                        No tutorials found matching your search.
+                    </p>
+                </div>
             ) : (
-                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
-                    {filtered.map((x) => (
-                        <Link
-                            href={`/tutorials/${x.slug || x._id}`}
-                            key={x._id}
-                            className='group relative block p-px rounded-[2.2rem] bg-gradient-to-br from-white/10 to-transparent hover:from-primary/20 transition-all duration-500'
-                        >
-                            <div className='h-full overflow-hidden rounded-[2.1rem] bg-secondary dark:bg-[#0A0A0A] border border-black/5 dark:border-white/5 flex flex-col'>
-                                <div className='relative aspect-video overflow-hidden border-b border-black/5 border-white/5 bg-neutral-200 dark:bg-neutral-900'>
-                                    {(() => {
-                                        const ytThumb =
-                                            x.type === 'youtube' &&
-                                            x.contentUrls?.[0]
-                                                ? getYoutubeThumbnail(
-                                                      x.contentUrls[0]
-                                                  )
-                                                : null;
-                                        const displayImage =
-                                            x.thumbnailUrl ||
-                                            ytThumb ||
-                                            (x.type === 'images' &&
-                                            x.contentUrls?.[0]
-                                                ? x.contentUrls[0]
-                                                : null);
-                                        if (displayImage) {
-                                            return (
-                                                <Image
-                                                    src={displayImage}
-                                                    alt={x.title}
-                                                    width={400}
-                                                    height={200}
-                                                    className='w-full h-full object-cover transition-transform duration-500 group-hover:scale-110'
-                                                    onError={(e) => {
-                                                        const target =
-                                                            e.target as HTMLImageElement;
-                                                        if (
-                                                            ytThumb &&
-                                                            target.src.includes(
-                                                                'maxresdefault'
-                                                            )
-                                                        ) {
-                                                            target.src =
-                                                                ytThumb.replace(
-                                                                    'maxresdefault',
-                                                                    'hqdefault'
-                                                                );
-                                                        }
-                                                    }}
-                                                />
-                                            );
-                                        }
-                                        return (
-                                            <div className='w-full h-full flex items-center justify-center bg-gradient-to-br from-neutral-800 to-neutral-900'>
-                                                <div className='opacity-20 group-hover:opacity-40 transition-opacity'>
-                                                    {x.type === 'youtube' ? (
-                                                        <Youtube size={48} />
-                                                    ) : x.type === 'video' ? (
-                                                        <PlayCircle size={48} />
-                                                    ) : (
-                                                        <ImageIcon size={48} />
-                                                    )}
-                                                </div>
-                                            </div>
-                                        );
-                                    })()}
-                                    <div className='absolute top-4 left-4 p-2 rounded-xl bg-white/60 dark:bg-black/60 backdrop-blur-md border border-black/10 dark:border-white/10 text-primary'>
-                                        {x.type === 'youtube' ? (
-                                            <Youtube size={16} />
-                                        ) : x.type === 'video' ? (
-                                            <PlayCircle size={16} />
-                                        ) : (
-                                            <ImageIcon size={16} />
-                                        )}
-                                    </div>
-                                </div>
-                                <div className='absolute top-4 right-4 flex items-center gap-2 p-1.5 pr-3 rounded-full bg-white/60 dark:bg-black/60 backdrop-blur-md border border-black/10 dark:border-white/10'>
-                                    {x.authorId?.image ? (
+                <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-2'>
+                    {filtered.map((x) => {
+                        const ytThumb =
+                            x.type === 'youtube' && x.contentUrls?.[0]
+                                ? getYoutubeThumbnail(x.contentUrls[0])
+                                : null;
+                        const displayImage =
+                            x.thumbnailUrl ||
+                            ytThumb ||
+                            (x.type === 'images' && x.contentUrls?.[0]
+                                ? x.contentUrls[0]
+                                : null);
+
+                        return (
+                            <Link
+                                href={`/tutorials/${x.slug || x._id}`}
+                                key={x._id}
+                                className='group flex flex-col rounded-2xl border border-black/10 dark:border-white/10 bg-black/[0.02] dark:bg-white/[0.02] hover:border-black/20 dark:hover:border-white/20 transition-all overflow-hidden shadow-sm'
+                            >
+                                <div className='relative aspect-video overflow-hidden bg-neutral-900'>
+                                    {displayImage ? (
                                         <Image
-                                            src={x.authorId.image}
-                                            width={20}
-                                            height={20}
-                                            className='w-5 h-5 rounded-full object-cover'
-                                            alt=''
+                                            src={displayImage}
+                                            alt={x.title}
+                                            width={400}
+                                            height={225}
+                                            className='w-full h-full object-cover transition-transform duration-300 group-hover:scale-105'
                                         />
                                     ) : (
-                                        <div className='w-5 h-5 rounded-full bg-white/10' />
+                                        <div className='w-full h-full flex items-center justify-center text-neutral-600'>
+                                            {x.type === 'youtube' ? (
+                                                <Youtube size={36} />
+                                            ) : x.type === 'video' ? (
+                                                <PlayCircle size={36} />
+                                            ) : (
+                                                <ImageIcon size={36} />
+                                            )}
+                                        </div>
                                     )}
-                                    <span className='text-[9px] font-bold text-black/90 dark:text-white/90 uppercase tracking-wider'>
-                                        {t('by')}{' '}
-                                        {x.authorId?.name || t('unknown')}
-                                    </span>
+
+                                    {/* Type badge */}
+                                    <div className='absolute top-3 left-3 p-1.5 rounded-lg bg-black/60 text-white backdrop-blur-md text-xs'>
+                                        {x.type === 'youtube' ? (
+                                            <Youtube size={14} />
+                                        ) : x.type === 'video' ? (
+                                            <PlayCircle size={14} />
+                                        ) : (
+                                            <ImageIcon size={14} />
+                                        )}
+                                    </div>
+
+                                    {/* Author tag */}
+                                    <div className='absolute top-3 right-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md text-[11px] text-white'>
+                                        {x.authorId?.image ? (
+                                            <Image
+                                                src={x.authorId.image}
+                                                width={16}
+                                                height={16}
+                                                className='w-4 h-4 rounded-full object-cover'
+                                                alt=''
+                                            />
+                                        ) : null}
+                                        <span className='truncate max-w-[100px]'>
+                                            {x.authorId?.name || t('unknown')}
+                                        </span>
+                                    </div>
                                 </div>
-                                <div className='p-6 flex flex-col flex-grow'>
-                                    <h3 className='text-xl font-black uppercase italic tracking-tighter mb-6 leading-tight text-neutral-700 dark:text-neutral-100 group-hover:text-primary transition-colors line-clamp-2'>
+
+                                <div className='p-5 flex flex-col flex-1 justify-between space-y-4'>
+                                    <h3 className='text-base font-bold text-foreground group-hover:text-blue-500 transition-colors line-clamp-2 leading-snug'>
                                         {x.title}
                                     </h3>
 
-                                    <div className='mt-auto pt-5 border-t border-white/5 flex items-center justify-between'>
-                                        <div className='flex items-center gap-4'>
-                                            <div className='flex items-center gap-1.5 text-neutral-700 dark:text-neutral-500 group-hover:text-neutral-500 dark:group-hover:text-neutral-300 transition-colors'>
-                                                <Eye size={14} />
-                                                <span className='text-[10px] font-black italic uppercase'>
-                                                    {x.views || 0}
-                                                </span>
-                                            </div>
-                                            <div className='flex items-center gap-1.5 text-neutral-600 dark:text-neutral-500 group-hover:text-red-400 transition-colors'>
+                                    <div className='pt-3 border-t border-black/5 dark:border-white/5 flex items-center justify-between text-xs text-neutral-500'>
+                                        <div className='flex items-center gap-3.5'>
+                                            <span className='flex items-center gap-1'>
+                                                <Eye size={13} />
+                                                <span>{x.views || 0}</span>
+                                            </span>
+                                            <span className='flex items-center gap-1'>
                                                 <Heart
-                                                    size={14}
+                                                    size={13}
                                                     className={
                                                         x.likes?.length > 0
-                                                            ? 'fill-current'
+                                                            ? 'fill-red-500 text-red-500'
                                                             : ''
                                                     }
                                                 />
-                                                <span className='text-[10px] font-black italic uppercase'>
-                                                    {x.likes?.length || 0}
-                                                </span>
-                                            </div>
+                                                <span>{x.likes?.length || 0}</span>
+                                            </span>
                                         </div>
 
-                                        <div className='flex items-center gap-1 text-primary text-[10px] font-black uppercase italic opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all'>
-                                            {t('view')}{' '}
-                                            <ArrowUpRight size={14} />
-                                        </div>
+                                        <span className='inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 font-medium group-hover:translate-x-0.5 transition-transform'>
+                                            {t('view')}
+                                            <ArrowUpRight size={13} />
+                                        </span>
                                     </div>
                                 </div>
-                            </div>
-                        </Link>
-                    ))}
+                            </Link>
+                        );
+                    })}
                 </div>
             )}
         </div>

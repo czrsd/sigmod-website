@@ -6,7 +6,7 @@ import { detectBrowser } from '@/utils/getLink';
 import { Link } from '@/i18n/navigation';
 import { usePathname } from 'next/navigation';
 import { useTranslations } from 'next-intl';
-import { ChevronDown, ChevronUp, LayoutDashboard } from 'lucide-react';
+import { ChevronDown, ChevronUp, BookOpen } from 'lucide-react';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
     const [browser, setBrowser] = useState<string | null>(null);
@@ -35,77 +35,90 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         browser === 'firefox' ? steps.filter((s) => !s.skipIfFirefox) : steps;
 
     return (
-        <div className='flex flex-col md:flex-row w-full min-h-screen bg-secondary'>
-            <div className='md:hidden p-4 flex items-center justify-between border-b border-white/5 bg-black/50 backdrop-blur-xl sticky top-0 z-50'>
-                <div className='flex items-center gap-2'>
-                    <LayoutDashboard size={18} className='text-blue-500' />
-                    <span className='font-black uppercase tracking-tighter text-white'>
+        <div className='flex flex-col md:flex-row w-full min-h-screen bg-background'>
+            {/* Mobile guide navigation header */}
+            <div className='md:hidden p-4 flex items-center justify-between border-b border-black/5 dark:border-white/10 bg-background/80 backdrop-blur-md sticky top-0 z-40'>
+                <div className='flex items-center gap-2.5'>
+                    <BookOpen size={18} className='text-blue-500' />
+                    <span className='font-bold text-sm text-foreground'>
                         {t('title')}
                     </span>
                 </div>
                 <Button
                     onClick={() => setMenuOpen(!menuOpen)}
-                    size='icon'
-                    variant='ghost'
-                    className='text-white'
+                    size='sm'
+                    variant='outline'
+                    className='h-8 px-3 rounded-lg text-xs font-medium'
                 >
-                    {menuOpen ? <ChevronUp /> : <ChevronDown />}
+                    {menuOpen ? 'Hide Steps' : 'View Steps'}
+                    {menuOpen ? <ChevronUp size={14} className='ml-1' /> : <ChevronDown size={14} className='ml-1' />}
                 </Button>
             </div>
 
+            {/* Sidebar */}
             <aside
                 className={`${
                     menuOpen ? 'block' : 'hidden'
-                } md:block w-full md:w-80 p-6 border-r border-white/5 bg-secondary dark:bg-[#080808]`}
+                } md:block w-full md:w-72 lg:w-80 p-6 md:border-r border-black/5 dark:border-white/10 bg-black/[0.01] dark:bg-black/20 shrink-0`}
             >
-                <div className='sticky top-10'>
-                    <div className='hidden md:flex items-center gap-3 mb-10 px-4'>
-                        <div className='w-1 h-6 bg-blue-600 rounded-full' />
-                        <span className='font-black text-xl italic uppercase tracking-tighter dark:text-white'>
-                            {t('title')}
-                        </span>
+                <div className='sticky top-20 space-y-6'>
+                    <div className='hidden md:block space-y-1 px-2'>
+                        <div className='flex items-center gap-2'>
+                            <BookOpen size={18} className='text-blue-500' />
+                            <h2 className='font-bold text-base text-foreground'>
+                                {t('title')}
+                            </h2>
+                        </div>
+                        <p className='text-xs text-neutral-500'>
+                            Step-by-step setup walkthrough
+                        </p>
                     </div>
 
                     <nav className='flex flex-col gap-1.5'>
                         {filteredSteps.map((step, i) => {
+                            const currentPath = pathname.replace(/^\/[a-z]{2}/, '');
                             const isActive =
-                                pathname.replace(/^\/[a-z]{2}/, '') ===
-                                step.href;
+                                currentPath === step.href ||
+                                (step.href === '/guide' &&
+                                    (currentPath === '/guide' || currentPath === ''));
+
                             return (
-                                <Button
+                                <Link
                                     key={step.href}
-                                    variant='ghost'
-                                    asChild
-                                    className={`justify-start h-12 rounded-xl transition-all duration-300 ${
+                                    href={step.href}
+                                    onClick={() => setMenuOpen(false)}
+                                    className={`flex items-center gap-3.5 px-3.5 py-2.5 rounded-xl text-sm transition-all ${
                                         isActive
-                                            ? 'bg-blue-600/10 text-blue-400 font-bold border border-blue-600/20'
-                                            : 'text-neutral-500 hover:text-black dark:hover:text-white hover:bg-white/5'
+                                            ? 'bg-blue-600/10 text-blue-600 dark:text-blue-400 font-semibold border border-blue-600/20'
+                                            : 'text-neutral-600 dark:text-neutral-400 hover:text-foreground hover:bg-black/[0.03] dark:hover:bg-white/[0.04]'
                                     }`}
                                 >
-                                    <Link
-                                        href={step.href}
-                                        className='flex items-center gap-4'
+                                    <span
+                                        className={`w-6 h-6 rounded-lg text-xs flex items-center justify-center font-medium shrink-0 transition-colors ${
+                                            isActive
+                                                ? 'bg-blue-600 text-white'
+                                                : 'bg-black/5 dark:bg-white/5 text-neutral-500'
+                                        }`}
                                     >
-                                        <span
-                                            className={`text-[10px] w-5 h-5 flex items-center justify-center rounded-md border ${
-                                                isActive
-                                                    ? 'border-blue-400/30 bg-blue-400/20'
-                                                    : 'border-neutral-800'
-                                            }`}
-                                        >
-                                            {i + 1}
-                                        </span>
-                                        {step.label}
-                                    </Link>
-                                </Button>
+                                        {i + 1}
+                                    </span>
+                                    <span className='truncate'>{step.label}</span>
+                                </Link>
                             );
                         })}
                     </nav>
+
+                    {browser && (
+                        <div className='px-3 py-2.5 rounded-xl bg-black/[0.02] dark:bg-white/[0.02] border border-black/5 dark:border-white/10 text-xs text-neutral-500'>
+                            Browser: <span className='capitalize font-medium text-foreground'>{browser}</span>
+                        </div>
+                    )}
                 </div>
             </aside>
 
-            <main className='flex-1 p-6 md:p-12 lg:p-20 bg-gradient-to-br from-white to-neutral-300 dark:from-black dark:to-neutral-900'>
-                <div className='max-w-5xl mx-auto'>{children}</div>
+            {/* Main Content */}
+            <main className='flex-1 p-6 md:p-12 lg:p-16'>
+                <div className='max-w-4xl mx-auto'>{children}</div>
             </main>
         </div>
     );

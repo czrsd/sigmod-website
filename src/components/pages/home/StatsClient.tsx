@@ -27,17 +27,17 @@ function StatItem({
     suffix?: string;
 }) {
     return (
-        <div className='flex flex-col min-w-[80px]'>
+        <div className='flex flex-col min-w-[70px]'>
             <div className='flex items-center gap-2'>
-                <span className='text-lg md:text-3xl w-full font-black italic tracking-tighter leading-none'>
+                <span className='text-2xl md:text-3xl font-bold tracking-tight text-foreground'>
                     {formatStat(value)}
                     {value !== null ? suffix : null}
                 </span>
                 {hasPulse && (
-                    <div className='w-2 h-2 rounded-full bg-green-500 animate-pulse' />
+                    <span className='w-2 h-2 rounded-full bg-emerald-500 ring-4 ring-emerald-500/20' />
                 )}
             </div>
-            <span className='text-[10px] uppercase font-bold tracking-[0.2em] text-neutral-600 dark:text-neutral-300 mt-2'>
+            <span className='text-xs text-neutral-500 dark:text-neutral-400 font-medium mt-1'>
                 {label}
             </span>
         </div>
@@ -46,10 +46,10 @@ function StatItem({
 
 function StatsSkeleton() {
     return (
-        <div className='pt-4 flex gap-12'>
-            <div className='h-[41px] md:h-[53px] w-[80px] bg-neutral-200 dark:bg-neutral-800 animate-pulse rounded-lg' />
-            <div className='h-[41px] md:h-[53px] w-[80px] bg-neutral-200 dark:bg-neutral-800 animate-pulse rounded-lg' />
-            <div className='h-[41px] md:h-[53px] w-[80px] bg-neutral-200 dark:bg-neutral-800 animate-pulse rounded-lg' />
+        <div className='pt-2 flex gap-8 sm:gap-12 justify-center lg:justify-start'>
+            <div className='h-11 w-20 bg-neutral-200 dark:bg-neutral-800 animate-pulse rounded-lg' />
+            <div className='h-11 w-20 bg-neutral-200 dark:bg-neutral-800 animate-pulse rounded-lg' />
+            <div className='h-11 w-20 bg-neutral-200 dark:bg-neutral-800 animate-pulse rounded-lg' />
         </div>
     );
 }
@@ -106,11 +106,11 @@ export default function StatsClient() {
     }
 
     return (
-        <div className='pt-4 flex flex-row items-center justify-center lg:justify-start gap-12'>
+        <div className='pt-2 flex flex-row items-center justify-center lg:justify-start gap-8 sm:gap-10'>
             <StatItem value={stats.total} label={t('stats.total')} />
-            <div className='w-px h-10 bg-white/10 hidden sm:block' />
+            <div className='w-px h-8 bg-black/10 dark:bg-white/10 hidden sm:block' />
             <StatItem value={stats.daily} label={t('stats.active')} />
-            <div className='w-px h-10 bg-white/10 hidden sm:block' />
+            <div className='w-px h-8 bg-black/10 dark:bg-white/10 hidden sm:block' />
             <StatItem
                 value={stats.online}
                 label={t('stats.online')}
